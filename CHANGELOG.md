@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## v213 — indirect fire: more shells, lower accuracy
+- Mortars, howitzers, SPG artillery and rocket launchers fire 2–9 shells at about half the old accuracy with a wider hit area;
+  attack set so even an all-hit volley leaves a full squad alive. One volley ≈ 35–43 % of a squad (was 50–93 %, Whizbang killed 48 %).
+- No new mechanics, prices unchanged. Damage vs vehicles is lower (was already small).
+
 ## v212 — blind indirect fire, large emplacements, 2-hex build range
 - Indirect fire can target hexes out of sight in range: shells land at random within 7 hexes of the aimed hex (tap twice; no names in the log).
 - 105 mm, 210 mm and 88 mm emplacements take 7 hexes (centre + neighbours), no overlap; prices 320/60, 360/60, 320/65.

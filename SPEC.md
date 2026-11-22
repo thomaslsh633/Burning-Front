@@ -75,6 +75,12 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Indirect fire (mortars, howitzers, SPG artillery, rocket launchers) may target hexes out of own sight inside range and arc:
   blind barrage = the unit's shells (rof, at least 1) land at random within radius 1 (7 hexes) of the aimed hex and hit whatever stands there;
   first tap marks, second tap fires; no return fire, the log names no target. Targets in sight keep the aimed shot (v212).
+- Indirect fire numbers (v213): low accuracy, several shells, wide hit area; an all-hit volley stays just under a full enemy squad
+  (about 90 %), so one volley never wipes a full squad; one volley takes about 35–43 %, two volleys kill about 10–30 % of the time.
+  shots / accuracy near-mid-far / area / attack: 81 mm 2 · .50/.45/.38 · 2.6 · 21 | 75 mm pack 2 · .48/.44/.38 · 2.8 · 24 |
+  Scott 2 · .48/.44/.38 · 2.8 · 21.8 | 105 mm 3 · .46/.42/.36 · 3.0 · 17.4 | Priest 3 · same · 3.0 · 13 | Wespe 3 · same · 3.0 · 20.6 |
+  150 mm, Hummel 3 · .44/.40/.34 · 3.2 · 19.3 | 210 mm 3 · .42/.38/.32 · 3.4 · 18.1 | Whizbang 8 · .44/.40/.34 · 3.0 · 5.2 |
+  Nebelwerfer 9 · .42/.38/.32 · 2.6 · 8. Prices unchanged.
 - Rocket volley ability (Whizbang, Nebelwerfer): 5 rockets, radius 2, all land in the turn it is fired (v212).
   Pending (next own turn) barrages remain for the mortar / 105 / 150 mm concentrated fire and forward-observer abilities.
 - Emplacements: large (7 hexes: centre + 6 neighbours, all open ground) = 105 mm howitzer pit 320/60, 210 mm 360/60, 88 mm Flak 320/65;
@@ -142,7 +148,6 @@ From the v211+ planning (code is still v208 behaviour):
   rocket 7-hex random barrage for normal fire · Whizbang more rockets · Nebel incendiary · Whizbang → M4A1 Sherman conversion ·
   emplacement build turns. Missing from this code line: Flak 36 move 2 (v213), multi-hex building garrison sight (v214),
   flamethrower vs buildings lowered (v215).
-- Candidate for indirect fire (not chosen yet): scatter for in-sight shots too (option B).
 
 ## 11. Code differs from an earlier request (confirm which is right)
 None open. Resolved 2026-11-22: capture 2 ticks per step (v139) is correct; upkeep since v141 is correct (new values in section 10);
