@@ -3,6 +3,16 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## v212 — blind indirect fire, large emplacements, 2-hex build range
+- Indirect fire can target hexes out of sight in range: shells land at random within 7 hexes of the aimed hex (tap twice; no names in the log).
+- 105 mm, 210 mm and 88 mm emplacements take 7 hexes (centre + neighbours), no overlap; prices 320/60, 360/60, 320/65.
+- Engineers build everything 1–2 hexes away.
+- Removed the CP3 "2 counters" research; every unit counters once.
+- Yellow cover cuts suppression to ×0.5 (was ×0.7).
+- 150 mm sFH 18 price 340/60 (was 400/60).
+- Rocket volley ability lands in the turn it is fired (was next own turn).
+- Fix: structure damage from impacts that pass a unit profile (was NaN).
+
 ## v211 — lobby emblem without a setting line
 - Removed "ARDENNES · WINTER 1944" from the lobby emblem: the game will cover battlefields of several eras, not only the Ardennes.
 

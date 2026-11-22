@@ -11,7 +11,7 @@
   // ---------- multi-hex helpers used by the patched click / deploy code ----------
   function v153BuildDistOk(dist) {
     const m = actionMode || ''; if (!m.startsWith('build_')) return false;
-    const bt = m.slice(6); return !!(BLD[bt] && (V151.FP[bt] || 1) > 1 && dist === 2);
+    return dist >= 1 && dist <= 2;   // v212: every build within 2 hexes of the engineer
   }
   function v153DeployTiles(b) {
     const cells = v151Cells(b), out = [], seen = new Set(cells.map(q => q[0] + ',' + q[1]));

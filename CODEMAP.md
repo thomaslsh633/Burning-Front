@@ -1,7 +1,7 @@
 # CODEMAP
 
 <!-- AUTO:STATS -->
-237 files · 230 JS files · 122 wrapper chains · 2286 KB total
+238 files · 231 JS files · 122 wrapper chains · 2291 KB total
 <!-- /AUTO:STATS -->
 
 ## How the code runs
@@ -56,9 +56,9 @@ Several handlers on one element + event run in registration order, i.e. manifest
 <!-- AUTO:LISTENERS -->
 | element · event | handlers | where (in run order) |
 |---|---:|---|
-| canvas · click | 6 | js/0270_15_input-action-tiles.js:159, js/0300_17b_v30.js:214, js/0300_17b_v30.js:224, js/0720_17x_v147-structures-garrison-banner.js:111, js/0890_v173_moves-follow-a-path.js:116, js/0900_v174_move-animation-tuning-burning.js:95 |
+| canvas · click | 6 | js/0270_15_input-action-tiles.js:160, js/0300_17b_v30.js:214, js/0300_17b_v30.js:224, js/0720_17x_v147-structures-garrison-banner.js:112, js/0890_v173_moves-follow-a-path.js:116, js/0900_v174_move-animation-tuning-burning.js:95 |
 | endTurnBtn · click | 6 | js/0290_17_turn-flow.js:5, js/0290_17_turn-flow.js:15, js/0290_17_turn-flow.js:115, js/0290_17_turn-flow.js:134, js/1050_19_game-shell-1.js:347, js/1050_19_game-shell-1.js:348 |
-| canvas · pointerdown | 3 | js/0030_02_ui-utils.js:10, js/0270_15_input-action-tiles.js:80, js/1050_19_game-shell-1.js:318 |
+| canvas · pointerdown | 3 | js/0030_02_ui-utils.js:10, js/0270_15_input-action-tiles.js:81, js/1050_19_game-shell-1.js:318 |
 | goldBoxEl · click | 3 | js/0280_16_ui-panels-hud.js:226, js/0320_17c_v59-zone-capture.js:235, js/1060_19_game-shell-2.js:3 |
 | document · pointerdown | 3 | js/0280_16_ui-panels-hud.js:408, js/0300_17b_v30.js:236, js/1050_19_game-shell-1.js:96 |
 | supTab · click | 2 | js/0030_02_ui-utils.js:9, js/1050_19_game-shell-1.js:319 |

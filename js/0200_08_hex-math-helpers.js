@@ -34,7 +34,7 @@
     }
     return closest;
   }
-  function getUnitAt(c, r) { return units.find(u => u.c === c && u.r === r && u.hp > 0 && !u.isLoaded); }
+  function getUnitAt(c, r) { return units.find(u => u.hp > 0 && !u.isLoaded && ((u.c === c && u.r === r) || (u.cells && u.cells.some(q => q[0] === c && q[1] === r)))); }   // v212: large emplacement footprint
   function getCapturePointAt(c, r) { return capturePoints.find(p => p.c === c && p.r === r); }
 
 

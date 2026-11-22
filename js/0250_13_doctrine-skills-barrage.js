@@ -82,7 +82,7 @@
     list.forEach(([d, k]) => {
       const att = artAtt(team, d.c, d.r, P, A, rof, dmgA);
       const res = calcDamage(att, d), dmg = Math.max(1, Math.round(aoeCap(d, Math.max(1, Math.round(res.damage * k))))); d.hp -= dmg;
-      addLog(`💥 [포격] ${d.className || d.name || '구조물'} [-${dmg} HP]${res.specialNote}`, 'crit');
+      if (!V212.quiet) addLog(`💥 [포격] ${d.className || d.name || '구조물'} [-${dmg} HP]${res.specialNote}`, 'crit');
       applyHitEffects(att, d, res); if (d.hp <= 0) d.hp = 0;
     });
   }
@@ -253,7 +253,11 @@
   mkSk('bar_sp', barr3('자주포 집중 포격', 3, 1, 55, 38, 50, 3));
   mkSk('bar_h', barr3('105mm 집중 포격', 4, 1, 72, 52, 70, 4));
   mkSk('bar_h2', barr3('150mm 집중 포격', 4, 1, 82, 58, 80, 4));
-  mkSk('rocket', barr3('로켓 일제 사격', 5, 2, 28, 20, 80, 4));
+  // rocket volley: all 5 rockets are fired and land in the same turn (no pending strike)
+  mkSk('rocket', Object.assign(barr3('로켓 일제 사격', 5, 2, 28, 20, 80, 4), {
+    d: '5발 · 반경 2 일제 사격 — 발사한 같은 턴에 전부 착탄 (설치 필요 · 탄약 1)',
+    run: (u, h) => { addLog(`🚀 [로켓 일제 사격] 착탄! (${h.c},${h.r})`, 'crit'); strike(u.team, h.c, h.r, 5, 2, 28, 20, 1); return `(${h.c},${h.r}) 일제 사격 — 즉시 착탄`; }
+  }));
 
   // 병종 → 고유 스킬
   const UNIT_SK = {

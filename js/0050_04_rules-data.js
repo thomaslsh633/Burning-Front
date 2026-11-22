@@ -35,11 +35,10 @@
   // --- 연구 / 생산 규칙 ---
   const TECH = {
     cheap:   ['야전 축성술', '[스킬] 공병 건설 비용 -15%', 300, 1, 'hq'],
-    counter: ['탄력 방어', '[스킬] 반격 횟수 1→2', 500, 2, 'hq'],
     heavy:   ['중전차 설계', '중전차 징집 해금 🔒', 700, 3, 'tank_depot']
   };
   let research = { blue: {}, red: {} }, queue = { blue: {}, red: {} };
-  const counterMax = (team) => research[team].counter ? 2 : 1;
+  const counterMax = () => 1;
   // [V52] 분기형 티어: 청 T1a 병영 / T1b 중화기 지원소 → T2 차량 정비소 → T3 전차 공창
   //                    적 T1 보병 중대 → T2a 판처그레나디어 중대 / T2b 공군 중대 → T3 기갑 중대 (지원 요소 업그레이드 없음: 건설 즉시 징집)
   const BLD = { hq: { n: '사령부', s: 'HQ', tier: 0 }, outpost: { n: '전초 기지', s: 'OUT', tier: 0 },

@@ -75,13 +75,13 @@
   function v151FreeFor(c, r, b) {
     const t = terrainMap[c + ',' + r]; if (!t || t.oob || t.fort || t.bridge || !V151_OPEN[t.terrainType]) return false;   // open ground only
     if (buildings.some(o => o !== b && o.hp > 0 && v151OnB(o, c, r))) return false;
-    if (units.some(u => u.hp > 0 && !u.isLoaded && u.c === c && u.r === r)) return false;
+    if (getUnitAt(c, r)) return false;   // v212: includes emplacement footprints
     if (bunkers.some(k => k.hp > 0 && k.c === c && k.r === r) || getCapturePointAt(c, r)) return false;
     return true;
   }
   // pick n cells: anchor + neighbours; avoid: cells too close to `away` (engineer), keep compact (triangle for 3)
   function v151Pick(b, c0, r0, n, away) {
-    const ok = (c, r) => v151FreeFor(c, r, b) && (!away || getDistance(away.c, away.r, c, r) >= 2);
+    const ok = (c, r) => v151FreeFor(c, r, b) && (!away || c !== away.c || r !== away.r);   // v212: only the engineer's own hex is excluded
     const cells = [[c0, r0]]; if (n <= 1) return cells;
     for (let e = 0; e < 6 && cells.length < n; e++) {
       const a = getNeighborByEdge(c0, r0, e); if (!a || !ok(a.c, a.r)) continue;
@@ -99,15 +99,22 @@
   {  /* resetGame: layer moved to js/chains/resetGame.js */ }
 
   // placement check (click) and highlighted tiles: multi-hex = engineer's 2nd ring, whole footprint ≥ 2 hexes from the engineer
+  // v212: centre + 6 neighbours (only when all 7 are on the map)
+  function v151Ring7(c, r) { const n = getHexNeighbors(c, r); return n.length === 6 ? [[c, r]].concat(n.map(h => [h.c, h.r])) : [[c, r]]; }
+  // placement check (click) and highlighted tiles: everything within 2 hexes of the engineer, never on the engineer's hex
   function v151PlaceCheck(bt, hex, eng) {
     V151.pend = null;
     if (!eng || (hex.c === eng.c && hex.r === eng.r)) return '공병이 있는 칸에는 설치할 수 없습니다';
-    const n = BLD[bt] ? (V151.FP[bt] || 1) : 1, d = getDistance(eng.c, eng.r, hex.c, hex.r);
-    if (n <= 1) return d === 1 ? '' : '인접한 1칸에 설치하세요';
-    if (d !== 2) return `${BLD[bt].n}은(는) 공병에게서 2칸 떨어진 곳부터 지을 수 있습니다 (${n}칸 건물)`;
-    const cells = v151Pick(null, hex.c, hex.r, n, eng);
+    const big = !!(FORT[bt] && FORT[bt].big), n = big ? 7 : BLD[bt] ? (V151.FP[bt] || 1) : 1, d = getDistance(eng.c, eng.r, hex.c, hex.r);
+    if (d < 1 || d > 2) return '공병 주변 2칸 이내에 설치하세요';
+    if (n <= 1) return '';
+    const cells = big ? v151Ring7(hex.c, hex.r) : v151Pick(null, hex.c, hex.r, n, eng);
     if (cells.length < n) return `${n}칸이 비어 있어야 합니다`;
-    for (const [c, r] of cells) { const why = placeReason(c, r, true); if (why) return why; }
+    for (const [c, r] of cells) {
+      if (c === eng.c && r === eng.r) return `${FORT[bt] ? FORT[bt].n : BLD[bt].n}의 ${n}칸 안에 공병이 있습니다`;
+      if (big && !v151FreeFor(c, r, null)) return `대형 진지는 주변 7칸이 모두 빈 개활지여야 합니다 (${c},${r})`;
+      const why = placeReason(c, r, !big); if (why) return why;
+    }
     V151.pend = { c: hex.c, r: hex.r, cells }; return '';
   }
   function v151AfterPlace(b) {
@@ -117,7 +124,7 @@
   { 
     /* validActionTiles: layer moved to js/chains/validActionTiles.js */ }
   // engineers within 2 hexes of the footprint keep the construction going
-  function v151EngNear(u, b) { return v151Cells(b).some(([c, r]) => getDistance(u.c, u.r, c, r) <= (v151Need(b) > 1 ? 2 : 1)); }
+  function v151EngNear(u, b) { return v151Cells(b).some(([c, r]) => getDistance(u.c, u.r, c, r) <= 2); }   // v212: always 2 hexes
   // tapping any footprint hex = tapping the building
   function v151Anchor(hex) { if (!hex || getUnitAt(hex.c, hex.r)) return hex; const b = getBuildingAt(hex.c, hex.r); return b && (b.c !== hex.c || b.r !== hex.r) ? { c: b.c, r: b.r } : hex; }
 
@@ -137,7 +144,7 @@
   // ---------- bunkers and emplacements: one hex wide ----------
   function v151Fit(id, part, fi, fn) {
     const e = v134Get(id, part, fi); if (!e || e.none) return fn();
-    const lim = Math.sqrt(3) * HEX_RADIUS * V151.emplPx * V134.S / e.W, o = v117Hs, cur = o();
+    const lim = Math.sqrt(3) * HEX_RADIUS * (V134_EMPL[id] && V134_EMPL[id].big ? V151.emplBigPx : V151.emplPx) * V134.S / e.W, o = v117Hs, cur = o();
     if (cur <= lim) return fn();
     v117Hs = () => lim; try { return fn(); } finally { v117Hs = o; }
   }

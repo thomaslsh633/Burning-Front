@@ -110,6 +110,7 @@ js/1010_v186_attacks-on-buildings-structures.js
 js/1020_v189_turning-is-its-own.js
 js/1030_v190_while-a-direction-is.js
 js/1040_v194_turret-direction-hold.js
+js/1045_v212_indirect-blind-fire.js
 js/1050_19_game-shell-1.js
 js/1060_19_game-shell-2.js
 js/1070_20_wrapper-chains.js

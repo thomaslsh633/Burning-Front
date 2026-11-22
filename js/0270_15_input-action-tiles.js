@@ -29,6 +29,7 @@
           }
         }
       }
+      validAttacks = validAttacks.concat(v212BlindTiles(unit));   // v212: indirect fire into hexes out of sight
     }
   }
 
@@ -349,6 +350,7 @@
       }
 
 
+      if (v212BlindTap(hex)) return;   // v212: blind barrage (checked first so a hidden unit is never previewed)
       if (typeof v147StructTap === 'function' && v147StructTap(hex)) return;   // v147: firing at an empty building
       if (validAttacks.some(a => a.c === hex.c && a.r === hex.r)) {
         if (pendingAttackTarget && pendingAttackTarget.c === hex.c && pendingAttackTarget.r === hex.r) {

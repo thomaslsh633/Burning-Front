@@ -13,13 +13,13 @@
   var V134 = { S: 7, B: 2 };
   const V134_EMPL = {
     at_bunker:    { team: 'red', n: '대전차 벙커', s: '▷', key: 'at_gun', g: 320, f: 30, hp: 460, ar: [45, 42, 30], arc: 60, full: true },
-    flak36_empl:  { team: 'red', n: '88mm 고사포 진지', s: '⌃▷', key: 'flak36', g: 480, f: 60, hp: 300, ar: [14, 12, 10], arc: 360 },
+    flak36_empl:  { team: 'red', n: '88mm 고사포 진지', s: '⌃▷', key: 'flak36', g: 320, f: 65, big: true, hp: 300, ar: [14, 12, 10], arc: 360 },
     flak38_empl:  { team: 'red', n: '20mm 대공포 진지', s: '⌃', key: 'flak38', g: 260, f: 15, hp: 200, ar: [10, 10, 8], arc: 360 },
-    obice_empl:   { team: 'red', n: '210mm 포병 진지', s: '⌒', key: 'obice210', g: 520, f: 60, hp: 300, ar: [10, 10, 8], arc: 360 },
+    obice_empl:   { team: 'red', n: '210mm 포병 진지', s: '⌒', key: 'obice210', g: 360, f: 60, big: true, hp: 300, ar: [10, 10, 8], arc: 360 },
     mortar_pit:   { team: 'blue', n: '박격포 진지', s: '⌒', key: 'mortar', g: 220, f: 0, hp: 180, ar: [8, 8, 6], arc: 360 },
-    howitzer_pit: { team: 'blue', n: '105mm 포병 진지', s: '⌒⌒', key: 'howitzer', g: 420, f: 40, hp: 260, ar: [10, 10, 8], arc: 360 }
+    howitzer_pit: { team: 'blue', n: '105mm 포병 진지', s: '⌒⌒', key: 'howitzer', g: 320, f: 60, big: true, hp: 260, ar: [10, 10, 8], arc: 360 }
   };
-  Object.keys(V134_EMPL).forEach(k => { const E = V134_EMPL[k]; FORT[k] = { n: E.n, g: E.g, f: E.f, s: E.s, team: E.team, empl: true }; });
+  Object.keys(V134_EMPL).forEach(k => { const E = V134_EMPL[k]; FORT[k] = { n: E.n, g: E.g, f: E.f, s: E.s, team: E.team, empl: true, big: !!E.big }; });
   function v134EmplList(tm) { return Object.keys(V134_EMPL).filter(k => V134_EMPL[k].team === tm && UNIT_ROSTER[tm] && UNIT_ROSTER[tm][V134_EMPL[k].key]); }
 
   const V134M = (() => {
@@ -209,6 +209,7 @@
     const u = createUnitFromKey(nextUnitId++, tm, E.key, hex.c, hex.r, TANK_SPR.yaw(TANK_SPR.idx(a)));
     Object.assign(u, { empl: bt, className: E.n, uniqueName: E.n, moveDist: 0, remainingMove: 0, armorType: 'hard', armor: E.ar[0], armorS: E.ar[1], armorR: E.ar[2], maxHp: E.hp, hp: E.hp,
       saImm: true, hw: '', tow: false, isHeavy: E.arc < 360, arcAngle: Math.min(360, E.arc) * Math.PI / 180, hasMoved: true, hasAttacked: true, cost: { g: cost.g, f: cost.f }, N: null, models: null });
+    if (E.big) u.cells = v151Ring7(hex.c, hex.r);   // large emplacement: centre + 6 neighbours
     units.push(u); addLog(`🏗 [진지 구축] ${E.n}`, 'eng');
     return u;
   }

@@ -66,6 +66,8 @@
 
   // drawUnitArt__v151: from [v168], calls drawUnitArt__v147
   function drawUnitArt__v151(u, x, y) { const E = u && u.empl && V134_EMPL[u.empl]; if (!E) return drawUnitArt__v147.apply(this, arguments);
+      if (u.cells && u.cells.length > 1) { ctx.save(); ctx.setLineDash([4, 4]); ctx.lineWidth = 1.2; ctx.strokeStyle = u.team === 'blue' ? 'rgba(56,189,248,.55)' : 'rgba(248,113,113,.55)';
+        u.cells.forEach(([c, r]) => { const p = getHexCenter(c, r); hexPath(p.x, p.y, HEX_RADIUS * .92); ctx.stroke(); }); ctx.restore(); }   // v212: large emplacement footprint
       const args = arguments; return v151Fit(u.empl, E.full ? 'full' : 'back', E.full ? TANK_SPR.idx(u.facingAngle) : 0, () => drawUnitArt__v147.apply(this, args)); }
 
   // drawUnitArt__v147: from [17&], calls drawUnitArt__v134

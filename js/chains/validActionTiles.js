@@ -5,9 +5,12 @@
   function validActionTiles() {
       const m = actionMode, a = activeActor;
       if (!m || !a || !m.startsWith('build_')) return validActionTiles__v150.apply(this, arguments);
-      const bt = m.slice(6), n = BLD[bt] ? (V151.FP[bt] || 1) : 1;
-      if (n <= 1) return (validActionTiles__v150.apply(this, arguments) || []).filter(h => !(h.c === a.c && h.r === a.r));
-      const out = []; for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) if (getDistance(a.c, a.r, c, r) === 2 && !getUnitAt(c, r) && !getBuildingAt(c, r) && !v151PlaceCheck(bt, { c, r }, a)) out.push({ c, r });
+      const bt = m.slice(6), B = BLD[bt], one = !(FORT[bt] && FORT[bt].big) && !(B && (V151.FP[bt] || 1) > 1);   // v212: every build within 2 hexes
+      const out = []; for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+        const d = getDistance(a.c, a.r, c, r); if (d < 1 || d > 2 || getUnitAt(c, r) || getBuildingAt(c, r)) continue;
+        if (one && (TERRAIN_DEFS[getTerrain(c, r).terrainType].inf === Infinity || bunkers.some(k => k.hp > 0 && k.c === c && k.r === r) || !canPlaceBuilding(c, r, !!B))) continue;
+        if (!v151PlaceCheck(bt, { c, r }, a)) out.push({ c, r });
+      }
       V151.pend = null; return out;
     }
 

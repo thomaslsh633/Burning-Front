@@ -46,7 +46,7 @@
     if (isGarrisoned(def)) return 0;
     if (att && (att.isMortar || att.isArtillery || att.isNebel)) return 1;
     const cv = coverVs(def, att);   // v145
-    return cv === 'hard' ? 0.3 : cv === 'yellow' ? 0.7 : 1;
+    return cv === 'hard' ? 0.3 : cv === 'yellow' ? 0.5 : 1;
   }
   
 

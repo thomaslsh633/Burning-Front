@@ -104,7 +104,7 @@
 
   // ===== CoH3식 개편: 분대원 · 치료/충원 · 기갑 수리 · CP =====
   const cpOf = tm => Math.min(8, Math.floor(teamXp[tm] / 25));
-  function syncCP(tm) { const c = cpOf(tm); research[tm].cheap = c >= 2; research[tm].counter = c >= 3; research[tm].heavy = c >= 5; research[tm].optics = doctrine[tm] === 'air'; }
+  function syncCP(tm) { const c = cpOf(tm); research[tm].cheap = c >= 2; research[tm].heavy = c >= 5; research[tm].optics = doctrine[tm] === 'air'; }
   [..."blue,red".split(',')].forEach(syncCP);
    /* updateGoldUI: layer moved to js/chains/updateGoldUI.js */
 

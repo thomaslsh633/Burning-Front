@@ -81,7 +81,8 @@
   { const o_imp147 = impact;
     impact = function (team, c, r, P) {
       const res = o_imp147.apply(this, arguments);
-      try { const st = v147StructAt(c, r); if (st) v147DamageStruct(st, Math.round((P || 80) * .8)); v147EdgesAround(c, r, Math.round((P || 80) * .3)); } catch (err) { console.warn('v147 impact', err); }
+      const pw = P && typeof P === 'object' ? structDmg(P) : (P || 80);   // P may be a unit profile
+      try { const st = v147StructAt(c, r); if (st) v147DamageStruct(st, Math.round(pw * .8)); v147EdgesAround(c, r, Math.round(pw * .3)); } catch (err) { console.warn('v147 impact', err); }
       return res;
     }; }
   // entering: an enemy-held or full building is closed

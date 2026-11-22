@@ -42,8 +42,11 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Upkeep: each unit 4 % of its price, at most 40 MP per unit, the excess / 3 paid in fuel; net MP income never below 25 % of gross (v141).
 - Kill bounty: destroying an enemy unit pays max(40, 20 % of its value) MP (`claimKillBounty`) — decided to remove, see section 10.
 - No reinforcing while engaged (v158).
-- Buildings at CoH3 prices; T1 builds in 1 turn, T2 / T3 in 2 with an engineer-type unit adjacent; a site starts at 50 % HP and produces nothing (v140).
-- Building placement: multi-hex buildings from the engineer's second ring, whole footprint ≥ 2 hexes from the engineer, no overlap (v151).
+- Buildings at CoH3 prices; T1 builds in 1 turn, T2 / T3 in 2 with an engineer-type unit within 2 hexes; a site starts at 50 % HP and produces nothing (v140, v212).
+- Build range: engineers build everything (trench, sandbag, mine, bunker, building, emplacement) 1–2 hexes away, never on their own hex;
+  a footprint may not include the engineer's hex; no overlap with buildings, units, emplacements, bunkers or points (v151, v212).
+- CP milestones: CP2 field fortification (build −15 %), CP5 heavy tanks. The CP3 "2 counters" research is gone; every unit counters once per turn (v212).
+- Prices: 105 mm howitzer 320 MP / 60 fuel, 150 mm sFH 18 340 / 60 (v212).
 
 ## 4. Combat
 - Attack = one damage value + penetration per band + accuracy per band; each shot rolls hit, then penetration (v126, v161).
@@ -55,6 +58,7 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   Pz IV 2, Pz IV cmd 2, Panther 1.25, Tiger 2, Brummbär 3.5, Stummel 3, StuG 1.25, Marder 0.75.
 - M3 GMC and Stummel are curved-fire support half-tracks: role anti-infantry, cover never reduces persons, minimum range 2 (v199).
 - Vehicles take no terrain cover (v140).
+- Cover vs suppression (soft targets): yellow ×0.5, hard ×0.3; garrisoned 0; indirect fire ignores cover (v145, v212).
 - Range view (long press) paints only hexes the unit can really hit: direct fire needs a clear line; mortars, howitzers and rockets fire over cover (v206).
 - Engaged mark: set by attacking (or an attack ability), not by taking damage; cleared at the end of an own turn without an attack and by retreat (retreat flag instead) (v158).
 - Retreat: ×1.6 movement toward the rally point (HQ or a designated outpost), received accuracy ×0.5, no return fire; not after attacking this turn;
@@ -68,6 +72,13 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   AT weapons have no watch fire (v198). MG cover fire is gone (v159).
 - Concealment: an emplaced crew in cover that spends a whole own turn without firing becomes concealed (seen from 2 hexes, lost on moving / firing) (v159).
 - Crews turn for free while packed (no mortars / artillery / Nebelwerfer); turning lives in the turn stage, 거치 / 거치 해제 stay in the skill tray (v189).
+- Indirect fire (mortars, howitzers, SPG artillery, rocket launchers) may target hexes out of own sight inside range and arc:
+  blind barrage = the unit's shells (rof, at least 1) land at random within radius 1 (7 hexes) of the aimed hex and hit whatever stands there;
+  first tap marks, second tap fires; no return fire, the log names no target. Targets in sight keep the aimed shot (v212).
+- Rocket volley ability (Whizbang, Nebelwerfer): 5 rockets, radius 2, all land in the turn it is fired (v212).
+  Pending (next own turn) barrages remain for the mortar / 105 / 150 mm concentrated fire and forward-observer abilities.
+- Emplacements: large (7 hexes: centre + 6 neighbours, all open ground) = 105 mm howitzer pit 320/60, 210 mm 360/60, 88 mm Flak 320/65;
+  Pak bunker, 20 mm Flak, mortar pit stay 1 hex. Any footprint hex selects the emplacement and blocks movement (v134, v212).
 - Marks: packed = yellow badge, emplacing this turn = yellow tripod, emplaced = no mark (v206).
 
 ## 6. Vehicles: facing, turret, reverse
@@ -127,9 +138,11 @@ From the v211+ planning (code is still v208 behaviour):
 - Lower the flamethrower bonus vs units in buildings.
 - Hide hexes blocked by cover while a firing-arc unit is being turned.
 - Balance: emplacement protection, MG suppression (or counters), indirect fire rate / kill speed.
-- v215-based re-apply plan: MG suppression 40 · indirect crew weapons do not return fire · replacement for the CP "2 counters" effect ·
-  yellow / green cover values · rocket 7-hex random barrage · Nebel incendiary · Whizbang Sherman conversion ·
-  7-hex large emplacements, no overlap · emplacement build turns and prices 105 mm 320/60, 210 mm 360/60, 88 mm 320/65.
+- v215-based re-apply plan, still open: MG suppression 40 · indirect crew weapons do not return fire · green cover values ·
+  rocket 7-hex random barrage for normal fire · Whizbang more rockets · Nebel incendiary · Whizbang → M4A1 Sherman conversion ·
+  emplacement build turns. Missing from this code line: Flak 36 move 2 (v213), multi-hex building garrison sight (v214),
+  flamethrower vs buildings lowered (v215).
+- Candidate for indirect fire (not chosen yet): scatter for in-sight shots too (option B).
 
 ## 11. Code differs from an earlier request (confirm which is right)
 None open. Resolved 2026-11-22: capture 2 ticks per step (v139) is correct; upkeep since v141 is correct (new values in section 10);

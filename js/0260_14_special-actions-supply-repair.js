@@ -26,7 +26,7 @@
     if (B && !reqOk(eng.team, bt)) { toast(`선행 건물 필요: ${reqName(eng.team, bt)}`); return; }
     { const d0 = B || FORT[bt], g0 = Math.round(d0.g * (research[eng.team].cheap ? .85 : 1) * (1 - vetV(eng).buildDisc)), f0 = Math.round((d0.f || 0) * (1 - vetV(eng).buildDisc)); if (isLack(g0, f0)) { toast(`자원 부족 (💰${g0} ⛽${f0})`); return; } }
     actionMode = 'build_' + bt; activeActor = eng;
-    guideBanner.textContent = `건설 지점 선택 // [${(B || FORT[bt]).n}] 인접 1칸을 탭하세요`; guideBanner.style.display = "block"; updateUnitInfoPanel(eng, getTerrain(eng.c, eng.r)); render();
+    guideBanner.textContent = `건설 지점 선택 // [${(B || FORT[bt]).n}] 공병 주변 2칸 이내를 탭하세요`; guideBanner.style.display = "block"; updateUnitInfoPanel(eng, getTerrain(eng.c, eng.r)); render();
   }
   function toggleMode__base(u, m) {
     if (actionMode === m && activeActor === u) { actionMode = null; activeActor = null; guideBanner.style.display = "none"; }

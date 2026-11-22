@@ -12,5 +12,5 @@
   // ══════════════════════════════════════════════════════════════
   const V151 = { roadCol: { road: [170, 154, 122], roadEdge: [124, 108, 82], rut: [132, 114, 86], roadMid: [188, 176, 146], dirt: [128, 110, 82], crown: [104, 116, 66] },
     FP: { hq: 3, barracks: 2, support_center: 2, motor_pool: 2, air_coy: 2, tank_depot: 2, outpost: 1, doc_inf: 1, doc_mech: 1, doc_air: 1 },
-    LEN: { 1: 6.4, 2: 12.5, 3: 15.5 }, emplPx: 1.2, runs: [], runEdges: new Set(), pend: null };
+    LEN: { 1: 6.4, 2: 12.5, 3: 15.5 }, emplPx: 1.2, emplBigPx: 3, runs: [], runEdges: new Set(), pend: null };
   Object.assign(V149.gravel, V151.roadCol);
