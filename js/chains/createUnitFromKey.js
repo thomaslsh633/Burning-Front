@@ -28,7 +28,7 @@
     u.vetClass = VET_CLASS_OF[u.key] || 'A'; u.vet = null; u.vetD = {};
     { const R = UNIT_ROSTER[u.team][u.key];   // v129: boarding size, towing, capture, small arms / immunity, structure damage
       u.raw = !!R.raw; u.rofB = R.rofB ? R.rofB.slice() : null; u.aoe = R.aoe || 0; u.tsize = R.tsize || 0; u.rearMul = R.rearMul || 0;   // v162
-      u.overkill = !!R.overkill; u.crewed = !!R.crewed; u.rawD = R.rawD || null; u.rawW = R.rawW || null; u.closeEnd = R.closeEnd || u.closeEnd; u.midEnd = R.midEnd || u.midEnd;
+      u.overkill = !!R.overkill; u.crewed = !!R.crewed; u.rawD = R.rawD || null; u.rawW = R.rawW || null; u.closeEnd = R.closeEnd || u.closeEnd; u.midEnd = R.midEnd || u.midEnd; u.maxM = R.maxM || 0; u.reload = R.reload || 0;   // v214
       u.hw = R.hw || ''; u.tow = !!R.tow; u.capt = !!R.capt; u.sa = !!R.sa; u.saImm = !!R.saImm; u.cone = !!R.cone; }
     return u;
   }

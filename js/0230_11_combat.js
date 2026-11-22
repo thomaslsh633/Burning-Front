@@ -196,7 +196,7 @@
     const optics = !!(research[att.team] && research[att.team].optics);
     const accDrop = Math.max(0, (wpn.accDrop || att.accDrop || 0.05) - (optics ? 0.03 : 0));
     let accuracy = wpn.acc ? accByZone(wpn, dist, optics) : Math.max(0.15, 1.0 - (Math.max(0, dist - 1) * accDrop));
-    if (wpn.raw) {   // v162: CoH3 hit chance = weapon accuracy x target size (infantry ~1, vehicles ~20, buildings 26)
+    if (wpn.raw && !isIndirect) {   // v162: CoH3 hit chance (v214: indirect accuracy is already the chance to land on the hex) = weapon accuracy x target size (infantry ~1, vehicles ~20, buildings 26)
       const ts = def.tsize || (def.type ? 26 : (def.armorType === 'hard' ? 20 : 1));
       accuracy = Math.min(1, (persMode ? V199.ACC[rawB] : wpn.acc[rawB]) * ts + (optics && rawB > 0 ? 0.05 : 0));
     }
@@ -341,19 +341,20 @@
         const men = menOf(def.hp);
         shots = effRof < 2 ? 1 : effRof; hits = effRof * accuracy;
         const direct = wpn.overkill ? hitD : Math.min(hitD, pm);
-        total = Math.min(def.hp, effRof * (accuracy * (direct + splash * (men - 1)) + (1 - accuracy) * splash * men * RAW.MISS_AOE));
+        const cap = Math.min(men, wpn.maxM > 0 ? wpn.maxM : men);   // v214: max members hit per shell
+        total = Math.min(def.hp, effRof * (accuracy * (direct + splash * (cap - 1)) + (1 - accuracy) * splash * cap * RAW.MISS_AOE));
       } else {
         let sim = def.hp;
         const whole = Math.max(1, Math.floor(effRof)), frac = Math.max(0, effRof - whole);
         shots = whole + (frac > 0 ? 1 : 0);
         for (let i = 0; i < shots && sim > 0; i++) {
-          const w = i < whole ? 1 : frac, men = menOf(sim);
+          const w = i < whole ? 1 : frac, men = menOf(sim), cap = Math.min(men, wpn.maxM > 0 ? wpn.maxM : men);   // v214
           let d;
           if (Math.random() < accuracy) {
             hits++;
             const front = sim - (men - 1) * pm;
-            d = (wpn.overkill ? hitD : Math.min(hitD, front)) + splash * (men - 1);
-          } else d = splash * men * RAW.MISS_AOE;
+            d = (wpn.overkill ? hitD : Math.min(hitD, front)) + splash * (cap - 1);
+          } else d = splash * cap * RAW.MISS_AOE;
           d = Math.min(sim, d * w); sim -= d; total += d;
         }
         notes.push(` [${isSub ? wpn.n + ' ' : ''}명중 ${hits}/${shots}]`);
@@ -602,6 +603,7 @@
     }
     if (u.trackDamaged) parts.push('<span style="color:#fb923c">⛓ 궤도 손상(다음 턴 이동 불가)</span>');
     if (u.fireTurns > 0) parts.push(`<span style="color:#f87171">🔥 엔진 화재(${u.fireTurns}턴)</span>`);
+    if (v214ReloadLeft(u) > 0) parts.push(`<span style="color:#fbbf24">⏳ 재장전 ${v214ReloadLeft(u)}턴</span>`);   // v214
     return parts.length ? '<br>' + parts.join(' | ') : '';
   }
   function stripStatus__base(u) {
@@ -610,6 +612,7 @@
     else if (st === 1) out.push('<span style="color:#fbbf24">⚠ 제압</span>');
     if (u.trackDamaged) out.push('<span style="color:#fb923c">⛓ 궤도</span>');
     if (u.fireTurns > 0) out.push('<span style="color:#f87171">🔥 화재</span>');
+    if (v214ReloadLeft(u) > 0) out.push(`<span style="color:#fbbf24">⏳ ${v214ReloadLeft(u)}</span>`);   // v214
     return out.join('');
   }
   // [TACTICS-V5 END]
@@ -680,11 +683,13 @@
           addLog(`🤫 [사격 보류] ${defender.className} 반격하지 않고 은신 유지`, "arc");
         } else if (!inArc) {
           addLog(`[사각지대] ${defender.className} 측후방 기습으로 반격 불가!`, "arc");
+        } else if (v214Reloading(defender)) {   // v214
+          addLog(`[재장전] ${defender.className} 재장전 중이라 반격 불가`, "arc");
         } else if (!v159Ready(defender)) {   // v159
           addLog(`[거치 해제] ${defender.className} 거치 상태가 아니라 반격 불가`, "arc");
         } else if (defender.counterAttacksLeft > 0) {
           defender.counterAttacksLeft -= 1;
-          defender.ammo -= 1;
+          defender.ammo -= 1; v214Fired(defender);
           if (v183On(defender) || v184Fixed(defender)) v183Aim(defender, attacker.c, attacker.r);   // v183: the counter-firing turret aims at the attacker; v186: a fixed gun turns its hull
           const counterRes = calcDamage(defender, attacker);
           attacker.hp -= counterRes.damage;

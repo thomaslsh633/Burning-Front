@@ -13,6 +13,7 @@
   function updateActionTiles__v159(u) {
       const r = updateActionTiles__v147.apply(this, arguments);
       if (v159Crew(u)) { if (v159Emplaced(u)) validMoves = []; if (!v159Ready(u)) validAttacks = []; }
+      if (v214Reloading(u)) validAttacks = [];   // v214: reloading
       return r;
     }
 

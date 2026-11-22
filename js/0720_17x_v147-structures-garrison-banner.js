@@ -96,7 +96,7 @@
     const st = v147StructAt(hex.c, hex.r); if (!st || st.stage >= 2) return false;
     const sd = structDmg(u) * (u.isMortar || u.isArtillery || u.isNebel ? 1 : .8) | 0;
     if (pendingAttackTarget && pendingAttackTarget.c === hex.c && pendingAttackTarget.r === hex.r) {
-      clearAttackPreview(); const _fx = v186Begin(u, hex.c, hex.r, true); u.ammo -= 1; u.hasAttacked = true; addVeterancyExp(u, 2, 'atk');
+      clearAttackPreview(); const _fx = v186Begin(u, hex.c, hex.r, true); u.ammo -= 1; u.hasAttacked = true; v214Fired(u); addVeterancyExp(u, 2, 'atk');
       addLog(`[건물 포격] ${u.className} ➔ ${st.name}`, u.isMortar || u.isArtillery || u.isNebel ? 'artillery' : 'normal');
       v147DamageStruct(st, sd); if (u.isMortar || u.isArtillery || u.isNebel) v147EdgesAround(hex.c, hex.r, Math.round(structDmg(u) * .35));
       v186End(_fx, sd, st.stage >= 2);   // v186: shot + impact explosion

@@ -3,6 +3,13 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## v214 — indirect fire from the CoH3 data
+- Mortars, howitzers, SPG artillery and rocket launchers take damage, penetration, AoE falloff, member cap and scatter from the CoH3 JSON
+  (`tools/coh3_indirect.py` → `js/0125_v214_coh3-indirect-generated.js`); ranges and prices unchanged.
+- New reload turns: 105 mm, 150 mm, Priest, Wespe, Whizbang 1 turn; 210 mm and Nebelwerfer 2 turns. Reloading units cannot return fire.
+- Accuracy is the chance to land on the hex (from scatter); member caps 210 mm 3, 150 mm and Nebelwerfer 5.
+- Out-of-sight fire uses the same damage per shell; 105 mm barrage ability fires 6 shells.
+
 ## v213 — indirect fire: more shells, lower accuracy
 - Mortars, howitzers, SPG artillery and rocket launchers fire 2–9 shells at about half the old accuracy with a wider hit area;
   attack set so even an all-hit volley leaves a full squad alive. One volley ≈ 35–43 % of a squad (was 50–93 %, Whizbang killed 48 %).

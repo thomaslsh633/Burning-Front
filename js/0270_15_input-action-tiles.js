@@ -361,7 +361,7 @@
             selectedUnit.ammo -= 1;
             const res = calcDamage(selectedUnit, targetBuilding);
             targetBuilding.hp = Math.max(0, targetBuilding.hp - res.damage);
-            selectedUnit.hasAttacked = true; v158Engage(selectedUnit);
+            selectedUnit.hasAttacked = true; v158Engage(selectedUnit); v214Fired(selectedUnit);
             addVeterancyExp(selectedUnit, 2, 'atk');
             addLog(`[건물 포격] ${selectedUnit.className} ➔ ${targetBuilding.name} [-${res.damage} HP]`, "crit");
             if (targetBuilding.hp === 0) {

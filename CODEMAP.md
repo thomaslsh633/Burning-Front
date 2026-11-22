@@ -1,7 +1,7 @@
 # CODEMAP
 
 <!-- AUTO:STATS -->
-238 files · 231 JS files · 122 wrapper chains · 2291 KB total
+240 files · 233 JS files · 122 wrapper chains · 2297 KB total
 <!-- /AUTO:STATS -->
 
 ## How the code runs

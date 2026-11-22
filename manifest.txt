@@ -18,8 +18,10 @@ js/0090_v162_skirmish-test-map-both.js
 js/0100_06b_v143-terrain-layers-ground.js
 js/0110_07_units-squads.js
 js/0120_v162_coh3-raw-stats-generated.js
+js/0125_v214_coh3-indirect-generated.js
 js/0130_v162_unit-stat-reset-to.js
 js/0140_v200_longer-engagements-sight-for.js
+js/0145_v214_indirect-from-coh3.js
 js/0150_v199_tank-main-gun-vs.js
 js/0160_v200_sight-for-every-unit.js
 js/0170_v201_lobbed-he-vehicles-one.js

@@ -251,7 +251,7 @@
   const barr3 = (n, shells, rad, P, A, mun, cd) => ({ n, ico: '💥', mun, cd, t: 'tgt', who: 'hex', rng: u => u.range, useMin: true, vis: true, act: true, still: true, am: 1, d: `${shells}발 · 반경 ${rad} 포격 — 다음 내 턴 시작 시 착탄 (설치 필요 · 탄약 1)`, run: (u, h) => { pendingStrikes.push({ team: u.team, c: h.c, r: h.r, shells, rad, P, A, custom: true, n }); return `(${h.c},${h.r}) 포격 요청 — 다음 턴 착탄`; } });
   mkSk('bar_m', barr3('박격포 집중 포격', 3, 1, 40, 28, 45, 3));
   mkSk('bar_sp', barr3('자주포 집중 포격', 3, 1, 55, 38, 50, 3));
-  mkSk('bar_h', barr3('105mm 집중 포격', 4, 1, 72, 52, 70, 4));
+  mkSk('bar_h', barr3('105mm 집중 포격', 6, 1, 72, 52, 70, 4));   // v214: CoH3 HE barrage 6 shells, 45 s
   mkSk('bar_h2', barr3('150mm 집중 포격', 4, 1, 82, 58, 80, 4));
   // rocket volley: all 5 rockets are fired and land in the same turn (no pending strike)
   mkSk('rocket', Object.assign(barr3('로켓 일제 사격', 5, 2, 28, 20, 80, 4), {

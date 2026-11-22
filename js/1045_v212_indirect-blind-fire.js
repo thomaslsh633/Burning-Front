@@ -1,7 +1,7 @@
   // [v212] indirect fire outside own sight
   //   · mortars, howitzers, rocket launchers and SPG artillery may fire at any hex in range and arc, seen or not
-  //   · a hex out of sight is a blind barrage: the unit's shells (rof, at least 1) land at random inside radius 1
-  //     (7 hexes) around the aimed hex; each shell hits whatever stands there, friend or foe
+  //   · a hex out of sight is a blind barrage: each shell lands on the aimed hex or a random neighbour (v214)
+  //     and hits whatever stands there, friend or foe
   //   · targets in sight keep the aimed shot (calcDamage); blind fire gets no return fire and logs no target names
   var V212 = { rad: 1, quiet: false, pend: null };
   const v212Indirect = u => !!(u && (u.isMortar || u.isArtillery || u.isNebel));
@@ -36,13 +36,23 @@
     render(); return true;
   }
 
+  // v214: each shell lands on the aimed hex with the far-band hit chance, otherwise on a random neighbour;
+  //   a unit there takes one shell as a direct hit (same raw HE rule as aimed fire); buildings / structures take an impact
   function v212BlindFire(u, c, r) {
     if (!u.isHeavy || u.arcAngle >= 6.28) v183Aim(u, c, r);
-    const shells = Math.max(1, Math.round(u.rof || 1)), hx = ring(c, r, V212.rad), splash = !!(u.isMortar || u.isNebel);
-    u.ammo -= 1; u.hasAttacked = true; v158Engage(u); addVeterancyExp(u, 2, 'atk');
-    addLog(`🎯 [시야 밖 포격] ${u.className} ➔ (${c},${r}) 일대 ${shells}발 (반경 ${V212.rad} 무작위 착탄)`, 'artillery');
+    const shells = Math.max(1, Math.round(u.rof || 1)), nb = getHexNeighbors(c, r), pAim = u.acc ? u.acc[2] : 0.3;
+    const one = Object.assign({}, u, { rofB: [1, 1, 1], rof: 1, acc: [1, 1, 1] });
+    u.ammo -= 1; u.hasAttacked = true; v158Engage(u); v214Fired(u); addVeterancyExp(u, 2, 'atk');
+    addLog(`🎯 [시야 밖 포격] ${u.className} ➔ (${c},${r}) 일대 ${shells}발`, 'artillery');
     V212.quiet = true;
-    try { for (let i = 0; i < shells; i++) { const h = hx[Math.floor(Math.random() * hx.length)]; impact(u.team, h.c, h.r, u, 0, 1, splash); } }
-    finally { V212.quiet = false; }
+    try {
+      for (let i = 0; i < shells; i++) {
+        const h = Math.random() < pAim || !nb.length ? { c, r } : nb[Math.floor(Math.random() * nb.length)], d = getUnitAt(h.c, h.r);
+        if (d && d.hp > 0) {
+          const res = calcDamage(one, d); d.hp = Math.max(0, d.hp - res.damage); applyHitEffects(one, d, res);
+          if (d.hp <= 0) addVeterancyExp(u, 8, d);
+        } else impact(u.team, h.c, h.r, u, 0, 1, false);
+      }
+    } finally { V212.quiet = false; }
     checkVictory(); updateVision();
   }

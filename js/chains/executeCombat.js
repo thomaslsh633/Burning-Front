@@ -48,7 +48,7 @@
     }
 
   // executeCombat__v140: from [17*], calls executeCombat__v139
-  function executeCombat__v140(att, def) { v158Engage(att); return executeCombat__v139.apply(this, arguments); }
+  function executeCombat__v140(att, def) { v158Engage(att); v214Fired(att); return executeCombat__v139.apply(this, arguments); }
 
   // executeCombat__v139: from [v172], calls executeCombat__v130
   function executeCombat__v139(att, def) {
