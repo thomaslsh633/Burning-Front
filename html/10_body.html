@@ -1,0 +1,79 @@
+  </style>
+</head>
+<body>
+<!-- ===== HTML 구조: 회전 안내 / 앱 루트 ===== -->
+<div id="rotate-guard" role="alert"><b aria-hidden="true">↻</b><span>기기를 가로로 돌려 주세요</span><small>이 게임은 가로 화면 전용입니다</small></div>
+<div id="app" class="land">
+<!-- [상단바] 자원·턴·메뉴 -->
+  <header id="top-bar">
+    <div class="gold-box" id="gold-box" role="button" tabindex="0" aria-label="자원과 수입 상세 열기"><span id="gold-display">💰 3500<br>⛽ 250</span></div>
+    <button id="menu-btn" class="icon-btn" aria-label="설정">⚙</button>
+  </header>
+
+
+
+
+<!-- [전장 뷰포트] 캔버스 · 토스트 · 징집 트레이 · 하단 HUD · 안내/예측 배너 -->
+  <div id="viewport-container">
+    <canvas id="gameCanvas"></canvas>
+    
+    <button id="sup-tab" aria-label="지휘 포인트 패널">CP<b>0</b></button><div id="sup-panel"><div id="pane-research"></div></div><div id="cp-info"></div>
+    <div id="toast-wrap" aria-live="polite"></div>
+    <div id="ctx-dock"><div id="pane-build">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="infantry" onclick="switchBuildTab('infantry')">보병</button>
+        <button class="tab-btn" data-tab="support" onclick="switchBuildTab('support')">중화기 / 지원</button>
+        <button class="tab-btn" data-tab="tank" onclick="switchBuildTab('tank')">전차</button>
+      </div>
+      <div id="buy-preview" class="action-subpanel" style="display:none"></div>
+      <div class="btn-grid" id="build-buttons"></div></div><div id="unit-hud"><div id="tile-tip"></div><div id="pkg-picker"></div><div id="unit-card"><section id="unit-strip" aria-live="polite"></section><div id="unit-info"></div></div><div id="special-actions"></div></div></div>
+    <div id="guide-banner">안내 메시지</div>
+    <div id="combat-preview-banner">
+      <span id="preview-text">공격 예측</span>
+      <span style="color:#fef08a;font-size:10.5px;">같은 적을 다시 탭 = 확정 · 다른 곳 = 취소</span>
+    </div>
+  </div>
+
+<!-- [하단 덱] 턴 표시 · 지원(CP) 패널 탭 · 턴 종료 -->
+  <nav id="deck-tabs"><div id="turn-indicator" class="turn-badge turn-blue"><span id="turn-text">연합군</span><span id="turn-round">R01</span></div><button id="end-turn-btn" class="btn-end">턴 종료</button></nav>
+  <div id="log" hidden></div>
+<!-- [시트] 수입 상세 · 유닛 상세 · 설정 메뉴 -->
+  <div id="income-sheet" class="sheet-back" role="dialog" aria-label="자원 수입 상세"><div class="sheet-card"><div class="set-head"><span>💰 자원 · 수입</span><button class="icon-btn" aria-label="닫기" data-close="1">✕</button></div><div class="set-body" id="income-body"></div></div></div>
+  <div id="vm-sheet" class="sheet-back" role="dialog" aria-label="Victory Meter"><div class="sheet-card"><div class="set-head"><span>★ Victory Meter</span><button class="icon-btn" aria-label="Close" data-close="1">✕</button></div><div class="set-body" id="vm-body"></div></div></div>
+  <div id="detail-sheet" class="sheet-back" role="dialog" aria-label="유닛 상세"><div class="sheet-card"><div class="set-head"><span id="detail-title">ⓘ 상세</span><button class="icon-btn" aria-label="닫기" data-close="1">✕</button></div><div class="set-body" id="detail-body"></div></div></div>
+  <div id="menu-sheet" role="dialog" aria-label="설정">
+    <div class="set-head"><span>⚙ 설정</span><button id="menu-close" class="icon-btn" aria-label="닫기">✕</button></div>
+    <div class="set-body">
+      <div class="set-group"><h3>전장</h3>
+        <div class="set-row"><select id="map-select" onchange="resetGame()">
+          <option value="skirmish" selected>[교전 테스트] 소규모 교전 · 전 티어 건물 (22×14)</option>
+          <option value="faymonville">[Faymonville] 영역 · 보급선 (48×48)</option>
+        </select></div>
+        <div class="set-row"><select id="init-gold-select" onchange="resetGame()">
+          <option value="600" selected>표준 600 MP · 30 F</option>
+          <option value="2000">테스트 2000 G</option>
+          <option value="3500">테스트 3500 G</option>
+          <option value="6000">테스트 6000 G</option>
+        </select><button id="menu-reset" class="danger">전장 초기화</button></div>
+      </div>
+      <div class="set-group"><h3>화면</h3>
+        <div class="set-row"><button id="haptic-btn">진동: 켜짐</button></div>
+        <div class="set-row"><button id="fs-btn">전체화면: 꺼짐</button></div>
+        <div class="set-row"><button id="spr-btn">전차 2.5D 스프라이트: 켜짐</button></div>
+        <div class="set-row"><button id="v99-ter-btn">지형 표현: 사실적</button></div>
+        <div class="set-row"><button id="v99-grid-btn">헥스 격자: 숨김</button></div>
+        <div class="set-row"><button id="v100-brief-btn">시작 브리핑: 켜짐</button></div>
+        <div class="set-row"><button id="v103-fx-btn">날씨·색감 효과: 켜짐</button></div>
+        <div class="set-row"><button id="v130-arc-btn">중화기 사거리선: 선택만</button></div>
+      </div>
+      <div class="set-group"><h3>크레딧</h3><div class="sheet-note">글꼴 — Saira Stencil One (Omnibus-Type), Oswald (Vernon Adams 외), Black Han Sans (Zess Type), Do Hyeon (우아한형제들): SIL Open Font License 1.1</div></div>
+      <div class="set-group"><h3>자원 직접 입력</h3>
+        <div class="set-row"><select id="res-team"><option value="blue">연합군</option><option value="red">추축군</option></select></div>
+        <div class="set-row"><input id="res-g" type="number" inputmode="numeric" min="0" placeholder="군자금"><input id="res-f" type="number" inputmode="numeric" min="0" placeholder="연료"><input id="res-m" type="number" inputmode="numeric" min="0" placeholder="MUN"><input id="res-cp" type="number" inputmode="numeric" min="0" max="8" placeholder="CP (0~8)"><button id="res-apply">적용</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
