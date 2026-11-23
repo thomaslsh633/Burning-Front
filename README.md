@@ -2,22 +2,22 @@
 
 (구 이름: CoH 1944 아르덴 공방전. 저장 데이터 키 `coh1944.*`는 기존 저장을 지키려고 그대로 둡니다.)
 
-v209부터 게임은 이 폴더가 원본입니다. 실제로 플레이하는 한 장짜리 HTML은 여기서 빌드해서 만듭니다.
+게임을 새 구조로 다시 만드는 중입니다. 계획은 "Burning Front — Architecture Reset Plan" 문서
+(Architecture plan, Rewrite roadmap 탭)에 있습니다.
 
 ## 폴더 구성
-- `js/` 게임 코드 (기능별 230개 파일, `manifest.txt` 순서대로 하나로 합쳐짐)
-- `js/chains/` 여러 버전에 걸쳐 덧씌워진 함수들을 한 파일에 모아 둔 곳
-- `css/`, `html/`, `assets/` 스타일·화면 구조·내장 글꼴
-- `CODEMAP.md` 코드 지도 (Claude가 작업 시작 때 읽는 문서), `FILES.md` 전체 파일 목록
-- `SPEC.md` 현재 적용 중인 게임 규칙서 (규칙이 바뀌면 함께 갱신)
-- `CLAUDE.md` 작업 규칙, `CHANGELOG.md` 버전 기록, `VERSION` 현재 버전 번호
-- `tools/` 검색·검증 도구, `dist/` 빌드 결과물
+- `src/` 새 게임 코드. 역할별 계층으로 나뉩니다.
+  - `core/` 게임 규칙(공식). 화면·시간·난수에 직접 손대지 않는 순수 함수
+  - `app/` 게임 상태(로비·설정·교전·일시정지·결과 …) 전환과 조작 모드
+  - `input/` 터치·제스처 인식, `view/` 그리기·이펙트·UI 화면, `services/` 난수·저장·문구
+- `data/` 숫자와 문구만 담은 JSON (유닛·무기·지형·맵·밸런스·한국어 문구)
+- `tests/` 자동 테스트 (빌드할 때마다 먼저 실행)
+- `legacy/` 동결된 v214 게임. 수정하지 않고, 새 코드의 결과를 비교하는 기준으로만 씁니다.
+- `SPEC.md` 현재 게임 규칙서, `CODEMAP.md` 코드 지도, `CLAUDE.md` 작업 규칙, `CHANGELOG.md` 버전 기록
 
-## 작업 요청할 때
-1. 이 폴더를 zip으로 올리거나, GitHub 저장소에 두었다면 저장소 이름을 알려 주세요.
-2. 고칠 내용을 말씀해 주세요. 영역(예: "선회 트레이", "전차 대인 피해")을 같이 적어 주시면 더 빠릅니다.
-3. 결과로 수정된 소스 zip과 `burning_front_vNNN.html`을 받습니다.
+## 빌드
+Node.js(20 이상)가 있는 PC에서 이 폴더로 이동한 뒤:
+- `node build.js` → 테스트 실행 후 `dist/burning_front_R0.html` 생성 (새 게임)
+- `node legacy/build.js` → `legacy/dist/burning_front_v214.html` 생성 (기존 게임)
 
-## 직접 빌드하려면
-Node.js가 있는 PC에서 이 폴더로 이동한 뒤 `node build.js`를 실행하면 `dist/`에 HTML이 생깁니다.
 (Windows에서는 Windows용 Node.js가 필요합니다. linux-x64용은 Windows에서 실행되지 않습니다.)

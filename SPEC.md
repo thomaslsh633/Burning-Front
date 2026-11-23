@@ -1,5 +1,8 @@
 # SPEC — rules in force (v209)
 
+> Rewrite note (R0, 2026-11-23): these rules describe v214, which is frozen in `legacy/`. File and function names
+> below (`js/…`, `calcDamage`, …) point into `legacy/`. Each rule moves to its `src/` function during the rewrite.
+
 What the game does **now**, checked against the v209 code (= v208 behaviour). One line per rule, newest decision only.
 `(vNNN)` = version that set the rule; the code for it carries the same tag (`node tools/where.js` / grep `vNNN`).
 Unit numbers are not copied here: `python3 -I tools/unit.py <unit>` prints them from the running game.

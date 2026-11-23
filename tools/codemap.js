@@ -1,63 +1,42 @@
 #!/usr/bin/env node
-// Regenerate the AUTO sections of CODEMAP.md from the source tree (file table, wrapper chains, shared listeners).
-// usage: node tools/codemap.js        (run from the project root; build.js also calls it when tools/ has acorn)
-const fs = require('fs'), path = require('path');
-const root = path.join(__dirname, '..');
-const files = fs.readFileSync(path.join(root, 'manifest.txt'), 'utf8').split('\n').map(s => s.trim()).filter(s => s && !s.startsWith('#'));
-const MARK = /^\s*\/\/\s*\[([^\]]+)\]\s*(.*)$/;
-const clip = (s, n) => (s.length > n ? s.slice(0, n - 1) + '…' : s).replace(/\|/g, '/');
+// Refreshes the AUTO file table in CODEMAP.md: every file under src/, data/ and tests/ with its line count
+// and the text of its first comment line.  usage: node tools/codemap.js
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-// ---- file table ----
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
+const SECTIONS = [['src', 'Game (src/)'], ['data', 'Data (data/)'], ['tests', 'Tests (tests/)']];
+
+const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true })
+  .flatMap(d => (d.isDirectory() ? walk(path.join(dir, d.name)) : [path.join(dir, d.name)]))
+  .sort();
+
+function purpose(file, text) {
+  if (file.endsWith('.json')) return 'data';
+  const first = text.split('\n').find(l => l.trim());
+  const m = first && /^\s*(?:\/\/|\/\*|<!--)\s*(.*?)\s*(?:\*\/|-->)?\s*$/.exec(first);
+  return m ? m[1] : '';
+}
+
 const rows = [];
-let jsAll = '';
-for (const f of files) {
-  const t = fs.readFileSync(path.join(root, f), 'utf8');
-  const lines = t.split('\n').length - 1, kb = Buffer.byteLength(t) / 1024;
-  let head = '';
-  if (f.endsWith('.js')) {
-    jsAll += t;
-    const m = t.split('\n').slice(0, 12).map(l => MARK.exec(l)).find(Boolean);
-    head = m ? `[${m[1]}] ${m[2]}` : (t.split('\n').find(l => /\S/.test(l)) || '').trim();
-    if (f.startsWith('js/chains/')) continue;   // listed in the chain table
-  } else head = f.startsWith('assets/') ? 'embedded web fonts (base64) — never needs reading' : f.startsWith('css/') ? 'styles' : 'markup';
-  rows.push(`| ${f.replace(/^js\//, '')} | ${lines} | ${kb.toFixed(0)} | ${clip(head.trim().replace(/^\[[^\]]+\]\s*/, ''), 72)} |`);
+for (const [dir, title] of SECTIONS) {
+  const full = path.join(root, dir);
+  if (!fs.existsSync(full)) continue;
+  rows.push('', `### ${title}`, '', '| file | lines | owns |', '|---|---:|---|');
+  for (const f of walk(full)) {
+    const text = fs.readFileSync(f, 'utf8');
+    const rel = path.relative(root, f).split(path.sep).join('/');
+    rows.push(`| \`${rel}\` | ${text.split('\n').length} | ${purpose(f, text).replace(/\|/g, '\\|')} |`);
+  }
 }
-const fileTable = ['(paths under js/ unless shown)\n\n| file | lines | KB | header |', '|---|---:|---:|---|', ...rows].join('\n');
 
-// ---- chains ----
-const chainDir = path.join(root, 'js', 'chains');
-const chains = fs.existsSync(chainDir) ? fs.readdirSync(chainDir).filter(f => f.endsWith('.js')).sort() : [];
-const chainRows = chains.map(f => {
-  const t = fs.readFileSync(path.join(chainDir, f), 'utf8');
-  const order = (/Call order, outermost first: (.*)/.exec(t) || [, ''])[1];
-  const n = order ? order.split(' → ').length : 0;
-  return { f, n, order };
-}).sort((a, b) => b.n - a.n);
-const chainTable = 'Function (layer count) — file is `js/chains/<function>.js`:\n' +
-  chainRows.map(c => `${c.f.replace(/\.js$/, '')} (${c.n})`).join(' · ');
-
-// ---- shared DOM listeners (several handlers on one element+event run in registration = file order) ----
-const lis = {};
-const re = /([A-Za-z_$][\w$.]*(?:\([^)]*\))?)\.addEventListener\(\s*['"]([a-z]+)['"]/g;
-let off = 0;
-const fileStarts = [];
-for (const f of files.filter(x => x.endsWith('.js'))) { const t = fs.readFileSync(path.join(root, f), 'utf8'); fileStarts.push([off, f, t]); off += t.length; }
-for (const [, f, t] of fileStarts) {
-  let m; re.lastIndex = 0;
-  while ((m = re.exec(t))) { const k = `${m[1]} · ${m[2]}`; const ln = t.slice(0, m.index).split('\n').length; (lis[k] = lis[k] || []).push(`${f}:${ln}`); }
-}
-const multi = Object.entries(lis).filter(([k, v]) => v.length > 1 && /^[A-Za-z_$][\w$]{2,}(\.[\w$]+)* · /.test(k) && !/^(el|btn|b|g|x|e|it|row|box) · /.test(k)).sort((a, b) => b[1].length - a[1].length);
-const lisTable = ['| element · event | handlers | where (in run order) |', '|---|---:|---|',
-  ...multi.map(([k, v]) => `| ${k.replace(/\|/g, '/')} | ${v.length} | ${v.join(', ')} |`)].join('\n');
-
-// ---- write ----
-const cm = path.join(root, 'CODEMAP.md');
-let doc = fs.readFileSync(cm, 'utf8');
-const put = (tag, body) => { doc = doc.replace(new RegExp(`(<!-- AUTO:${tag} -->)[\\s\\S]*?(<!-- /AUTO:${tag} -->)`), `$1\n${body}\n$2`); };
-put('CHAINS', chainTable); put('LISTENERS', lisTable);
-put('STATS', `${files.length} files · ${files.filter(f => f.endsWith('.js')).length} JS files · ${chains.length} wrapper chains · ` +
-  `${(fs.readFileSync(path.join(root, 'manifest.txt'), 'utf8'), files.reduce((a, f) => a + fs.statSync(path.join(root, f)).size, 0) / 1024).toFixed(0)} KB total`);
-fs.writeFileSync(cm, doc);
-const fm = path.join(root, 'FILES.md');
-if (fs.existsSync(fm)) fs.writeFileSync(fm, fs.readFileSync(fm, 'utf8').replace(/(<!-- AUTO:FILES -->)[\s\S]*?(<!-- \/AUTO:FILES -->)/, `$1\n${fileTable}\n$2`));
-console.log('CODEMAP.md and FILES.md updated');
+const file = path.join(root, 'CODEMAP.md');
+const doc = fs.readFileSync(file, 'utf8');
+const begin = '<!-- AUTO:FILES -->';
+const end = '<!-- /AUTO:FILES -->';
+const i = doc.indexOf(begin);
+const j = doc.indexOf(end);
+if (i < 0 || j < 0) { console.error('CODEMAP.md has no AUTO:FILES markers'); process.exit(1); }
+fs.writeFileSync(file, doc.slice(0, i + begin.length) + rows.join('\n') + '\n' + doc.slice(j));
+console.log('CODEMAP.md file table refreshed');

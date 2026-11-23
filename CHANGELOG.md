@@ -3,6 +3,15 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## R0 — rewrite Phase 0: new folder, build and state machines
+- v214 moved unchanged to `legacy/` (tag `v214-legacy`); `node legacy/build.js` still builds the identical file.
+- New tree `src/` (core / app / input / view / services), `data/`, `tests/`; new `build.js` bundles ES modules into
+  one HTML with no npm packages, runs the tests first and refuses builds that break the layer rules
+  (e.g. `Math.random` or `document` inside `src/core/`).
+- `src/core/fsm.js`: enums + transition tables for every state in the game. First machine: App
+  (Boot, Lobby, Setup, Loading, Playing, Paused, TurnCurtain, GameOver, Result).
+- Playable build shows the lobby; other screens are stand-ins with one button per allowed transition.
+
 ## v214 — indirect fire from the CoH3 data
 - Mortars, howitzers, SPG artillery and rocket launchers take damage, penetration, AoE falloff, member cap and scatter from the CoH3 JSON
   (`tools/coh3_indirect.py` → `js/0125_v214_coh3-indirect-generated.js`); ranges and prices unchanged.
