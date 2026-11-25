@@ -1,0 +1,15 @@
+{
+  "factions": {
+    "german": { "sources": { "all": "german" } },
+    "american": { "sources": { "all": "american" } },
+    "afrika_korps": { "sources": { "all": "afrika_korps" } },
+    "british": { "sources": { "north_africa": "british_africa", "italy": "british" } }
+  },
+  "restore": {
+    "german": ["fallschirmjagers_ger", "fallschirmpioneers_ger", "halftrack_medical_ger", "halftrack_stummel_ger",
+      "recovery_vehicle_ger", "truck_2_5_medical_ger"],
+    "american": ["ambulance_us", "recovery_vehicle_us", "truck_6x6_us"]
+  },
+  "clone": {},
+  "battlegroup_units": "doctrine_unlock"
+}

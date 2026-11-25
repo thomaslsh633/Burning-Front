@@ -28,6 +28,12 @@
       "sha256": "d96e21324aa6ef061f6462aecdec5d0e8f8553dbab73bda6ac0766efcdcfc2f0"
     },
     {
+      "source": "data/chunked/weapon/british_africa.json",
+      "target": "weapon/british_africa.json",
+      "bytes": 1862589,
+      "sha256": "3be302261baa30466c356047aa7d2294f63cf863c11ab5d19d707d5e7c08b073"
+    },
+    {
       "source": "data/chunked/weapon/common.json",
       "target": "weapon/common.json",
       "bytes": 1790813,
@@ -56,6 +62,12 @@
       "target": "ebps/british.json",
       "bytes": 7279943,
       "sha256": "c6d044a02f55373c5acc7cbc5c44e0fb3da4ae4c18a651fdca93eec9ecf824ff"
+    },
+    {
+      "source": "data/chunked/ebps/races/british_africa.json",
+      "target": "ebps/british_africa.json",
+      "bytes": 7234100,
+      "sha256": "dfc264ae501be0e449f6ba3fb8fa2616f6f52229665505d17e1a5fbceca95cd8"
     },
     {
       "source": "data/chunked/ebps/races/common.json",
@@ -88,6 +100,12 @@
       "sha256": "960ffcd8eab2944e5422d6784369c2f090e20dcfb27816d0c8fd62d861a3f9ec"
     },
     {
+      "source": "data/chunked/sbps/races/british_africa.json",
+      "target": "sbps/british_africa.json",
+      "bytes": 4896643,
+      "sha256": "9f2338d1f8879e13fcfcb36e8696fd64aefa7ef147f788edbbfd697d77354ec6"
+    },
+    {
       "source": "data/chunked/sbps/races/common.json",
       "target": "sbps/common.json",
       "bytes": 814800,
@@ -116,6 +134,12 @@
       "target": "upgrade/british.json",
       "bytes": 3859523,
       "sha256": "5c786bc2eb1867435742487ce2ca9d7497dc9d7c80023bcb6d7f538c25e7f2d6"
+    },
+    {
+      "source": "data/chunked/upgrade/british_africa.json",
+      "target": "upgrade/british_africa.json",
+      "bytes": 636568,
+      "sha256": "923643b5a33c3fbcf9df8e6dbd10c5de871d0f1973dbf0c6142c5c8286fe8bf1"
     },
     {
       "source": "data/chunked/upgrade/common.json",
@@ -176,6 +200,12 @@
       "target": "abilities/british.json",
       "bytes": 6370992,
       "sha256": "da2c1539a8878ae6536c2c5ce5834b99f7ceb3ff89adfbaf4b8f7fd69322c464"
+    },
+    {
+      "source": "data/chunked/abilities/races/british_africa.json",
+      "target": "abilities/british_africa.json",
+      "bytes": 1931284,
+      "sha256": "474a4b93078475b886cc697b436a309fcc32113e4a02cccadf9b4f58acf0418e"
     },
     {
       "source": "data/chunked/abilities/races/common.json",

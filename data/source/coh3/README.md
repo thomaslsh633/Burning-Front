@@ -12,7 +12,8 @@ pinned to one commit (see `SOURCE.json`: commit, date, every file's size and sha
 | `veterancy/` | `veterancy/<race>.json` | veterancy rank modifiers |
 | `abilities/` | `abilities/races/<race>.json` | abilities (grenades, barrages, …) |
 
-Races: `german` (Wehrmacht), `american` (US Forces), `afrika_korps` (Afrikakorps), `british` (British Forces), `common` (shared).
+Races: `german` (Wehrmacht), `american` (US Forces), `afrika_korps` (Afrikakorps), `british` (British Forces, Italy),
+`british_africa` (British Forces, North Africa; no veterancy file), `common` (shared).
 
 - Download / re-download the pinned commit: `node tools/coh3/fetch.js` (needs git and network)
 - Move to the newest data: `node tools/coh3/fetch.js --latest` (then review what changed)

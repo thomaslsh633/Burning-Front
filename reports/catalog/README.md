@@ -5,37 +5,44 @@ Full tables (members, HP, weapons, equipment with cost, fire-rate values): `<fac
 
 | Faction | units | infantry | team weapons | vehicles | emplacements | weapons in use | equipment (upgrades) | excluded records |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| german | 58 | 10 | 10 | 27 | 11 | 83 | 29 | 55 |
-| american | 61 | 22 | 6 | 26 | 7 | 103 | 52 | 45 |
-| afrika_korps | 44 | 7 | 6 | 29 | 2 | 63 | 26 | 36 |
-| british | 30 | 3 | 10 | 13 | 4 | 49 | 13 | 44 |
+| german | 68 | 12 | 11 | 34 | 11 | 98 | 31 | 45 |
+| american | 64 | 22 | 6 | 29 | 7 | 111 | 52 | 42 |
+| afrika_korps | 44 | 7 | 6 | 29 | 2 | 82 | 26 | 36 |
+| british · italy (CoH3 british) | 32 | 3 | 11 | 14 | 4 | 61 | 13 | 42 |
+| british · north_africa (CoH3 british_africa) | 55 | 10 | 11 | 26 | 7 | 97 | 26 | 18 |
 
 ## german
 
 - **emplacements** (11): aa_gun_20mm_emplacement_ger, anti_tank_bunker_ger, at_gun_88mm_emplacement_ger, at_gun_88mm_no_sandbags_ger, base_defense_ger, hmg_mg42_bunker_ger, howitzer_105mm_ger, howitzer_obice_210_ger, mortar_bunker_autobuild_ger, mortar_bunker_ger, pantherturm_emplacement_ger
-- **infantry** (10): coastal_officer_ger, coastal_reserves_ger, grenadier_ger, jaeger_ger, panzergrenadier_ger, panzergrenadier_tankhunter_specialist_ger, pioneer_ger, sniper_ger, stormtrooper_ger, sturmpioneer_ger (bg)
-- **team_weapons** (10): aa_gun_20mm_ger, anzioannie_ger, at_gun_75mm_ger, at_gun_lg40_ger, hmg_mg42_ger, howitzer_cannone_da_105_ger, howitzer_obice_da_210_no_sandbags_ger, leig_75mm_ger, mortar_81mm_ger, nebelwerfer_150mm_ger
-- **vehicles** (27): armored_car_222_specialist_ger, armored_car_8_rad_ger, armored_car_ger, borgward_iv_ger, brummbar_ger, halftrack_flame_ger (bg), halftrack_ger, halftrack_recrewable_ger, halftrack_stummel_recrewable_ger, hummel_ger, kettenkrad_ger, king_tiger_sdkfz_182_ger, l6_40_recrewable_ger, marder_iii_ger, nashorn_ger (bg), panther_ger (bg), panzer_iv_cmd_ger, panzer_iv_ger, stug_iii_ger, sturmtiger_ger (bg), tiger_ger, truck_2_5_fuel_ger, truck_2_5_ger, truck_2_5_logistics_ger, wespe_ger, wirbelwind_ger, wirbelwind_recrewable_ger
-- **excluded, but in v214** (6): fallschirmjagers_ger, fallschirmpioneers_ger, halftrack_medical_ger, halftrack_stummel_ger, recovery_vehicle_ger, truck_2_5_medical_ger
+- **infantry** (12): coastal_officer_ger, coastal_reserves_ger, fallschirmjagers_ger (restored), fallschirmpioneers_ger (restored), grenadier_ger, jaeger_ger, panzergrenadier_ger, panzergrenadier_tankhunter_specialist_ger, pioneer_ger, sniper_ger, stormtrooper_ger, sturmpioneer_ger (doctrine)
+- **team_weapons** (11): aa_gun_20mm_ger, anzioannie_ger, at_gun_75mm_ger, at_gun_88mm_pak43_ger, at_gun_lg40_ger, hmg_mg42_ger, howitzer_cannone_da_105_ger, howitzer_obice_da_210_no_sandbags_ger, leig_75mm_ger, mortar_81mm_ger, nebelwerfer_150mm_ger
+- **vehicles** (34): armored_car_222_specialist_ger, armored_car_8_rad_ger, armored_car_ger, borgward_iv_ger, brummbar_ger, halftrack_flame_ger (doctrine), halftrack_ger, halftrack_medical_ger (restored), halftrack_recrewable_ger, halftrack_stummel_ger (restored), halftrack_stummel_recrewable_ger, hummel_ger, kettenkrad_ger, king_tiger_sdkfz_182_ger, l6_40_recrewable_ger, marder_iii_ger, nashorn_ger (doctrine), panther_ger (doctrine), panzer_iv_cmd_ger, panzer_iv_ger, recovery_vehicle_ger (restored), royal_engineers_armored_car_ger (doctrine), royal_engineers_tiger_ger (doctrine), royal_engineers_wirbelwind_ger (doctrine), stug_iii_ger, sturmtiger_ger (doctrine), tiger_ger, truck_2_5_fuel_ger, truck_2_5_ger, truck_2_5_logistics_ger, truck_2_5_medical_ger (restored), wespe_ger, wirbelwind_ger, wirbelwind_recrewable_ger
 
 ## american
 
-- **emplacements** (7): base_defense_us, goon_gun_pit_us, hmg_50cal_fighting_position_us, hmg_fighting_position_us, howitzer_105mm_us (bg), mortar_pit_81mm_us, tourelle_emplacement_us
-- **infantry** (22): artillery_observers_us (bg), assault_engineer_us (bg), bazooka_team_us, brazilian_infantry_us, brazilian_lieutenant_us, captain_us, engineer_us, french_infantry_us, infantry_assault_bazooka_team_us, infantry_assault_riflemen_us, marksman_team_partisan, paratrooper_us, pathfinder_us (bg), ranger_us (bg), resistance_fighters_battlegroup_partisans, resistance_fighters_partisan, riflemen_us, saboteurs_battlegroup_partisan, saboteurs_partisan, scout_us (bg), sniper_us, ssf_commandos_us
+- **emplacements** (7): base_defense_us, goon_gun_pit_us, hmg_50cal_fighting_position_us, hmg_fighting_position_us, howitzer_105mm_us (doctrine), mortar_pit_81mm_us, tourelle_emplacement_us
+- **infantry** (22): artillery_observers_us (doctrine), assault_engineer_us (doctrine), bazooka_team_us, brazilian_infantry_us, brazilian_lieutenant_us, captain_us, engineer_us, french_infantry_us, infantry_assault_bazooka_team_us, infantry_assault_riflemen_us, marksman_team_partisan, paratrooper_us, pathfinder_us (doctrine), ranger_us (doctrine), resistance_fighters_battlegroup_partisans, resistance_fighters_partisan, riflemen_us, saboteurs_battlegroup_partisan, saboteurs_partisan, scout_us (doctrine), sniper_us, ssf_commandos_us
 - **team_weapons** (6): at_gun_3in_m5_us, at_gun_57mm_us, hmg_30cal_us, hmg_50cal_us, mortar_81mm_us, pack_howitzer_75mm_us
-- **vehicles** (26): chaffee_us, char_b1_us (bg), greyhound_recrewable_us, greyhound_us, halftrack_75mm_us, halftrack_assault_us (bg), halftrack_medical_us, halftrack_quad_us, halftrack_us (bg), hellcat_us, m29_weasal_us, pershing_us, priest_kangaroo_us, priest_us, scott_us (bg), sherman_76mm_us, sherman_bulldozer_us, sherman_bulldozer_x2_us, sherman_easy_8_us (bg), sherman_recrewable_us, sherman_us, sherman_whizbang_us (bg), stuart_us, truck_4x4_medical_specialist_us, truck_4x4_us, truck_4x4_x2_us
-- **excluded, but in v214** (3): ambulance_us, recovery_vehicle_us, truck_6x6_us
+- **vehicles** (29): ambulance_us (restored), chaffee_us, char_b1_us (doctrine), greyhound_recrewable_us, greyhound_us, halftrack_75mm_us, halftrack_assault_us (doctrine), halftrack_medical_us, halftrack_quad_us, halftrack_us (doctrine), hellcat_us, m29_weasal_us, pershing_us, priest_kangaroo_us, priest_us, recovery_vehicle_us (restored), scott_us (doctrine), sherman_76mm_us, sherman_bulldozer_us, sherman_bulldozer_x2_us, sherman_easy_8_us (doctrine), sherman_recrewable_us, sherman_us, sherman_whizbang_us (doctrine), stuart_us, truck_4x4_medical_specialist_us, truck_4x4_us, truck_4x4_x2_us, truck_6x6_us (restored)
 
 ## afrika_korps
 
 - **emplacements** (2): base_defense_ak, hmg_bunker_ak
 - **infantry** (7): assault_panzergrenadier_ak, bersaglieri_ak, guastatori_ak, kriegsmarine_infantry_ak, panzergrenadier_ak, panzerjaeger_inf_ak, panzerpioneer_ak
 - **team_weapons** (6): at_gun_50mm_pak_38_ak, at_gun_88mm_mobile_ak, hmg_mg34_ak, howitzer_cannone_da_105_ak, leig_75mm_ak, mortar_team_ak
-- **vehicles** (29): armored_car_8_rad_ak, armored_car_8_rad_command_ak, armored_tractor_254_ak, elefant_tank_destroyer_ak, halftrack_250_ak, halftrack_250_vampire_ak, halftrack_251_stuka_ak, halftrack_7_flak_ak, halftrack_recovery_ak, halftrack_towed_88mm_ak, kradschutzen_motorcycle_ak, l6_40_ak, m13_40_ak (bg), m13_40_command_ak, marder_iii_ak, p26_40_ak (bg), panzer_ii_command_ak, panzer_iii_37mm_ak, panzer_iii_50mm_long_ak, panzer_iii_75mm_ak, panzer_iii_flame_ak, panzer_iv_command_ak, semovente_75_18_ak (bg), stug_iii_ak, stug_iii_d_ak, tiger_ace_ak, tiger_ak, truck_2_5_ak, truck_2_5_medical_ak
+- **vehicles** (29): armored_car_8_rad_ak, armored_car_8_rad_command_ak, armored_tractor_254_ak, elefant_tank_destroyer_ak, halftrack_250_ak, halftrack_250_vampire_ak, halftrack_251_stuka_ak, halftrack_7_flak_ak, halftrack_recovery_ak, halftrack_towed_88mm_ak, kradschutzen_motorcycle_ak, l6_40_ak, m13_40_ak (doctrine), m13_40_command_ak, marder_iii_ak, p26_40_ak (doctrine), panzer_ii_command_ak, panzer_iii_37mm_ak, panzer_iii_50mm_long_ak, panzer_iii_75mm_ak, panzer_iii_flame_ak, panzer_iv_command_ak, semovente_75_18_ak (doctrine), stug_iii_ak, stug_iii_d_ak, tiger_ace_ak, tiger_ak, truck_2_5_ak, truck_2_5_medical_ak
 
-## british
+## british · italy (CoH3 british)
 
 - **emplacements** (4): base_defense_uk, bofors_emplacement_uk, howitzer_25pdr_uk, howitzer_bl_5_5_uk
 - **infantry** (3): guards_uk, sapper_uk, tommy_uk
-- **team_weapons** (10): at_gun_17pdr_mobile_uk, at_gun_2pdr_uk, at_gun_6pdr_uk, bofors_towed_uk, hmg_vickers_recrew_uk, hmg_vickers_uk, mortar_81mm_recrew_uk, mortar_81mm_uk, mortar_heavy_4_2_uk, pack_howitzer_75mm_uk
-- **vehicles** (13): archer_uk, bishop_uk, churchill_black_prince_uk, churchill_crocodile_uk, churchill_uk, cwt_15_truck_uk, dingo_uk, humber_recrewable_uk, humber_uk, sherman_uk, stuart_ace_recrewable_sp_uk, stuart_uk, valentine_uk
+- **team_weapons** (11): at_gun_17pdr_mobile_uk, at_gun_17pdr_pheasant_uk, at_gun_2pdr_uk, at_gun_6pdr_uk, bofors_towed_uk, hmg_vickers_recrew_uk, hmg_vickers_uk, mortar_81mm_recrew_uk, mortar_81mm_uk, mortar_heavy_4_2_uk, pack_howitzer_75mm_uk
+- **vehicles** (14): archer_uk, bishop_uk, churchill_avre_uk, churchill_black_prince_uk, churchill_crocodile_uk, churchill_uk, cwt_15_truck_uk, dingo_uk, humber_recrewable_uk, humber_uk, sherman_uk, stuart_ace_recrewable_sp_uk, stuart_uk, valentine_uk
+
+## british · north_africa (CoH3 british_africa)
+
+- **buildings** (1): dead_drop_rendezvous_uk
+- **emplacements** (7): at_gun_17pdr_pheasant_emplacement_uk, base_defense_africa_uk, bofors_emplacement_afrika_uk, hmg_nest_africa_uk, howitzer_25pdr_africa_uk, howitzer_base_25pdr_africa_uk, howitzer_bl_5_5_africa_uk
+- **infantry** (10): australian_light_infantry_africa_uk, canadian_heavy_infantry_africa_uk, commando_lmg_africa_uk, guards_africa_uk, gurkhas_africa_uk, polish_lancer_africa_uk, sapper_africa_uk, ssb_africa_uk, ssb_sniper_africa_uk, tommy_africa_uk
+- **team_weapons** (11): at_gun_17pdr_mobile_africa_uk, at_gun_2pdr_africa_uk, at_gun_6pdr_africa_recrew_uk, at_gun_6pdr_africa_uk, bofors_towed_africa_uk, hmg_vickers_africa_recrew_uk, hmg_vickers_africa_uk, land_mattress_africa_uk, mortar_81mm_africa_uk, mortar_heavy_4_2_africa_uk, pack_howitzer_75mm_africa_uk
+- **vehicles** (26): archer_africa_uk, bishop_africa_uk, centaur_africa_uk (doctrine), churchill_75mm_africa_uk (doctrine), churchill_africa_uk (doctrine), churchill_arv_africa_uk, churchill_avre_africa_uk (doctrine), churchill_black_prince_africa_uk, churchill_crocodile_africa_uk, churchill_na75_75mm_africa_uk (doctrine), crusader_aa_africa_uk (doctrine), crusader_africa_uk, cwt_15_truck_africa_uk, cwt_15_truck_recrewable_africa_uk, cwt_lrdg_truck_2pdr_africa_uk (doctrine), cwt_lrdg_truck_africa_uk_uk (doctrine), dingo_africa_uk, grant_africa_recrewable_uk, grant_africa_uk, humber_africa_uk, matilda_africa_recrewable_uk, matilda_africa_uk, pheasant_halftrack_africa_uk, sherman_firefly_africa_uk (doctrine), stuart_africa_recrewable_uk, stuart_africa_uk

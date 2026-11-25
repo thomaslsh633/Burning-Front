@@ -5,7 +5,7 @@
     "mid",
     "far"
   ],
-  "decimals": 2,
+  "decimals": 0,
   "groups": {
     "per_use": [
       "grenade",

@@ -48,6 +48,15 @@ Status codes used in the label tables:
 | J | Abilities | **ids only for now** (from sbps); full ability form designed with `logic/skills` | not needed before D2 |
 | K | Shots per turn formula (§2.2) | **fire cycle from CoH3 timings, 6 s fire window per turn, per band, fraction carries over** | SPEC §1; one tested function |
 
+### Decided 2026-11-25 (later)
+
+| # | Decision | Effect on data |
+| --- | --- | --- |
+| L | British Forces use two CoH3 sets: `british_africa` in North Africa, `british` in Italy | `data/rules/roster.json` `factions.british.sources`; both downloaded; `british_africa` has no veterancy file and uses `british` ranks |
+| M | Units missing from CoH3 production but in v214 are restored | `roster.json` `restore` (9 units, all with complete CoH3 data); `clone` for units with no CoH3 data (none yet) |
+| N | CoH3 battlegroup units are unlocked by Burning Front doctrines | catalog flags them `doctrine`; doctrine design assigns them |
+| O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
+
 ---
 
 ## 2. weapon.json (per faction; CoH3 `weapon/<race>.json` → `weapon_bag`)
@@ -69,7 +78,7 @@ Status codes used in the label tables:
 | `fire_mode` | vocab direct · indirect · lobbed | from class / projectile / `artillery_force_obey_los` | D, O | combat |
 | `shots_per_turn` | Band3 (whole numbers) | `aim`, `fire.wind_up/wind_down`, `burst.*`, `cooldown.*`, `reload.*` → cycle per band in a 6 s window, rounded | C | combat |
 | `damage_per_shot` | Band3 | CoH3 damage; volley ÷ multiplier; single-shot round(damage × raw); artillery unchanged | C | combat |
-| `shot_multiplier` | int | volley multiplier m (suppression per shot ÷ m too) | C | combat, status |
+| `shot_multiplier` | ratio | volley: CoH3 damage ÷ game damage per shot (suppression per shot scaled the same way) | C | combat, status |
 | `accuracy_scale` | Band3 | artillery: CoH3 rate ÷ game rate (≤ 1); others 1 | C | combat |
 | `reload_turns` | int | artillery slower than one shell per turn: floor(1 / raw) − 1; override allowed | C / O | turn, combat |
 | `deflection_damage` | ratio | `deflection.deflection_damage_multiplier` (0 if `has_deflection_damage` false) | K | combat |
@@ -101,13 +110,13 @@ full result for all 878 weapons in `reports/fire-rate.md`.
 
 | Rule | Weapons | Shots per turn | Damage per shot | Other | Example |
 | --- | --- | --- | --- | --- | --- |
-| `volley` | small arms, MGs, flamethrowers, AA (260) | round(raw × m), smallest m ≤ 6 with every band within 5 % | CoH3 ÷ m | suppression per shot ÷ m | Garand ×4: 13 / 9 / 7 at 3; Kar98k ×5: 9 / 7 / 7 at 2.8 |
-| `single_shot` | tank guns, AT guns, infantry AT, tungsten rounds, small arms under 1 shot per turn (223) | 1 | CoH3 × raw, 2 decimals | — | Sherman 75 mm 124.6; 57 mm AT 202.11 / 200.78 / 199.48 |
+| `volley` | small arms, MGs, flamethrowers, AA (260) | round(raw × CoH3 damage ÷ d) | whole d, largest within 5 % (≥ CoH3 ÷ 6) | suppression per shot × d ÷ CoH3 damage | Garand 13 / 9 / 7 at 3; Kar98k 5 / 4 / 4 at 5; MG42 90 / 74 / 64 at 4 |
+| `single_shot` | tank guns, AT guns, infantry AT, tungsten rounds, small arms under 1 shot per turn (223) | 1 | round(CoH3 × raw) | — | Sherman 75 mm 125; 57 mm AT 202 / 201 / 199 |
 | `artillery` | mortars, light and heavy artillery (245) | ceil(raw) shells, or 1 shell then `reload_turns = floor(1 / raw) − 1` | CoH3 (kept) | `accuracy_scale = raw ÷ game rate` (≤ 1) | 81 mm: 2 shells, acc ×0.89; 105 mm: 1 every 2 turns, acc ×0.83 |
 | `ability` | CoH3 dummy artillery fired only by abilities (15) | 1 per use | CoH3 | — | 150 mm Hummel dummy |
 | `per_use` | grenades, mines (135) | 1 per use | CoH3 | — | — |
 
-- Result: 856 of 878 weapons within 5 % of the CoH3 rate, the rest within 6 %; artillery balance is then tuned by hand
+- Result (whole numbers throughout): 868 of 878 weapons within 5 % of the CoH3 rate, 9 within 10 % (one 0-damage tracer off); artillery balance is then tuned by hand
   through `reload_turns`, `scatter` and `accuracy` overrides without touching shell damage.
 - Infantry weapons are per model; a squad fires with every member carrying the weapon.
 

@@ -37,7 +37,7 @@ data/units/
   german/        weapon.json  ebps.json  sbps.json  fx.json   Wehrmacht      (CoH3 race "german")
   american/      weapon.json  ebps.json  sbps.json  fx.json   US Forces      (CoH3 race "american")
   afrika_korps/  weapon.json  ebps.json  sbps.json  fx.json   Afrikakorps    (CoH3 race "afrika_korps")
-  british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 race "british")
+  british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 "british_africa" in North Africa, "british" in Italy)
 ```
 
 Inside each file, records keep the CoH3 category tree, so the files read like the game's own tree:

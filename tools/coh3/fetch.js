@@ -13,7 +13,10 @@ import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 export const REPO = 'https://github.com/cohstats/coh3-data.git';
-export const RACES = ['german', 'american', 'afrika_korps', 'british', 'common'];
+// british = British Forces in Italy, british_africa = British Forces in North Africa (docs/data-labels.md decision L)
+export const RACES = ['german', 'american', 'afrika_korps', 'british', 'british_africa', 'common'];
+// kinds CoH3 does not publish for a race
+const MISSING = { veterancy: ['british_africa'] };
 // kind → path pattern inside the repository
 const KINDS = {
   weapon: r => `data/chunked/weapon/${r}.json`,
@@ -25,7 +28,8 @@ const KINDS = {
 };
 
 export function fileList() {
-  return Object.entries(KINDS).flatMap(([kind, src]) => RACES.map(r => ({ source: src(r), target: `${kind}/${r}.json` })));
+  return Object.entries(KINDS).flatMap(([kind, src]) => RACES.filter(r => !(MISSING[kind] || []).includes(r))
+    .map(r => ({ source: src(r), target: `${kind}/${r}.json` })));
 }
 
 export const sha256 = buf => crypto.createHash('sha256').update(buf).digest('hex');

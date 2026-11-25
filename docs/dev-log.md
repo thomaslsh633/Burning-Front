@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (whole numbers, British sets, roster)
+- **Done:** whole numbers: small arms choose whole damage per shot and whole shots together; single-shot damage rounded.
+  `british_africa` downloaded (35 files); `data/rules/roster.json` (British per theatre, 9 restored v214 units, clones,
+  doctrine unlock). Catalog now finds references in every race's files: british · north_africa 55 units (Gurkhas,
+  Commandos, Matilda, Crusader, Grant …), german 68, american 64, afrika_korps 44, british · italy 32.
+- **Open:** 18 British North Africa squads still unreferenced (Indian infantry, Crusader 57 mm, Priest, SAS …).
+- **Next:** D1-3 vocab and validator.
+
 ## 2026-11-25 (unit catalog)
 - **Done:** `tools/coh3/catalog.js` → `reports/catalog/`: per faction the cleaned list of units (squads kept when produced,
   built, spawned by an upgrade or called in), members with HP, weapons, equipment with cost and granted weapon, weapons in use

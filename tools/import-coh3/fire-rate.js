@@ -5,10 +5,10 @@
 // raw = shots in a magazine / magazine time × fire window (6 s). Ready-aim time is not counted (sustained rate).
 //
 // Rules (groups in data/balance/fire-rate.json):
-//   volley       small arms and every weapon not in another group: shots = round(raw × m), with the smallest whole
-//                multiplier m that brings every band within the tolerance; damage and suppression per shot ÷ m.
+//   volley       small arms and every weapon not in another group: whole damage per shot d (≤ CoH3 damage, ≥ damage / 6)
+//                and shots = round(raw × damage / d); the largest d within the tolerance; suppression per shot × d / damage.
 //   single_shot  tank guns, AT guns, infantry AT (and any volley weapon slower than one shot per turn):
-//                1 shot per turn, damage = CoH3 damage × raw (2 decimals, `decimals` in the settings).
+//                1 shot per turn, damage = round(CoH3 damage × raw) (`decimals` in the settings, 0 = whole numbers).
 //   artillery    howitzers, heavy artillery, mortars: CoH3 damage per shell kept. The rate is rounded up
 //                (raw ≥ 1 → ceil(raw) shells; raw < 1 → 1 shell then reload_turns = floor(1 / raw) − 1) and the hit rate
 //                carries the rest: accuracy_scale = raw / game rate (≤ 1), so expected damage per turn equals CoH3.
@@ -43,16 +43,26 @@ export function ruleOf(category, cfg) {
   return 'volley';
 }
 
-const worstError = (raw, m) => Math.max(...Object.values(raw).map(r => (r > 0 ? Math.abs(Math.round(r * m) / (r * m) - 1) : 0)));
+const worstError = (raw, damage, d, shots) =>
+  Math.max(...Object.keys(raw).map(b => (raw[b] > 0 ? Math.abs((shots[b] * d) / (raw[b] * damage) - 1) : 0)));
 
-/** Smallest whole multiplier m (≤ max) with every band's rounding error ≤ tolerance; else the m with the least error. */
-export function volley(raw, tolerance, maxMultiplier) {
-  let best = 1;
-  for (let m = 1; m <= maxMultiplier; m++) {
-    if (worstError(raw, m) <= tolerance + 1e-9) { best = m; break; }
-    if (worstError(raw, m) < worstError(raw, best) - 1e-9) best = m;
+/**
+ * Whole damage per shot d and whole shots per band: d goes from round(damage) down to damage / maxMultiplier;
+ * shots = round(raw × damage / d). The largest d whose worst band is within the tolerance wins; if none is,
+ * the d with the smallest worst error. Damage per turn (shots × d) stays as close to CoH3 as whole numbers allow.
+ */
+export function volley(raw, damage, tolerance, maxMultiplier) {
+  const bands = Object.keys(raw);
+  const shotsFor = d => Object.fromEntries(bands.map(b => [b, Math.max(1, Math.round((raw[b] * damage) / d))]));
+  if (!(damage > 0)) return { damage: 0, shots: Object.fromEntries(bands.map(b => [b, Math.max(1, Math.round(raw[b]))])) };
+  const top = Math.max(1, Math.round(damage)), low = Math.max(1, Math.ceil(damage / maxMultiplier - 1e-9));
+  let best = null;
+  for (let d = top; d >= low; d--) {
+    const shots = shotsFor(d), err = worstError(raw, damage, d, shots);
+    if (err <= tolerance + 1e-9) return { damage: d, shots };
+    if (!best || err < best.err - 1e-9) best = { damage: d, shots, err };
   }
-  return { m: best, shots: Object.fromEntries(Object.entries(raw).map(([b, r]) => [b, Math.round(r * best)])) };
+  return { damage: best.damage, shots: best.shots };
 }
 
 /** Whole shots, damage per shot and reload for one CoH3 weapon_bag in subcategory `category`. */
@@ -82,10 +92,11 @@ export function fireRate(bag, category, cfg) {
   if (rule === 'volley' && bands.some(b => raw[b] < 1)) { rule = 'single_shot'; out.rule = rule; out.slower_than_one = true; }
 
   if (rule === 'single_shot') {
-    return { ...out, shots_per_turn: each(() => 1), damage_per_shot: each(b => roundTo(damage * raw[b], cfg.decimals ?? 2)) };
+    return { ...out, shots_per_turn: each(() => 1), damage_per_shot: each(b => roundTo(damage * raw[b], cfg.decimals ?? 0)) };
   }
 
-  const v = volley(raw, cfg.volley.tolerance, cfg.volley.max_multiplier);
-  return { ...out, multiplier: v.m, suppression_scale: Math.round(1000 / v.m) / 1000, shots_per_turn: v.shots,
-    damage_per_shot: each(() => round2(damage / v.m)) };
+  const v = volley(raw, damage, cfg.volley.tolerance, cfg.volley.max_multiplier);
+  const scale = damage > 0 ? v.damage / damage : 1;
+  return { ...out, multiplier: damage > 0 ? round2(damage / v.damage) : 1, suppression_scale: round2(scale), shots_per_turn: v.shots,
+    damage_per_shot: each(() => v.damage) };
 }

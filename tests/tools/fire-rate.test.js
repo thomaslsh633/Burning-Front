@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { magazineTime, rawShots, volley, ruleOf, fireRate } from '../../tools/import-coh3/fire-rate.js';
 
 const cfg = {
-  window_seconds: 6, bands: ['near', 'mid', 'far'],
+  window_seconds: 6, bands: ['near', 'mid', 'far'], decimals: 0,
   groups: { per_use: ['grenade', 'mine'], single_shot: ['tank_gun'], artillery: ['heavy_artillery', 'mortar'] },
   volley: { tolerance: 0.05, max_multiplier: 6 },
   artillery: { max_reload_turns: 4, min_raw: 0.05 },
@@ -35,27 +35,28 @@ test('bursts count every bullet', () => {
   assert.ok(Math.abs(rawShots(mg, 'near', 6) - 36 / (5.5 + 6.25) * 6) < 1e-9);
 });
 
-test('volley picks the smallest multiplier that brings every band within tolerance', () => {
-  // Kar98k-like 1.86 / 1.44 / 1.36: ×1 is 30 % off; ×5 → 9 / 7 / 7 (all within 5 %)
-  assert.deepEqual(volley({ near: 1.86, mid: 1.44, far: 1.36 }, 0.05, 6), { m: 5, shots: { near: 9, mid: 7, far: 7 } });
-  assert.deepEqual(volley({ near: 58, mid: 49, far: 40 }, 0.05, 6), { m: 1, shots: { near: 58, mid: 49, far: 40 } });
-  // never reaches tolerance → the multiplier with the smallest worst error, up to the max
-  assert.equal(volley({ near: 1.5, mid: 1.5, far: 1.5 }, 0.0, 3).m, 2);
+test('volley picks the largest whole damage per shot that keeps every band within tolerance', () => {
+  // MG42-like: damage 4 already whole, 90 / 74.45 / 64 shots → unchanged
+  assert.deepEqual(volley({ near: 90, mid: 74.45, far: 64 }, 4, 0.05, 6), { damage: 4, shots: { near: 90, mid: 74, far: 64 } });
+  // Kar98k-like: damage 14 at 1.86 / 1.44 / 1.36 per turn; no whole damage reaches 5 % → least worst error: 5 per shot, 5 / 4 / 4 shots
+  assert.deepEqual(volley({ near: 1.86, mid: 1.44, far: 1.36 }, 14, 0.05, 6), { damage: 5, shots: { near: 5, mid: 4, far: 4 } });
+  // fractional CoH3 damage becomes whole: 5.25 × 15.9 / 14.38 / 12.75
+  assert.equal(Number.isInteger(volley({ near: 15.9, mid: 14.38, far: 12.75 }, 5.25, 0.05, 6).damage), true);
 });
 
-test('small arms: more shots, damage and suppression per shot divided by the multiplier', () => {
+test('small arms: whole damage per shot, suppression per shot scaled the same way', () => {
   const r = fireRate(bag({ damage: { min: 14, max: 14 } }), 'rifle', cfg);
   assert.equal(r.rule, 'volley');
-  assert.equal(r.damage_per_shot.near, Math.round(14 / r.multiplier * 100) / 100);
-  assert.equal(r.suppression_scale, Math.round(1 / r.multiplier * 1000) / 1000);
-  for (const b of cfg.bands) assert.ok(Math.abs(r.shots_per_turn[b] / (r.raw[b] * r.multiplier) - 1) <= 0.05 + 0.01);
+  for (const b of cfg.bands) assert.ok(Number.isInteger(r.damage_per_shot[b]) && Number.isInteger(r.shots_per_turn[b]));
+  assert.equal(r.suppression_scale, Math.round(r.damage_per_shot.near / 14 * 100) / 100);
+  for (const b of cfg.bands) assert.ok(Math.abs(r.shots_per_turn[b] * r.damage_per_shot[b] / (r.raw[b] * 14) - 1) <= 0.08);
 });
 
 test('single-shot weapons fire once and carry the rate in their damage', () => {
   const r = fireRate(slow(6.5, 120), 'tank_gun', cfg);   // 6 / 6.5 = 0.923
   assert.equal(r.rule, 'single_shot');
   assert.deepEqual(r.shots_per_turn, { near: 1, mid: 1, far: 1 });
-  assert.deepEqual(r.damage_per_shot, { near: 110.77, mid: 110.77, far: 110.77 });   // 120 × 6 / 6.5
+  assert.deepEqual(r.damage_per_shot, { near: 111, mid: 111, far: 111 });   // 120 × 6 / 6.5 = 110.77
 });
 
 test('artillery keeps CoH3 damage; rate rounded up, hit rate carries the difference', () => {

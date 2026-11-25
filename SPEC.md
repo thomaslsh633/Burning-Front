@@ -143,8 +143,8 @@ Confirmed 2026-11-25 (rewrite):
   behaviour comes from these state machines (`docs/unit-state.md`). Critical conditions are a set on an active vehicle.
 - Fire rate (replaces the §1 fraction carry-over): the CoH3 rate per range band comes from CoH3 timings (aim, wind-up / down,
   burst, cooldown, reload) over a 6 s fire window; the game uses whole shots, and expected damage per turn stays the CoH3 rate:
-  · small arms (volley): shots = raw × m rounded, with the smallest m (≤ 6) that keeps every band within 5 %; damage and
-    suppression per shot ÷ m (e.g. Kar98k ×5: 9 / 7 / 7 shots at 2.8 damage);
+  · small arms (volley): whole damage per shot (≥ CoH3 damage ÷ 6) and whole shots, the largest damage that keeps every
+    band within 5 % where possible; suppression per shot scaled the same way (Kar98k: 5 / 4 / 4 shots at 5);
   · tank guns, AT guns, infantry AT (and small arms slower than one shot per turn): one shot per turn, damage × rate
     (Sherman 75 mm 120 → 125);
   · artillery (mortars, howitzers, heavy artillery): CoH3 damage per shell kept; rate rounded up as shells per turn or
@@ -152,7 +152,15 @@ Confirmed 2026-11-25 (rewrite):
     accuracy ×0.83); further balance through reload, scatter and accuracy overrides. Artillery too slow for normal fire is
     fired by abilities only;
   · grenades and mines: one shot per use at CoH3 damage. Settings: `data/balance/fire-rate.json`.
-- Values are kept to two decimal places (e.g. 57 mm AT damage 202.11); shot counts are whole numbers.
+- Numbers are whole wherever possible (rounded): shots, damage per shot, HP, cost. Small arms pick a whole damage per shot
+  and whole shots together (Kar98k: 5 / 4 / 4 shots at 5; Garand: 13 / 9 / 7 at 3); single-shot damage is rounded
+  (57 mm AT 202 / 201 / 199). Only ratios (accuracy, multipliers) keep two decimals.
+- Factions and data sets: Wehrmacht, US Forces, Afrikakorps from their CoH3 sets; British Forces use CoH3 `british_africa`
+  in North Africa and CoH3 `british` in Italy (`data/rules/roster.json`).
+- Roster: units CoH3 produces, builds, spawns by upgrade or calls in, plus units restored from v214 (Fallschirmjäger,
+  Fallschirmpioniere, medical half-track, Stummel, recovery vehicle, medical truck; US ambulance, recovery vehicle, 6×6 truck).
+  Missing stats come from comparable units (`clone` in roster.json); none needed so far.
+- CoH3 battlegroup units are unlocked by Burning Front's own doctrines, not produced by buildings.
 - Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
   decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
