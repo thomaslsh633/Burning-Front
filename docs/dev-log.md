@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (data labels)
+- **Done:** overwatch narrowed to emplaced machine-gun teams (SPEC §10, unit-state §5.1.1). `docs/data-labels.md`: decisions
+  (8 decided, 11 to decide) and the label list for weapon, ebps, sbps, veterancy, upgrade, fx, with CoH3 source paths and
+  keep / convert / add / override / derived codes. Findings: upgrade effects live in CoH3 state trees (only weapon kits are
+  readable); HMG / mortar teams are a carried weapon item + crew, AT guns / howitzers are entities with `recrewable_ext`.
+- **Next:** decisions A–K approved → D1-3 vocab and validator.
+- **Blocked:** nothing.
+
 ## 2026-11-25 (architecture before data)
 - **Done:** `docs/unit-state.md`: layers, generic FSM, unit runtime state, six state axes with owners, recrew / capture
   design from CoH3 `recrewable_ext`. SPEC §10: overwatch for machine guns only, CoH3 as data authority (v214 reference only),

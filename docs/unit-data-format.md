@@ -2,6 +2,7 @@
 
 Status: **plan, waiting for approval** (2026-11-25). Nothing in `data/` follows it yet.
 Roadmap and the core + module + profile form: `docs/data-form-roadmap.md`.
+**Consolidated label list and open decisions: `docs/data-labels.md` (supersedes the label tables below where they differ).**
 
 ## Goal
 

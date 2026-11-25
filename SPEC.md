@@ -146,9 +146,10 @@ Confirmed 2026-11-25 (rewrite):
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
 - Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
   uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
-- Overwatch is for machine guns only (HMG, LMG, vehicle coaxial / hull / pintle MGs). An emplaced HMG team, or an infantry
-  squad / vehicle with an MG that holds (no move, no action), fires its MG once in the enemy turn at the first enemy that moves
-  into its range, arc and sight. No other weapon overwatches; this replaces crew watch fire (§5). Counter fire stays (§4).
+- Overwatch is for machine-gun teams only (HMG team weapons, e.g. M1919 / MG42 / Vickers teams). An emplaced MG team that
+  holds (does not fire in its turn) fires once in the enemy turn at the first enemy that moves into its arc, range and sight.
+  Infantry with LMGs, vehicles with MGs and every other weapon never overwatch; this replaces crew watch fire (§5).
+  Counter fire stays for all units (§4).
 - Suppression has two states: suppressed (move −50 %, accuracy ×0.5) and pinned (no move except retreat, cannot capture);
   it decays at the own turn start, faster in cover. Values are tuned in data.
 - Edge cover is directional: hedges, walls, fences and sandbags on a hex edge protect only against fire that crosses that edge.

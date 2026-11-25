@@ -90,10 +90,10 @@ Invariants (tested): `container != null` ⇔ location ∈ {GARRISONED, LOADED}; 
 
 | State | Meaning | Allows | Enter / exit |
 | --- | --- | --- | --- |
-| `IDLE` | ready for orders; budget left (move and / or action) | Move, Attack, UseAbility, Emplace, Pack, Board, Build, Repair, Recrew, Hold (only with full budget and an MG, §5.1.1) | — |
+| `IDLE` | ready for orders; budget left (move and / or action) | Move, Attack, UseAbility, Emplace, Pack, Board, Build, Repair, Recrew, Hold (MG team only, §5.1.1) | — |
 | `MOVING` | resolving a path, one hex per `onStep` | — (in progress) | enter: spend move per hex; each step emits `Moved`; an overwatch trigger can interrupt → back to IDLE / EXHAUSTED at that hex |
 | `ATTACKING` | resolving a fire command | — (in progress) | enter: spend action and ammo; emits `Fired`, `ShotHit`, `Damaged`, `Suppressed` …; exit when resolved |
-| `OVERWATCH` | MG set up to react during the enemy turn | — | enter: record arc and weapon; first enemy step inside arc, range and sight → reaction fire once → `EXHAUSTED`; exit at own turn start |
+| `OVERWATCH` | emplaced MG team waiting to react during the enemy turn | — | enter: record arc and weapon; first enemy step inside arc, range and sight → reaction fire once → `EXHAUSTED`; exit at own turn start |
 | `EXHAUSTED` | nothing left this turn, or the turn ended | — | exits at own turn start → `IDLE` with a fresh budget |
 
 Transitions: IDLE →(Move)→ MOVING →(path done / interrupted)→ IDLE if budget left else EXHAUSTED ·
@@ -103,16 +103,16 @@ Counter fire is a reaction during the enemy turn; it uses `budget.counter`, not 
 
 #### 5.1.1 Overwatch eligibility (SPEC §10)
 
-Only **machine guns** can overwatch: a unit qualifies when one of its weapons is of class `hmg` or `lmg`
-(CoH3 subcategories `heavy_machine_gun`, `light_machine_gun`, including vehicle coaxial, hull and pintle MGs).
+Only **machine-gun teams** overwatch: a unit of kind `team_weapon` whose main weapon is of class `hmg`
+(CoH3 subcategory `heavy_machine_gun`), e.g. M1919, MG42 and Vickers teams.
 
-| Unit | Condition | Arc | Fires with |
-| --- | --- | --- | --- |
-| HMG team | stance `EMPLACED` | the weapon's emplaced arc | the HMG |
-| infantry squad with an LMG | `IDLE` with full budget, not SUPPRESSED / PINNED | 120° around facing | the LMG(s) only |
-| vehicle with an MG | `IDLE` with full budget, not crew_shocked | 120° around hull (turret MG: around turret) | the MG(s) only, never the main gun |
+| Condition | Arc | Fires with |
+| --- | --- | --- |
+| stance `EMPLACED`, action `IDLE`, did not fire this turn, morale not PINNED / RETREATING, life `ACTIVE` | the weapon's emplaced arc | the HMG, once per enemy turn |
 
-Mortars, guns, AT weapons, rifles and SMGs never overwatch. This replaces the legacy crew watch fire (SPEC §5).
+Infantry squads with LMGs, vehicles with coaxial / hull / pintle MGs, mortars, guns, AT weapons, rifles and SMGs
+never overwatch; they keep counter fire. This replaces the legacy crew watch fire (SPEC §5).
+Eligibility is derived from data (`kind` + weapon `class`); no per-unit flag is needed.
 
 ### 5.2 Stance and deployment FSM — owner `logic/crew`
 

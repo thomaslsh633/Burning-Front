@@ -4,7 +4,7 @@
 
 ## Owns
 - bands, hit chance, penetration chance, damage, persons reached
-- suppression amounts, counter fire, overwatch fire (MG only), critical rolls (applied by logic/lifecycle)
+- suppression amounts, counter fire, overwatch fire (MG teams only), critical rolls (applied by logic/lifecycle)
 - indirect fire, scatter, AoE falloff
 - attack preview (same formulas as resolve)
 
