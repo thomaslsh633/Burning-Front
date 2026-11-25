@@ -1,0 +1,12239 @@
+{
+ "UNIT_ROSTER": {
+  "blue": {
+   "scout": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "REC",
+    "className": "정찰병 분대",
+    "uniqueName": "스카우트 분대",
+    "code": "⤫",
+    "cost": 160,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 92,
+    "atk": 4.32,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 5.1,
+    "acc": [
+     0.81,
+     0.78,
+     0.65
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 3,
+    "sight": 7,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_garand_scout_us",
+     "d": 12,
+     "ok": 0,
+     "acc": [
+      0.81,
+      0.78,
+      0.65
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 3,
+     "spt": [
+      6.3,
+      5.1,
+      4.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     6.3,
+     5.1,
+     4.9
+    ],
+    "rawD": {
+     "sbp": "scout_us",
+     "N": 3,
+     "hp": 85,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      600,
+      1800,
+      3600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_scout",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_scout",
+       "mods": {
+        "CAPTURE_RATE_MODIFIER": 1.5,
+        "UNIT_SIGHT_MODIFIER": 10,
+        "DETECTION_VISION_MODIFIER_SQUAD": 10
+       }
+      },
+      {
+       "ref": "veterancy_3_scout",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "ABILITY_RANGE_ADDITION_MODIFIER": 10,
+        "ABILITY_RECHARGE_MODIFIER": 0.34
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 160,
+    "bld": [
+     "hq"
+    ]
+   },
+   "engineer": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "ENG",
+    "className": "전투 공병대",
+    "uniqueName": "야전 전투공병대",
+    "code": "⚒",
+    "cost": 180,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 144,
+    "atk": 1.44,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 46.3,
+    "acc": [
+     0.46,
+     0.27,
+     0.17
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_grease_gun_engineer_us",
+     "d": 4,
+     "ok": 0,
+     "acc": [
+      0.46,
+      0.27,
+      0.17
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      15,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 4,
+     "spt": [
+      87.4,
+      46.3,
+      11.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     87.4,
+     46.3,
+     11.6
+    ],
+    "rawD": {
+     "sbp": "engineer_us",
+     "N": 4,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      600,
+      1800,
+      3600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_engineer",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_engineer",
+       "mods": {
+        "CONSTRUCTION_RATE_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_3_engineer",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 180,
+    "bld": [
+     "hq"
+    ]
+   },
+   "infantry": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "AI",
+    "className": "소총병 분대",
+    "uniqueName": "M1 소총병 분대",
+    "code": "⤫",
+    "cost": 270,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 205,
+    "atk": 4.32,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 10.9,
+    "acc": [
+     0.68,
+     0.62,
+     0.35
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 6,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_garand_rifleman_us",
+     "d": 12,
+     "ok": 0,
+     "acc": [
+      0.68,
+      0.62,
+      0.35
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 5,
+     "spt": [
+      15.6,
+      10.9,
+      8.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     15.6,
+     10.9,
+     8.5
+    ],
+    "rawD": {
+     "sbp": "riflemen_us",
+     "N": 6,
+     "hp": 95,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_riflemen",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_riflemen",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_3_riflemen",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.8,
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 270,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "captain": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "ENG",
+    "className": "지휘관 분대",
+    "uniqueName": "대위 호위대",
+    "code": "⤫★",
+    "cost": 150,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 103,
+    "atk": 4.32,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 4.3,
+    "acc": [
+     0.68,
+     0.62,
+     0.35
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 3,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_garand_rifleman_us",
+     "d": 12,
+     "ok": 0,
+     "acc": [
+      0.68,
+      0.62,
+      0.35
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 2,
+     "spt": [
+      6.3,
+      4.3,
+      3.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     6.3,
+     4.3,
+     3.4
+    ],
+    "rawD": {
+     "sbp": "captain_us",
+     "N": 3,
+     "hp": 95,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      750,
+      2250,
+      4500
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_captain",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_2_captain",
+       "mods": {
+        "ABILITY_RANGE_ADDITION_MODIFIER": 10,
+        "ABILITY_RECHARGE_MODIFIER": 0.65
+       }
+      },
+      {
+       "ref": "veterancy_3_captain",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "ABILITY_RECHARGE_MODIFIER": 0.7
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 150,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "at_inf": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "AT",
+    "className": "대전차 보병",
+    "uniqueName": "바주카 대전차분대",
+    "code": "▷⤫",
+    "cost": 250,
+    "fcost": 0,
+    "isAtInf": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 137,
+    "atk": 21.6,
+    "area": 1,
+    "pen": [
+     24,
+     15,
+     13.2
+    ],
+    "rof": 1.9,
+    "acc": [
+     0.07,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sub": {
+     "n": "M1 카빈 호위",
+     "arc": 360,
+     "supp": 0,
+     "atk": 3.6,
+     "area": 1,
+     "pen": [
+      0.24,
+      0.12,
+      0.12
+     ],
+     "rof": 4.3,
+     "acc": [
+      0.8,
+      0.6,
+      0.3
+     ],
+     "range": 6,
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_carbine_bazooka_team_us",
+      "d": 10,
+      "ok": 0,
+      "acc": [
+       0.8,
+       0.6,
+       0.3
+      ],
+      "pen": [
+       2,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 2,
+      "spt": [
+       7.6,
+       4.3,
+       3.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      7.6,
+      4.3,
+      3.1
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "bazooka_bazooka_team_us",
+     "d": 60,
+     "ok": 0,
+     "acc": [
+      0.07,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      200,
+      125,
+      110
+     ],
+     "rM": [
+      10,
+      22.5,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 2,
+     "spt": [
+      1.9,
+      1.9,
+      1.8
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     1.9,
+     1.9,
+     1.8
+    ],
+    "rawD": {
+     "sbp": "bazooka_team_us",
+     "N": 4,
+     "hp": 95,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_bazooka_team",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "veterancy_2_bazooka_team",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_PENETRATION_MODIFIER": 1.3
+       }
+      },
+      {
+       "ref": "veterancy_3_bazooka_team",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.7
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 250,
+    "bld": [
+     "support_center"
+    ]
+   },
+   "sniper": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "REC",
+    "className": "저격수",
+    "uniqueName": "스프링필드 저격수",
+    "code": "⌖",
+    "cost": 320,
+    "fcost": 0,
+    "isSniper": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 36,
+    "atk": 39.6,
+    "area": 1,
+    "sniperPct": 1.2,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 0.6,
+    "acc": [
+     2,
+     2,
+     2
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 8,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 1,
+    "sight": 7,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_springfield_sniper_us",
+     "d": 110,
+     "ok": 0,
+     "acc": [
+      2,
+      2,
+      2
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      50,
+      50,
+      50
+     ],
+     "max": 50,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      0.6,
+      0.6,
+      0.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     0.6,
+     0.6,
+     0.6
+    ],
+    "rawD": {
+     "sbp": "sniper_us",
+     "N": 1,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_sniper",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_sniper",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_sniper",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "UNIT_SIGHT_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 320,
+    "bld": [
+     "support_center"
+    ]
+   },
+   "pathfinder": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "REC",
+    "className": "정찰병 분대",
+    "uniqueName": "패스파인더 분대",
+    "code": "⤫",
+    "cost": 200,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 130,
+    "atk": 4.32,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 6.8,
+    "acc": [
+     0.81,
+     0.78,
+     0.71
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 4,
+    "sight": 7,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_garand_pathfinder_us",
+     "d": 12,
+     "ok": 0,
+     "acc": [
+      0.81,
+      0.78,
+      0.71
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 4,
+     "spt": [
+      8.4,
+      6.8,
+      6.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     8.4,
+     6.8,
+     6.6
+    ],
+    "rawD": {
+     "sbp": "pathfinder_us",
+     "N": 4,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_pathfinder",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_pathfinder",
+       "mods": {
+        "CAPTURE_RATE_MODIFIER": 1.5,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_pathfinder",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "UNIT_SIGHT_MODIFIER": 5,
+        "DETECTION_VISION_MODIFIER_SQUAD": 5,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.6
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 200,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "paratrooper": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "공수 부대 분대",
+    "code": "▲P",
+    "cost": 380,
+    "fcost": 0,
+    "isElite": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 238,
+    "atk": 3.6,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 19.4,
+    "acc": [
+     0.83,
+     0.55,
+     0.48
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 6,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_carbine_paratrooper_us",
+     "d": 10,
+     "ok": 0,
+     "acc": [
+      0.83,
+      0.55,
+      0.48
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      22.5,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 6,
+     "spt": [
+      24.8,
+      19.4,
+      17.1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     24.8,
+     19.4,
+     17.1
+    ],
+    "rawD": {
+     "sbp": "paratrooper_us",
+     "N": 6,
+     "hp": 110,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_paratrooper",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_paratrooper",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.85,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_paratrooper",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.3,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 380,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "assault_eng": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "공병 분대",
+    "uniqueName": "돌격 공병 분대",
+    "code": "⚒+",
+    "cost": 280,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 180,
+    "atk": 1.44,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 75.3,
+    "acc": [
+     0.6,
+     0.27,
+     0.17
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 5,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_grease_gun_assault_engineer_us",
+     "d": 4,
+     "ok": 0,
+     "acc": [
+      0.6,
+      0.27,
+      0.17
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      10,
+      15,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 5,
+     "spt": [
+      131.3,
+      75.3,
+      21.1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     131.3,
+     75.3,
+     21.1
+    ],
+    "rawD": {
+     "sbp": "assault_engineer_us",
+     "N": 5,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      800,
+      2400,
+      4800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_assault_engineer",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_assault_engineer",
+       "mods": {
+        "WEAPON_BURST_DURATION_MODIFIER": 1.25,
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_3_assault_engineer",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.3
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "commando": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "SSF 코만도",
+    "code": "▲★",
+    "cost": 360,
+    "fcost": 0,
+    "isElite": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 227,
+    "atk": 4.32,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 14,
+    "acc": [
+     0.68,
+     0.62,
+     0.39
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 6,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_garand_devils_brigade_us",
+     "d": 12,
+     "ok": 0,
+     "acc": [
+      0.68,
+      0.62,
+      0.39
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 6,
+     "spt": [
+      19.5,
+      14,
+      11.2
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     19.5,
+     14,
+     11.2
+    ],
+    "rawD": {
+     "sbp": "ssf_commandos_us",
+     "N": 6,
+     "hp": 105,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_ssf_commando",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_ssf_commando",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.3,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_ssf_commando",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "SPEED_MODIFIER": 1.1,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 360,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "ranger": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "레인저",
+    "code": "▲R",
+    "cost": 425,
+    "fcost": 0,
+    "isElite": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 248,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 52.8,
+    "acc": [
+     0.51,
+     0.31,
+     0.17
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 6,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_thompson_ranger_us",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.51,
+      0.31,
+      0.17
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      10,
+      18,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 6,
+     "spt": [
+      172.2,
+      52.8,
+      19.8
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     172.2,
+     52.8,
+     19.8
+    ],
+    "rawD": {
+     "sbp": "ranger_us",
+     "N": 6,
+     "hp": 115,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1600,
+      4800,
+      9600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_ranger",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_ranger",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.8,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.7
+       }
+      },
+      {
+       "ref": "veterancy_3_ranger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "GRENADE_ABILITY_RANGE_MODIFIER": 1.25,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 425,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "hmg": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "SUPP",
+    "className": "중기관총반",
+    "uniqueName": "M1919 브라우닝 기관총",
+    "code": "⫶",
+    "cost": 240,
+    "fcost": 0,
+    "N": 4,
+    "isHeavy": true,
+    "isHmg": true,
+    "supp": 80,
+    "arc": 95,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 130,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.36,
+     0.24,
+     0.24
+    ],
+    "rof": 38.7,
+    "acc": [
+     0.75,
+     0.52,
+     0.4
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 24,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "S",
+    "sa": true,
+    "cone": true,
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.45,
+    "raw": true,
+    "rawW": {
+     "id": "w_30cal_hmg_us",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.75,
+      0.52,
+      0.4
+     ],
+     "pen": [
+      3,
+      2,
+      2
+     ],
+     "rM": [
+      10,
+      30,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      57.4,
+      38.7,
+      28.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     57.4,
+     38.7,
+     28.4
+    ],
+    "rawD": {
+     "sbp": "hmg_30cal_us",
+     "N": 4,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "ref": "hmg_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 10
+       }
+      },
+      {
+       "ref": "hmg_30cal_veterancy_2",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_SUPPRESSION_MODIFIER": 1.5
+       }
+      },
+      {
+       "ref": "hmg_30cal_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.7,
+        "WEAPON_BURST_RATE_OF_FIRE_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 240,
+    "bld": [
+     "support_center"
+    ]
+   },
+   "hmg_50": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "SUPP",
+    "className": ".50 중기관총",
+    "uniqueName": "M2HB .50cal 중기관총",
+    "code": "⫶▷",
+    "cost": 240,
+    "fcost": 0,
+    "N": 4,
+    "isHeavy": true,
+    "isHmg": true,
+    "supp": 85,
+    "arc": 95,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 130,
+    "atk": 2.88,
+    "area": 1,
+    "pen": [
+     0.96,
+     0.6,
+     0.36
+    ],
+    "rof": 38.7,
+    "acc": [
+     0.6,
+     0.45,
+     0.37
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 24,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "S",
+    "cone": true,
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.45,
+    "raw": true,
+    "rawW": {
+     "id": "w_50cal_hmg_us",
+     "d": 8,
+     "ok": 0,
+     "acc": [
+      0.6,
+      0.45,
+      0.37
+     ],
+     "pen": [
+      8,
+      5,
+      3
+     ],
+     "rM": [
+      10,
+      30,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      57.4,
+      38.7,
+      28.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     57.4,
+     38.7,
+     28.4
+    ],
+    "rawD": {
+     "sbp": "hmg_50cal_us",
+     "N": 4,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "ref": "hmg_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 10
+       }
+      },
+      {
+       "ref": "hmg_standard_veterancy_2",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_SUPPRESSION_MODIFIER": 1.4
+       }
+      },
+      {
+       "ref": "hmg_30cal_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.7,
+        "WEAPON_BURST_RATE_OF_FIRE_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 240,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "mortar": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "박격포반",
+    "uniqueName": "M1 81mm 중박격포",
+    "code": "⌒",
+    "cost": 240,
+    "fcost": 0,
+    "N": 4,
+    "isMortar": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 115,
+    "atk": 36,
+    "area": 1,
+    "pen": [
+     2.4,
+     2.4,
+     2.4
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.95,
+     0.53
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 4,
+    "range": 10,
+    "ammo": 19,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "S",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "rawD": {
+     "sbp": "mortar_81mm_us",
+     "N": 4,
+     "hp": 80,
+     "arm": [
+      1
+     ],
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      400,
+      1200,
+      2400
+     ],
+     "ranks": [
+      {
+       "ref": "mortar_standard_veterancy_1",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.1
+       }
+      },
+      {
+       "ref": "mortar_standard_veterancy_2",
+       "mods": {
+        "WEAPON_DAMAGE_MODIFIER": 1.15,
+        "ABILITY_RECHARGE_MODIFIER": 0.65
+       }
+      },
+      {
+       "ref": "mortar_81mm_veterancy_3",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.5,
+        "RECEIVED_DAMAGE_MODIFIER": 0.8
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "81mm_mortar_us",
+     "d": 100,
+     "pen": 20,
+     "aoe": 0.122,
+     "maxM": 4,
+     "sc": [
+      8.5,
+      0.1,
+      7.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.122,
+    "closeEnd": 4,
+    "midEnd": 7,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 0,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 240,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "at_gun": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AT",
+    "className": "대전차포반",
+    "uniqueName": "M1 57mm 대전차포",
+    "code": "▷",
+    "cost": 270,
+    "fcost": 0,
+    "N": 5,
+    "isHeavy": true,
+    "arc": 60,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 162,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     36,
+     18,
+     14.4
+    ],
+    "rof": 1.3,
+    "acc": [
+     0.07,
+     0.05,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 9,
+    "ammo": 16,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_57mm_at_gun_us",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.07,
+      0.05,
+      0.05
+     ],
+     "pen": [
+      300,
+      150,
+      120
+     ],
+     "rM": [
+      15,
+      35,
+      60
+     ],
+     "max": 60,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.3,
+      1.3,
+      1.2
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.3,
+     1.3,
+     1.2
+    ],
+    "rawD": {
+     "sbp": "at_gun_57mm_us",
+     "N": 5,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "ref": "at_gun_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "at_gun_standard_veterancy_2",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85
+       }
+      },
+      {
+       "ref": "at_gun_standard_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 270,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "m5gun": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AT",
+    "className": "중대전차포반",
+    "uniqueName": "M5 3인치 대전차포",
+    "code": "▷▷",
+    "cost": 380,
+    "fcost": 40,
+    "N": 6,
+    "isHeavy": true,
+    "arc": 60,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 227,
+    "atk": 86.4,
+    "area": 1,
+    "pen": [
+     42,
+     38.4,
+     33
+    ],
+    "rof": 0.9,
+    "acc": [
+     0.1,
+     0.06,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 11,
+    "ammo": 16,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_3in_at_gun_us",
+     "d": 240,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.06,
+      0.05
+     ],
+     "pen": [
+      350,
+      320,
+      275
+     ],
+     "rM": [
+      20,
+      45,
+      75
+     ],
+     "max": 75,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      0.9,
+      0.9,
+      0.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 4,
+    "midEnd": 8,
+    "rofB": [
+     0.9,
+     0.9,
+     0.9
+    ],
+    "rawD": {
+     "sbp": "at_gun_3in_m5_us",
+     "N": 6,
+     "hp": 105,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "at_gun_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "at_gun_m5_3in_veterancy_2",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.3,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "at_gun_m5_3in_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_DAMAGE_MODIFIER": 1.1667,
+        "WEAPON_RANGE_MODIFIER": 10,
+        "ABILITY_RANGE_ADDITION_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 460,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "howitzer": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "야포",
+    "uniqueName": "105mm 견인곡사포",
+    "code": "▰",
+    "cost": 320,
+    "fcost": 60,
+    "N": 5,
+    "isArtillery": true,
+    "armorType": "soft",
+    "armor": 1,
+    "maxHp": 180,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     120,
+     120,
+     120
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.49,
+     0.21
+    ],
+    "deflectDmgPct": 0.05,
+    "move": 4,
+    "minR": 4,
+    "range": 13,
+    "ammo": 7,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "L",
+    "cat": "support",
+    "rawD": {
+     "sbp": "howitzer_105mm_us",
+     "N": 0,
+     "hp": 0,
+     "arm": null,
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "emplacement_artillery_veterancy_1",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "emplacement_artillery_veterancy_2",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.8,
+        "ABILITY_RANGE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "howitizer_105mm_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.67,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.7,
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.5
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "105mm_howitzer_normal_us",
+     "d": 160,
+     "pen": 1000,
+     "aoe": 0.268,
+     "maxM": 4,
+     "sc": [
+      8.5,
+      0.125,
+      12
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.268,
+    "closeEnd": 5,
+    "midEnd": 9,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 1,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 440,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "pack75": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "경곡사포",
+    "uniqueName": "M1A1 75mm 팩 곡사포",
+    "code": "▰",
+    "cost": 315,
+    "fcost": 0,
+    "N": 5,
+    "isArtillery": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 144,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     2.4,
+     2.4,
+     2.4
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.92,
+     0.41
+    ],
+    "deflectDmgPct": 0.05,
+    "move": 4,
+    "minR": 3,
+    "range": 10,
+    "ammo": 8,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "rawD": {
+     "sbp": "pack_howitzer_75mm_us",
+     "N": 5,
+     "hp": 80,
+     "arm": [
+      1
+     ],
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      850,
+      2550,
+      5100
+     ],
+     "ranks": [
+      {
+       "ref": "light_indirect_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "light_indirect_veterancy_2",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "ABILITY_RECHARGE_MODIFIER": 0.65
+       }
+      },
+      {
+       "ref": "light_indirect_veterancy_3",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_DAMAGE_MODIFIER": 1.16
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "75mm_pack_howitzer_us",
+     "d": 120,
+     "pen": 20,
+     "aoe": 0.2,
+     "maxM": 4,
+     "sc": [
+      7,
+      0.125,
+      10
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.2,
+    "closeEnd": 4,
+    "midEnd": 7,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 0,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 315,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "scott": {
+    "tab": "support",
+    "macro": "SPG",
+    "role": "IND",
+    "className": "자주포",
+    "uniqueName": "M8 스콧 자주포",
+    "code": "▰▷",
+    "cost": 280,
+    "fcost": 55,
+    "isArtillery": true,
+    "armorType": "hard",
+    "armor": 6,
+    "armorS": 4.56,
+    "armorR": 3,
+    "maxHp": 151,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     3.6,
+     3.6,
+     3.6
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.95,
+     0.95
+    ],
+    "deflectDmgPct": 0.3,
+    "move": 8,
+    "minR": 2,
+    "range": 9,
+    "ammo": 13,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "atk": 7,
+     "area": 1,
+     "rof": 6,
+     "acc": [
+      1,
+      0.76,
+      0.55
+     ],
+     "range": 7,
+     "supp": 15,
+     "arc": 360,
+     "pen": [
+      0.96,
+      0.72,
+      0.48
+     ]
+    },
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 19,
+    "rawD": {
+     "sbp": "scott_us",
+     "N": 0,
+     "hp": 420,
+     "arm": [
+      50,
+      38,
+      25
+     ],
+     "spd": 6.75
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_scott_us",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_scott_us",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.75,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_scott_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "WEAPON_RANGE_MODIFIER": 5,
+        "ABILITY_RANGE_ADDITION_MODIFIER": 5
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "75mm_howitzer_barrage_scott_us",
+     "d": 120,
+     "pen": 30,
+     "aoe": 0.208,
+     "maxM": 3,
+     "sc": [
+      5,
+      0.0875,
+      7
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.208,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 0,
+    "maxM": 3,
+    "costSrc": "coh3",
+    "val": 390,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "priest": {
+    "tab": "support",
+    "macro": "SPG",
+    "role": "IND",
+    "className": "자주 곡사포",
+    "uniqueName": "M7 프리스트 105mm",
+    "code": "▰▷",
+    "cost": 420,
+    "fcost": 90,
+    "isArtillery": true,
+    "armorType": "hard",
+    "armor": 8.4,
+    "armorS": 6,
+    "armorR": 3.6,
+    "maxHp": 144,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     120,
+     120,
+     120
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.8,
+     0.34
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 5,
+    "minR": 4,
+    "range": 13,
+    "ammo": 10,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "arc": 360,
+     "supp": 15,
+     "atk": 3.24,
+     "area": 1,
+     "rof": 19.9,
+     "acc": [
+      0.55,
+      0.45,
+      0.35
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "raw": true,
+     "rawW": {
+      "id": "w_50cal_halftrack_us_base",
+      "d": 9,
+      "ok": 0,
+      "acc": [
+       0.55,
+       0.45,
+       0.35
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       19.9,
+       19.9,
+       19.9
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      19.9,
+      19.9,
+      19.9
+     ],
+     "deflectDmgPct": 0,
+     "sa": true
+    },
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 20,
+    "rawD": {
+     "sbp": "priest_us",
+     "N": 0,
+     "hp": 400,
+     "arm": [
+      70,
+      50,
+      30
+     ],
+     "spd": 4.5,
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      2160,
+      4320,
+      8640
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "105mm_howitzer_priest_us",
+     "d": 160,
+     "pen": 1000,
+     "aoe": 0.268,
+     "maxM": 4,
+     "sc": [
+      6.5,
+      0.1,
+      12
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.268,
+    "closeEnd": 5,
+    "midEnd": 9,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 1,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 600,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "whizbang": {
+    "tab": "support",
+    "macro": "SPG",
+    "role": "IND",
+    "className": "로켓 전차",
+    "uniqueName": "M4A1 셔먼 위즈뱅",
+    "code": "⎔💥",
+    "cost": 390,
+    "fcost": 110,
+    "isArtillery": true,
+    "isNebel": true,
+    "armorType": "hard",
+    "armor": 23.4,
+    "armorS": 13.2,
+    "armorR": 9.6,
+    "maxHp": 216,
+    "atk": 25.2,
+    "area": 1,
+    "pen": [
+     12,
+     12,
+     12
+    ],
+    "rof": 2,
+    "acc": [
+     0.51,
+     0.41,
+     0.31
+    ],
+    "deflectDmgPct": 0.3,
+    "move": 5,
+    "minR": 4,
+    "range": 8,
+    "ammo": 13,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 M1919",
+     "arc": 360,
+     "supp": 12,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 47,
+     "acc": [
+      0.7,
+      0.5,
+      0.45
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_sherman_us+w_30cal_hull",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.7,
+       0.5,
+       0.45
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       53.2,
+       47,
+       40.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      53.2,
+      47,
+      40.1
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "support",
+    "rearMul": 1.33334,
+    "tsize": 22,
+    "rawD": {
+     "sbp": "sherman_whizbang_us",
+     "N": 0,
+     "hp": 600,
+     "arm": [
+      195,
+      110,
+      80
+     ],
+     "spd": 4.25,
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_whizbang_us",
+       "mods": {
+        "ABILITY_RANGE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_2_whizbang_us",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.9,
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.2
+       }
+      },
+      {
+       "ref": "veterancy_3_whizbang_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.3,
+        "ABILITY_RECHARGE_MODIFIER": 0.85
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "180mm_rocket_barrage_whizbang_us",
+     "d": 70,
+     "pen": 100,
+     "aoe": 0.343,
+     "maxM": 4,
+     "sc": [
+      11,
+      0.4,
+      9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.343,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     2,
+     2,
+     2
+    ],
+    "reload": 1,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 610,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "ambulance": {
+    "tab": "support",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "구급 앰뷸런스",
+    "uniqueName": "M3 야전 의무수송차",
+    "code": "🏥",
+    "cost": 240,
+    "fcost": 10,
+    "class": "medic_vehicle",
+    "armorType": "hard",
+    "armor": 0.72,
+    "armorS": 0.6,
+    "armorR": 0.36,
+    "maxHp": 43,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "cargoCap": 1,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 10.6,
+    "rawD": {
+     "sbp": "ambulance_us",
+     "N": 0,
+     "hp": 120,
+     "arm": [
+      6,
+      5,
+      3
+     ],
+     "spd": 7.5
+    },
+    "rawVet": {
+     "xp": [
+      500,
+      1000,
+      1500
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 260,
+    "bld": [
+     "support_center"
+    ]
+   },
+   "recovery": {
+    "tab": "support",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "구난 차량",
+    "uniqueName": "M31 구난 전차",
+    "code": "🔧",
+    "cost": 300,
+    "fcost": 30,
+    "class": "repair_vehicle",
+    "armorType": "hard",
+    "armor": 7.2,
+    "armorS": 5.4,
+    "armorR": 3.6,
+    "maxHp": 130,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 7,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 96,
+    "maxFuel": 96,
+    "supplies": 15,
+    "sight": 6,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 14,
+    "rawD": {
+     "sbp": "recovery_vehicle_us",
+     "N": 0,
+     "hp": 360,
+     "arm": [
+      60,
+      45,
+      30
+     ],
+     "spd": 6
+    },
+    "rawVet": {
+     "xp": [
+      500,
+      1000,
+      1500
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_recovery",
+       "mods": {
+        "ACCELERATION_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_recovery",
+       "mods": {
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3
+       }
+      },
+      {
+       "ref": "veterancy_3_recovery",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 160
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 360,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "truck": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "REC",
+    "className": "경수송 차량",
+    "uniqueName": "1/4톤 4×4 트럭",
+    "code": "◇",
+    "cost": 220,
+    "fcost": 0,
+    "armorType": "hard",
+    "armor": 0.6,
+    "armorS": 0.48,
+    "armorR": 0.36,
+    "maxHp": 72,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.24,
+     0.24
+    ],
+    "rof": 27.5,
+    "acc": [
+     0.54,
+     0.44,
+     0.4
+    ],
+    "deflectDmgPct": 0,
+    "move": 11,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "capt": true,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 10.6,
+    "raw": true,
+    "rawW": {
+     "id": "w_30cal_truck_4x4_us",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.54,
+      0.44,
+      0.4
+     ],
+     "pen": [
+      2,
+      2,
+      2
+     ],
+     "rM": [
+      7,
+      20,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      36.1,
+      27.5,
+      25
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     36.1,
+     27.5,
+     25
+    ],
+    "rawD": {
+     "sbp": "truck_4x4_us",
+     "N": 0,
+     "hp": 200,
+     "arm": [
+      5,
+      4,
+      3
+     ],
+     "spd": 9.75,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      600,
+      1800,
+      3600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_truck_4x4_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_2_truck_4x4_us",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_truck_4x4_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 60,
+        "DETECTION_VISION_MODIFIER_SQUAD": 10,
+        "UNIT_SIGHT_MODIFIER": 10,
+        "RECEIVED_ACCURACY_MODIFIER": 0.4
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 220,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "weasel": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "REC",
+    "className": "정찰 차량",
+    "uniqueName": "M29 위즐",
+    "code": "◇",
+    "cost": 220,
+    "fcost": 0,
+    "armorType": "hard",
+    "armor": 0.6,
+    "armorS": 0.6,
+    "armorR": 0.36,
+    "maxHp": 72,
+    "atk": 9,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.18,
+     0.12
+    ],
+    "rof": 3,
+    "acc": [
+     1,
+     0.9,
+     0.82
+    ],
+    "deflectDmgPct": 0,
+    "move": 9,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "cargoCap": 1,
+    "tow": false,
+    "capt": true,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 10.6,
+    "rawD": {
+     "sbp": "m29_weasal_us",
+     "N": 0,
+     "hp": 200,
+     "arm": [
+      5,
+      5,
+      3
+     ],
+     "spd": 8
+    },
+    "rawVet": {
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_weasal_us",
+       "mods": {
+        "UNIT_SIGHT_MODIFIER": 7
+       }
+      },
+      {
+       "ref": "veterancy_2_weasal_us",
+       "mods": {
+        "CAPTURE_RATE_MODIFIER": 1.5,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_weasal_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "DETECTION_VISION_MODIFIER_SQUAD": 10,
+        "UNIT_SIGHT_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 220,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "transport": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "LOG",
+    "className": "수송 하프트랙",
+    "uniqueName": "M3 반궤도 수송차",
+    "code": "◫",
+    "cost": 240,
+    "fcost": 35,
+    "class": "transport",
+    "armorType": "hard",
+    "armor": 0.96,
+    "armorS": 0.84,
+    "armorR": 0.6,
+    "maxHp": 108,
+    "atk": 3.24,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 19.9,
+    "acc": [
+     0.55,
+     0.45,
+     0.35
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 112,
+    "maxFuel": 112,
+    "cargoCap": 1,
+    "sight": 6,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_50cal_halftrack_us_base",
+     "d": 9,
+     "ok": 0,
+     "acc": [
+      0.55,
+      0.45,
+      0.35
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      20,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      19.9,
+      19.9,
+      19.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     19.9,
+     19.9,
+     19.9
+    ],
+    "rawD": {
+     "sbp": "halftrack_us",
+     "N": 0,
+     "hp": 300,
+     "arm": [
+      8,
+      7,
+      5
+     ],
+     "spd": 7.2,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_us",
+       "mods": {
+        "REINFORCE_RADIUS_MODIFIER": 10
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_us",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_3_halftrack_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 310,
+    "bld": [
+     "support_center"
+    ]
+   },
+   "supply": {
+    "tab": "armor",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "보급 트럭",
+    "uniqueName": "CCKW 보급트럭",
+    "code": "✚",
+    "cost": 260,
+    "fcost": 25,
+    "class": "supply",
+    "armorType": "hard",
+    "armor": 0.72,
+    "armorS": 0.6,
+    "armorR": 0.36,
+    "maxHp": 86,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 999,
+    "maxFuel": 999,
+    "supplies": 12,
+    "maxSupplies": 20,
+    "sight": 6,
+    "cargoCap": 2,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "rawD": {
+     "sbp": "truck_6x6_us",
+     "N": 0,
+     "hp": 240,
+     "arm": [
+      6,
+      5,
+      3
+     ],
+     "spd": 7
+    },
+    "rawVet": {
+     "xp": [
+      300,
+      600,
+      1200
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 310,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "m16": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AI",
+    "className": "대공 차량",
+    "uniqueName": "M16 쿼드 50구경 대공차",
+    "code": "⎔⚡",
+    "cost": 240,
+    "fcost": 35,
+    "armorType": "hard",
+    "armor": 1.2,
+    "armorS": 0.84,
+    "armorR": 0.6,
+    "maxHp": 115,
+    "atk": 2.88,
+    "area": 1,
+    "pen": [
+     0.36,
+     0.24,
+     0.12
+    ],
+    "rof": 111.6,
+    "acc": [
+     0.27,
+     0.24,
+     0.09
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_50cal_quadmount_halftrack_us_base",
+     "d": 8,
+     "ok": 0,
+     "acc": [
+      0.27,
+      0.24,
+      0.09
+     ],
+     "pen": [
+      3,
+      2,
+      1
+     ],
+     "rM": [
+      10,
+      25,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      112.2,
+      111.6,
+      95.2
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     112.2,
+     111.6,
+     95.2
+    ],
+    "rawD": {
+     "sbp": "halftrack_quad_us",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      10,
+      7,
+      5
+     ],
+     "spd": 6.9,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_quad_us",
+       "mods": {
+        "ACCELERATION_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_quad_us",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_halftrack_quad_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_DAMAGE_MODIFIER": 1.33
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 310,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "m3gmc": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AI",
+    "className": "곡사 화력지원 하프트랙",
+    "uniqueName": "M3 75mm 자주포(GMC)",
+    "code": "⚡",
+    "cost": 265,
+    "fcost": 40,
+    "isTankDest": true,
+    "armorType": "hard",
+    "armor": 1.2,
+    "armorS": 0.84,
+    "armorR": 0.6,
+    "maxHp": 115,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     24,
+     18,
+     14.4
+    ],
+    "rof": 1.3,
+    "acc": [
+     0.08,
+     0.06,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 2,
+    "range": 8,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_halftrack_75mm_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.06,
+      0.05
+     ],
+     "pen": [
+      200,
+      150,
+      120
+     ],
+     "rM": [
+      10,
+      30,
+      50
+     ],
+     "max": 50,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.3,
+      1.3,
+      1.3
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.3,
+     1.3,
+     1.3
+    ],
+    "rawD": {
+     "sbp": "halftrack_75mm_us",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      10,
+      7,
+      5
+     ],
+     "spd": 6.9,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_75mm_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_75mm_us",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.65,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_halftrack_75mm_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_RANGE_MODIFIER": 5,
+        "ABILITY_RANGE_ADDITION_MODIFIER": 5,
+        "WEAPON_DAMAGE_MODIFIER": 1.167
+       }
+      }
+     ]
+    },
+    "persons": 2.5,
+    "lob": true,
+    "costSrc": "coh3",
+    "val": 345,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "vehicle": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "ALV",
+    "className": "경장갑차",
+    "uniqueName": "M8 그레이하운드",
+    "code": "◇",
+    "cost": 260,
+    "fcost": 50,
+    "armorType": "hard",
+    "armor": 4.8,
+    "armorS": 3.6,
+    "armorR": 2.4,
+    "maxHp": 130,
+    "atk": 28.8,
+    "area": 1,
+    "pen": [
+     6.6,
+     5.4,
+     4.8
+    ],
+    "rof": 1.4,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "arc": 360,
+     "supp": 15,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 16.9,
+     "acc": [
+      0.59,
+      0.46,
+      0.24
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_greyhound_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.59,
+       0.46,
+       0.24
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       17.3,
+       16.9,
+       24.5
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      17.3,
+      16.9,
+      24.5
+     ],
+     "deflectDmgPct": 0,
+     "sa": true
+    },
+    "saImm": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 18,
+    "raw": true,
+    "rawW": {
+     "id": "w_37mm_greyhound_us",
+     "d": 80,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      55,
+      45,
+      40
+     ],
+     "rM": [
+      10,
+      25,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.4,
+      1.4,
+      1.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.4,
+     1.4,
+     1.4
+    ],
+    "rawD": {
+     "sbp": "greyhound_us",
+     "N": 0,
+     "hp": 360,
+     "arm": [
+      40,
+      30,
+      20
+     ],
+     "spd": 6.75,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_greyhound_us",
+       "mods": {
+        "UNIT_PIVOT_RATE_MODIFIER": 1.15,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.15
+       }
+      },
+      {
+       "ref": "veterancy_2_greyhound_us",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_greyhound_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_RANGE_MODIFIER": 5,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.65
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 360,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "chaffee": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "ALV",
+    "className": "경전차",
+    "uniqueName": "M24 채피 경전차",
+    "code": "◇⎔",
+    "cost": 270,
+    "fcost": 60,
+    "armorType": "hard",
+    "armor": 6,
+    "armorS": 4.56,
+    "armorR": 3,
+    "maxHp": 173,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     14.4,
+     12.96,
+     11.4
+    ],
+    "rof": 1.3,
+    "acc": [
+     0.1,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "sub": {
+     "n": "동축 M1919",
+     "arc": 360,
+     "supp": 8,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 45.9,
+     "acc": [
+      0.35,
+      0.15,
+      0.1
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_chaffee_us+w_30cal_hull_chaffee_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.35,
+       0.15,
+       0.1
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       52.3,
+       45.9,
+       39
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      52.3,
+      45.9,
+      39
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1,
+    "tsize": 18,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_chaffee_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      120,
+      108,
+      95
+     ],
+     "rM": [
+      15,
+      27.5,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.3,
+      1.3,
+      1.3
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.3,
+     1.3,
+     1.3
+    ],
+    "rawD": {
+     "sbp": "chaffee_us",
+     "N": 0,
+     "hp": 480,
+     "arm": [
+      50,
+      38,
+      25
+     ],
+     "spd": 6.9,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_chaffee_us",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_2_chaffee_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75,
+        "WEAPON_ACCURACY_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_3_chaffee_us",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.33,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.33,
+        "SPEED_MODIFIER": 1.33
+       }
+      }
+     ]
+    },
+    "persons": 1.5,
+    "costSrc": "coh3",
+    "val": 390,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "stuart": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "ALV",
+    "className": "경전차",
+    "uniqueName": "M5A1 스튜어트",
+    "code": "◇⎔",
+    "cost": 280,
+    "fcost": 35,
+    "armorType": "hard",
+    "armor": 8.4,
+    "armorS": 6,
+    "armorR": 4.2,
+    "maxHp": 173,
+    "atk": 25,
+    "area": 2.8,
+    "pen": [
+     7.8,
+     6,
+     4.2
+    ],
+    "rof": 1,
+    "acc": [
+     1,
+     0.88,
+     0.76
+    ],
+    "deflectDmgPct": 0.2,
+    "move": 6,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "sub": {
+     "n": "동축 M1919",
+     "atk": 4.5,
+     "area": 1,
+     "rof": 4,
+     "acc": [
+      1,
+      0.7,
+      0.44
+     ],
+     "range": 6,
+     "supp": 8,
+     "arc": 360,
+     "pen": [
+      0.24,
+      0.18,
+      0.12
+     ],
+     "sa": true
+    },
+    "cat": "tank",
+    "rearMul": 1,
+    "tsize": 17,
+    "rawD": {
+     "sbp": "stuart_us",
+     "N": 0,
+     "hp": 480,
+     "arm": [
+      70,
+      50,
+      35
+     ],
+     "spd": 5.6
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_stuart_uk",
+       "mods": {
+        "UNIT_PIVOT_RATE_MODIFIER": 1.2,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_2_stuart_uk",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75,
+        "WEAPON_ACCURACY_MODIFIER": 1.15
+       }
+      },
+      {
+       "ref": "veterancy_3_stuart_uk",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "SPEED_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 350,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "tank_dest": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "AT",
+    "className": "구축전차",
+    "uniqueName": "M18 헬캣",
+    "code": "⚡",
+    "cost": 300,
+    "fcost": 80,
+    "isTankDest": true,
+    "armorType": "hard",
+    "armor": 12,
+    "armorS": 9,
+    "armorR": 6,
+    "maxHp": 216,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     37.2,
+     30,
+     26.4
+    ],
+    "rof": 1,
+    "acc": [
+     0.1,
+     0.06,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 7,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "atk": 7,
+     "area": 1,
+     "rof": 6,
+     "acc": "[ref]",
+     "range": 7,
+     "supp": 15,
+     "arc": 360,
+     "pen": "[ref]"
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_76mm_hellcat_us",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.06,
+      0.05
+     ],
+     "pen": [
+      310,
+      250,
+      220
+     ],
+     "rM": [
+      10,
+      30,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1,
+      1,
+      1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "rawD": {
+     "sbp": "hellcat_us",
+     "N": 0,
+     "hp": 600,
+     "arm": [
+      100,
+      75,
+      50
+     ],
+     "spd": 6.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_hellcat_us",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_2_hellcat_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_hellcat_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "WEAPON_PENETRATION_MODIFIER": 1.5,
+        "WEAPON_MOVING_ACCURACY_MODIFIER": 1.33
+       }
+      }
+     ]
+    },
+    "persons": 0.75,
+    "costSrc": "coh3",
+    "val": 460,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "grant": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "구형 중형전차",
+    "uniqueName": "M3 리",
+    "code": "⎔",
+    "cost": 320,
+    "fcost": 80,
+    "armorType": "hard",
+    "armor": 19.2,
+    "armorS": 10.8,
+    "armorR": 9,
+    "maxHp": 276,
+    "atk": 38,
+    "area": 2.11,
+    "pen": [
+     16.2,
+     13.8,
+     11.4
+    ],
+    "rof": 1,
+    "acc": [
+     1,
+     0.88,
+     0.75
+    ],
+    "deflectDmgPct": 0.12,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 21,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "37mm 포탑포·기총",
+     "atk": 18,
+     "area": 0.78,
+     "pen": [
+      7.8,
+      6,
+      4.2
+     ],
+     "rof": 2,
+     "acc": [
+      1,
+      0.75,
+      0.55
+     ],
+     "range": 7,
+     "supp": 8,
+     "arc": 360
+    },
+    "cat": "tank",
+    "costSrc": "coh3",
+    "val": 480,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "sherman": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "중형전차",
+    "uniqueName": "M4A1 셔먼",
+    "code": "⎔",
+    "cost": 340,
+    "fcost": 90,
+    "armorType": "hard",
+    "armor": 23.4,
+    "armorS": 12,
+    "armorR": 9.6,
+    "maxHp": 259,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     16.2,
+     14.76,
+     13.2
+    ],
+    "rof": 1,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 M1919",
+     "arc": 360,
+     "supp": 12,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 47,
+     "acc": [
+      0.7,
+      0.5,
+      0.45
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_sherman_us+w_30cal_hull_sherman_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.7,
+       0.5,
+       0.45
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       53.2,
+       47,
+       40.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      53.2,
+      47,
+      40.1
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_sherman_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      135,
+      123,
+      110
+     ],
+     "rM": [
+      15,
+      27.5,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1,
+      1,
+      1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "rawD": {
+     "sbp": "sherman_us",
+     "N": 0,
+     "hp": 720,
+     "arm": [
+      195,
+      100,
+      80
+     ],
+     "spd": 5.5,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_generic_medium",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_2_generic_medium",
+       "mods": {
+        "WEAPON_PENETRATION_MODIFIER": 1.2,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3
+       }
+      },
+      {
+       "ref": "veterancy_3_generic_medium",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "persons": 2,
+    "costSrc": "coh3",
+    "val": 520,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "bulldozer": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "AI",
+    "className": "돌격 전차",
+    "uniqueName": "M4(105) 셔먼 불도저",
+    "code": "⎔▷",
+    "cost": 380,
+    "fcost": 100,
+    "armorType": "hard",
+    "armor": 32.4,
+    "armorS": 13.2,
+    "armorR": 9.6,
+    "maxHp": 302,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     4.2,
+     4.2,
+     4.2
+    ],
+    "rof": 0.9,
+    "acc": [
+     0.05,
+     0.04,
+     0.03
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축 M1919",
+     "arc": 360,
+     "supp": 8,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 47,
+     "acc": [
+      0.7,
+      0.5,
+      0.45
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_sherman_us+w_30cal_hull_sherman_bulldozer_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.7,
+       0.5,
+       0.45
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       53.2,
+       47,
+       40.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      53.2,
+      47,
+      40.1
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 22,
+    "raw": true,
+    "rawW": {
+     "id": "w_105mm_sherman_bulldozer_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.05,
+      0.04,
+      0.03
+     ],
+     "pen": [
+      35,
+      35,
+      35
+     ],
+     "rM": [
+      35,
+      35,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      0.9,
+      0.9,
+      0.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 99,
+    "midEnd": 99,
+    "rofB": [
+     0.9,
+     0.9,
+     0.9
+    ],
+    "rawD": {
+     "sbp": "sherman_bulldozer_us",
+     "N": 0,
+     "hp": 840,
+     "arm": [
+      270,
+      110,
+      80
+     ],
+     "spd": 5.2,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_sherman_bulldozer_us",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_2_sherman_bulldozer_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "HEALTH_MODIFIER_ADDITION": 80
+       }
+      },
+      {
+       "ref": "veterancy_3_sherman_bulldozer_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75,
+        "FRONT_ARMOR_HIT_DAMAGE_MODIFIER": 0.75
+       }
+      }
+     ]
+    },
+    "persons": 3.5,
+    "costSrc": "coh3",
+    "val": 580,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "easyeight": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "개량 중형전차",
+    "uniqueName": "M4A3E8 이지에이트",
+    "code": "⎔+",
+    "cost": 375,
+    "fcost": 105,
+    "armorType": "hard",
+    "armor": 23.4,
+    "armorS": 13.2,
+    "armorR": 9.6,
+    "maxHp": 302,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     24,
+     21.6,
+     19.2
+    ],
+    "rof": 1,
+    "acc": [
+     0.1,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "arc": 360,
+     "supp": 15,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 47,
+     "acc": [
+      0.7,
+      0.5,
+      0.45
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_sherman_e8_us+w_30cal_hull_sherman_e8_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.7,
+       0.5,
+       0.45
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       53.2,
+       47,
+       40.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      53.2,
+      47,
+      40.1
+     ],
+     "deflectDmgPct": 0,
+     "sa": true
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_76mm_sherman_easy_8_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      200,
+      180,
+      160
+     ],
+     "rM": [
+      10,
+      25,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1,
+      1,
+      1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "rawD": {
+     "sbp": "sherman_easy_8_us",
+     "N": 0,
+     "hp": 840,
+     "arm": [
+      195,
+      110,
+      80
+     ],
+     "spd": 5.75,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_generic_medium",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_2_generic_medium",
+       "mods": {
+        "WEAPON_PENETRATION_MODIFIER": 1.2,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3
+       }
+      },
+      {
+       "ref": "veterancy_3_generic_medium",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "persons": 1.25,
+    "costSrc": "coh3",
+    "val": 585,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "pershing": {
+    "req": "heavy",
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "중전차",
+    "uniqueName": "M26 퍼싱 중전차",
+    "code": "⎔★",
+    "cost": 720,
+    "fcost": 200,
+    "armorType": "hard",
+    "armor": 36,
+    "armorS": 21.6,
+    "armorR": 10.8,
+    "maxHp": 432,
+    "atk": 86.4,
+    "area": 1,
+    "pen": [
+     43.2,
+     33.6,
+     30
+    ],
+    "rof": 1.1,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 16,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "포탑 .50cal M2HB",
+     "arc": 360,
+     "supp": 15,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 47,
+     "acc": [
+      0.7,
+      0.5,
+      0.45
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "raw": true,
+     "rawW": {
+      "id": "w_30cal_coaxial_sherman_us+w_30cal_hull_sherman_us",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.7,
+       0.5,
+       0.45
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       53.2,
+       47,
+       40.1
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      53.2,
+      47,
+      40.1
+     ],
+     "deflectDmgPct": 0,
+     "sa": true
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 26,
+    "raw": true,
+    "rawW": {
+     "id": "w_90mm_m3_pershing_us",
+     "d": 240,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      360,
+      280,
+      250
+     ],
+     "rM": [
+      10,
+      25,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.1,
+      1.1,
+      1.1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.1,
+     1.1,
+     1.1
+    ],
+    "rawD": {
+     "sbp": "pershing_us",
+     "N": 0,
+     "hp": 1200,
+     "arm": [
+      300,
+      180,
+      90
+     ],
+     "spd": 5.5,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      4470,
+      13410,
+      26820
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_pershing_us",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_pershing_us",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_pershing_us",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3,
+        "SPEED_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "persons": 2.5,
+    "costSrc": "coh3",
+    "val": 1120,
+    "bld": [
+     "tank_depot"
+    ]
+   }
+  },
+  "red": {
+   "engineer": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "ENG",
+    "className": "전투 공병대",
+    "uniqueName": "전투 피오니어",
+    "code": "⚒",
+    "cost": 125,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 103,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 16.6,
+    "acc": [
+     0.44,
+     0.3,
+     0.24
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 3,
+    "sight": 7,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_mp40_pioneer_ger",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.44,
+      0.3,
+      0.24
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      15,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 3,
+     "spt": [
+      60.2,
+      16.6,
+      8.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     60.2,
+     16.6,
+     8.4
+    ],
+    "rawD": {
+     "sbp": "pioneer_ger",
+     "N": 3,
+     "hp": 95,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      500,
+      1500,
+      3000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_pioneer_ger",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_pioneer_ger",
+       "mods": {
+        "CONSTRUCTION_RATE_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_3_pioneer_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 125,
+    "bld": [
+     "hq"
+    ]
+   },
+   "infantry": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "AI",
+    "className": "소총병 분대",
+    "uniqueName": "그레나디어 분대",
+    "code": "⤫",
+    "cost": 250,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 173,
+    "atk": 5.04,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 8,
+    "acc": [
+     0.75,
+     0.69,
+     0.68
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 6,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_kar98k_grenadier_ger",
+     "d": 14,
+     "ok": 0,
+     "acc": [
+      0.75,
+      0.69,
+      0.68
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 6,
+     "spt": [
+      10.3,
+      8,
+      7.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     10.3,
+     8,
+     7.5
+    ],
+    "rawD": {
+     "sbp": "grenadier_ger",
+     "N": 6,
+     "hp": 80,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      750,
+      2250,
+      4500
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_grenadier",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "veterancy_2_grenadier",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "ABILITY_RECHARGE_MODIFIER": 0.67
+       }
+      },
+      {
+       "ref": "veterancy_3_grenadier",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.15
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 250,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "at_inf": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "AT",
+    "className": "대전차 보병",
+    "retired": true,
+    "uniqueName": "판저슈렉 분대",
+    "code": "▷⤫",
+    "cost": 260,
+    "fcost": 0,
+    "isAtInf": true,
+    "armorType": "soft",
+    "armor": 1,
+    "maxHp": 173,
+    "atk": 56,
+    "area": 0.14,
+    "pen": [
+     36,
+     21.6,
+     15.6
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.76,
+     0.6
+    ],
+    "deflectDmgPct": 0.25,
+    "move": 5,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sub": {
+     "n": "Kar98k·MP40 호위",
+     "atk": 7,
+     "area": 1,
+     "pen": [
+      0.2,
+      0.14,
+      0.12
+     ],
+     "rof": 2,
+     "acc": [
+      1,
+      0.7,
+      0.5
+     ],
+     "range": 6,
+     "supp": 0,
+     "sa": true
+    },
+    "cat": "infantry",
+    "costSrc": "coh3",
+    "val": 260
+   },
+   "sniper": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "REC",
+    "className": "저격수",
+    "uniqueName": "국방군 저격수 (G43)",
+    "code": "⌖",
+    "cost": 320,
+    "fcost": 0,
+    "isSniper": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 36,
+    "atk": 39.6,
+    "area": 1,
+    "sniperPct": 1.2,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 0.7,
+    "acc": [
+     2,
+     2,
+     2
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 8,
+    "ammo": 16,
+    "fuel": 0,
+    "N": 1,
+    "sight": 7,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_g43_sniper_ger",
+     "d": 110,
+     "ok": 0,
+     "acc": [
+      2,
+      2,
+      2
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      50,
+      50,
+      50
+     ],
+     "max": 50,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      0.7,
+      0.7,
+      0.7
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     0.7,
+     0.7,
+     0.7
+    ],
+    "rawD": {
+     "sbp": "sniper_ger",
+     "N": 1,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_sniper_ger",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_sniper_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_sniper_ger",
+       "mods": {
+        "UNIT_SIGHT_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 320,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "fp_pioneer": {
+    "tab": "infantry",
+    "macro": "INF",
+    "role": "ENG",
+    "className": "공병 분대",
+    "uniqueName": "낙하산 공병 분대",
+    "code": "⤫",
+    "cost": 260,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 144,
+    "atk": 5.04,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 10,
+    "acc": [
+     0.79,
+     0.71,
+     0.66
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_kar98k_fallschirmpioneer_ger",
+     "d": 14,
+     "ok": 0,
+     "acc": [
+      0.79,
+      0.71,
+      0.66
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 4,
+     "spt": [
+      12.7,
+      10,
+      8.3
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     12.7,
+     10,
+     8.3
+    ],
+    "rawD": {
+     "sbp": "fallschirmpioneers_ger",
+     "N": 4,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_fallschirmpioneer",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_fallschirmpioneer",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_fallschirmpioneer",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.35
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 260,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "jager": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "REC",
+    "className": "예거 정찰분대",
+    "uniqueName": "예거 경보병 분대",
+    "code": "▲✠",
+    "cost": 340,
+    "fcost": 0,
+    "isElite": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 198,
+    "atk": 5.04,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 13.5,
+    "acc": [
+     0.81,
+     0.74,
+     0.6
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 5,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_g43_jaeger_ger",
+     "d": 14,
+     "ok": 0,
+     "acc": [
+      0.81,
+      0.74,
+      0.6
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 5,
+     "spt": [
+      14,
+      13.5,
+      11.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     14,
+     13.5,
+     11.9
+    ],
+    "rawD": {
+     "sbp": "jaeger_ger",
+     "N": 5,
+     "hp": 110,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1150,
+      3450,
+      6900
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_jaeger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_jaeger",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.1,
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_3_jaeger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 340,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "panzergren": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "판처그레나디어 분대",
+    "code": "⤫+",
+    "cost": 360,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 207,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 57.3,
+    "acc": [
+     0.75,
+     0.65,
+     0.3
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 5,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_mp44_panzergrenadier_ger",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.75,
+      0.65,
+      0.3
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 5,
+     "spt": [
+      70,
+      57.3,
+      24.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     70,
+     57.3,
+     24.6
+    ],
+    "rawD": {
+     "sbp": "panzergrenadier_ger",
+     "N": 5,
+     "hp": 115,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_panzergrenadier",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_panzergrenadier",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_panzergrenadier",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_ACCURACY_MODIFIER": 1.3,
+        "GRENADE_COST_MODIFIER": 0.5
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 360,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "fj": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "팔슈름예거 분대",
+    "code": "▲F",
+    "cost": 320,
+    "fcost": 0,
+    "isElite": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 166,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 49.1,
+    "acc": [
+     0.53,
+     0.49,
+     0.29
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_fg_42_ger",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.53,
+      0.49,
+      0.29
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 4,
+     "spt": [
+      70.1,
+      49.1,
+      59.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     70.1,
+     49.1,
+     59.6
+    ],
+    "rawD": {
+     "sbp": "fallschirmjagers_ger",
+     "N": 4,
+     "hp": 115,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_fallschirmjager",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.85
+       }
+      },
+      {
+       "ref": "veterancy_2_fallschirmjager",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.2,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_fallschirmjager",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 320,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "sturmtruppen": {
+    "tab": "infantry",
+    "macro": "ELT",
+    "role": "AI",
+    "className": "정예 보병",
+    "uniqueName": "슈투름트루퍼 분대",
+    "code": "⤫+",
+    "cost": 420,
+    "fcost": 0,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 173,
+    "atk": 4.68,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.12,
+     0.12
+    ],
+    "rof": 16.4,
+    "acc": [
+     0.77,
+     0.74,
+     0.7
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 0,
+    "N": 4,
+    "sight": 6,
+    "sa": true,
+    "cat": "infantry",
+    "crewed": false,
+    "tsize": 1,
+    "raw": true,
+    "rawW": {
+     "id": "w_g43_stormtrooper_ger",
+     "d": 13,
+     "ok": 0,
+     "acc": [
+      0.77,
+      0.74,
+      0.7
+     ],
+     "pen": [
+      2,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      25,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 4,
+     "spt": [
+      16.4,
+      16.4,
+      16.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     16.4,
+     16.4,
+     16.4
+    ],
+    "rawD": {
+     "sbp": "stormtrooper_ger",
+     "N": 4,
+     "hp": 120,
+     "arm": [
+      1
+     ],
+     "spd": 3.6,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_stormtrooper",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_2_stormtrooper",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.2,
+        "RECEIVED_ACCURACY_MODIFIER": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_stormtrooper",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 20,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 420,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "hmg": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "SUPP",
+    "className": "중기관총반",
+    "uniqueName": "MG42 중기관총반",
+    "code": "⫶",
+    "cost": 240,
+    "fcost": 0,
+    "N": 4,
+    "isHeavy": true,
+    "isHmg": true,
+    "supp": 85,
+    "arc": 120,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 130,
+    "atk": 1.44,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.24,
+     0.24
+    ],
+    "rof": 69.4,
+    "acc": [
+     0.7,
+     0.51,
+     0.28
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 24,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "S",
+    "sa": true,
+    "cone": true,
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.45,
+    "raw": true,
+    "rawW": {
+     "id": "w_mg42_hmg_ger",
+     "d": 4,
+     "ok": 0,
+     "acc": [
+      0.7,
+      0.51,
+      0.28
+     ],
+     "pen": [
+      2,
+      2,
+      2
+     ],
+     "rM": [
+      10,
+      25,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      87.4,
+      69.4,
+      58.3
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     87.4,
+     69.4,
+     58.3
+    ],
+    "rawD": {
+     "sbp": "hmg_mg42_ger",
+     "N": 4,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "ref": "hmg_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 10
+       }
+      },
+      {
+       "ref": "hmg_standard_veterancy_2",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_SUPPRESSION_MODIFIER": 1.4
+       }
+      },
+      {
+       "ref": "hmg_mg42_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_BURST_RATE_OF_FIRE_MODIFIER": 1.2,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 240,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "mortar": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "박격포반",
+    "uniqueName": "Gr.W 34 81mm 박격포",
+    "code": "⌒",
+    "cost": 240,
+    "fcost": 0,
+    "N": 4,
+    "isMortar": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 115,
+    "atk": 36,
+    "area": 1,
+    "pen": [
+     2.4,
+     2.4,
+     2.4
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.95,
+     0.53
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 4,
+    "range": 10,
+    "ammo": 19,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "S",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "rawD": {
+     "sbp": "mortar_81mm_ger",
+     "N": 4,
+     "hp": 80,
+     "arm": [
+      1
+     ],
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      400,
+      1200,
+      2400
+     ],
+     "ranks": [
+      {
+       "ref": "mortar_standard_veterancy_1",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.1
+       }
+      },
+      {
+       "ref": "mortar_standard_veterancy_2",
+       "mods": {
+        "WEAPON_DAMAGE_MODIFIER": 1.15,
+        "ABILITY_RECHARGE_MODIFIER": 0.65
+       }
+      },
+      {
+       "ref": "mortar_81mm_veterancy_3_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD": -0.25,
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_DAMAGE_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "81mm_mortar_ger",
+     "d": 100,
+     "pen": 20,
+     "aoe": 0.122,
+     "maxM": 4,
+     "sc": [
+      8.5,
+      0.1,
+      7.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.122,
+    "closeEnd": 4,
+    "midEnd": 7,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 0,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 240,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "at_gun": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AT",
+    "className": "대전차포반",
+    "uniqueName": "Pak 40 75mm 대전차포",
+    "code": "▷",
+    "cost": 280,
+    "fcost": 0,
+    "N": 5,
+    "isHeavy": true,
+    "arc": 60,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 162,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     45.6,
+     31.2,
+     15.6
+    ],
+    "rof": 1.2,
+    "acc": [
+     0.08,
+     0.05,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 9,
+    "ammo": 16,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_at_gun_ger",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.05
+     ],
+     "pen": [
+      380,
+      260,
+      130
+     ],
+     "rM": [
+      15,
+      35,
+      60
+     ],
+     "max": 60,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.2,
+      1.2,
+      1.2
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.2,
+     1.2,
+     1.2
+    ],
+    "rawD": {
+     "sbp": "at_gun_75mm_ger",
+     "N": 5,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "ref": "at_gun_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "at_gun_standard_veterancy_2",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85
+       }
+      },
+      {
+       "ref": "at_gun_standard_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "lg40": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AT",
+    "className": "무반동포반",
+    "uniqueName": "LG40 무반동포",
+    "code": "▷",
+    "cost": 270,
+    "fcost": 0,
+    "N": 5,
+    "isHeavy": true,
+    "arc": 90,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 162,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     19.2,
+     12,
+     8.4
+    ],
+    "rof": 1.2,
+    "acc": [
+     0.08,
+     0.05,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 9,
+    "ammo": 16,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_at_gun_lg40_ger",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.05
+     ],
+     "pen": [
+      160,
+      100,
+      70
+     ],
+     "rM": [
+      15,
+      35,
+      60
+     ],
+     "max": 60,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.2,
+      1.2,
+      1.2
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.2,
+     1.2,
+     1.2
+    ],
+    "rawD": {
+     "sbp": "at_gun_lg40_ger",
+     "N": 5,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "at_gun_standard_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15
+       }
+      },
+      {
+       "ref": "at_gun_standard_veterancy_2",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.25,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85
+       }
+      },
+      {
+       "ref": "at_gun_lg_40_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.7
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 270,
+    "bld": [
+     "doc_air"
+    ]
+   },
+   "flak": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AI",
+    "className": "대공포반",
+    "uniqueName": "Flak 30 20mm 대공포",
+    "code": "⌃",
+    "cost": 280,
+    "fcost": 0,
+    "N": 5,
+    "isHeavy": true,
+    "arc": 90,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 180,
+    "atk": 5.76,
+    "area": 1,
+    "pen": [
+     3.6,
+     3.12,
+     2.64
+    ],
+    "rof": 12.5,
+    "acc": [
+     0.61,
+     0.51,
+     0.36
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 7,
+    "ammo": 24,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "heavy",
+    "crewed": true,
+    "tsize": 1.33,
+    "raw": true,
+    "rawW": {
+     "id": "w_20mm_aa_gun_ger",
+     "d": 16,
+     "ok": 0,
+     "acc": [
+      0.61,
+      0.51,
+      0.36
+     ],
+     "pen": [
+      30,
+      26,
+      22
+     ],
+     "rM": [
+      50,
+      50,
+      50
+     ],
+     "max": 50,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      12.5,
+      12.5,
+      12.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     12.5,
+     12.5,
+     12.5
+    ],
+    "rawD": {
+     "sbp": "aa_gun_20mm_ger",
+     "N": 5,
+     "hp": 100,
+     "arm": [
+      1
+     ],
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "aa_gun_20mm_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 10
+       }
+      },
+      {
+       "ref": "aa_gun_20mm_veterancy_2",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 15,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "aa_gun_20mm_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_BURST_RATE_OF_FIRE_MODIFIER": 1.25
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "flak38": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AI",
+    "className": "경대공포반",
+    "uniqueName": "Flak 38 20mm (거치형)",
+    "code": "⌃",
+    "cost": 200,
+    "fcost": 25,
+    "N": 4,
+    "isHeavy": true,
+    "arc": 360,
+    "armorType": "soft",
+    "armor": 1,
+    "maxHp": 162,
+    "atk": 5.76,
+    "area": 1,
+    "pen": [
+     3.6,
+     3.12,
+     2.64
+    ],
+    "rof": 12.5,
+    "acc": [
+     0.75,
+     0.63,
+     0.48
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 6,
+    "ammo": 24,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "L",
+    "cat": "heavy",
+    "raw": true,
+    "rawW": {
+     "id": "w_20mm_aa_gun_emplacement_ger",
+     "d": 16,
+     "ok": 0,
+     "acc": [
+      0.75,
+      0.63,
+      0.48
+     ],
+     "pen": [
+      30,
+      26,
+      22
+     ],
+     "rM": [
+      45,
+      45,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      12.5,
+      12.5,
+      12.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     12.5,
+     12.5,
+     12.5
+    ],
+    "rawD": {
+     "sbp": "aa_gun_20mm_emplacement_ger",
+     "N": 0,
+     "hp": 0,
+     "arm": null,
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "emplacement_direct_fire_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 120
+       }
+      },
+      {
+       "ref": "emplacement_direct_fire_veterancy_2",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.2,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.65
+       }
+      },
+      {
+       "ref": "aa_gun_emplacement_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_DAMAGE_ADDITION_MODIFIER": 2.5,
+        "UNIT_SIGHT_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 250,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "flak36": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "AT",
+    "className": "중대공포반",
+    "uniqueName": "Flak 36 88mm 고사포",
+    "code": "⌃▷",
+    "cost": 320,
+    "fcost": 65,
+    "N": 6,
+    "isHeavy": true,
+    "arc": 360,
+    "armorType": "soft",
+    "armor": 1,
+    "maxHp": 216,
+    "atk": 86.4,
+    "area": 1,
+    "pen": [
+     40.8,
+     38.4,
+     36
+    ],
+    "rof": 1.4,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 9,
+    "ammo": 13,
+    "fuel": 0,
+    "sight": 7,
+    "hw": "L",
+    "cat": "heavy",
+    "raw": true,
+    "rawW": {
+     "id": "w_88mm_emplacement_at_gun_ger",
+     "d": 240,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      340,
+      320,
+      300
+     ],
+     "rM": [
+      20,
+      45,
+      65
+     ],
+     "max": 65,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.4,
+      1.4,
+      1.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.4,
+     1.4,
+     1.4
+    ],
+    "rawD": {
+     "sbp": "at_gun_88mm_emplacement_ger",
+     "N": 0,
+     "hp": 0,
+     "arm": null,
+     "spd": 0,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "emplacement_direct_fire_veterancy_1",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 120
+       }
+      },
+      {
+       "ref": "at_gun_88mm_emplacement_veterancy_2",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.2,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "at_gun_88mm_emplacement_veterancy_3",
+       "mods": {
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_DAMAGE_MODIFIER": 1.33334
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 450,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "nebel": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "네벨베르퍼 로켓",
+    "uniqueName": "42식 15cm 네벨베르퍼",
+    "code": "💥⌒",
+    "cost": 340,
+    "fcost": 0,
+    "N": 4,
+    "isHeavy": true,
+    "isNebel": true,
+    "isArtillery": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 115,
+    "atk": 36,
+    "area": 1,
+    "pen": [
+     15,
+     15,
+     15
+    ],
+    "rof": 2,
+    "acc": [
+     0.6,
+     0.31,
+     0.25
+    ],
+    "deflectDmgPct": 0.15,
+    "move": 4,
+    "minR": 4,
+    "range": 12,
+    "ammo": 13,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "M",
+    "cat": "support",
+    "crewed": true,
+    "tsize": 1.33,
+    "rawD": {
+     "sbp": "nebelwerfer_150mm_ger",
+     "N": 4,
+     "hp": 80,
+     "arm": [
+      1
+     ],
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      1300,
+      3900,
+      7800
+     ],
+     "ranks": [
+      {
+       "ref": "nebelwerfer_150mm_veterancy_1",
+       "mods": {
+        "ABILITY_RANGE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "nebelwerfer_150mm_veterancy_2",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "ABILITY_RECHARGE_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "nebelwerfer_150mm_veterancy_3",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.85,
+        "RECEIVED_DAMAGE_MODIFIER": 0.8,
+        "WEAPON_SCATTER": 0.8
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "150mm_nebelwerfer_he_ger",
+     "d": 100,
+     "pen": 125,
+     "aoe": 0.318,
+     "maxM": -1,
+     "sc": [
+      10,
+      0.3,
+      10
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.318,
+    "closeEnd": 4,
+    "midEnd": 8,
+    "rofB": [
+     2,
+     2,
+     2
+    ],
+    "reload": 2,
+    "maxM": 5,
+    "costSrc": "coh3",
+    "val": 340,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "howitzer": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "야포",
+    "uniqueName": "sFH 18 150mm 중포",
+    "code": "▰",
+    "cost": 340,
+    "fcost": 60,
+    "N": 5,
+    "isArtillery": true,
+    "armorType": "soft",
+    "armor": 1,
+    "maxHp": 198,
+    "atk": 72,
+    "area": 1,
+    "pen": [
+     120,
+     120,
+     120
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.61,
+     0.25
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 4,
+    "minR": 5,
+    "range": 14,
+    "ammo": 6,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "L",
+    "cat": "support",
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "150mm_hummel_ger",
+     "d": 200,
+     "pen": 1000,
+     "aoe": 0.353,
+     "maxM": 5,
+     "sc": [
+      7.5,
+      0.1,
+      12
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.353,
+    "closeEnd": 5,
+    "midEnd": 10,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 1,
+    "maxM": 5,
+    "costSrc": "coh3",
+    "val": 460,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "obice210": {
+    "tab": "support",
+    "macro": "TW",
+    "role": "IND",
+    "className": "초중곡사포",
+    "uniqueName": "Obice da 210/22",
+    "code": "▰▰",
+    "cost": 400,
+    "fcost": 40,
+    "N": 6,
+    "isArtillery": true,
+    "armorType": "soft",
+    "armor": 0.12,
+    "maxHp": 194,
+    "atk": 86.4,
+    "area": 1,
+    "pen": [
+     120,
+     120,
+     120
+    ],
+    "rof": 1,
+    "acc": [
+     0.89,
+     0.5,
+     0.19
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 4,
+    "minR": 6,
+    "range": 15,
+    "ammo": 6,
+    "fuel": 0,
+    "sight": 6,
+    "hw": "L",
+    "cat": "support",
+    "crewed": true,
+    "tsize": 1.33,
+    "rawD": {
+     "sbp": "howitzer_obice_da_210_no_sandbags_ger",
+     "N": 6,
+     "hp": 90,
+     "arm": [
+      1
+     ],
+     "spd": 0
+    },
+    "rawVet": {
+     "xp": [
+      1300,
+      3900,
+      7800
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "obice_210_howitzer_ger",
+     "d": 240,
+     "pen": 1000,
+     "aoe": 0.588,
+     "maxM": 5,
+     "sc": [
+      9,
+      0.1,
+      15
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.588,
+    "closeEnd": 5,
+    "midEnd": 10,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 2,
+    "maxM": 3,
+    "costSrc": "coh3",
+    "val": 480,
+    "bld": [
+     "doc_inf"
+    ]
+   },
+   "wespe": {
+    "tab": "support",
+    "macro": "SPG",
+    "role": "IND",
+    "className": "자주포",
+    "uniqueName": "베스페 자주포",
+    "code": "▰▷",
+    "cost": 320,
+    "fcost": 75,
+    "isArtillery": true,
+    "armorType": "hard",
+    "armor": 6,
+    "armorS": 4.56,
+    "armorR": 3,
+    "maxHp": 58,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     36,
+     36,
+     36
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.52,
+     0.22
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 6,
+    "minR": 4,
+    "range": 13,
+    "ammo": 10,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 23,
+    "rawD": {
+     "sbp": "wespe_ger",
+     "N": 0,
+     "hp": 160,
+     "arm": [
+      50,
+      38,
+      25
+     ],
+     "spd": 5.4
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_wespe_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_2_wespe_ger",
+       "mods": {
+        "ABILITY_RANGE_MODIFIER": 1.2,
+        "WEAPON_RANGE_MODIFIER": 1.2,
+        "WEAPON_SCATTER": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_wespe_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 60,
+        "ABILITY_RECHARGE_MODIFIER": 0.8
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "105mm_wespe_ger",
+     "d": 160,
+     "pen": 300,
+     "aoe": 0.247,
+     "maxM": 4,
+     "sc": [
+      8,
+      0.125,
+      12
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.247,
+    "closeEnd": 5,
+    "midEnd": 9,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 1,
+    "maxM": 4,
+    "costSrc": "coh3",
+    "val": 470,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "hummel": {
+    "tab": "support",
+    "macro": "SPG",
+    "role": "IND",
+    "className": "중자주곡사포",
+    "uniqueName": "훔멜 15cm 자주곡사포",
+    "code": "▰▷",
+    "cost": 400,
+    "fcost": 90,
+    "isArtillery": true,
+    "armorType": "hard",
+    "armor": 8.4,
+    "armorS": 6,
+    "armorR": 2.4,
+    "maxHp": 144,
+    "atk": 72,
+    "area": 1,
+    "pen": [
+     120,
+     120,
+     120
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.61,
+     0.25
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 4,
+    "minR": 4,
+    "range": 14,
+    "ammo": 7,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "cat": "support",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "rawD": {
+     "sbp": "hummel_ger",
+     "N": 0,
+     "hp": 400,
+     "arm": [
+      70,
+      50,
+      20
+     ],
+     "spd": 4
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "raw": true,
+    "rawW": {
+     "ind": true,
+     "id": "150mm_hummel_ger",
+     "d": 200,
+     "pen": 1000,
+     "aoe": 0.353,
+     "maxM": 5,
+     "sc": [
+      7.5,
+      0.1,
+      12
+     ]
+    },
+    "overkill": false,
+    "aoe": 0.353,
+    "closeEnd": 5,
+    "midEnd": 10,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "reload": 1,
+    "maxM": 5,
+    "costSrc": "coh3",
+    "val": 580,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "wanze": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AT",
+    "className": "대전차 로켓 구축차",
+    "uniqueName": "Borgward IV 반체",
+    "code": "⚡",
+    "cost": 220,
+    "fcost": 30,
+    "isTankDest": true,
+    "armorType": "hard",
+    "armor": 4.2,
+    "armorS": 4.2,
+    "armorR": 2.4,
+    "maxHp": 130,
+    "atk": 68,
+    "area": 0.18,
+    "pen": [
+     36,
+     36,
+     36
+    ],
+    "rof": 1,
+    "acc": [
+     0.95,
+     0.84,
+     0.7
+    ],
+    "deflectDmgPct": 0.3,
+    "move": 7,
+    "minR": 0,
+    "range": 5,
+    "ammo": 13,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "saImm": true,
+    "cat": "tank",
+    "rearMul": 1,
+    "tsize": 18,
+    "rawD": {
+     "sbp": "borgward_iv_ger",
+     "N": 0,
+     "hp": 360,
+     "arm": [
+      35,
+      35,
+      20
+     ],
+     "spd": 6.4
+    },
+    "rawVet": {
+     "xp": [
+      1000,
+      3000,
+      6000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_borgward_iv_ger",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_2_borgward_iv_ger",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.8,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_borgward_iv_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_DAMAGE_MODIFIER": 1.25,
+        "UPGRADE_MUNITION_COST_MODIFIER": 0.5
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "doc_mech"
+    ]
+   },
+   "ambulance": {
+    "tab": "support",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "구급 앰뷸런스",
+    "uniqueName": "Opel Blitz 3.6 의무 트럭",
+    "code": "🏥",
+    "cost": 240,
+    "fcost": 15,
+    "class": "medic_vehicle",
+    "armorType": "hard",
+    "armor": 0.96,
+    "armorS": 0.72,
+    "armorR": 0.48,
+    "maxHp": 86,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "cargoCap": 2,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 20,
+    "rawD": {
+     "sbp": "truck_2_5_medical_ger",
+     "N": 0,
+     "hp": 240,
+     "arm": [
+      8,
+      6,
+      4
+     ],
+     "spd": 7.4
+    },
+    "rawVet": {
+     "xp": [
+      1560,
+      3120,
+      6240
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 270,
+    "bld": [
+     "barracks"
+    ]
+   },
+   "amb251": {
+    "tab": "support",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "구급 하프트랙",
+    "uniqueName": "Sd.Kfz. 251/8 의무 하프트랙",
+    "code": "🏥",
+    "cost": 260,
+    "fcost": 30,
+    "class": "medic_vehicle",
+    "armorType": "hard",
+    "armor": 1.2,
+    "armorS": 1.2,
+    "armorR": 0.72,
+    "maxHp": 115,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "cargoCap": 1,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "rawD": {
+     "sbp": "halftrack_medical_ger",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      10,
+      10,
+      6
+     ],
+     "spd": 7.2
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_ger",
+       "mods": {
+        "REINFORCE_RADIUS_MODIFIER": 10
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_ger",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_3_halftrack_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 320,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "bergepanzer": {
+    "tab": "support",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "구난전차",
+    "uniqueName": "베르게판터 구난전차",
+    "code": "🔧",
+    "cost": 300,
+    "fcost": 45,
+    "class": "repair_vehicle",
+    "armorType": "hard",
+    "armor": 7.2,
+    "armorS": 5.4,
+    "armorR": 3.6,
+    "maxHp": 115,
+    "atk": 10,
+    "area": 1,
+    "pen": [
+     0.26,
+     0.22,
+     0.17
+    ],
+    "rof": 2,
+    "acc": [
+     1,
+     0.84,
+     0.7
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 6,
+    "ammo": 8,
+    "fuel": 96,
+    "maxFuel": 96,
+    "supplies": 15,
+    "sight": 6,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "rawD": {
+     "sbp": "recovery_vehicle_ger",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      60,
+      45,
+      30
+     ],
+     "spd": 5.2
+    },
+    "rawVet": {
+     "xp": [
+      500,
+      1000,
+      1500
+     ],
+     "ranks": [
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      },
+      {
+       "ref": "infantry_standard_veterancy_1",
+       "mods": {
+        "RECEIVED_ACCURACY_MODIFIER": 0.9
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 390,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "kettenkrad": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "REC",
+    "className": "정찰 차량",
+    "uniqueName": "케텐크라트",
+    "code": "◇",
+    "cost": 160,
+    "fcost": 0,
+    "armorType": "hard",
+    "armor": 0.48,
+    "armorS": 0.36,
+    "armorR": 0.36,
+    "maxHp": 65,
+    "atk": 11,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.18,
+     0.12
+    ],
+    "rof": 3,
+    "acc": [
+     1,
+     0.85,
+     0.7
+    ],
+    "deflectDmgPct": 0,
+    "move": 13,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 80,
+    "maxFuel": 80,
+    "sight": 7,
+    "capt": true,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 9,
+    "rawD": {
+     "sbp": "kettenkrad_ger",
+     "N": 0,
+     "hp": 180,
+     "arm": [
+      4,
+      3,
+      3
+     ],
+     "spd": 11.75
+    },
+    "rawVet": {
+     "xp": [
+      500,
+      1500,
+      3000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_kettenkrad_ger",
+       "mods": {
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_kettenkrad_ger",
+       "mods": {
+        "UNIT_SIGHT_MODIFIER": 5,
+        "DETECTION_VISION_MODIFIER": 5,
+        "CONSTRUCTION_RATE_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_3_kettenkrad_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 60,
+        "CAPTURE_RATE_MODIFIER": 1.5,
+        "CAPTURE_REVERT_RATE_MODIFIER": 1.5
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 160,
+    "bld": [
+     "hq"
+    ]
+   },
+   "transport": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "LOG",
+    "className": "수송 하프트랙",
+    "uniqueName": "Sd.Kfz. 251 하프트랙",
+    "code": "◫",
+    "cost": 220,
+    "fcost": 30,
+    "class": "transport",
+    "armorType": "hard",
+    "armor": 1.2,
+    "armorS": 1.2,
+    "armorR": 0.72,
+    "maxHp": 115,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     0.12,
+     0.12,
+     0.12
+    ],
+    "rof": 38.9,
+    "acc": [
+     0.51,
+     0.36,
+     0.31
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 112,
+    "maxFuel": 112,
+    "cargoCap": 1,
+    "sight": 6,
+    "tow": true,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_mg42_halftrack_ger",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.51,
+      0.36,
+      0.31
+     ],
+     "pen": [
+      1,
+      1,
+      1
+     ],
+     "rM": [
+      7,
+      20,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      40.2,
+      38.9,
+      38.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     40.2,
+     38.9,
+     38.9
+    ],
+    "rawD": {
+     "sbp": "halftrack_ger",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      10,
+      10,
+      6
+     ],
+     "spd": 7.2,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_ger",
+       "mods": {
+        "REINFORCE_RADIUS_MODIFIER": 10
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_ger",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_3_halftrack_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "stummel": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AI",
+    "className": "곡사 화력지원 하프트랙",
+    "uniqueName": "Sd.Kfz. 251/9 슈툼멜",
+    "code": "◫▷",
+    "cost": 220,
+    "fcost": 30,
+    "armorType": "hard",
+    "armor": 1.2,
+    "armorS": 1.2,
+    "armorR": 0.72,
+    "maxHp": 115,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     3.6,
+     3.6,
+     3.6
+    ],
+    "rof": 1,
+    "acc": [
+     0.05,
+     0.04,
+     0.03
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 2,
+    "range": 7,
+    "ammo": 16,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "sub": {
+     "n": "동축 MG34",
+     "atk": 4.5,
+     "area": 1,
+     "rof": 5,
+     "acc": [
+      1,
+      0.7,
+      0.42
+     ],
+     "range": 6,
+     "supp": 10,
+     "arc": 360,
+     "pen": [
+      0.26,
+      0.22,
+      0.17
+     ],
+     "sa": true
+    },
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_halftrack_stummel_ger",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.05,
+      0.04,
+      0.03
+     ],
+     "pen": [
+      30,
+      30,
+      30
+     ],
+     "rM": [
+      45,
+      45,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1,
+      1,
+      1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 99,
+    "midEnd": 99,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "rawD": {
+     "sbp": "halftrack_stummel_ger",
+     "N": 0,
+     "hp": 320,
+     "arm": [
+      10,
+      10,
+      6
+     ],
+     "spd": 7.2,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_halftrack_stummel_ger",
+       "mods": {
+        "ACCELERATION_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_halftrack_stummel_ger",
+       "mods": {
+        "ABILITY_RECHARGE_MODIFIER": 0.65,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_3_halftrack_stummel_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "ABILITY_RANGE_ADDITION_MODIFIER": 10
+       }
+      }
+     ]
+    },
+    "persons": 3,
+    "lob": true,
+    "costSrc": "coh3",
+    "val": 280,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "supply": {
+    "tab": "armor",
+    "macro": "SUP",
+    "role": "LOG",
+    "className": "보급 트럭",
+    "uniqueName": "Opel Blitz 보급트럭",
+    "code": "✚",
+    "cost": 240,
+    "fcost": 15,
+    "class": "supply",
+    "armorType": "hard",
+    "armor": 0.96,
+    "armorS": 0.72,
+    "armorR": 0.48,
+    "maxHp": 86,
+    "atk": 0,
+    "area": 0,
+    "pen": [
+     0,
+     0,
+     0
+    ],
+    "rof": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 0,
+    "ammo": 0,
+    "fuel": 999,
+    "maxFuel": 999,
+    "supplies": 12,
+    "maxSupplies": 20,
+    "sight": 6,
+    "cargoCap": 2,
+    "tow": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 20,
+    "rawD": {
+     "sbp": "truck_2_5_logistics_ger",
+     "N": 0,
+     "hp": 240,
+     "arm": [
+      8,
+      6,
+      4
+     ],
+     "spd": 7.4
+    },
+    "costSrc": "coh3",
+    "val": 270,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "vehicle": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "REC",
+    "className": "경장갑차",
+    "uniqueName": "Sd.Kfz. 221 정찰장갑차",
+    "code": "◇",
+    "cost": 220,
+    "fcost": 35,
+    "armorType": "hard",
+    "armor": 1.44,
+    "armorS": 1.44,
+    "armorR": 1.2,
+    "maxHp": 86,
+    "atk": 1.44,
+    "area": 1,
+    "pen": [
+     0.24,
+     0.24,
+     0.24
+    ],
+    "rof": 54.3,
+    "acc": [
+     0.63,
+     0.66,
+     0.7
+    ],
+    "deflectDmgPct": 0,
+    "move": 9,
+    "minR": 0,
+    "range": 6,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 7,
+    "saImm": true,
+    "sa": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 16,
+    "raw": true,
+    "rawW": {
+     "id": "w_mg34_armored_car_ger",
+     "d": 4,
+     "ok": 0,
+     "acc": [
+      0.63,
+      0.66,
+      0.7
+     ],
+     "pen": [
+      2,
+      2,
+      2
+     ],
+     "rM": [
+      7,
+      20,
+      35
+     ],
+     "max": 35,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      58,
+      54.3,
+      51.6
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 2,
+    "midEnd": 4,
+    "rofB": [
+     58,
+     54.3,
+     51.6
+    ],
+    "rawD": {
+     "sbp": "armored_car_ger",
+     "N": 0,
+     "hp": 240,
+     "arm": [
+      12,
+      12,
+      10
+     ],
+     "spd": 8.4,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_armored_car_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8
+       }
+      },
+      {
+       "ref": "veterancy_2_armored_car_ger",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_armored_car_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "DETECTION_VISION_MODIFIER_SQUAD": 10,
+        "UNIT_SIGHT_MODIFIER": 10,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 290,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "pzb221": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AT",
+    "className": "대전차 장갑차",
+    "uniqueName": "Sd.Kfz. 221 (2.8cm sPzB 41)",
+    "code": "◇",
+    "cost": 240,
+    "fcost": 40,
+    "armorType": "hard",
+    "armor": 1.44,
+    "armorS": 1.2,
+    "armorR": 1.2,
+    "maxHp": 86,
+    "atk": 32,
+    "area": 0.28,
+    "pen": [
+     21.6,
+     15.6,
+     11.4
+    ],
+    "rof": 2,
+    "acc": [
+     1,
+     0.86,
+     0.74
+    ],
+    "deflectDmgPct": 0.1,
+    "move": 10,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 7,
+    "saImm": true,
+    "cat": "support",
+    "costSrc": "coh3",
+    "val": 320,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "puma": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "ALV",
+    "className": "중장갑차",
+    "uniqueName": "8륜 장갑차 (Sd.Kfz.231)",
+    "code": "◇+",
+    "cost": 240,
+    "fcost": 50,
+    "armorType": "hard",
+    "armor": 3.6,
+    "armorS": 3,
+    "armorR": 1.8,
+    "maxHp": 151,
+    "atk": 5.76,
+    "area": 1,
+    "pen": [
+     2.88,
+     2.4,
+     1.92
+    ],
+    "rof": 11.7,
+    "acc": [
+     0.75,
+     0.42,
+     0.36
+    ],
+    "deflectDmgPct": 0,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 6,
+    "sub": {
+     "n": "동축 MG34",
+     "arc": 360,
+     "supp": 10,
+     "atk": 1.08,
+     "area": 1,
+     "rof": 39.3,
+     "acc": [
+      0.64,
+      0.58,
+      0.37
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_mg34_coaxial_8_rad_ger",
+      "d": 3,
+      "ok": 0,
+      "acc": [
+       0.64,
+       0.58,
+       0.37
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       44.1,
+       39.3,
+       35.9
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      44.1,
+      39.3,
+      35.9
+     ],
+     "deflectDmgPct": 0
+    },
+    "saImm": true,
+    "cat": "support",
+    "rearMul": 1,
+    "tsize": 18,
+    "raw": true,
+    "rawW": {
+     "id": "w_20mm_8_rad_ger",
+     "d": 16,
+     "ok": 0,
+     "acc": [
+      0.75,
+      0.42,
+      0.36
+     ],
+     "pen": [
+      24,
+      20,
+      16
+     ],
+     "rM": [
+      10,
+      20,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      11.7,
+      11.7,
+      11.7
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     11.7,
+     11.7,
+     11.7
+    ],
+    "rawD": {
+     "sbp": "armored_car_8_rad_ger",
+     "N": 0,
+     "hp": 420,
+     "arm": [
+      30,
+      25,
+      15
+     ],
+     "spd": 6.75,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1200,
+      3600,
+      7200
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_armored_car_8_rad_ger",
+       "mods": {
+        "ACCELERATION_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_armored_car_8_rad_ak",
+       "mods": {
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_armored_car_8_rad_ak",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.65
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 340,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "wirbelwind": {
+    "tab": "armor",
+    "macro": "LV",
+    "role": "AI",
+    "className": "대공전차",
+    "uniqueName": "비르벨빈트 대공전차",
+    "code": "⎔⚡",
+    "cost": 300,
+    "fcost": 70,
+    "armorType": "hard",
+    "armor": 10.8,
+    "armorS": 9,
+    "armorR": 4.8,
+    "maxHp": 216,
+    "atk": 1.8,
+    "area": 1,
+    "pen": [
+     1.92,
+     1.68,
+     1.44
+    ],
+    "rof": 40.1,
+    "acc": [
+     0.55,
+     0.5,
+     0.43
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_20mm_flakvierling_wirbelwind_ger",
+     "d": 5,
+     "ok": 0,
+     "acc": [
+      0.55,
+      0.5,
+      0.43
+     ],
+     "pen": [
+      16,
+      14,
+      12
+     ],
+     "rM": [
+      10,
+      20,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      42.4,
+      40.1,
+      33.9
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     42.4,
+     40.1,
+     33.9
+    ],
+    "rawD": {
+     "sbp": "wirbelwind_ger",
+     "N": 0,
+     "hp": 600,
+     "arm": [
+      90,
+      75,
+      40
+     ],
+     "spd": 5.75,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1500,
+      4500,
+      9000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_wirbelwind_ger",
+       "mods": {
+        "UNIT_ROTATION_RATE_MODIFIER": 1.2,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_2_wirbelwind_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "WEAPON_BURST_DURATION_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_3_wirbelwind_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_ACCURACY_MODIFIER": 1.3,
+        "WEAPON_RANGE_MODIFIER": 5
+       }
+      }
+     ]
+    },
+    "costSrc": "coh3",
+    "val": 440,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "tank_dest": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "AT",
+    "className": "구축전차",
+    "uniqueName": "마르더 III 구축전차",
+    "code": "⚡",
+    "cost": 240,
+    "fcost": 45,
+    "isTankDest": true,
+    "armorType": "hard",
+    "armor": 6,
+    "armorS": 3,
+    "armorR": 1.2,
+    "maxHp": 130,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     36,
+     30,
+     26.4
+    ],
+    "rof": 1.1,
+    "acc": [
+     0.1,
+     0.06,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 5,
+    "minR": 0,
+    "range": 8,
+    "ammo": 20,
+    "fuel": 112,
+    "maxFuel": 112,
+    "sight": 6,
+    "cat": "tank",
+    "rearMul": 1,
+    "tsize": 18,
+    "raw": true,
+    "rawW": {
+     "id": "w_76mm_marder_iii_ger",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.06,
+      0.04
+     ],
+     "pen": [
+      300,
+      250,
+      220
+     ],
+     "rM": [
+      10,
+      30,
+      50
+     ],
+     "max": 50,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.2,
+      1.1,
+      1.1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 6,
+    "rofB": [
+     1.2,
+     1.1,
+     1.1
+    ],
+    "rawD": {
+     "sbp": "marder_iii_ger",
+     "N": 0,
+     "hp": 360,
+     "arm": [
+      50,
+      25,
+      10
+     ],
+     "spd": 4.8,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1300,
+      3900,
+      7800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_marder_iii_ger",
+       "mods": {
+        "WEAPON_ACCURACY_MODIFIER": 1.15
+       }
+      },
+      {
+       "ref": "veterancy_2_marder_iii_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_marder_iii_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3
+       }
+      }
+     ]
+    },
+    "persons": 0.75,
+    "costSrc": "coh3",
+    "val": 330,
+    "bld": [
+     "air_coy"
+    ]
+   },
+   "stug": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "AT",
+    "className": "돌격포",
+    "uniqueName": "StuG III G 돌격포",
+    "code": "⎔▷",
+    "cost": 300,
+    "fcost": 80,
+    "isTankDest": true,
+    "armorType": "hard",
+    "armor": 27,
+    "armorS": 16.2,
+    "armorR": 9.6,
+    "maxHp": 216,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     30,
+     24,
+     21.6
+    ],
+    "rof": 1.4,
+    "acc": [
+     0.1,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "sub": {
+     "n": "동축 MG34",
+     "atk": 4.5,
+     "area": 1,
+     "rof": 5,
+     "acc": "[ref]",
+     "range": 6,
+     "supp": 10,
+     "arc": 360,
+     "pen": "[ref]",
+     "sa": true
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_stug_iii_ger",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      250,
+      200,
+      180
+     ],
+     "rM": [
+      40,
+      40,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.4,
+      1.4,
+      1.4
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.4,
+     1.4,
+     1.4
+    ],
+    "rawD": {
+     "sbp": "stug_iii_ger",
+     "N": 0,
+     "hp": 600,
+     "arm": [
+      225,
+      135,
+      80
+     ],
+     "spd": 5,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1300,
+      3900,
+      7800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_stug_iii_ger",
+       "mods": {
+        "UNIT_ROTATION_RATE_MODIFIER": 1.15,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.15
+       }
+      },
+      {
+       "ref": "veterancy_2_stug_iii_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_stug_iii_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 120,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "WEAPON_PENETRATION_MODIFIER": 1.2
+       }
+      }
+     ]
+    },
+    "persons": 1.25,
+    "costSrc": "coh3",
+    "val": 460,
+    "bld": [
+     "motor_pool"
+    ]
+   },
+   "pz3l": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "중형전차",
+    "uniqueName": "3호 전차 L형",
+    "code": "⎔",
+    "cost": 320,
+    "fcost": 70,
+    "armorType": "hard",
+    "armor": 20.4,
+    "armorS": 10.8,
+    "armorR": 9,
+    "maxHp": 259,
+    "atk": 36,
+    "area": 1.28,
+    "pen": [
+     19.8,
+     16.8,
+     13.8
+    ],
+    "rof": 1,
+    "acc": [
+     1,
+     0.88,
+     0.78
+    ],
+    "deflectDmgPct": 0.18,
+    "move": 8,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 MG34",
+     "atk": 4.5,
+     "area": 1,
+     "rof": 7,
+     "acc": [
+      1,
+      0.7,
+      0.42
+     ],
+     "range": 6,
+     "supp": 13,
+     "arc": 360,
+     "pen": [
+      0.26,
+      0.22,
+      0.17
+     ],
+     "sa": true
+    },
+    "cat": "tank",
+    "costSrc": "coh3",
+    "val": 460,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "panzer4": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "중형전차",
+    "uniqueName": "4호 전차 G형",
+    "code": "⎔",
+    "cost": 360,
+    "fcost": 100,
+    "armorType": "hard",
+    "armor": 20.4,
+    "armorS": 11.4,
+    "armorR": 8.4,
+    "maxHp": 259,
+    "atk": 43.2,
+    "area": 1,
+    "pen": [
+     24,
+     20.4,
+     16.8
+    ],
+    "rof": 1.3,
+    "acc": [
+     0.08,
+     0.05,
+     0.05
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 MG34",
+     "arc": 360,
+     "supp": 13,
+     "atk": 1.08,
+     "area": 1,
+     "rof": 87,
+     "acc": [
+      0.35,
+      0.3,
+      0.18
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_mg34_coaxial_panzer_iv_ger+w_mg34_hull_panzer_iv_ger",
+      "d": 3,
+      "ok": 0,
+      "acc": [
+       0.35,
+       0.3,
+       0.18
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       102.1,
+       87,
+       75.4
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      102.1,
+      87,
+      75.4
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_panzer_iv_ger",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.05
+     ],
+     "pen": [
+      200,
+      170,
+      140
+     ],
+     "rM": [
+      15,
+      27.5,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.3,
+      1.3,
+      1.3
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.3,
+     1.3,
+     1.3
+    ],
+    "rawD": {
+     "sbp": "panzer_iv_ger",
+     "N": 0,
+     "hp": 720,
+     "arm": [
+      170,
+      95,
+      70
+     ],
+     "spd": 5.25,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_panzer_iv_ger",
+       "mods": {}
+      },
+      {
+       "ref": "veterancy_2_panzer_iv_ger",
+       "mods": {
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3,
+        "WEAPON_PENETRATION_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_panzer_iv_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.75
+       }
+      }
+     ]
+    },
+    "persons": 2,
+    "costSrc": "coh3",
+    "val": 560,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "pz4cmd": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ENG",
+    "className": "지휘전차",
+    "uniqueName": "4호 지휘전차 (F1형)",
+    "code": "⎔",
+    "cost": 380,
+    "fcost": 80,
+    "armorType": "hard",
+    "armor": 20.4,
+    "armorS": 11.4,
+    "armorR": 8.4,
+    "maxHp": 259,
+    "atk": 36,
+    "area": 1,
+    "pen": [
+     10.8,
+     10.2,
+     9
+    ],
+    "rof": 1.1,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 96,
+    "maxFuel": 96,
+    "sight": 6,
+    "sub": {
+     "n": "동축 MG34",
+     "arc": 360,
+     "supp": 10,
+     "atk": 1.08,
+     "area": 1,
+     "rof": 87,
+     "acc": [
+      0.35,
+      0.3,
+      0.18
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_mg34_coaxial_panzer_iv_ger+w_mg34_hull_panzer_iv_ger",
+      "d": 3,
+      "ok": 0,
+      "acc": [
+       0.35,
+       0.3,
+       0.18
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       102.1,
+       87,
+       75.4
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      102.1,
+      87,
+      75.4
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 20,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_panzer_iv_ap_ger",
+     "d": 100,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      90,
+      85,
+      75
+     ],
+     "rM": [
+      40,
+      40,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.1,
+      1.1,
+      1.1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.1,
+     1.1,
+     1.1
+    ],
+    "rawD": {
+     "sbp": "panzer_iv_cmd_ger",
+     "N": 0,
+     "hp": 720,
+     "arm": [
+      170,
+      95,
+      70
+     ],
+     "spd": 5.5,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_panzer_iv_command_ak",
+       "mods": {
+        "UNIT_ROTATION_RATE_MODIFIER": 1.25,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_panzer_iv_command_ak",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "WEAPON_ACCURACY_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_3_panzer_iv_command_ak",
+       "mods": {}
+      }
+     ]
+    },
+    "persons": 2,
+    "costSrc": "coh3",
+    "val": 540,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "brummbar": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "AI",
+    "className": "돌격 전차",
+    "uniqueName": "브룸베어",
+    "code": "⎔▷",
+    "cost": 400,
+    "fcost": 120,
+    "armorType": "hard",
+    "armor": 36,
+    "armorS": 18,
+    "armorR": 9,
+    "maxHp": 302,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     9.6,
+     9.6,
+     9.6
+    ],
+    "rof": 0.8,
+    "acc": [
+     0.05,
+     0.04,
+     0.03
+    ],
+    "deflectDmgPct": 0,
+    "move": 5,
+    "minR": 0,
+    "range": 6,
+    "ammo": 16,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "sub": {
+     "n": "동축 MG34",
+     "atk": 4.5,
+     "area": 1,
+     "rof": 5,
+     "acc": "[ref]",
+     "range": 6,
+     "supp": 10,
+     "arc": 360,
+     "pen": "[ref]",
+     "sa": true
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 24,
+    "raw": true,
+    "rawW": {
+     "id": "w_150mm_brummbar_ger",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.05,
+      0.04,
+      0.03
+     ],
+     "pen": [
+      80,
+      80,
+      80
+     ],
+     "rM": [
+      35,
+      35,
+      35
+     ],
+     "max": 35,
+     "min": 3,
+     "k": 1,
+     "spt": [
+      0.8,
+      0.8,
+      0.8
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 99,
+    "midEnd": 99,
+    "rofB": [
+     0.8,
+     0.8,
+     0.8
+    ],
+    "rawD": {
+     "sbp": "brummbar_ger",
+     "N": 0,
+     "hp": 840,
+     "arm": [
+      300,
+      150,
+      75
+     ],
+     "spd": 4.25,
+     "w": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      2000,
+      6000,
+      12000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_brummbar_ger",
+       "mods": {
+        "UNIT_PIVOT_RATE_MODIFIER": 1.2,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.2
+       }
+      },
+      {
+       "ref": "veterancy_2_brummbar_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "WEAPON_SCATTER": 0.75
+       }
+      },
+      {
+       "ref": "veterancy_3_brummbar_ger",
+       "mods": {
+        "HEALTH_MODIFIER_ADDITION": 80,
+        "FRONT_ARMOR_ADDITION": 60,
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85
+       }
+      }
+     ]
+    },
+    "persons": 3.5,
+    "costSrc": "coh3",
+    "val": 640,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "panther": {
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "개량 중형전차",
+    "uniqueName": "5호 전차 판터",
+    "code": "⎔+",
+    "cost": 450,
+    "fcost": 125,
+    "armorType": "hard",
+    "armor": 39.6,
+    "armorS": 16.8,
+    "armorR": 9.6,
+    "maxHp": 324,
+    "atk": 57.6,
+    "area": 1,
+    "pen": [
+     36,
+     30,
+     26.4
+    ],
+    "rof": 1.5,
+    "acc": [
+     0.1,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 6,
+    "minR": 0,
+    "range": 7,
+    "ammo": 20,
+    "fuel": 104,
+    "maxFuel": 104,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 MG34",
+     "arc": 360,
+     "supp": 13,
+     "atk": 1.08,
+     "area": 1,
+     "rof": 43.5,
+     "acc": [
+      0.35,
+      0.3,
+      0.18
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_mg34_coaxial_panther_ger",
+      "d": 3,
+      "ok": 0,
+      "acc": [
+       0.35,
+       0.3,
+       0.18
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       51.1,
+       43.5,
+       37.7
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      51.1,
+      43.5,
+      37.7
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 23,
+    "raw": true,
+    "rawW": {
+     "id": "w_75mm_panther_ger",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0.1,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      300,
+      250,
+      220
+     ],
+     "rM": [
+      40,
+      40,
+      40
+     ],
+     "max": 40,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.5,
+      1.5,
+      1.5
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1.5,
+     1.5,
+     1.5
+    ],
+    "rawD": {
+     "sbp": "panther_ger",
+     "N": 0,
+     "hp": 900,
+     "arm": [
+      330,
+      140,
+      80
+     ],
+     "spd": 5.2,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      2000,
+      6000,
+      12000
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_panther_ger",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.35
+       }
+      },
+      {
+       "ref": "veterancy_2_panther_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_panther_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3
+       }
+      }
+     ]
+    },
+    "persons": 1.25,
+    "costSrc": "coh3",
+    "val": 700,
+    "bld": [
+     "tank_depot"
+    ]
+   },
+   "tiger": {
+    "req": "heavy",
+    "tab": "armor",
+    "macro": "TNK",
+    "role": "ALL",
+    "className": "중전차",
+    "uniqueName": "6호 전차 티거 I",
+    "code": "⎔✠",
+    "cost": 720,
+    "fcost": 200,
+    "armorType": "hard",
+    "armor": 45.6,
+    "armorS": 25.2,
+    "armorR": 9.6,
+    "maxHp": 432,
+    "atk": 86.4,
+    "area": 1,
+    "pen": [
+     36,
+     30,
+     26.4
+    ],
+    "rof": 1,
+    "acc": [
+     0.08,
+     0.05,
+     0.04
+    ],
+    "deflectDmgPct": 0,
+    "move": 4,
+    "minR": 0,
+    "range": 7,
+    "ammo": 16,
+    "fuel": 88,
+    "maxFuel": 88,
+    "sight": 6,
+    "sub": {
+     "n": "동축·차체 MG34",
+     "arc": 360,
+     "supp": 13,
+     "atk": 1.44,
+     "area": 1,
+     "rof": 117.3,
+     "acc": [
+      0.41,
+      0.33,
+      0.16
+     ],
+     "range": 6,
+     "pen": [
+      0.12,
+      0.12,
+      0.12
+     ],
+     "sa": true,
+     "raw": true,
+     "rawW": {
+      "id": "w_mg34_coaxial_tiger_i_ger+w_mg34_hull_tiger_i_ger+w_mg42_panzer_iv_ger",
+      "d": 4,
+      "ok": 0,
+      "acc": [
+       0.41,
+       0.33,
+       0.16
+      ],
+      "pen": [
+       1,
+       1,
+       1
+      ],
+      "rM": [
+       7,
+       20,
+       35
+      ],
+      "max": 35,
+      "min": 0,
+      "k": 1,
+      "spt": [
+       125.6,
+       117.3,
+       110.8
+      ]
+     },
+     "overkill": false,
+     "aoe": 0,
+     "closeEnd": 2,
+     "midEnd": 4,
+     "rofB": [
+      125.6,
+      117.3,
+      110.8
+     ],
+     "deflectDmgPct": 0
+    },
+    "cat": "tank",
+    "rearMul": 1.33334,
+    "tsize": 26,
+    "raw": true,
+    "rawW": {
+     "id": "w_88mm_tiger_ger",
+     "d": 240,
+     "ok": 0,
+     "acc": [
+      0.08,
+      0.05,
+      0.04
+     ],
+     "pen": [
+      300,
+      250,
+      220
+     ],
+     "rM": [
+      45,
+      45,
+      45
+     ],
+     "max": 45,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1,
+      1,
+      1
+     ]
+    },
+    "overkill": false,
+    "aoe": 0,
+    "closeEnd": 3,
+    "midEnd": 5,
+    "rofB": [
+     1,
+     1,
+     1
+    ],
+    "rawD": {
+     "sbp": "tiger_ger",
+     "N": 0,
+     "hp": 1200,
+     "arm": [
+      380,
+      210,
+      80
+     ],
+     "spd": 3.8,
+     "w": "[ref]",
+     "s": "[ref]"
+    },
+    "rawVet": {
+     "xp": [
+      4470,
+      13410,
+      26820
+     ],
+     "ranks": [
+      {
+       "ref": "veterancy_1_tiger_ger",
+       "mods": {
+        "WEAPON_HORIZONTAL_SPEED_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_2_tiger_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.85,
+        "WEAPON_ACCURACY_MODIFIER": 1.25
+       }
+      },
+      {
+       "ref": "veterancy_3_tiger_ger",
+       "mods": {
+        "WEAPON_OVERALL_ATTACK_SPEED": 0.8,
+        "UNIT_PIVOT_RATE_MODIFIER": 1.3,
+        "UNIT_ROTATION_RATE_MODIFIER": 1.3
+       }
+      }
+     ]
+    },
+    "persons": 2,
+    "costSrc": "coh3",
+    "val": 1120,
+    "bld": [
+     "tank_depot"
+    ]
+   }
+  }
+ },
+ "CATS": {
+  "infantry": "infantry",
+  "engineer": "infantry",
+  "at_inf": "infantry",
+  "sniper": "infantry",
+  "commando": "infantry",
+  "ranger": "infantry",
+  "jager": "infantry",
+  "panzergren": "infantry",
+  "scout": "infantry",
+  "pathfinder": "infantry",
+  "paratrooper": "infantry",
+  "assault_eng": "infantry",
+  "captain": "infantry",
+  "fp_pioneer": "infantry",
+  "fj": "infantry",
+  "sturmtruppen": "infantry",
+  "hmg": "heavy",
+  "hmg_50": "heavy",
+  "mortar": "heavy",
+  "at_gun": "heavy",
+  "m5gun": "heavy",
+  "pack75": "heavy",
+  "lg40": "heavy",
+  "flak": "heavy",
+  "flak38": "heavy",
+  "flak36": "heavy",
+  "ambulance": "support",
+  "transport": "support",
+  "supply": "support",
+  "vehicle": "support",
+  "puma": "support",
+  "bergepanzer": "support",
+  "howitzer": "support",
+  "obice210": "support",
+  "priest": "support",
+  "nebel": "support",
+  "pzb221": "support",
+  "stummel": "support",
+  "amb251": "support",
+  "hummel": "support",
+  "scott": "support",
+  "wespe": "support",
+  "whizbang": "support",
+  "recovery": "support",
+  "truck": "support",
+  "weasel": "support",
+  "kettenkrad": "support",
+  "m16": "support",
+  "m3gmc": "support"
+ },
+ "MACRO_CAT": {
+  "INF": "일반 보병",
+  "ELT": "정예 보병",
+  "TW": "중화기반",
+  "LV": "경차량·경전차",
+  "TNK": "전차",
+  "SPG": "자주포",
+  "SUP": "지원차량"
+ },
+ "ROLE_CODE": {
+  "AI": "대보병",
+  "AT": "대전차",
+  "ALV": "대경장갑",
+  "ALL": "다목적",
+  "SUPP": "제압",
+  "IND": "곡사포격",
+  "REC": "정찰·저격",
+  "ENG": "공병·지휘",
+  "LOG": "보급·수송·의무"
+ },
+ "COH3_RAW": {
+  "blue": {
+   "scout": {
+    "sbp": "scout_us",
+    "N": 3,
+    "hp": 85,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 45,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "engineer": {
+    "sbp": "engineer_us",
+    "N": 4,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "infantry": {
+    "sbp": "riflemen_us",
+    "N": 6,
+    "hp": 95,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "captain": {
+    "sbp": "captain_us",
+    "N": 3,
+    "hp": 95,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "at_inf": {
+    "sbp": "bazooka_team_us",
+    "N": 4,
+    "hp": 95,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "sniper": {
+    "sbp": "sniper_us",
+    "N": 1,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 42.5,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "pathfinder": {
+    "sbp": "pathfinder_us",
+    "N": 4,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 45,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "paratrooper": {
+    "sbp": "paratrooper_us",
+    "N": 6,
+    "hp": 110,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "assault_eng": {
+    "sbp": "assault_engineer_us",
+    "N": 5,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "commando": {
+    "sbp": "ssf_commandos_us",
+    "N": 6,
+    "hp": 105,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "ranger": {
+    "sbp": "ranger_us",
+    "N": 6,
+    "hp": 115,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "hmg": {
+    "sbp": "hmg_30cal_us",
+    "N": 4,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.45,
+    "vet": "[ref]",
+    "spd": 1,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "hmg_50": {
+    "sbp": "hmg_50cal_us",
+    "N": 4,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.45,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "mortar": {
+    "sbp": "mortar_81mm_us",
+    "N": 4,
+    "hp": 80,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": {
+     "id": "w_81mm_mortar_us",
+     "d": 100,
+     "ok": 0,
+     "acc": [
+      0,
+      0,
+      0
+     ],
+     "pen": [
+      20,
+      20,
+      20
+     ],
+     "rM": [
+      20,
+      40,
+      90
+     ],
+     "max": 90,
+     "min": 25,
+     "k": 1,
+     "spt": [
+      0.6,
+      0.6,
+      0.6
+     ]
+    },
+    "s": null
+   },
+   "at_gun": {
+    "sbp": "at_gun_57mm_us",
+    "N": 5,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "m5gun": {
+    "sbp": "at_gun_3in_m5_us",
+    "N": 6,
+    "hp": 105,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "howitzer": {
+    "sbp": "howitzer_105mm_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 600,
+    "arm": [
+     5,
+     5,
+     5
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 0,
+    "sm": 35,
+    "crew": 0,
+    "w": {
+     "id": "w_105mm_howitzer_normal_us",
+     "d": 160,
+     "ok": 0,
+     "acc": [
+      0,
+      0,
+      0
+     ],
+     "pen": [
+      1000,
+      1000,
+      1000
+     ],
+     "rM": [
+      110,
+      110,
+      110
+     ],
+     "max": 110,
+     "min": 36,
+     "k": 1,
+     "spt": [
+      0.4,
+      0.4,
+      0.4
+     ]
+    },
+    "s": null
+   },
+   "pack75": {
+    "sbp": "pack_howitzer_75mm_us",
+    "N": 5,
+    "hp": 80,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": {
+     "id": "w_75mm_pack_howitzer_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0,
+      0,
+      0
+     ],
+     "pen": [
+      20,
+      20,
+      20
+     ],
+     "rM": [
+      20,
+      40,
+      125
+     ],
+     "max": 125,
+     "min": 25,
+     "k": 1,
+     "spt": [
+      0.7,
+      0.7,
+      0.7
+     ]
+    },
+    "s": null
+   },
+   "scott": {
+    "sbp": "scott_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 420,
+    "arm": [
+     50,
+     38,
+     25
+    ],
+    "rm": 1,
+    "ts": 19,
+    "vet": "[ref]",
+    "spd": 6.75,
+    "sm": 35,
+    "crew": 0,
+    "w": {
+     "id": "w_75mm_howitzer_scott_us",
+     "d": 120,
+     "ok": 0,
+     "acc": [
+      0,
+      0,
+      0
+     ],
+     "pen": [
+      30,
+      30,
+      30
+     ],
+     "rM": [
+      10,
+      30,
+      30
+     ],
+     "max": 30,
+     "min": 0,
+     "k": 1,
+     "spt": [
+      1.3,
+      1.3,
+      1.3
+     ]
+    },
+    "s": null
+   },
+   "priest": {
+    "sbp": "priest_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 400,
+    "arm": [
+     70,
+     50,
+     30
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 4.5,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": "[ref]"
+   },
+   "whizbang": {
+    "sbp": "sherman_whizbang_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 600,
+    "arm": [
+     195,
+     110,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 22,
+    "vet": "[ref]",
+    "spd": 4.25,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": "[ref]"
+   },
+   "ambulance": {
+    "sbp": "ambulance_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 120,
+    "arm": [
+     6,
+     5,
+     3
+    ],
+    "rm": 1,
+    "ts": 10.6,
+    "vet": "[ref]",
+    "spd": 7.5,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "recovery": {
+    "sbp": "recovery_vehicle_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 360,
+    "arm": [
+     60,
+     45,
+     30
+    ],
+    "rm": 1,
+    "ts": 14,
+    "vet": "[ref]",
+    "spd": 6,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "truck": {
+    "sbp": "truck_4x4_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 200,
+    "arm": [
+     5,
+     4,
+     3
+    ],
+    "rm": 1,
+    "ts": 10.6,
+    "vet": "[ref]",
+    "spd": 9.75,
+    "sm": 37.5,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "weasel": {
+    "sbp": "m29_weasal_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 200,
+    "arm": [
+     5,
+     5,
+     3
+    ],
+    "rm": 1,
+    "ts": 10.6,
+    "vet": "[ref]",
+    "spd": 8,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "transport": {
+    "sbp": "halftrack_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 300,
+    "arm": [
+     8,
+     7,
+     5
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 7.2,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "supply": {
+    "sbp": "truck_6x6_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 240,
+    "arm": [
+     6,
+     5,
+     3
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 7,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "m16": {
+    "sbp": "halftrack_quad_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     10,
+     7,
+     5
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 6.9,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "m3gmc": {
+    "sbp": "halftrack_75mm_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     10,
+     7,
+     5
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 6.9,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "vehicle": {
+    "sbp": "greyhound_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 360,
+    "arm": [
+     40,
+     30,
+     20
+    ],
+    "rm": 1,
+    "ts": 18,
+    "vet": "[ref]",
+    "spd": 6.75,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "chaffee": {
+    "sbp": "chaffee_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 480,
+    "arm": [
+     50,
+     38,
+     25
+    ],
+    "rm": 1,
+    "ts": 18,
+    "vet": "[ref]",
+    "spd": 6.9,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "stuart": {
+    "sbp": "stuart_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 480,
+    "arm": [
+     70,
+     50,
+     35
+    ],
+    "rm": 1,
+    "ts": 17,
+    "vet": "[ref]",
+    "spd": 5.6,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "tank_dest": {
+    "sbp": "hellcat_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 600,
+    "arm": [
+     100,
+     75,
+     50
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 6.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "pershing": {
+    "sbp": "pershing_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 1200,
+    "arm": [
+     300,
+     180,
+     90
+    ],
+    "rm": 1.33334,
+    "ts": 26,
+    "vet": "[ref]",
+    "spd": 5.5,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "sherman": {
+    "sbp": "sherman_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 720,
+    "arm": [
+     195,
+     100,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5.5,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "bulldozer": {
+    "sbp": "sherman_bulldozer_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 840,
+    "arm": [
+     270,
+     110,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 22,
+    "vet": "[ref]",
+    "spd": 5.2,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "easyeight": {
+    "sbp": "sherman_easy_8_us",
+    "N": 0,
+    "hp": 0,
+    "vhp": 840,
+    "arm": [
+     195,
+     110,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5.75,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   }
+  },
+  "red": {
+   "engineer": {
+    "sbp": "pioneer_ger",
+    "N": 3,
+    "hp": 95,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 42,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "infantry": {
+    "sbp": "grenadier_ger",
+    "N": 6,
+    "hp": 80,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "sniper": {
+    "sbp": "sniper_ger",
+    "N": 1,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 42.5,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "fp_pioneer": {
+    "sbp": "fallschirmpioneers_ger",
+    "N": 4,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "jager": {
+    "sbp": "jaeger_ger",
+    "N": 5,
+    "hp": 110,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "panzergren": {
+    "sbp": "panzergrenadier_ger",
+    "N": 5,
+    "hp": 115,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "fj": {
+    "sbp": "fallschirmjagers_ger",
+    "N": 4,
+    "hp": 115,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "sturmtruppen": {
+    "sbp": "stormtrooper_ger",
+    "N": 4,
+    "hp": 120,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "hmg": {
+    "sbp": "hmg_mg42_ger",
+    "N": 4,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.45,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "mortar": {
+    "sbp": "mortar_81mm_ger",
+    "N": 4,
+    "hp": 80,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": {
+     "id": "w_81mm_mortar_ger",
+     "d": 100,
+     "ok": 0,
+     "acc": [
+      0,
+      0,
+      0
+     ],
+     "pen": [
+      20,
+      20,
+      20
+     ],
+     "rM": [
+      20,
+      40,
+      90
+     ],
+     "max": 90,
+     "min": 25,
+     "k": 1,
+     "spt": [
+      0.6,
+      0.6,
+      0.6
+     ]
+    },
+    "s": null
+   },
+   "at_gun": {
+    "sbp": "at_gun_75mm_ger",
+    "N": 5,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "lg40": {
+    "sbp": "at_gun_lg40_ger",
+    "N": 5,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "flak": {
+    "sbp": "aa_gun_20mm_ger",
+    "N": 5,
+    "hp": 100,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": "[ref]",
+    "s": null
+   },
+   "flak38": {
+    "sbp": "aa_gun_20mm_emplacement_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 720,
+    "arm": [
+     15,
+     15,
+     15
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 0,
+    "sm": 40,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "flak36": {
+    "sbp": "at_gun_88mm_emplacement_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 1180,
+    "arm": [
+     5,
+     5,
+     5
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 0,
+    "sm": 0,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "nebel": {
+    "sbp": "nebelwerfer_150mm_ger",
+    "N": 4,
+    "hp": 80,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": null,
+    "s": null
+   },
+   "obice210": {
+    "sbp": "howitzer_obice_da_210_no_sandbags_ger",
+    "N": 6,
+    "hp": 90,
+    "vhp": 0,
+    "arm": [
+     1,
+     1,
+     1
+    ],
+    "rm": 1,
+    "ts": 1.33,
+    "vet": "[ref]",
+    "spd": 3.6,
+    "sm": 35,
+    "crew": 1,
+    "w": null,
+    "s": null
+   },
+   "wespe": {
+    "sbp": "wespe_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 160,
+    "arm": [
+     50,
+     38,
+     25
+    ],
+    "rm": 1,
+    "ts": 23,
+    "vet": "[ref]",
+    "spd": 5.4,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "hummel": {
+    "sbp": "hummel_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 400,
+    "arm": [
+     70,
+     50,
+     20
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 4,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "wanze": {
+    "sbp": "borgward_iv_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 360,
+    "arm": [
+     35,
+     35,
+     20
+    ],
+    "rm": 1,
+    "ts": 18,
+    "vet": "[ref]",
+    "spd": 6.4,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "ambulance": {
+    "sbp": "truck_2_5_medical_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 240,
+    "arm": [
+     8,
+     6,
+     4
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 7.4,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "amb251": {
+    "sbp": "halftrack_medical_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     10,
+     10,
+     6
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 7.2,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "bergepanzer": {
+    "sbp": "recovery_vehicle_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     60,
+     45,
+     30
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 5.2,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "kettenkrad": {
+    "sbp": "kettenkrad_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 180,
+    "arm": [
+     4,
+     3,
+     3
+    ],
+    "rm": 1,
+    "ts": 9,
+    "vet": "[ref]",
+    "spd": 11.75,
+    "sm": 40,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "transport": {
+    "sbp": "halftrack_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     10,
+     10,
+     6
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 7.2,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "stummel": {
+    "sbp": "halftrack_stummel_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 320,
+    "arm": [
+     10,
+     10,
+     6
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 7.2,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "supply": {
+    "sbp": "truck_2_5_logistics_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 240,
+    "arm": [
+     8,
+     6,
+     4
+    ],
+    "rm": 1,
+    "ts": 20,
+    "vet": null,
+    "spd": 7.4,
+    "sm": 35,
+    "crew": 0,
+    "w": null,
+    "s": null
+   },
+   "vehicle": {
+    "sbp": "armored_car_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 240,
+    "arm": [
+     12,
+     12,
+     10
+    ],
+    "rm": 1,
+    "ts": 16,
+    "vet": "[ref]",
+    "spd": 8.4,
+    "sm": 45,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "puma": {
+    "sbp": "armored_car_8_rad_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 420,
+    "arm": [
+     30,
+     25,
+     15
+    ],
+    "rm": 1,
+    "ts": 18,
+    "vet": "[ref]",
+    "spd": 6.75,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "wirbelwind": {
+    "sbp": "wirbelwind_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 600,
+    "arm": [
+     90,
+     75,
+     40
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5.75,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "tank_dest": {
+    "sbp": "marder_iii_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 360,
+    "arm": [
+     50,
+     25,
+     10
+    ],
+    "rm": 1,
+    "ts": 18,
+    "vet": "[ref]",
+    "spd": 4.8,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "stug": {
+    "sbp": "stug_iii_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 600,
+    "arm": [
+     225,
+     135,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "panzer4": {
+    "sbp": "panzer_iv_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 720,
+    "arm": [
+     170,
+     95,
+     70
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5.25,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "pz4cmd": {
+    "sbp": "panzer_iv_cmd_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 720,
+    "arm": [
+     170,
+     95,
+     70
+    ],
+    "rm": 1.33334,
+    "ts": 20,
+    "vet": "[ref]",
+    "spd": 5.5,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "brummbar": {
+    "sbp": "brummbar_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 840,
+    "arm": [
+     300,
+     150,
+     75
+    ],
+    "rm": 1.33334,
+    "ts": 24,
+    "vet": "[ref]",
+    "spd": 4.25,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": null
+   },
+   "panther": {
+    "sbp": "panther_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 900,
+    "arm": [
+     330,
+     140,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 23,
+    "vet": "[ref]",
+    "spd": 5.2,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   },
+   "tiger": {
+    "sbp": "tiger_ger",
+    "N": 0,
+    "hp": 0,
+    "vhp": 1200,
+    "arm": [
+     380,
+     210,
+     80
+    ],
+    "rm": 1.33334,
+    "ts": 26,
+    "vet": "[ref]",
+    "spd": 3.8,
+    "sm": 35,
+    "crew": 0,
+    "w": "[ref]",
+    "s": "[ref]"
+   }
+  },
+  "kit": {
+   "bar": {
+    "id": "bar_riflemen_us",
+    "d": 5,
+    "ok": 0,
+    "acc": [
+     0.6,
+     0.46,
+     0.42
+    ],
+    "pen": [
+     2,
+     2,
+     1
+    ],
+    "rM": [
+     7,
+     17,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 2,
+    "spt": [
+     30,
+     27.1,
+     23.9
+    ]
+   },
+   "lmg": {
+    "id": "mg42_stormtrooper_ger",
+    "d": 4,
+    "ok": 0,
+    "acc": [
+     0.53,
+     0.52,
+     0.48
+    ],
+    "pen": [
+     3,
+     2,
+     2
+    ],
+    "rM": [
+     7,
+     25,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     53.1,
+     53.1,
+     42.2
+    ]
+   },
+   "thompson": {
+    "id": "thompson_ranger_us",
+    "d": 5,
+    "ok": 0,
+    "acc": [
+     0.51,
+     0.31,
+     0.17
+    ],
+    "pen": [
+     1,
+     1,
+     1
+    ],
+    "rM": [
+     10,
+     18,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 2,
+    "spt": [
+     57.4,
+     17.6,
+     6.6
+    ]
+   },
+   "stg44": {
+    "id": "mp44_panzergrenadier_ger",
+    "d": 5,
+    "ok": 0,
+    "acc": [
+     0.75,
+     0.65,
+     0.3
+    ],
+    "pen": [
+     1,
+     1,
+     1
+    ],
+    "rM": [
+     7,
+     25,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 2,
+    "spt": [
+     28,
+     22.9,
+     9.8
+    ]
+   },
+   "fg42": {
+    "id": "fg_42_fallschirmjager_ger",
+    "d": 5,
+    "ok": 0,
+    "acc": [
+     0.53,
+     0.49,
+     0.29
+    ],
+    "pen": [
+     1,
+     1,
+     1
+    ],
+    "rM": [
+     7,
+     25,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 2,
+    "spt": [
+     35,
+     24.6,
+     29.8
+    ]
+   },
+   "flame_blue": {
+    "id": "flamethrower_engineer_us",
+    "d": 2,
+    "ok": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "pen": [
+     3,
+     3,
+     3
+    ],
+    "rM": [
+     20,
+     20,
+     20
+    ],
+    "max": 20,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     15.4,
+     15.4,
+     15.4
+    ]
+   },
+   "flame_red": {
+    "id": "flamethrower_pioneer_ger",
+    "d": 2,
+    "ok": 0,
+    "acc": [
+     1,
+     1,
+     1
+    ],
+    "pen": [
+     3,
+     3,
+     3
+    ],
+    "rM": [
+     20,
+     20,
+     20
+    ],
+    "max": 20,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     15.4,
+     15.4,
+     15.4
+    ]
+   },
+   "rocket_blue": {
+    "id": "bazooka_bazooka_team_us",
+    "d": 60,
+    "ok": 0,
+    "acc": [
+     0.07,
+     0.05,
+     0.04
+    ],
+    "pen": [
+     200,
+     125,
+     110
+    ],
+    "rM": [
+     10,
+     22.5,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     1,
+     0.9,
+     0.9
+    ]
+   },
+   "rocket_red": {
+    "id": "panzerschreck_stormtrooper_ger",
+    "d": 160,
+    "ok": 0,
+    "acc": [
+     0.08,
+     0.06,
+     0.04
+    ],
+    "pen": [
+     300,
+     180,
+     130
+    ],
+    "rM": [
+     10,
+     22.5,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     0.7,
+     0.6,
+     0.6
+    ]
+   },
+   "cal50": {
+    "id": "50cal_sherman_us",
+    "d": 12,
+    "ok": 0,
+    "acc": [
+     0.4,
+     0.35,
+     0.25
+    ],
+    "pen": [
+     4,
+     3,
+     2
+    ],
+    "rM": [
+     7,
+     20,
+     35
+    ],
+    "max": 35,
+    "min": 0,
+    "k": 1,
+    "spt": [
+     24.6,
+     17,
+     17
+    ]
+   }
+  }
+ },
+ "COH3_IND": {
+  "blue": {
+   "mortar": {
+    "id": "81mm_mortar_us",
+    "d": 100,
+    "pen": 20,
+    "aoe": 0.122,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "pack75": {
+    "id": "75mm_pack_howitzer_us",
+    "d": 120,
+    "pen": 20,
+    "aoe": 0.2,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "scott": {
+    "id": "75mm_howitzer_barrage_scott_us",
+    "d": 120,
+    "pen": 30,
+    "aoe": 0.208,
+    "maxM": 3,
+    "sc": "[ref]"
+   },
+   "howitzer": {
+    "id": "105mm_howitzer_normal_us",
+    "d": 160,
+    "pen": 1000,
+    "aoe": 0.268,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "priest": {
+    "id": "105mm_howitzer_priest_us",
+    "d": 160,
+    "pen": 1000,
+    "aoe": 0.268,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "whizbang": {
+    "id": "180mm_rocket_barrage_whizbang_us",
+    "d": 70,
+    "pen": 100,
+    "aoe": 0.343,
+    "maxM": 4,
+    "sc": "[ref]"
+   }
+  },
+  "red": {
+   "mortar": {
+    "id": "81mm_mortar_ger",
+    "d": 100,
+    "pen": 20,
+    "aoe": 0.122,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "howitzer": {
+    "id": "150mm_hummel_ger",
+    "d": 200,
+    "pen": 1000,
+    "aoe": 0.353,
+    "maxM": 5,
+    "sc": "[ref]"
+   },
+   "hummel": {
+    "id": "150mm_hummel_ger",
+    "d": 200,
+    "pen": 1000,
+    "aoe": 0.353,
+    "maxM": 5,
+    "sc": "[ref]"
+   },
+   "wespe": {
+    "id": "105mm_wespe_ger",
+    "d": 160,
+    "pen": 300,
+    "aoe": 0.247,
+    "maxM": 4,
+    "sc": "[ref]"
+   },
+   "obice210": {
+    "id": "obice_210_howitzer_ger",
+    "d": 240,
+    "pen": 1000,
+    "aoe": 0.588,
+    "maxM": 5,
+    "sc": "[ref]"
+   },
+   "nebel": {
+    "id": "150mm_nebelwerfer_he_ger",
+    "d": 100,
+    "pen": 125,
+    "aoe": 0.318,
+    "maxM": -1,
+    "sc": "[ref]"
+   }
+  }
+ },
+ "COH3_COST": {
+  "blue": {
+   "scout": [
+    160,
+    0
+   ],
+   "engineer": [
+    180,
+    0
+   ],
+   "infantry": [
+    270,
+    0
+   ],
+   "captain": [
+    150,
+    0
+   ],
+   "at_inf": [
+    250,
+    0
+   ],
+   "sniper": [
+    320,
+    0
+   ],
+   "pathfinder": [
+    200,
+    0
+   ],
+   "paratrooper": [
+    380,
+    0
+   ],
+   "assault_eng": [
+    280,
+    0
+   ],
+   "commando": [
+    360,
+    0
+   ],
+   "ranger": [
+    425,
+    0
+   ],
+   "hmg": [
+    240,
+    0
+   ],
+   "hmg_50": [
+    240,
+    0
+   ],
+   "mortar": [
+    240,
+    0
+   ],
+   "at_gun": [
+    270,
+    0
+   ],
+   "m5gun": [
+    380,
+    40
+   ],
+   "howitzer": [
+    320,
+    60
+   ],
+   "pack75": [
+    315,
+    0
+   ],
+   "scott": [
+    280,
+    55
+   ],
+   "priest": [
+    420,
+    90
+   ],
+   "whizbang": [
+    390,
+    110
+   ],
+   "ambulance": [
+    240,
+    10
+   ],
+   "recovery": [
+    300,
+    30
+   ],
+   "truck": [
+    220,
+    0
+   ],
+   "weasel": [
+    220,
+    0
+   ],
+   "transport": [
+    240,
+    35
+   ],
+   "supply": [
+    260,
+    25
+   ],
+   "m16": [
+    240,
+    35
+   ],
+   "m3gmc": [
+    265,
+    40
+   ],
+   "vehicle": [
+    260,
+    50
+   ],
+   "chaffee": [
+    270,
+    60
+   ],
+   "stuart": [
+    280,
+    35
+   ],
+   "tank_dest": [
+    300,
+    80
+   ],
+   "pershing": [
+    720,
+    200
+   ],
+   "sherman": [
+    340,
+    90
+   ],
+   "bulldozer": [
+    380,
+    100
+   ],
+   "easyeight": [
+    375,
+    105
+   ],
+   "grant": [
+    320,
+    80
+   ]
+  },
+  "red": {
+   "engineer": [
+    125,
+    0
+   ],
+   "infantry": [
+    250,
+    0
+   ],
+   "sniper": [
+    320,
+    0
+   ],
+   "fp_pioneer": [
+    260,
+    0
+   ],
+   "jager": [
+    340,
+    0
+   ],
+   "panzergren": [
+    360,
+    0
+   ],
+   "fj": [
+    320,
+    0
+   ],
+   "sturmtruppen": [
+    420,
+    0
+   ],
+   "hmg": [
+    240,
+    0
+   ],
+   "mortar": [
+    240,
+    0
+   ],
+   "at_gun": [
+    280,
+    0
+   ],
+   "lg40": [
+    270,
+    0
+   ],
+   "flak": [
+    280,
+    0
+   ],
+   "flak38": [
+    200,
+    25
+   ],
+   "flak36": [
+    320,
+    65
+   ],
+   "nebel": [
+    340,
+    0
+   ],
+   "obice210": [
+    400,
+    40
+   ],
+   "wespe": [
+    320,
+    75
+   ],
+   "hummel": [
+    400,
+    90
+   ],
+   "wanze": [
+    220,
+    30
+   ],
+   "ambulance": [
+    240,
+    15
+   ],
+   "amb251": [
+    260,
+    30
+   ],
+   "bergepanzer": [
+    300,
+    45
+   ],
+   "kettenkrad": [
+    160,
+    0
+   ],
+   "transport": [
+    220,
+    30
+   ],
+   "stummel": [
+    220,
+    30
+   ],
+   "supply": [
+    240,
+    15
+   ],
+   "vehicle": [
+    220,
+    35
+   ],
+   "puma": [
+    240,
+    50
+   ],
+   "wirbelwind": [
+    300,
+    70
+   ],
+   "tank_dest": [
+    240,
+    45
+   ],
+   "stug": [
+    300,
+    80
+   ],
+   "panzer4": [
+    360,
+    100
+   ],
+   "pz4cmd": [
+    380,
+    80
+   ],
+   "brummbar": [
+    400,
+    120
+   ],
+   "panther": [
+    450,
+    125
+   ],
+   "tiger": [
+    720,
+    200
+   ],
+   "at_inf": [
+    260,
+    0
+   ],
+   "howitzer": [
+    340,
+    60
+   ],
+   "pzb221": [
+    240,
+    40
+   ],
+   "pz3l": [
+    320,
+    70
+   ]
+  }
+ },
+ "KIT_INFO": {
+  "bar": {
+   "n": "M1918 BAR",
+   "supp": 6
+  },
+  "lmg": {
+   "n": "MG42 경기관총",
+   "supp": 12
+  },
+  "thompson": {
+   "n": "M1A1 톰슨",
+   "supp": 3
+  },
+  "stg44": {
+   "n": "StG44",
+   "supp": 3
+  },
+  "fg42": {
+   "n": "FG42",
+   "supp": 5
+  },
+  "flame_blue": {
+   "n": "M2 화염방사기",
+   "supp": 20,
+   "noCover": true
+  },
+  "flame_red": {
+   "n": "Flammenwerfer 41",
+   "supp": 20,
+   "noCover": true
+  },
+  "rocket_blue": {
+   "n": "M9A1 바주카",
+   "supp": 0,
+   "at": true
+  },
+  "rocket_red": {
+   "n": "RPzB 54 판저슈렉",
+   "supp": 0,
+   "at": true
+  },
+  "cal50": {
+   "n": "포탑 M2HB .50cal",
+   "supp": 15
+  }
+ },
+ "SQUAD_N": null,
+ "AOE_MODEL_CAP": 3,
+ "REINF_VEH": [
+  "medic_vehicle",
+  "supply",
+  "transport"
+ ],
+ "V199": {
+  "ACC": [
+   0.75,
+   0.6,
+   0.45
+  ],
+  "LOB_MOVED_MUL": 1,
+  "PERSONS": {
+   "blue": {
+    "sherman": 2,
+    "chaffee": 1.5,
+    "easyeight": 1.25,
+    "pershing": 2.5,
+    "bulldozer": 3.5,
+    "m3gmc": 2.5,
+    "tank_dest": 0.75
+   },
+   "red": {
+    "panzer4": 2,
+    "pz4cmd": 2,
+    "panther": 1.25,
+    "tiger": 2,
+    "brummbar": 3.5,
+    "stummel": 3,
+    "stug": 1.25,
+    "tank_dest": 0.75
+   }
+  },
+  "LOB": {
+   "blue": [
+    "m3gmc"
+   ],
+   "red": [
+    "stummel"
+   ]
+  }
+ },
+ "V200": {
+  "RANGE_BONUS": 1,
+  "SIGHT_BONUS": 1,
+  "THIRDS": true,
+  "FLAT": {
+   "blue": [
+    "bulldozer"
+   ],
+   "red": [
+    "brummbar",
+    "stummel"
+   ]
+  }
+ },
+ "V214": {
+  "HIT_R": 2.5,
+  "TURN": {
+   "blue": {
+    "mortar": {
+     "n": 1,
+     "r": 0,
+     "m": 4
+    },
+    "pack75": {
+     "n": 1,
+     "r": 0,
+     "m": 4
+    },
+    "scott": {
+     "n": 1,
+     "r": 0,
+     "m": 3
+    },
+    "howitzer": {
+     "n": 1,
+     "r": 1,
+     "m": 4
+    },
+    "priest": {
+     "n": 1,
+     "r": 1,
+     "m": 4
+    },
+    "whizbang": {
+     "n": 2,
+     "r": 1,
+     "m": 4
+    }
+   },
+   "red": {
+    "mortar": {
+     "n": 1,
+     "r": 0,
+     "m": 4
+    },
+    "howitzer": {
+     "n": 1,
+     "r": 1,
+     "m": 5
+    },
+    "hummel": {
+     "n": 1,
+     "r": 1,
+     "m": 5
+    },
+    "wespe": {
+     "n": 1,
+     "r": 1,
+     "m": 4
+    },
+    "obice210": {
+     "n": 1,
+     "r": 2,
+     "m": 3
+    },
+    "nebel": {
+     "n": 2,
+     "r": 2,
+     "m": 5
+    }
+   }
+  }
+ }
+}

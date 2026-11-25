@@ -1,7 +1,17 @@
 # data/legacy-snapshot/
 
-Final values dumped from a headless v214 run (UNIT_ROSTER, kits, veterancy, terrain, buildings, doctrines, prices, maps). The derive pipeline must reproduce them or list every difference.
+Final values of the legacy v214 game, read from a headless run after all its load-time patches.
+The rewrite's data pipeline and rules are checked against these files (the "oracle").
 
-- Format: JSON
-- Edited by: tools/oracle (planned)
-- Data files hold numbers, ids and keys only — never functions, never display text (that goes in data/i18n).
+| File | Contents |
+| --- | --- |
+| `units.json` | `UNIT_ROSTER`, categories, CoH3 raw tables (`COH3_RAW`, `COH3_IND`, `COH3_COST`), kits, squad sizes, v199 / v200 / v214 rule tables |
+| `spawned-units.json` | every roster unit as `createUnitFromKey` builds it (weapons, squad, kits applied), keyed `blue/<key>`, `red/<key>` |
+| `rules.json` | terrain, ground, objects, edges, cover ranks, tech, buildings, fortifications, upgrades, income, zones, suppression and penetration constants |
+| `veterancy.json` | thresholds, tables, multipliers |
+| `doctrines.json` | doctrines, packages, battle-group abilities |
+| `maps/skirmish.json`, `maps/faymonville.json` | size, terrain, edges, points, buildings, bunkers, mines, starting units |
+| `meta.json` | legacy version, table list, anything missing, page errors |
+
+Regenerate: `node tools/oracle/snapshot.js` (needs Playwright + Chromium). Never edit by hand.
+Team `blue` = US Forces, `red` = Wehrmacht in v214.

@@ -1,0 +1,333 @@
+{
+ "VET_THRESHOLDS": [
+  8,
+  25,
+  50
+ ],
+ "VET_TABLE": {
+  "A": [
+   null,
+   {
+    "recv": 0.9
+   },
+   {
+    "recv": 0.9,
+    "acc": 1.15,
+    "cdGren": 1
+   },
+   {
+    "recv": 0.8,
+    "acc": 1.15,
+    "cdGren": 1,
+    "hpModel": 3
+   }
+  ],
+  "B": [
+   null,
+   {
+    "sight": 1,
+    "camoDur": 1
+   },
+   {
+    "sight": 1,
+    "camoDur": 1,
+    "move": 1,
+    "recv": 0.9
+   },
+   {
+    "sight": 1,
+    "camoDur": 1,
+    "move": 1,
+    "recv": 0.9,
+    "hpPct": 0.15,
+    "acc": 1.1
+   }
+  ],
+  "C": [
+   null,
+   {
+    "supRes": 0.75
+   },
+   {
+    "supRes": 0.75,
+    "rof": 1.2,
+    "cdAll": 1
+   },
+   {
+    "supRes": 0.75,
+    "rof": 1.2,
+    "cdAll": 1,
+    "hpPct": 0.15,
+    "recv": 0.9
+   }
+  ],
+  "D": [
+   null,
+   {
+    "repairPlus": 1
+   },
+   {
+    "repairPlus": 1,
+    "repAmt": 10,
+    "buildDisc": 0.1
+   },
+   {
+    "repairPlus": 2,
+    "repAmt": 20,
+    "buildDisc": 0.2,
+    "hpPct": 0.15,
+    "mineDmg": 1.1
+   }
+  ],
+  "E": [
+   null,
+   {
+    "pen": 1.1
+   },
+   {
+    "pen": 1.1,
+    "acc": 1.15
+   },
+   {
+    "pen": 1.1,
+    "acc": 1.15,
+    "atk": 1.15,
+    "hpPct": 0.12
+   }
+  ],
+  "F": [
+   null,
+   {
+    "cdSniper": 1
+   },
+   {
+    "cdSniper": 1,
+    "accFar": 1.2,
+    "supRes": 0.5
+   },
+   {
+    "cdSniper": 1,
+    "accFar": 1.2,
+    "supRes": 0.5,
+    "exec": 1.25
+   }
+  ],
+  "G": [
+   null,
+   {
+    "hpPct": 0.1
+   },
+   {
+    "hpPct": 0.1,
+    "atk": 1.15,
+    "flameZone": 1.15
+   },
+   {
+    "hpPct": 0.1,
+    "atk": 1.15,
+    "flameZone": 1.15,
+    "move": 1,
+    "flameHard": 1.35
+   }
+  ],
+  "H": [
+   null,
+   {
+    "supGive": 1.2
+   },
+   {
+    "supGive": 1.2,
+    "rof": 1.1,
+    "ammoAdd": 2
+   },
+   {
+    "supGive": 1.2,
+    "rof": 1.1,
+    "ammoAdd": 2,
+    "accFar": 1.1,
+    "hpPct": 0.15
+   }
+  ],
+  "I": [
+   null,
+   {
+    "ammoPct": 0.2
+   },
+   {
+    "ammoPct": 0.2,
+    "area": 1.1,
+    "supGive": 1.15
+   },
+   {
+    "ammoPct": 0.2,
+    "area": 1.1,
+    "supGive": 1.15,
+    "range": 1,
+    "hpPct": 0.2
+   }
+  ],
+  "J": [
+   null,
+   {
+    "accFar": 1.1
+   },
+   {
+    "accFar": 1.1,
+    "pen": 1.1
+   },
+   {
+    "accFar": 1.1,
+    "pen": 1.1,
+    "atk": 1.1,
+    "recv": 0.85
+   }
+  ],
+  "K": [
+   null,
+   {
+    "hpPct": 0.08
+   },
+   {
+    "hpPct": 0.08,
+    "pen": 1.1
+   },
+   {
+    "hpPct": 0.08,
+    "pen": 1.1,
+    "atk": 1.15,
+    "armorF": 1,
+    "critRes": 0.75
+   }
+  ],
+  "L": [
+   null,
+   {
+    "sight": 1
+   },
+   {
+    "sight": 1,
+    "pen": 1.1
+   },
+   {
+    "sight": 1,
+    "pen": 1.1,
+    "atk": 1.15,
+    "hpPct": 0.1
+   }
+  ],
+  "M": [
+   null,
+   {
+    "move": 1,
+    "sight": 1
+   },
+   {
+    "move": 1,
+    "sight": 1,
+    "recv": 0.9
+   },
+   {
+    "move": 1,
+    "sight": 1,
+    "recv": 0.9,
+    "hpPct": 0.15,
+    "acc": 1.1
+   }
+  ],
+  "N": [
+   null,
+   {
+    "effic": 1.25
+   },
+   {
+    "effic": 1.25,
+    "ammoSave": 0.15
+   },
+   {
+    "effic": 1.25,
+    "ammoSave": 0.15,
+    "hpPct": 0.15,
+    "move": 1
+   }
+  ]
+ },
+ "VET_MULT": {
+  "B": 0.8,
+  "D": 0.8,
+  "N": 0.8,
+  "C": 1.25,
+  "K": 1.25,
+  "L": 1.25
+ },
+ "VET_ACC_ALL": 0.05,
+ "VET_CLASS_OF": {
+  "infantry": "A",
+  "captain": "A",
+  "scout": "B",
+  "pathfinder": "B",
+  "paratrooper": "C",
+  "commando": "C",
+  "ranger": "C",
+  "jager": "C",
+  "panzergren": "C",
+  "fj": "C",
+  "sturmtruppen": "C",
+  "engineer": "D",
+  "assault_eng": "D",
+  "fp_pioneer": "D",
+  "at_inf": "E",
+  "sniper": "F",
+  "flamer": "G",
+  "hmg": "H",
+  "hmg_50": "H",
+  "mortar": "I",
+  "howitzer": "I",
+  "scott": "I",
+  "priest": "I",
+  "whizbang": "I",
+  "nebel": "I",
+  "wespe": "I",
+  "wanze": "L",
+  "pzb221": "M",
+  "pz4cmd": "K",
+  "stummel": "M",
+  "amb251": "N",
+  "hummel": "I",
+  "pz3l": "K",
+  "at_gun": "J",
+  "m5gun": "J",
+  "pack75": "I",
+  "lg40": "J",
+  "flak": "J",
+  "flak38": "J",
+  "flak36": "J",
+  "obice210": "I",
+  "sherman": "K",
+  "bulldozer": "K",
+  "easyeight": "K",
+  "pershing": "K",
+  "panzer4": "K",
+  "brummbar": "K",
+  "panther": "K",
+  "tiger": "K",
+  "m3gmc": "L",
+  "tank_dest": "L",
+  "stug": "L",
+  "grant": "K",
+  "weasel": "M",
+  "vehicle": "M",
+  "chaffee": "M",
+  "stuart": "M",
+  "m16": "M",
+  "kettenkrad": "M",
+  "puma": "M",
+  "wirbelwind": "M",
+  "ambulance": "N",
+  "recovery": "N",
+  "truck": "N",
+  "transport": "N",
+  "supply": "N",
+  "bergepanzer": "N"
+ },
+ "VET_RAW_BASE": 900
+}
