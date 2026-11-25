@@ -26,7 +26,8 @@ meshes (`presentation/models`).
 │ Layer 2  GAME LOGIC (pure: no DOM, no clock, no Math.random)   src/logic/      │
 │  store ─▶ commands.apply ─▶ owning system ─▶ { state, events }               │
 │  state · events · fsm · hex · movement · vision · combat · crew · status      │
-│  lifecycle · capture · economy · build · skills · transport · turn · victory · ai │
+│  lifecycle · capture · economy · build · skills · transport · turn            │
+│  victory · ai                                                                 │
 └──────────────────────────────────────────────────────────────────────────────┘
           ▲ data and rng are passed in as arguments
 ┌──────────────────────────────────────────────────────────────────────────────┐
