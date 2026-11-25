@@ -169,12 +169,15 @@ meets real data; profiles may change once more there. After Phase 8, `src/servic
 Abilities (`ability.json`) follow the same pattern but are planned with `logic/skills`. Until then, ability ids
 in sbps are checked against a list, not against full records.
 
-## Open points (Phase 0)
+## Decisions (Phase 0, 2026-11-25)
 
-1. **British source:** CoH3 has `british` and `british_africa`. Check which is the multiplayer British Forces in Phase 1.
-2. **"fh":** read as the weapon file.
-3. **Scope of the first import:** infantry, vehicles, team weapons, emplacements. Buildings and aircraft keep their profiles but are imported later.
-4. **Raw source in git:** the four factions + common are about 100 MB of JSON. Proposal: pin the coh3-data commit,
-   fetch on demand, and commit only the records the roster uses (a trimmed extract), so the repository stays small
-   and imports stay reproducible.
-5. **Vehicle capture and reinforce:** follow SPEC (contest only, repair) rather than CoH3, as in the vehicle profile.
+1. **British:** use CoH3 race `british` (not `british_africa`).
+2. **"fh"** is the weapon file: `coh3-data/data/chunked/weapon/<race>.json`.
+3. **Data entry is postponed.** Game planning (`docs/game-design.md`) goes first; Phases 1–9 start after it.
+4. **Source:** load the per-faction files from `coh3-data/data/chunked` (`weapon/<race>.json`, `ebps/races/<race>.json`,
+   `sbps/races/<race>.json`, plus `common`). Proposal: pin the coh3-data commit and commit only the records the roster uses
+   (the full set is about 100 MB); settled in Phase 1.
+5. **Values follow the game, not CoH3,** wherever Burning Front has its own rule (for example vehicles only contest points,
+   SPEC §3). CoH3 values are the starting point; Burning Front values are the result.
+
+Scope of the first import (infantry, vehicles, team weapons, emplacements first) stands as proposed.

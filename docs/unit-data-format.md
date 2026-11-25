@@ -36,7 +36,7 @@ data/units/
   german/        weapon.json  ebps.json  sbps.json  fx.json   Wehrmacht      (CoH3 race "german")
   american/      weapon.json  ebps.json  sbps.json  fx.json   US Forces      (CoH3 race "american")
   afrika_korps/  weapon.json  ebps.json  sbps.json  fx.json   Afrikakorps    (CoH3 race "afrika_korps")
-  british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 race: to confirm, "british_africa" or "british")
+  british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 race "british")
 ```
 
 Inside each file, records keep the CoH3 category tree, so the files read like the game's own tree:
@@ -241,12 +241,10 @@ data/generated/units.json                           (flat, what the game loads)
 compare with data/legacy-snapshot/ (v214) → every difference listed
 ```
 
-## Open points
+## Decisions
 
-1. British source race: CoH3 has both `british` and `british_africa`; the multiplayer British Forces should be checked at import.
-2. Your earlier list said "fh"; this plan reads it as the weapon file.
-3. Buildings and aircraft: the forms cover them, but the first import covers infantry, vehicles, team weapons and emplacements.
-4. The scaffold folders `data/entities`, `data/weapons`, `data/veterancy` merge into `data/units/<faction>/`, and their READMEs are updated in the same change.
+See `docs/data-form-roadmap.md` → Decisions (2026-11-25): British = `british`, "fh" = weapon file,
+source = `coh3-data/data/chunked` per faction, values follow Burning Front rules, data entry after game planning.
 
 ## After approval
 
