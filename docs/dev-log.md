@@ -2,6 +2,15 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (unit catalog)
+- **Done:** `tools/coh3/catalog.js` → `reports/catalog/`: per faction the cleaned list of units (squads kept when produced,
+  built, spawned by an upgrade or called in), members with HP, weapons, equipment with cost and granted weapon, weapons in use
+  with fire-rate values, excluded records with v214 flags. german 58 · american 61 · afrika_korps 44 · british 30 units.
+  Values to two decimals (single-shot damage). Fixed: upgrade records were not recognised by the record walker.
+- **Found:** CoH3 `british` lacks the North Africa British (Matilda, Crusader, Grant, Indian, Gurkha, Commando);
+  they are in `british_africa` (73 squads).
+- **Next:** decide british vs british_africa; then D1-3 vocab and validator.
+
 ## 2026-11-25 (fire rate revised)
 - **Done:** small arms use a shot multiplier (≤ ×6, 5 % tolerance) with damage and suppression ÷ multiplier; artillery keeps
   CoH3 shell damage, rounds its rate up and scales accuracy (reload / scatter / accuracy for further balance); dummy artillery

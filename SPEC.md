@@ -152,6 +152,7 @@ Confirmed 2026-11-25 (rewrite):
     accuracy ×0.83); further balance through reload, scatter and accuracy overrides. Artillery too slow for normal fire is
     fired by abilities only;
   · grenades and mines: one shot per use at CoH3 damage. Settings: `data/balance/fire-rate.json`.
+- Values are kept to two decimal places (e.g. 57 mm AT damage 202.11); shot counts are whole numbers.
 - Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
   decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).

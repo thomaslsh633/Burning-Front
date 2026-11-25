@@ -8,7 +8,7 @@
 //   volley       small arms and every weapon not in another group: shots = round(raw × m), with the smallest whole
 //                multiplier m that brings every band within the tolerance; damage and suppression per shot ÷ m.
 //   single_shot  tank guns, AT guns, infantry AT (and any volley weapon slower than one shot per turn):
-//                1 shot per turn, damage = round(CoH3 damage × raw).
+//                1 shot per turn, damage = CoH3 damage × raw (2 decimals, `decimals` in the settings).
 //   artillery    howitzers, heavy artillery, mortars: CoH3 damage per shell kept. The rate is rounded up
 //                (raw ≥ 1 → ceil(raw) shells; raw < 1 → 1 shell then reload_turns = floor(1 / raw) − 1) and the hit rate
 //                carries the rest: accuracy_scale = raw / game rate (≤ 1), so expected damage per turn equals CoH3.
@@ -20,6 +20,7 @@ const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
 const mult = (m, band) => (m && typeof m[band] === 'number' ? m[band] : 1);
 const isTrue = v => v === 'True' || v === true;
 const round2 = x => Math.round(x * 100) / 100;
+const roundTo = (x, d) => Math.round(x * 10 ** d) / 10 ** d;
 
 export function magazineTime(bag, band) {
   const n = avg(bag.reload?.frequency) + 1;
@@ -81,7 +82,7 @@ export function fireRate(bag, category, cfg) {
   if (rule === 'volley' && bands.some(b => raw[b] < 1)) { rule = 'single_shot'; out.rule = rule; out.slower_than_one = true; }
 
   if (rule === 'single_shot') {
-    return { ...out, shots_per_turn: each(() => 1), damage_per_shot: each(b => Math.round(damage * raw[b])) };
+    return { ...out, shots_per_turn: each(() => 1), damage_per_shot: each(b => roundTo(damage * raw[b], cfg.decimals ?? 2)) };
   }
 
   const v = volley(raw, cfg.volley.tolerance, cfg.volley.max_multiplier);

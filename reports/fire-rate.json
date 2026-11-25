@@ -7,6 +7,7 @@
    "mid",
    "far"
   ],
+  "decimals": 2,
   "groups": {
    "per_use": [
     "grenade",
@@ -75,8 +76,8 @@
    },
    "damage_per_shot": {
     "near": 192,
-    "mid": 191,
-    "far": 190
+    "mid": 190.81,
+    "far": 189.63
    },
    "rate_error": 0
   },
@@ -106,9 +107,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 183,
-    "mid": 182,
-    "far": 181
+    "near": 182.86,
+    "mid": 181.78,
+    "far": 180.71
    },
    "rate_error": 0
   },
@@ -139,8 +140,8 @@
    },
    "damage_per_shot": {
     "near": 192,
-    "mid": 191,
-    "far": 190
+    "mid": 190.81,
+    "far": 189.63
    },
    "rate_error": 0
   },
@@ -170,9 +171,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 229,
-    "far": 228
+    "near": 230.4,
+    "mid": 228.97,
+    "far": 227.56
    },
    "rate_error": 0
   },
@@ -203,8 +204,8 @@
    },
    "damage_per_shot": {
     "near": 192,
-    "mid": 191,
-    "far": 190
+    "mid": 190.81,
+    "far": 189.63
    },
    "rate_error": 0
   },
@@ -266,9 +267,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 148,
-    "mid": 148,
-    "far": 148
+    "near": 147.69,
+    "mid": 147.69,
+    "far": 147.69
    },
    "rate_error": 0
   },
@@ -298,9 +299,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 83,
-    "mid": 83,
-    "far": 83
+    "near": 83.48,
+    "mid": 83.48,
+    "far": 83.48
    },
    "rate_error": 0
   },
@@ -330,9 +331,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 334,
-    "mid": 334,
-    "far": 334
+    "near": 333.91,
+    "mid": 333.91,
+    "far": 333.91
    },
    "rate_error": 0
   },
@@ -362,9 +363,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 167,
-    "mid": 167,
-    "far": 167
+    "near": 166.96,
+    "mid": 166.96,
+    "far": 166.96
    },
    "rate_error": 0
   },
@@ -394,9 +395,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 175,
-    "mid": 175,
-    "far": 175
+    "near": 174.55,
+    "mid": 174.55,
+    "far": 174.55
    },
    "rate_error": 0
   },
@@ -426,9 +427,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 70,
-    "mid": 70,
-    "far": 70
+    "near": 70.24,
+    "mid": 70.24,
+    "far": 70.24
    },
    "rate_error": 0
   },
@@ -458,9 +459,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 53,
-    "mid": 53,
-    "far": 53
+    "near": 52.68,
+    "mid": 52.68,
+    "far": 52.68
    },
    "rate_error": 0
   },
@@ -522,9 +523,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 46,
-    "mid": 46,
-    "far": 46
+    "near": 46.33,
+    "mid": 46.33,
+    "far": 46.33
    },
    "rate_error": 0
   },
@@ -650,9 +651,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 189,
-    "mid": 165,
-    "far": 158
+    "near": 188.93,
+    "mid": 165.16,
+    "far": 157.54
    },
    "rate_error": 0
   },
@@ -682,9 +683,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 197,
-    "mid": 197,
-    "far": 197
+    "near": 196.92,
+    "mid": 196.92,
+    "far": 196.92
    },
    "rate_error": 0
   },
@@ -714,9 +715,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 362,
-    "mid": 302,
-    "far": 302
+    "near": 362.11,
+    "mid": 302.1,
+    "far": 302.1
    },
    "rate_error": 0
   },
@@ -746,9 +747,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 117,
-    "mid": 117,
-    "far": 117
+    "near": 117.15,
+    "mid": 117.15,
+    "far": 117.15
    },
    "rate_error": 0
   },
@@ -778,9 +779,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 211,
-    "mid": 211,
-    "far": 211
+    "near": 211.38,
+    "mid": 211.38,
+    "far": 211.38
    },
    "rate_error": 0
   },
@@ -810,9 +811,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 211,
-    "mid": 211,
-    "far": 211
+    "near": 211.38,
+    "mid": 211.38,
+    "far": 211.38
    },
    "rate_error": 0
   },
@@ -842,9 +843,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 380,
+    "near": 379.78,
     "mid": 360,
-    "far": 326
+    "far": 326.04
    },
    "rate_error": 0
   },
@@ -874,9 +875,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 963,
-    "mid": 963,
-    "far": 963
+    "near": 962.97,
+    "mid": 962.97,
+    "far": 962.97
    },
    "rate_error": 0
   },
@@ -906,9 +907,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 423,
-    "mid": 423,
-    "far": 423
+    "near": 422.75,
+    "mid": 422.75,
+    "far": 422.75
    },
    "rate_error": 0
   },
@@ -971,8 +972,8 @@
    },
    "damage_per_shot": {
     "near": 240,
-    "mid": 230,
-    "far": 206
+    "mid": 229.57,
+    "far": 205.71
    },
    "rate_error": 0
   },
@@ -1002,9 +1003,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 247,
-    "mid": 236,
-    "far": 203
+    "near": 246.58,
+    "mid": 236.42,
+    "far": 202.82
    },
    "rate_error": 0
   },
@@ -1034,9 +1035,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 97,
-    "mid": 97,
-    "far": 97
+    "near": 97.42,
+    "mid": 97.42,
+    "far": 97.42
    },
    "rate_error": 0
   },
@@ -1066,9 +1067,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 155,
-    "mid": 155,
-    "far": 155
+    "near": 155.29,
+    "mid": 155.29,
+    "far": 155.29
    },
    "rate_error": 0
   },
@@ -1098,9 +1099,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 110,
-    "mid": 110,
-    "far": 110
+    "near": 109.71,
+    "mid": 109.71,
+    "far": 109.71
    },
    "rate_error": 0
   },
@@ -1194,9 +1195,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -1226,9 +1227,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 233,
-    "mid": 233,
-    "far": 233
+    "near": 232.73,
+    "mid": 232.73,
+    "far": 232.73
    },
    "rate_error": 0
   },
@@ -1258,9 +1259,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 233,
-    "mid": 233,
-    "far": 233
+    "near": 232.73,
+    "mid": 232.73,
+    "far": 232.73
    },
    "rate_error": 0
   },
@@ -1290,9 +1291,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 233,
-    "mid": 233,
-    "far": 233
+    "near": 232.73,
+    "mid": 232.73,
+    "far": 232.73
    },
    "rate_error": 0
   },
@@ -1322,9 +1323,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 114,
-    "mid": 114,
-    "far": 114
+    "near": 114.29,
+    "mid": 114.29,
+    "far": 114.29
    },
    "rate_error": 0
   },
@@ -1354,9 +1355,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -1386,9 +1387,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 123,
-    "mid": 123,
-    "far": 123
+    "near": 123.08,
+    "mid": 123.08,
+    "far": 123.08
    },
    "rate_error": 0
   },
@@ -1418,9 +1419,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 182,
-    "mid": 182,
-    "far": 182
+    "near": 181.89,
+    "mid": 181.89,
+    "far": 181.89
    },
    "rate_error": 0
   },
@@ -1450,9 +1451,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 114,
-    "mid": 114,
-    "far": 114
+    "near": 114.29,
+    "mid": 114.29,
+    "far": 114.29
    },
    "rate_error": 0
   },
@@ -1482,9 +1483,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 262,
-    "mid": 262,
-    "far": 262
+    "near": 261.82,
+    "mid": 261.82,
+    "far": 261.82
    },
    "rate_error": 0
   },
@@ -1514,9 +1515,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -1546,9 +1547,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 222,
-    "mid": 222,
-    "far": 222
+    "near": 221.54,
+    "mid": 221.54,
+    "far": 221.54
    },
    "rate_error": 0
   },
@@ -1610,9 +1611,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -1642,9 +1643,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -1674,9 +1675,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 203,
-    "mid": 203,
-    "far": 203
+    "near": 203.29,
+    "mid": 203.29,
+    "far": 203.29
    },
    "rate_error": 0
   },
@@ -1706,9 +1707,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 229,
-    "far": 229
+    "near": 229.94,
+    "mid": 229.12,
+    "far": 228.57
    },
    "rate_error": 0
   },
@@ -1738,9 +1739,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 184,
-    "mid": 183,
-    "far": 183
+    "near": 183.95,
+    "mid": 183.29,
+    "far": 182.86
    },
    "rate_error": 0
   },
@@ -1770,9 +1771,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 221,
-    "mid": 220,
-    "far": 219
+    "near": 220.74,
+    "mid": 219.95,
+    "far": 219.43
    },
    "rate_error": 0
   },
@@ -1802,9 +1803,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 1329,
-    "mid": 1329,
-    "far": 1329
+    "near": 1329.23,
+    "mid": 1329.23,
+    "far": 1329.23
    },
    "rate_error": 0
   },
@@ -1866,9 +1867,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 224,
-    "mid": 224,
-    "far": 224
+    "near": 223.69,
+    "mid": 223.69,
+    "far": 223.69
    },
    "rate_error": 0
   },
@@ -1898,9 +1899,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 226,
-    "mid": 226,
-    "far": 226
+    "near": 225.88,
+    "mid": 225.88,
+    "far": 225.88
    },
    "rate_error": 0
   },
@@ -1930,9 +1931,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 271,
-    "mid": 271,
-    "far": 271
+    "near": 271.06,
+    "mid": 271.06,
+    "far": 271.06
    },
    "rate_error": 0
   },
@@ -1962,9 +1963,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 230,
-    "far": 230
+    "near": 230.4,
+    "mid": 230.4,
+    "far": 230.4
    },
    "rate_error": 0
   },
@@ -1994,9 +1995,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 177,
-    "mid": 177,
-    "far": 177
+    "near": 177.23,
+    "mid": 177.23,
+    "far": 177.23
    },
    "rate_error": 0
   },
@@ -6667,9 +6668,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 1,
-    "mid": 0,
-    "far": 0
+    "near": 0.81,
+    "mid": 0.06,
+    "far": 0.02
    },
    "rate_error": 0
   },
@@ -7372,9 +7373,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 80,
-    "mid": 80,
-    "far": 80
+    "near": 79.88,
+    "mid": 79.88,
+    "far": 79.88
    },
    "rate_error": 0
   },
@@ -7693,9 +7694,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 213,
-    "mid": 213,
-    "far": 213
+    "near": 213.33,
+    "mid": 213.33,
+    "far": 213.33
    },
    "rate_error": 0
   },
@@ -7725,9 +7726,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 253,
-    "mid": 251,
-    "far": 249
+    "near": 252.63,
+    "mid": 250.98,
+    "far": 249.35
    },
    "rate_error": 0
   },
@@ -7757,9 +7758,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 202,
-    "mid": 201,
-    "far": 199
+    "near": 202.11,
+    "mid": 200.78,
+    "far": 199.48
    },
    "rate_error": 0
   },
@@ -7789,9 +7790,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 80,
-    "mid": 78,
-    "far": 74
+    "near": 80.11,
+    "mid": 77.84,
+    "far": 74.32
    },
    "rate_error": 0
   },
@@ -7821,9 +7822,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 80,
-    "mid": 78,
-    "far": 74
+    "near": 80.11,
+    "mid": 77.84,
+    "far": 74.32
    },
    "rate_error": 0
   },
@@ -7853,9 +7854,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 80,
-    "mid": 78,
-    "far": 74
+    "near": 80.11,
+    "mid": 77.84,
+    "far": 74.32
    },
    "rate_error": 0
   },
@@ -7917,9 +7918,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 195,
-    "mid": 195,
-    "far": 195
+    "near": 194.59,
+    "mid": 194.59,
+    "far": 194.59
    },
    "rate_error": 0
   },
@@ -7981,9 +7982,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 46,
-    "mid": 46,
-    "far": 46
+    "near": 46.45,
+    "mid": 46.45,
+    "far": 46.45
    },
    "rate_error": 0
   },
@@ -8013,9 +8014,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 73,
-    "mid": 65,
-    "far": 65
+    "near": 72.73,
+    "mid": 64.88,
+    "far": 64.88
    },
    "rate_error": 0
   },
@@ -8045,9 +8046,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 62,
-    "mid": 62,
-    "far": 62
+    "near": 61.94,
+    "mid": 61.94,
+    "far": 61.94
    },
    "rate_error": 0
   },
@@ -8109,9 +8110,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 189,
-    "mid": 165,
-    "far": 158
+    "near": 188.93,
+    "mid": 165.16,
+    "far": 157.54
    },
    "rate_error": 0
   },
@@ -8141,9 +8142,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 111,
-    "mid": 111,
-    "far": 111
+    "near": 110.77,
+    "mid": 110.77,
+    "far": 110.77
    },
    "rate_error": 0
   },
@@ -8173,9 +8174,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 993,
-    "mid": 993,
-    "far": 993
+    "near": 993.1,
+    "mid": 993.1,
+    "far": 993.1
    },
    "rate_error": 0
   },
@@ -8205,9 +8206,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 111,
-    "mid": 111,
-    "far": 111
+    "near": 110.77,
+    "mid": 110.77,
+    "far": 110.77
    },
    "rate_error": 0
   },
@@ -8237,9 +8238,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 185,
-    "mid": 185,
-    "far": 185
+    "near": 184.62,
+    "mid": 184.62,
+    "far": 184.62
    },
    "rate_error": 0
   },
@@ -8269,9 +8270,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 58,
-    "mid": 58,
-    "far": 58
+    "near": 58.18,
+    "mid": 58.18,
+    "far": 58.18
    },
    "rate_error": 0
   },
@@ -8301,9 +8302,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 126,
-    "mid": 126,
-    "far": 126
+    "near": 126.32,
+    "mid": 126.32,
+    "far": 126.32
    },
    "rate_error": 0
   },
@@ -8333,9 +8334,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 111,
-    "mid": 111,
-    "far": 111
+    "near": 111.3,
+    "mid": 111.3,
+    "far": 111.3
    },
    "rate_error": 0
   },
@@ -8365,9 +8366,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 98,
-    "mid": 98,
-    "far": 98
+    "near": 98.46,
+    "mid": 98.46,
+    "far": 98.46
    },
    "rate_error": 0
   },
@@ -8429,9 +8430,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 101,
-    "mid": 101,
-    "far": 101
+    "near": 101.05,
+    "mid": 101.05,
+    "far": 101.05
    },
    "rate_error": 0
   },
@@ -8461,9 +8462,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 84,
-    "mid": 84,
-    "far": 84
+    "near": 84.21,
+    "mid": 84.21,
+    "far": 84.21
    },
    "rate_error": 0
   },
@@ -8557,9 +8558,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -8589,9 +8590,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -8621,9 +8622,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 0,
-    "mid": 0,
-    "far": 0
+    "near": 0.07,
+    "mid": 0.07,
+    "far": 0.07
    },
    "rate_error": 0
   },
@@ -8653,9 +8654,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 0,
-    "mid": 0,
-    "far": 0
+    "near": 0.04,
+    "mid": 0.04,
+    "far": 0.04
    },
    "rate_error": 0
   },
@@ -8685,9 +8686,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -8717,9 +8718,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -8749,9 +8750,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -8781,9 +8782,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 101,
-    "mid": 101,
-    "far": 101
+    "near": 101.05,
+    "mid": 101.05,
+    "far": 101.05
    },
    "rate_error": 0
   },
@@ -8813,9 +8814,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -8845,9 +8846,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -8877,9 +8878,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -8909,9 +8910,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 217,
-    "mid": 217,
-    "far": 217
+    "near": 216.95,
+    "mid": 216.95,
+    "far": 216.95
    },
    "rate_error": 0
   },
@@ -8941,9 +8942,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 217,
-    "mid": 217,
-    "far": 217
+    "near": 216.95,
+    "mid": 216.95,
+    "far": 216.95
    },
    "rate_error": 0
   },
@@ -8973,9 +8974,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 83,
-    "mid": 83,
-    "far": 83
+    "near": 83.48,
+    "mid": 83.48,
+    "far": 83.48
    },
    "rate_error": 0
   },
@@ -9005,9 +9006,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 183,
-    "mid": 183,
-    "far": 183
+    "near": 182.86,
+    "mid": 182.86,
+    "far": 182.86
    },
    "rate_error": 0
   },
@@ -9037,9 +9038,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 188,
-    "mid": 188,
-    "far": 188
+    "near": 188.24,
+    "mid": 188.24,
+    "far": 188.24
    },
    "rate_error": 0
   },
@@ -9069,9 +9070,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 154,
-    "mid": 154,
-    "far": 154
+    "near": 153.6,
+    "mid": 153.6,
+    "far": 153.6
    },
    "rate_error": 0
   },
@@ -9101,9 +9102,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 167,
-    "mid": 167,
-    "far": 167
+    "near": 166.96,
+    "mid": 166.96,
+    "far": 166.96
    },
    "rate_error": 0
   },
@@ -9133,9 +9134,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -9165,9 +9166,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -9197,9 +9198,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 188,
-    "mid": 188,
-    "far": 188
+    "near": 188.24,
+    "mid": 188.24,
+    "far": 188.24
    },
    "rate_error": 0
   },
@@ -9229,9 +9230,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 188,
-    "mid": 188,
-    "far": 188
+    "near": 188.24,
+    "mid": 188.24,
+    "far": 188.24
    },
    "rate_error": 0
   },
@@ -9261,9 +9262,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 262,
-    "mid": 262,
-    "far": 262
+    "near": 261.82,
+    "mid": 261.82,
+    "far": 261.82
    },
    "rate_error": 0
   },
@@ -12910,9 +12911,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 2,
-    "mid": 0,
-    "far": 0
+    "near": 2.15,
+    "mid": 0.22,
+    "far": 0.22
    },
    "rate_error": 0
   },
@@ -13231,9 +13232,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 1,
-    "mid": 0,
-    "far": 0
+    "near": 0.69,
+    "mid": 0.07,
+    "far": 0.06
    },
    "rate_error": 0
   },
@@ -15056,9 +15057,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 89,
-    "mid": 89,
-    "far": 89
+    "near": 89.07,
+    "mid": 89.07,
+    "far": 89.07
    },
    "rate_error": 0
   },
@@ -15153,9 +15154,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 82,
-    "mid": 82,
-    "far": 82
+    "near": 82.24,
+    "mid": 82.24,
+    "far": 82.24
    },
    "rate_error": 0
   },
@@ -15218,8 +15219,8 @@
    },
    "damage_per_shot": {
     "near": 192,
-    "mid": 191,
-    "far": 190
+    "mid": 190.81,
+    "far": 189.63
    },
    "rate_error": 0
   },
@@ -15249,9 +15250,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 78,
-    "mid": 78,
-    "far": 78
+    "near": 77.73,
+    "mid": 77.73,
+    "far": 77.73
    },
    "rate_error": 0
   },
@@ -15281,9 +15282,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 261,
-    "mid": 261,
-    "far": 261
+    "near": 261.22,
+    "mid": 261.22,
+    "far": 261.22
    },
    "rate_error": 0
   },
@@ -15313,9 +15314,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 287,
-    "mid": 287,
-    "far": 287
+    "near": 287.28,
+    "mid": 287.28,
+    "far": 287.28
    },
    "rate_error": 0
   },
@@ -15345,9 +15346,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 197,
-    "mid": 196,
-    "far": 194
+    "near": 196.92,
+    "mid": 195.67,
+    "far": 194.43
    },
    "rate_error": 0
   },
@@ -15377,9 +15378,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 197,
-    "mid": 197,
-    "far": 197
+    "near": 196.92,
+    "mid": 196.92,
+    "far": 196.92
    },
    "rate_error": 0
   },
@@ -15409,9 +15410,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 73,
-    "mid": 65,
-    "far": 65
+    "near": 72.73,
+    "mid": 64.88,
+    "far": 64.88
    },
    "rate_error": 0
   },
@@ -15442,8 +15443,8 @@
    },
    "damage_per_shot": {
     "near": 75,
-    "mid": 67,
-    "far": 67
+    "mid": 66.69,
+    "far": 66.69
    },
    "rate_error": 0
   },
@@ -15473,9 +15474,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 189,
-    "mid": 165,
-    "far": 158
+    "near": 188.93,
+    "mid": 165.16,
+    "far": 157.54
    },
    "rate_error": 0
   },
@@ -15537,9 +15538,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 197,
-    "mid": 197,
-    "far": 197
+    "near": 196.92,
+    "mid": 196.92,
+    "far": 196.92
    },
    "rate_error": 0
   },
@@ -15569,8 +15570,8 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 221,
+    "near": 229.79,
+    "mid": 220.91,
     "far": 192
    },
    "rate_error": 0
@@ -15602,8 +15603,8 @@
    },
    "damage_per_shot": {
     "near": 240,
-    "mid": 230,
-    "far": 206
+    "mid": 229.57,
+    "far": 205.71
    },
    "rate_error": 0
   },
@@ -15633,8 +15634,8 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 221,
+    "near": 229.79,
+    "mid": 220.91,
     "far": 192
    },
    "rate_error": 0
@@ -15697,9 +15698,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 205,
-    "mid": 205,
-    "far": 205
+    "near": 204.8,
+    "mid": 204.8,
+    "far": 204.8
    },
    "rate_error": 0
   },
@@ -15729,9 +15730,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 325,
-    "mid": 325,
-    "far": 325
+    "near": 325.42,
+    "mid": 325.42,
+    "far": 325.42
    },
    "rate_error": 0
   },
@@ -15761,9 +15762,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 107,
-    "mid": 107,
-    "far": 107
+    "near": 106.67,
+    "mid": 106.67,
+    "far": 106.67
    },
    "rate_error": 0
   },
@@ -15794,8 +15795,8 @@
    },
    "damage_per_shot": {
     "near": 128,
-    "mid": 127,
-    "far": 126
+    "mid": 126.94,
+    "far": 125.9
    },
    "rate_error": 0
   },
@@ -15826,8 +15827,8 @@
    },
    "damage_per_shot": {
     "near": 128,
-    "mid": 127,
-    "far": 126
+    "mid": 126.94,
+    "far": 125.9
    },
    "rate_error": 0
   },
@@ -15857,9 +15858,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 219,
-    "mid": 217,
-    "far": 215
+    "near": 219.01,
+    "mid": 216.95,
+    "far": 214.93
    },
    "rate_error": 0
   },
@@ -15889,9 +15890,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 140,
-    "mid": 140,
-    "far": 140
+    "near": 140.49,
+    "mid": 140.49,
+    "far": 140.49
    },
    "rate_error": 0
   },
@@ -15921,9 +15922,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -15985,9 +15986,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 203,
-    "mid": 203,
-    "far": 202
+    "near": 203.44,
+    "mid": 202.64,
+    "far": 202.11
    },
    "rate_error": 0
   },
@@ -16017,9 +16018,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 131,
-    "mid": 131,
-    "far": 131
+    "near": 130.91,
+    "mid": 130.91,
+    "far": 130.91
    },
    "rate_error": 0
   },
@@ -16049,9 +16050,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 137,
-    "mid": 137,
-    "far": 137
+    "near": 137.14,
+    "mid": 137.14,
+    "far": 137.14
    },
    "rate_error": 0
   },
@@ -16081,9 +16082,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 137,
-    "mid": 137,
-    "far": 137
+    "near": 137.14,
+    "mid": 137.14,
+    "far": 137.14
    },
    "rate_error": 0
   },
@@ -16113,9 +16114,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -16145,9 +16146,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -16177,9 +16178,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 313,
-    "mid": 313,
-    "far": 313
+    "near": 312.56,
+    "mid": 312.56,
+    "far": 312.56
    },
    "rate_error": 0
   },
@@ -16209,9 +16210,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 230,
-    "far": 230
+    "near": 230.4,
+    "mid": 230.4,
+    "far": 230.4
    },
    "rate_error": 0
   },
@@ -16241,9 +16242,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 77,
-    "mid": 77,
-    "far": 77
+    "near": 76.8,
+    "mid": 76.8,
+    "far": 76.8
    },
    "rate_error": 0
   },
@@ -16273,9 +16274,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 142,
-    "mid": 142,
-    "far": 142
+    "near": 142.22,
+    "mid": 142.22,
+    "far": 142.22
    },
    "rate_error": 0
   },
@@ -16369,9 +16370,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 197,
-    "mid": 197,
-    "far": 197
+    "near": 196.92,
+    "mid": 196.92,
+    "far": 196.92
    },
    "rate_error": 0
   },
@@ -16401,8 +16402,8 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 221,
+    "near": 229.79,
+    "mid": 220.91,
     "far": 192
    },
    "rate_error": 0
@@ -16433,9 +16434,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 205,
-    "mid": 205,
-    "far": 205
+    "near": 204.8,
+    "mid": 204.8,
+    "far": 204.8
    },
    "rate_error": 0
   },
@@ -16465,9 +16466,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 107,
-    "mid": 107,
-    "far": 107
+    "near": 106.67,
+    "mid": 106.67,
+    "far": 106.67
    },
    "rate_error": 0
   },
@@ -16498,8 +16499,8 @@
    },
    "damage_per_shot": {
     "near": 128,
-    "mid": 127,
-    "far": 126
+    "mid": 126.94,
+    "far": 125.9
    },
    "rate_error": 0
   },
@@ -16529,9 +16530,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 140,
-    "mid": 140,
-    "far": 140
+    "near": 140.49,
+    "mid": 140.49,
+    "far": 140.49
    },
    "rate_error": 0
   },
@@ -16561,9 +16562,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -16593,9 +16594,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 203,
-    "mid": 203,
-    "far": 202
+    "near": 203.44,
+    "mid": 202.64,
+    "far": 202.11
    },
    "rate_error": 0
   },
@@ -16625,9 +16626,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 137,
-    "mid": 137,
-    "far": 137
+    "near": 137.14,
+    "mid": 137.14,
+    "far": 137.14
    },
    "rate_error": 0
   },
@@ -16657,9 +16658,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 152,
-    "mid": 152,
-    "far": 152
+    "near": 151.58,
+    "mid": 151.58,
+    "far": 151.58
    },
    "rate_error": 0
   },
@@ -16689,9 +16690,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -16721,9 +16722,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 169,
-    "mid": 169,
-    "far": 169
+    "near": 169.41,
+    "mid": 169.41,
+    "far": 169.41
    },
    "rate_error": 0
   },
@@ -16753,9 +16754,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 313,
-    "mid": 313,
-    "far": 313
+    "near": 312.56,
+    "mid": 312.56,
+    "far": 312.56
    },
    "rate_error": 0
   },
@@ -16785,9 +16786,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 230,
-    "mid": 230,
-    "far": 230
+    "near": 230.4,
+    "mid": 230.4,
+    "far": 230.4
    },
    "rate_error": 0
   },
@@ -20114,9 +20115,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 1,
-    "mid": 0,
-    "far": 0
+    "near": 0.81,
+    "mid": 0.06,
+    "far": 0.02
    },
    "rate_error": 0
   },
@@ -21266,9 +21267,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 281,
-    "mid": 281,
-    "far": 281
+    "near": 280.98,
+    "mid": 280.98,
+    "far": 280.98
    },
    "rate_error": 0
   },
@@ -21298,9 +21299,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 265,
-    "mid": 265,
-    "far": 265
+    "near": 265.44,
+    "mid": 265.44,
+    "far": 265.44
    },
    "rate_error": 0
   },
@@ -21362,9 +21363,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 133,
-    "mid": 133,
-    "far": 133
+    "near": 132.72,
+    "mid": 132.72,
+    "far": 132.72
    },
    "rate_error": 0
   },
@@ -21426,9 +21427,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 165,
-    "mid": 165,
-    "far": 165
+    "near": 164.57,
+    "mid": 164.57,
+    "far": 164.57
    },
    "rate_error": 0
   },
@@ -21490,9 +21491,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 202,
-    "mid": 201,
-    "far": 199
+    "near": 202.11,
+    "mid": 200.78,
+    "far": 199.48
    },
    "rate_error": 0
   },
@@ -21522,9 +21523,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 202,
-    "mid": 201,
-    "far": 199
+    "near": 202.11,
+    "mid": 200.78,
+    "far": 199.48
    },
    "rate_error": 0
   },
@@ -21554,9 +21555,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 202,
-    "mid": 201,
-    "far": 199
+    "near": 202.11,
+    "mid": 200.78,
+    "far": 199.48
    },
    "rate_error": 0
   },
@@ -21586,9 +21587,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 80,
-    "mid": 78,
-    "far": 74
+    "near": 80.11,
+    "mid": 77.84,
+    "far": 74.32
    },
    "rate_error": 0
   },
@@ -21618,9 +21619,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 59,
-    "mid": 57,
-    "far": 55
+    "near": 58.82,
+    "mid": 56.74,
+    "far": 54.79
    },
    "rate_error": 0
   },
@@ -21650,9 +21651,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 163,
-    "mid": 155,
-    "far": 155
+    "near": 163.4,
+    "mid": 154.84,
+    "far": 154.84
    },
    "rate_error": 0
   },
@@ -21682,9 +21683,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 183,
-    "mid": 183,
-    "far": 183
+    "near": 182.86,
+    "mid": 182.86,
+    "far": 182.86
    },
    "rate_error": 0
   },
@@ -21714,9 +21715,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 183,
-    "mid": 183,
-    "far": 183
+    "near": 182.86,
+    "mid": 182.86,
+    "far": 182.86
    },
    "rate_error": 0
   },
@@ -21746,9 +21747,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 307,
-    "mid": 307,
-    "far": 307
+    "near": 307.2,
+    "mid": 307.2,
+    "far": 307.2
    },
    "rate_error": 0
   },
@@ -21778,9 +21779,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 92,
-    "mid": 92,
-    "far": 92
+    "near": 91.91,
+    "mid": 91.91,
+    "far": 91.91
    },
    "rate_error": 0
   },
@@ -21810,9 +21811,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 342,
-    "mid": 342,
-    "far": 342
+    "near": 342.18,
+    "mid": 342.18,
+    "far": 342.18
    },
    "rate_error": 0
   },
@@ -21874,8 +21875,8 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 162,
-    "mid": 161,
+    "near": 162.25,
+    "mid": 161.12,
     "far": 160
    },
    "rate_error": 0
@@ -21906,9 +21907,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 116,
-    "mid": 116,
-    "far": 116
+    "near": 116.36,
+    "mid": 116.36,
+    "far": 116.36
    },
    "rate_error": 0
   },
@@ -21970,9 +21971,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 133,
-    "mid": 133,
-    "far": 133
+    "near": 133.33,
+    "mid": 133.33,
+    "far": 133.33
    },
    "rate_error": 0
   },
@@ -22002,9 +22003,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 107,
-    "mid": 107,
-    "far": 107
+    "near": 106.67,
+    "mid": 106.67,
+    "far": 106.67
    },
    "rate_error": 0
   },
@@ -22162,9 +22163,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 0,
-    "mid": 0,
-    "far": 0
+    "near": 0.12,
+    "mid": 0.08,
+    "far": 0.06
    },
    "rate_error": 0
   },
@@ -22194,9 +22195,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 136,
-    "mid": 135,
-    "far": 134
+    "near": 135.53,
+    "mid": 134.74,
+    "far": 133.95
    },
    "rate_error": 0
   },
@@ -22322,9 +22323,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 166,
-    "mid": 166,
-    "far": 166
+    "near": 165.52,
+    "mid": 165.52,
+    "far": 165.52
    },
    "rate_error": 0
   },
@@ -22386,9 +22387,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 130,
-    "mid": 130,
-    "far": 130
+    "near": 129.73,
+    "mid": 129.73,
+    "far": 129.73
    },
    "rate_error": 0
   },
@@ -22450,9 +22451,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -22482,9 +22483,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -22514,9 +22515,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 134,
-    "mid": 134,
-    "far": 134
+    "near": 133.95,
+    "mid": 133.95,
+    "far": 133.95
    },
    "rate_error": 0
   },
@@ -22546,9 +22547,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 125,
-    "mid": 125,
-    "far": 125
+    "near": 125.22,
+    "mid": 125.22,
+    "far": 125.22
    },
    "rate_error": 0
   },
@@ -22578,9 +22579,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 38,
-    "mid": 38,
-    "far": 38
+    "near": 38.4,
+    "mid": 38.4,
+    "far": 38.4
    },
    "rate_error": 0
   },
@@ -22610,9 +22611,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 250,
-    "mid": 250,
-    "far": 250
+    "near": 250.43,
+    "mid": 250.43,
+    "far": 250.43
    },
    "rate_error": 0
   },
@@ -22642,9 +22643,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 87,
-    "mid": 87,
-    "far": 87
+    "near": 87.27,
+    "mid": 87.27,
+    "far": 87.27
    },
    "rate_error": 0
   },
@@ -22674,9 +22675,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 131,
-    "mid": 131,
-    "far": 131
+    "near": 130.91,
+    "mid": 130.91,
+    "far": 130.91
    },
    "rate_error": 0
   },
@@ -22738,9 +22739,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 186,
-    "mid": 186,
-    "far": 186
+    "near": 185.81,
+    "mid": 185.81,
+    "far": 185.81
    },
    "rate_error": 0
   },
@@ -22770,9 +22771,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 226,
-    "mid": 226,
-    "far": 226
+    "near": 225.88,
+    "mid": 225.88,
+    "far": 225.88
    },
    "rate_error": 0
   },
@@ -22802,9 +22803,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 115,
-    "mid": 115,
-    "far": 115
+    "near": 115.2,
+    "mid": 115.2,
+    "far": 115.2
    },
    "rate_error": 0
   },
@@ -26227,9 +26228,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 1,
-    "mid": 0,
-    "far": 0
+    "near": 0.81,
+    "mid": 0.06,
+    "far": 0.02
    },
    "rate_error": 0
   },
@@ -26996,9 +26997,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 89,
-    "mid": 89,
-    "far": 89
+    "near": 89.37,
+    "mid": 89.37,
+    "far": 89.37
    },
    "rate_error": 0
   },
@@ -27092,9 +27093,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 202,
-    "mid": 201,
-    "far": 199
+    "near": 202.11,
+    "mid": 200.78,
+    "far": 199.48
    },
    "rate_error": 0
   },
@@ -28117,9 +28118,9 @@
     "far": 1
    },
    "damage_per_shot": {
-    "near": 87,
-    "mid": 87,
-    "far": 87
+    "near": 86.56,
+    "mid": 86.56,
+    "far": 86.56
    },
    "rate_error": 0
   },

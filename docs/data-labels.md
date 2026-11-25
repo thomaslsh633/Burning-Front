@@ -102,7 +102,7 @@ full result for all 878 weapons in `reports/fire-rate.md`.
 | Rule | Weapons | Shots per turn | Damage per shot | Other | Example |
 | --- | --- | --- | --- | --- | --- |
 | `volley` | small arms, MGs, flamethrowers, AA (260) | round(raw × m), smallest m ≤ 6 with every band within 5 % | CoH3 ÷ m | suppression per shot ÷ m | Garand ×4: 13 / 9 / 7 at 3; Kar98k ×5: 9 / 7 / 7 at 2.8 |
-| `single_shot` | tank guns, AT guns, infantry AT, tungsten rounds, small arms under 1 shot per turn (223) | 1 | round(CoH3 × raw) | — | Sherman 75 mm 125; Pz IV 75 mm 152; 57 mm AT 202 |
+| `single_shot` | tank guns, AT guns, infantry AT, tungsten rounds, small arms under 1 shot per turn (223) | 1 | CoH3 × raw, 2 decimals | — | Sherman 75 mm 124.6; 57 mm AT 202.11 / 200.78 / 199.48 |
 | `artillery` | mortars, light and heavy artillery (245) | ceil(raw) shells, or 1 shell then `reload_turns = floor(1 / raw) − 1` | CoH3 (kept) | `accuracy_scale = raw ÷ game rate` (≤ 1) | 81 mm: 2 shells, acc ×0.89; 105 mm: 1 every 2 turns, acc ×0.83 |
 | `ability` | CoH3 dummy artillery fired only by abilities (15) | 1 per use | CoH3 | — | 150 mm Hummel dummy |
 | `per_use` | grenades, mines (135) | 1 per use | CoH3 | — | — |

@@ -55,7 +55,7 @@ test('single-shot weapons fire once and carry the rate in their damage', () => {
   const r = fireRate(slow(6.5, 120), 'tank_gun', cfg);   // 6 / 6.5 = 0.923
   assert.equal(r.rule, 'single_shot');
   assert.deepEqual(r.shots_per_turn, { near: 1, mid: 1, far: 1 });
-  assert.deepEqual(r.damage_per_shot, { near: 111, mid: 111, far: 111 });
+  assert.deepEqual(r.damage_per_shot, { near: 110.77, mid: 110.77, far: 110.77 });   // 120 × 6 / 6.5
 });
 
 test('artillery keeps CoH3 damage; rate rounded up, hit rate carries the difference', () => {
@@ -81,7 +81,7 @@ test('a small arm slower than one shot per turn (sniper) fires once with damage 
   const r = fireRate(slow(7.5, 100), 'rifle', cfg);   // 0.8
   assert.equal(r.rule, 'single_shot');
   assert.deepEqual(r.shots_per_turn, { near: 1, mid: 1, far: 1 });
-  assert.deepEqual(r.damage_per_shot, { near: 80, mid: 80, far: 80 });
+  assert.deepEqual(r.damage_per_shot, { near: 80, mid: 80, far: 80 });   // 100 × 0.8
 });
 
 test('grenades and mines are per use: one shot, CoH3 damage', () => {
