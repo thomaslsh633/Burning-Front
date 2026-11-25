@@ -1,0 +1,11 @@
+{
+  "name": "burning-front",
+  "private": true,
+  "type": "module",
+  "description": "Burning Front — hex tactics. src/ is the rewrite, legacy/ is the frozen v214 game.",
+  "scripts": {
+    "check": "node tools/check-layers.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "legacy:build": "node legacy/build.js"
+  }
+}

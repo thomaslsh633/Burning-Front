@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — folder structure (2026-11-25)
+- v214 moved to `legacy/` unchanged (frozen, builds with `node legacy/build.js`); it is the reference for the rewrite.
+- New tree: `src/` in three layers (presentation / logic / services) plus `app/`, one folder per system, `data/` per data form.
+- `docs/ARCHITECTURE.md` describes the layers and rules; `npm run check` enforces imports and pure-code globals; `npm test` runs `tests/`.
+
 ## v214 — indirect fire from the CoH3 data
 - Mortars, howitzers, SPG artillery and rocket launchers take damage, penetration, AoE falloff, member cap and scatter from the CoH3 JSON
   (`tools/coh3_indirect.py` → `js/0125_v214_coh3-indirect-generated.js`); ranges and prices unchanged.

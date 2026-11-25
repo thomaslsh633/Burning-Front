@@ -1,5 +1,7 @@
 # SPEC — rules in force (v209)
 
+> The rules below are the target for the rewrite in `src/`. File and function references (`js/…`, `tools/…`) point into `legacy/`.
+
 What the game does **now**, checked against the v209 code (= v208 behaviour). One line per rule, newest decision only.
 `(vNNN)` = version that set the rule; the code for it carries the same tag (`node tools/where.js` / grep `vNNN`).
 Unit numbers are not copied here: `python3 -I tools/unit.py <unit>` prints them from the running game.
