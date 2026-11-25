@@ -97,14 +97,17 @@ The vehicle profile follows SPEC (no `capture`, trait `contests`).
 
 | Profile | Must | May | Must not |
 | --- | --- | --- | --- |
-| small_arms (rifle, sidearm, smg, lmg) | attack, suppression | moving | aoe, scatter, reload, trigger |
-| heavy_machine_gun | attack, suppression | emplace, moving | aoe, trigger |
+| small_arms (rifle, sidearm, smg, lmg) | attack | suppression, moving | aoe, scatter, reload, trigger |
+| heavy_machine_gun | attack | suppression, emplace, moving | aoe, trigger |
 | infantry_anti_tank_weapon | attack, deflection | aoe | emplace, trigger |
 | tank_gun | attack, deflection | aoe, scatter, persons, moving, reload | emplace, trigger |
 | anti_tank_gun | attack, deflection, emplace | aoe, scatter | trigger |
 | mortar, light_artillery, heavy_artillery | attack (fire_mode indirect / lobbed), aoe, scatter, emplace | reload, suppression | trigger |
 | grenade | aoe, use | attack, scatter | emplace, trigger |
-| mine | aoe, trigger | deflection | attack, emplace |
+| mine | aoe, trigger | deflection, suppression | attack, emplace |
+| anti_air_gun | attack, emplace | aoe, scatter, suppression | trigger |
+| tungsten_round_upgrade (ammo kits) | same as tank_gun | | |
+| aircraft (off-map, used by abilities) | aoe | attack, scatter | emplace, trigger |
 | flame_throwers | attack | burn, moving | aoe, scatter, trigger |
 
 ### ebps
@@ -144,6 +147,15 @@ The vehicle profile follows SPEC (no `capture`, trait `contests`).
 - **Core:** `name`, `desc`, `icon`
 - **Modules:** `model` `{ id, sprite_scale, anim_class }`, `menu` `{ tab, order }`, `sound`, `effect`
 - Profiles follow the stat file the record belongs to (weapon: sound, effect; ebps: model, sound, effect; sbps: menu).
+
+### Census result (Phase 1, all four factions + common)
+
+`data/source/coh3/CENSUS.md` (coh3-data `49fc4dbc`) confirmed the profiles above with these changes, already applied:
+`suppression` is optional for small arms and HMGs (2 of 58 rifles and 37 of 57 HMGs carry it); mines may carry
+suppression; three subcategories added (`anti_air_gun`, `tungsten_round_upgrade`, `aircraft`).
+Not imported as records: weapon `campaign`, `dummy_construction_*`, `preroll_destruction`; ebps `gameplay`, `props`,
+`misc`, `missions`, `weapons` (link only); sbps `squad_size_variants`. `parent` records in `common` are read only to
+resolve inheritance. Afrikakorps keeps its emplacements under ebps `buildings` and has one sbps `buildings` record.
 
 ## Phases
 
