@@ -53,7 +53,7 @@ Status codes used in the label tables:
 | # | Decision | Effect on data |
 | --- | --- | --- |
 | L | British Forces use two CoH3 sets: `british_africa` in North Africa, `british` in Italy | `data/rules/roster.json` `factions.british.sources`; both downloaded; `british_africa` has no veterancy file and uses `british` ranks |
-| M | Units missing from CoH3 production but in v214 are restored | `roster.json` `restore` (9 units, all with complete CoH3 data); `clone` for units with no CoH3 data (none yet) |
+| M | Units missing from CoH3 production are restored: the 9 v214 units and all 18 remaining British North Africa squads | `roster.json` `restore`; `clone` for missing stats (Australian supply truck cost ← CWT 15 flatbed) |
 | N | CoH3 battlegroup units are unlocked by Burning Front doctrines | catalog flags them `doctrine`; doctrine design assigns them |
 | O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
 

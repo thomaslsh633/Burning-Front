@@ -1,15 +1,70 @@
 {
   "factions": {
-    "german": { "sources": { "all": "german" } },
-    "american": { "sources": { "all": "american" } },
-    "afrika_korps": { "sources": { "all": "afrika_korps" } },
-    "british": { "sources": { "north_africa": "british_africa", "italy": "british" } }
+    "german": {
+      "sources": {
+        "all": "german"
+      }
+    },
+    "american": {
+      "sources": {
+        "all": "american"
+      }
+    },
+    "afrika_korps": {
+      "sources": {
+        "all": "afrika_korps"
+      }
+    },
+    "british": {
+      "sources": {
+        "north_africa": "british_africa",
+        "italy": "british"
+      }
+    }
   },
   "restore": {
-    "german": ["fallschirmjagers_ger", "fallschirmpioneers_ger", "halftrack_medical_ger", "halftrack_stummel_ger",
-      "recovery_vehicle_ger", "truck_2_5_medical_ger"],
-    "american": ["ambulance_us", "recovery_vehicle_us", "truck_6x6_us"]
+    "german": [
+      "fallschirmjagers_ger",
+      "fallschirmpioneers_ger",
+      "halftrack_medical_ger",
+      "halftrack_stummel_ger",
+      "recovery_vehicle_ger",
+      "truck_2_5_medical_ger"
+    ],
+    "american": [
+      "ambulance_us",
+      "recovery_vehicle_us",
+      "truck_6x6_us"
+    ],
+    "british_africa": [
+      "australian_supplytruck_africa_uk",
+      "command_churchill_africa_uk",
+      "commando_africa_uk",
+      "crusader_57mm_africa_uk",
+      "cwt_15_flatbed_africa_uk",
+      "cwt_15_quad_mount_africa_uk",
+      "cwt_15_truck_medical_africa_uk",
+      "cwt_15_truck_repair_resupply_africa_uk",
+      "hmg_commando_africa_uk",
+      "indian_africa_uk",
+      "marmon_herrington_africa_uk",
+      "medic_africa_uk",
+      "mortar_81mm_africa_recrew_uk",
+      "officer_africa_uk",
+      "priest_africa_uk",
+      "sas_africa_uk",
+      "sherman_africa_uk",
+      "sniper_africa_uk"
+    ]
   },
-  "clone": {},
+  "clone": {
+    "australian_supplytruck_africa_uk": {
+      "from": "cwt_15_flatbed_africa_uk",
+      "fields": [
+        "cost"
+      ],
+      "why": "no cost in CoH3 data"
+    }
+  },
   "battlegroup_units": "doctrine_unlock"
 }

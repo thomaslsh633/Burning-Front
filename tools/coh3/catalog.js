@@ -87,7 +87,7 @@ export function buildCatalog(dir) {
           weapon: weapon ? lastPart(weapon) : null };
       });
       units.push({ id, category, source, producers: produced.get(p) ?? [], doctrine: req.some(r => r.includes('/battlegroups/')),
-        in_v214: legacyRaw.has(id), members, upgrades: kits });
+        in_v214: legacyRaw.has(id), clone: roster.clone?.[id] ?? null, members, upgrades: kits });
     }
 
     const used = new Set(units.flatMap(u => [...u.members.flatMap(m => m.weapons), ...u.upgrades.map(k => k.weapon).filter(Boolean)]));
@@ -122,7 +122,7 @@ function markdown(race, c, commit) {
       const mem = u.members.map(m => `${m.entity} ×${m.count}${m.hp ? ` (${m.hp})` : ''}`).join('<br>');
       const wpn = [...new Set(u.members.flatMap(m => m.weapons))].join('<br>');
       const kit = u.upgrades.map(k => `${k.id}${k.weapon ? ` → ${k.weapon}` : ''}${Object.keys(k.cost).length ? ` (${res(k.cost)})` : ''}`).join('<br>');
-      L.push(`| ${u.id} | ${u.source} | ${u.doctrine ? 'yes' : ''} | ${u.in_v214 ? 'yes' : ''} | ${mem} | ${wpn} | ${kit} |`);
+      L.push(`| ${u.id}${u.clone ? ` (${u.clone.fields.join(', ')} from ${u.clone.from})` : ''} | ${u.source} | ${u.doctrine ? 'yes' : ''} | ${u.in_v214 ? 'yes' : ''} | ${mem} | ${wpn} | ${kit} |`);
     }
     L.push('');
   }

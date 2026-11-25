@@ -10,6 +10,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_20mm_emplacement_ger",
@@ -30,6 +31,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bunker_ger_antitank",
@@ -50,6 +52,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_88mm_emplacement_ger",
@@ -70,6 +73,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "anti_tank_88mm_gun_no_sandbags_ger",
@@ -90,6 +94,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "base_defense_ger",
@@ -110,6 +115,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "hmg_bunker_ger",
@@ -130,6 +136,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_105mm_ger",
@@ -159,6 +166,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_obice_210_ger",
@@ -179,6 +187,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bunker_mortar_autobuild_ger",
@@ -199,6 +208,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bunker_mortar_ger",
@@ -219,6 +229,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "pantherturm_emplacement_ger",
@@ -239,6 +250,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "coastal_officer_ger",
@@ -276,6 +288,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "coastal_reserve_ger",
@@ -297,6 +310,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "fallschirmjagers_ger",
@@ -319,6 +333,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "fallschirmpioneers_ger",
@@ -357,6 +372,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "grenadier_ger",
@@ -402,6 +418,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "jaeger_support_ger",
@@ -465,6 +482,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "panzergrenadier_ger",
@@ -492,6 +510,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzergrenadier_tank_hunter_ger",
@@ -518,6 +537,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "pioneer_ger",
@@ -565,6 +585,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sniper_ger",
@@ -589,6 +610,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "stormtrooper_ger",
@@ -621,6 +643,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sturmpioneer_ger",
@@ -661,6 +684,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_aa_gun_20mm_ger",
@@ -706,6 +730,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_anzioannie_283mm_ger",
@@ -745,6 +770,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_75mm_ger",
@@ -791,6 +817,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_88mm_pak43_ger",
@@ -828,6 +855,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_75mm_lg40_ger",
@@ -869,6 +897,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "w_mg42_hmg_ger",
@@ -913,6 +942,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_cannone_da_105_ger",
@@ -950,6 +980,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_obice_210_no_sandbags_ger",
@@ -987,6 +1018,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_75mm_leig_ger",
@@ -1026,6 +1058,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_ger",
@@ -1072,6 +1105,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_nebelwerfer_150mm_ger",
@@ -1120,6 +1154,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_222_specialist_ger",
@@ -1141,6 +1176,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_8_rad_ger",
@@ -1173,6 +1209,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_ger",
@@ -1216,6 +1253,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "borgward_iv_ger",
@@ -1253,6 +1291,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "brummbar_ger",
@@ -1305,6 +1344,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_flame_ger",
@@ -1337,6 +1377,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_ger",
@@ -1387,6 +1428,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_medical_ger",
@@ -1416,6 +1458,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_recrewable_ger",
@@ -1466,6 +1509,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_stummel_ger",
@@ -1498,6 +1542,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_stummel_recrewable_ger",
@@ -1530,6 +1575,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "hummel_ger",
@@ -1561,6 +1607,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "kettenkrad_ger",
@@ -1587,6 +1634,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "king_tiger_sdkfz_182_ger",
@@ -1619,6 +1667,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "l6_40_recrewable_ger",
@@ -1651,6 +1700,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "marder_iii_ger",
@@ -1696,6 +1746,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "nashorn_ger",
@@ -1719,6 +1770,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "panther_ger",
@@ -1749,6 +1801,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iv_cmd_ger",
@@ -1783,6 +1836,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iv_ger",
@@ -1842,6 +1896,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "recovery_vehicle_ger",
@@ -1864,6 +1919,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_ger",
@@ -1909,6 +1965,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tiger_ger",
@@ -1943,6 +2000,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "wirbelwind_ger",
@@ -1988,6 +2046,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "stug_iii_ger",
@@ -2048,6 +2107,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sturmtiger_ger",
@@ -2070,6 +2130,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tiger_ger",
@@ -2102,6 +2163,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_fuel_ger",
@@ -2120,6 +2182,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_ger",
@@ -2138,6 +2201,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_logistics_ger",
@@ -2156,6 +2220,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_medical_ger",
@@ -2174,6 +2239,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "wespe_ger",
@@ -2205,6 +2271,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "wirbelwind_ger",
@@ -2248,6 +2315,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "wirbelwind_recrewable_ger",
@@ -4725,6 +4793,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "base_defense_us",
@@ -4745,6 +4814,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "goon_gun_pit_us",
@@ -4765,6 +4835,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "hmg_50cal_fighting_position_us",
@@ -4785,6 +4856,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "hmg_fighting_position_us",
@@ -4805,6 +4877,7 @@
      "producers": [],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_105mm_us",
@@ -4825,6 +4898,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "mortar_pit_us",
@@ -4845,6 +4919,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tourelle_emplacement_us",
@@ -4867,6 +4942,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "artillery_observer_leader_radio_us",
@@ -4916,6 +4992,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "assault_engineer_us",
@@ -4970,6 +5047,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "bazooka_team_us",
@@ -5000,6 +5078,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "brazilian_infantry_us",
@@ -5032,6 +5111,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "brazilian_lieutenant_us",
@@ -5068,6 +5148,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "captain_us",
@@ -5119,6 +5200,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "engineer_us",
@@ -5164,6 +5246,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "french_infantry_us",
@@ -5217,6 +5300,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "infantry_assault_bazooka_team_us",
@@ -5258,6 +5342,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "infantry_assault_rifleman_squad_leader_us",
@@ -5317,6 +5402,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "marksman_team_partisan",
@@ -5345,6 +5431,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "paratrooper_us",
@@ -5386,6 +5473,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "pathfinder_leader_radio_us",
@@ -5433,6 +5521,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "ranger_us",
@@ -5485,6 +5574,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "resistance_fighters_battlegroup_partisans",
@@ -5532,6 +5622,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "resistance_fighters_partisan",
@@ -5579,6 +5670,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "rifleman_squad_leader_us",
@@ -5652,6 +5744,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "saboteurs_battlegroup_partisan",
@@ -5677,6 +5770,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "saboteurs_partisan",
@@ -5717,6 +5811,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "scout_leader_radio_us",
@@ -5769,6 +5864,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sniper_us",
@@ -5789,6 +5885,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "ssf_commandos_us",
@@ -5811,6 +5908,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_3in_m5_us",
@@ -5850,6 +5948,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_57mm_us",
@@ -5890,6 +5989,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "w_30cal_hmg_us",
@@ -5934,6 +6034,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "w_50cal_hmg_us",
@@ -5973,6 +6074,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_us",
@@ -6010,6 +6112,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "tw_pack_howitzer_75mm_us",
@@ -6047,6 +6150,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "ambulance_us",
@@ -6067,6 +6171,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "chaffee_us",
@@ -6100,6 +6205,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "char_b1_us",
@@ -6122,6 +6228,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "greyhound_recrewable_us",
@@ -6160,6 +6267,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "greyhound_us",
@@ -6198,6 +6306,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_75mm_us",
@@ -6248,6 +6357,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_assault_us",
@@ -6316,6 +6426,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_medical_us",
@@ -6363,6 +6474,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_quad_us",
@@ -6413,6 +6525,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_us",
@@ -6462,6 +6575,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "hellcat_us",
@@ -6490,6 +6604,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "m29_weasal_us",
@@ -6516,6 +6631,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "pershing_us",
@@ -6538,6 +6654,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "priest_kangaroo_us",
@@ -6558,6 +6675,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "priest_us",
@@ -6579,6 +6697,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "recovery_vehicle_us",
@@ -6601,6 +6720,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "scott_us",
@@ -6623,6 +6743,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_76mm_us",
@@ -6656,6 +6777,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_bulldozer_us",
@@ -6691,6 +6813,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_bulldozer_us",
@@ -6726,6 +6849,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_easy_8_us",
@@ -6757,6 +6881,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_recrewable_us",
@@ -6791,6 +6916,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_us",
@@ -6825,6 +6951,7 @@
      ],
      "doctrine": true,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_whizbang_us",
@@ -6851,6 +6978,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "stuart_us",
@@ -6892,6 +7020,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_4x4_medical_us",
@@ -6913,6 +7042,7 @@
      ],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "truck_4x4_us",
@@ -6949,6 +7079,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_4x4_us",
@@ -6982,6 +7113,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": true,
+     "clone": null,
      "members": [
       {
        "entity": "truck_6x6_us",
@@ -9702,6 +9834,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "base_defense_ak",
@@ -9722,6 +9855,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bunker_hmg_ak",
@@ -9744,6 +9878,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "assault_panzergrenadier_ak",
@@ -9776,6 +9911,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bersaglieri_ak",
@@ -9805,6 +9941,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "guastatori_ak",
@@ -9836,6 +9973,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "kriegsmarine_infantry_ak",
@@ -9878,6 +10016,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzergrenadier_ak",
@@ -9929,6 +10068,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzerjaeger_inf_ak",
@@ -9969,6 +10109,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzerpioneer_support_ak",
@@ -10037,6 +10178,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_pak_38_ak",
@@ -10074,6 +10216,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_88mm_flak_36_mobile_ak",
@@ -10113,6 +10256,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_mg34_hmg_ak",
@@ -10150,6 +10294,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_cannone_da_105_ak",
@@ -10189,6 +10334,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_75mm_leig_ak",
@@ -10226,6 +10372,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_ak",
@@ -10265,6 +10412,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_8_rad_ak",
@@ -10295,6 +10443,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "armored_car_8_rad_command_ak",
@@ -10326,6 +10475,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "armored_tractor_254_ak",
@@ -10354,6 +10504,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "elefant_tank_destroyer_ak",
@@ -10388,6 +10539,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_250_ak",
@@ -10436,6 +10588,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_250_vampire_ak",
@@ -10467,6 +10620,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_251_stuka_ak",
@@ -10498,6 +10652,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "halftrack_7_flak_ak",
@@ -10529,6 +10684,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "recovery_halftrack_ak",
@@ -10561,6 +10717,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_towed_88_ak",
@@ -10596,6 +10753,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "kradschutzen_motorcycle_ak",
@@ -10624,6 +10782,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "l6_40_ak",
@@ -10671,6 +10830,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "m13_40_ak",
@@ -10716,6 +10876,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "m13_40_command_ak",
@@ -10749,6 +10910,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "marder_iii_ak",
@@ -10780,6 +10942,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "p26_40_ak",
@@ -10803,6 +10966,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_ii_command_ak",
@@ -10833,6 +10997,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iii_37mm_ak",
@@ -10875,6 +11040,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iii_50mm_long_ak",
@@ -10923,6 +11089,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iii_75mm_ak",
@@ -10971,6 +11138,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iii_flame_ak",
@@ -11005,6 +11173,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "panzer_iv_command_stubby_ak",
@@ -11040,6 +11209,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "semovente_75_18_ak",
@@ -11078,6 +11248,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stug_iii_ak",
@@ -11126,6 +11297,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stug_iii_d_ak",
@@ -11172,6 +11344,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tiger_ace_ak",
@@ -11213,6 +11386,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tiger_ak",
@@ -11259,6 +11433,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_ak",
@@ -11296,6 +11471,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "truck_2_5_medical_ak",
@@ -13352,6 +13528,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "base_defense_uk",
@@ -13372,6 +13549,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_bofors_emplacement_uk",
@@ -13392,6 +13570,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_25pdr_uk",
@@ -13412,6 +13591,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_bl_5_5_uk",
@@ -13434,6 +13614,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "guards_uk",
@@ -13457,6 +13638,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sapper_uk",
@@ -13505,6 +13687,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "officer_tommy_uk",
@@ -13567,6 +13750,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_17pdr_uk",
@@ -13604,6 +13788,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_17pdr_pheasant_uk",
@@ -13643,6 +13828,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_2pdr_uk",
@@ -13683,6 +13869,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_6pdr_uk",
@@ -13721,6 +13908,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_bofors_towed_uk",
@@ -13758,6 +13946,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_vickers_hmg_uk",
@@ -13789,6 +13978,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_vickers_hmg_uk",
@@ -13826,6 +14016,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_uk",
@@ -13865,6 +14056,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_uk",
@@ -13902,6 +14094,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_4_2_heavy_mortar_uk",
@@ -13939,6 +14132,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_pack_howitzer_75mm_uk",
@@ -13978,6 +14172,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "archer_uk",
@@ -14000,6 +14195,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bishop_uk",
@@ -14020,6 +14216,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_avre_uk",
@@ -14042,6 +14239,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_black_prince_uk",
@@ -14066,6 +14264,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_crocodile_uk",
@@ -14098,6 +14297,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_uk",
@@ -14130,6 +14330,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "cwt_15_uk",
@@ -14165,6 +14366,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "dingo_uk",
@@ -14185,6 +14387,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "humber_recrewable_uk",
@@ -14209,6 +14412,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "humber_uk",
@@ -14233,6 +14437,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_uk",
@@ -14265,6 +14470,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stuart_ace_sp_recrewable_uk",
@@ -14290,6 +14496,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stuart_uk",
@@ -14330,6 +14537,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "valentine_uk",
@@ -15955,6 +16163,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "dead_drop_rendezvous_uk",
@@ -15973,6 +16182,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_17pdr_pheasant_emplacement_uk",
@@ -15993,6 +16203,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "base_defense_africa_uk",
@@ -16013,6 +16224,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_bofors_emplacement_africa_uk",
@@ -16033,6 +16245,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "hmg_bunker_africa_uk",
@@ -16053,6 +16266,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_25pdr_africa_uk",
@@ -16073,6 +16287,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_base_howitzer_25pdr_africa_uk",
@@ -16093,6 +16308,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_howitzer_bl_5_5_africa_uk",
@@ -16113,6 +16329,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "australian_light_infantry_africa_uk",
@@ -16144,6 +16361,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "canadian_heavy_infantry_africa_uk",
@@ -16180,12 +16398,36 @@
      ]
     },
     {
+     "id": "commando_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "commando_africa_uk",
+       "count": 6,
+       "category": "infantry",
+       "hp": 105,
+       "weapons": [
+        "sten_commando_uk",
+        "grenade_commando_uk",
+        "sticky_bomb_rifleman_us"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "commando_lmg_africa_uk",
      "category": "infantry",
      "source": "called_in",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "commando_lmg_africa_uk",
@@ -16209,6 +16451,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "guards_africa_uk",
@@ -16233,6 +16476,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "gurkhas_africa_uk",
@@ -16266,12 +16510,114 @@
      ]
     },
     {
+     "id": "indian_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "indian_africa_uk",
+       "count": 6,
+       "category": "infantry",
+       "hp": 55,
+       "weapons": [
+        "lee_enfield_crew_uk"
+       ]
+      }
+     ],
+     "upgrades": [
+      {
+       "id": "lmg_bren_gurkhas_uk",
+       "cost": {
+        "munition": 75
+       },
+       "weapon": "bren_lmg_gurkhas_uk"
+      },
+      {
+       "id": "smg_thompson_indian_uk",
+       "cost": {
+        "munition": 60
+       },
+       "weapon": "thompson_gurkhas_uk"
+      }
+     ]
+    },
+    {
+     "id": "medic_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "medic_africa_uk",
+       "count": 3,
+       "category": "infantry",
+       "hp": 80,
+       "weapons": []
+      }
+     ],
+     "upgrades": []
+    },
+    {
+     "id": "officer_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "officer_tommy_africa_uk",
+       "count": 1,
+       "category": "infantry",
+       "hp": 95,
+       "weapons": [
+        "webley_revolver_uk",
+        "lee_enfield_tommy_africa_uk",
+        "rifle_grenade_tommy_africa_uk",
+        "flare_tommy_africa_uk",
+        "smoke_rifle_grenade_tommy_africa_uk",
+        "grenade_smoke_red_africa_uk",
+        "sticky_bomb_rifleman_us",
+        "rifle_grenade_tommy_incendiary_africa_uk",
+        "grenade_bangalore_africa_uk"
+       ]
+      },
+      {
+       "entity": "tommy_africa_uk",
+       "count": 2,
+       "category": "infantry",
+       "hp": 95,
+       "weapons": [
+        "lee_enfield_tommy_africa_uk",
+        "rifle_grenade_tommy_africa_uk",
+        "flare_tommy_africa_uk",
+        "smoke_rifle_grenade_tommy_africa_uk",
+        "grenade_smoke_red_africa_uk",
+        "sticky_bomb_rifleman_us",
+        "rifle_grenade_tommy_incendiary_africa_uk",
+        "rifle_grenade_tommy_pyrotechnics_africa_uk",
+        "grenade_bangalore_africa_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "polish_lancer_africa_uk",
      "category": "infantry",
      "source": "called_in",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "polish_lancer_africa_uk",
@@ -16294,6 +16640,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sapper_africa_uk",
@@ -16349,12 +16696,58 @@
      ]
     },
     {
+     "id": "sas_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "sas_africa_uk",
+       "count": 5,
+       "category": "infantry",
+       "hp": 80,
+       "weapons": [
+        "garand_rifleman_us",
+        "garand_rifleman_fire_superiority_us",
+        "grenade_rifleman_us",
+        "sticky_bomb_rifleman_us"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
+     "id": "sniper_africa_uk",
+     "category": "infantry",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "sniper_africa_uk",
+       "count": 1,
+       "category": "infantry",
+       "hp": 80,
+       "weapons": [
+        "scoped_lee_enfield_sniper_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "ssb_africa_uk",
      "category": "infantry",
      "source": "called_in",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "ssb_africa_uk",
@@ -16385,6 +16778,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "ssb_sniper_africa_uk",
@@ -16416,6 +16810,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "officer_tommy_africa_uk",
@@ -16483,6 +16878,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_17pdr_africa_uk",
@@ -16520,6 +16916,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_2pdr_africa_uk",
@@ -16558,6 +16955,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_6pdr_africa_uk",
@@ -16598,6 +16996,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_at_gun_6pdr_africa_uk",
@@ -16636,6 +17035,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_bofors_towed_africa_uk",
@@ -16667,12 +17067,51 @@
      ]
     },
     {
+     "id": "hmg_commando_africa_uk",
+     "category": "team_weapons",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "w_vickers_hmg_uk",
+       "count": 1,
+       "category": "weapons",
+       "hp": 180,
+       "weapons": [
+        "30cal_hmg_uk"
+       ]
+      },
+      {
+       "entity": "crew_hmg_commando_africa_uk",
+       "count": 4,
+       "category": "infantry",
+       "hp": 90,
+       "weapons": [
+        "lee_enfield_crew_uk"
+       ]
+      }
+     ],
+     "upgrades": [
+      {
+       "id": "elite_forces_medical_supplements_squad_upgrade_ak",
+       "cost": {
+        "munition": 35
+       },
+       "weapon": null
+      }
+     ]
+    },
+    {
      "id": "hmg_vickers_africa_recrew_uk",
      "category": "team_weapons",
      "source": "built",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_vickers_hmg_africa_uk",
@@ -16712,6 +17151,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_vickers_hmg_africa_uk",
@@ -16749,6 +17189,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_land_mattress_africa_uk",
@@ -16781,6 +17222,44 @@
      ]
     },
     {
+     "id": "mortar_81mm_africa_recrew_uk",
+     "category": "team_weapons",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "w_81mm_mortar_uk",
+       "count": 1,
+       "category": "weapons",
+       "hp": 180,
+       "weapons": [
+        "81mm_mortar_uk"
+       ]
+      },
+      {
+       "entity": "crew_mortar_africa_uk",
+       "count": 4,
+       "category": "infantry",
+       "hp": 80,
+       "weapons": [
+        "lee_enfield_crew_uk"
+       ]
+      }
+     ],
+     "upgrades": [
+      {
+       "id": "elite_forces_medical_supplements_squad_upgrade_ak",
+       "cost": {
+        "munition": 35
+       },
+       "weapon": null
+      }
+     ]
+    },
+    {
      "id": "mortar_81mm_africa_uk",
      "category": "team_weapons",
      "source": "produced",
@@ -16789,6 +17268,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "w_81mm_mortar_uk",
@@ -16826,6 +17306,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_4_2_heavy_mortar_africa_uk",
@@ -16863,6 +17344,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "tw_pack_howitzer_75mm_africa_uk",
@@ -16900,6 +17382,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "archer_africa_uk",
@@ -16914,6 +17397,31 @@
      "upgrades": []
     },
     {
+     "id": "australian_supplytruck_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": {
+      "from": "cwt_15_flatbed_africa_uk",
+      "fields": [
+       "cost"
+      ],
+      "why": "no cost in CoH3 data"
+     },
+     "members": [
+      {
+       "entity": "australian_supplytruck_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 240,
+       "weapons": []
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "bishop_africa_uk",
      "category": "vehicles",
      "source": "produced",
@@ -16922,6 +17430,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "bishop_africa_uk",
@@ -16944,6 +17453,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "centaur_africa_uk",
@@ -16968,6 +17478,7 @@
      "producers": [],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_75mm_africa_uk",
@@ -16992,6 +17503,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_africa_uk",
@@ -17022,6 +17534,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_arv_africa_uk",
@@ -17044,6 +17557,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_avre_africa_uk",
@@ -17066,6 +17580,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_black_prince_africa_uk",
@@ -17088,6 +17603,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_crocodile_africa_uk",
@@ -17112,6 +17628,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "churchill_na75_75mm_africa_uk",
@@ -17128,6 +17645,51 @@
      "upgrades": []
     },
     {
+     "id": "command_churchill_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "churchill_command_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 1200,
+       "weapons": [
+        "40mm_churchill_uk",
+        "30cal_coaxial_matilda_uk",
+        "30cal_hull_churchill_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
+     "id": "crusader_57mm_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "crusader_57mm_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 600,
+       "weapons": [
+        "57mm_crusader_uk",
+        "30cal_coaxial_crusader_mkiii_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "crusader_aa_africa_uk",
      "category": "vehicles",
      "source": "produced",
@@ -17136,6 +17698,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "crusader_aa_africa_uk",
@@ -17158,6 +17721,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "crusader_africa_uk",
@@ -17181,6 +17745,46 @@
      ]
     },
     {
+     "id": "cwt_15_flatbed_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "cwt_15_flatbed_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 280,
+       "weapons": []
+      }
+     ],
+     "upgrades": []
+    },
+    {
+     "id": "cwt_15_quad_mount_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "cwt_15_quad_mount_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 280,
+       "weapons": [
+        "20mm_oerlikon_mount_cwt_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "cwt_15_truck_africa_uk",
      "category": "vehicles",
      "source": "produced",
@@ -17189,6 +17793,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "cwt_15_africa_uk",
@@ -17216,12 +17821,32 @@
      ]
     },
     {
+     "id": "cwt_15_truck_medical_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "cwt_15_medical_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 280,
+       "weapons": []
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "cwt_15_truck_recrewable_africa_uk",
      "category": "vehicles",
      "source": "built",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "cwt_15_recrewable_africa_uk",
@@ -17249,12 +17874,34 @@
      ]
     },
     {
+     "id": "cwt_15_truck_repair_resupply_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "cwt_15_resupply_repair_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 280,
+       "weapons": [
+        "30cal_cwt_dummy_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "cwt_lrdg_truck_2pdr_africa_uk",
      "category": "vehicles",
      "source": "upgrade",
      "producers": [],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "cwt_lrdg_truck_2pdr_africa_uk",
@@ -17278,6 +17925,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "cwt_lrdg_truck_africa_uk",
@@ -17309,6 +17957,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "dingo_africa_uk",
@@ -17329,6 +17978,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "grant_africa_recrewable_uk",
@@ -17353,6 +18003,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "grant_africa_uk",
@@ -17377,6 +18028,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "humber_africa_uk",
@@ -17408,12 +18060,34 @@
      ]
     },
     {
+     "id": "marmon_herrington_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "marmon_herrington_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 240,
+       "weapons": [
+        "30cal_coaxial_matilda_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
      "id": "matilda_africa_recrewable_uk",
      "category": "vehicles",
      "source": "built",
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "matilda_africa_recrewable_uk",
@@ -17434,6 +18108,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "matilda_africa_uk",
@@ -17457,6 +18132,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "pheasant_halftrack_africa_uk",
@@ -17484,6 +18160,62 @@
      ]
     },
     {
+     "id": "priest_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "priest_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 320,
+       "weapons": [
+        "25pdr_priest_dummy_uk",
+        "25pdr_bishop_uk",
+        "25pdr_priest_ap_uk"
+       ]
+      }
+     ],
+     "upgrades": []
+    },
+    {
+     "id": "sherman_africa_uk",
+     "category": "vehicles",
+     "source": "restored",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "sherman_africa_uk",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 720,
+       "weapons": [
+        "75mm_sherman_uk",
+        "75mm_white_phosphorous_sherman_us",
+        "30cal_coaxial_sherman_us",
+        "30cal_hull_sherman_us",
+        "2inch_mortar_smoke_sherman_us"
+       ]
+      }
+     ],
+     "upgrades": [
+      {
+       "id": "hmg_sherman_us",
+       "cost": {
+        "munition": 50
+       },
+       "weapon": null
+      }
+     ]
+    },
+    {
      "id": "sherman_firefly_africa_uk",
      "category": "vehicles",
      "source": "produced",
@@ -17492,6 +18224,7 @@
      ],
      "doctrine": true,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "sherman_firefly_africa_uk",
@@ -17522,6 +18255,7 @@
      "producers": [],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stuart_africa_recrewable_uk",
@@ -17562,6 +18296,7 @@
      ],
      "doctrine": false,
      "in_v214": false,
+     "clone": null,
      "members": [
       {
        "entity": "stuart_africa_uk",
@@ -17601,116 +18336,7 @@
      ]
     }
    ],
-   "excluded": [
-    {
-     "id": "australian_supplytruck_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "command_churchill_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "commando_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "crusader_57mm_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "cwt_15_flatbed_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "cwt_15_quad_mount_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "cwt_15_truck_medical_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "cwt_15_truck_repair_resupply_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "hmg_commando_africa_uk",
-     "category": "team_weapons",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "indian_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "marmon_herrington_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "medic_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "mortar_81mm_africa_recrew_uk",
-     "category": "team_weapons",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "officer_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "priest_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "sas_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "sherman_africa_uk",
-     "category": "vehicles",
-     "reason": "not produced or called in",
-     "in_v214": false
-    },
-    {
-     "id": "sniper_africa_uk",
-     "category": "infantry",
-     "reason": "not produced or called in",
-     "in_v214": false
-    }
-   ],
+   "excluded": [],
    "weapons": [
     {
      "id": "40mm_bofors_uk",
@@ -18065,6 +18691,28 @@
      }
     },
     {
+     "id": "grenade_commando_uk",
+     "category": "grenade",
+     "class": "grenade",
+     "rule": "per_use",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 160,
+      "mid": 160,
+      "far": 160
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "grenade_no69_africa_uk",
      "category": "grenade",
      "class": "grenade",
@@ -18132,6 +18780,28 @@
     },
     {
      "id": "grenade_ranger_us",
+     "category": "grenade",
+     "class": "grenade",
+     "rule": "per_use",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 160,
+      "mid": 160,
+      "far": 160
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "grenade_rifleman_us",
      "category": "grenade",
      "class": "grenade",
      "rule": "per_use",
@@ -18505,6 +19175,28 @@
      }
     },
     {
+     "id": "25pdr_bishop_uk",
+     "category": "heavy_artillery",
+     "class": "artillery_medium",
+     "rule": "artillery",
+     "shots": {
+      "near": 2,
+      "mid": 2,
+      "far": 2
+     },
+     "damage": {
+      "near": 160,
+      "mid": 160,
+      "far": 160
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 0.65,
+      "mid": 0.65,
+      "far": 0.65
+     }
+    },
+    {
      "id": "25pdr_dummy_howitzer_uk",
      "category": "heavy_artillery",
      "class": "at_gun",
@@ -18527,6 +19219,50 @@
      }
     },
     {
+     "id": "25pdr_priest_ap_uk",
+     "category": "heavy_artillery",
+     "class": "cannon",
+     "rule": "artillery",
+     "shots": {
+      "near": 2,
+      "mid": 2,
+      "far": 2
+     },
+     "damage": {
+      "near": 200,
+      "mid": 200,
+      "far": 200
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 0.63,
+      "mid": 0.63,
+      "far": 0.63
+     }
+    },
+    {
+     "id": "25pdr_priest_dummy_uk",
+     "category": "heavy_artillery",
+     "class": "cannon",
+     "rule": "ability",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 160,
+      "mid": 160,
+      "far": 160
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "bl_5_5_dummy_howitzer_uk",
      "category": "heavy_artillery",
      "class": "at_gun",
@@ -18540,6 +19276,28 @@
       "near": 0,
       "mid": 0,
       "far": 0
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "20mm_oerlikon_mount_cwt_uk",
+     "category": "heavy_machine_gun",
+     "class": "hmg",
+     "rule": "volley",
+     "shots": {
+      "near": 14,
+      "mid": 14,
+      "far": 14
+     },
+     "damage": {
+      "near": 15,
+      "mid": 15,
+      "far": 15
      },
      "reload_turns": 0,
      "accuracy_scale": {
@@ -18572,6 +19330,28 @@
     },
     {
      "id": "30cal_hmg_africa_uk",
+     "category": "heavy_machine_gun",
+     "class": "hmg",
+     "rule": "volley",
+     "shots": {
+      "near": 62,
+      "mid": 46,
+      "far": 33
+     },
+     "damage": {
+      "near": 5,
+      "mid": 5,
+      "far": 5
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "30cal_hmg_uk",
      "category": "heavy_machine_gun",
      "class": "hmg",
      "rule": "volley",
@@ -18835,6 +19615,28 @@
      }
     },
     {
+     "id": "30cal_coaxial_crusader_mkiii_uk",
+     "category": "light_machine_gun",
+     "class": "hmg",
+     "rule": "volley",
+     "shots": {
+      "near": 39,
+      "mid": 35,
+      "far": 33
+     },
+     "damage": {
+      "near": 4,
+      "mid": 4,
+      "far": 4
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "30cal_coaxial_crusader_uk",
      "category": "light_machine_gun",
      "class": "hmg",
@@ -18958,6 +19760,28 @@
       "near": 4,
       "mid": 4,
       "far": 4
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "30cal_cwt_dummy_uk",
+     "category": "light_machine_gun",
+     "class": "rifle",
+     "rule": "single_shot",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 1,
+      "mid": 0,
+      "far": 0
      },
      "reload_turns": 0,
      "accuracy_scale": {
@@ -19187,6 +20011,50 @@
      }
     },
     {
+     "id": "garand_rifleman_fire_superiority_us",
+     "category": "rifle",
+     "class": "rifle",
+     "rule": "volley",
+     "shots": {
+      "near": 11,
+      "mid": 8,
+      "far": 6
+     },
+     "damage": {
+      "near": 5,
+      "mid": 5,
+      "far": 5
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "garand_rifleman_us",
+     "category": "rifle",
+     "class": "rifle",
+     "rule": "volley",
+     "shots": {
+      "near": 13,
+      "mid": 9,
+      "far": 7
+     },
+     "damage": {
+      "near": 3,
+      "mid": 3,
+      "far": 3
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "lee_enfield_australian_uk",
      "category": "rifle",
      "class": "rifle",
@@ -19341,6 +20209,28 @@
      }
     },
     {
+     "id": "scoped_lee_enfield_sniper_uk",
+     "category": "rifle",
+     "class": "sniper",
+     "rule": "single_shot",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 89,
+      "mid": 89,
+      "far": 89
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "scoped_lee_enfield_tommy_africa_uk",
      "category": "rifle",
      "class": "rifle",
@@ -19398,6 +20288,28 @@
       "near": 3,
       "mid": 3,
       "far": 3
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "sten_commando_uk",
+     "category": "sub_machine_gun",
+     "class": "smg",
+     "rule": "volley",
+     "shots": {
+      "near": 152,
+      "mid": 80,
+      "far": 11
+     },
+     "damage": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
      },
      "reload_turns": 0,
      "accuracy_scale": {
@@ -19671,6 +20583,28 @@
      }
     },
     {
+     "id": "57mm_crusader_uk",
+     "category": "tank_gun",
+     "class": "cannon",
+     "rule": "single_shot",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 192,
+      "mid": 192,
+      "far": 192
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
      "id": "75mm_churchill_he_uk",
      "category": "tank_gun",
      "class": "cannon",
@@ -19728,6 +20662,50 @@
       "near": 134,
       "mid": 134,
       "far": 134
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "75mm_sherman_uk",
+     "category": "tank_gun",
+     "class": "cannon",
+     "rule": "single_shot",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 125,
+      "mid": 125,
+      "far": 125
+     },
+     "reload_turns": 0,
+     "accuracy_scale": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     }
+    },
+    {
+     "id": "75mm_white_phosphorous_sherman_us",
+     "category": "tank_gun",
+     "class": "cannon",
+     "rule": "single_shot",
+     "shots": {
+      "near": 1,
+      "mid": 1,
+      "far": 1
+     },
+     "damage": {
+      "near": 83,
+      "mid": 83,
+      "far": 83
      },
      "reload_turns": 0,
      "accuracy_scale": {

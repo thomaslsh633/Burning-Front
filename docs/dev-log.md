@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (all British North Africa units)
+- **Done:** all 18 remaining `british_africa` squads restored (Indian infantry, SAS, Commandos, medic, officer, sniper,
+  Crusader 57 mm, Priest, Marmon-Herrington, Sherman, command Churchill, CWT trucks …); Australian supply truck cost cloned
+  from the CWT 15 flatbed. British North Africa: 73 units, 113 weapons, 0 excluded.
+- **Blocked:** coh3stats.com is outside this environment's network rules; the same data comes from coh3-data, already pinned.
+- **Next:** D1-3 vocab and validator.
+
 ## 2026-11-25 (whole numbers, British sets, roster)
 - **Done:** whole numbers: small arms choose whole damage per shot and whole shots together; single-shot damage rounded.
   `british_africa` downloaded (35 files); `data/rules/roster.json` (British per theatre, 9 restored v214 units, clones,
