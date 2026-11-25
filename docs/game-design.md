@@ -17,6 +17,7 @@ Related: `SPEC.md` (rules in force), `docs/ARCHITECTURE.md` (code), `docs/data-f
 | Modes | Solo campaign · 1 vs 1 on one device (two players take turns) **[Decided]** |
 | Factions | Wehrmacht, US Forces, Afrikakorps, British Forces; unit numbers from CoH3, tuned to Burning Front rules **[Decided]** |
 | Turn and combat model | Burning Bridges style: sides alternate whole turns, every unit acts once per turn **[Decided]** |
+| Direction | Dynamic combat with the feel of CoH3 (suppression, cover, flanking, reactions, destruction), fully playable on a phone **[Decided]**; rules and controls in §19–20 |
 | Victory | Set per map / mission: (1) capture points and drain the enemy's victory points, or (2) deploy with a starting budget and complete mission objectives (destroy, capture, escort, reach) **[Decided]** |
 | Session length | One mission or match 20–40 minutes, a turn under about a minute **[Proposed]** |
 
@@ -71,7 +72,10 @@ The checklist of planning areas, with where each one stands. Sections below cove
 - Story, characters, maps and missions are original. CoH3 supplies unit statistics only. Burning Bridges supplies
   rule ideas only; its story, levels, art and sounds are not used.
 
-### Campaign perspective: three options **[Open]**
+### Campaign perspective: option B **[Decided 2026-11-25]**
+
+B was chosen: two sides of each front, missions alternating between the two commanders of a theatre.
+The table keeps the options for reference.
 
 | Option | What it is | Gains | Costs |
 | --- | --- | --- | --- |
@@ -319,10 +323,98 @@ The campaign needs an AI; today there is none (SPEC §2). Two layers, both in `l
 
 ## 18. Open questions (most important first)
 
-1. **Campaign perspective:** option A, B or C (§4)?
+1. ~~Campaign perspective~~: B (decided). Platform, battle rules and controls, code and assets: §19–21.
 2. **Who is it for:** you and friends, or a public release (store)? This decides how strict the IP and sensitivity rules must be, and how much polish and content the plan needs.
 3. **Turn rule:** keep SPEC's move + attack per unit, or two action points?
 4. **Supply:** keep per-unit ammo and fuel with supply trucks, or simplify?
 5. **Carry-over:** do veterans carry between campaign missions?
 6. **Mission income:** in objective missions, budget only, or captured supply points pay too?
 7. **Theatres:** the four proposed, in that order?
+
+## 19. Battle rules for dynamic combat [Proposed]
+
+CoH3 feels dynamic because squads react, suppression pins them, cover has a direction, tanks show their flanks,
+and the ground gets destroyed. A turn-based game can keep all of that; what it must avoid is a side standing
+still while the other moves.
+
+### Turn structure: three options
+
+| Option | How it works | Feel | Problems |
+| --- | --- | --- | --- |
+| **A. Side turns + reactions** *(my pick)* | Sides alternate whole turns (Burning Bridges). Units react during the enemy turn: counter fire, overwatch, watch fire. Each action plays as a short real-time scene. | dynamic enough; every enemy move can be punished | the first move in a turn can still be an alpha strike, kept small by reactions and suppression |
+| B. Alternating activation | One unit from each side in turn. | very dynamic | on one device with fog of war the phone must change hands after every unit, so 1 vs 1 breaks |
+| C. Simultaneous (plan, then resolve together) | Both sides give orders, then 10 s play out at once. | closest to CoH3 | breaks almost every SPEC rule; the AI has to plan blind; collisions are hard to make readable |
+
+### Unit turn [Proposed]
+
+- Each unit has **Move** (its move points) and **one Action** (fire, ability, emplace, build, repair, board), in either order.
+- **Move then fire** uses the weapon's moving accuracy (CoH3 `moving.accuracy_multiplier`); weapons that cannot fire
+  on the move (`can_fire = false`, crew weapons) must fire first or not move.
+- **Hold** (no move and no action): the unit goes on **overwatch** and fires once during the enemy turn at the first
+  enemy that moves into its range and arc. This extends today's crew watch fire (SPEC §5) to every unit. AT weapons
+  keep their exception.
+- **Counter fire** stays: a unit that is attacked fires back once per enemy turn if it can see and reach the attacker (SPEC §4).
+- This answers the open "turn rule" question without action points; `logic/turn` still owns it alone.
+
+### Combat rules that make it dynamic [Proposed]
+
+| Rule | What happens | Data |
+| --- | --- | --- |
+| Suppression states | Suppression points build from fire. **Suppressed**: move −50 %, accuracy ×0.5. **Pinned**: cannot move except retreat, cannot capture. They decay at own turn start, faster in cover. | weapon `suppression`, unit `vs_suppressed / vs_pinned` |
+| Directional cover | Hedges, walls and sandbags sit on hex **edges**. They protect only against fire that crosses them, so flanking removes cover. | legacy edge objects (v145) |
+| Directional armour | The hit side (front / side / rear) comes from the angle to the hull; turrets aim on their own (SPEC §6). | ebps `armor`, `directional_damage` |
+| Vehicle criticals | A penetrating hit can roll a critical: engine damaged (move −50 %), immobilised, main gun damaged, crew shocked (no action next turn). | small table in `data/rules` |
+| Destruction | Tanks crush hedges and fences; HE damages buildings to ruins (cover changes); heavy shells leave craters (light cover). | `data/rules` terrain states |
+| Smoke | Blocks sight for 1–2 turns. | ability data |
+| Reveal on fire | A unit that fires is visible to the enemy until its next turn (CoH3 `reveal_self_on_attack`). | weapon flag |
+| Retreat | As in SPEC §4: fast move to the rally point, harder to hit, no return fire. | — |
+
+### Presenting a turn [Proposed]
+
+- Every command plays as a short scene: the unit turns, moves, fires, tracers fly, the target reacts or counter-fires.
+  A reaction (overwatch, counter fire) interrupts the move at the hex where it happened.
+- The enemy turn (AI, or the other player after the curtain) is played back with speed 1× / 2× / skip.
+- The camera follows the action only when it leaves the screen; no forced cinematic camera.
+
+## 20. Unit control scheme on a phone [Proposed]
+
+### Screen layout (landscape)
+
+```text
+┌────────────────────────────────────────────────────────────────────┐
+│ MP 600  MUN 10  FUEL 20     VP ▓▓▓▓░░ 312 : 280    objectives ≡   ⚙ │
+│┌─────────┐                                                         │
+││unit card│                     map                                 │
+││HP, vet, │                                                ┌──────┐ │
+││status   │                                                │ next │ │
+│└─────────┘                                                │ unit │ │
+│                                                           │  3 ▸ │ │
+│  [ fire ][ ability ][ ability ][ hold ][ face ]   ↶ undo   │ END  │ │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+### Gestures
+
+| Gesture | On | Does |
+| --- | --- | --- |
+| Tap | own unit | select; shows move (green) and attack (red) hexes |
+| Tap | green hex | preview path and cost; **tap again** to move |
+| Tap | enemy | preview odds (hit / pen per band, expected loss on its HP bar); **tap again** to fire |
+| Tap | enemy out of range | shows hexes from which it can be hit; tapping one previews move then fire |
+| Tap | empty ground / outside | cancel |
+| Long press | any hex or unit | range and line-of-sight view; full unit card |
+| Drag from selected vehicle / crew | — | set facing (turn stage, SPEC §6) |
+| One-finger drag | empty ground | pan |
+| Pinch | — | zoom (3 steps; at the closest step a hex is at least 9 mm wide) |
+| Double tap | unit | centre the camera on it |
+| Button: next unit | — | select the next unit that can still act |
+| Button: undo | — | undo the last move if it revealed nothing new |
+
+- Units are controlled as whole squads; there is no control of single soldiers.
+- After a move, vehicles face the way they drove; a drag changes facing within the turn cost rules.
+- Buildings in front of a selected unit fade so units behind them stay visible.
+- Minimum touch target 44 pt for buttons; nothing needs a precise drag except facing.
+
+## 21. Platform, code and assets
+
+See `docs/tech-plan.md`: distribution (web / APK), code file format and the asset modelling plan.
