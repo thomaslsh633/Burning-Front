@@ -1,6 +1,6 @@
 # Data labels: decisions and label list for applying CoH3 unit data
 
-Status: **for approval** (2026-11-25). Consolidates `docs/unit-data-format.md` (first label selection),
+Status: **approved** (2026-11-25): decisions A–J and the recrew / capture design as recommended; K revised (below). Consolidates `docs/unit-data-format.md` (first label selection),
 `docs/data-form-roadmap.md` (core + modules + profiles) and `docs/unit-state.md` (state tuning) into one list.
 Source: `data/source/coh3` (coh3-data `49fc4dbc`), census `data/source/coh3/CENSUS.md`.
 CoH3 is the data authority; v214 is a gameplay reference only (SPEC §10).
@@ -32,7 +32,7 @@ Status codes used in the label tables:
 | 7 | Veterancy does not carry over between missions | no persistence labels |
 | 8 | Unit behaviour comes from six state axes | state tuning labels below (setup, stealth, recrew, wreck, criticals) |
 
-### To decide (my recommendation first)
+### Approved 2026-11-25 (A–J as recommended, K revised)
 
 | # | Question | Recommendation | Why |
 | --- | --- | --- | --- |
@@ -67,7 +67,8 @@ Status codes used in the label tables:
 | `range_hex` | {min, max} | `range.min/max` ÷ 7 m, +1 for direct fire (SPEC §1) | C | combat, vision overlay |
 | `band_end_hex` | {near, mid} | thirds rule; override for lobbed HE | D / O | combat |
 | `fire_mode` | vocab direct · indirect · lobbed | from class / projectile / `artillery_force_obey_los` | D, O | combat |
-| `shots_per_turn` | Band3 | `aim`, `fire.wind_up/wind_down`, `burst.*`, `cooldown.*`, `reload.*` → cycle per band in a 6 s window | C | combat |
+| `shots_per_turn` | Band3 (whole numbers) | `aim`, `fire.wind_up/wind_down`, `burst.*`, `cooldown.*`, `reload.*` → cycle per band in a 6 s window, rounded | C | combat |
+| `damage_per_shot` | Band3 | CoH3 damage; single-shot weapons: round(damage × raw shots) | C | combat |
 | `reload_turns` | int | — | A | turn, combat |
 | `deflection_damage` | ratio | `deflection.deflection_damage_multiplier` (0 if `has_deflection_damage` false) | K | combat |
 | `suppression` | {amount, nearby_mult, nearby_radius_m} | `suppression.amount`, `nearby_suppression_*` | K | status (morale FSM) |
@@ -86,11 +87,20 @@ Status codes used in the label tables:
 | `reveals_on_fire` | bool | `fog_of_war.reveal_self_on_attack` | K | vision (visibility FSM) |
 | `traits` | vocab[] | `behaviour.piercing`, `can_damage_allies`, `hit_everything_on_*` | K | combat |
 
-### 2.2 Shots per turn (decision K)
+### 2.2 Shots per turn (decision K, approved with revision)
 
-`cycle(band) = aim(band) + wind_up + wind_down + burst_duration(band) + cooldown(band) + reload_duration / (reload_frequency + 1)`;
-`shots_per_turn(band) = shots_per_cycle / cycle(band) × 6 s`. Infantry weapons are per model; the squad fires with every
-member carrying the weapon. The function lives in the importer and has its own test.
+Implemented in `tools/import-coh3/fire-rate.js` (tested), settings in `data/balance/fire-rate.json`,
+full result for all 878 weapons in `reports/fire-rate.md`.
+
+- One CoH3 magazine: `n = frequency + 1` shots (a burst counts every bullet);
+  `time = n × (aim × aim multiplier + wind-up + wind-down + burst) + (n − 1) × cooldown + reload`, per band.
+- `raw = shots per magazine / time × 6 s`. Ready-aim time is not counted (sustained rate).
+- **Ordinary weapons:** `shots_per_turn = round(raw)`, damage unchanged.
+- **Single-shot weapons** (tank guns, AT guns, infantry AT, tungsten rounds, and any weapon with raw < 1):
+  `shots_per_turn = 1`, `damage_per_shot = round(CoH3 damage × raw)`. Examples: Sherman 75 mm 120 × 1.04 → 125;
+  Pz IV 75 mm 120 × 1.26 → 152; 57 mm AT gun 160 × 1.26 → 202; 105 mm howitzer 160 × 0.41 → 66.
+- **Per use** (grenades, mines): one shot per use at CoH3 damage.
+- Infantry weapons are per model; a squad fires with every member carrying the weapon.
 
 ---
 

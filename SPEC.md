@@ -141,7 +141,11 @@ Confirmed 2026-11-25 (rewrite):
   for turns and hexes. v214 is a gameplay reference only, not a data baseline; differences from v214 are reported, not errors.
 - Unit state: every unit is in one state on each of six axes (action, stance, location, morale, lifecycle, visibility);
   behaviour comes from these state machines (`docs/unit-state.md`). Critical conditions are a set on an active vehicle.
-- Recrew and capture (design, awaiting approval, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
+- Fire rate (replaces the §1 fraction carry-over): shots per turn per range band come from CoH3 timings (aim, wind-up / down,
+  burst, cooldown, reload) over a 6 s fire window and are rounded to whole shots. Tank guns, AT guns, infantry AT weapons and
+  any weapon slower than one shot per turn fire once per turn with damage × their CoH3 rate (e.g. 0.92 → 120 becomes 110),
+  so damage per turn keeps the CoH3 rate. Grenades and mines fire once per use at CoH3 damage. Settings: `data/balance/fire-rate.json`.
+- Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
   decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
 - Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving

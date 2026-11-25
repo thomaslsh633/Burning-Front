@@ -2,6 +2,12 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (decisions approved, fire rate)
+- **Done:** decisions A–J and recrew / capture approved and recorded (SPEC §10, data-labels, unit-state §6). Fire rate (K, revised):
+  `tools/import-coh3/fire-rate.js` + tests, `data/balance/fire-rate.json`, report over 878 weapons in `reports/fire-rate.md`.
+- **Found:** rounding ordinary weapons moves 185 of 478 more than 10 % off their CoH3 rate (Kar98k mid 1.44 → 1).
+- **Next:** decide whether rounded weapons also get the damage correction; then D1-3 vocab and validator.
+
 ## 2026-11-25 (data labels)
 - **Done:** overwatch narrowed to emplaced machine-gun teams (SPEC §10, unit-state §5.1.1). `docs/data-labels.md`: decisions
   (8 decided, 11 to decide) and the label list for weapon, ebps, sbps, veterancy, upgrade, fx, with CoH3 source paths and

@@ -5,7 +5,7 @@
 ## Owns
 - lifecycle FSM: ACTIVE → DECREWED (team weapons) / ABANDONED (vehicles) → ACTIVE (recrewed) or WRECKED
 - critical conditions set: engine_damaged, immobilised, main_gun_damaged, crew_shocked (set by combat, cleared by repair)
-- recrew / capture command, manual abandon, wreck creation and clearance, denial of own abandoned equipment
+- recrew / capture command (approved design), manual abandon, wreck creation and clearance, denial of own abandoned equipment
 
 ## Public API (planned, exported from `index.js`)
 - `lifeMachine` (FSM definition)

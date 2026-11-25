@@ -177,7 +177,7 @@ They are set by `logic/combat` on a penetrating hit (chances from data) and read
 
 Which side currently sees the unit is derived each time from sight, line of sight and this state.
 
-## 6. Recrew and capture (design, awaiting approval)
+## 6. Recrew and capture (approved 2026-11-25)
 
 Based on CoH3 `recrewable_ext` and `team_weapon_ext` (checked in `data/source/coh3`): each recrewable weapon lists,
 per capturing faction, the squad blueprint it becomes, `min_capture_crew_size` (57 mm AT gun: 2),
