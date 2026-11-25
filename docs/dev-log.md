@@ -2,6 +2,12 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (fire rate revised)
+- **Done:** small arms use a shot multiplier (≤ ×6, 5 % tolerance) with damage and suppression ÷ multiplier; artillery keeps
+  CoH3 shell damage, rounds its rate up and scales accuracy (reload / scatter / accuracy for further balance); dummy artillery
+  is ability-only. All 878 weapons within 6 % of the CoH3 rate (`reports/fire-rate.md`). SPEC §10 and data-labels updated.
+- **Next:** D1-3 vocab (incl. state names, rules) and `tools/validate.js`.
+
 ## 2026-11-25 (decisions approved, fire rate)
 - **Done:** decisions A–J and recrew / capture approved and recorded (SPEC §10, data-labels, unit-state §6). Fire rate (K, revised):
   `tools/import-coh3/fire-rate.js` + tests, `data/balance/fire-rate.json`, report over 878 weapons in `reports/fire-rate.md`.

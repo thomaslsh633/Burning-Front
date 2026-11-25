@@ -5,16 +5,31 @@
     "mid",
     "far"
   ],
-  "single_shot_categories": [
-    "tank_gun",
-    "anti_tank_gun",
-    "infantry_anti_tank_weapon",
-    "tungsten_round_upgrade"
-  ],
-  "per_use_categories": [
-    "grenade",
-    "mine"
-  ],
+  "groups": {
+    "per_use": [
+      "grenade",
+      "mine"
+    ],
+    "single_shot": [
+      "tank_gun",
+      "anti_tank_gun",
+      "infantry_anti_tank_weapon",
+      "tungsten_round_upgrade"
+    ],
+    "artillery": [
+      "heavy_artillery",
+      "light_artillery",
+      "mortar"
+    ]
+  },
+  "volley": {
+    "tolerance": 0.05,
+    "max_multiplier": 6
+  },
+  "artillery": {
+    "max_reload_turns": 4,
+    "min_raw": 0.05
+  },
   "skip_categories": [
     "campaign",
     "parent",

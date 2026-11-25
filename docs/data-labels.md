@@ -68,8 +68,10 @@ Status codes used in the label tables:
 | `band_end_hex` | {near, mid} | thirds rule; override for lobbed HE | D / O | combat |
 | `fire_mode` | vocab direct · indirect · lobbed | from class / projectile / `artillery_force_obey_los` | D, O | combat |
 | `shots_per_turn` | Band3 (whole numbers) | `aim`, `fire.wind_up/wind_down`, `burst.*`, `cooldown.*`, `reload.*` → cycle per band in a 6 s window, rounded | C | combat |
-| `damage_per_shot` | Band3 | CoH3 damage; single-shot weapons: round(damage × raw shots) | C | combat |
-| `reload_turns` | int | — | A | turn, combat |
+| `damage_per_shot` | Band3 | CoH3 damage; volley ÷ multiplier; single-shot round(damage × raw); artillery unchanged | C | combat |
+| `shot_multiplier` | int | volley multiplier m (suppression per shot ÷ m too) | C | combat, status |
+| `accuracy_scale` | Band3 | artillery: CoH3 rate ÷ game rate (≤ 1); others 1 | C | combat |
+| `reload_turns` | int | artillery slower than one shell per turn: floor(1 / raw) − 1; override allowed | C / O | turn, combat |
 | `deflection_damage` | ratio | `deflection.deflection_damage_multiplier` (0 if `has_deflection_damage` false) | K | combat |
 | `suppression` | {amount, nearby_mult, nearby_radius_m} | `suppression.amount`, `nearby_suppression_*` | K | status (morale FSM) |
 | `aoe` | {damage Band3, distance_m Band3, suppression Band3, max_members, friendly_fire} | `area_effect.*`, `damage_max_members_per_squad` | K | combat |
@@ -87,19 +89,26 @@ Status codes used in the label tables:
 | `reveals_on_fire` | bool | `fog_of_war.reveal_self_on_attack` | K | vision (visibility FSM) |
 | `traits` | vocab[] | `behaviour.piercing`, `can_damage_allies`, `hit_everything_on_*` | K | combat |
 
-### 2.2 Shots per turn (decision K, approved with revision)
+### 2.2 Shots per turn (decision K, approved with revisions)
 
 Implemented in `tools/import-coh3/fire-rate.js` (tested), settings in `data/balance/fire-rate.json`,
 full result for all 878 weapons in `reports/fire-rate.md`.
 
 - One CoH3 magazine: `n = frequency + 1` shots (a burst counts every bullet);
-  `time = n × (aim × aim multiplier + wind-up + wind-down + burst) + (n − 1) × cooldown + reload`, per band.
-- `raw = shots per magazine / time × 6 s`. Ready-aim time is not counted (sustained rate).
-- **Ordinary weapons:** `shots_per_turn = round(raw)`, damage unchanged.
-- **Single-shot weapons** (tank guns, AT guns, infantry AT, tungsten rounds, and any weapon with raw < 1):
-  `shots_per_turn = 1`, `damage_per_shot = round(CoH3 damage × raw)`. Examples: Sherman 75 mm 120 × 1.04 → 125;
-  Pz IV 75 mm 120 × 1.26 → 152; 57 mm AT gun 160 × 1.26 → 202; 105 mm howitzer 160 × 0.41 → 66.
-- **Per use** (grenades, mines): one shot per use at CoH3 damage.
+  `time = n × (aim × aim multiplier + wind-up + wind-down + burst) + (n − 1) × cooldown + reload`, per band;
+  `raw = shots per magazine / time × 6 s`. Ready-aim time is not counted (sustained rate).
+- Expected damage per turn stays the CoH3 rate in every rule:
+
+| Rule | Weapons | Shots per turn | Damage per shot | Other | Example |
+| --- | --- | --- | --- | --- | --- |
+| `volley` | small arms, MGs, flamethrowers, AA (260) | round(raw × m), smallest m ≤ 6 with every band within 5 % | CoH3 ÷ m | suppression per shot ÷ m | Garand ×4: 13 / 9 / 7 at 3; Kar98k ×5: 9 / 7 / 7 at 2.8 |
+| `single_shot` | tank guns, AT guns, infantry AT, tungsten rounds, small arms under 1 shot per turn (223) | 1 | round(CoH3 × raw) | — | Sherman 75 mm 125; Pz IV 75 mm 152; 57 mm AT 202 |
+| `artillery` | mortars, light and heavy artillery (245) | ceil(raw) shells, or 1 shell then `reload_turns = floor(1 / raw) − 1` | CoH3 (kept) | `accuracy_scale = raw ÷ game rate` (≤ 1) | 81 mm: 2 shells, acc ×0.89; 105 mm: 1 every 2 turns, acc ×0.83 |
+| `ability` | CoH3 dummy artillery fired only by abilities (15) | 1 per use | CoH3 | — | 150 mm Hummel dummy |
+| `per_use` | grenades, mines (135) | 1 per use | CoH3 | — | — |
+
+- Result: 856 of 878 weapons within 5 % of the CoH3 rate, the rest within 6 %; artillery balance is then tuned by hand
+  through `reload_turns`, `scatter` and `accuracy` overrides without touching shell damage.
 - Infantry weapons are per model; a squad fires with every member carrying the weapon.
 
 ---
