@@ -7,7 +7,8 @@ The game is being rewritten in `src/`. `legacy/` is the frozen v214 game (its ow
 no new features in it).
 
 ## Start of every task
-1. Read `docs/ARCHITECTURE.md` (layers, where each responsibility lives, rules).
+1. Read `docs/ARCHITECTURE.md` (layers, where each responsibility lives, rules) and, for anything about units,
+   `docs/unit-state.md` (the six state axes and who owns each).
 2. Read the `README.md` of the system folder the task touches; it says what the system owns and must not do.
 3. Gameplay rules: `SPEC.md` (read the section the task touches). If a request conflicts with it, say so before changing.
 4. Old behaviour or numbers: look in `legacy/` (`node legacy/tools/where.js <name>` from `legacy/`); never copy its wrappers.
@@ -21,6 +22,8 @@ no new features in it).
   A player action is a command; applying it returns `{ state, events }`. Presentation plays the events.
 - No wrappers, no monkey-patching, no patching data at load time. Edit the one function that owns the behaviour.
 - Name files by responsibility, never by version. Version history goes in `CHANGELOG.md`.
+- Unit behaviour comes from state machines: add or change a state handler in the owning system, never an if/else chain.
+- Unit numbers come from CoH3 (`data/source/coh3`); v214 is a gameplay reference, not a data baseline.
 - Numbers a designer tunes go in `data/balance/` or the data forms; player-visible text goes in `data/i18n/`.
 - Every logic function gets a Node test in `tests/` (mirrors `src/`).
 - Changed a rule? Update its line in `SPEC.md` in the same change.

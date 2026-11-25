@@ -1,7 +1,8 @@
 # data/legacy-snapshot/
 
 Final values of the legacy v214 game, read from a headless run after all its load-time patches.
-The rewrite's data pipeline and rules are checked against these files (the "oracle").
+A **gameplay reference** only: the rewrite takes its data from CoH3 (`data/source/coh3`). Comparisons with these files
+report differences for review; they are not targets.
 
 | File | Contents |
 | --- | --- |

@@ -3,6 +3,7 @@
 **Layer 2 — Game Logic** — The shape of GameState and pure read helpers (state management, data side).
 
 ## Owns
+- unit runtime state shape `unit.js` with its invariants (`docs/unit-state.md` §4)
 - GameState: { match, map, units, structures, points, teams: { blue, red }, turn, pending, rng }
 - factories: createMatch(setup, data)
 - selectors: unitAt, unitsOf, teamOf, isEngaged …

@@ -3,6 +3,7 @@
 **Layer 2 — Game Logic** — Boarding, dismount, airborne deploy.
 
 ## Owns
+- location FSM (ON_MAP, GARRISONED, LOADED) (`docs/unit-state.md` §5.3)
 - capacity
 - passengers
 - unload hexes

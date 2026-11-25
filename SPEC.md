@@ -137,10 +137,18 @@ Confirmed 2026-11-25 (rewrite):
 - Per-unit fuel consumption is removed: vehicles move without spending unit fuel. Fuel remains a faction resource (prices, upkeep, income).
 - Release scope: North Africa and Italy only (factions: Afrikakorps, British Forces, US Forces, Wehrmacht); free web release.
 - Campaign: veterancy does not carry over between missions.
+- Data authority: all unit stats, weapon values and mechanics come from the CoH3 data (`data/source/coh3`), converted and tuned
+  for turns and hexes. v214 is a gameplay reference only, not a data baseline; differences from v214 are reported, not errors.
+- Unit state: every unit is in one state on each of six axes (action, stance, location, morale, lifecycle, visibility);
+  behaviour comes from these state machines (`docs/unit-state.md`). Critical conditions are a set on an active vehicle.
+- Recrew and capture (design, awaiting approval, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
+  decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
+  action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
 - Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
   uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
-- Hold: a unit that neither moves nor acts goes on overwatch and fires once in the enemy turn at the first enemy that moves
-  into its range and arc (extends crew watch fire, §5, to every unit; AT weapons keep their exception). Counter fire stays (§4).
+- Overwatch is for machine guns only (HMG, LMG, vehicle coaxial / hull / pintle MGs). An emplaced HMG team, or an infantry
+  squad / vehicle with an MG that holds (no move, no action), fires its MG once in the enemy turn at the first enemy that moves
+  into its range, arc and sight. No other weapon overwatches; this replaces crew watch fire (§5). Counter fire stays (§4).
 - Suppression has two states: suppressed (move −50 %, accuracy ×0.5) and pinned (no move except retreat, cannot capture);
   it decays at the own turn start, faster in cover. Values are tuned in data.
 - Edge cover is directional: hedges, walls, fences and sandbags on a hex edge protect only against fire that crosses that edge.

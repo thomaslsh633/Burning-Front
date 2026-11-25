@@ -4,8 +4,9 @@ A game is many responsibilities running at once: reading taps, applying rules, k
 animating, playing sound, saving, thinking for the AI, and loading data and assets. Each of these gets
 **its own folder with one owner**, and the folders sit in three layers. Calls go **down** only.
 
-The frozen v214 game is in `legacy/`. It builds on its own (`npm run legacy:build`) and serves as the
-reference ("oracle") for the numbers the new code must reproduce. No code is copied from it except the 3D
+The frozen v214 game is in `legacy/`. It builds on its own (`npm run legacy:build`) and is a **gameplay reference
+only**: unit stats, weapon values and mechanics come from the CoH3 data (`data/source/coh3`), converted for turns and hexes.
+Units are state-driven: every unit runs six orthogonal state machines (`docs/unit-state.md`). No code is copied from it except the 3D
 meshes (`presentation/models`).
 
 ## Layers
@@ -24,8 +25,8 @@ meshes (`presentation/models`).
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Layer 2  GAME LOGIC (pure: no DOM, no clock, no Math.random)   src/logic/      │
 │  store ─▶ commands.apply ─▶ owning system ─▶ { state, events }               │
-│  state · events · hex · movement · vision · combat · crew · status · capture  │
-│  economy · build · skills · transport · turn · victory · ai                   │
+│  state · events · fsm · hex · movement · vision · combat · crew · status      │
+│  lifecycle · capture · economy · build · skills · transport · turn · victory · ai │
 └──────────────────────────────────────────────────────────────────────────────┘
           ▲ data and rng are passed in as arguments
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -43,6 +44,7 @@ every rule runs in a Node test with plain objects.
 | --- | --- | --- |
 | Input | `presentation/input` (gestures → intents), `presentation/controller` (intent → command, UiState) | 1 |
 | Game rules | `logic/hex` … `logic/victory`, one folder per rule area; `logic/commands` routes each command to its owner | 2 |
+| Unit states | six FSM axes on every unit, generic helper `logic/fsm`; each axis owned by one system (`docs/unit-state.md` §7) | 2 |
 | State management | `logic/state` (GameState shape, selectors), `logic/store` (current state, dispatch, undo, subscribe); UI-only state is `UiState` in `presentation/controller` | 2 / 1 |
 | UI | `presentation/ui` (HUD, menus, screens), `presentation/render` (canvas) | 1 |
 | Animation | `presentation/animation` (event player, ViewModel) | 1 |
@@ -107,7 +109,7 @@ data/
   rules/           terrain, cover, buildings, closed vocabularies
   maps/  presentation/  i18n/
   generated/       built by the derive pipeline, never hand-edited
-  legacy-snapshot/ values dumped from v214, the target the pipeline must match
+  legacy-snapshot/ values dumped from v214, gameplay reference (differences are reported, not errors)
 ```
 
 Shared pieces every form is built from:
@@ -131,8 +133,8 @@ in `logic/turn` alone, so an AP model can replace it later without touching othe
 src/
   app/
   presentation/  input  controller  render  models  animation  ui  audio
-  logic/         state  store  commands  events  hex  movement  vision  combat  crew
-                 status  capture  economy  build  skills  transport  turn  victory  ai
+  logic/         state  store  commands  events  fsm  hex  movement  vision  combat  crew
+                 status  lifecycle  capture  economy  build  skills  transport  turn  victory  ai
   services/      data  assets  save  storage  rng  clock  i18n
 data/            (above)
 tools/           check-layers.js; planned: derive/ (data pipeline), oracle/ (legacy compare), build
@@ -143,8 +145,9 @@ legacy/          frozen v214, builds on its own
 
 ## Next
 
-1. Snapshot v214 values into `data/legacy-snapshot/` (oracle).
+1. Snapshot v214 values into `data/legacy-snapshot/` (gameplay reference). Done.
+1a. Unit state model and system taxonomy (`docs/unit-state.md`). Done; required before any data is wired in.
 2. Write `data/schema` for unit, entity and weapon forms; build the derive pipeline until it reproduces the snapshot.
-3. Logic systems bottom up (`hex` → `movement` / `vision` → `combat` …), each with Node tests and oracle checks.
+3. Logic systems bottom up (`hex` → `movement` / `vision` → `combat` …), each with Node tests; FSM transition tables tested per axis.
 4. Presentation and app; the game becomes playable on `src/`.
 5. New build script for `src/` (one HTML, tiny module registry), running `check` and `test` first.

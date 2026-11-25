@@ -350,9 +350,9 @@ still while the other moves.
 - Each unit has **Move** (its move points) and **one Action** (fire, ability, emplace, build, repair, board), in either order.
 - **Move then fire** uses the weapon's moving accuracy (CoH3 `moving.accuracy_multiplier`); weapons that cannot fire
   on the move (`can_fire = false`, crew weapons) must fire first or not move.
-- **Hold** (no move and no action): the unit goes on **overwatch** and fires once during the enemy turn at the first
-  enemy that moves into its range and arc. This extends today's crew watch fire (SPEC §5) to every unit. AT weapons
-  keep their exception.
+- **Overwatch (machine guns only, decided 2026-11-25):** an emplaced HMG team, or an infantry squad / vehicle with an MG
+  that holds (no move, no action), fires its MG once during the enemy turn at the first enemy that moves into its range
+  and arc. No other weapon overwatches (SPEC §10, `docs/unit-state.md` §5.1.1).
 - **Counter fire** stays: a unit that is attacked fires back once per enemy turn if it can see and reach the attacker (SPEC §4).
 - This answers the open "turn rule" question without action points; `logic/turn` still owns it alone.
 

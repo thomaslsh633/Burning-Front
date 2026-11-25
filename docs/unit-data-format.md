@@ -216,7 +216,7 @@ Dropped: `squad_formation_ext`, `squad_action_apply_ext`, `squad_inventory_ext`,
 ```
 
 (The `//` lines only label the excerpts. The data files themselves contain no comments. `shots_per_turn` here is
-illustrative; the importer computes it and the oracle checks it against v214.)
+illustrative; the importer computes it from CoH3; v214 differences are reported for reference only.)
 
 ## Approaches considered
 
@@ -238,7 +238,7 @@ data/units/<faction>/{weapon,ebps,sbps,fx}.json    (hand-editable source of trut
 data/generated/units.json                           (flat, what the game loads)
         │ oracle
         ▼
-compare with data/legacy-snapshot/ (v214) → every difference listed
+report differences from data/legacy-snapshot/ (v214, reference only)
 ```
 
 ## Decisions
@@ -251,4 +251,4 @@ source = `coh3-data/data/chunked` per faction, values follow Burning Front rules
 1. `data/rules/vocab.json` and the four schemas.
 2. `tools/import-coh3` with one named, tested step per conversion (range, sight, move, shots per turn, cost sum, veterancy).
 3. Import the legacy roster's units for `american` and `german` first, then `afrika_korps` and `british`.
-4. Build step and oracle comparison against the v214 snapshot.
+4. Build step; difference report against the v214 snapshot (reference only).

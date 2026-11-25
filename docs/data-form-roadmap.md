@@ -1,6 +1,7 @@
 # Roadmap — one data form across all unit categories
 
-Status: **plan** (2026-11-25). Builds on `docs/unit-data-format.md` (label selection) and feeds the rewrite
+Status: **plan** (2026-11-25). Data import (Phase 2 onward) starts only after the unit state model `docs/unit-state.md`;
+CoH3 is the data authority, v214 a gameplay reference only. Builds on `docs/unit-data-format.md` (label selection) and feeds the rewrite
 (`docs/ARCHITECTURE.md`: `services/data` loads the result, `logic/*` systems read it).
 
 ## The idea: core + modules + category profile
@@ -168,8 +169,8 @@ Each phase ends with a gate. The next phase starts when the gate passes. Sizes: 
 | 2 | Shared foundation | `data/rules/vocab.json` (tags, traits, damage types, cover, fire modes, roles, modifier names); shared types `Band3`, `Resources`, `Mods`, `Armor3`; `tools/validate` (small JSON-Schema subset, no dependencies) with tests | validator accepts / rejects fixtures for every shared type and vocab list | M |
 | 3 | Core and modules | `data/schema/{weapon,ebps,sbps,fx}.schema.json`: core + every module, each field documented | one fixture per module validates, a wrong shape is rejected | M |
 | 4 | Category profiles | `data/schema/profiles.json` (must / may / must not + defaults per category); one hand-written sample per category (14 weapon, 6 ebps, 5 sbps) | every sample validates; a mine with `attack` and a mortar without `scatter` are rejected | M |
-| 5 | Importer pilot | `tools/import-coh3`: follow sbps → ebps → weapon, resolve `parent_pbg` (incl. `common`), map fields, convert distance / time, sum cost, map veterancy and cover, one tested step each. Pilot: one American unit per category (riflemen, Sherman, 57 mm AT gun, 81 mm mortar, M1919 team, one emplacement) | pilot records validate and match v214's values for the same units (or each difference is listed) | L |
-| 6 | American + German | every unit in the v214 roster, plus the upgrades (kits) they use: `upgrade.json` per faction with the same core + module pattern | diff report against `data/legacy-snapshot` reviewed and approved by you | L |
+| 5 | Importer pilot | `tools/import-coh3`: follow sbps → ebps → weapon, resolve `parent_pbg` (incl. `common`), map fields, convert distance / time, sum cost, map veterancy and cover, one tested step each. Pilot: one American unit per category (riflemen, Sherman, 57 mm AT gun, 81 mm mortar, M1919 team, one emplacement) | pilot records validate and follow the documented CoH3 conversion; differences from v214 are reported for reference | L |
+| 6 | American + German | every unit in the v214 roster (as a checklist of what to cover), plus the upgrades (kits) they use: `upgrade.json` per faction with the same core + module pattern | records validate; conversion report (CoH3 → game values) reviewed by you; v214 differences listed for reference | L |
 | 7 | Afrika Korps + British | full rosters from CoH3; units with no CoH3 data marked `estimated` | validate; your balance review | L |
 | 8 | Build and links | build step: resolve `parent`, apply profile defaults, check every id link (members, weapons, upgrades, fx, i18n keys), write `data/generated/units.json`; runs in `npm run check` | a broken link or unknown word fails the build | M |
 | 9 | Editing workflow | `tools/unit.js <id>` (final values from `data/generated`, no browser, replaces `unit.py`), `tools/new-unit <category> <id>` (starts from the profile defaults), a short "add or change a unit" guide | you add one unit using only the guide | S |
