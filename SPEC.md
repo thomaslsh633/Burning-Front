@@ -132,6 +132,11 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - No flags or antennas drawn on vehicles (v181, v183).
 
 ## 10. Decided, not in the code yet
+Confirmed 2026-11-25 (rewrite):
+- Per-unit ammunition stays: each attack spends ammo; supply trucks / supply sources refill it.
+- Per-unit fuel consumption is removed: vehicles move without spending unit fuel. Fuel remains a faction resource (prices, upkeep, income).
+- Release scope: North Africa and Italy only (factions: Afrikakorps, British Forces, US Forces, Wehrmacht); free web release.
+
 Confirmed 2026-11-22:
 - Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn
   (e.g. 2 men together neutralise an enemy point in one turn instead of 2). Still 2 points per step.

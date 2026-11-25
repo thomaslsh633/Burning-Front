@@ -129,7 +129,7 @@ The vehicle profile follows SPEC (no `capture`, trait `contests`).
 ### sbps
 
 - **Core:** `id`, `coh3_ref`, `parent`, `tags`, `role`, `members`, `cost` (sum or `cost_override`), `pop`, `requires`, `upgrades`, `abilities`, `traits`
-- **Modules:** `capture`, `reinforce`, `veterancy`, `build`, `team_weapon` `{ weapon_entity, crew_entity }`, `supply` `{ ammo, fuel }`
+- **Modules:** `capture`, `reinforce`, `veterancy`, `build`, `team_weapon` `{ weapon_entity, crew_entity }`, `supply` `{ ammo }` (unit fuel removed 2026-11-25)
 
 | Profile | Must | May |
 | --- | --- | --- |

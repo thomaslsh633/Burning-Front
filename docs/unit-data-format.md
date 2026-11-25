@@ -161,7 +161,7 @@ Dropped: `ui_ext`, `presentation_override_ext` (to fx), `moving_ext` motion and 
 | `reinforce` | `{cost_ratio}` | `squad_reinforce_ext.time_cost_percentage.cost_percentage` | reinforce | |
 | `capture` | `{rate}` | `squad_capture_strategic_point_ext` | `capt` | left out = cannot capture |
 | `build` | `{menu: id[]}` | `squad_engineer_ext.construction_groups` | `ENG` role | left out = cannot build |
-| `supply` | `{ammo, fuel}` | — (Burning Bridges supply) | `ammo`, `fuel`, `maxFuel`, `supplies` | |
+| `supply` | `{ammo}` | — (Burning Bridges supply) | `ammo`, `supplies` | per-unit fuel removed (SPEC §10, 2026-11-25) |
 | `upgrades` | `{slots, list: id[]}` | `squad_upgrade_ext` | kits (`0190`) | |
 | `abilities` | id[] | `squad_ability_ext` + member `ability_ext` | skills | |
 | `veterancy` | `{xp: [n, n, n], ranks: [{<modifier>: x}]}` | `squad_veterancy_ext` + `veterancy.json` | `COH3_RAW.vet` | modifier names from `data/rules/vocab.json` |
