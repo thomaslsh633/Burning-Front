@@ -161,6 +161,8 @@ Confirmed 2026-11-25 (rewrite):
   Fallschirmpioniere, medical half-track, Stummel, recovery vehicle, medical truck; US ambulance, recovery vehicle, 6×6 truck).
   British North Africa: every CoH3 `british_africa` squad (73), incl. Indian infantry, SAS, Commandos, Crusader 57 mm, Priest.
   Missing stats come from comparable units (`clone` in roster.json): Australian supply truck cost from the CWT 15 flatbed.
+  Every unit coh3stats.com lists with an English name is in the roster too (e.g. Assault Grenadiers, Guastatori, Folgore,
+  Goliath, Panzer IV for Afrikakorps); squad price, population and build time come from coh3stats where it has the unit.
 - CoH3 battlegroup units are unlocked by Burning Front's own doctrines, not produced by buildings.
 - Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
   decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its

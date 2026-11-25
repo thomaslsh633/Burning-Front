@@ -42,6 +42,9 @@ export function buildCatalog(dir) {
   const upgrades = indexKind(dir, 'upgrade', r => `upgrade/${r}`);
   const fireCfg = JSON.parse(fs.readFileSync(path.join(dir, '../../balance/fire-rate.json'), 'utf8'));
   const roster = JSON.parse(fs.readFileSync(path.join(dir, '../../rules/roster.json'), 'utf8'));
+  // coh3stats.com unit statistics (data/source/coh3stats, tools/coh3stats/fetch.js): names, squad price / pop / time
+  const statsOf = race => { const f = path.join(dir, '../coh3stats', `${race}.json`); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {}; };
+  const csCfg = roster.coh3stats ?? {};
   const legacyRaw = (() => {
     try { const u = JSON.parse(fs.readFileSync(path.join(dir, '../../legacy-snapshot/units.json'), 'utf8')).COH3_RAW;
       return new Set(Object.values(u).flatMap(t => Object.values(t).map(x => x.sbp))); } catch { return new Set(); }
@@ -60,15 +63,19 @@ export function buildCatalog(dir) {
     const calledIn = new Set(allRaw('abilities').match(new RegExp(`sbps/races/${race}/[a-z0-9_/]+`, 'g')) || []);
     const viaUpgrade = new Set(allRaw('upgrade').match(new RegExp(`sbps/races/${race}/[a-z0-9_/]+`, 'g')) || []);
 
+    const stats = statsOf(race);
     const units = [], excluded = [];
     for (const [p, s] of sbps) {
       if (s.race !== race) continue;
       const id = lastPart(p), category = s.path[0];
       const restored = (roster.restore[race] || []).includes(id);
+      const cs = stats[id];
+      const onCoh3stats = !!(csCfg.include_named_units && cs?.name && !(csCfg.exclude || []).includes(id));
       const source = produced.has(p) ? 'produced' : built.has(p) ? 'built' : viaUpgrade.has(p) ? 'upgrade' : calledIn.has(p) ? 'called_in'
-        : restored ? 'restored' : null;
+        : restored ? 'restored' : onCoh3stats ? 'coh3stats' : null;
       const reason = category === 'aircraft' ? 'off-map aircraft' : category === 'squad_size_variants' ? 'size variant'
-        : /dummy|tutorial|_test|campaign|map_object|prewrecked|jettisoned|_ai_/.test(id) ? 'dummy / test / map object'
+        : (csCfg.exclude || []).includes(id) ? 'excluded in roster.json'
+        : !onCoh3stats && /dummy|tutorial|_test|campaign|map_object|prewrecked|jettisoned|_ai_/.test(id) ? 'dummy / test / map object'
         : !source ? 'not produced or called in' : null;
       if (reason) { excluded.push({ id, category, reason, in_v214: legacyRaw.has(id) }); continue; }
 
@@ -87,7 +94,9 @@ export function buildCatalog(dir) {
           weapon: weapon ? lastPart(weapon) : null };
       });
       units.push({ id, category, source, producers: produced.get(p) ?? [], doctrine: req.some(r => r.includes('/battlegroups/')),
-        in_v214: legacyRaw.has(id), clone: roster.clone?.[id] ?? null, members, upgrades: kits });
+        in_v214: legacyRaw.has(id), clone: roster.clone?.[id] ?? null, members, upgrades: kits,
+        name: cs?.name || null,
+        price: price(cs, members, ebps, csCfg), pop: cs?.cost?.popcap ?? cs?.pop ?? null, build_seconds: cs?.cost?.time_seconds ?? null });
     }
 
     const used = new Set(units.flatMap(u => [...u.members.flatMap(m => m.weapons), ...u.upgrades.map(k => k.weapon).filter(Boolean)]));
@@ -115,14 +124,16 @@ function markdown(race, c, commit) {
     `${c.units.length} units (squads), ${c.weapons.length} weapons in use, ${c.excluded.length} squad records excluded.`,
     'Source: `produced` = a building or vehicle produces it; `built` = referenced by an entity (constructed emplacement, recrewable gun);',
     '`upgrade` = spawned by an upgrade; `called_in` = an ability calls it in; `restored` = brought back by `data/rules/roster.json`.',
-    '`doctrine` = a CoH3 battlegroup unit, unlocked by a Burning Front doctrine. `v214` = in the legacy roster.', ''];
+    '`doctrine` = a CoH3 battlegroup unit, unlocked by a Burning Front doctrine. `v214` = in the legacy roster.',
+    '`coh3stats` = listed by coh3stats.com (multiplayer). Name, price and pop from coh3stats; price marked * = sum of entity costs (unit not on coh3stats).', ''];
   for (const cat of [...new Set(c.units.map(u => u.category))]) {
-    L.push(`## Units: ${cat}`, '', '| Squad | source | doctrine | v214 | members (entity × count, HP) | weapons | equipment (upgrades → weapon) |', '| --- | --- | --- | --- | --- | --- | --- |');
+    L.push(`## Units: ${cat}`, '', '| Squad | name (coh3stats) | price | pop | source | doctrine | v214 | members (entity × count, HP) | weapons | equipment (upgrades → weapon) |', '| --- | --- | --- | ---: | --- | --- | --- | --- | --- | --- |');
     for (const u of c.units.filter(x => x.category === cat)) {
       const mem = u.members.map(m => `${m.entity} ×${m.count}${m.hp ? ` (${m.hp})` : ''}`).join('<br>');
       const wpn = [...new Set(u.members.flatMap(m => m.weapons))].join('<br>');
       const kit = u.upgrades.map(k => `${k.id}${k.weapon ? ` → ${k.weapon}` : ''}${Object.keys(k.cost).length ? ` (${res(k.cost)})` : ''}`).join('<br>');
-      L.push(`| ${u.id}${u.clone ? ` (${u.clone.fields.join(', ')} from ${u.clone.from})` : ''} | ${u.source} | ${u.doctrine ? 'yes' : ''} | ${u.in_v214 ? 'yes' : ''} | ${mem} | ${wpn} | ${kit} |`);
+      const pr = u.price ? `${res(u.price.cost)}${u.price.from === 'coh3stats' ? '' : ' *'}` : '';
+      L.push(`| ${u.id}${u.clone ? ` (${u.clone.fields.join(', ')} from ${u.clone.from})` : ''} | ${u.name ?? ''} | ${pr} | ${u.pop ?? ''} | ${u.source} | ${u.doctrine ? 'yes' : ''} | ${u.in_v214 ? 'yes' : ''} | ${mem} | ${wpn} | ${kit} |`);
     }
     L.push('');
   }
@@ -139,6 +150,21 @@ function theatreLabel(race) {
   if (race === 'british_africa') return 'british · north_africa (CoH3 british_africa)';
   if (race === 'british') return 'british · italy (CoH3 british)';
   return race;
+}
+
+/** Squad price: coh3stats total (what the game charges) when present, else the sum of member entity costs. */
+function price(cs, members, ebps, csCfg) {
+  if (csCfg.squad_price_from_coh3stats && cs?.cost) {
+    const c = Object.fromEntries(['manpower', 'munition', 'fuel'].map(k => [k, Math.round(cs.cost[k] || 0)]).filter(([, v]) => v));
+    return { cost: c, from: 'coh3stats' };
+  }
+  const sum = { manpower: 0, munition: 0, fuel: 0 };
+  for (const m of members) {
+    const rec = [...ebps.values()].find(e => e.path[e.path.length - 1] === m.entity)?.rec;
+    const c = EXT(rec ?? {}, 'cost_ext')?.time_cost?.cost || {};
+    for (const k of Object.keys(sum)) sum[k] += (c[k] || 0) * m.count;
+  }
+  return { cost: Object.fromEntries(Object.entries(sum).map(([k, v]) => [k, Math.round(v)]).filter(([, v]) => v)), from: 'entities' };
 }
 
 function summary(catalog, commit) {

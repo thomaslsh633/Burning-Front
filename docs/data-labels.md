@@ -55,6 +55,7 @@ Status codes used in the label tables:
 | L | British Forces use two CoH3 sets: `british_africa` in North Africa, `british` in Italy | `data/rules/roster.json` `factions.british.sources`; both downloaded; `british_africa` has no veterancy file and uses `british` ranks |
 | M | Units missing from CoH3 production are restored: the 9 v214 units and all 18 remaining British North Africa squads | `roster.json` `restore`; `clone` for missing stats (Australian supply truck cost ← CWT 15 flatbed) |
 | N | CoH3 battlegroup units are unlocked by Burning Front doctrines | catalog flags them `doctrine`; doctrine design assigns them |
+| P | coh3stats.com is the second source: English names and descriptions, squad price / population / build time, roster completeness, and a cross-check of our fire rate | `data/source/coh3stats` (224 units); catalog takes names, prices and every named coh3stats unit; `reports/coh3stats-compare.md` |
 | O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
 
 ---
@@ -167,7 +168,7 @@ full result for all 878 weapons in `reports/fire-rate.md`.
 | `tags` | vocab[] | `squad_type_ext.squad_type_list` | K | AI, UI |
 | `role` | vocab | — | A | AI, UI |
 | `members` | [{entity, count}] | `squad_loadout_ext.unit_list[].loadout_data.num/type` (team weapons: 1 weapon item + crew) | K | combat, lifecycle |
-| `cost` | Resources | sum of member `cost` | D (`cost_override` A) | economy |
+| `cost` | Resources | coh3stats squad total where present, else sum of member `cost` | K / D (`cost_override` A) | economy |
 | `pop` | int | `squad_population_ext.personnel_pop` | K | economy |
 | `requires` | {buildings, upgrades, cp} | `squad_requirement_ext.requirement_table` | K | economy |
 | `reinforce` | {cost_ratio} | `squad_reinforce_ext.time_cost_percentage.cost_percentage` | K | economy |

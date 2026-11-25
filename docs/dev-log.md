@@ -2,6 +2,15 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-25 (coh3stats)
+- **Done:** `tools/coh3stats/fetch.js` → `data/source/coh3stats` (224 multiplayer units: names, squad totals, entities,
+  weapon DPS curves, veterancy, upgrades). Catalog: every named coh3stats unit added (+6 german, +11 american, +8 afrika_korps),
+  English names, price / pop / time from coh3stats. `tools/coh3stats/compare.js` → `reports/coh3stats-compare.md`.
+- **Found:** fire-cycle formula matches coh3stats DPS within ~6 % for rifles, MGs and tank guns; AT gun gap explained
+  (coh3stats DPS is vs infantry, ×0.25); snipers / Boys / 20 mm unexplained; some squad prices below entity sums (340 vs 360).
+- **Note:** Node `fetch` needs `NODE_USE_ENV_PROXY=1` behind this proxy (DNS fails otherwise).
+- **Next:** D1-3 vocab and validator.
+
 ## 2026-11-25 (all British North Africa units)
 - **Done:** all 18 remaining `british_africa` squads restored (Indian infantry, SAS, Commandos, medic, officer, sniper,
   Crusader 57 mm, Priest, Marmon-Herrington, Sherman, command Churchill, CWT trucks …); Australian supply truck cost cloned

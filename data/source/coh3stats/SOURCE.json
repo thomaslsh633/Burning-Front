@@ -1,0 +1,41 @@
+{
+  "site": "https://coh3stats.com",
+  "build_id": "Fbw2oZA7SRXlRHGlbWnb-",
+  "fetched": "2026-11-25",
+  "race_map": {
+    "german": "german",
+    "american": "american",
+    "dak": "afrika_korps",
+    "british": "british_africa"
+  },
+  "counts": {
+    "german": {
+      "coh3stats_race": "german",
+      "listed": 128,
+      "skipped_hoff": 70,
+      "saved": 58,
+      "missing": 0
+    },
+    "american": {
+      "coh3stats_race": "american",
+      "listed": 134,
+      "skipped_hoff": 70,
+      "saved": 64,
+      "missing": 0
+    },
+    "afrika_korps": {
+      "coh3stats_race": "dak",
+      "listed": 110,
+      "skipped_hoff": 61,
+      "saved": 49,
+      "missing": 0
+    },
+    "british_africa": {
+      "coh3stats_race": "british",
+      "listed": 118,
+      "skipped_hoff": 65,
+      "saved": 53,
+      "missing": 0
+    }
+  }
+}

@@ -66,5 +66,13 @@
       "why": "no cost in CoH3 data"
     }
   },
-  "battlegroup_units": "doctrine_unlock"
+  "battlegroup_units": "doctrine_unlock",
+  "coh3stats": {
+    "include_named_units": true,
+    "exclude": [
+      "team_weapon_parent_ger",
+      "tiger_boss_ger"
+    ],
+    "squad_price_from_coh3stats": true
+  }
 }

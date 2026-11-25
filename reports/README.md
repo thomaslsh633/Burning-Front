@@ -4,3 +4,4 @@ Generated review reports (never edited by hand). Regenerate with the command nam
 
 - `fire-rate.md` / `.json`: CoH3 weapon timings → whole shots per turn and damage per shot (`node tools/import-coh3/fire-rate-report.js`).
 - `catalog/README.md` (summary), `catalog/<faction>.md`, `catalog.json`: the cleaned unit list per faction — squads → members → weapons, equipment (upgrades) with cost and granted weapon, weapons in use with fire-rate values, excluded records (`node tools/coh3/catalog.js`).
+- `coh3stats-compare.md` / `.json`: coh3stats.com statistics vs our data — roster, squad price, entity stats, fire rate vs coh3stats DPS (`node tools/coh3stats/compare.js`).
