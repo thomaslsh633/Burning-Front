@@ -1,6 +1,6 @@
 # Burning Front — Game Design (planning draft)
 
-Status: **draft for review** (2026-11-25). Marks used below:
+Status: **working draft** (2026-11-25). The final plan is `docs/game-plan.ko.md`; where they differ (campaign structure), the final plan wins. Marks used below:
 **[Decided]** = you decided it or it is in `SPEC.md` · **[Proposed]** = my call, open to change · **[Open]** = needs your answer.
 
 Related: `SPEC.md` (rules in force), `docs/ARCHITECTURE.md` (code), `docs/data-form-roadmap.md` (unit data, after this plan).

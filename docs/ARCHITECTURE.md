@@ -82,7 +82,8 @@ The AI follows the same path from step 3, with commands from `ai.decide` instead
 | `services/` | `services/` only |
 
 - Another system is imported only through its `index.js`; files inside a system are private to it.
-- No package imports (offline PC, no dependencies).
+- No package imports (offline PC, no dependencies). One exception: PixiJS, vendored and version-pinned in
+  `presentation/render/vendor/`, imported by relative path from `presentation/render` only.
 - `logic/` and `services/rng/` may not use `document`, `window`, `localStorage`, `fetch`, `Math.random`, `Date`,
   `performance`, timers or `requestAnimationFrame`.
 - No wrappers and no monkey-patching. A behaviour change edits the one function that owns it.

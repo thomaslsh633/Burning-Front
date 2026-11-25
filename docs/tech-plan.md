@@ -85,9 +85,10 @@ services/assets  loads per screen / theatre, caches, releases
 - **Budgets:** first download under 30 MB; each theatre's terrain and sound load on entering it; whole game under 150 MB.
 - **Rights:** only self-made, commissioned or licensed assets. No CoH3 or Burning Bridges art or sound.
 
-## 5. Decisions needed
+## 5. Decisions
 
-1. Distribution: PWA first, APK from the same code via CI. Agree?
-2. Renderer: WebGL 2D with one vendored library (B), which relaxes "no dependencies" for `presentation/render` only. Agree, or stay with Canvas 2D (A)?
-3. Language: JavaScript + JSDoc (no compiler needed), or TypeScript?
-4. Art source: you model in Blender yourself, commission, or use licensed asset packs? This sets the pace of milestone M5.
+1. Distribution: PWA first, APK from the same code via CI (assumed, not confirmed yet).
+2. **Renderer: PixiJS (decided 2026-11-25).** One vendored, version-pinned copy in `src/presentation/render/vendor/`
+   (version recorded in `vendor/VERSION`); only `presentation/render` imports it.
+3. **Language: JavaScript (decided 2026-11-25)**, ES modules with JSDoc types.
+4. Art source: open (Blender yourself, commissioned, or licensed packs).

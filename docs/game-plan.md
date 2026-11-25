@@ -1,5 +1,8 @@
 # BURNING FRONT — Game Plan
 
+> **Superseded by `docs/game-plan.ko.md` (v1.1, Korean)**: campaigns are now one perspective each, 6 stages × 3 missions
+> (Campaign 1 North Africa, Afrikakorps; Campaign 2 Italy, Allied / AFHQ). This English v1.0 is kept for reference.
+
 Version 1.0 · 2026-11-25 · Final plan, built on the working documents `docs/game-design.md`, `docs/tech-plan.md`,
 `docs/ARCHITECTURE.md` and `SPEC.md`.
 Items marked *(assumed)* follow a recommendation you have not confirmed yet; see "Decisions still open" at the end.
