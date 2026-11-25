@@ -136,6 +136,18 @@ Confirmed 2026-11-25 (rewrite):
 - Per-unit ammunition stays: each attack spends ammo; supply trucks / supply sources refill it.
 - Per-unit fuel consumption is removed: vehicles move without spending unit fuel. Fuel remains a faction resource (prices, upkeep, income).
 - Release scope: North Africa and Italy only (factions: Afrikakorps, British Forces, US Forces, Wehrmacht); free web release.
+- Campaign: veterancy does not carry over between missions.
+- Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
+  uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
+- Hold: a unit that neither moves nor acts goes on overwatch and fires once in the enemy turn at the first enemy that moves
+  into its range and arc (extends crew watch fire, §5, to every unit; AT weapons keep their exception). Counter fire stays (§4).
+- Suppression has two states: suppressed (move −50 %, accuracy ×0.5) and pinned (no move except retreat, cannot capture);
+  it decays at the own turn start, faster in cover. Values are tuned in data.
+- Edge cover is directional: hedges, walls, fences and sandbags on a hex edge protect only against fire that crosses that edge.
+- Vehicle criticals: a penetrating hit can roll engine damaged (move −50 %), immobilised, main gun damaged or crew shocked
+  (no action next turn); chances from data.
+- Destruction: tanks crush hedges and fences; HE damages buildings into ruins (cover changes); heavy shells leave craters (light cover).
+- Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
 
 Confirmed 2026-11-22:
 - Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn
