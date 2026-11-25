@@ -1,6 +1,7 @@
 # Unit data format — label selection and standard form
 
 Status: **plan, waiting for approval** (2026-11-25). Nothing in `data/` follows it yet.
+Roadmap and the core + module + profile form: `docs/data-form-roadmap.md`.
 
 ## Goal
 
