@@ -1,4 +1,4 @@
-# Handover: Burning Front rewrite (2026-11-26, after D2-7)
+# Handover: Burning Front rewrite (2026-11-26, after D2-8)
 
 Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `docs/unit-state.md` (CLAUDE.md "Start of every task").
 
@@ -7,10 +7,10 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Item | State |
 | --- | --- |
 | Repository | `thomaslsh633/Burning-Front` |
-| Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-7 is the branch head |
+| Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-8 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (247 tests) |
-| Phase | **D2 rules engine: steps 1–7 done**, plus map work (terrain system, map files). Next: **D2-8** |
+| Checks | `npm run check` passes; `npm test` passes (263 tests) |
+| Phase | **D2 rules engine: steps 1–8 done** (D2-8 without `logic/build`), plus map work. Next: **D2-9** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
 
@@ -47,7 +47,9 @@ Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, Pix
 | `aefc784` | **option B chosen**: `logic/terrain` (lines compiled to hex edges, compiler, change overlay, destructible buildings / natural cover / defenses, collapse kills garrison, wreck objects) |
 | `584f380` | importer adds each faction's CoH3 sandbags / wire / tank traps |
 | `b61e8ca` | map files `data/maps/<id>/map.json`, compiled by `npm run build:data`; v214 maps converted |
-| D2-7 (branch head) | turn phases (`logic/commands/phases.js`), `EndTurn` / `StartMatch`, match clock, counter fire, MG overwatch (`Hold`), engaged + turret return, crew-shock clearing, `Recrew`, `Abandon`, `ClearWreck`; `data/balance/turn.json`; wreck `clear_turns` |
+| `4104cbf` D2-7 | turn phases (`logic/commands/phases.js`), `EndTurn` / `StartMatch`, match clock, counter fire, MG overwatch (`Hold`), engaged + turret return, crew-shock clearing, `Recrew`, `Abandon`, `ClearWreck`; `data/balance/turn.json`; wreck `clear_turns` |
+| `fd23b8f` | decisions: no vehicle abandon / capture (ABANDONED removed), crewless guns destroyable by any side, reload timers (no fire / counter while reloading) |
+| D2-8 (branch head) | `logic/capture` (strength ticks, contest, sector supply), `logic/economy` (income, upkeep, `Produce`), `data/balance/economy.json`, `data/rules/production.json` (pilot lists) |
 
 D2 readiness fixes 1–7:
 1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
@@ -61,14 +63,10 @@ D2 readiness fixes 1–7:
 
 ## 4. Next steps (in order)
 
-1. **D2-8** `logic/capture`, `logic/economy`, `logic/build`.
-   - Capture by strength: 2 ticks per step (SPEC §3, §10).
-   - Sectors and supply connection; income; upkeep 2 %, at most 20.
-   - Production from `map.production`; build menu.
-   - Plug into the empty slots of `SIDE_TURN_START` in `src/logic/commands/phases.js` (`capture`, `income`; `strikes` for
-     pending barrages later).
+1. **`logic/build`** (left out of D2-8): engineer construction needs the build-menu entities imported (stage G) and
+   runtime-placed lines / structures in `logic/terrain`. Decide whether to do it before or after G.
 2. **D2-9** `logic/victory` (tickets, annihilation) and an integration test that finishes a 1v1 match using commands only.
-   This test is the D2 exit gate (`docs/dev-plan.ko.md`). Victory goes into the `victory` slot of `SIDE_TURN_START`.
+   This test is the D2 exit gate (`docs/dev-plan.ko.md`). Victory goes into the `victory` slot of `SIDE_TURN_START`; VP drain in `logic/capture`.
 3. Then stage **G (greybox)**: import all four factions, art-free view with a map editor, time-to-kill report. After that, D3.
 
 ## 5. Open issues and follow-ups
@@ -110,6 +108,13 @@ D2 readiness fixes 1–7:
   - recrew takes `min_crew`–`max_squad` living men, so a full 6-man rifle or grenadier squad cannot recrew a 57 mm / Pak 40
     (CoH3 max 5) until it loses a man;
   - wreck clearing turns: vehicle 2, emplacement 1; the abandoning crew gets a fresh ammo load.
+- **D2-8 choices the user has not confirmed:**
+  - capture strength = living men × CoH3 capture rate (riflemen / grenadiers 1.25), at most one step per tick, so any
+    squad of 2+ men takes a neutral point in one turn and an enemy point in two;
+  - base income 5 fuel / 10 munitions and manpower points 70 MP are v214 values (SPEC only named the HQ 60 MP);
+  - pilot production lists (`data/rules/production.json`): US barracks riflemen, support center HMG / mortar / 57 mm,
+    tank depot Sherman; German barracks grenadiers / MG42 / mortar, motor pool Pak 40, tank depot Panzer IV;
+  - produced units face east (hex direction 0) whatever their side; no population cap.
 - **Decided 2026-11-26 and done:** vehicles are never abandoned or captured (ABANDONED state removed); crewless guns are
   ownerless targets any side may destroy (CoH3); reloading units do not counter fire (`timers.reload`).
 - **Not built:** dropped weapon pickups (decided: upgrade / slot weapons only), `Captured` vs `Recrewed` (the previous

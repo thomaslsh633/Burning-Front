@@ -1,0 +1,46 @@
+{
+  "about": "data/balance/economy.json",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "capture": {
+      "type": "object",
+      "properties": { "points_per_step": { "type": "integer", "minimum": 1 } },
+      "additionalProperties": false,
+      "required": ["points_per_step"]
+    },
+    "income": {
+      "type": "object",
+      "properties": {
+        "base": { "$ref": "#/$defs/Yield" },
+        "points": {
+          "type": "object",
+          "propertyNames": { "enum": ["vp", "manpower", "munition", "fuel"] },
+          "additionalProperties": { "$ref": "#/$defs/Yield" }
+        }
+      },
+      "additionalProperties": false,
+      "required": ["base", "points"]
+    },
+    "upkeep": {
+      "type": "object",
+      "properties": {
+        "share_of_price": { "type": "number", "minimum": 0, "maximum": 1 },
+        "max_manpower": { "type": "number", "minimum": 0 },
+        "excess_fuel_divisor": { "type": "number", "exclusiveMinimum": 0 },
+        "min_net_share": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false,
+      "required": ["share_of_price", "max_manpower", "excess_fuel_divisor", "min_net_share"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["capture", "income", "upkeep"],
+  "$defs": {
+    "Yield": {
+      "type": "object",
+      "propertyVocab": "resource",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    }
+  }
+}

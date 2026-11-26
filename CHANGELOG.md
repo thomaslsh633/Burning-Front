@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — D2-8 points and economy (2026-11-26)
+- Points are taken by strength (men × capture rate) at turn-start ticks; contested zones freeze; sectors decide supply.
+- Income and upkeep at each own turn start; `Produce` buys a squad beside an own production building.
+- Vehicles are never abandoned or captured; crewless guns can be destroyed by either side; reloading units do not counter.
+
 ## rewrite — D2-7 turn flow and reactions (2026-11-26)
 - `EndTurn` / `StartMatch`: turn-end and turn-start hooks in a fixed order; retreating units walk on by themselves.
 - Counter fire once per enemy turn; MG overwatch (`Hold`) that can stop a move; engaged mark and turret return.

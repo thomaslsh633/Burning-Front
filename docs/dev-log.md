@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (rule decisions, D2-8)
+- **Done:** decisions: vehicles never abandoned or captured (ABANDONED removed), crewless guns are targets for every side
+  (wreck at 0 HP, no XP), reload timers block fire and counter fire, pickups limited to upgrade / slot weapons (not built).
+  D2-8: `logic/capture` (strength ticks, contest, sector supply), `logic/economy` (income, upkeep, `Produce`),
+  `data/balance/economy.json`, `data/rules/production.json`. 263 tests.
+- **Next:** decide when to build `logic/build`; D2-9 victory and the full-match integration test.
+- **Blocked:** `logic/build` waits for the build-menu entities (stage G import).
+
 ## 2026-11-26 (D2-7 turn flow, reactions, recrew)
 - **Done:** turn phases in `logic/commands/phases.js` (per-unit hooks in axis order, SPEC §2 side phases with empty slots for
   strikes / capture / victory / income), `EndTurn` and `StartMatch` commands, match clock in `logic/turn`; counter fire

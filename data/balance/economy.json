@@ -1,0 +1,14 @@
+{
+  "about": "Points, income, upkeep (SPEC §3, §10). Capture: each capturing man adds the squad's CoH3 capture rate per own turn-start tick; a step (neutralise, or capture a neutral point) needs points_per_step, at most one step per tick. Income per own turn start: base plus the yields of owned points whose sector links to the HQ (VPs pay nothing). Upkeep per own active unit: share_of_price × its manpower price, at most max_manpower; the excess ÷ excess_fuel_divisor is paid in fuel; net manpower never falls below min_net_share of gross. Base fuel / munitions and the manpower-point yield are v214 values.",
+  "capture": { "points_per_step": 2 },
+  "income": {
+    "base": { "manpower": 60, "fuel": 5, "munition": 10 },
+    "points": {
+      "vp": {},
+      "manpower": { "manpower": 70 },
+      "fuel": { "fuel": 12, "manpower": 10 },
+      "munition": { "munition": 11, "manpower": 10 }
+    }
+  },
+  "upkeep": { "share_of_price": 0.02, "max_manpower": 20, "excess_fuel_divisor": 3, "min_net_share": 0.25 }
+}

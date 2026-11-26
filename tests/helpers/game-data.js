@@ -12,8 +12,8 @@ export function gameData() {
   const { units } = indexUnits(read('data/generated/units.json'));
   const mapDir = new URL('../../data/generated/maps/', import.meta.url);
   const maps = Object.fromEntries(fs.readdirSync(mapDir).filter(f => f.endsWith('.json')).map(f => [path.basename(f, '.json'), read(`data/generated/maps/${f}`)]));
-  const balance = Object.fromEntries(['scale', 'fire-rate', 'indirect', 'ammo', 'movement', 'vision', 'combat', 'status', 'crew', 'turn'].map(n => [n.replace('-', '_'), read(`data/balance/${n}.json`)]));
-  const rules = Object.fromEntries(['vocab', 'roster', 'weapon-flags', 'status-flags', 'terrain'].map(n => [n.replace('-', '_'), read(`data/rules/${n}.json`)]));
+  const balance = Object.fromEntries(['scale', 'fire-rate', 'indirect', 'ammo', 'movement', 'vision', 'combat', 'status', 'crew', 'turn', 'economy'].map(n => [n.replace('-', '_'), read(`data/balance/${n}.json`)]));
+  const rules = Object.fromEntries(['vocab', 'roster', 'weapon-flags', 'status-flags', 'terrain', 'production'].map(n => [n.replace('-', '_'), read(`data/rules/${n}.json`)]));
   cached = deepFreeze({ units, balance, rules, maps });
   return cached;
 }

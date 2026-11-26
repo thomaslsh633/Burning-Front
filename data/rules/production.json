@@ -1,0 +1,9 @@
+{
+  "about": "What each production building type (map production[].type) offers, per faction. Pilot lists for the imported squads; design values until the CoH3 production lists are imported (stage G).",
+  "buildings": {
+    "barracks": { "american": ["riflemen_us"], "german": ["grenadier_ger", "hmg_mg42_ger", "mortar_81mm_ger"] },
+    "support_center": { "american": ["hmg_30cal_us", "mortar_81mm_us", "at_gun_57mm_us"] },
+    "motor_pool": { "german": ["at_gun_75mm_ger"] },
+    "tank_depot": { "american": ["sherman_us"], "german": ["panzer_iv_ger"] }
+  }
+}

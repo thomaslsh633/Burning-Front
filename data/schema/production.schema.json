@@ -1,0 +1,17 @@
+{
+  "about": "data/rules/production.json",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "buildings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "propertyVocab": "faction",
+        "additionalProperties": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["buildings"]
+}

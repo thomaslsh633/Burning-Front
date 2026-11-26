@@ -223,3 +223,25 @@ test('reload: a weapon firing every 2 turns skips the next own turn and cannot c
   const next = endTurn(endTurn(own, data).state, data).state;
   assert.equal(next.units.u1.timers.reload, 0, 'ready again two own turns after firing');
 });
+
+test('Produce: paid, placed beside the building, acts from the next own turn', () => {
+  const map = { production: [{ id: 'bx', type: 'barracks', team: 'blue', hexes: ['2,2'] }] };
+  const { state, data } = testMatch([], map);
+  const r = run(state, data, { type: 'Produce', side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(3, 2) });
+  const id = r.events[0].unit, u = r.state.units[id];
+  assert.deepEqual([u.team, u.pos, u.fsm.action], ['blue', H(3, 2), 'EXHAUSTED']);
+  assert.equal(r.state.teams.blue.resources.manpower, 600 - 270);
+  const next = endTurn(endTurn(r.state, data).state, data);
+  assert.equal(next.state.units[id].fsm.action, 'IDLE');
+});
+
+test('turn start: capture tick, then income for the side to move', () => {
+  const map = { points: [{ id: 'f', kind: 'fuel', hex: '5,5', radius: 1 }] };
+  const { state, data } = testMatch([blue('riflemen_us', H(5, 5)), red('grenadier_ger', H(10, 9))], map);
+  const own = endTurn(endTurn(state, data).state, data);
+  const at = types(own.events);
+  assert.ok(at.indexOf('PointNeutralised') < 0 && at.indexOf('PointCaptured') < at.indexOf('IncomeReceived'));
+  assert.equal(own.state.points[0].owner, 'blue');
+  const fuelIncome = own.events.find(e => e.type === 'IncomeReceived' && e.team === 'blue').gross.fuel;
+  assert.equal(fuelIncome, 5 + 12, 'the point pays in the same turn start it is taken');
+});

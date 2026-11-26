@@ -8,6 +8,7 @@ Turn-based tuning, read by the tools through `tools/lib/config.js` (`loadConfig`
 - `indirect.json` — indirect-fire classes, barrages, blind fire.
 - `ammo.json` — ammunition per weapon class.
 - `movement.json`, `vision.json`, `combat.json`, `status.json`, `crew.json` — rule tuning read by `src/logic` (D2).
+- `economy.json` — capture points per step, income (base and per point kind), upkeep.
 - `turn.json` — turn reactions: counter fire per enemy turn, which units overwatch and what stops a mover.
 
 - Format: JSON

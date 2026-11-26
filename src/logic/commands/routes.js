@@ -12,6 +12,7 @@ import * as status from '../status/index.js';
 import * as crew from '../crew/index.js';
 import * as lifecycle from '../lifecycle/index.js';
 import * as terrain from '../terrain/index.js';
+import * as economy from '../economy/index.js';
 import { spawnUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { MACHINES, chain, ifUnit, featureSteps, fire, counterFire, overwatchStep } from './steps.js';
@@ -110,6 +111,15 @@ export const ROUTES = {
     unit: true,
     validate: (s, c, d) => lifecycle.validateClearWreck(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'ClearWreck'),
     apply: (s, c, d) => chain(s, [x => terrain.clearWreck(x, d, c.hex), x => turn.spend(x, c.unit, { action: 1 })]),
+  },
+  /** { side, building, sbps, hex }: the new unit stands beside the building and acts from the next own turn. */
+  Produce: {
+    validate: (s, c, d) => economy.validateProduce(s, c, d),
+    apply(s, c, d) {
+      const paid = economy.pay(s, c.side, economy.priceOf(c.sbps, d));
+      const born = spawnUnit(paid.state, { team: c.side, sbps: c.sbps, pos: c.hex }, d);
+      return { state: born.state, events: [ev('UnitProduced', { unit: born.id, team: c.side, sbps: c.sbps, building: c.building })] };
+    },
   },
   EndTurn: {
     apply: (s, c, d, rng) => chain(s, [x => endTurn(x, d, rng), x => startTurn(x, d, rng)]),

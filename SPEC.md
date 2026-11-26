@@ -36,14 +36,20 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 
 ## 3. Points, economy, production
 - A point is captured by holding its zone (VP radius 2, resource points radius 1) through turn-start ticks, never by stepping on a hex (v59).
-- Capture and neutralisation each take 2 ticks of the side's own turn starts: neutral → own = 2 turns; enemy → neutral → own = 4 turns (v139).
-  (Confirmed correct; strength-based capture is planned, section 10.)
+- Capture by strength (D2-8, `data/balance/economy.json`): at each of the side's own turn starts every capturing man adds his
+  squad's CoH3 capture rate (riflemen 1.25, rounded down per unit); 2 points neutralise an enemy point or capture a neutral
+  one, at most one step per tick: neutral → own = 1 turn with 2+ men, enemy → neutral → own = 2 turns (1 man: twice as long).
   Both sides armed in the zone = contested, progress frozen; leaving the zone loses the progress (v59).
 - Who counts: armed, un-pinned infantry / crews capture; pinned infantry and armed vehicles only contest; unarmed vehicles and passengers are ignored (v59).
 - Sectors: a captured point takes its sector; resources pay only while the sector links to the HQ sector through own sectors; VPs always count (v131).
-- Income: HQ base 60 MP; fuel points 12 fuel + 10 MP; munition points 11 munitions + 10 MP (v140, v166).
-- Upkeep: each unit 4 % of its price, at most 40 MP per unit, the excess / 3 paid in fuel; net MP income never below 25 % of gross (v141).
-- Kill bounty: destroying an enemy unit pays max(40, 20 % of its value) MP (`claimKillBounty`) — decided to remove, see section 10.
+- Income: HQ base 60 MP + 5 fuel + 10 munitions; manpower points 70 MP; fuel points 12 fuel + 10 MP; munition points
+  11 munitions + 10 MP; VPs pay nothing (v140, v166, D2-8). Sectors (when the map defines them) as above.
+- Upkeep (D2-8): each active unit 2 % of its manpower price, at most 20 MP per unit, the excess / 3 paid in fuel; net MP income
+  never below 25 % of gross.
+- No kill bounty (removed 2026-11-22).
+- Production (D2-8): an own production building (map `production`) offers the squads listed for its type and the side's
+  faction (`data/rules/production.json`, pilot lists); the unit is paid at once, stands on a free hex beside the building and
+  acts from the next own turn.
 - No reinforcing while engaged (v158).
 - Buildings at CoH3 prices; T1 builds in 1 turn, T2 / T3 in 2 with an engineer-type unit within 2 hexes; a site starts at 50 % HP and produces nothing (v140, v212).
 - Build range: engineers build everything (trench, sandbag, mine, bunker, building, emplacement) 1–2 hexes away, never on their own hex;
@@ -261,10 +267,6 @@ Confirmed 2026-11-25 (rewrite):
   wreck; vehicle wrecks go after 2 turns of work, emplacement wrecks after 1.
 
 Confirmed 2026-11-22:
-- Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn
-  (e.g. 2 men together neutralise an enemy point in one turn instead of 2). Still 2 points per step.
-- Upkeep: 2 % of each unit's price (was 4 %), at most 20 MP per unit (was 40).
-- Remove the kill bounty (MP for destroying an enemy unit).
 - Delete the Wehrmacht Panzerschreck squad (`at_inf`, duplicates Jäger).
 - Annihilation mode gets a dedicated, capturable HQ building (capturing it is a win route next to "no units and cannot deploy").
 

@@ -4,7 +4,7 @@
 
 ## Owns
 - unit runtime state shape `unit.js` with its invariants (`docs/unit-state.md` §4)
-- GameState: { match, map, units, structures, points, teams: { blue, red }, turn, pending, rng }
+- GameState: { match, map, units, points (owner: capture), teams: { team: { faction, resources (owner: economy), rally } }, rng }
 - factories: createMatch(setup, data)
 - selectors: unitAt, unitsOf, teamOf, isEngaged …
 - field ownership `ownership.js`: which system may write each unit field (`docs/unit-state.md` §7); done
