@@ -1,4 +1,5 @@
-// Enforces the layer rules of docs/ARCHITECTURE.md on src/.
+// Enforces the layer rules of docs/ARCHITECTURE.md on src/, and keeps unit ids out of rule code (logic/ decides by tags,
+// traits, classes and flags from data, never by `id === 'sherman_us'`).
 // usage: node tools/check-layers.js [root]   (exit 1 on any violation)
 import fs from 'node:fs';
 import path from 'node:path';
@@ -27,10 +28,31 @@ function where(rel) {
   return { layer: p[1], system: p[1] === 'app' ? 'app' : p[2] };
 }
 
+// Comments and string literals; a comment is matched first, so quotes inside comments are not strings.
+const TOKEN_RE = /\/\*[\s\S]*?\*\/|\/\/[^\n]*|'(?:\\.|[^'\\\n])*'|"(?:\\.|[^"\\\n])*"|`(?:\\.|[^`\\])*`/g;
+
 // Blank out comments and string contents, keeping line breaks, so globals in text are ignored.
 function codeOnly(text) {
-  return text.replace(/\/\*[\s\S]*?\*\/|\/\/[^\n]*|'(?:\\.|[^'\\\n])*'|"(?:\\.|[^"\\\n])*"|`(?:\\.|[^`\\])*`/g,
-    m => m.replace(/[^\n]/g, ' '));
+  return text.replace(TOKEN_RE, m => m.replace(/[^\n]/g, ' '));
+}
+
+/** String literals in code (not in comments), without template literals that interpolate. */
+function* stringLiterals(text) {
+  for (const m of text.matchAll(TOKEN_RE)) {
+    if (m[0][0] === '/' || m[0].includes('${')) continue;
+    yield { value: m[0].slice(1, -1), index: m.index };
+  }
+}
+
+/** Weapon, entity, squad and upgrade ids of the built unit data (data/generated/units.json). */
+export function unitIds(root) {
+  const file = path.join(root, 'data/generated/units.json');
+  const ids = new Set();
+  if (!fs.existsSync(file)) return ids;
+  for (const faction of Object.values(JSON.parse(fs.readFileSync(file, 'utf8')).factions || {})) {
+    for (const kind of ['weapon', 'ebps', 'sbps', 'upgrade']) for (const group of Object.values(faction[kind] || {})) for (const id of Object.keys(group)) ids.add(id);
+  }
+  return ids;
 }
 
 const lineOf = (text, index) => text.slice(0, index).split('\n').length;
@@ -48,6 +70,7 @@ function walk(dir, out = []) {
 export function checkLayers(root) {
   const violations = [];
   const add = (file, line, rule, message) => violations.push({ file, line, rule, message });
+  const ids = unitIds(root);
 
   for (const abs of walk(path.join(root, 'src')).sort()) {
     const rel = path.relative(root, abs).split(path.sep).join('/');
@@ -73,6 +96,11 @@ export function checkLayers(root) {
     if (PURE(rel)) {
       const code = codeOnly(text);
       for (const m of code.matchAll(FORBIDDEN_RE)) add(rel, lineOf(code, m.index), 'global', `${m[1]} is not allowed in pure code`);
+    }
+    if (from.layer === 'logic') {
+      for (const s of stringLiterals(text)) {
+        if (ids.has(s.value)) add(rel, lineOf(text, s.index), 'unit-id', `'${s.value}' is a unit id; decide by tags, traits, classes or flags from data`);
+      }
     }
   }
   return violations;

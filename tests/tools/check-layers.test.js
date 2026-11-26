@@ -71,3 +71,20 @@ test('violations report the line number', () => {
   const root = fixture({ 'src/logic/turn/index.js': '\n\nconst x = window;' });
   assert.equal(checkLayers(root)[0].line, 3);
 });
+
+test('logic may not name a unit id; presentation and comments may', () => {
+  const root = fixture({
+    'data/generated/units.json': JSON.stringify({ factions: { american: {
+      sbps: { vehicles: { sherman_us: {} } }, weapon: { tank_gun: { '75mm_sherman_us': {} } }, ebps: {}, upgrade: {} } } }),
+    'src/logic/combat/index.js': [
+      "// sherman_us used to get a bonus here; 'sherman_us' in a comment is fine",
+      "export const bonus = u => (u.sbps === 'sherman_us' ? 1 : 0);",
+      'export const gun = w => w.id === "75mm_sherman_us";',
+      "export const byTag = u => u.tags.includes('tank');",
+      'export const label = u => `unit ${u.sbps}`;',
+    ].join('\n'),
+    'src/presentation/ui/index.js': "export const icon = 'sherman_us';",
+  });
+  assert.deepEqual(checkLayers(root).map(v => `${v.file}:${v.line} ${v.rule}`),
+    ['src/logic/combat/index.js:2 unit-id', 'src/logic/combat/index.js:3 unit-id']);
+});

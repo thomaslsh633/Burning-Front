@@ -92,8 +92,13 @@ The AI follows the same path from step 3, with commands from `ai.decide` instead
 - No wrappers and no monkey-patching. A behaviour change edits the one function that owns it.
 - Files are named by responsibility, never by version. History lives in `CHANGELOG.md` and git.
 - Presentation never changes GameState; it sends commands through the store (the store freezes state in dev).
+- No unit ids in `logic/`: rules decide by tags, traits, classes and flags from data, never by `id === 'sherman_us'`.
+  `check-layers` rejects any string literal in `logic/` that is a weapon, entity, squad or upgrade id of the built data.
+- Each unit field has one owning system (`src/logic/state/ownership.js`, `docs/unit-state.md` §7). Every system's
+  apply test ends with `assertOwnsOnly('<system>', before, after)` (`tests/helpers/ownership.js`), so writing another
+  system's field fails that system's own tests.
 
-`tools/check-layers.js` enforces the import and global rules; its tests are in `tests/tools/`.
+`tools/check-layers.js` enforces the import, global and unit-id rules; its tests are in `tests/tools/`.
 
 ## Data
 

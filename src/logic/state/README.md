@@ -7,10 +7,12 @@
 - GameState: { match, map, units, structures, points, teams: { blue, red }, turn, pending, rng }
 - factories: createMatch(setup, data)
 - selectors: unitAt, unitsOf, teamOf, isEngaged …
+- field ownership `ownership.js`: which system may write each unit field (`docs/unit-state.md` §7); done
 
 ## Public API (planned, exported from `index.js`)
 - `createMatch(setup, data, seed) → GameState`
 - `selectors (pure functions of state)`
+- `UNIT_FIELD_OWNERS`, `ownerOf(path)`, `changedPaths(a, b)`, `foreignWrites(system, before, after)` — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)
