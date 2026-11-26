@@ -70,9 +70,19 @@
   "coh3stats": {
     "include_named_units": true,
     "exclude": [
-      "team_weapon_parent_ger",
-      "tiger_boss_ger"
+      "team_weapon_parent_ger"
     ],
     "squad_price_from_coh3stats": true
+  },
+  "heroes": {
+    "rule": "unique: at most one per side on the map; never more than one in production at once",
+    "units": [
+      "captain_torch",
+      "stealth_ssf_commandos_torch",
+      "tiger_ace_torch",
+      "tiger_ace_ak",
+      "tiger_boss_ger",
+      "torch_artillery_obice_210_ger"
+    ]
   }
 }

@@ -222,3 +222,10 @@ weapon `class` (overwatch eligibility), `emplace.setup_turns` / `teardown_turns`
 recrewable-vehicle entities (CoH3 `recrewable_ext`: capture blueprint per faction, min crew, max squad size,
 manual abandon), `wreck` (CoH3 `wreck_entity_option`), and `data/rules` tables for suppression thresholds and
 critical chances. These are added to the schemas in data Phases 2–4.
+
+## 9. Status flags
+
+What the HUD marks and rules read is listed in `data/rules/status-flags.json`: each flag is either **stored** in the unit
+(e.g. `reloading`, `repairing`, `engaged`, critical conditions) or **derived** from the six axes and stored values
+(e.g. `emplaced` = stance EMPLACED, `low_ammo` = ammo ≤ share of capacity, `pinned` = morale PINNED). Derived flags are
+never stored twice. Each flag names its owner system, what clears it and its HUD icon priority.

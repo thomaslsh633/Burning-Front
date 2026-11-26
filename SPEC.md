@@ -164,6 +164,16 @@ Confirmed 2026-11-25 (rewrite):
   Every unit coh3stats.com lists with an English name is in the roster too (e.g. Assault Grenadiers, Guastatori, Folgore,
   Goliath, Panzer IV for Afrikakorps); squad price, population and build time come from coh3stats where it has the unit.
 - CoH3 battlegroup units are unlocked by Burning Front's own doctrines, not produced by buildings.
+- Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
+  at most one of each per side (`data/rules/roster.json` heroes).
+- Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,
+  penetration, scatter) × NUM_SHOTS shells; recharge ÷ 10 s → turns (e.g. 81 mm barrage 6 × 100, 2 turns; 105 mm howitzer
+  6 × 160, 6 turns; Hummel 6 × 200, 5 turns). Off-map strikes: CoH3 does not publish their shells; set in doctrine design.
+- Weapon operation rules come from CoH3 weapon behaviour (`data/rules/weapon-flags.json`): ignores blockers, needs sight,
+  anti-air, emplace required / faces target, friendly fire, piercing, hits all on miss / hit, attack ground, targets garrison,
+  sniper kill, replaceable by upgrades, fire on move, reveals on fire.
+- Status flags (`data/rules/status-flags.json`): stored or derived from the six state axes; e.g. reloading, low / out of ammo,
+  repairing / being repaired, emplaced / setting up / packed, overwatch, engaged, criticals, decrewed, hero.
 - Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
   decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).

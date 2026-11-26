@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (barrages, heroes, flags)
+- **Done:** `tools/coh3/barrages.js` → `reports/barrages.md`: 284 barrage abilities, 246 with weapon data, 153 with
+  shells × damage, 38 off-map (shells not published in coh3-data). Heroes included and unique (6). Weapon operation flags
+  `data/rules/weapon-flags.json` (from 1033 weapons' behaviour). Status flags `data/rules/status-flags.json` (37).
+- **Open:** CoH3 barrage ranges are long for our maps (105 mm 300 m = 43 hexes); off-map strike shells to set by hand.
+- **Next:** D1-3 vocab (incl. these flag ids and state names) and validator.
+
 ## 2026-11-25 (coh3stats)
 - **Done:** `tools/coh3stats/fetch.js` → `data/source/coh3stats` (224 multiplayer units: names, squad totals, entities,
   weapon DPS curves, veterancy, upgrades). Catalog: every named coh3stats unit added (+6 german, +11 american, +8 afrika_korps),

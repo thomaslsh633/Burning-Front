@@ -56,6 +56,10 @@ Status codes used in the label tables:
 | M | Units missing from CoH3 production are restored: the 9 v214 units and all 18 remaining British North Africa squads | `roster.json` `restore`; `clone` for missing stats (Australian supply truck cost ← CWT 15 flatbed) |
 | N | CoH3 battlegroup units are unlocked by Burning Front doctrines | catalog flags them `doctrine`; doctrine design assigns them |
 | P | coh3stats.com is the second source: English names and descriptions, squad price / population / build time, roster completeness, and a cross-check of our fire rate | `data/source/coh3stats` (224 units); catalog takes names, prices and every named coh3stats unit; `reports/coh3stats-compare.md` |
+| Q | Hero units are included and unique per side | `roster.json` heroes; sbps `unique` (D from roster) |
+| R | Barrage attack power from CoH3 ability data | ability → weapon item → weapon × `NUM_SHOTS`; `reports/barrages.md` (246 abilities with weapon data, 38 off-map without published shells) |
+| S | Weapon operation flags from CoH3 `behaviour` | `data/rules/weapon-flags.json` (19 used, 12 ignored); weapon `traits` take these ids |
+| T | Status flags | `data/rules/status-flags.json` (37 flags, stored or derived, with owner system and HUD priority) |
 | O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
 
 ---
@@ -97,7 +101,7 @@ Status codes used in the label tables:
 | `trigger` | {on, targets} | mine data | K / A | combat (mines) |
 | `ammo_per_shot` | int | — (default 1) | A | status (ammo) |
 | `reveals_on_fire` | bool | `fog_of_war.reveal_self_on_attack` | K | vision (visibility FSM) |
-| `traits` | vocab[] | `behaviour.piercing`, `can_damage_allies`, `hit_everything_on_*` | K | combat |
+| `traits` | vocab[] | CoH3 `behaviour` → ids in `data/rules/weapon-flags.json` (ignores_blockers, needs_sight, anti_air, friendly_fire, piercing, attack_ground …) | K | combat, vision, crew, skills |
 
 ### 2.2 Shots per turn (decision K, approved with revisions)
 

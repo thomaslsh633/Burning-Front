@@ -95,7 +95,7 @@ export function buildCatalog(dir) {
       });
       units.push({ id, category, source, producers: produced.get(p) ?? [], doctrine: req.some(r => r.includes('/battlegroups/')),
         in_v214: legacyRaw.has(id), clone: roster.clone?.[id] ?? null, members, upgrades: kits,
-        name: cs?.name || null,
+        name: cs?.name || null, hero: (roster.heroes?.units || []).includes(id),
         price: price(cs, members, ebps, csCfg), pop: cs?.cost?.popcap ?? cs?.pop ?? null, build_seconds: cs?.cost?.time_seconds ?? null });
     }
 
@@ -182,7 +182,7 @@ function summary(catalog, commit) {
     L.push('', `## ${theatreLabel(race)}`, '');
     for (const cat of [...new Set(c.units.map(u => u.category))]) {
       L.push(`- **${cat}** (${c.units.filter(u => u.category === cat).length}): ` +
-        c.units.filter(u => u.category === cat).map(u => `${u.id}${u.doctrine ? ' (doctrine)' : ''}${u.source === 'restored' ? ' (restored)' : ''}`).join(', '));
+        c.units.filter(u => u.category === cat).map(u => `${u.id}${u.hero ? ' (hero)' : ''}${u.doctrine ? ' (doctrine)' : ''}${u.source === 'restored' ? ' (restored)' : ''}`).join(', '));
     }
     const back = c.excluded.filter(x => x.in_v214);   // in v214 but neither referenced nor restored
     if (back.length) L.push(`- **excluded, but in v214** (${back.length}): ${back.map(x => x.id).join(', ')}`);

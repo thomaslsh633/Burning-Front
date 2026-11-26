@@ -24,6 +24,7 @@
      ],
      "upgrades": [],
      "name": "Flak 38 Anti-air Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -55,6 +56,7 @@
      ],
      "upgrades": [],
      "name": "Anti-tank Bunker",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -86,6 +88,7 @@
      ],
      "upgrades": [],
      "name": "Flak 36 Anti-tank Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -117,6 +120,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -148,6 +152,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -178,6 +183,7 @@
      ],
      "upgrades": [],
      "name": "MG 42 Bunker",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -217,6 +223,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 540
@@ -247,6 +254,7 @@
      ],
      "upgrades": [],
      "name": "Obice da 210/22 Artillery Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -278,6 +286,7 @@
      ],
      "upgrades": [],
      "name": "Siege Camp",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -309,6 +318,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -339,6 +349,7 @@
      ],
      "upgrades": [],
      "name": "Pantherturm Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -368,6 +379,7 @@
      ],
      "upgrades": [],
      "name": "Obice da 210/22 Artillery Emplacement",
+     "hero": true,
      "price": {
       "cost": {},
       "from": "coh3stats"
@@ -419,6 +431,7 @@
       }
      ],
      "name": "Grenadier Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -466,6 +479,7 @@
      ],
      "upgrades": [],
      "name": "Artillery Officer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -497,6 +511,7 @@
      ],
      "upgrades": [],
      "name": "Coastal Reserves Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -529,6 +544,7 @@
      ],
      "upgrades": [],
      "name": "Fallschirmjäger Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320
@@ -575,6 +591,7 @@
       }
      ],
      "name": "Fallschirmpioneer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -630,6 +647,7 @@
       }
      ],
      "name": "Grenadier Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -685,6 +703,7 @@
       }
      ],
      "name": "Guastatori Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380
@@ -758,6 +777,7 @@
       }
      ],
      "name": "Jäger Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -795,6 +815,7 @@
      ],
      "upgrades": [],
      "name": "Panzergrenadier Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -831,6 +852,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 288
@@ -888,6 +910,7 @@
       }
      ],
      "name": "Pioneer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 125
@@ -922,6 +945,7 @@
      ],
      "upgrades": [],
      "name": "Sniper",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320
@@ -964,6 +988,7 @@
       }
      ],
      "name": "Stoßtruppen Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380
@@ -1014,6 +1039,7 @@
       }
      ],
      "name": "Sturmpioneer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -1071,6 +1097,7 @@
       }
      ],
      "name": "Flak 30 Anti-aircraft Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -1118,6 +1145,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -1176,6 +1204,7 @@
       }
      ],
      "name": "Pak 40 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -1223,6 +1252,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -1272,6 +1302,7 @@
       }
      ],
      "name": "LG40 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -1328,6 +1359,7 @@
       }
      ],
      "name": "MG 42 Machine Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -1375,6 +1407,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -1422,6 +1455,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -1470,6 +1504,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -1526,6 +1561,7 @@
       }
      ],
      "name": "GrW 34 Mortar Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -1584,6 +1620,7 @@
       }
      ],
      "name": "Nebelwerfer 42 Rocket Launcher Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -1617,6 +1654,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -1658,6 +1696,7 @@
       }
      ],
      "name": "8 Rad Armored Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -1714,6 +1753,7 @@
       }
      ],
      "name": "221 Scout Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -1760,6 +1800,7 @@
       }
      ],
      "name": "Borgward IV Wanze Demolition Vehicle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -1823,6 +1864,7 @@
       }
      ],
      "name": "Sturmpanzer IV Brummbär",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -1866,6 +1908,7 @@
       }
      ],
      "name": "251/16 Flammpanzerwagen",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -1929,6 +1972,7 @@
       }
      ],
      "name": "251 Medium Carrier",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -1969,6 +2013,7 @@
       }
      ],
      "name": "Medical Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -2030,6 +2075,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -2073,6 +2119,7 @@
       }
      ],
      "name": "Stummel Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -2116,6 +2163,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -2156,6 +2204,7 @@
       }
      ],
      "name": "!Hummel Self-Propelled Artillery",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -2225,6 +2274,7 @@
       }
      ],
      "name": "StuG III G Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -2264,6 +2314,7 @@
       }
      ],
      "name": "Kettenkrad Recon Vehicle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 160
@@ -2306,6 +2357,7 @@
       }
      ],
      "name": "King Tiger Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -2347,6 +2399,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -2403,6 +2456,7 @@
       }
      ],
      "name": "Marder III M Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -2437,6 +2491,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -2480,6 +2535,7 @@
       }
      ],
      "name": "Panther Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 450,
@@ -2523,6 +2579,7 @@
       }
      ],
      "name": "Command Panzer IV Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -2595,6 +2652,7 @@
       }
      ],
      "name": "Panzer IV Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -2626,6 +2684,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -2682,6 +2741,7 @@
       }
      ],
      "name": "221 Scout Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -2727,6 +2787,7 @@
       }
      ],
      "name": "Tiger Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -2783,6 +2844,7 @@
       }
      ],
      "name": "Wirbelwind Flakpanzer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -2831,6 +2893,7 @@
       }
      ],
      "name": "StuG III D Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -2902,6 +2965,7 @@
       }
      ],
      "name": "StuG III G Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -2937,6 +3001,7 @@
      ],
      "upgrades": [],
      "name": "Sturmtiger Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 600,
@@ -2945,6 +3010,50 @@
       "from": "coh3stats"
      },
      "pop": 20,
+     "build_seconds": 60
+    },
+    {
+     "id": "tiger_boss_ger",
+     "category": "vehicles",
+     "source": "coh3stats",
+     "producers": [],
+     "doctrine": false,
+     "in_v214": false,
+     "clone": null,
+     "members": [
+      {
+       "entity": "tiger_boss_ger",
+       "count": 1,
+       "category": "vehicles",
+       "hp": 1200,
+       "weapons": [
+        "88mm_tiger_ger",
+        "mg34_coaxial_tiger_i_ger",
+        "mg34_hull_tiger_i_ger",
+        "tank_smoke_ak",
+        "mg42_panzer_iv_ger"
+       ]
+      }
+     ],
+     "upgrades": [
+      {
+       "id": "mg42_tiger_ger",
+       "cost": {
+        "munition": 50
+       },
+       "weapon": null
+      }
+     ],
+     "name": "Tiger Heavy Tank",
+     "hero": true,
+     "price": {
+      "cost": {
+       "manpower": 720,
+       "fuel": 200
+      },
+      "from": "coh3stats"
+     },
+     "pop": 24,
      "build_seconds": 60
     },
     {
@@ -2980,6 +3089,7 @@
       }
      ],
      "name": "Tiger Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -3009,6 +3119,7 @@
      ],
      "upgrades": [],
      "name": "2.5-tonne Cargo Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -3038,6 +3149,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -3067,6 +3179,7 @@
      ],
      "upgrades": [],
      "name": "2.5-tonne Utility Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -3096,6 +3209,7 @@
      ],
      "upgrades": [],
      "name": "!2.5-tonne Logistics Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -3125,6 +3239,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -3165,6 +3280,7 @@
       }
      ],
      "name": "Wespe Self-propelled Artillery",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -3221,6 +3337,7 @@
       }
      ],
      "name": "Wirbelwind Flakpanzer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -3275,6 +3392,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -3290,12 +3408,6 @@
     {
      "id": "team_weapon_parent_ger",
      "category": "team_weapons",
-     "reason": "excluded in roster.json",
-     "in_v214": false
-    },
-    {
-     "id": "tiger_boss_ger",
-     "category": "vehicles",
      "reason": "excluded in roster.json",
      "in_v214": false
     },
@@ -5836,6 +5948,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -5866,6 +5979,7 @@
      ],
      "upgrades": [],
      "name": "!Goon Gun Pit",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -5896,6 +6010,7 @@
      ],
      "upgrades": [],
      "name": "!HMG .50cal Fighting Position",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 100
@@ -5926,6 +6041,7 @@
      ],
      "upgrades": [],
      "name": "HMG Fighting Position",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 100
@@ -5956,6 +6072,7 @@
      ],
      "upgrades": [],
      "name": "M2A1 Howitzer Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -5987,6 +6104,7 @@
      ],
      "upgrades": [],
      "name": "Mortar Pit",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -6015,6 +6133,7 @@
      ],
      "upgrades": [],
      "name": "Tunnel Hideout",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 50
@@ -6043,6 +6162,7 @@
      ],
      "upgrades": [],
      "name": "Tunnel Network",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 50
@@ -6071,6 +6191,7 @@
      ],
      "upgrades": [],
      "name": "Tunnel Hideout",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 50
@@ -6101,6 +6222,7 @@
      ],
      "upgrades": [],
      "name": "Tourelle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -6161,6 +6283,7 @@
       }
      ],
      "name": "Artillery Observer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -6224,6 +6347,7 @@
       }
      ],
      "name": "Assault Engineer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -6267,6 +6391,7 @@
       }
      ],
      "name": "Bazooka Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -6309,6 +6434,7 @@
       }
      ],
      "name": "!Brazilian Infantry",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -6353,6 +6479,7 @@
      ],
      "upgrades": [],
      "name": "!Brazilian Lieutenant Retinue",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -6408,6 +6535,7 @@
       }
      ],
      "name": "Major George Russo",
+     "hero": true,
      "price": {
       "cost": {
        "manpower": 150
@@ -6469,6 +6597,7 @@
       }
      ],
      "name": "Captain Retinue",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -6526,6 +6655,7 @@
       }
      ],
      "name": "Engineer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 180
@@ -6589,6 +6719,7 @@
       }
      ],
      "name": "French Rifle Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -6640,6 +6771,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 140
@@ -6707,6 +6839,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 210
@@ -6747,6 +6880,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 310
@@ -6796,6 +6930,7 @@
       }
      ],
      "name": "Paratrooper Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380
@@ -6853,6 +6988,7 @@
       }
      ],
      "name": "Pathfinder Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -6917,6 +7053,7 @@
       }
      ],
      "name": "Ranger Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 425
@@ -6972,6 +7109,7 @@
       }
      ],
      "name": "Resistance Fighter Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 285
@@ -7028,6 +7166,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 285
@@ -7114,6 +7253,7 @@
       }
      ],
      "name": "Riflemen Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -7147,6 +7287,7 @@
      ],
      "upgrades": [],
      "name": "Saboteur Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 210
@@ -7197,6 +7338,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -7258,6 +7400,7 @@
       }
      ],
      "name": "Scout Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 160
@@ -7291,6 +7434,7 @@
      ],
      "upgrades": [],
      "name": "Sniper",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320
@@ -7330,6 +7474,7 @@
       }
      ],
      "name": "SSB Sniper",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -7362,6 +7507,7 @@
      ],
      "upgrades": [],
      "name": "SSF Commando Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360
@@ -7405,6 +7551,7 @@
       }
      ],
      "name": "SSF Commando Squad",
+     "hero": true,
      "price": {
       "cost": {
        "manpower": 360
@@ -7452,6 +7599,7 @@
       }
      ],
      "name": "M5 3-inch Anti-tank Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -7501,6 +7649,7 @@
       }
      ],
      "name": "M1 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -7551,6 +7700,7 @@
       }
      ],
      "name": "M1 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -7605,6 +7755,7 @@
       }
      ],
      "name": "M1919 Machine Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -7661,6 +7812,7 @@
       }
      ],
      "name": "M1919 Machine Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -7708,6 +7860,7 @@
       }
      ],
      "name": "M2HB .50cal Machine Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -7757,6 +7910,7 @@
       }
      ],
      "name": "M1 Mortar Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -7804,6 +7958,7 @@
       }
      ],
      "name": "M1 Pack Howitzer Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 315
@@ -7832,6 +7987,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -7876,6 +8032,7 @@
       }
      ],
      "name": "M24 Chaffee Light Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270,
@@ -7911,6 +8068,7 @@
      ],
      "upgrades": [],
      "name": "Char B1 Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -7958,6 +8116,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -8007,6 +8166,7 @@
       }
      ],
      "name": "M8 Greyhound Armored Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -8067,6 +8227,7 @@
       }
      ],
      "name": "M3 75 mm Gun Motor Carriage",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 265,
@@ -8149,6 +8310,7 @@
       }
      ],
      "name": "M3 Assault Carrier",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -8205,6 +8367,7 @@
       }
      ],
      "name": "M3 Armored Medical Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270,
@@ -8265,6 +8428,7 @@
       }
      ],
      "name": "M16 Multiple Gun Motor Carriage",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -8326,6 +8490,7 @@
       }
      ],
      "name": "M3 Armored Personnel Carrier",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -8367,6 +8532,7 @@
       }
      ],
      "name": "M18 Hellcat Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -8404,6 +8570,7 @@
       }
      ],
      "name": "M29 Weasel Recon Vehicle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -8436,6 +8603,7 @@
      ],
      "upgrades": [],
      "name": "M26 Pershing Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -8467,6 +8635,7 @@
      ],
      "upgrades": [],
      "name": "!Priest Kangaroo Carrier",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -8499,6 +8668,7 @@
      ],
      "upgrades": [],
      "name": "M7 Priest SPG",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 420,
@@ -8530,6 +8700,7 @@
      ],
      "upgrades": [],
      "name": "M31 Recovery Vehicle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -8563,6 +8734,7 @@
      ],
      "upgrades": [],
      "name": "M8 Scott SPG",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -8607,6 +8779,7 @@
       }
      ],
      "name": "M4A1(76) Sherman Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -8656,6 +8829,7 @@
       }
      ],
      "name": "M4A1(76) Sherman Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -8702,6 +8876,7 @@
       }
      ],
      "name": "M4(105) Sherman Bulldozer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -8748,6 +8923,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -8792,6 +8968,7 @@
       }
      ],
      "name": "M4A3E8 Sherman Easy Eight",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 375,
@@ -8835,6 +9012,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -8880,6 +9058,7 @@
       }
      ],
      "name": "M4A1 Sherman Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -8923,6 +9102,7 @@
       }
      ],
      "name": "M4A1 Sherman Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -8960,6 +9140,7 @@
      ],
      "upgrades": [],
      "name": "M4A1 Sherman Whizbang",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 390,
@@ -9017,6 +9198,7 @@
       }
      ],
      "name": "M3 Stuart Light Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -9068,6 +9250,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -9100,6 +9283,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 180
@@ -9146,6 +9330,7 @@
       }
      ],
      "name": "1⁄4-ton 4x4 Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -9192,6 +9377,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -9220,6 +9406,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -11931,6 +12118,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -11961,6 +12149,7 @@
      ],
      "upgrades": [],
      "name": "HMG Nest",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -11991,6 +12180,7 @@
      ],
      "upgrades": [],
      "name": "Hardpoint",
+     "hero": false,
      "price": {
       "cost": {
        "munition": 50
@@ -12035,6 +12225,7 @@
       }
      ],
      "name": "Assault Grenadier Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -12074,6 +12265,7 @@
       }
      ],
      "name": "Bersaglieri Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -12128,6 +12320,7 @@
       }
      ],
      "name": "Folgore Paratrooper Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 396
@@ -12169,6 +12362,7 @@
       }
      ],
      "name": "Guastatori Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 420
@@ -12219,6 +12413,7 @@
       }
      ],
      "name": "Kriegsmariner Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -12280,6 +12475,7 @@
       }
      ],
      "name": "Panzergrenadier Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -12330,6 +12526,7 @@
       }
      ],
      "name": "Panzerjäger Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -12408,6 +12605,7 @@
       }
      ],
      "name": "Panzerpioneer Squad",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -12457,6 +12655,7 @@
       }
      ],
      "name": "Pak 38 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -12504,6 +12703,7 @@
       }
      ],
      "name": "Flak 36 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -12554,6 +12754,7 @@
       }
      ],
      "name": "MG34 Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -12601,6 +12802,7 @@
       }
      ],
      "name": "Cannone da 105/28 Howitzer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -12650,6 +12852,7 @@
       }
      ],
      "name": "le.IG 18 Support Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320
@@ -12697,6 +12900,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -12739,6 +12943,7 @@
       }
      ],
      "name": "8 Rad Armored Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -12779,6 +12984,7 @@
       }
      ],
      "name": "Command 8 Rad Armored Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -12820,6 +13026,7 @@
       }
      ],
      "name": "254 Reconnaissance Tractor",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -12863,6 +13070,7 @@
       }
      ],
      "name": "Elefant Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 600,
@@ -12892,6 +13100,7 @@
      ],
      "upgrades": [],
      "name": "Goliath Demolition Vehicle",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 75,
@@ -12933,6 +13142,7 @@
       }
      ],
      "name": "250/9 Armored Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 230,
@@ -12994,6 +13204,7 @@
       }
      ],
      "name": "250 Light Carrier",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 230
@@ -13033,6 +13244,7 @@
       }
      ],
      "name": "Mortar Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -13071,6 +13283,7 @@
       }
      ],
      "name": "250/3 Funkpanzerwagen",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -13113,6 +13326,7 @@
       }
      ],
      "name": "Walking Stuka Rocket Launcher",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13155,6 +13369,7 @@
       }
      ],
      "name": "Flakvierling Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -13197,6 +13412,7 @@
       }
      ],
      "name": "18-tonne Recovery Half-track",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -13244,6 +13460,7 @@
       }
      ],
      "name": "Flak 36 Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -13285,6 +13502,7 @@
       }
      ],
      "name": "Kradschützen Motorcycle Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 180
@@ -13340,6 +13558,7 @@
       }
      ],
      "name": "L6/40 Light Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -13382,6 +13601,7 @@
       }
      ],
      "name": "L6/40 Light Flame Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220,
@@ -13440,6 +13660,7 @@
       }
      ],
      "name": "Carro Armato M13/40 Light Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -13482,6 +13703,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13524,6 +13746,7 @@
       }
      ],
      "name": "Marder III Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -13560,6 +13783,7 @@
      ],
      "upgrades": [],
      "name": "!P26/40 Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13601,6 +13825,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13652,6 +13877,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340,
@@ -13713,6 +13939,7 @@
       }
      ],
      "name": "Panzer III L Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13772,6 +13999,7 @@
       }
      ],
      "name": "Panzer III N Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -13817,6 +14045,7 @@
       }
      ],
      "name": "Flammpanzer III Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -13875,6 +14104,7 @@
       }
      ],
      "name": "Panzer IV Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -13919,6 +14149,7 @@
       }
      ],
      "name": "Command Panzer IV Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -13970,6 +14201,7 @@
       }
      ],
      "name": "Semovente da 75/18 Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -14027,6 +14259,7 @@
       }
      ],
      "name": "StuG III G Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -14086,6 +14319,7 @@
       }
      ],
      "name": "StuG III D Assault Gun",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -14136,6 +14370,7 @@
       }
      ],
      "name": "Tiger Ace Heavy Tank",
+     "hero": true,
      "price": {
       "cost": {
        "manpower": 720,
@@ -14200,6 +14435,7 @@
       }
      ],
      "name": "Tiger Ace Heavy Tank",
+     "hero": true,
      "price": {
       "cost": {
        "manpower": 720,
@@ -14259,6 +14495,7 @@
       }
      ],
      "name": "Tiger Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -14305,6 +14542,7 @@
       }
      ],
      "name": "2.5-tonne Utility Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -14346,6 +14584,7 @@
       }
      ],
      "name": "2.5-tonne Medical Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -16599,6 +16838,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -16629,6 +16869,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 180,
@@ -16660,6 +16901,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -16691,6 +16933,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -16725,6 +16968,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400
@@ -16783,6 +17027,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -16857,6 +17102,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -16904,6 +17150,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -16951,6 +17198,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 190
@@ -17001,6 +17249,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -17051,6 +17300,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 310
@@ -17098,6 +17348,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 290
@@ -17137,6 +17388,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -17186,6 +17438,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -17233,6 +17486,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -17282,6 +17536,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -17329,6 +17584,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -17376,6 +17632,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -17408,6 +17665,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -17441,6 +17699,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -17474,6 +17733,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 690,
@@ -17507,6 +17767,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 690,
@@ -17550,6 +17811,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 600,
@@ -17593,6 +17855,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 460,
@@ -17639,6 +17902,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -17672,6 +17936,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250
@@ -17704,6 +17969,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -17739,6 +18005,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -17784,6 +18051,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -17818,6 +18086,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -17869,6 +18138,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -17905,6 +18175,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -19536,6 +19807,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 50
@@ -19566,6 +19838,7 @@
      ],
      "upgrades": [],
      "name": "17-pounder Anti-tank Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -19597,6 +19870,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 150
@@ -19627,6 +19901,7 @@
      ],
      "upgrades": [],
      "name": "Bofors Anti-air Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -19658,6 +19933,7 @@
      ],
      "upgrades": [],
      "name": "HMG Nest",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200
@@ -19688,6 +19964,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -19719,6 +19996,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -19750,6 +20028,7 @@
      ],
      "upgrades": [],
      "name": "B.L. 5.5-Inch Artillery Emplacement",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -19792,6 +20071,7 @@
       }
      ],
      "name": "Australian Light Infantry Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -19844,6 +20124,7 @@
       }
      ],
      "name": "Canadian Shock Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360
@@ -19876,6 +20157,7 @@
      ],
      "upgrades": [],
      "name": "Commando Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400
@@ -19907,6 +20189,7 @@
      ],
      "upgrades": [],
      "name": "Commando Support Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -19943,6 +20226,7 @@
      ],
      "upgrades": [],
      "name": "Foot Guards Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400
@@ -19992,6 +20276,7 @@
       }
      ],
      "name": "Gurkha Rifles Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360
@@ -20037,6 +20322,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300
@@ -20065,6 +20351,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 168
@@ -20120,6 +20407,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 156
@@ -20150,6 +20438,7 @@
      ],
      "upgrades": [],
      "name": "Polish Lancer Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320
@@ -20223,6 +20512,7 @@
       }
      ],
      "name": "Royal Engineer Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 210
@@ -20256,6 +20546,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 350
@@ -20286,6 +20577,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -20326,6 +20618,7 @@
       }
      ],
      "name": "SSB Commando Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 270
@@ -20365,6 +20658,7 @@
       }
      ],
      "name": "SSB Sniper",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 340
@@ -20444,6 +20738,7 @@
       }
      ],
      "name": "Infantry Section",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260
@@ -20491,6 +20786,7 @@
       }
      ],
      "name": "17-pounder Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -20540,6 +20836,7 @@
       }
      ],
      "name": "2-pounder Light Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 290
@@ -20588,6 +20885,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -20638,6 +20936,7 @@
       }
      ],
      "name": "6-pounder Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280
@@ -20685,6 +20984,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 290
@@ -20732,6 +21032,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 220
@@ -20779,6 +21080,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -20828,6 +21130,7 @@
       }
      ],
      "name": "Vickers Machine Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -20876,6 +21179,7 @@
       }
      ],
      "name": "Land Mattress Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -20924,6 +21228,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -20973,6 +21278,7 @@
       }
      ],
      "name": "ML 3-inch Mortar Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240
@@ -21020,6 +21326,7 @@
       }
      ],
      "name": "ML 4.2-inch Heavy Mortar Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 315
@@ -21067,6 +21374,7 @@
       }
      ],
      "name": "M1 Pack Howitzer Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 315
@@ -21097,6 +21405,7 @@
      ],
      "upgrades": [],
      "name": "Archer Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -21132,6 +21441,7 @@
      ],
      "upgrades": [],
      "name": "CMP 15cwt Truck",
+     "hero": false,
      "price": {
       "cost": {},
       "from": "coh3stats"
@@ -21162,6 +21472,7 @@
      ],
      "upgrades": [],
      "name": "Bishop Self-propelled Artillery",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -21199,6 +21510,7 @@
      ],
      "upgrades": [],
      "name": "Centaur IV Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -21232,6 +21544,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 460,
@@ -21275,6 +21588,7 @@
       }
      ],
      "name": "Churchill IV Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -21306,6 +21620,7 @@
      ],
      "upgrades": [],
      "name": "!Churchill ARV",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 400,
@@ -21341,6 +21656,7 @@
      ],
      "upgrades": [],
      "name": "Churchill AVRE Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 690,
@@ -21374,6 +21690,7 @@
      ],
      "upgrades": [],
      "name": "Churchill Black Prince Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 720,
@@ -21407,6 +21724,7 @@
      ],
      "upgrades": [],
      "name": "Churchill Crocodile Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 600,
@@ -21442,6 +21760,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 440,
@@ -21475,6 +21794,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 520,
@@ -21507,6 +21827,7 @@
      ],
      "upgrades": [],
      "name": "Crusader III Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -21540,6 +21861,7 @@
      ],
      "upgrades": [],
      "name": "Crusader AA Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -21582,6 +21904,7 @@
       }
      ],
      "name": "Crusader II Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 300,
@@ -21611,6 +21934,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -21642,6 +21966,7 @@
      ],
      "upgrades": [],
      "name": "CMP 15cwt Anti-air Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -21688,6 +22013,7 @@
       }
      ],
      "name": "CMP 15cwt Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -21717,6 +22043,7 @@
      ],
      "upgrades": [],
      "name": "CMP 15cwt Medical Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 200,
@@ -21761,6 +22088,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -21792,6 +22120,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 240,
@@ -21824,6 +22153,7 @@
      ],
      "upgrades": [],
      "name": "2-pounder LRDG Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -21866,6 +22196,7 @@
       }
      ],
      "name": "30cwt LRDG Truck",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 250,
@@ -21899,6 +22230,7 @@
      ],
      "upgrades": [],
      "name": "Dingo Light Scout Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 265
@@ -21931,6 +22263,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -21966,6 +22299,7 @@
      ],
      "upgrades": [],
      "name": "M3 Grant Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -22016,6 +22350,7 @@
       }
      ],
      "name": "Humber Armored Car",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -22047,6 +22382,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 280,
@@ -22076,6 +22412,7 @@
      ],
      "upgrades": [],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -22110,6 +22447,7 @@
      ],
      "upgrades": [],
      "name": "Matilda II Heavy Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -22156,6 +22494,7 @@
       }
      ],
      "name": "17-pounder Anti-tank Gun Team",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 360,
@@ -22189,6 +22528,7 @@
      ],
      "upgrades": [],
      "name": "M7B1 Priest Self-propelled Artillery",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 320,
@@ -22232,6 +22572,7 @@
       }
      ],
      "name": "M4A1 Sherman Medium Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 380,
@@ -22275,6 +22616,7 @@
       }
      ],
      "name": "Sherman VC Firefly Tank Destroyer",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 440,
@@ -22324,6 +22666,7 @@
       }
      ],
      "name": null,
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
@@ -22382,6 +22725,7 @@
       }
      ],
      "name": "M3 Stuart Light Tank",
+     "hero": false,
      "price": {
       "cost": {
        "manpower": 260,
