@@ -40,7 +40,8 @@ export function buildCatalog(dir) {
   const sbps = indexKind(dir, 'sbps', r => `sbps/races/${r}`);
   const weapons = indexKind(dir, 'weapon', r => `weapon/${r}`);
   const upgrades = indexKind(dir, 'upgrade', r => `upgrade/${r}`);
-  const fireCfg = JSON.parse(fs.readFileSync(path.join(dir, '../../balance/fire-rate.json'), 'utf8'));
+  const fireCfg = { ...JSON.parse(fs.readFileSync(path.join(dir, '../../balance/fire-rate.json'), 'utf8')),
+    indirect: JSON.parse(fs.readFileSync(path.join(dir, '../../balance/indirect.json'), 'utf8')) };
   const roster = JSON.parse(fs.readFileSync(path.join(dir, '../../rules/roster.json'), 'utf8'));
   // coh3stats.com unit statistics (data/source/coh3stats, tools/coh3stats/fetch.js): names, squad price / pop / time
   const statsOf = race => { const f = path.join(dir, '../coh3stats', `${race}.json`); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {}; };
@@ -106,7 +107,7 @@ export function buildCatalog(dir) {
       if (!used.has(lastPart(p)) || listed.has(lastPart(p))) continue;
       listed.add(lastPart(p));
       const category = w.path[w.path.length - 2] ?? w.path[0];
-      const fr = fireRate(w.rec.weapon_bag, category, fireCfg);
+      const fr = fireRate(w.rec.weapon_bag, category, fireCfg, lastPart(p));
       weaponList.push({ id: lastPart(p), category, class: w.rec.weapon_bag.weapon_class ?? '', rule: fr.rule,
         shots: fr.shots_per_turn, damage: fr.damage_per_shot, reload_turns: fr.reload_turns, accuracy_scale: fr.accuracy_scale });
     }

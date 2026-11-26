@@ -38,7 +38,8 @@ export function bandDistances(bag) {
 }
 
 function main() {
-  const fireCfg = JSON.parse(fs.readFileSync(path.join(root, 'data/balance/fire-rate.json'), 'utf8'));
+  const fireCfg = { ...JSON.parse(fs.readFileSync(path.join(root, 'data/balance/fire-rate.json'), 'utf8')),
+    indirect: JSON.parse(fs.readFileSync(path.join(root, 'data/balance/indirect.json'), 'utf8')) };
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'reports/catalog.json'), 'utf8')).catalog;
   const ebps = indexKind(dir, 'ebps', r => `ebps/races/${r}`);
   const weapons = indexKind(dir, 'weapon', r => `weapon/${r}`);
@@ -81,7 +82,7 @@ function main() {
         const rec = weaponById.get(w.id);
         if (!rec || !w.dps?.length || r.dps.some(x => x.weapon === w.id)) continue;
         const bag = rec.rec.weapon_bag, category = rec.path[rec.path.length - 2] ?? rec.path[0];
-        const dmg = avg(bag.damage), dist = bandDistances(bag), fr = fireRate(bag, category, fireCfg);
+        const dmg = avg(bag.damage), dist = bandDistances(bag), fr = fireRate(bag, category, fireCfg, w.id);
         const row = { weapon: w.id, name: w.name, unit: id, rule: fr.rule, bands: {} };
         for (const b of BANDS) {
           const acc = bag.accuracy?.[b] ?? 1, theirs = curveAt(w.dps, dist[b]);

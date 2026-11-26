@@ -169,6 +169,15 @@ Confirmed 2026-11-25 (rewrite):
 - Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,
   penetration, scatter) × NUM_SHOTS shells; recharge ÷ 10 s → turns (e.g. 81 mm barrage 6 × 100, 2 turns; 105 mm howitzer
   6 × 160, 6 turns; Hummel 6 × 200, 5 turns). Off-map strikes: CoH3 does not publish their shells; set in doctrine design.
+- Indirect fire for turn play (`data/balance/indirect.json`), normal fire and barrages alike: one volley every N turns —
+  mortars 1, Priest / Hummel / Wespe (and Bishop) 1, light guns 1, 105 mm / 155-class howitzers and Obice 2, Nebelwerfer
+  and other rockets 2. Shells per volley = CoH3 damage rate over N turns ÷ CoH3 damage per shell, rounded up (barrages:
+  CoH3 shells × N × 10 s ÷ CoH3 recharge, never more than CoH3), so a faster cadence fires fewer shells; shell damage stays
+  CoH3; accuracy × carries the rounding. Range = CoH3 metres ÷ 7 capped: mortar 12, light 14, SPG 16, rockets 16, heavy 18.
+  Spread: mortars and light guns land on the aimed hex; SPGs and heavy howitzers put each shell on a random hex within 1
+  (7 hexes), rockets within 2 (19 hexes); on the hex where it lands the shell rolls accuracy against the units there.
+  Examples: 81 mm barrage 3 shells every turn; 105 mm barrage 2 shells every 2 turns over 7 hexes; Hummel barrage 2 shells
+  every turn at accuracy ×0.67.
 - Weapon operation rules come from CoH3 weapon behaviour (`data/rules/weapon-flags.json`): ignores blockers, needs sight,
   anti-air, emplace required / faces target, friendly fire, piercing, hits all on miss / hit, attack ground, targets garrison,
   sniper kill, replaceable by upgrades, fire on move, reveals on fire.

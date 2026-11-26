@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (indirect fire for turn play)
+- **Done:** `data/balance/indirect.json` + `tools/import-coh3/indirect.js` (tested): one volley every N turns per class
+  (mortar / SPG / light 1, heavy / rocket 2), shells from the CoH3 rate over N turns (fewer shells for faster cadence),
+  CoH3 shell damage, accuracy carries rounding, range capped (12–18 hexes), spread 0 / 1 / 2 hexes. Applied to normal fire
+  (fire-rate rule) and barrage abilities (`reports/barrages.md` game columns).
+- **Next:** D1-3 vocab and validator.
+
 ## 2026-11-26 (barrages, heroes, flags)
 - **Done:** `tools/coh3/barrages.js` → `reports/barrages.md`: 284 barrage abilities, 246 with weapon data, 153 with
   shells × damage, 38 off-map (shells not published in coh3-data). Heroes included and unique (6). Weapon operation flags

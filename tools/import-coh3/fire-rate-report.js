@@ -8,7 +8,8 @@ import { records } from '../coh3/census.js';
 import { fireRate } from './fire-rate.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const cfg = JSON.parse(fs.readFileSync(path.join(root, 'data/balance/fire-rate.json'), 'utf8'));
+const cfg = { ...JSON.parse(fs.readFileSync(path.join(root, 'data/balance/fire-rate.json'), 'utf8')),
+  indirect: JSON.parse(fs.readFileSync(path.join(root, 'data/balance/indirect.json'), 'utf8')) };
 const source = JSON.parse(fs.readFileSync(path.join(root, 'data/source/coh3/SOURCE.json'), 'utf8'));
 
 const rows = [];
@@ -19,7 +20,7 @@ for (const race of RACES) {
     if (cfg.skip_categories.some(s => p.includes(s)) || p[0] === 'campaign') continue;
     const bag = rec.weapon_bag;
     rows.push({ race, id: p[p.length - 1], category, class: bag.weapon_class ?? '', damage: ((bag.damage?.min ?? 0) + (bag.damage?.max ?? 0)) / 2,
-      ...fireRate(bag, category, cfg) });
+      ...fireRate(bag, category, cfg, p[p.length - 1]) });
   }
 }
 

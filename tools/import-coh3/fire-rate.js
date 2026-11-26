@@ -16,6 +16,8 @@
 //   ability      artillery slower than min_raw or needing more than max_reload_turns: fired by abilities only.
 //   per_use      grenades, mines: 1 shot per use, CoH3 damage.
 
+import { classOf, normalFire } from './indirect.js';
+
 const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
 const mult = (m, band) => (m && typeof m[band] === 'number' ? m[band] : 1);
 const isTrue = v => v === 'True' || v === true;
@@ -66,7 +68,7 @@ export function volley(raw, damage, tolerance, maxMultiplier) {
 }
 
 /** Whole shots, damage per shot and reload for one CoH3 weapon_bag in subcategory `category`. */
-export function fireRate(bag, category, cfg) {
+export function fireRate(bag, category, cfg, id = '') {
   const damage = avg(bag.damage);
   const bands = cfg.bands;
   const raw = Object.fromEntries(bands.map(b => [b, rawShots(bag, b, cfg.window_seconds)]));
@@ -82,6 +84,14 @@ export function fireRate(bag, category, cfg) {
     const reload = minRaw > 0 && minRaw < 1 ? Math.max(0, Math.floor(1 / minRaw) - 1) : 0;
     if (minRaw < a.min_raw || reload > a.max_reload_turns) {
       return { ...out, rule: 'ability', shots_per_turn: each(() => 1), damage_per_shot: each(() => damage) };
+    }
+    // indirect class cadence (data/balance/indirect.json): one volley every usage_turns, spread, range cap
+    const cls = cfg.indirect ? classOf(id, cfg.indirect) : null;
+    if (cls) {
+      const per = each(b => normalFire(raw[b], cls));
+      return { ...out, indirect_class: cls.id, shots_per_turn: each(b => per[b].shells), damage_per_shot: each(() => damage),
+        reload_turns: cls.usage_turns - 1, accuracy_scale: each(b => per[b].accuracy_scale), spread_hex: cls.spread_hex,
+        range_hex: Math.min(Math.round((bag.range?.max ?? 0) / 7), cls.range_cap_hex) };
     }
     const shells = each(b => (minRaw < 1 ? 1 : Math.max(1, Math.ceil(raw[b] - 0.02))));
     const game = b => shells[b] / (reload + 1);

@@ -1,0 +1,10 @@
+{
+  "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC §10). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time ÷ CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres ÷ 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins.",
+  "classes": {
+    "mortar":      { "patterns": ["mortar", "grw", "4_2"], "usage_turns": 1, "range_cap_hex": 12, "spread_hex": 0 },
+    "spg":         { "patterns": ["priest", "hummel", "wespe", "bishop", "sexton"], "usage_turns": 1, "range_cap_hex": 16, "spread_hex": 1 },
+    "rocket":      { "patterns": ["nebelwerfer", "whizbang", "land_mattress", "stuka", "calliope", "rocket"], "usage_turns": 2, "range_cap_hex": 16, "spread_hex": 2 },
+    "heavy":       { "patterns": ["105mm_howitzer", "howitzer_105", "cannone_da_105", "105mm_cannone", "bl_5_5", "5_5", "155mm", "150mm", "obice", "210", "howitzer_25pdr", "25pdr"], "usage_turns": 2, "range_cap_hex": 18, "spread_hex": 1 },
+    "light":       { "patterns": ["pack_howitzer", "leig", "75mm_howitzer", "scott", "stummel", "halftrack_75mm"], "usage_turns": 1, "range_cap_hex": 14, "spread_hex": 0 }
+  }
+}

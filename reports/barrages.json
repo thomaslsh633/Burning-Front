@@ -1720,7 +1720,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "german",
@@ -1856,7 +1866,17 @@
     "range_max_m": 275
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 1,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 18
+  }
  },
  {
   "race": "german",
@@ -1902,7 +1922,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.89,
+   "spread_hex": 1,
+   "damage_per_shell": 240,
+   "total_damage": 720,
+   "range_hex": 18
+  }
  },
  {
   "race": "german",
@@ -1949,7 +1979,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 240,
+   "total_damage": 480,
+   "range_hex": 18
+  }
  },
  {
   "race": "german",
@@ -1992,7 +2032,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 480
+  "total_damage": 480,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.86,
+   "spread_hex": 2,
+   "damage_per_shell": 80,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2037,7 +2087,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.8,
+   "spread_hex": 2,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2084,7 +2144,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 12
+  }
  },
  {
   "race": "german",
@@ -2171,7 +2241,17 @@
     "range_max_m": 275
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.89,
+   "spread_hex": 1,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 18
+  }
  },
  {
   "race": "german",
@@ -2609,7 +2689,17 @@
     "range_max_m": 90
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 360,
+   "range_hex": 7
+  }
  },
  {
   "race": "german",
@@ -2655,7 +2745,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 1200
+  "total_damage": 1200,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 400,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2698,7 +2798,17 @@
     "range_max_m": 240
    }
   ],
-  "total_damage": 800
+  "total_damage": 800,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.83,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2791,7 +2901,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2834,7 +2954,17 @@
     "range_max_m": 180
    }
   ],
-  "total_damage": 160
+  "total_damage": 160,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.17,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -2877,7 +3007,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -3254,7 +3394,17 @@
     "range_max_m": 100
    }
   ],
-  "total_damage": 900
+  "total_damage": 900,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 1,
+   "accuracy_scale": 1,
+   "spread_hex": 2,
+   "damage_per_shell": 900,
+   "total_damage": 900,
+   "range_hex": 5
+  }
  },
  {
   "race": "german",
@@ -3298,7 +3448,17 @@
     "range_max_m": 90
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 0.83,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 7
+  }
  },
  {
   "race": "german",
@@ -3386,7 +3546,17 @@
     "range_max_m": 100
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.06,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 12
+  }
  },
  {
   "race": "german",
@@ -3429,7 +3599,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.86,
+   "spread_hex": 2,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -3474,7 +3654,17 @@
     "range_max_m": 180
    }
   ],
-  "total_damage": 480
+  "total_damage": 480,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.25,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -3519,7 +3709,17 @@
     "range_max_m": 180
    }
   ],
-  "total_damage": 800
+  "total_damage": 800,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.42,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "german",
@@ -5116,7 +5316,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -5159,7 +5369,17 @@
     "range_max_m": 100
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -5320,7 +5540,17 @@
     "range_max_m": 400
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 1,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 18
+  }
  },
  {
   "race": "american",
@@ -5366,7 +5596,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -5542,7 +5782,17 @@
     "range_max_m": 90
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 240,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5589,7 +5839,17 @@
     "range_max_m": 90
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 240,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5634,7 +5894,17 @@
     "range_max_m": 400
    }
   ],
-  "total_damage": 1120
+  "total_damage": 1120,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.58,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 16
+  }
  },
  {
   "race": "american",
@@ -5680,7 +5950,17 @@
     "range_max_m": 90
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5725,7 +6005,17 @@
     "range_max_m": 400
    }
   ],
-  "total_damage": 1120
+  "total_damage": 1120,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.58,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 16
+  }
  },
  {
   "race": "american",
@@ -5768,7 +6058,17 @@
     "range_max_m": 400
    }
   ],
-  "total_damage": 1120
+  "total_damage": 1120,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.58,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 16
+  }
  },
  {
   "race": "american",
@@ -5816,7 +6116,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 240,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5862,7 +6172,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5908,7 +6228,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 240,
+   "range_hex": 13
+  }
  },
  {
   "race": "american",
@@ -5956,7 +6286,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 10
+  "total_damage": 10,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.22,
+   "spread_hex": 0,
+   "damage_per_shell": 10,
+   "total_damage": 10,
+   "range_hex": 6
+  }
  },
  {
   "race": "american",
@@ -6557,7 +6897,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -6605,7 +6955,17 @@
     "range_max_m": 300
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 160,
+   "total_damage": 480,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -6653,7 +7013,17 @@
     "range_max_m": 110
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "american",
@@ -6993,7 +7363,17 @@
     "range_max_m": 120
    }
   ],
-  "total_damage": 700
+  "total_damage": 700,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 20,
+   "accuracy_scale": 1,
+   "spread_hex": 2,
+   "damage_per_shell": 35,
+   "total_damage": 700,
+   "range_hex": 16
+  }
  },
  {
   "race": "afrika_korps",
@@ -7034,7 +7414,17 @@
     "range_max_m": 120
    }
   ],
-  "total_damage": 700
+  "total_damage": 700,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 20,
+   "accuracy_scale": 1,
+   "spread_hex": 2,
+   "damage_per_shell": 35,
+   "total_damage": 700,
+   "range_hex": 16
+  }
  },
  {
   "race": "afrika_korps",
@@ -7075,7 +7465,17 @@
     "range_max_m": 120
    }
   ],
-  "total_damage": 700
+  "total_damage": 700,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 20,
+   "accuracy_scale": 1,
+   "spread_hex": 2,
+   "damage_per_shell": 35,
+   "total_damage": 700,
+   "range_hex": 16
+  }
  },
  {
   "race": "afrika_korps",
@@ -8267,7 +8667,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 720
+  "total_damage": 720,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 360,
+   "range_hex": 14
+  }
  },
  {
   "race": "afrika_korps",
@@ -8310,7 +8720,17 @@
     "range_max_m": 250
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.89,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 480,
+   "range_hex": 18
+  }
  },
  {
   "race": "afrika_korps",
@@ -8353,7 +8773,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 14
+  }
  },
  {
   "race": "afrika_korps",
@@ -8396,7 +8826,17 @@
     "range_max_m": 250
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.89,
+   "spread_hex": 1,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 18
+  }
  },
  {
   "race": "afrika_korps",
@@ -8484,7 +8924,17 @@
     "range_max_m": 150
    }
   ],
-  "total_damage": 1200
+  "total_damage": 1200,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 2,
+   "damage_per_shell": 200,
+   "total_damage": 400,
+   "range_hex": 16
+  }
  },
  {
   "race": "afrika_korps",
@@ -9689,7 +10139,17 @@
     "range_max_m": 75
    }
   ],
-  "total_damage": 320
+  "total_damage": 320,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 0,
+   "damage_per_shell": 80,
+   "total_damage": 160,
+   "range_hex": 6
+  }
  },
  {
   "race": "british",
@@ -9758,7 +10218,17 @@
     "range_max_m": 75
    }
   ],
-  "total_damage": 480
+  "total_damage": 480,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 80,
+   "total_damage": 80,
+   "range_hex": 8
+  }
  },
  {
   "race": "british",
@@ -10078,7 +10548,17 @@
     "range_max_m": 200
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10125,7 +10605,17 @@
     "range_max_m": 200
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.06,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10172,7 +10662,17 @@
     "range_max_m": 200
    }
   ],
-  "total_damage": 400
+  "total_damage": 400,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 0.83,
+   "spread_hex": 0,
+   "damage_per_shell": 80,
+   "total_damage": 240,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10219,7 +10719,17 @@
     "range_max_m": 200
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10266,7 +10776,17 @@
     "range_max_m": 200
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 0.83,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 360,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10313,7 +10833,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 640
+  "total_damage": 640,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 4,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 80,
+   "total_damage": 320,
+   "range_hex": 14
+  }
  },
  {
   "race": "british",
@@ -10361,7 +10891,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 0.83,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 14
+  }
  },
  {
   "race": "british",
@@ -10409,7 +10949,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 4,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 120,
+   "total_damage": 480,
+   "range_hex": 14
+  }
  },
  {
   "race": "british",
@@ -10456,7 +11006,17 @@
     "range_max_m": 160
    }
   ],
-  "total_damage": 60
+  "total_damage": 60,
+  "game": {
+   "class": "light",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 10,
+   "total_damage": 30,
+   "range_hex": 14
+  }
  },
  {
   "race": "british",
@@ -10550,7 +11110,17 @@
     "range_max_m": 100
    }
   ],
-  "total_damage": 600
+  "total_damage": 600,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 0,
+   "damage_per_shell": 100,
+   "total_damage": 300,
+   "range_hex": 12
+  }
  },
  {
   "race": "british",
@@ -10594,7 +11164,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 1280
+  "total_damage": 1280,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.89,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 480,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10640,7 +11220,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 200
+  "total_damage": 200,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 1,
+   "accuracy_scale": 0.33,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 200,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10688,7 +11278,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 200
+  "total_damage": 200,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 1,
+   "accuracy_scale": 0.33,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 200,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10735,7 +11335,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 1400
+  "total_damage": 1400,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.78,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 600,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10779,7 +11389,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 1400
+  "total_damage": 1400,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 0.78,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 600,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10825,7 +11445,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 400
+  "total_damage": 400,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 2,
+   "accuracy_scale": 1,
+   "spread_hex": 1,
+   "damage_per_shell": 200,
+   "total_damage": 400,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10872,7 +11502,17 @@
     "range_max_m": 1000
    }
   ],
-  "total_damage": 1280
+  "total_damage": 1280,
+  "game": {
+   "class": "heavy",
+   "usage_turns": 2,
+   "shells": 8,
+   "accuracy_scale": 1,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 1280,
+   "range_hex": 18
+  }
  },
  {
   "race": "british",
@@ -10964,7 +11604,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 1,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 16
+  }
  },
  {
   "race": "british",
@@ -11011,7 +11661,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 960
+  "total_damage": 960,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 2,
+   "accuracy_scale": 0.67,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 320,
+   "range_hex": 16
+  }
  },
  {
   "race": "british",
@@ -11191,7 +11851,17 @@
     "range_max_m": 55
    }
   ],
-  "total_damage": 0
+  "total_damage": 0,
+  "game": {
+   "class": "mortar",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.33,
+   "spread_hex": 0,
+   "damage_per_shell": 0,
+   "total_damage": 0,
+   "range_hex": 6
+  }
  },
  {
   "race": "british",
@@ -11288,7 +11958,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 480
+  "total_damage": 480,
+  "game": {
+   "class": "spg",
+   "usage_turns": 1,
+   "shells": 1,
+   "accuracy_scale": 0.86,
+   "spread_hex": 1,
+   "damage_per_shell": 160,
+   "total_damage": 160,
+   "range_hex": 7
+  }
  },
  {
   "race": "british_africa",
@@ -12099,7 +12779,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 1400
+  "total_damage": 1400,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 5,
+   "accuracy_scale": 0.89,
+   "spread_hex": 2,
+   "damage_per_shell": 70,
+   "total_damage": 350,
+   "range_hex": 16
+  }
  },
  {
   "race": "british_africa",
@@ -12147,7 +12837,17 @@
     "range_max_m": 500
    }
   ],
-  "total_damage": 300
+  "total_damage": 300,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 3,
+   "accuracy_scale": 1,
+   "spread_hex": 2,
+   "damage_per_shell": 50,
+   "total_damage": 150,
+   "range_hex": 16
+  }
  },
  {
   "race": "british_africa",
@@ -12258,7 +12958,17 @@
     "range_max_m": 40
    }
   ],
-  "total_damage": 100
+  "total_damage": 100,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 1,
+   "accuracy_scale": 0.22,
+   "spread_hex": 2,
+   "damage_per_shell": 100,
+   "total_damage": 100,
+   "range_hex": 4
+  }
  },
  {
   "race": "british_africa",
@@ -12326,7 +13036,17 @@
     "range_max_m": 40
    }
   ],
-  "total_damage": 100
+  "total_damage": 100,
+  "game": {
+   "class": "rocket",
+   "usage_turns": 2,
+   "shells": 1,
+   "accuracy_scale": 0.22,
+   "spread_hex": 2,
+   "damage_per_shell": 100,
+   "total_damage": 100,
+   "range_hex": 4
+  }
  },
  {
   "race": "british_africa",

@@ -141,11 +141,11 @@ Source: `produced` = a building or vehicle produces it; `built` = referenced by 
 | 105mm_dummy_howitzer_ger | heavy_artillery | at_gun | artillery | 2 / 2 / 2 | 160 / 160 / 160 | 0 | 0.62 / 0.62 / 0.62 |
 | 105mm_howitzer_cannone_auto_ak | heavy_artillery | artillery_medium | artillery | 1 / 1 / 1 | 160 / 160 / 160 | 1 | 0.98 / 0.98 / 0.98 |
 | 105mm_wespe_dummy_ger | heavy_artillery | cannon | ability | 1 / 1 / 1 | 160 / 160 / 160 | 0 | 1 / 1 / 1 |
-| 150mm_brummbar_ger | heavy_artillery | cannon | artillery | 1 / 1 / 1 | 160 / 160 / 160 | 0 | 0.84 / 0.84 / 0.84 |
+| 150mm_brummbar_ger | heavy_artillery | cannon | artillery | 2 / 2 / 2 | 160 / 160 / 160 | 1 | 0.84 / 0.84 / 0.84 |
 | 150mm_dummy_nebelwerfer_ger | heavy_artillery | nebelwerfer | ability | 1 / 1 / 1 | 0 / 0 / 0 | 0 | 1 / 1 / 1 |
 | 150mm_hummel_dummy_ger | heavy_artillery | dummy | ability | 1 / 1 / 1 | 200 / 200 / 200 | 0 | 1 / 1 / 1 |
-| 150mm_nebelwerfer_ger | heavy_artillery | nebelwerfer | artillery | 4 / 4 / 4 | 80 / 80 / 80 | 0 | 0.86 / 0.86 / 0.86 |
-| 150mm_wp_smoke_nebelwerfer_ger | heavy_artillery | nebelwerfer | artillery | 3 / 3 / 3 | 0 / 0 / 0 | 0 | 0.89 / 0.89 / 0.89 |
+| 150mm_nebelwerfer_ger | heavy_artillery | nebelwerfer | artillery | 7 / 7 / 7 | 80 / 80 / 80 | 1 | 0.98 / 0.98 / 0.98 |
+| 150mm_wp_smoke_nebelwerfer_ger | heavy_artillery | nebelwerfer | artillery | 6 / 6 / 6 | 0 / 0 / 0 | 1 | 0.89 / 0.89 / 0.89 |
 | 283mm_railway_gun_dummy_ger | heavy_artillery | artillery_medium | ability | 1 / 1 / 1 | 0 / 0 / 0 | 0 | 1 / 1 / 1 |
 | obice_210_howitzer_dummy_ger | heavy_artillery | artillery_medium | ability | 1 / 1 / 1 | 240 / 240 / 240 | 0 | 1 / 1 / 1 |
 | mg42_bunker_ger | heavy_machine_gun | hmg | volley | 37 / 30 / 30 | 10 / 10 / 10 | 0 | 1 / 1 / 1 |

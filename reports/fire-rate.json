@@ -46,7 +46,79 @@
    "dummy_construction_shovel",
    "dummy_construction_welding_gear",
    "dummy_wire_cutters"
-  ]
+  ],
+  "indirect": {
+   "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC §10). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time ÷ CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres ÷ 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins.",
+   "classes": {
+    "mortar": {
+     "patterns": [
+      "mortar",
+      "grw",
+      "4_2"
+     ],
+     "usage_turns": 1,
+     "range_cap_hex": 12,
+     "spread_hex": 0
+    },
+    "spg": {
+     "patterns": [
+      "priest",
+      "hummel",
+      "wespe",
+      "bishop",
+      "sexton"
+     ],
+     "usage_turns": 1,
+     "range_cap_hex": 16,
+     "spread_hex": 1
+    },
+    "rocket": {
+     "patterns": [
+      "nebelwerfer",
+      "whizbang",
+      "land_mattress",
+      "stuka",
+      "calliope",
+      "rocket"
+     ],
+     "usage_turns": 2,
+     "range_cap_hex": 16,
+     "spread_hex": 2
+    },
+    "heavy": {
+     "patterns": [
+      "105mm_howitzer",
+      "howitzer_105",
+      "cannone_da_105",
+      "105mm_cannone",
+      "bl_5_5",
+      "5_5",
+      "155mm",
+      "150mm",
+      "obice",
+      "210",
+      "howitzer_25pdr",
+      "25pdr"
+     ],
+     "usage_turns": 2,
+     "range_cap_hex": 18,
+     "spread_hex": 1
+    },
+    "light": {
+     "patterns": [
+      "pack_howitzer",
+      "leig",
+      "75mm_howitzer",
+      "scott",
+      "stummel",
+      "halftrack_75mm"
+     ],
+     "usage_turns": 1,
+     "range_cap_hex": 14,
+     "spread_hex": 0
+    }
+   }
+  }
  },
  "weapons": [
   {
@@ -2757,6 +2829,7 @@
     "mid": 0.53,
     "far": 0.53
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -2767,6 +2840,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -2815,23 +2890,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.65,
-    "mid": 0.65,
-    "far": 0.65
+    "near": 0.86,
+    "mid": 0.86,
+    "far": 0.86
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.008
   },
   {
    "race": "german",
@@ -2879,23 +2957,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.65,
-    "mid": 0.65,
-    "far": 0.65
+    "near": 0.86,
+    "mid": 0.86,
+    "far": 0.86
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.008
   },
   {
    "race": "german",
@@ -2911,23 +2992,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.73,
-    "mid": 0.73,
-    "far": 0.73
+    "near": 0.97,
+    "mid": 0.97,
+    "far": 0.97
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 0,
     "mid": 0,
     "far": 0
    },
-   "rate_error": 0.007
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.003
   },
   {
    "race": "german",
@@ -2943,23 +3027,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.62,
-    "mid": 0.62,
-    "far": 0.62
+    "near": 0.82,
+    "mid": 0.82,
+    "far": 0.82
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -2975,23 +3062,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -3007,23 +3097,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.63,
-    "mid": 0.63,
-    "far": 0.63
+    "near": 0.85,
+    "mid": 0.85,
+    "far": 0.85
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 0,
     "mid": 0,
     "far": 0
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.004
   },
   {
    "race": "german",
@@ -3039,23 +3132,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -3077,6 +3173,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -3087,6 +3184,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3109,6 +3208,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -3119,6 +3219,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3141,6 +3243,7 @@
     "mid": 0.77,
     "far": 0.77
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -3151,6 +3254,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.006
   },
   {
@@ -3205,6 +3310,7 @@
     "mid": 0.77,
     "far": 0.77
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -3215,6 +3321,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.006
   },
   {
@@ -3237,6 +3345,7 @@
     "mid": 0.63,
     "far": 0.63
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -3247,6 +3356,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3269,6 +3380,7 @@
     "mid": 0.53,
     "far": 0.53
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -3279,6 +3391,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3295,23 +3409,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.86,
-    "mid": 0.86,
-    "far": 0.86
+    "near": 0.94,
+    "mid": 0.94,
+    "far": 0.94
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 6,
-    "mid": 6,
-    "far": 6
+    "near": 11,
+    "mid": 11,
+    "far": 11
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
-   "rate_error": 0.004
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0.006
   },
   {
    "race": "german",
@@ -3327,22 +3444,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.96,
     "mid": 0.96,
     "far": 0.96
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
+   "spread_hex": 1,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -3359,22 +3479,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.84,
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 5,
    "rate_error": 0
   },
   {
@@ -3391,22 +3514,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.75,
-    "mid": 0.75,
-    "far": 0.75
+    "near": 1,
+    "mid": 1,
+    "far": 1
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 100,
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 1,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -3455,23 +3581,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.86,
-    "mid": 0.86,
-    "far": 0.86
+    "near": 0.94,
+    "mid": 0.94,
+    "far": 0.94
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 6,
-    "mid": 6,
-    "far": 6
+    "near": 11,
+    "mid": 11,
+    "far": 11
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
-   "rate_error": 0.004
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.006
   },
   {
    "race": "german",
@@ -3487,23 +3616,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -3557,6 +3689,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -3567,6 +3700,8 @@
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3589,6 +3724,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -3599,6 +3735,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3615,23 +3753,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.86,
-    "mid": 0.86,
-    "far": 0.86
+    "near": 0.98,
+    "mid": 0.98,
+    "far": 0.98
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 4,
-    "mid": 4,
-    "far": 4
+    "near": 7,
+    "mid": 7,
+    "far": 7
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
-   "rate_error": 0.003
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -3647,23 +3788,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.86,
-    "mid": 0.86,
-    "far": 0.86
+    "near": 0.98,
+    "mid": 0.98,
+    "far": 0.98
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 4,
-    "mid": 4,
-    "far": 4
+    "near": 7,
+    "mid": 7,
+    "far": 7
    },
    "damage_per_shot": {
     "near": 100,
     "mid": 100,
     "far": 100
    },
-   "rate_error": 0.003
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -3679,22 +3823,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 3,
-    "mid": 3,
-    "far": 3
+    "near": 6,
+    "mid": 6,
+    "far": 6
    },
    "damage_per_shot": {
     "near": 0,
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -3743,23 +3890,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.83,
-    "mid": 0.83,
-    "far": 0.83
+    "near": 0.95,
+    "mid": 0.95,
+    "far": 0.95
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 4,
-    "mid": 4,
-    "far": 4
+    "near": 7,
+    "mid": 7,
+    "far": 7
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
-   "rate_error": 0.003
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0.002
   },
   {
    "race": "german",
@@ -3967,22 +4117,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.76,
     "mid": 0.76,
     "far": 0.76
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 240,
     "mid": 240,
     "far": 240
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -4031,23 +4184,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.8,
-    "mid": 0.8,
-    "far": 0.8
+    "near": 0.91,
+    "mid": 0.91,
+    "far": 0.91
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 4,
-    "mid": 4,
-    "far": 4
+    "near": 7,
+    "mid": 7,
+    "far": 7
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
-   "rate_error": 0
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0.005
   },
   {
    "race": "german",
@@ -4063,23 +4219,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 1150,
     "mid": 1150,
     "far": 1150
    },
-   "rate_error": 0.009
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0
   },
   {
    "race": "german",
@@ -4159,22 +4318,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -4223,22 +4385,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.84,
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -4255,22 +4420,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 100,
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -4293,6 +4461,7 @@
     "mid": 0.77,
     "far": 0.77
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4303,6 +4472,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 13,
    "rate_error": 0.006
   },
   {
@@ -4325,6 +4496,7 @@
     "mid": 0.62,
     "far": 0.62
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4335,6 +4507,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -4357,6 +4531,7 @@
     "mid": 0.51,
     "far": 0.51
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4367,6 +4542,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -4389,6 +4566,7 @@
     "mid": 0.79,
     "far": 0.79
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -4399,6 +4577,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -4453,6 +4633,7 @@
     "mid": 0.77,
     "far": 0.77
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4463,6 +4644,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 13,
    "rate_error": 0.006
   },
   {
@@ -4485,6 +4668,7 @@
     "mid": 0.52,
     "far": 0.52
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4495,6 +4679,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.01
   },
   {
@@ -4613,6 +4799,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -4623,6 +4810,8 @@
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 0,
+   "range_hex": 9,
    "rate_error": 0
   },
   {
@@ -5029,6 +5218,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 5,
     "mid": 5,
@@ -5039,6 +5229,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 8,
    "rate_error": 0.002
   },
   {
@@ -5061,6 +5253,7 @@
     "mid": 0.92,
     "far": 0.92
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5071,6 +5264,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0.005
   },
   {
@@ -5093,6 +5288,7 @@
     "mid": 0.91,
     "far": 0.91
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -5103,6 +5299,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5157,6 +5355,7 @@
     "mid": 0.71,
     "far": 0.71
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5167,6 +5366,8 @@
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0.007
   },
   {
@@ -5189,6 +5390,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5199,6 +5401,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5221,6 +5425,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5231,6 +5436,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5253,6 +5460,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5263,6 +5471,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5285,6 +5495,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5295,6 +5506,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5317,6 +5530,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5327,6 +5541,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5349,6 +5565,7 @@
     "mid": 0.83,
     "far": 0.83
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5359,6 +5576,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -5381,6 +5600,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5391,6 +5611,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -5413,6 +5635,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5423,6 +5646,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0.007
   },
   {
@@ -5477,6 +5702,7 @@
     "mid": 0.83,
     "far": 0.83
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5487,6 +5713,8 @@
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -5509,6 +5737,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -5519,6 +5748,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -10178,23 +10409,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.53,
-    "mid": 0.53,
-    "far": 0.53
+    "near": 0.71,
+    "mid": 0.71,
+    "far": 0.71
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 120,
     "mid": 120,
     "far": 120
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.005
   },
   {
    "race": "american",
@@ -10210,23 +10444,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "american",
@@ -10242,22 +10479,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.51,
-    "mid": 0.51,
-    "far": 0.51
+    "near": 0.68,
+    "mid": 0.68,
+    "far": 0.68
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -10280,6 +10520,7 @@
     "mid": 0.83,
     "far": 0.83
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -10290,6 +10531,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.012
   },
   {
@@ -10306,22 +10549,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.8,
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -10344,6 +10590,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -10354,6 +10601,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.007
   },
   {
@@ -10376,6 +10625,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -10386,6 +10636,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.007
   },
   {
@@ -10408,6 +10660,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -10418,6 +10671,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.007
   },
   {
@@ -10440,6 +10695,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -10450,6 +10706,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.007
   },
   {
@@ -10466,23 +10724,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.62,
-    "mid": 0.62,
-    "far": 0.62
+    "near": 0.82,
+    "mid": 0.82,
+    "far": 0.82
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "american",
@@ -10498,23 +10759,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.62,
-    "mid": 0.62,
-    "far": 0.62
+    "near": 0.82,
+    "mid": 0.82,
+    "far": 0.82
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "american",
@@ -10530,23 +10794,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "american",
@@ -10568,6 +10835,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -10578,6 +10846,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 1,
+   "range_hex": 13,
    "rate_error": 0
   },
   {
@@ -10594,23 +10864,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.59,
-    "mid": 0.59,
-    "far": 0.59
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.78
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.009
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "american",
@@ -10658,22 +10931,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 6,
-    "mid": 6,
-    "far": 6
+    "near": 12,
+    "mid": 12,
+    "far": 12
    },
    "damage_per_shot": {
     "near": 70,
     "mid": 70,
     "far": 70
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -10690,22 +10966,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 12,
-    "mid": 12,
-    "far": 12
+    "near": 24,
+    "mid": 24,
+    "far": 24
    },
    "damage_per_shot": {
     "near": 70,
     "mid": 70,
     "far": 70
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -10914,22 +11193,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -11400,6 +11682,7 @@
     "mid": 0.63,
     "far": 0.63
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11410,6 +11693,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11432,6 +11717,7 @@
     "mid": 0.71,
     "far": 0.71
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11442,6 +11728,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 13,
    "rate_error": 0.007
   },
   {
@@ -11464,6 +11752,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11474,6 +11763,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11496,6 +11787,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11506,6 +11798,8 @@
     "mid": 10,
     "far": 10
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11528,6 +11822,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11538,6 +11833,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.004
   },
   {
@@ -11560,6 +11857,7 @@
     "mid": 0.6,
     "far": 0.6
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11570,6 +11868,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 13,
    "rate_error": 0
   },
   {
@@ -11592,6 +11892,7 @@
     "mid": 0.6,
     "far": 0.6
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11602,6 +11903,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 13,
    "rate_error": 0
   },
   {
@@ -11624,6 +11927,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11634,6 +11938,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.004
   },
   {
@@ -11656,6 +11962,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11666,6 +11973,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.004
   },
   {
@@ -11688,6 +11997,7 @@
     "mid": 0.67,
     "far": 0.67
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11698,6 +12008,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 4,
    "rate_error": 0.008
   },
   {
@@ -11720,6 +12032,7 @@
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11730,6 +12043,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.004
   },
   {
@@ -11752,6 +12067,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11762,6 +12078,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11784,6 +12102,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11794,6 +12113,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11816,6 +12137,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -11826,6 +12148,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11848,6 +12172,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11858,6 +12183,8 @@
     "mid": 10,
     "far": 10
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11880,6 +12207,7 @@
     "mid": 0.66,
     "far": 0.66
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -11890,6 +12218,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.008
   },
   {
@@ -11912,6 +12242,7 @@
     "mid": 0.72,
     "far": 0.72
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -11922,6 +12253,8 @@
     "mid": 60,
     "far": 60
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -11944,6 +12277,7 @@
     "mid": 0.72,
     "far": 0.72
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -11954,6 +12288,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -12200,6 +12536,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 5,
     "mid": 5,
@@ -12210,6 +12547,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 8,
    "rate_error": 0.002
   },
   {
@@ -12232,6 +12571,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12242,6 +12582,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12264,6 +12606,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12274,6 +12617,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -12296,6 +12641,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12306,6 +12652,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12328,6 +12676,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12338,6 +12687,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12360,6 +12711,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12370,6 +12722,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12392,6 +12746,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12402,6 +12757,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12424,6 +12781,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12434,6 +12792,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12456,6 +12816,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12466,6 +12827,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12488,6 +12851,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12498,6 +12862,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12520,6 +12886,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12530,6 +12897,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12552,6 +12921,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12562,6 +12932,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12584,6 +12956,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12594,6 +12967,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12616,6 +12991,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12626,6 +13002,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -12648,6 +13026,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -12658,6 +13037,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -17606,23 +17987,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.62,
-    "mid": 0.62,
-    "far": 0.62
+    "near": 0.82,
+    "mid": 0.82,
+    "far": 0.82
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "afrika_korps",
@@ -17644,6 +18028,7 @@
     "mid": 0.98,
     "far": 0.98
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -17654,6 +18039,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -17670,23 +18057,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.73,
-    "mid": 0.73,
-    "far": 0.73
+    "near": 0.97,
+    "mid": 0.97,
+    "far": 0.97
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.007
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.003
   },
   {
    "race": "afrika_korps",
@@ -17734,23 +18124,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.73,
-    "mid": 0.73,
-    "far": 0.73
+    "near": 0.97,
+    "mid": 0.97,
+    "far": 0.97
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 0,
     "mid": 0,
     "far": 0
    },
-   "rate_error": 0.007
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.003
   },
   {
    "race": "afrika_korps",
@@ -17766,23 +18159,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.62,
-    "mid": 0.62,
-    "far": 0.62
+    "near": 0.82,
+    "mid": 0.82,
+    "far": 0.82
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0.008
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0
   },
   {
    "race": "afrika_korps",
@@ -17798,22 +18194,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -17894,22 +18293,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 12,
-    "mid": 12,
-    "far": 12
+    "near": 24,
+    "mid": 24,
+    "far": 24
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -17926,22 +18328,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 48,
-    "mid": 48,
-    "far": 48
+    "near": 96,
+    "mid": 96,
+    "far": 96
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -18054,22 +18459,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -18118,22 +18526,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 240,
     "mid": 240,
     "far": 240
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -18156,6 +18567,7 @@
     "mid": 0.91,
     "far": 0.91
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -18166,6 +18578,8 @@
     "mid": 800,
     "far": 800
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0.011
   },
   {
@@ -18188,6 +18602,7 @@
     "mid": 0.63,
     "far": 0.63
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18198,6 +18613,8 @@
     "mid": 115,
     "far": 115
    },
+   "spread_hex": 0,
+   "range_hex": 9,
    "rate_error": 0
   },
   {
@@ -18220,6 +18637,7 @@
     "mid": 0.66,
     "far": 0.66
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18230,6 +18648,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.008
   },
   {
@@ -18252,6 +18672,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -18262,6 +18683,8 @@
     "mid": 40,
     "far": 40
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -18284,6 +18707,7 @@
     "mid": 0.72,
     "far": 0.72
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -18294,6 +18718,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -18348,6 +18774,7 @@
     "mid": 0.66,
     "far": 0.66
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18358,6 +18785,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.008
   },
   {
@@ -18380,6 +18809,7 @@
     "mid": 0.74,
     "far": 0.74
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -18390,6 +18820,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -18412,6 +18844,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18422,6 +18855,8 @@
     "mid": 30,
     "far": 30
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -18444,6 +18879,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18454,6 +18890,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -18476,6 +18914,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18486,6 +18925,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -18508,6 +18949,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18518,6 +18960,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -18540,6 +18984,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18550,6 +18995,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -18572,6 +19019,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18582,6 +19030,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -18636,6 +19086,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18646,6 +19097,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 11,
    "rate_error": 0
   },
   {
@@ -18668,6 +19121,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -18678,6 +19132,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -19084,6 +19540,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 5,
     "mid": 5,
@@ -19094,6 +19551,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 8,
    "rate_error": 0.002
   },
   {
@@ -23463,22 +23922,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.86,
     "mid": 0.86,
     "far": 0.86
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 3,
-    "mid": 3,
-    "far": 3
+    "near": 6,
+    "mid": 6,
+    "far": 6
    },
    "damage_per_shot": {
     "near": 0,
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0.004
   },
   {
@@ -23495,22 +23957,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.83,
     "mid": 0.83,
     "far": 0.83
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -23533,6 +23998,7 @@
     "mid": 0.59,
     "far": 0.59
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -23543,6 +24009,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.009
   },
   {
@@ -23597,6 +24065,7 @@
     "mid": 0.65,
     "far": 0.65
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -23607,6 +24076,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -23655,23 +24126,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.56,
-    "mid": 0.56,
-    "far": 0.56
+    "near": 0.74,
+    "mid": 0.74,
+    "far": 0.74
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.009
   },
   {
    "race": "british",
@@ -23687,22 +24161,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.63,
-    "mid": 0.63,
-    "far": 0.63
+    "near": 0.84,
+    "mid": 0.84,
+    "far": 0.84
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -23719,22 +24196,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.94,
     "mid": 0.94,
     "far": 0.94
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -23751,22 +24231,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.98,
     "mid": 0.98,
     "far": 0.98
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -23783,23 +24266,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.56,
-    "mid": 0.56,
-    "far": 0.56
+    "near": 0.74,
+    "mid": 0.74,
+    "far": 0.74
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.009
   },
   {
    "race": "british",
@@ -23815,22 +24301,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.86,
     "mid": 0.86,
     "far": 0.86
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0.006
   },
   {
@@ -23847,23 +24336,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.56,
-    "mid": 0.56,
-    "far": 0.56
+    "near": 0.74,
+    "mid": 0.74,
+    "far": 0.74
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.009
   },
   {
    "race": "british",
@@ -23879,23 +24371,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.56,
-    "mid": 0.56,
-    "far": 0.56
+    "near": 0.74,
+    "mid": 0.74,
+    "far": 0.74
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 180,
     "mid": 180,
     "far": 180
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.009
   },
   {
    "race": "british",
@@ -23911,22 +24406,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.51,
-    "mid": 0.51,
-    "far": 0.51
+    "near": 0.68,
+    "mid": 0.68,
+    "far": 0.68
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -23949,6 +24447,7 @@
     "mid": 0.63,
     "far": 0.63
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -23959,6 +24458,8 @@
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -24013,6 +24514,7 @@
     "mid": 0.62,
     "far": 0.62
    },
+   "indirect_class": "spg",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -24023,6 +24525,8 @@
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 16,
    "rate_error": 0.008
   },
   {
@@ -24103,23 +24607,26 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.52,
-    "mid": 0.52,
-    "far": 0.52
+    "near": 0.7,
+    "mid": 0.7,
+    "far": 0.7
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
-   "rate_error": 0
+   "spread_hex": 1,
+   "range_hex": 18,
+   "rate_error": 0.01
   },
   {
    "race": "british",
@@ -24167,22 +24674,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.79,
     "mid": 0.79,
     "far": 0.79
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -24199,22 +24709,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.84,
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -24231,22 +24744,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.84,
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -24263,22 +24779,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.84,
     "mid": 0.84,
     "far": 0.84
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 1,
-    "mid": 1,
-    "far": 1
+    "near": 2,
+    "mid": 2,
+    "far": 2
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -24327,22 +24846,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
-    "near": 0.51,
-    "mid": 0.51,
-    "far": 0.51
+    "near": 0.68,
+    "mid": 0.68,
+    "far": 0.68
    },
+   "indirect_class": "heavy",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 3,
+    "mid": 3,
+    "far": 3
    },
    "damage_per_shot": {
     "near": 160,
     "mid": 160,
     "far": 160
    },
+   "spread_hex": 1,
+   "range_hex": 18,
    "rate_error": 0
   },
   {
@@ -24455,22 +24977,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 60,
     "mid": 60,
     "far": 60
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -24519,22 +25044,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -24557,6 +25085,7 @@
     "mid": 0.94,
     "far": 0.94
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 3,
     "mid": 3,
@@ -24567,6 +25096,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -24589,6 +25120,7 @@
     "mid": 0.97,
     "far": 0.97
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -24599,6 +25131,8 @@
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -24621,6 +25155,7 @@
     "mid": 0.66,
     "far": 0.66
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -24631,6 +25166,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.008
   },
   {
@@ -24653,6 +25190,7 @@
     "mid": 0.72,
     "far": 0.72
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -24663,6 +25201,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0
   },
   {
@@ -24685,6 +25225,7 @@
     "mid": 0.98,
     "far": 0.98
    },
+   "indirect_class": "light",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -24695,6 +25236,8 @@
     "mid": 10,
     "far": 10
    },
+   "spread_hex": 0,
+   "range_hex": 14,
    "rate_error": 0.005
   },
   {
@@ -24711,22 +25254,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 32,
-    "mid": 32,
-    "far": 32
+    "near": 64,
+    "mid": 64,
+    "far": 64
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 2,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -24743,22 +25289,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 32,
-    "mid": 32,
-    "far": 32
+    "near": 64,
+    "mid": 64,
+    "far": 64
    },
    "damage_per_shot": {
     "near": 80,
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 2,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -24775,22 +25324,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 32,
-    "mid": 32,
-    "far": 32
+    "near": 64,
+    "mid": 64,
+    "far": 64
    },
    "damage_per_shot": {
     "near": 100,
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 2,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -24807,22 +25359,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 1,
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 32,
-    "mid": 32,
-    "far": 32
+    "near": 64,
+    "mid": 64,
+    "far": 64
    },
    "damage_per_shot": {
     "near": 100,
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 2,
+   "range_hex": 6,
    "rate_error": 0
   },
   {
@@ -25037,6 +25592,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 16,
     "mid": 16,
@@ -25047,6 +25603,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 8,
    "rate_error": 0
   },
   {
@@ -25069,6 +25627,7 @@
     "mid": 0.75,
     "far": 0.75
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25079,6 +25638,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25101,6 +25662,7 @@
     "mid": 0.75,
     "far": 0.75
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25111,6 +25673,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25133,6 +25697,7 @@
     "mid": 0.86,
     "far": 0.86
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25143,6 +25708,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0.006
   },
   {
@@ -25165,6 +25732,7 @@
     "mid": 0.87,
     "far": 0.87
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -25175,6 +25743,8 @@
     "mid": 80,
     "far": 80
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25197,6 +25767,7 @@
     "mid": 0.8,
     "far": 0.8
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25207,6 +25778,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25229,6 +25802,7 @@
     "mid": 0.63,
     "far": 0.63
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 1,
     "mid": 1,
@@ -25239,6 +25813,8 @@
     "mid": 120,
     "far": 120
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25261,6 +25837,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25271,6 +25848,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25293,6 +25872,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25303,6 +25883,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25325,6 +25907,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25335,6 +25918,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -25357,6 +25942,7 @@
     "mid": 0.73,
     "far": 0.73
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -25367,6 +25953,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0.007
   },
   {
@@ -27068,6 +27656,1682 @@
    "rate_error": 0.037
   },
   {
+   "race": "british_africa",
+   "id": "bazooka_guards_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "bazooka",
+   "damage": 60,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.34,
+    "mid": 1.3,
+    "far": 1.24
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 80,
+    "mid": 78,
+    "far": 74
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "bazooka_staggered_shot_guards_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "bazooka",
+   "damage": 60,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.83,
+    "mid": 1.78,
+    "far": 1.5
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 110,
+    "mid": 107,
+    "far": 90
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "bazooka_staggered_shot_stun_guards_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "bazooka",
+   "damage": 60,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.83,
+    "mid": 1.78,
+    "far": 1.5
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 110,
+    "mid": 107,
+    "far": 90
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "boys_at_rifle_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "panzerbuchse",
+   "damage": 50,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.22,
+    "mid": 1.22,
+    "far": 1.22
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 61,
+    "mid": 61,
+    "far": 61
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "boys_at_rifle_polish_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "panzerbuchse",
+   "damage": 50,
+   "rule": "single_shot",
+   "raw": {
+    "near": 2.18,
+    "mid": 2.18,
+    "far": 2.18
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 109,
+    "mid": 109,
+    "far": 109
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "boys_at_rifle_scoped_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "sniper_gib",
+   "damage": 80,
+   "rule": "single_shot",
+   "raw": {
+    "near": 0.79,
+    "mid": 0.79,
+    "far": 0.79
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 63,
+    "mid": 63,
+    "far": 63
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "boys_at_rifle_scoped_target_gunner_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "sniper_gib",
+   "damage": 80,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.7,
+    "mid": 1.7,
+    "far": 1.7
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 136,
+    "mid": 136,
+    "far": 136
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "boys_at_rifle_volley_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "panzerbuchse",
+   "damage": 50,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.56,
+    "mid": 1.49,
+    "far": 1.42
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 78,
+    "mid": 74,
+    "far": 71
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "piat_grenade_launcher_canadian_heavy_infantry_africa_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "grenade_launcher",
+   "damage": 160,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.02,
+    "mid": 0.97,
+    "far": 0.97
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 163,
+    "mid": 155,
+    "far": 155
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "piat_target_weakpoint_uk",
+   "category": "infantry_anti_tank_weapon",
+   "class": "grenade_launcher",
+   "damage": 160,
+   "rule": "single_shot",
+   "raw": {
+    "near": 1.5,
+    "mid": 1.5,
+    "far": 1.5
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 240,
+    "mid": 240,
+    "far": 240
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "anti_tank_grenade_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 110,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 110,
+    "mid": 110,
+    "far": 110
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "flare_tommy_africa_uk",
+   "category": "grenade",
+   "class": "rifle",
+   "damage": 0,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_guards_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_guards_incendiary_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_guards_pyrotechnics_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_sapper_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_sapper_incendiary_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "gammon_bomb_sapper_pyrotechnics_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "grenade_bangalore_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 600,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 600,
+    "mid": 600,
+    "far": 600
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "grenade_no69_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "grenade_no69_incendiary_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "grenade_no69_pyrotechnics_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "grenade_smoke_red_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 0,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "red_smoke_humber_africa_uk",
+   "category": "grenade",
+   "class": "grenade",
+   "damage": 0,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rifle_grenade_tommy_africa_uk",
+   "category": "grenade",
+   "class": "rifle_grenade",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rifle_grenade_tommy_incendiary_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rifle_grenade_tommy_pyrotechnics_africa_uk",
+   "category": "grenade",
+   "class": "flame",
+   "damage": 160,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 160,
+    "mid": 160,
+    "far": 160
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "smoke_rifle_grenade_tommy_africa_uk",
+   "category": "grenade",
+   "class": "rifle_grenade",
+   "damage": 0,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "81mm_incendiary_mortar_canadian_shock_burnout_pyrotechnics_uk",
+   "category": "light_artillery",
+   "class": "flame",
+   "damage": 80,
+   "rule": "artillery",
+   "raw": {
+    "near": 1.78,
+    "mid": 1.78,
+    "far": 1.78
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 0.89,
+    "mid": 0.89,
+    "far": 0.89
+   },
+   "indirect_class": "mortar",
+   "shots_per_turn": {
+    "near": 2,
+    "mid": 2,
+    "far": 2
+   },
+   "damage_per_shot": {
+    "near": 80,
+    "mid": 80,
+    "far": 80
+   },
+   "spread_hex": 0,
+   "range_hex": 12,
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "81mm_incendiary_mortar_canadian_shock_burnout_uk",
+   "category": "light_artillery",
+   "class": "flame",
+   "damage": 80,
+   "rule": "artillery",
+   "raw": {
+    "near": 1.78,
+    "mid": 1.78,
+    "far": 1.78
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 0.89,
+    "mid": 0.89,
+    "far": 0.89
+   },
+   "indirect_class": "mortar",
+   "shots_per_turn": {
+    "near": 2,
+    "mid": 2,
+    "far": 2
+   },
+   "damage_per_shot": {
+    "near": 80,
+    "mid": 80,
+    "far": 80
+   },
+   "spread_hex": 0,
+   "range_hex": 12,
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rocket_dummy_land_mattress_africa_uk",
+   "category": "light_artillery",
+   "class": "nebelwerfer",
+   "damage": 0,
+   "rule": "ability",
+   "raw": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rocket_land_mattress_africa_suppression_barrage_uk",
+   "category": "light_artillery",
+   "class": "artillery_small",
+   "damage": 50,
+   "rule": "artillery",
+   "raw": {
+    "near": 24,
+    "mid": 24,
+    "far": 24
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 1,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "indirect_class": "rocket",
+   "shots_per_turn": {
+    "near": 48,
+    "mid": 48,
+    "far": 48
+   },
+   "damage_per_shot": {
+    "near": 50,
+    "mid": 50,
+    "far": 50
+   },
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "rocket_land_mattress_africa_uk",
+   "category": "light_artillery",
+   "class": "artillery_small",
+   "damage": 70,
+   "rule": "artillery",
+   "raw": {
+    "near": 8.89,
+    "mid": 8.89,
+    "far": 8.89
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 1,
+   "accuracy_scale": {
+    "near": 0.99,
+    "mid": 0.99,
+    "far": 0.99
+   },
+   "indirect_class": "rocket",
+   "shots_per_turn": {
+    "near": 18,
+    "mid": 18,
+    "far": 18
+   },
+   "damage_per_shot": {
+    "near": 70,
+    "mid": 70,
+    "far": 70
+   },
+   "spread_hex": 2,
+   "range_hex": 16,
+   "rate_error": 0.002
+  },
+  {
+   "race": "british_africa",
+   "id": "royal_engineers_clearing_operation_flares_uk",
+   "category": "light_artillery",
+   "class": "at_gun",
+   "damage": 0,
+   "rule": "artillery",
+   "raw": {
+    "near": 2.53,
+    "mid": 2.53,
+    "far": 2.53
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 0.84,
+    "mid": 0.84,
+    "far": 0.84
+   },
+   "shots_per_turn": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "damage_per_shot": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "rate_error": 0.004
+  },
+  {
+   "race": "british_africa",
+   "id": "tripwire_flare_africa_uk",
+   "category": "mine",
+   "class": "mine",
+   "damage": 40,
+   "rule": "per_use",
+   "raw": {
+    "near": null,
+    "mid": null,
+    "far": null
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "damage_per_shot": {
+    "near": 40,
+    "mid": 40,
+    "far": 40
+   },
+   "rate_error": 0
+  },
+  {
+   "race": "british_africa",
+   "id": "flamethrower_crocodile_africa_uk",
+   "category": "flame_throwers",
+   "class": "flame",
+   "damage": 4,
+   "rule": "volley",
+   "raw": {
+    "near": 34.56,
+    "mid": 34.56,
+    "far": 34.56
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 35,
+    "mid": 35,
+    "far": 35
+   },
+   "damage_per_shot": {
+    "near": 4,
+    "mid": 4,
+    "far": 4
+   },
+   "rate_error": 0.013
+  },
+  {
+   "race": "british_africa",
+   "id": "flamethrower_crocodile_flame_sweep_africa_uk",
+   "category": "flame_throwers",
+   "class": "flame",
+   "damage": 4,
+   "rule": "volley",
+   "raw": {
+    "near": 42.15,
+    "mid": 42.15,
+    "far": 42.15
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 42,
+    "mid": 42,
+    "far": 42
+   },
+   "damage_per_shot": {
+    "near": 4,
+    "mid": 4,
+    "far": 4
+   },
+   "rate_error": 0.004
+  },
+  {
+   "race": "british_africa",
+   "id": "flamethrower_sapper_africa_uk",
+   "category": "flame_throwers",
+   "class": "flame",
+   "damage": 2,
+   "rule": "volley",
+   "raw": {
+    "near": 17.45,
+    "mid": 17.45,
+    "far": 17.45
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 17,
+    "mid": 17,
+    "far": 17
+   },
+   "damage_per_shot": {
+    "near": 2,
+    "mid": 2,
+    "far": 2
+   },
+   "rate_error": 0.026
+  },
+  {
+   "race": "british_africa",
+   "id": "30cal_hmg_africa_uk",
+   "category": "heavy_machine_gun",
+   "class": "hmg",
+   "damage": 5,
+   "rule": "volley",
+   "raw": {
+    "near": 61.89,
+    "mid": 45.71,
+    "far": 32.68
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 62,
+    "mid": 46,
+    "far": 33
+   },
+   "damage_per_shot": {
+    "near": 5,
+    "mid": 5,
+    "far": 5
+   },
+   "rate_error": 0.01
+  },
+  {
+   "race": "british_africa",
+   "id": "bren_lmg_africa_uk",
+   "category": "light_machine_gun",
+   "class": "lmg",
+   "damage": 3.5,
+   "rule": "volley",
+   "raw": {
+    "near": 24.69,
+    "mid": 28.65,
+    "far": 34.27
+   },
+   "multiplier": 0.88,
+   "suppression_scale": 1.14,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 22,
+    "mid": 25,
+    "far": 30
+   },
+   "damage_per_shot": {
+    "near": 4,
+    "mid": 4,
+    "far": 4
+   },
+   "rate_error": 0.018
+  },
+  {
+   "race": "british_africa",
+   "id": "bren_lmg_volley_africa_uk",
+   "category": "light_machine_gun",
+   "class": "lmg",
+   "damage": 10,
+   "rule": "volley",
+   "raw": {
+    "near": 61.17,
+    "mid": 66.26,
+    "far": 67.5
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 61,
+    "mid": 66,
+    "far": 68
+   },
+   "damage_per_shot": {
+    "near": 10,
+    "mid": 10,
+    "far": 10
+   },
+   "rate_error": 0.007
+  },
+  {
+   "race": "british_africa",
+   "id": "9mm_sten_sapper_africa_uk",
+   "category": "sub_machine_gun",
+   "class": "smg",
+   "damage": 4,
+   "rule": "volley",
+   "raw": {
+    "near": 24.66,
+    "mid": 8.38,
+    "far": 4.32
+   },
+   "multiplier": 1.33,
+   "suppression_scale": 0.75,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 33,
+    "mid": 11,
+    "far": 6
+   },
+   "damage_per_shot": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "rate_error": 0.042
+  },
+  {
+   "race": "british_africa",
+   "id": "sten_commando_africa_uk",
+   "category": "sub_machine_gun",
+   "class": "smg",
+   "damage": 5,
+   "rule": "volley",
+   "raw": {
+    "near": 30.45,
+    "mid": 15.97,
+    "far": 2.21
+   },
+   "multiplier": 5,
+   "suppression_scale": 0.2,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 152,
+    "mid": 80,
+    "far": 11
+   },
+   "damage_per_shot": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "rate_error": 0.005
+  },
+  {
+   "race": "british_africa",
+   "id": "thompson_guards_africa_uk",
+   "category": "sub_machine_gun",
+   "class": "smg",
+   "damage": 5,
+   "rule": "volley",
+   "raw": {
+    "near": 36.8,
+    "mid": 17.16,
+    "far": 6.86
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 37,
+    "mid": 17,
+    "far": 7
+   },
+   "damage_per_shot": {
+    "near": 5,
+    "mid": 5,
+    "far": 5
+   },
+   "rate_error": 0.02
+  },
+  {
+   "race": "british_africa",
+   "id": "thompson_sappers_africa_uk",
+   "category": "sub_machine_gun",
+   "class": "smg",
+   "damage": 5,
+   "rule": "volley",
+   "raw": {
+    "near": 36.8,
+    "mid": 17.16,
+    "far": 6.86
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 37,
+    "mid": 17,
+    "far": 7
+   },
+   "damage_per_shot": {
+    "near": 5,
+    "mid": 5,
+    "far": 5
+   },
+   "rate_error": 0.02
+  },
+  {
+   "race": "british_africa",
+   "id": "thompson_ssb_africa_uk",
+   "category": "sub_machine_gun",
+   "class": "smg",
+   "damage": 5,
+   "rule": "volley",
+   "raw": {
+    "near": 34.78,
+    "mid": 18.32,
+    "far": 6.86
+   },
+   "multiplier": 1,
+   "suppression_scale": 1,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 35,
+    "mid": 18,
+    "far": 7
+   },
+   "damage_per_shot": {
+    "near": 5,
+    "mid": 5,
+    "far": 5
+   },
+   "rate_error": 0.02
+  },
+  {
+   "race": "british_africa",
+   "id": "lee_enfield_commando_africa_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 14,
+   "rule": "volley",
+   "raw": {
+    "near": 2.29,
+    "mid": 2.29,
+    "far": 2.29
+   },
+   "multiplier": 1.27,
+   "suppression_scale": 0.79,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "damage_per_shot": {
+    "near": 11,
+    "mid": 11,
+    "far": 11
+   },
+   "rate_error": 0.029
+  },
+  {
+   "race": "british_africa",
+   "id": "lee_enfield_guards_africa_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 12,
+   "rule": "volley",
+   "raw": {
+    "near": 2.32,
+    "mid": 2.16,
+    "far": 2.11
+   },
+   "multiplier": 6,
+   "suppression_scale": 0.17,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 14,
+    "mid": 13,
+    "far": 13
+   },
+   "damage_per_shot": {
+    "near": 2,
+    "mid": 2,
+    "far": 2
+   },
+   "rate_error": 0.027
+  },
+  {
+   "race": "british_africa",
+   "id": "lee_enfield_polish_lancer_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 16,
+   "rule": "volley",
+   "raw": {
+    "near": 2.29,
+    "mid": 2.29,
+    "far": 2.29
+   },
+   "multiplier": 1.33,
+   "suppression_scale": 0.75,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "damage_per_shot": {
+    "near": 12,
+    "mid": 12,
+    "far": 12
+   },
+   "rate_error": 0.017
+  },
+  {
+   "race": "british_africa",
+   "id": "lee_enfield_tommy_africa_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 14,
+   "rule": "volley",
+   "raw": {
+    "near": 2.29,
+    "mid": 2.29,
+    "far": 2.29
+   },
+   "multiplier": 1.27,
+   "suppression_scale": 0.79,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "damage_per_shot": {
+    "near": 11,
+    "mid": 11,
+    "far": 11
+   },
+   "rate_error": 0.029
+  },
+  {
+   "race": "british_africa",
+   "id": "lee_enfield_tommy_africa_volley_fire_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 14,
+   "rule": "volley",
+   "raw": {
+    "near": 3.69,
+    "mid": 2.62,
+    "far": 2.75
+   },
+   "multiplier": 2.8,
+   "suppression_scale": 0.36,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 10,
+    "mid": 7,
+    "far": 8
+   },
+   "damage_per_shot": {
+    "near": 5,
+    "mid": 5,
+    "far": 5
+   },
+   "rate_error": 0.046
+  },
+  {
+   "race": "british_africa",
+   "id": "scoped_lee_enfield_tommy_africa_uk",
+   "category": "rifle",
+   "class": "rifle",
+   "damage": 14,
+   "rule": "volley",
+   "raw": {
+    "near": 2.29,
+    "mid": 2.29,
+    "far": 2.29
+   },
+   "multiplier": 1.27,
+   "suppression_scale": 0.79,
+   "reload_turns": 0,
+   "accuracy_scale": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "shots_per_turn": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "damage_per_shot": {
+    "near": 11,
+    "mid": 11,
+    "far": 11
+   },
+   "rate_error": 0.029
+  },
+  {
    "race": "common",
    "id": "at_gun_mobile_parent_common",
    "category": "anti_tank_gun",
@@ -27401,22 +29665,25 @@
    },
    "multiplier": 1,
    "suppression_scale": 1,
-   "reload_turns": 0,
+   "reload_turns": 1,
    "accuracy_scale": {
     "near": 0.89,
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "rocket",
    "shots_per_turn": {
-    "near": 2,
-    "mid": 2,
-    "far": 2
+    "near": 4,
+    "mid": 4,
+    "far": 4
    },
    "damage_per_shot": {
     "near": 200,
     "mid": 200,
     "far": 200
    },
+   "spread_hex": 2,
+   "range_hex": 16,
    "rate_error": 0
   },
   {
@@ -27695,6 +29962,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -27705,6 +29973,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -27727,6 +29997,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -27737,6 +30008,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -27759,6 +30032,7 @@
     "mid": 0.89,
     "far": 0.89
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -27769,6 +30043,8 @@
     "mid": 100,
     "far": 100
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {
@@ -27791,6 +30067,7 @@
     "mid": 1,
     "far": 1
    },
+   "indirect_class": "mortar",
    "shots_per_turn": {
     "near": 2,
     "mid": 2,
@@ -27801,6 +30078,8 @@
     "mid": 0,
     "far": 0
    },
+   "spread_hex": 0,
+   "range_hex": 12,
    "rate_error": 0
   },
   {

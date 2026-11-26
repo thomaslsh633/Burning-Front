@@ -60,6 +60,7 @@ Status codes used in the label tables:
 | R | Barrage attack power from CoH3 ability data | ability → weapon item → weapon × `NUM_SHOTS`; `reports/barrages.md` (246 abilities with weapon data, 38 off-map without published shells) |
 | S | Weapon operation flags from CoH3 `behaviour` | `data/rules/weapon-flags.json` (19 used, 12 ignored); weapon `traits` take these ids |
 | T | Status flags | `data/rules/status-flags.json` (37 flags, stored or derived, with owner system and HUD priority) |
+| U | Indirect fire cadence, shells, range cap, spread for turn play | `data/balance/indirect.json` (classes mortar / spg / light / heavy / rocket); `tools/import-coh3/indirect.js`; weapon labels `indirect_class`, `spread_hex`, `range_hex` (C); barrage game columns in `reports/barrages.md` |
 | O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
 
 ---
@@ -85,7 +86,8 @@ Status codes used in the label tables:
 | `damage_per_shot` | Band3 | CoH3 damage; volley ÷ multiplier; single-shot round(damage × raw); artillery unchanged | C | combat |
 | `shot_multiplier` | ratio | volley: CoH3 damage ÷ game damage per shot (suppression per shot scaled the same way) | C | combat, status |
 | `accuracy_scale` | Band3 | artillery: CoH3 rate ÷ game rate (≤ 1); others 1 | C | combat |
-| `reload_turns` | int | artillery slower than one shell per turn: floor(1 / raw) − 1; override allowed | C / O | turn, combat |
+| `reload_turns` | int | indirect: class usage_turns − 1 (`data/balance/indirect.json`); other artillery floor(1 / raw) − 1; override allowed | C / O | turn, combat |
+| `spread_hex` | int | indirect class spread (0 aimed hex, 1 = 7 hexes, 2 = 19 hexes) | A | combat |
 | `deflection_damage` | ratio | `deflection.deflection_damage_multiplier` (0 if `has_deflection_damage` false) | K | combat |
 | `suppression` | {amount, nearby_mult, nearby_radius_m} | `suppression.amount`, `nearby_suppression_*` | K | status (morale FSM) |
 | `aoe` | {damage Band3, distance_m Band3, suppression Band3, max_members, friendly_fire} | `area_effect.*`, `damage_max_members_per_squad` | K | combat |
