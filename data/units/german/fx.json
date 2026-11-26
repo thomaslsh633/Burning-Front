@@ -1,0 +1,199 @@
+{
+ "weapon": {
+  "kar98k_grenadier_ger": {
+   "name": "weapon.kar98k_grenadier_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "mp40_grenadier_ger": {
+   "name": "weapon.mp40_grenadier_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_panzerpioneer_ak": {
+   "name": "weapon.flamethrower_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "75mm_panzer_iv_ger": {
+   "name": "weapon.75mm_panzer_iv_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "mg34_coaxial_panzer_iv_ger": {
+   "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_panzer_iv_ger": {
+   "name": "weapon.mg34_hull_panzer_iv_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  },
+  "75mm_at_gun_ger": {
+   "name": "weapon.75mm_at_gun_ger.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "mp40_crew_ger": {
+   "name": "weapon.mp40_crew_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "81mm_mortar_ger": {
+   "name": "weapon.81mm_mortar_ger.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "mg42_hmg_ger": {
+   "name": "weapon.mg42_hmg_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg42_bunker_ger": {
+   "name": "weapon.mg42_bunker_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "grenadier_ger": {
+   "name": "entity.grenadier_ger.name",
+   "model": {
+    "id": "grenadier_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "panzer_iv_ger": {
+   "name": "entity.panzer_iv_ger.name",
+   "model": {
+    "id": "panzer_iv_ger",
+    "anim_class": "tank_medium"
+   }
+  },
+  "tw_at_gun_75mm_ger": {
+   "name": "entity.tw_at_gun_75mm_ger.name",
+   "model": {
+    "id": "tw_at_gun_75mm_ger",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_75mm_ger": {
+   "name": "entity.crew_at_gun_75mm_ger.name",
+   "model": {
+    "id": "crew_at_gun_75mm_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_mortar_ger": {
+   "name": "entity.crew_mortar_ger.name",
+   "model": {
+    "id": "crew_mortar_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_ger": {
+   "name": "entity.crew_hmg_ger.name",
+   "model": {
+    "id": "crew_hmg_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "hmg_bunker_ger": {
+   "name": "entity.hmg_bunker_ger.name",
+   "model": {
+    "id": "hmg_bunker_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "grenadier_ger": {
+   "name": "unit.grenadier_ger.name",
+   "short_name": "unit.grenadier_ger.short",
+   "desc": "unit.grenadier_ger.desc",
+   "icon": "grenadier_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  },
+  "panzer_iv_ger": {
+   "name": "unit.panzer_iv_ger.name",
+   "short_name": "unit.panzer_iv_ger.short",
+   "desc": "unit.panzer_iv_ger.desc",
+   "icon": "panzer_iv_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  },
+  "at_gun_75mm_ger": {
+   "name": "unit.at_gun_75mm_ger.name",
+   "short_name": "unit.at_gun_75mm_ger.short",
+   "desc": "unit.at_gun_75mm_ger.desc",
+   "icon": "at_gun_75mm_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "mortar_81mm_ger": {
+   "name": "unit.mortar_81mm_ger.name",
+   "short_name": "unit.mortar_81mm_ger.short",
+   "desc": "unit.mortar_81mm_ger.desc",
+   "icon": "mortar_81mm_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "hmg_mg42_ger": {
+   "name": "unit.hmg_mg42_ger.name",
+   "short_name": "unit.hmg_mg42_ger.short",
+   "desc": "unit.hmg_mg42_ger.desc",
+   "icon": "hmg_mg42_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "hmg_mg42_bunker_ger": {
+   "name": "unit.hmg_mg42_bunker_ger.name",
+   "short_name": "unit.hmg_mg42_bunker_ger.short",
+   "desc": "unit.hmg_mg42_bunker_ger.desc",
+   "icon": "hmg_mg42_bunker_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "assault_package_grenadiers_ger": {
+   "name": "upgrade.assault_package_grenadiers_ger.name",
+   "icon": "assault_package_grenadiers_ger"
+  },
+  "flamethrower_grenadier_ger": {
+   "name": "upgrade.flamethrower_grenadier_ger.name",
+   "icon": "flamethrower_grenadier_ger"
+  }
+ }
+}

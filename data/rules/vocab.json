@@ -60,7 +60,8 @@
       "sub_machine_gun",
       "rifle",
       "sidearm",
-      "aircraft"
+      "aircraft",
+      "smoke"
     ],
     "role": [
       "anti_infantry",

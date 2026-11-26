@@ -391,6 +391,28 @@
           "indirect",
           "ammo"
         ]
+      },
+      "smoke": {
+        "must": [
+          "use"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "attack",
+          "indirect",
+          "emplace",
+          "ammo"
+        ],
+        "must_not": [
+          "suppression",
+          "deflection",
+          "reload",
+          "moving",
+          "persons",
+          "trigger",
+          "burn"
+        ]
       }
     }
   },

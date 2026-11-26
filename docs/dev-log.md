@@ -2,6 +2,16 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D1-5 importer pilot)
+- **Done:** `tools/import-coh3/convert.js` (weapon, entity, squad, veterancy, upgrade conversions, profile-driven module
+  filter, weapon-flag tests) and `import.js` (follows sbps → ebps → weapons, kits, veterancy, fx stubs). Pilot: 6 US and
+  6 German squads (infantry, tank, AT gun, mortar, HMG team, MG emplacement) → `data/units/{american,german}` (12 files, in
+  `npm run check` with profiles). Reports `reports/import/`. Matches v214 on cost / HP / move / sight (AT gun HP is the gun
+  entity's in CoH3). New: `data/balance/ammo.json`, weapon category `smoke`, `any_upgrades`.
+- **Fixed during the pilot:** move from default speed; role guessing; upgrade alternatives on hardpoints; indirect accuracy from
+  scatter; common veterancy file; all-of vs any-of upgrade requirements.
+- **Next:** D2 rules engine (hex, fsm, state, events, commands, store …). Stage G imports all four factions later.
+
 ## 2026-11-26 (D1-4 schemas and profiles; Greybox stage)
 - **Done:** six unit-data schemas (`data/schema/{weapon,ebps,sbps,veterancy,upgrade,fx}.schema.json`: core + modules, shared
   types, vocab-checked words and keys), category profiles `data/schema/profiles.json` (17 weapon, 6 entity, 6 squad

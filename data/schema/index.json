@@ -6,6 +6,37 @@
     "data/rules/weapon-flags.json": "weapon-flags.schema.json",
     "data/rules/roster.json": "roster.schema.json",
     "data/balance/indirect.json": "indirect.schema.json",
-    "data/balance/fire-rate.json": "fire-rate.schema.json"
+    "data/balance/fire-rate.json": "fire-rate.schema.json",
+    "data/balance/ammo.json": "ammo.schema.json",
+    "data/units/american/weapon.json": {
+      "schema": "weapon.schema.json",
+      "profile": "weapon"
+    },
+    "data/units/american/ebps.json": {
+      "schema": "ebps.schema.json",
+      "profile": "ebps"
+    },
+    "data/units/american/sbps.json": {
+      "schema": "sbps.schema.json",
+      "profile": "sbps"
+    },
+    "data/units/american/veterancy.json": "veterancy.schema.json",
+    "data/units/american/upgrade.json": "upgrade.schema.json",
+    "data/units/american/fx.json": "fx.schema.json",
+    "data/units/german/weapon.json": {
+      "schema": "weapon.schema.json",
+      "profile": "weapon"
+    },
+    "data/units/german/ebps.json": {
+      "schema": "ebps.schema.json",
+      "profile": "ebps"
+    },
+    "data/units/german/sbps.json": {
+      "schema": "sbps.schema.json",
+      "profile": "sbps"
+    },
+    "data/units/german/veterancy.json": "veterancy.schema.json",
+    "data/units/german/upgrade.json": "upgrade.schema.json",
+    "data/units/german/fx.json": "fx.schema.json"
   }
 }

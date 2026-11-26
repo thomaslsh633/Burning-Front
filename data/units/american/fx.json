@@ -1,0 +1,236 @@
+{
+ "weapon": {
+  "thompson_riflemen_leader_us": {
+   "name": "weapon.thompson_riflemen_leader_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "garand_rifleman_us": {
+   "name": "weapon.garand_rifleman_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "bar_riflemen_us": {
+   "name": "weapon.bar_riflemen_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "m1941_lmg_devils_brigade_us": {
+   "name": "weapon.m1941_lmg_devils_brigade_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "m1919a6_old_guard_us": {
+   "name": "weapon.m1919a6_old_guard_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "lmg_m24_29_chatellerault_us": {
+   "name": "weapon.lmg_m24_29_chatellerault_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "75mm_sherman_us": {
+   "name": "weapon.75mm_sherman_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_sherman_us": {
+   "name": "weapon.30cal_coaxial_sherman_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_sherman_us": {
+   "name": "weapon.30cal_hull_sherman_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "2inch_mortar_smoke_sherman_us": {
+   "name": "weapon.2inch_mortar_smoke_sherman_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "57mm_at_gun_us": {
+   "name": "weapon.57mm_at_gun_us.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "carbine_crew_us": {
+   "name": "weapon.carbine_crew_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "81mm_mortar_us": {
+   "name": "weapon.81mm_mortar_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "30cal_hmg_us": {
+   "name": "weapon.30cal_hmg_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_fighting_position_us": {
+   "name": "weapon.30cal_fighting_position_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "rifleman_squad_leader_us": {
+   "name": "entity.rifleman_squad_leader_us.name",
+   "model": {
+    "id": "rifleman_squad_leader_us",
+    "anim_class": "infantry"
+   }
+  },
+  "rifleman_us": {
+   "name": "entity.rifleman_us.name",
+   "model": {
+    "id": "rifleman_us",
+    "anim_class": "infantry"
+   }
+  },
+  "sherman_us": {
+   "name": "entity.sherman_us.name",
+   "model": {
+    "id": "sherman_us",
+    "anim_class": "tank_medium"
+   }
+  },
+  "tw_at_gun_57mm_us": {
+   "name": "entity.tw_at_gun_57mm_us.name",
+   "model": {
+    "id": "tw_at_gun_57mm_us",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_57mm_us": {
+   "name": "entity.crew_at_gun_57mm_us.name",
+   "model": {
+    "id": "crew_at_gun_57mm_us",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_mortar_us": {
+   "name": "entity.crew_mortar_us.name",
+   "model": {
+    "id": "crew_mortar_us",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_us": {
+   "name": "entity.crew_hmg_us.name",
+   "model": {
+    "id": "crew_hmg_us",
+    "anim_class": "infantry"
+   }
+  },
+  "hmg_fighting_position_us": {
+   "name": "entity.hmg_fighting_position_us.name",
+   "model": {
+    "id": "hmg_fighting_position_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "riflemen_us": {
+   "name": "unit.riflemen_us.name",
+   "short_name": "unit.riflemen_us.short",
+   "desc": "unit.riflemen_us.desc",
+   "icon": "riflemen_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  },
+  "sherman_us": {
+   "name": "unit.sherman_us.name",
+   "short_name": "unit.sherman_us.short",
+   "desc": "unit.sherman_us.desc",
+   "icon": "sherman_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  },
+  "at_gun_57mm_us": {
+   "name": "unit.at_gun_57mm_us.name",
+   "short_name": "unit.at_gun_57mm_us.short",
+   "desc": "unit.at_gun_57mm_us.desc",
+   "icon": "at_gun_57mm_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "mortar_81mm_us": {
+   "name": "unit.mortar_81mm_us.name",
+   "short_name": "unit.mortar_81mm_us.short",
+   "desc": "unit.mortar_81mm_us.desc",
+   "icon": "mortar_81mm_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "hmg_30cal_us": {
+   "name": "unit.hmg_30cal_us.name",
+   "short_name": "unit.hmg_30cal_us.short",
+   "desc": "unit.hmg_30cal_us.desc",
+   "icon": "hmg_30cal_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  },
+  "hmg_fighting_position_us": {
+   "name": "unit.hmg_fighting_position_us.name",
+   "short_name": "unit.hmg_fighting_position_us.short",
+   "desc": "unit.hmg_fighting_position_us.desc",
+   "icon": "hmg_fighting_position_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "bar_rifleman_squad_us": {
+   "name": "upgrade.bar_rifleman_squad_us.name",
+   "icon": "bar_rifleman_squad_us"
+  },
+  "m1941_lmg_rifleman_us": {
+   "name": "upgrade.m1941_lmg_rifleman_us.name",
+   "icon": "m1941_lmg_rifleman_us"
+  },
+  "m1919a6_rifleman_squad_us": {
+   "name": "upgrade.m1919a6_rifleman_squad_us.name",
+   "icon": "m1919a6_rifleman_squad_us"
+  },
+  "french_old_guard_lmg_m1919a6s_rifleman_us": {
+   "name": "upgrade.french_old_guard_lmg_m1919a6s_rifleman_us.name",
+   "icon": "french_old_guard_lmg_m1919a6s_rifleman_us"
+  },
+  "lmg_m24_29_chatellerault_riflemen_us": {
+   "name": "upgrade.lmg_m24_29_chatellerault_riflemen_us.name",
+   "icon": "lmg_m24_29_chatellerault_riflemen_us"
+  }
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "grenadier_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/grenadier",
+  "xp": [
+   750,
+   2250,
+   4500
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "ability_cooldown": 0.67
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.15
+   }
+  ]
+ },
+ "panzer_iv_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/panzer_iv_ger",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_penetration": 1.25
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.75
+   }
+  ]
+ },
+ "at_gun_75mm_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+  "xp": [
+   1100,
+   3300,
+   6600
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.85
+   },
+   {
+    "received_damage": 0.8,
+    "attack_speed": 0.75
+   }
+  ]
+ },
+ "mortar_81mm_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/mortar",
+  "xp": [
+   400,
+   1200,
+   2400
+  ],
+  "ranks": [
+   {
+    "attack_speed": -0.1
+   },
+   {
+    "weapon_damage": 1.15,
+    "ability_cooldown": 0.65
+   },
+   {
+    "attack_speed": -0.25,
+    "received_damage": 0.8,
+    "weapon_damage": 1.2
+   }
+  ]
+ },
+ "hmg_mg42_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/hmg",
+  "xp": [
+   700,
+   2100,
+   4200
+  ],
+  "ranks": [
+   {
+    "hp_add": 10
+   },
+   {
+    "hp_add": 15,
+    "weapon_suppression": 1.4
+   },
+   {
+    "received_damage": 0.8,
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

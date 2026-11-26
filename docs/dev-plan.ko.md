@@ -89,7 +89,7 @@ Claude 세션 하나에 작업 하나가 원칙입니다. 작업마다 "시스�
 2. `tools/coh3/census.js`: 4진영 범주별 블록 사용표.
 3. `data/rules/vocab.json`, 공통 타입, `tools/validate.js`(+테스트).
 4. `data/schema/*.schema.json`, `profiles.json`, 범주별 손 샘플.
-5. `tools/import-coh3` 시범: 소총병, 셔먼, 57 mm 대전차포, 81 mm 박격포, M1919 기관총 팀, 포좌 1종.
+5. ✅ `tools/import-coh3` 시범: 미군(소총병, 셔먼, 57 mm 대전차포, 81 mm 박격포, M1919 기관총 팀, 기관총 진지)과 독일군 같은 구성 → `data/units/american`, `data/units/german`, 보고서 `reports/import/`.
 
 **D2 규칙 엔진** (각 시스템 = 작업 1~3개)
 

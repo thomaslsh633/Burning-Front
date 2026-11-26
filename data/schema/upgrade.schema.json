@@ -36,6 +36,12 @@
               "items": {
                 "$ref": "types.schema.json#/$defs/Id"
               }
+            },
+            "any_upgrades": {
+              "type": "array",
+              "items": {
+                "$ref": "types.schema.json#/$defs/Id"
+              }
             }
           },
           "additionalProperties": false

@@ -6,3 +6,4 @@ Generated review reports (never edited by hand). Regenerate with the command nam
 - `catalog/README.md` (summary), `catalog/<faction>.md`, `catalog.json`: the cleaned unit list per faction — squads → members → weapons, equipment (upgrades) with cost and granted weapon, weapons in use with fire-rate values, excluded records (`node tools/coh3/catalog.js`).
 - `coh3stats-compare.md` / `.json`: coh3stats.com statistics vs our data — roster, squad price, entity stats, fire rate vs coh3stats DPS (`node tools/coh3stats/compare.js`).
 - `barrages.md` / `.json`: barrage and indirect-fire abilities with CoH3 attack power (weapon × shells, recharge, range, radius, cost) (`node tools/coh3/barrages.js`).
+- `import/<faction>.md`: what the importer guessed, defaulted or dropped per record, and v214 values for reference (`node tools/import-coh3/import.js <faction> [squad …]`).

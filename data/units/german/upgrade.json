@@ -1,0 +1,45 @@
+{
+ "infantry": {
+  "assault_package_grenadiers_ger": {
+   "coh3_ref": "upgrade/german/infantry/assault_package_grenadiers_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "breakthrough_right_1_assault_grenadiers_ger"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "mp40_grenadier_ger"
+    }
+   ]
+  },
+  "flamethrower_grenadier_ger": {
+   "coh3_ref": "upgrade/german/infantry/flamethrower_grenadier_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 70
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "siegebreakers_firestorm_doctrine_ger",
+     "siegebreakers_ger"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_panzerpioneer_ak"
+    }
+   ]
+  }
+ }
+}
