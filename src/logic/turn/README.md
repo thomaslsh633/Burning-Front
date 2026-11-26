@@ -17,7 +17,7 @@ import cycles. The rules each phase applies stay in their owners.
 - `actionTurnEnd`, `armCounter`, `counterCheck`, `spendCounter` — done (D2-7)
 - `overwatchWeapon`, `validateHold`, `hold`, `overwatchers`, `overwatchFired`, `stopsMover` — done (D2-7)
 - `nextSide`, `openTurn`, `closeTurn` (clock) — done (D2-7)
-- reload timers (reloading units neither fire nor counter) — with barrages / indirect cadence
+- `startReload`, `reloadCheck` (indirect cadence: reloading units neither fire nor counter) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

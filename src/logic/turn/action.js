@@ -4,6 +4,7 @@
 import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { movePoints } from '../movement/index.js';
+import { firingWeapons } from '../combat/index.js';
 
 /** Commands that spend move points; every other unit command spends the action. */
 export const MOVE_COMMANDS = Object.freeze(['Move', 'Turn']);
@@ -63,10 +64,25 @@ export function exhaust(state, unitId) {
   return { state: putUnit(state, t.unit), events: t.events };
 }
 
-/** Own turn end: whatever is left lapses; an MG on overwatch keeps waiting through the enemy turn. */
-export function actionTurnEnd(state, unitId) {
+/**
+ * Reload (SPEC §10 indirect cadence): a weapon that fires one volley every N turns (indirect.usage_turns) reloads for the
+ * N − 1 own turns after the one it fired in; a reloading unit neither fires nor counter fires.
+ */
+export function startReload(state, unitId, data) {
   const u = state.units[unitId];
-  if (u.fsm.action === 'OVERWATCH' || u.fsm.life !== 'ACTIVE') return { state, events: [] };
+  const turns = Math.max(0, ...firingWeapons(u, data).map(w => (w.weapon.indirect?.usage_turns ?? 1) - 1));
+  if (turns <= u.timers.reload) return { state, events: [] };
+  return { state: putUnit(state, { ...u, timers: { ...u.timers, reload: turns } }), events: [] };
+}
+
+export const reloadCheck = unit => (unit.timers.reload > 0 ? 'reloading' : null);
+
+/** Own turn end: whatever is left lapses (an MG on overwatch keeps waiting); a turn spent not firing counts toward the reload. */
+export function actionTurnEnd(state, unitId) {
+  let u = state.units[unitId];
+  if (u.fsm.life !== 'ACTIVE') return { state, events: [] };
+  if (u.timers.reload > 0 && !u.budget.fired) u = { ...u, timers: { ...u.timers, reload: u.timers.reload - 1 } };
+  if (u.fsm.action === 'OVERWATCH') return { state: putUnit(state, u), events: [] };
   const t = transition(ACTION, { ...u, budget: { ...u.budget, move: 0, action: 0 } }, 'EXHAUSTED');
   return { state: putUnit(state, t.unit), events: t.events };
 }

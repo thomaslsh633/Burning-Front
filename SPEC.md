@@ -192,8 +192,10 @@ Confirmed 2026-11-25 (rewrite):
 - Status flags (`data/rules/status-flags.json`): stored or derived from the six state axes; e.g. reloading, low / out of ammo,
   repairing / being repaired, emplaced / setting up / packed, overwatch, engaged, criticals, decrewed, hero.
 - Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
-  decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
-  action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
+  decrewed, and any side may attack and destroy it (CoH3); an infantry squad with enough men spends its action to recrew
+  own or enemy team weapons; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
+  Vehicles are always standalone: never abandoned, bailed out or captured (2026-11-26).
+  Dropped weapon pickups (later): only upgrade / slot weapons, never team weapons or base armament (2026-11-26).
 - Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
   uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
   The move is a pool of move points: Move and hull Turn spend from it, in as many steps as it lasts (D2).
@@ -246,7 +248,9 @@ Confirmed 2026-11-25 (rewrite):
   side's counter fire armed). Retreating units walk on by themselves at their turn start and spend that turn.
 - Counter fire (D2-7, `data/balance/turn.json`): one per enemy turn; the attacked unit fires back at the attacker with every
   weapon that can reach it from where it stands (sight, range, arc, ammo), so an attack from outside its arc draws none.
-  Retreating units and crews setting up or packing up do not counter; overwatch and counter fire draw no counter fire.
+  Retreating units, reloading units and crews setting up or packing up do not counter; overwatch and counter fire draw no
+  counter fire. Reload: a weapon that fires one volley every N turns (`indirect.usage_turns`) cannot fire or counter fire
+  for the N − 1 own turns after the turn it fired in (`timers.reload`).
   Counter fire, overwatch fire and ground attacks set engaged.
 - Overwatch reaction (D2-7): a move that steps into an overwatching MG's arc, range and sight draws one burst; the move stops
   there when the mover dies or is pinned (only the steps taken are paid) and cannot be undone.

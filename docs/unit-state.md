@@ -77,7 +77,7 @@ export function permits(machines, unit, commandType) { /* → { ok: true } | { o
   suppression: 0,                                         // points; morale FSM thresholds come from data
   engaged: false,                                         // attacked in its last own turn (or by counter / overwatch since)
   criticals: [],                                          // vehicle conditions: engine_damaged, immobilised, main_gun_damaged, crew_shocked
-  timers: { stance: 0, smoke: 0, revealedUntil: 0 },      // turns left for timed states
+  timers: { stance: 0, smoke: 0, revealedUntil: 0, reload: 0 },   // turns left for timed states (reload: turn)
   overwatch: null,                                        // { weapon, facing, arc_deg } while in OVERWATCH
   container: null,                                        // building or transport id while GARRISONED / LOADED
   crew: null,                                             // reserved (vehicle crews, §6); team weapon crews are members
@@ -105,7 +105,7 @@ Transitions: IDLE →(Move)→ MOVING →(path done / interrupted)→ IDLE if bu
 IDLE →(Attack)→ ATTACKING →(resolved)→ IDLE / EXHAUSTED · IDLE →(Hold)→ OVERWATCH · IDLE →(EndTurn)→ EXHAUSTED ·
 OVERWATCH →(triggered)→ EXHAUSTED · any →(own turn start)→ IDLE (unless morale = RETREATING, which runs the retreat move first).
 Counter fire is a reaction during the enemy turn; it uses `budget.counter`, not the action state. It is checked like a
-command named `Counter`: EXHAUSTED and OVERWATCH permit it; RETREATING, SETTING_UP / PACKING_UP and every state but
+command named `Counter`: EXHAUSTED and OVERWATCH permit it; a reloading unit (`timers.reload`) never counters; RETREATING, SETTING_UP / PACKING_UP and every state but
 ACTIVE veto it; the unit must be able to attack the attacker from where it stands (sight, range, arc, ammo), so a flank
 attack outside the weapon arc draws none. Overwatch fire and counter fire draw no counter fire.
 A move that triggers overwatch stops on that hex when the mover dies or ends in a morale state listed in
@@ -168,9 +168,10 @@ Top level of the hierarchy: the other axes only run while `ACTIVE`.
 
 | State | Applies to | Meaning | Transitions |
 | --- | --- | --- | --- |
-| `ACTIVE` | all | normal; may carry **critical conditions** (below) | last crew member dies (team weapon) → `DECREWED`; crew bails out / manual abandon (vehicle) → `ABANDONED`; HP 0 → `WRECKED` (vehicles, guns, structures) or removed (infantry) |
-| `DECREWED` | team weapons | gun left on its hex without a crew, owner `null`; keeps HP, ammo, facing, stance | an infantry squad recrews → `ACTIVE` under the squad's side; destroyed → `WRECKED` |
-| `ABANDONED` | vehicles | vehicle without crew, owner `null`; keeps HP, ammo, criticals | recrewed → `ACTIVE`; destroyed → `WRECKED` |
+| `ACTIVE` | all | normal; may carry **critical conditions** (below) | last crew member dies or the crew abandons it (towed gun) → `DECREWED`; HP 0 → `WRECKED` (vehicles, guns, structures) or removed (infantry) |
+| `DECREWED` | towed team weapons | gun left on its hex without a crew, owner `null`; keeps HP, ammo, facing, stance; any side may attack it (CoH3) | an infantry squad recrews → `ACTIVE` under the squad's side; destroyed → `WRECKED` |
+
+Vehicles are always standalone units: they are never abandoned, bailed out or captured (decided 2026-11-26).
 | `WRECKED` | vehicles, guns, structures | the unit is removed and a **wreck object** is placed on its hex in the map change overlay (`logic/terrain`): heavy cover for infantry, obstacle for vehicles | cleared by engineers → wreck removed |
 
 **Critical conditions** are a set (`criticals`), not exclusive states, because several can hold at once:
@@ -191,22 +192,19 @@ Which side currently sees the unit is derived each time from sight, line of sigh
 
 Based on CoH3 `recrewable_ext` and `team_weapon_ext` (checked in `data/source/coh3`): each recrewable weapon lists,
 per capturing faction, the squad blueprint it becomes, `min_capture_crew_size` (57 mm AT gun: 2),
-`recrew_max_squad_size` (57 mm: 5) and `can_manual_abandon`. Ordinary vehicles leave a **wreck** when destroyed
-(`wreck_entity_option`, e.g. `sherman_wreck_us`); recrewable vehicles exist as separate blueprints
-(`sherman_recrewable_us`, crew 3) used for vehicles abandoned on the map.
+`recrew_max_squad_size` (57 mm: 5) and `can_manual_abandon`. Vehicles leave a **wreck** when destroyed
+(`wreck_entity_option`, e.g. `sherman_wreck_us`); CoH3's recrewable vehicle blueprints are not used (2026-11-26).
 
 | Rule | Proposal |
 | --- | --- |
 | Decrew (team weapon) | when the crew's last member dies, the gun stays on its hex as `DECREWED`, owner none, HP / ammo / stance kept. If the gun itself is destroyed first, surviving crew become a small infantry squad |
 | Manual abandon | a crew may abandon its gun (action) where the data allows it (`can_manual_abandon`): the gun becomes `DECREWED`, the crew a small infantry squad |
-| Abandoned vehicles | from mission data (placed abandoned, CoH3 `is_abandoned_on_spawn`), and from a new critical **crew bail-out** on a penetrating hit (chance from data, only for vehicles that have a recrewable blueprint); crew lost |
 | Recrew / capture | an infantry squad, `IDLE` with its action left, not PINNED or RETREATING, on or next to the hex, with members between `min_capture_crew_size` and `recrew_max_squad_size`, spends its action. Own or enemy equipment alike: capturing is recrewing |
 | Result: team weapon | the squad becomes the crew (all its members); the gun turns `ACTIVE` under the squad's side as that faction's capture blueprint; stance `MOBILE` (must set up again); veterancy reset; ammo kept |
-| Result: vehicle | `min_capture_crew_size` members leave the squad into the vehicle as crew (`crew` record); the rest stay on the hex as the squad; the vehicle turns `ACTIVE` with its HP, ammo and criticals |
 | Wrecks | `WRECKED` vehicles become terrain: heavy cover (green) for infantry, as a wreck object in the map change overlay (2026-11-26), block vehicle movement, infantry may pass; engineers clear them (action, `clear_turns` from data); a recovery vehicle may tow them |
-| Denial | a side may destroy its own `DECREWED` gun or `ABANDONED` vehicle (attack or demolition) to keep it from the enemy |
+| Denial | as in CoH3, a `DECREWED` gun is an ownerless target: any side (its old owner too) may attack it; at 0 HP it is removed and leaves a wreck |
 | Upkeep and population | captured equipment counts for its new owner from the next turn |
-| Later (optional) | dropped weapons (LMGs, launchers) picked up by squads, CoH3 `unequip_weapons_on_death` + `entity_inventory_ext` |
+| Later (optional) | dropped weapons picked up by squads, CoH3 `unequip_weapons_on_death` + `entity_inventory_ext`: only weapons from upgrades / weapon slots (LMGs, launchers), never team weapons or a unit's base armament (decided 2026-11-26) |
 
 Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckClearing`, `WreckCleared`.
 
@@ -219,13 +217,15 @@ Built in D2-7 (`logic/lifecycle/crewing.js`, routes `Recrew`, `Abandon`, `ClearW
   destroyed) fights with its own small arms, cannot emplace and leaves no wreck when it dies.
 - Wreck clearing: units whose squad `role` is in `data/rules/terrain.json` `wreck_clearing.roles` (engineers) spend their
   action on or next to a wreck; the wreck goes after its `clear_turns` turns of work (vehicle 2, emplacement 1).
-- Not yet: vehicle recrew (no recrewable vehicle blueprints in the data), crew bail-out critical, denial demolition.
+- Crewless guns are ownerless targets: any side may attack them (no counter fire, no suppression, no XP); shells landing
+  on their hex hit them too.
+- Not yet: dropped weapon pickups.
 
 ## 7. Ownership summary
 
 | Axis / concern | System (folder) | Stored in unit | Data it reads |
 | --- | --- | --- | --- |
-| Action FSM, budgets, overwatch eligibility | `logic/turn` | `fsm.action`, `budget`, `overwatch` | weapon classes, move points |
+| Action FSM, budgets, overwatch eligibility, reload | `logic/turn` | `fsm.action`, `budget`, `overwatch`, `timers.reload` | weapon classes, move points |
 | Stance FSM | `logic/crew` | `fsm.stance`, `timers.stance` | `setup_turns`, `teardown_turns`, arcs |
 | Location FSM | `logic/transport` | `fsm.location`, `container` | capacities, garrison rules |
 | Morale FSM, suppression points, veterancy, engaged | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank`, `engaged` | thresholds, decay, multipliers, veterancy sets |

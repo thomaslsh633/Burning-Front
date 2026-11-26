@@ -45,7 +45,7 @@ export function fire(state, d, rng, attackerId, targetId) {
   const before = Object.fromEntries(Object.values(state.units).map(u => [u.id, hpOf(u)]));
   const r = combat.resolveAttack(state, d, attackerId, targetId, rng);
   const hit = Object.keys(before).filter(id => hpOf(r.state.units[id]) < before[id]);
-  const enemyLoss = hit.filter(id => state.units[id].team !== state.units[attackerId].team)
+  const enemyLoss = hit.filter(id => state.units[id].team && state.units[id].team !== state.units[attackerId].team)   // no XP for ownerless guns
     .reduce((xp, id) => xp + status.xpFor(state.units[id], before[id] - hpOf(r.state.units[id]), d), 0);
   const out = chain(r.state, [
     ...Object.entries(r.suppression).map(([id, pts]) => x => status.applySuppression(x, id, pts, d)),
@@ -55,17 +55,18 @@ export function fire(state, d, rng, attackerId, targetId) {
     ...hit.map(id => ifUnit(id, x => lifecycle.checkDeaths(x, id, d))),
     ifUnit(attackerId, x => vision.revealOnFire(x, attackerId, d)),
     x => status.setEngaged(x, attackerId),
+    x => turn.startReload(x, attackerId, d),
   ]);
   return { state: out.state, events: [...r.events, ...out.events] };
 }
 
 /**
  * Counter fire (SPEC §4): the unit that was attacked fires back once per enemy turn if every axis permits it (not
- * retreating, set up, active), it has its counter left and it can attack the attacker from where it stands.
+ * retreating, set up, active), it has its counter left, is not reloading and can attack the attacker from where it stands.
  */
 export function counterFire(state, d, rng, unitId, attackerId) {
   const u = state.units[unitId];
-  if (!u || !state.units[attackerId] || !permits(MACHINES, u, 'Counter').ok || turn.counterCheck(u)
+  if (!u || !state.units[attackerId] || !permits(MACHINES, u, 'Counter').ok || turn.counterCheck(u) || turn.reloadCheck(u)
     || combat.canAttack(state, d, unitId, attackerId)) return NONE(state);
   const out = chain(state, [x => fire(x, d, rng, unitId, attackerId), x => turn.spendCounter(x, unitId)]);
   return { state: out.state, events: [ev('CounterFired', { unit: unitId, target: attackerId }), ...out.events] };

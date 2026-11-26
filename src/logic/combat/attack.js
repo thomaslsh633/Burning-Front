@@ -18,7 +18,8 @@ export function canAttack(state, data, attackerId, targetId) {
   const att = state.units[attackerId], tgt = state.units[targetId];
   if (!tgt) return 'no_such_target';
   if (tgt.team === att.team) return 'friendly_target';
-  if (tgt.fsm.life !== 'ACTIVE' || (!isOnMap(tgt) && tgt.fsm.location !== 'GARRISONED')) return 'not_a_target';
+  // a DECREWED gun (no team) is a target for every side (CoH3)
+  if (!['ACTIVE', 'DECREWED'].includes(tgt.fsm.life) || (!isOnMap(tgt) && tgt.fsm.location !== 'GARRISONED')) return 'not_a_target';
   if (att.ammo <= 0) return 'out_of_ammo';
   if (!canSee(state, data, att.team, tgt)) return 'target_not_seen';
   const ws = firingWeapons(att, data);
@@ -139,7 +140,7 @@ export function resolveAttack(state, data, attackerId, targetId, rng) {
       }
       if (m.indirect) featureHits.push({ hex: { ...aimed }, amount: m.damage, pen, weapon: w.weapon });
       const victim = m.indirect ? unitAt(s, aimed) : s.units[targetId];
-      if (!victim || victim.fsm.life !== 'ACTIVE') continue;
+      if (!victim) continue;
       let v = victim;
       const face = armorFace(v, att.pos, c.armor_arcs_deg);
       const i = pick(v.members, rng);

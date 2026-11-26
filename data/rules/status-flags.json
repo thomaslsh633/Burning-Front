@@ -86,9 +86,9 @@
     {
       "id": "reloading",
       "kind": "stored",
-      "from": "timers.reload > 0 (weapon reload_turns)",
+      "from": "timers.reload > 0 (indirect.usage_turns − 1 own turns after firing)",
       "owner": "turn",
-      "clears": "counts down at own turn start",
+      "clears": "counts down at each own turn end without firing",
       "effects": "cannot fire or counter-fire that weapon",
       "icon_priority": 15
     },
@@ -230,15 +230,7 @@
       "kind": "derived",
       "from": "fsm.life = DECREWED",
       "owner": "lifecycle",
-      "effects": "no owner; can be recrewed",
-      "icon_priority": 3
-    },
-    {
-      "id": "abandoned",
-      "kind": "derived",
-      "from": "fsm.life = ABANDONED",
-      "owner": "lifecycle",
-      "effects": "no owner; can be recrewed",
+      "effects": "no owner; can be recrewed; anyone may attack and destroy it",
       "icon_priority": 3
     },
     {

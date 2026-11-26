@@ -190,3 +190,36 @@ test('ClearWreck: an engineer clears a vehicle wreck in two turns of work', () =
   assert.ok(types(two.events).includes('WreckCleared'));
   assert.equal(two.state.map.changes.hexes['4,4'].wreck, undefined);
 });
+
+test('a crewless gun is a target for every side, its old owner too; destroyed, it leaves a wreck and gives no XP', () => {
+  const { state: s0, data } = testMatch([blue('riflemen_us', H(2, 4)), blue('at_gun_57mm_us', H(4, 4))]);
+  let state = tweak(s0, 'u2', { members: s0.units.u2.members.map(m => (m.ebps.startsWith('crew_') ? { ...m, hp: 0 } : { ...m, hp: 5 })),
+    team: null, fsm: { ...s0.units.u2.fsm, life: 'DECREWED', action: 'EXHAUSTED' }, budget: { move: 0, action: 0, counter: 0 } });
+  let r;
+  for (let seed = 1; seed < 20 && state.units.u2; seed++) {
+    r = run(state, data, { type: 'Attack', side: 'blue', unit: 'u1', target: 'u2' }, seed);
+    assert.ok(!types(r.events).includes('CounterFired'));
+    state = endTurn(endTurn(r.state, data).state, data).state;
+  }
+  assert.equal(state.units.u2, undefined);
+  assert.equal(state.map.changes.hexes['4,4'].wreck.kind, 'emplacement');
+  assert.equal(state.units.u1.xp, 0);
+});
+
+test('reload: a weapon firing every 2 turns skips the next own turn and cannot counter fire meanwhile', () => {
+  const { state: s0, data: d0 } = testMatch([blue('mortar_81mm_us', H(1, 5), { stance: 'EMPLACED' }), red('grenadier_ger', H(5, 5), { facing: 3 })]);
+  const w = d0.units.weapon['81mm_mortar_us'];
+  const data = { ...d0, units: { ...d0.units, weapon: { ...d0.units.weapon, '81mm_mortar_us': { ...w, indirect: { ...w.indirect, usage_turns: 2 } } } } };
+  const fired = run(s0, data, { type: 'Attack', side: 'blue', unit: 'u1', target: 'u2' }, 1);
+  assert.equal(fired.state.units.u1.timers.reload, 1);
+  const redTurn = endTurn(fired.state, data);
+  if (redTurn.state.units.u2) {
+    const shot = tweak(redTurn.state, 'u2', { pos: H(4, 5) });
+    const a = run(shot, data, { type: 'Attack', side: 'red', unit: 'u2', target: 'u1' }, 2);
+    assert.ok(!types(a.events).includes('CounterFired'), 'reloading: no counter fire');
+  }
+  const own = endTurn(redTurn.state, data).state;
+  assert.equal(apply(own, { type: 'Attack', side: 'blue', unit: 'u1', target: 'u2' }, data, createRng(1)).error ?? 'none', own.units.u2 ? 'reloading' : 'no_such_target');
+  const next = endTurn(endTurn(own, data).state, data).state;
+  assert.equal(next.units.u1.timers.reload, 0, 'ready again two own turns after firing');
+});

@@ -4,7 +4,7 @@
 
 /** Unit field path → owning system (folder under src/logic/). A path owns everything below it. */
 export const UNIT_FIELD_OWNERS = {
-  'fsm.action': 'turn', budget: 'turn', overwatch: 'turn',
+  'fsm.action': 'turn', budget: 'turn', overwatch: 'turn', 'timers.reload': 'turn',
   'fsm.stance': 'crew', 'timers.stance': 'crew',
   'fsm.location': 'transport', container: 'transport',
   'fsm.morale': 'status', suppression: 'status', retreatTo: 'status', xp: 'status', rank: 'status', engaged: 'status',

@@ -11,10 +11,10 @@ import { LIFE } from './life.js';
 const alive = m => m.hp > 0;
 const teamWeapon = (u, data) => data.units.sbps[u.sbps]?.team_weapon ?? null;
 
-/** The recrewable entity of a unit (its towed gun or the vehicle itself) with its CoH3 recrew block, or null. */
+/** The towed gun of a unit with its CoH3 recrew block, or null. Vehicles are never recrewed (2026-11-26). */
 function recrewable(u, data) {
   const tw = teamWeapon(u, data);
-  const member = tw?.weapon_entity ? u.members.find(m => m.ebps === tw.weapon_entity) : u.kind === 'vehicle' ? u.members[0] : null;
+  const member = tw?.weapon_entity ? u.members.find(m => m.ebps === tw.weapon_entity) : null;
   const recrew = member && data.units.ebps[member.ebps]?.recrew;
   return recrew ? { member, recrew } : null;
 }
@@ -28,7 +28,7 @@ function onFoot(u, data) {
 
 /**
  * Recrew / capture: { unit (squad), target (DECREWED gun) }. On or next to the hex, with between min_crew and max_squad men;
- * own or enemy equipment alike. Abandoned vehicles need a recrewable blueprint (not in the data yet). → reason or null
+ * own or enemy equipment alike. → reason or null
  */
 export function validateRecrew(state, cmd, data) {
   const squad = state.units[cmd.unit], gun = state.units[cmd.target];

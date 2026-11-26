@@ -10,8 +10,7 @@ const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Tu
 
 export const LIFE = defineMachine('life', 'ACTIVE', {
   ACTIVE: {},
-  DECREWED: NOTHING('decrewed'),
-  ABANDONED: NOTHING('abandoned'),
+  DECREWED: NOTHING('decrewed'),   // team weapons only: vehicles are never abandoned or captured (2026-11-26)
 });
 
 const alive = m => m.hp > 0;
@@ -40,7 +39,9 @@ const wreckKind = u => (u.kind === 'vehicle' ? 'vehicle' : u.kind === 'structure
  */
 export function checkDeaths(state, unitId, data) {
   const u = state.units[unitId];
-  if (!u || u.fsm.life !== 'ACTIVE') return { state, events: [] };
+  if (!u) return { state, events: [] };
+  if (u.fsm.life === 'DECREWED') return u.members.some(alive) ? { state, events: [] } : remove(state, data, unitId, wreckKind(u));   // a crewless gun shot to pieces (CoH3)
+  if (u.fsm.life !== 'ACTIVE') return { state, events: [] };
   const tw = data.units.sbps[u.sbps].team_weapon;
   const living = u.members.filter(alive);
   if (tw?.weapon_entity) {

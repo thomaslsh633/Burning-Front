@@ -181,7 +181,6 @@
       "garrisoned",
       "loaded",
       "decrewed",
-      "abandoned",
       "wrecked",
       "engine_damaged",
       "immobilised",
@@ -225,7 +224,6 @@
     "state_life": [
       "ACTIVE",
       "DECREWED",
-      "ABANDONED",
       "WRECKED"
     ],
     "state_visibility": [

@@ -46,7 +46,7 @@ export const ROUTES = {
   },
   Attack: {
     unit: true,
-    validate: (s, c, d) => combat.canAttack(s, d, c.unit, c.target) ?? turn.budgetCheck(s.units[c.unit], 'Attack'),
+    validate: (s, c, d) => combat.canAttack(s, d, c.unit, c.target) ?? turn.budgetCheck(s.units[c.unit], 'Attack') ?? turn.reloadCheck(s.units[c.unit]),
     apply: (s, c, d, rng) => chain(s, [
       x => fire(x, d, rng, c.unit, c.target),
       x => turn.spend(x, c.unit, { action: 1, fired: true }),
@@ -55,11 +55,11 @@ export const ROUTES = {
   },
   AttackFeature: {
     unit: true,
-    validate: (s, c, d) => combat.canAttackFeature(s, d, c.unit, c.target) ?? turn.budgetCheck(s.units[c.unit], 'Attack'),
+    validate: (s, c, d) => combat.canAttackFeature(s, d, c.unit, c.target) ?? turn.budgetCheck(s.units[c.unit], 'Attack') ?? turn.reloadCheck(s.units[c.unit]),
     apply(s, c, d, rng) {
       const r = combat.resolveFeatureAttack(s, d, c.unit, c.target, rng);
       const out = chain(r.state, [...featureSteps(r.featureHits, d), x => vision.revealOnFire(x, c.unit, d), x => status.setEngaged(x, c.unit),
-        x => turn.spend(x, c.unit, { action: 1, fired: true })]);
+        x => turn.startReload(x, c.unit, d), x => turn.spend(x, c.unit, { action: 1, fired: true })]);
       return { state: out.state, events: [...r.events, ...out.events] };
     },
   },

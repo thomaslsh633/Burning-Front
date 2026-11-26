@@ -102,17 +102,18 @@ D2 readiness fixes 1–7:
   `data/balance/status.json`, `combat.json` (including `criticals`, `feature_target_size`).
 - **HQ:** indestructible (stops at 1 HP), following SPEC §2. The user has not confirmed this for the new building rules.
 - **D2-7 choices the user has not confirmed:**
-  - suppressed and pinned units still counter fire (at ×0.5 / ×0.25 accuracy); v214 let neither counter. Only retreating
-    units and crews setting up / packing up do not;
+  - suppressed and pinned units still counter fire (at ×0.5 / ×0.25 accuracy); v214 let neither counter. Retreating and
+    reloading units and crews setting up / packing up do not (reloading confirmed 2026-11-26);
   - counter fire needs the attacker inside the counter-firing weapon's arc (v214 flank rule kept);
   - an overwatch burst stops the mover only if it dies or is pinned;
   - a retreating unit that reaches its rally point at its turn start is spent for that turn;
   - recrew takes `min_crew`–`max_squad` living men, so a full 6-man rifle or grenadier squad cannot recrew a 57 mm / Pak 40
     (CoH3 max 5) until it loses a man;
   - wreck clearing turns: vehicle 2, emplacement 1; the abandoning crew gets a fresh ammo load.
-- **Not built in D2-7:** vehicle recrew (no recrewable vehicle blueprints imported), crew bail-out critical, denial
-  demolition, reload timers (so "reloading units do not counter" has nothing to check yet), `Captured` vs `Recrewed`
-  (the previous owner of a decrewed gun is not stored), reason-code text in `data/i18n`.
+- **Decided 2026-11-26 and done:** vehicles are never abandoned or captured (ABANDONED state removed); crewless guns are
+  ownerless targets any side may destroy (CoH3); reloading units do not counter fire (`timers.reload`).
+- **Not built:** dropped weapon pickups (decided: upgrade / slot weapons only), `Captured` vs `Recrewed` (the previous
+  owner of a decrewed gun is not stored), reason-code text in `data/i18n`.
 - **Choices the user has not confirmed (earlier):**
   - sandbags, wire and tank traps show an HP bar on select;
   - fire does not damage wrecks;

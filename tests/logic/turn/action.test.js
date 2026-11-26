@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ACTION, freshBudget, refreshUnit, budgetCheck, spend, actionTurnEnd, armCounter, counterCheck, spendCounter, nextSide, openTurn, closeTurn } from '../../../src/logic/turn/index.js';
+import { ACTION, freshBudget, refreshUnit, budgetCheck, spend, actionTurnEnd, armCounter, counterCheck, spendCounter, startReload, reloadCheck, nextSide, openTurn, closeTurn } from '../../../src/logic/turn/index.js';
 import { permits } from '../../../src/logic/fsm/index.js';
 import { testMatch, tweak } from '../../helpers/match.js';
 import { assertOwnsOnly } from '../../helpers/ownership.js';
@@ -45,7 +45,7 @@ test('own turn end: what is left lapses (EXHAUSTED); an MG on overwatch keeps wa
   const watching = tweak(state, 'u2', { fsm: { ...state.units.u2.fsm, action: 'OVERWATCH' }, overwatch: { weapon: 'w', facing: 0, arc_deg: 95 } });
   const r = actionTurnEnd(watching, 'u1');
   assert.deepEqual([r.state.units.u1.fsm.action, r.state.units.u1.budget.move, r.state.units.u1.budget.action], ['EXHAUSTED', 0, 0]);
-  assert.equal(actionTurnEnd(watching, 'u2').state, watching);
+  assert.deepEqual(actionTurnEnd(watching, 'u2').state, watching);
   assertOwnsOnly('turn', watching, r.state);
 });
 
@@ -71,4 +71,18 @@ test('clock: the first side opens turn 1; the turn number grows when the first s
   const t1red = openTurn(t1.state).state, t2 = openTurn(t1red).state;
   assert.deepEqual([t1red.match.side, t1red.match.turn, t2.match.side, t2.match.turn], ['red', 1, 'blue', 2]);
   assert.deepEqual(closeTurn(t2).events, [{ type: 'TurnEnded', turn: 2, side: 'blue' }]);
+});
+
+test('reload: N − 1 own turns for a weapon that fires every N turns; counted down by own turns without firing', () => {
+  const { state, data: d0 } = testMatch([{ team: 'blue', sbps: 'mortar_81mm_us', pos: H(2, 2) }]);
+  assert.equal(startReload(state, 'u1', d0).state, state, 'every turn: no reload');
+  const w = d0.units.weapon['81mm_mortar_us'];
+  const data = { ...d0, units: { ...d0.units, weapon: { ...d0.units.weapon, '81mm_mortar_us': { ...w, indirect: { ...w.indirect, usage_turns: 3 } } } } };
+  const r = startReload(state, 'u1', data);
+  assert.equal(reloadCheck(r.state.units.u1), 'reloading');
+  const firedTurn = tweak(r.state, 'u1', { budget: { ...r.state.units.u1.budget, fired: true } });
+  assert.equal(actionTurnEnd(firedTurn, 'u1').state.units.u1.timers.reload, 2, 'not in the turn it fired');
+  const quiet = actionTurnEnd(r.state, 'u1').state;
+  assert.equal(quiet.units.u1.timers.reload, 1);
+  assertOwnsOnly('turn', state, quiet);
 });
