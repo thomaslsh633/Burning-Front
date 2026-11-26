@@ -77,7 +77,8 @@
       "items": {
         "type": "object",
         "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "kind": { "enum": ["vp", "manpower", "munition", "fuel"] }, "hex": { "$ref": "#/$defs/HexKey" },
-          "radius": { "type": "integer", "minimum": 0 }, "sector": { "type": "string" }, "name": { "$ref": "types.schema.json#/$defs/I18nKey" } },
+          "radius": { "type": "integer", "minimum": 0 }, "sector": { "type": "string" }, "name": { "$ref": "types.schema.json#/$defs/I18nKey" },
+          "yield": { "type": "object", "propertyNames": { "enum": ["manpower", "munition", "fuel"] }, "additionalProperties": { "type": "integer", "minimum": 0 } } },
         "additionalProperties": false,
         "required": ["id", "kind", "hex"]
       }

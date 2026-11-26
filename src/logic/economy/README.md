@@ -10,7 +10,7 @@
 
 ## Public API (exported from `index.js`)
 - `priceOf`, `grossIncome`, `upkeep`, `collectIncome`, `canAfford`, `pay` — done (D2-8)
-- `offers`, `validateProduce` (route `Produce`: pay, then `state.spawnUnit` beside the building) — done (D2-8)
+- `producers` (map production buildings + HQs), `offers`, `population`, `validateProduce` (route `Produce`: pay, then `state.spawnUnit` beside the building; population cap) — done (D2-8)
 - `research` — later
 
 ## May import

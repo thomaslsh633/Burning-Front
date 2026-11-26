@@ -4,8 +4,9 @@ Gameplay history before v209 lives in the section headers of the source files (`
 New entries go on top, one short block per delivered version.
 
 ## rewrite — D2-8 points and economy (2026-11-26)
-- Points are taken by strength (men × capture rate) at turn-start ticks; contested zones freeze; sectors decide supply.
-- Income and upkeep at each own turn start; `Produce` buys a squad beside an own production building.
+- Points are taken at turn-start ticks, one point per capturing squad; contested zones freeze; sectors decide supply.
+- Income and upkeep at each own turn start; `Produce` buys a squad beside the HQ or a production building, with the CoH3
+  production lists of each faction; population cap 300.
 - Vehicles are never abandoned or captured; crewless guns can be destroyed by either side; reloading units do not counter.
 
 ## rewrite — D2-7 turn flow and reactions (2026-11-26)

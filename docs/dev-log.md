@@ -7,6 +7,8 @@ Newest first. One entry per finished task: done / next / blocked.
   (wreck at 0 HP, no XP), reload timers block fire and counter fire, pickups limited to upgrade / slot weapons (not built).
   D2-8: `logic/capture` (strength ticks, contest, sector supply), `logic/economy` (income, upkeep, `Produce`),
   `data/balance/economy.json`, `data/rules/production.json`. 263 tests.
+  Follow-up: capture per squad, map point yield override, production generated from CoH3 spawner data
+  (`tools/coh3/production.js`; battlegroup / restored units in research lists), HQ produces, population cap 300. 268 tests.
 - **Next:** decide when to build `logic/build`; D2-9 victory and the full-match integration test.
 - **Blocked:** `logic/build` waits for the build-menu entities (stage G import).
 

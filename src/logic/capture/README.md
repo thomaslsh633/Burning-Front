@@ -4,7 +4,7 @@
 
 ## Owns
 - `GameState.points`: `[{ id, owner, progress, by }]` (the map's point definitions stay in `data.maps[id].points`)
-- capture ticks and progress (strength: men × CoH3 capture rate, `data/balance/economy.json`), contested zones
+- capture ticks and progress (1 point per capturing squad, `data/balance/economy.json`), contested zones
 - sector links to HQ (which owned points pay)
 - VP drain (D2-9)
 

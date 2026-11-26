@@ -237,7 +237,7 @@ test('Produce: paid, placed beside the building, acts from the next own turn', (
 
 test('turn start: capture tick, then income for the side to move', () => {
   const map = { points: [{ id: 'f', kind: 'fuel', hex: '5,5', radius: 1 }] };
-  const { state, data } = testMatch([blue('riflemen_us', H(5, 5)), red('grenadier_ger', H(10, 9))], map);
+  const { state, data } = testMatch([blue('riflemen_us', H(5, 5)), blue('riflemen_us', H(5, 4)), red('grenadier_ger', H(10, 9))], map);
   const own = endTurn(endTurn(state, data).state, data);
   const at = types(own.events);
   assert.ok(at.indexOf('PointNeutralised') < 0 && at.indexOf('PointCaptured') < at.indexOf('IncomeReceived'));

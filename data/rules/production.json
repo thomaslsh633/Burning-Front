@@ -1,9 +1,389 @@
 {
-  "about": "What each production building type (map production[].type) offers, per faction. Pilot lists for the imported squads; design values until the CoH3 production lists are imported (stage G).",
+  "about": "Production per map building type and faction. `types` (hand-edited): map production type \u2192 the faction's CoH3 production building (hq = the map's HQ structure). `buildings` is written by `node tools/coh3/production.js` from CoH3 spawner data (as coh3stats' explorer lists it): `squads` are produced from the start; `research` holds squads no CoH3 building produces (battlegroup call-ins, restored v214 units), placed in the building whose squads they resemble most (or where `place` puts them, hand-edited) and unlocked by research. Only squads present in the unit data are offered.",
+  "types": {
+    "hq": {
+      "american": "hq_us",
+      "german": "hq_ger",
+      "afrika_korps": "hq_ak",
+      "british": "hq_uk",
+      "british_africa": "hq_africa_uk"
+    },
+    "barracks": {
+      "american": "barracks_us",
+      "german": "infanterie_kompanie_ger",
+      "afrika_korps": "infanterie_support_ak",
+      "british": "barracks_uk",
+      "british_africa": "barracks_africa_uk"
+    },
+    "support_center": {
+      "american": "weapon_support_center_us",
+      "german": "support_armory_ger",
+      "afrika_korps": "heavy_weapon_kompanie_ak"
+    },
+    "motor_pool": {
+      "american": "motor_pool_us",
+      "german": "mechanized_kompanie_ger",
+      "afrika_korps": "mechanized_kompanie_ak",
+      "british": "motor_platoon_uk",
+      "british_africa": "motor_platoon_africa_uk"
+    },
+    "tank_depot": {
+      "american": "tank_depot_us",
+      "german": "panzer_armory_ger",
+      "afrika_korps": "panzer_kompanie_ak",
+      "british": "armoured_platoon_uk",
+      "british_africa": "armoured_platoon_africa_uk"
+    }
+  },
+  "place": {},
   "buildings": {
-    "barracks": { "american": ["riflemen_us"], "german": ["grenadier_ger", "hmg_mg42_ger", "mortar_81mm_ger"] },
-    "support_center": { "american": ["hmg_30cal_us", "mortar_81mm_us", "at_gun_57mm_us"] },
-    "motor_pool": { "german": ["at_gun_75mm_ger"] },
-    "tank_depot": { "american": ["sherman_us"], "german": ["panzer_iv_ger"] }
+    "armoured_platoon_africa_uk": {
+      "squads": [
+        "centaur_africa_uk",
+        "churchill_africa_uk",
+        "churchill_avre_africa_uk",
+        "churchill_na75_75mm_africa_uk",
+        "crusader_aa_africa_uk",
+        "crusader_africa_uk",
+        "grant_africa_uk",
+        "guards_africa_uk",
+        "matilda_africa_uk",
+        "pheasant_halftrack_africa_uk",
+        "royal_engineers_armored_car_ger",
+        "royal_engineers_tiger_ger",
+        "royal_engineers_wirbelwind_ger",
+        "sherman_firefly_africa_uk"
+      ],
+      "research": [
+        "archer_africa_uk",
+        "australian_supplytruck_africa_uk",
+        "churchill_75mm_africa_uk",
+        "churchill_arv_africa_uk",
+        "churchill_black_prince_africa_uk",
+        "churchill_crocodile_africa_uk",
+        "command_churchill_africa_uk",
+        "crusader_57mm_africa_uk",
+        "cwt_15_quad_mount_africa_uk",
+        "cwt_15_truck_medical_africa_uk",
+        "cwt_15_truck_repair_resupply_africa_uk",
+        "marmon_herrington_africa_uk",
+        "priest_africa_uk",
+        "sherman_africa_uk"
+      ]
+    },
+    "armoured_platoon_uk": {
+      "squads": [
+        "archer_uk",
+        "churchill_crocodile_uk",
+        "churchill_uk",
+        "guards_uk",
+        "sherman_uk",
+        "valentine_uk"
+      ],
+      "research": [
+        "churchill_black_prince_uk"
+      ]
+    },
+    "barracks_africa_uk": {
+      "squads": [
+        "dingo_africa_uk",
+        "mortar_81mm_africa_uk",
+        "tommy_africa_uk"
+      ],
+      "research": []
+    },
+    "barracks_uk": {
+      "squads": [
+        "dingo_uk",
+        "mortar_81mm_uk",
+        "tommy_uk"
+      ],
+      "research": []
+    },
+    "barracks_us": {
+      "squads": [
+        "mortar_81mm_us",
+        "riflemen_us",
+        "truck_4x4_medical_specialist_us",
+        "truck_4x4_us",
+        "truck_4x4_x2_us"
+      ],
+      "research": []
+    },
+    "heavy_weapon_kompanie_ak": {
+      "squads": [
+        "halftrack_251_stuka_ak",
+        "halftrack_towed_88mm_ak",
+        "tiger_ak"
+      ],
+      "research": [
+        "goliath_ak",
+        "halftrack_250_mortar_ak",
+        "tiger_ace_torch"
+      ]
+    },
+    "hq_africa_uk": {
+      "squads": [
+        "hmg_vickers_africa_uk",
+        "sapper_africa_uk"
+      ],
+      "research": [
+        "australian_light_infantry_africa_uk",
+        "canadian_heavy_infantry_africa_uk",
+        "commando_africa_uk",
+        "commando_lmg_africa_uk",
+        "gurkhas_africa_uk",
+        "hmg_commando_africa_uk",
+        "indian_africa_uk",
+        "medic_africa_uk",
+        "mortar_81mm_africa_recrew_uk",
+        "officer_africa_uk",
+        "polish_lancer_africa_uk",
+        "sas_africa_uk",
+        "sniper_africa_uk",
+        "ssb_africa_uk",
+        "ssb_sniper_africa_uk"
+      ]
+    },
+    "hq_ak": {
+      "squads": [
+        "halftrack_250_ak",
+        "kradschutzen_motorcycle_ak",
+        "m13_40_ak",
+        "panzergrenadier_ak",
+        "panzerpioneer_ak",
+        "semovente_75_18_ak"
+      ],
+      "research": [
+        "bersaglieri_ak",
+        "folgore_paratroopers_ak",
+        "guastatori_ak",
+        "kriegsmarine_infantry_ak"
+      ]
+    },
+    "hq_ger": {
+      "squads": [
+        "halftrack_flame_ger",
+        "kettenkrad_ger",
+        "pioneer_ger",
+        "sturmpioneer_ger"
+      ],
+      "research": [
+        "fallschirmjagers_ger",
+        "fallschirmpioneers_ger",
+        "guastatori_ger"
+      ]
+    },
+    "hq_uk": {
+      "squads": [
+        "hmg_vickers_uk",
+        "sapper_uk"
+      ],
+      "research": []
+    },
+    "hq_us": {
+      "squads": [
+        "artillery_observers_us",
+        "assault_engineer_us",
+        "captain_us",
+        "engineer_us",
+        "pathfinder_us",
+        "ranger_us",
+        "scout_us"
+      ],
+      "research": [
+        "brazilian_infantry_us",
+        "brazilian_lieutenant_us",
+        "captain_torch",
+        "french_infantry_us",
+        "infantry_assault_bazooka_team_us",
+        "infantry_assault_riflemen_us",
+        "marksman_team_partisan",
+        "paratrooper_us",
+        "resistance_fighters_battlegroup_partisans",
+        "resistance_fighters_partisan",
+        "saboteurs_battlegroup_partisan",
+        "saboteurs_partisan",
+        "ssb_sniper_africa_us",
+        "ssf_commandos_us",
+        "stealth_ssf_commandos_torch"
+      ]
+    },
+    "infanterie_kompanie_ger": {
+      "squads": [
+        "grenadier_ger",
+        "hmg_mg42_ger",
+        "mortar_81mm_ger",
+        "sniper_ger"
+      ],
+      "research": [
+        "assault_grenadier_ger",
+        "coastal_officer_ger",
+        "coastal_reserves_ger"
+      ]
+    },
+    "infanterie_support_ak": {
+      "squads": [
+        "assault_panzergrenadier_ak",
+        "at_gun_50mm_pak_38_ak",
+        "halftrack_7_flak_ak",
+        "hmg_mg34_ak",
+        "leig_75mm_ak",
+        "panzerjaeger_inf_ak",
+        "truck_2_5_medical_ak"
+      ],
+      "research": []
+    },
+    "mechanized_kompanie_ak": {
+      "squads": [
+        "armored_car_8_rad_ak",
+        "armored_tractor_254_ak",
+        "halftrack_recovery_ak",
+        "marder_iii_ak",
+        "stug_iii_d_ak"
+      ],
+      "research": [
+        "armored_car_8_rad_command_ak",
+        "halftrack_250_20mm_ak",
+        "halftrack_250_vampire_ak",
+        "l6_40_ak",
+        "l6_40_flame_ak",
+        "panzer_ii_command_ak"
+      ]
+    },
+    "mechanized_kompanie_ger": {
+      "squads": [
+        "aa_gun_20mm_ger",
+        "armored_car_222_specialist_ger",
+        "armored_car_ger",
+        "jaeger_ger",
+        "marder_iii_ger",
+        "wirbelwind_ger"
+      ],
+      "research": []
+    },
+    "motor_platoon_africa_uk": {
+      "squads": [
+        "at_gun_6pdr_africa_uk",
+        "bishop_africa_uk",
+        "cwt_15_truck_africa_uk",
+        "cwt_lrdg_truck_africa_uk_uk",
+        "humber_africa_uk",
+        "stuart_africa_uk"
+      ],
+      "research": [
+        "cwt_15_flatbed_africa_uk"
+      ]
+    },
+    "motor_platoon_uk": {
+      "squads": [
+        "at_gun_2pdr_uk",
+        "at_gun_6pdr_uk",
+        "bishop_uk",
+        "cwt_15_truck_uk",
+        "humber_uk",
+        "stuart_uk"
+      ],
+      "research": []
+    },
+    "motor_pool_us": {
+      "squads": [
+        "at_gun_57mm_us",
+        "chaffee_us",
+        "greyhound_us",
+        "halftrack_75mm_us",
+        "halftrack_quad_us",
+        "stuart_us"
+      ],
+      "research": [
+        "at_gun_57mm_paradrop_us"
+      ]
+    },
+    "panzer_armory_ger": {
+      "squads": [
+        "brummbar_ger",
+        "nashorn_ger",
+        "panther_ger",
+        "panzer_iv_ger",
+        "stormtrooper_ger",
+        "sturmtiger_ger"
+      ],
+      "research": [
+        "borgward_iv_ger",
+        "halftrack_medical_ger",
+        "halftrack_stummel_ger",
+        "hummel_ger",
+        "jagdpanzer_iv_sdkfz_162_ger",
+        "panzer_iv_cmd_ger",
+        "recovery_vehicle_ger",
+        "stug_iii_d_ger",
+        "tiger_boss_ger",
+        "truck_2_5_cargo_ger",
+        "truck_2_5_fuel_ger",
+        "truck_2_5_ger",
+        "truck_2_5_logistics_ger",
+        "truck_2_5_medical_ger",
+        "wespe_ger"
+      ]
+    },
+    "panzer_kompanie_ak": {
+      "squads": [
+        "halftrack_251_stuka_ak",
+        "halftrack_towed_88mm_ak",
+        "p26_40_ak",
+        "panzer_iii_50mm_long_ak"
+      ],
+      "research": [
+        "m13_40_command_ak",
+        "panzer_iii_flame_ak",
+        "panzer_iv_ak",
+        "panzer_iv_command_ak"
+      ]
+    },
+    "support_armory_ger": {
+      "squads": [
+        "at_gun_75mm_ger",
+        "halftrack_ger",
+        "nebelwerfer_150mm_ger",
+        "panzergrenadier_ger",
+        "panzergrenadier_tankhunter_specialist_ger",
+        "stug_iii_ger"
+      ],
+      "research": []
+    },
+    "tank_depot_us": {
+      "squads": [
+        "char_b1_us",
+        "hellcat_us",
+        "scott_us",
+        "sherman_76mm_us",
+        "sherman_bulldozer_us",
+        "sherman_bulldozer_x2_us",
+        "sherman_easy_8_us",
+        "sherman_us",
+        "sherman_whizbang_us"
+      ],
+      "research": [
+        "ambulance_us",
+        "m29_weasal_us",
+        "priest_kangaroo_us",
+        "priest_us",
+        "recovery_vehicle_us",
+        "stuart_blade_us",
+        "truck_6x6_us"
+      ]
+    },
+    "weapon_support_center_us": {
+      "squads": [
+        "bazooka_team_us",
+        "halftrack_assault_us",
+        "halftrack_us",
+        "hmg_30cal_us",
+        "sniper_us"
+      ],
+      "research": [
+        "hmg_30cal_paradrop_us"
+      ]
+    }
   }
 }

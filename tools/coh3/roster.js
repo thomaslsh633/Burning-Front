@@ -93,6 +93,7 @@ export function buildRoster(src, roster, races = FACTIONS) {
           weapon: weapon ? last(weapon) : null };
       });
       units.push({ id, category, source, producers: refs.produced.get(p) ?? [],
+        tags: (EXT(s.rec, 'squad_type_ext')?.squad_type_list || []).map(t => t.squad_type).filter(Boolean),
         doctrine: refsIn(EXT(s.rec, 'squad_requirement_ext'), 'upgrade/').some(r => r.includes('/battlegroups/')),
         clone: roster.clone?.[id] ?? null, members, upgrades: kits,
         name: cs?.name || null, hero: (roster.heroes?.units || []).includes(id),

@@ -11,9 +11,10 @@ const MAP = {
 };
 const owned = (state, ids) => ({ ...state, points: state.points.map(p => (ids.includes(p.id) ? { ...p, owner: 'blue' } : p)) });
 
-test('every squad in data/rules/production.json exists in the unit data', () => {
-  const d = gameData();
-  for (const byFaction of Object.values(d.rules.production.buildings)) for (const ids of Object.values(byFaction)) for (const id of ids) assert.ok(d.units.sbps[id], id);
+test('production lists are generated for every mapped CoH3 building', () => {
+  const p = gameData().rules.production;
+  for (const t of Object.values(p.types)) for (const b of Object.values(t)) assert.ok(p.buildings[b], b);
+  assert.ok(p.buildings.barracks_us.squads.includes('riflemen_us'));
 });
 
 test('gross income: HQ base plus supplied points; VPs pay nothing', () => {
@@ -42,7 +43,7 @@ test('collect income: net manpower never below a quarter of gross; resources nev
 test('Produce check: own building that offers the squad, money in hand, a free hex beside it', () => {
   const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 2) }], MAP);
   const cmd = (x = {}) => ({ type: 'Produce', side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(1, 2), ...x });
-  assert.deepEqual(economy.offers(state, data, 'bx'), ['riflemen_us']);
+  assert.deepEqual(economy.offers(state, data, 'bx'), ['mortar_81mm_us', 'riflemen_us'], 'CoH3 barracks_us, squads in the unit data');
   assert.equal(economy.validateProduce(state, cmd(), data), null);
   assert.equal(economy.validateProduce(state, cmd({ building: 'tx' }), data), 'no_such_building');
   assert.equal(economy.validateProduce(state, cmd({ sbps: 'sherman_us' }), data), 'not_offered');
@@ -50,6 +51,24 @@ test('Produce check: own building that offers the squad, money in hand, a free h
   assert.equal(economy.validateProduce(state, cmd({ hex: H(3, 2) }), data), 'hex_occupied');
   const poor = { ...state, teams: { ...state.teams, blue: { ...state.teams.blue, resources: { manpower: 100, munition: 0, fuel: 0 } } } };
   assert.equal(economy.validateProduce(poor, cmd(), data), 'cannot_afford');
+});
+
+test('the HQ produces too (its CoH3 HQ building list)', () => {
+  const { state, data } = testMatch([], { structures: [{ id: 'hqb', kind: 'hq', team: 'blue', hexes: ['1,1'] }] });
+  assert.deepEqual(economy.producers(state, data).map(b => [b.id, b.type]), [['hqb', 'hq']]);
+  assert.deepEqual(economy.offers(state, data, 'hqb'), [], 'hq_us squads (engineers, scouts …) are not imported yet');
+});
+
+test('a map point may set its own yield', () => {
+  const { state, data } = testMatch([], { points: [{ id: 'mp', kind: 'manpower', hex: '5,5', radius: 0, yield: { manpower: 50 } }] });
+  assert.equal(economy.grossIncome(owned(state, ['mp']), data, 'blue').manpower, 60 + 50);
+});
+
+test('population cap: no production past it', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(8, 8) }], MAP);
+  assert.equal(economy.population(state, data, 'blue'), 8);
+  const capped = { ...data, balance: { ...data.balance, economy: { ...data.balance.economy, population_cap: 15 } } };
+  assert.equal(economy.validateProduce(state, { side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(1, 2) }, capped), 'population_cap');
 });
 
 test('pay', () => {

@@ -8,10 +8,10 @@ const POINT = { points: [{ id: 'p', kind: 'fuel', hex: '5,5', radius: 1 }] };
 const kill = (state, id, n) => tweak(state, id, { members: state.units[id].members.map((m, i) => (i >= n ? { ...m, hp: 0 } : m)) });
 const point = s => s.points[0];
 
-test('capture power: living men × CoH3 capture rate; not pinned, retreating, unarmed or vehicles', () => {
+test('capture power: one point per capturing squad, whatever its size; not pinned, retreating, unarmed or vehicles', () => {
   const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }, { team: 'blue', sbps: 'sherman_us', pos: H(1, 1) }], POINT);
-  assert.equal(capture.capturePower(state.units.u1, data), 7, '6 men × 1.25');
-  assert.equal(capture.capturePower(kill(state, 'u1', 1).units.u1, data), 1);
+  assert.equal(capture.capturePower(state.units.u1, data), 1);
+  assert.equal(capture.capturePower(kill(state, 'u1', 1).units.u1, data), 1, 'one man left: still one squad');
   assert.equal(capture.capturePower({ ...state.units.u1, fsm: { ...state.units.u1.fsm, morale: 'PINNED' } }, data), 0);
   assert.equal(capture.capturePower(state.units.u2, data), 0);
   assert.equal(capture.contests(state.units.u2, data), true, 'an armed vehicle contests');
@@ -23,22 +23,23 @@ test('every map point starts neutral', () => {
   assert.deepEqual(state.points, [{ id: 'p', owner: null, progress: 0, by: null }]);
 });
 
-test('one man: 2 ticks to capture a neutral point; at most one step per tick', () => {
-  const { state: s0, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }], POINT);
-  const one = kill(s0, 'u1', 1);
-  const t1 = capture.captureTick(one, data, 'blue');
+test('one squad takes 2 ticks for a neutral point, two squads 1; at most one step per tick', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }], POINT);
+  const t1 = capture.captureTick(state, data, 'blue');
   assert.deepEqual(point(t1.state), { id: 'p', owner: null, progress: 1, by: 'blue' });
   assert.deepEqual(t1.events, [{ type: 'PointProgress', point: 'p', team: 'blue', progress: 1, of: 2 }]);
   const t2 = capture.captureTick(t1.state, data, 'blue');
   assert.deepEqual([point(t2.state).owner, t2.events[0].type], ['blue', 'PointCaptured']);
-  const full = { ...s0, points: [{ id: 'p', owner: 'red', progress: 0, by: null }] };
-  const n = capture.captureTick(full, data, 'blue');
-  assert.deepEqual([point(n.state).owner, n.events[0].type], [null, 'PointNeutralised'], 'a full squad: one step, not two');
+  const { state: two } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }, { team: 'blue', sbps: 'riflemen_us', pos: H(5, 4) }, { team: 'blue', sbps: 'riflemen_us', pos: H(4, 5) }], POINT);
+  assert.equal(point(capture.captureTick(two, data, 'blue').state).owner, 'blue', 'two or more squads: one turn');
+  const enemy = { ...two, points: [{ id: 'p', owner: 'red', progress: 0, by: null }] };
+  const n = capture.captureTick(enemy, data, 'blue');
+  assert.deepEqual([point(n.state).owner, n.events[0].type], [null, 'PointNeutralised'], 'three squads: one step, not two');
 });
 
 test('contested: an armed enemy in the zone freezes progress; leaving the zone loses it', () => {
   const { state: s0, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }, { team: 'red', sbps: 'grenadier_ger', pos: H(5, 4) }], POINT);
-  const started = { ...kill(s0, 'u1', 1), points: [{ id: 'p', owner: null, progress: 1, by: 'blue' }] };
+  const started = { ...s0, points: [{ id: 'p', owner: null, progress: 1, by: 'blue' }] };
   assert.deepEqual(point(capture.captureTick(started, data, 'blue').state), point(started));
   const left = tweak(started, 'u1', { pos: H(1, 1) });
   assert.deepEqual(point(capture.captureTick(left, data, 'blue').state), { id: 'p', owner: null, progress: 0, by: null });

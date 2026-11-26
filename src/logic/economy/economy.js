@@ -17,7 +17,7 @@ export function grossIncome(state, data, team) {
   const out = Object.fromEntries(RESOURCES.map(r => [r, inc.base[r] ?? 0]));
   for (const p of mapOf(state, data).points) {
     if (!supplied.has(p.id)) continue;
-    for (const [r, v] of Object.entries(inc.points[p.kind] ?? {})) out[r] += v;
+    for (const [r, v] of Object.entries(p.yield ?? inc.points[p.kind] ?? {})) out[r] += v;   // a map may set a point's own yield
   }
   return out;
 }
@@ -44,6 +44,10 @@ export function collectIncome(state, data, team) {
     events: [ev('IncomeReceived', { team, gross, net }), ev('UpkeepPaid', { team, ...up })] };
 }
 
+/** Population a side fields: the pop of its active units. */
+export const population = (state, data, team) => Object.values(state.units)
+  .filter(u => u.team === team && u.fsm.life === 'ACTIVE').reduce((s, u) => s + (data.units.sbps[u.sbps].pop ?? 0), 0);
+
 export const canAfford = (state, team, cost) => Object.entries(cost).every(([r, v]) => (state.teams[team].resources[r] ?? 0) >= v);
 
 /** Pay a price (checked with canAfford first). */
@@ -53,10 +57,20 @@ export function pay(state, team, cost) {
   return { state: { ...state, teams: { ...state.teams, [team]: { ...state.teams[team], resources } } }, events: [] };
 }
 
-/** Squad ids a production building offers to its team's faction (data/rules/production.json). */
+/** Buildings that produce: the map's production buildings and each side's HQ (type 'hq'). */
+export function producers(state, data) {
+  const m = mapOf(state, data);
+  return [...m.production, ...Object.entries(m.structures).filter(([, s]) => s.kind === 'hq').map(([id, s]) => ({ id, type: 'hq', team: s.team, hexes: s.hexes }))];
+}
+
+/**
+ * Squad ids a building offers its team (data/rules/production.json): its faction's CoH3 building for the map type, the squads
+ * that building produces from the start and that the unit data has. Research-locked squads are not offered (no research yet).
+ */
 export function offers(state, data, buildingId) {
-  const b = mapOf(state, data).production.find(x => x.id === buildingId);
-  return b ? data.rules.production.buildings[b.type]?.[state.teams[b.team]?.faction] ?? [] : [];
+  const b = producers(state, data).find(x => x.id === buildingId), p = data.rules.production;
+  const coh3 = b && p.types[b.type]?.[state.teams[b.team]?.faction];
+  return (p.buildings[coh3]?.squads ?? []).filter(id => data.units.sbps[id]);
 }
 
 /**
@@ -64,10 +78,11 @@ export function offers(state, data, buildingId) {
  * a free hex next to the building that the unit can enter (v214: deploy beside the building). → reason or null
  */
 export function validateProduce(state, cmd, data) {
-  const b = mapOf(state, data).production.find(x => x.id === cmd.building);
+  const b = producers(state, data).find(x => x.id === cmd.building);
   if (!b || b.team !== cmd.side) return 'no_such_building';
   if (!offers(state, data, cmd.building).includes(cmd.sbps)) return 'not_offered';
   if (!canAfford(state, cmd.side, priceOf(cmd.sbps, data))) return 'cannot_afford';
+  if (population(state, data, cmd.side) + (data.units.sbps[cmd.sbps].pop ?? 0) > data.balance.economy.population_cap) return 'population_cap';
   const cls = moveClass({ members: data.units.sbps[cmd.sbps].members.map(m => ({ ebps: m.entity })) }, data);
   const beside = b.hexes.map(fromKey).find(h => cmd.hex && distance(h, cmd.hex) === 1 && stepCost(state, data, h, cmd.hex, cls ?? 'infantry') != null);
   if (!beside || b.hexes.includes(`${cmd.hex.c},${cmd.hex.r}`)) return 'bad_hex';

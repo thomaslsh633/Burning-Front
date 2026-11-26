@@ -5,10 +5,11 @@
     "about": { "type": "string" },
     "capture": {
       "type": "object",
-      "properties": { "points_per_step": { "type": "integer", "minimum": 1 } },
+      "properties": { "points_per_squad": { "type": "integer", "minimum": 1 }, "points_per_step": { "type": "integer", "minimum": 1 } },
       "additionalProperties": false,
-      "required": ["points_per_step"]
+      "required": ["points_per_squad", "points_per_step"]
     },
+    "population_cap": { "type": "integer", "minimum": 1 },
     "income": {
       "type": "object",
       "properties": {
@@ -35,7 +36,7 @@
     }
   },
   "additionalProperties": false,
-  "required": ["capture", "income", "upkeep"],
+  "required": ["capture", "population_cap", "income", "upkeep"],
   "$defs": {
     "Yield": {
       "type": "object",

@@ -3,15 +3,24 @@
   "type": "object",
   "properties": {
     "about": { "type": "string" },
+    "types": {
+      "type": "object",
+      "additionalProperties": { "type": "object", "additionalProperties": { "$ref": "types.schema.json#/$defs/Id" } }
+    },
+    "place": { "type": "object", "additionalProperties": { "$ref": "types.schema.json#/$defs/Id" } },
     "buildings": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
-        "propertyVocab": "faction",
-        "additionalProperties": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } }
+        "properties": {
+          "squads": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } },
+          "research": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } }
+        },
+        "additionalProperties": false,
+        "required": ["squads", "research"]
       }
     }
   },
   "additionalProperties": false,
-  "required": ["buildings"]
+  "required": ["types", "place", "buildings"]
 }
