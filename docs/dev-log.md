@@ -2,6 +2,18 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D2-1 … D2-6, map design)
+- **Done:** D2-1 `logic/hex`, `services/rng`; D2-2 `fsm`, `events`, `state`, `commands`, `store`, `services/data indexUnits`;
+  D2-3 `movement` + action budget (`data/rules/terrain.json`, `data/balance/movement.json`); D2-4 `vision` (sight lines,
+  concealment, cover per shot); D2-5 `combat` (preview = resolve, checked over 300 seeds); D2-6 `crew`, `status`
+  (suppression, retreat, veterancy), `lifecycle` deaths and criticals. Attack / Move / Turn / Emplace / Pack / Retreat
+  routes. 187 tests.
+- **Proposal:** `docs/map-design.md` — map audit (ground and objects are split in the rules, but map objects have no
+  identity or state, buildings are terrain, static map and match changes are mixed); linear obstacles as polylines
+  compiled to hex edges (candidate B); map layers and a new `logic/terrain` folder.
+- **Next:** decisions in `docs/map-design.md` §4; then D2-7 (turn order, counter fire, MG overwatch, recrew).
+- **Blocked:** waiting for the map decisions.
+
 ## 2026-11-26 (D2 readiness fixes 1–7)
 - **Done:** (1) data layers: importer writes `data/base`, designers override in `data/units`, `npm run build:data` merges
   by id into `data/generated/units.json`; (2) game scale in `data/balance/scale.json`, read only through
