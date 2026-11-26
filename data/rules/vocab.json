@@ -1,0 +1,502 @@
+{
+  "about": "Closed word lists. Every tag, class, trait, state, flag and modifier a data file uses must be in one of these lists; tools/validate.js rejects anything else (schema keyword \"vocab\"). CoH3 lists (weapon_class, damage_type, unit_tags, pass) keep CoH3's words and are kept complete with `node tools/vocab/sync.js --check / --seed`.",
+  "lists": {
+    "faction": [
+      "german",
+      "american",
+      "afrika_korps",
+      "british"
+    ],
+    "coh3_race": [
+      "german",
+      "american",
+      "afrika_korps",
+      "british",
+      "british_africa",
+      "common"
+    ],
+    "theatre": [
+      "north_africa",
+      "italy"
+    ],
+    "resource": [
+      "manpower",
+      "munition",
+      "fuel"
+    ],
+    "band": [
+      "near",
+      "mid",
+      "far"
+    ],
+    "kind": [
+      "squad",
+      "team_weapon",
+      "vehicle",
+      "structure"
+    ],
+    "unit_category": [
+      "infantry",
+      "team_weapons",
+      "vehicles",
+      "emplacements",
+      "buildings",
+      "aircraft"
+    ],
+    "weapon_category": [
+      "anti_tank_gun",
+      "infantry_anti_tank_weapon",
+      "tank_gun",
+      "tungsten_round_upgrade",
+      "anti_air_gun",
+      "grenade",
+      "heavy_artillery",
+      "light_artillery",
+      "mine",
+      "mortar",
+      "flame_throwers",
+      "heavy_machine_gun",
+      "light_machine_gun",
+      "sub_machine_gun",
+      "rifle",
+      "sidearm",
+      "aircraft"
+    ],
+    "role": [
+      "anti_infantry",
+      "anti_tank",
+      "anti_light_vehicle",
+      "all_round",
+      "suppression",
+      "indirect",
+      "recon",
+      "engineer",
+      "logistics"
+    ],
+    "fire_mode": [
+      "direct",
+      "indirect",
+      "lobbed"
+    ],
+    "fire_rule": [
+      "volley",
+      "single_shot",
+      "artillery",
+      "ability",
+      "per_use"
+    ],
+    "indirect_class": [
+      "heavy",
+      "light",
+      "mortar",
+      "rocket",
+      "spg"
+    ],
+    "cover": [
+      "none",
+      "light",
+      "heavy",
+      "garrison",
+      "trench",
+      "smoke",
+      "water",
+      "negative"
+    ],
+    "mount": [
+      "turret",
+      "hull",
+      "fixed"
+    ],
+    "weapon_slot": [
+      "main",
+      "secondary",
+      "accessory"
+    ],
+    "weapon_trait": [
+      "ignores_blockers",
+      "needs_sight",
+      "anti_air",
+      "anti_air_through_cover",
+      "anti_air_range",
+      "emplace_required",
+      "emplace_faces_target",
+      "friendly_fire",
+      "piercing",
+      "hits_all_on_miss",
+      "hits_all_on_hit",
+      "attack_ground",
+      "ground_hit_rate",
+      "targets_garrison",
+      "sniper_kill",
+      "replaceable",
+      "replacement",
+      "fire_on_move",
+      "reveals_on_fire"
+    ],
+    "unit_trait": [
+      "receives_cover",
+      "can_repair",
+      "repairable",
+      "salvagable_wreck",
+      "paradrop",
+      "can_retreat",
+      "can_garrison",
+      "can_capture",
+      "contests_only",
+      "can_build",
+      "can_recrew",
+      "unique",
+      "hero",
+      "recrewable",
+      "towable",
+      "amphibious"
+    ],
+    "status_flag": [
+      "emplaced",
+      "setting_up",
+      "packing_up",
+      "packed",
+      "overwatch",
+      "overwatch_fired",
+      "counter_used",
+      "moved",
+      "acted",
+      "exhausted",
+      "reloading",
+      "low_ammo",
+      "out_of_ammo",
+      "in_supply",
+      "repairing",
+      "being_repaired",
+      "healing",
+      "engaged",
+      "suppressed",
+      "pinned",
+      "retreating",
+      "concealed",
+      "revealed_by_fire",
+      "sound_ranged",
+      "in_smoke",
+      "garrisoned",
+      "loaded",
+      "decrewed",
+      "abandoned",
+      "wrecked",
+      "engine_damaged",
+      "immobilised",
+      "main_gun_damaged",
+      "crew_shocked",
+      "under_construction",
+      "reinforcing",
+      "veteran",
+      "hero"
+    ],
+    "critical": [
+      "engine_damaged",
+      "immobilised",
+      "main_gun_damaged",
+      "crew_shocked"
+    ],
+    "state_action": [
+      "IDLE",
+      "MOVING",
+      "ATTACKING",
+      "OVERWATCH",
+      "EXHAUSTED"
+    ],
+    "state_stance": [
+      "MOBILE",
+      "SETTING_UP",
+      "EMPLACED",
+      "PACKING_UP"
+    ],
+    "state_location": [
+      "ON_MAP",
+      "GARRISONED",
+      "LOADED"
+    ],
+    "state_morale": [
+      "NORMAL",
+      "SUPPRESSED",
+      "PINNED",
+      "RETREATING"
+    ],
+    "state_life": [
+      "ACTIVE",
+      "DECREWED",
+      "ABANDONED",
+      "WRECKED"
+    ],
+    "state_visibility": [
+      "REVEALED",
+      "CONCEALED"
+    ],
+    "upgrade_effect": [
+      "add_weapon",
+      "replace_weapon",
+      "stat",
+      "add_ability",
+      "add_trait",
+      "unlock"
+    ],
+    "unit_source": [
+      "produced",
+      "built",
+      "upgrade",
+      "called_in",
+      "restored",
+      "coh3stats"
+    ],
+    "weapon_class": [
+      "artillery_medium",
+      "artillery_mobile",
+      "artillery_small",
+      "at_gun",
+      "bazooka",
+      "cannon",
+      "cannon_burst",
+      "cannon_large",
+      "cannon_small",
+      "dummy",
+      "flame",
+      "grenade",
+      "grenade_launcher",
+      "hmg",
+      "lmg",
+      "mortar",
+      "nebelwerfer",
+      "panzerbuchse",
+      "pistol",
+      "rifle",
+      "rifle_grenade",
+      "smg",
+      "smoke",
+      "sniper",
+      "sniper_gib"
+    ],
+    "damage_type": [
+      "True Damage",
+      "ballistic",
+      "explosive",
+      "flame"
+    ],
+    "unit_tags": [
+      "8_rad",
+      "allow_brew_up",
+      "allow_track_damage_when_immobilized",
+      "allow_turret_off",
+      "american",
+      "anti_tank_weapon",
+      "armored_car",
+      "artillery",
+      "artillery_emplacement",
+      "base_defense",
+      "base_howitzer_uk",
+      "base_sherman",
+      "brazilian",
+      "british",
+      "british_africa",
+      "building",
+      "bunker",
+      "burst_weapon",
+      "captain_squad",
+      "chaffee",
+      "churchill",
+      "churchill_black_prince",
+      "commando_beacon",
+      "cover_object",
+      "crusader_aa",
+      "dak_halftrack",
+      "dak_upgradeable_light",
+      "devils_brigade",
+      "dingo",
+      "elefant",
+      "emplacement",
+      "emplacement_aa",
+      "emplacement_atg",
+      "emplacement_no_teardown",
+      "engineer",
+      "fighting_position",
+      "fixed_turret",
+      "french",
+      "german",
+      "german_infantry",
+      "goliath",
+      "grenadier_ger",
+      "greyhound",
+      "guastatori",
+      "halftrack",
+      "heavy_armor",
+      "hellcat",
+      "infantry",
+      "italian",
+      "jaeger_light_infantry",
+      "kettenkrad",
+      "l6_40",
+      "light_tank",
+      "light_vehicle",
+      "lock_down_enemy_points",
+      "marder_iii_ger",
+      "medical_vehicle",
+      "motorcycle",
+      "nashorn",
+      "no_auto_target_scan",
+      "observation_post",
+      "observer_barrage_executor",
+      "offmap_and_artillery_resistance",
+      "panzer_iii",
+      "panzer_iii_flame",
+      "panzer_iv",
+      "panzergrenadier_ak",
+      "panzergrenadier_ger",
+      "paratroopers",
+      "pathfinder",
+      "pioneer",
+      "radio_beacon",
+      "ranger",
+      "rapid_response",
+      "recovery_vehicle",
+      "reinforce_vehicle",
+      "rideable_tank",
+      "rideable_vehicle",
+      "rifleman",
+      "sapper",
+      "scout",
+      "self_propelled_artillery",
+      "shared_hold",
+      "shared_hold_main",
+      "sherman",
+      "sherman_dozer",
+      "side_armor_tank",
+      "sniper",
+      "squad_entity_max_1",
+      "squad_entity_max_3",
+      "squad_entity_max_4",
+      "squad_entity_max_5",
+      "squad_entity_max_6",
+      "stormtroopers",
+      "stug_iii",
+      "stun_immune",
+      "sturmpioneer",
+      "support_vehicle",
+      "tank",
+      "team_weapon",
+      "tiger_tank",
+      "tommy",
+      "truck_254",
+      "truck_4x4",
+      "ultra_light",
+      "unbreachable",
+      "upgraded_halftrack",
+      "vehicle",
+      "vehicle_treaded",
+      "vehicle_wheeled",
+      "weasal",
+      "whizbang",
+      "wirbelwind"
+    ],
+    "pass": [
+      "infantry",
+      "trench_crossing_vehicle_heavy",
+      "trench_crossing_vehicle_light",
+      "trench_crossing_vehicle_medium",
+      "vaulting_infantry",
+      "vehicle_light",
+      "vehicle_medium",
+      "vehicle_ultra_light"
+    ]
+  },
+  "veterancy_modifiers": {
+    "attack_speed": [
+      "WEAPON_OVERALL_ATTACK_SPEED",
+      "WEAPON_OVERALL_ATTACK_SPEED_MULT_ADD"
+    ],
+    "hp_add": [
+      "HEALTH_MODIFIER_ADDITION"
+    ],
+    "weapon_accuracy": [
+      "WEAPON_ACCURACY_MODIFIER"
+    ],
+    "received_accuracy": [
+      "RECEIVED_ACCURACY_MODIFIER"
+    ],
+    "received_damage": [
+      "RECEIVED_DAMAGE_MODIFIER"
+    ],
+    "ability_cooldown": [
+      "ABILITY_RECHARGE_MODIFIER"
+    ],
+    "weapon_damage": [
+      "WEAPON_DAMAGE_MODIFIER",
+      "WEAPON_DAMAGE_ADDITION_MODIFIER"
+    ],
+    "ability_range": [
+      "ABILITY_RANGE_MODIFIER",
+      "ABILITY_RANGE_ADDITION_MODIFIER",
+      "GRENADE_ABILITY_RANGE_MODIFIER"
+    ],
+    "weapon_suppression": [
+      "WEAPON_SUPPRESSION_MODIFIER",
+      "WEAPON_SUPPRESSION_ADDITIVE_MODIFIER"
+    ],
+    "ability_cost": [
+      "ABILITY_COST_MUNITION_MODIFIER",
+      "GRENADE_COST_MODIFIER",
+      "UPGRADE_MUNITION_COST_MODIFIER"
+    ],
+    "sight": [
+      "UNIT_SIGHT_MODIFIER"
+    ],
+    "weapon_range": [
+      "WEAPON_RANGE_MODIFIER",
+      "WEAPON_RANGE_MULTIPLICATION_MODIFIER"
+    ],
+    "move": [
+      "SPEED_MODIFIER"
+    ],
+    "weapon_penetration": [
+      "WEAPON_PENETRATION_MODIFIER"
+    ],
+    "scatter": [
+      "WEAPON_SCATTER"
+    ],
+    "detection": [
+      "DETECTION_VISION_MODIFIER",
+      "DETECTION_VISION_MODIFIER_SQUAD"
+    ],
+    "capture_rate": [
+      "CAPTURE_RATE_MODIFIER",
+      "CAPTURE_RATE_ADDITION_MODIFIER"
+    ],
+    "build_speed": [
+      "CONSTRUCTION_RATE_MODIFIER"
+    ],
+    "armor_add": [
+      "FRONT_ARMOR_ADDITION",
+      "SIDE_ARMOR_ADDITION"
+    ],
+    "aoe_member_cap": [
+      "WEAPON_AOE_MAX_MEMBER_HIT_MODIFIER"
+    ]
+  },
+  "veterancy_ignored": [
+    "UNIT_ROTATION_RATE_MODIFIER",
+    "UNIT_PIVOT_RATE_MODIFIER",
+    "ACCELERATION_MODIFIER",
+    "WEAPON_HORIZONTAL_SPEED_MODIFIER",
+    "WEAPON_HORIZONTAL_TRAVERSE_MODIFIER",
+    "WEAPON_BURST_RATE_OF_FIRE_MODIFIER",
+    "WEAPON_BURST_DURATION_MODIFIER",
+    "REINFORCE_RADIUS_MODIFIER",
+    "CAPTURE_REVERT_RATE_MODIFIER",
+    "CAPTURE_RATE_REVERT_ADDITION_MODIFIER",
+    "ABILITY_CHANNEL_TIME_MODIFIER",
+    "SQUAD_ABILITY_RESOURCE_1_MAX_MODIFIER",
+    "SQUAD_ABILITY_RESOURCE_1_RATE_MODIFIER",
+    "WEAPON_MOVING_ACCURACY_MODIFIER",
+    "WEAPON_CONE_HORIZONTAL_MODIFIER",
+    "FRONT_ARMOR_HIT_DAMAGE_MODIFIER",
+    "SIDE_ARMOR_HIT_DAMAGE_MODIFIER",
+    "COUNT"
+  ]
+}

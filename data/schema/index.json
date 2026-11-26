@@ -1,0 +1,11 @@
+{
+  "about": "Which schema checks which data file (tools/validate.js). Add every new data file here.",
+  "files": {
+    "data/rules/vocab.json": "vocab.schema.json",
+    "data/rules/status-flags.json": "status-flags.schema.json",
+    "data/rules/weapon-flags.json": "weapon-flags.schema.json",
+    "data/rules/roster.json": "roster.schema.json",
+    "data/balance/indirect.json": "indirect.schema.json",
+    "data/balance/fire-rate.json": "fire-rate.schema.json"
+  }
+}

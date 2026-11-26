@@ -1,0 +1,117 @@
+{
+  "about": "Shared value types used by every data form (docs/unit-data-format.md, docs/data-labels.md).",
+  "$defs": {
+    "Id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "I18nKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.]+$"
+    },
+    "Band3": {
+      "type": "object",
+      "required": [
+        "near",
+        "mid",
+        "far"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "near": {
+          "type": "number"
+        },
+        "mid": {
+          "type": "number"
+        },
+        "far": {
+          "type": "number"
+        }
+      }
+    },
+    "IntBand3": {
+      "type": "object",
+      "required": [
+        "near",
+        "mid",
+        "far"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "near": {
+          "type": "integer"
+        },
+        "mid": {
+          "type": "integer"
+        },
+        "far": {
+          "type": "integer"
+        }
+      }
+    },
+    "Resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "manpower": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "munition": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fuel": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "Mods": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accuracy": {
+          "type": "number"
+        },
+        "damage": {
+          "type": "number"
+        },
+        "penetration": {
+          "type": "number"
+        },
+        "suppression": {
+          "type": "number"
+        }
+      }
+    },
+    "Armor3": {
+      "type": "object",
+      "required": [
+        "front",
+        "side",
+        "rear"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "front": {
+          "type": "number"
+        },
+        "side": {
+          "type": "number"
+        },
+        "rear": {
+          "type": "number"
+        }
+      }
+    },
+    "HexInt": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "Turns": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

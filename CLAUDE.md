@@ -29,6 +29,7 @@ no new features in it).
 - Changed a rule? Update its line in `SPEC.md` in the same change.
 
 ## Check
-- `npm run check` — layer and purity rules (`tools/check-layers.js`).
+- `npm run check` — layer and purity rules, every data file against its schema and word lists (`tools/validate.js`,
+  `data/schema/index.json`), and CoH3 word coverage (`tools/vocab/sync.js --check`). New data file → add it to the index.
 - `npm test` — all tests (`node --test`).
 - `npm run legacy:build` — builds the v214 reference into `legacy/dist/`.

@@ -1,0 +1,97 @@
+{
+  "type": "object",
+  "required": [
+    "window_seconds",
+    "bands",
+    "groups",
+    "volley",
+    "artillery"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "window_seconds": {
+      "type": "number",
+      "minimum": 1
+    },
+    "bands": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "vocab": "band"
+      }
+    },
+    "decimals": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "groups": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "per_use": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "weapon_category"
+          }
+        },
+        "single_shot": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "weapon_category"
+          }
+        },
+        "artillery": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "weapon_category"
+          }
+        }
+      }
+    },
+    "volley": {
+      "type": "object",
+      "required": [
+        "tolerance",
+        "max_multiplier"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "tolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_multiplier": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "artillery": {
+      "type": "object",
+      "required": [
+        "max_reload_turns",
+        "min_raw"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "max_reload_turns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "min_raw": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "skip_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D1-3 word lists and validator)
+- **Done:** `data/rules/vocab.json` (31 lists: CoH3 weapon classes 25, damage types 4, unit tags 113, pass 8, plus game
+  lists — states of the six axes, status flags, weapon traits, unit traits, roles, cover, fire modes / rules, indirect
+  classes, upgrade effects …; veterancy modifier mapping 20 used / 18 ignored). `tools/vocab/sync.js` keeps CoH3 lists
+  complete. `data/schema/types.schema.json` + schemas for the 6 rule / balance files, `data/schema/index.json`.
+  `tools/validate.js` (no dependencies, tested). `npm run check` = layers + data + vocab coverage.
+- **Next:** D1-4 schemas for weapon / ebps / sbps / veterancy / upgrade / fx and the category profiles.
+
 ## 2026-11-26 (minimum range, counter-barrage)
 - **Done:** indirect minimum range (scaled CoH3 min, class floors), rocket volley cap 3, blind fire beyond sight
   (CoH3 fog multipliers, +1 spread), counter-battery `sound_ranged` hexes (no blind penalty). SPEC §10, status flags, labels.
