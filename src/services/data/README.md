@@ -3,6 +3,7 @@
 **Layer 3 — Data / Service** — Game data resource management: loads, validates and indexes the generated data.
 
 ## Owns
+- the data layers: generated base → designer overrides → mods, merged by id (`merge.js`: `deepMerge`, `mergeKind`, `UNIT_KINDS`); the build step `tools/build-data.js` uses the same function
 - loading data/generated/*.json
 - schema validation (data/schema)
 - lookups by id: unit, entity, weapon, upgrade, ability, terrain, map

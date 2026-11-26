@@ -1,7 +1,14 @@
 # data/units/
 
-The thing you buy and put on a hex (CoH3 squad). Cost, pop, upkeep, members, and optional component blocks (move, vision, attack, capture, build, transport, crew, stealth …), each owned by one logic system.
+**Designer overrides** of the generated base data (`data/base/<faction>/`). Same file names and layout, but a record holds
+only the fields you change; everything else comes from the base. `npm run build:data` merges base → these overrides → mods
+into `data/generated/units.json`, and `reports/overrides.md` lists every override next to the base value.
 
-- Format: JSON, one file per faction
-- Edited by: You, when adding units
-- Data files hold numbers, ids and keys only — never functions, never display text (that goes in data/i18n).
+Merge rules (by id): objects merge field by field; arrays are replaced; `null` deletes a field; `{ "remove": true }` deletes
+the record; a new id adds a complete record; a record written under a different category moves there.
+
+Example — `data/units/american/weapon.json`:
+
+```json
+{ "rifle": { "garand_rifleman_us": { "attack": { "accuracy": { "far": 0.4 } } } } }
+```
