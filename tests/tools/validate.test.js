@@ -36,3 +36,9 @@ test('enum, pattern, anyOf, additionalProperties schema, array bounds', () => {
   assert.deepEqual(errs({ type: 'object', additionalProperties: { type: 'number' } }, { a: 1, b: 'x' }), ['$.b expected number']);
   assert.deepEqual(errs({ type: 'array', minItems: 1 }, []), ['$ fewer than 1 items']);
 });
+
+test('propertyNames checks every key; minLength rejects empty text', () => {
+  const strings = { type: 'object', propertyNames: { pattern: '^[a-z0-9_.]+$' }, additionalProperties: { type: 'string', minLength: 1 } };
+  assert.deepEqual(errs(strings, { 'unit.riflemen_us.name': 'Riflemen', 'Unit.Bad': 'x', 'ui.empty': '' }),
+    ['$.Unit.Bad key: does not match ^[a-z0-9_.]+$', '$.ui.empty shorter than 1']);
+});

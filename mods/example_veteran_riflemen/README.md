@@ -13,6 +13,7 @@ Not enabled. To try it, add its id to `mods/load-order.json` and run `npm run bu
 | `units/american/sbps.json` | a **new record**: a complete squad (`riflemen_veteran_us`), reusing the base entities and veterancy set |
 | `units/american/fx.json` | the new squad's presentation entry (every record needs one) |
 | `rules/vocab.json` | a **new word** in an existing list (`unit_trait`: `desert_veteran`), used by the new squad |
+| `i18n/ko.json`, `i18n/en.json` | the new squad's **text** (a mod can also change existing text or add a language) |
 
 The merged result is checked like the base data (schema, category profile, links). `reports/overrides.md` lists the
 mod's changes next to the base values.

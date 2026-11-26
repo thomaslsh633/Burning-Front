@@ -1,4 +1,4 @@
-// A throwaway repo root for build tests: the real schemas, rules, balance and American base data, nothing else.
+// A throwaway repo root for build tests: the real schemas, rules, balance, text and American base data, nothing else.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -8,7 +8,7 @@ export const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 
 export function tempRoot() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'bf-data-'));
-  for (const d of ['data/schema', 'data/rules', 'data/balance', 'data/base/american']) fs.cpSync(path.join(repo, d), path.join(dir, d), { recursive: true });
+  for (const d of ['data/schema', 'data/rules', 'data/balance', 'data/i18n', 'data/base/american']) fs.cpSync(path.join(repo, d), path.join(dir, d), { recursive: true });
   return dir;
 }
 

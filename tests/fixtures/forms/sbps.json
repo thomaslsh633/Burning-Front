@@ -3,7 +3,6 @@
   "riflemen_us": {
    "coh3_ref": "sbps/races/american/infantry/riflemen_us",
    "kind": "squad",
-   "name_en": "Riflemen Squad",
    "role": "anti_infantry",
    "members": [
     {

@@ -1,6 +1,7 @@
 // Dependency-free validator for the data files: a small JSON-Schema subset plus the keyword "vocab".
 // Supported: type (incl. integer, arrays of types), properties, required, additionalProperties (bool or schema),
-// items, minItems, maxItems, enum, const, minimum, maximum, pattern, anyOf, $ref ("file#/$defs/Name" or "#/$defs/Name"),
+// items, minItems, maxItems, enum, const, minimum, maximum, pattern, minLength, propertyNames, anyOf,
+// $ref ("file#/$defs/Name" or "#/$defs/Name"),
 // vocab ("<list>": the string must be in data/rules/vocab.json lists.<list>), propertyVocab (every object key must be).
 // Index entries may be { schema, profile }: the file is grouped by category and each record is checked against
 // data/schema/profiles.json (tools/profiles.js).
@@ -43,6 +44,7 @@ function check(schema, value, at, ctx, opts, errors) {
   }
   if (typeof value === 'string') {
     if (schema.pattern && !new RegExp(schema.pattern).test(value)) err(`does not match ${schema.pattern}`);
+    if (schema.minLength != null && value.length < schema.minLength) err(`shorter than ${schema.minLength}`);
     if (schema.vocab) {
       const list = opts.vocab?.lists?.[schema.vocab];
       if (!list) err(`unknown vocab list ${schema.vocab}`);
@@ -59,6 +61,13 @@ function check(schema, value, at, ctx, opts, errors) {
     if (schema.propertyVocab) {
       const list = opts.vocab?.lists?.[schema.propertyVocab];
       for (const k of Object.keys(value)) if (!list?.includes(k)) err(`key "${k}" not in vocab list ${schema.propertyVocab}`);
+    }
+    if (schema.propertyNames) {
+      for (const k of Object.keys(value)) {
+        const e = [];
+        check(schema.propertyNames, k, `${at}.${k}`, ctx, opts, e);
+        for (const x of e) errors.push({ path: x.path, message: `key: ${x.message}` });
+      }
     }
     for (const [k, v] of Object.entries(value)) {
       const sub = schema.properties?.[k];

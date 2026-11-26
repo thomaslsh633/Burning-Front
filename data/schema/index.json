@@ -10,6 +10,8 @@
     "data/balance/fire-rate.json": "fire-rate.schema.json",
     "data/balance/ammo.json": "ammo.schema.json",
     "data/balance/scale.json": "scale.schema.json",
-    "mods/load-order.json": "load-order.schema.json"
+    "mods/load-order.json": "load-order.schema.json",
+    "data/i18n/en.json": "i18n.schema.json",
+    "data/i18n/ko.json": "i18n.schema.json"
   }
 }

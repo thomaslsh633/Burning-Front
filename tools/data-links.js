@@ -6,6 +6,7 @@
 // warning  a link to something not imported yet (requirements, abilities, build menu, pending upgrades) or a record with
 //          no fx entry. Grouped per rule, so the report stays short. The target kinds that do not exist yet
 //          (abilities) are named in the message.
+// i18n     checkI18n: text keys the fx entries use with no text in a language (warning: the game shows the key).
 
 /** One rule per link: records of `kind`, the ids at `path` (`[]` walks an array), must exist in `to`. */
 export const LINKS = [
@@ -77,4 +78,24 @@ export function checkLinks(merged, links = LINKS) {
     if (bare.length) warnings.push(`fx ${section}: ${bare.length} ${kind} records have no fx entry: ${sample(bare.sort())}`);
   }
   return { errors, warnings };
+}
+
+/** fx fields that hold a text key. */
+export const TEXT_FIELDS = ['name', 'short_name', 'desc'];
+
+/** Every text key one faction's fx entries use. */
+export function textKeys(merged) {
+  return Object.values(merged.fx || {}).flatMap(section => Object.values(section || {}))
+    .flatMap(rec => TEXT_FIELDS.map(f => rec?.[f]).filter(k => typeof k === 'string'));
+}
+
+/** factions: { faction: merged data }; i18n: { lang: { key: text } } → { warnings } per language, grouped. */
+export function checkI18n(factions, i18n) {
+  const used = [...new Set(Object.values(factions).flatMap(textKeys))].sort();
+  const warnings = [];
+  for (const [lang, strings] of Object.entries(i18n)) {
+    const missing = used.filter(k => !(k in strings));
+    if (missing.length) warnings.push(`i18n ${lang}: ${missing.length} of ${used.length} keys in use have no text: ${sample(missing)}`);
+  }
+  return { warnings };
 }

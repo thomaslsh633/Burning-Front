@@ -1777,7 +1777,6 @@
       },
       "pop": 8,
       "build_turns": 2,
-      "name_en": "Riflemen Squad",
       "tags": [
        "infantry",
        "standard_infantry",
@@ -1861,7 +1860,6 @@
       },
       "pop": 12,
       "build_turns": 6,
-      "name_en": "M4A1 Sherman Medium Tank",
       "tags": [
        "vehicle",
        "medium_armor",
@@ -1918,7 +1916,6 @@
       },
       "pop": 8,
       "build_turns": 5,
-      "name_en": "M1 Anti-tank Gun Team",
       "tags": [
        "teamweapon",
        "anti_tank",
@@ -1977,7 +1974,6 @@
       },
       "pop": 7,
       "build_turns": 3,
-      "name_en": "M1 Mortar Team",
       "tags": [
        "teamweapon",
        "mortar",
@@ -2039,7 +2035,6 @@
       },
       "pop": 7,
       "build_turns": 3,
-      "name_en": "M1919 Machine Gun Team",
       "tags": [
        "teamweapon",
        "suppression",
@@ -2102,7 +2097,6 @@
       },
       "pop": 0,
       "build_turns": 2,
-      "name_en": "HMG Fighting Position",
       "tags": [
        "teamweapon",
        "suppression",
@@ -4073,7 +4067,6 @@
       },
       "pop": 7,
       "build_turns": 3,
-      "name_en": "Grenadier Squad",
       "tags": [
        "infantry",
        "standard_infantry",
@@ -4145,7 +4138,6 @@
       },
       "pop": 13,
       "build_turns": 6,
-      "name_en": "Panzer IV Medium Tank",
       "tags": [
        "vehicle",
        "medium_armor",
@@ -4215,7 +4207,6 @@
       },
       "pop": 8,
       "build_turns": 5,
-      "name_en": "Pak 40 Anti-tank Gun Team",
       "tags": [
        "teamweapon",
        "anti_tank",
@@ -4276,7 +4267,6 @@
       },
       "pop": 7,
       "build_turns": 3,
-      "name_en": "GrW 34 Mortar Team",
       "tags": [
        "teamweapon",
        "mortar",
@@ -4336,7 +4326,6 @@
       },
       "pop": 7,
       "build_turns": 2,
-      "name_en": "MG 42 Machine Gun Team",
       "tags": [
        "teamweapon",
        "suppression",
@@ -4397,7 +4386,6 @@
       },
       "pop": 0,
       "build_turns": 4,
-      "name_en": "MG 42 Bunker",
       "tags": [
        "teamweapon",
        "suppression",

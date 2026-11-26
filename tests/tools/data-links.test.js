@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { checkLinks, valuesAt } from '../../tools/data-links.js';
+import { checkLinks, checkI18n, textKeys, valuesAt } from '../../tools/data-links.js';
 
 const data = () => ({
   weapon: { rifle: { garand: {} }, heavy_machine_gun: { mg30: {} } },
@@ -57,4 +57,16 @@ test('fx: an entry with no record is an error, a record with no entry a warning'
   const { errors, warnings } = checkLinks(d);
   assert.deepEqual(errors, ['fx weapon/ghost: no weapon record "ghost"']);
   assert.ok(warnings.includes('fx sbps: 1 sbps records have no fx entry: hmg'));
+});
+
+test('text keys come from fx; each language reports the keys it lacks', () => {
+  const d = data();
+  d.fx.sbps.riflemen = { name: 'unit.riflemen.name', desc: 'unit.riflemen.desc', icon: 'riflemen' };
+  d.fx.weapon.garand = { name: 'weapon.garand.name' };
+  assert.deepEqual(textKeys(d).sort(), ['unit.riflemen.desc', 'unit.riflemen.name', 'weapon.garand.name']);
+  const { warnings } = checkI18n({ american: d }, {
+    en: { 'unit.riflemen.name': 'Riflemen', 'unit.riflemen.desc': '…', 'weapon.garand.name': 'M1 Garand' },
+    ko: { 'unit.riflemen.name': '소총수 분대' },
+  });
+  assert.deepEqual(warnings, ['i18n ko: 2 of 3 keys in use have no text: unit.riflemen.desc, weapon.garand.name']);
 });

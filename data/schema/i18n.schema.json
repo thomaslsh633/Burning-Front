@@ -1,0 +1,23 @@
+{
+  "about": "data/i18n/<lang>.json and mods/<id>/i18n/<lang>.json: translation key → player-visible text. Keys: <kind>.<id>.<field> for data records (fx), ui.* / log.* for the interface.",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "strings": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9_.]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "strings"
+  ]
+}

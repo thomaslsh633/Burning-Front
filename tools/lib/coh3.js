@@ -46,7 +46,6 @@ export const byId = index => new Map([...index].map(([p, v]) => [last(p), { ...v
 export function loadSource(root) {
   const dir = path.join(root, 'data/source/coh3');
   const raw = kind => RACES.map(r => fs.readFileSync(path.join(dir, kind, `${r}.json`), 'utf8')).join('\n');
-  const statsFile = race => path.join(root, 'data/source/coh3stats', `${race}.json`);
   return {
     dir,
     ebps: indexKind(dir, 'ebps', r => `ebps/races/${r}`),
@@ -54,6 +53,12 @@ export function loadSource(root) {
     weapons: indexKind(dir, 'weapon', r => `weapon/${r}`),
     upgrades: indexKind(dir, 'upgrade', r => `upgrade/${r}`),
     text: { abilities: raw('abilities'), upgrade: raw('upgrade') },
-    coh3stats: Object.fromEntries(RACES.map(r => [r, fs.existsSync(statsFile(r)) ? JSON.parse(fs.readFileSync(statsFile(r), 'utf8')) : {}])),
+    coh3stats: loadCoh3stats(root),
   };
+}
+
+/** coh3stats unit statistics per race: { race: { squad id: stats } } (empty when not downloaded). */
+export function loadCoh3stats(root) {
+  const file = race => path.join(root, 'data/source/coh3stats', `${race}.json`);
+  return Object.fromEntries(RACES.map(r => [r, fs.existsSync(file(r)) ? JSON.parse(fs.readFileSync(file(r), 'utf8')) : {}]));
 }

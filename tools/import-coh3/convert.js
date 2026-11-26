@@ -199,7 +199,7 @@ export function convertSquad(rec, ctx) {
     price: u.price ? { cost: u.price.cost, from: u.price.from } : { cost: {}, from: 'entities' },
     pop: Math.round(u.pop ?? EXT(rec, 'squad_population_ext')?.personnel_pop ?? 0),
     ...(u.build_seconds ? { build_turns: Math.max(1, turnsOf(u.build_seconds, ctx.scale)) } : {}),
-    ...(u.name ? { name_en: u.name } : {}), ...(tags.length ? { tags } : {}), source: u.source ?? 'produced' };
+    ...(tags.length ? { tags } : {}), source: u.source ?? 'produced' };   // names: data/i18n (tools/i18n/seed.js)
   if (u.hero) { out.unique = true; out.traits = ['unique', 'hero']; }
   const ups = (EXT(rec, 'squad_upgrade_ext')?.upgrades || []).map(x => last(x.upgrade?.instance_reference)).filter(Boolean);
   if (ups.length) out.upgrades = { slots: EXT(rec, 'squad_upgrade_ext').number_of_slots ?? -1, list: ups };

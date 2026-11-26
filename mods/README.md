@@ -10,6 +10,7 @@ mods/
     mod.json                      id (= folder name), name, version (1.2.3), data_format, load_after (optional)
     units/<faction>/<kind>.json   weapon, ebps, sbps, upgrade, veterancy, fx — only the fields you change, or whole new records
     rules/vocab.json              { "lists": { "<existing list>": ["new_word"] } }
+    i18n/<lang>.json              { "strings": { "unit.<id>.name": "…" } }  text for new records, changed text, or a new language
     README.md                     optional
 ```
 

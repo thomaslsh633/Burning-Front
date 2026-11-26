@@ -79,3 +79,31 @@ test('unknown factions and files in override or mod folders are errors, not sile
   assert.ok(errors.some(e => e.startsWith(`mod:${EXAMPLE} units/american/weapons.json: unknown file`)));
   assert.ok(errors.includes('data/units/japanese: no faction "japanese" in data/base'));
 });
+
+test('mod text: the new squad has Korean and English text; a mod can add a language', () => {
+  const root = withMods([EXAMPLE]);
+  write(root, `mods/${EXAMPLE}/i18n/fr.json`, { strings: { 'unit.riflemen_us.name': 'Fusiliers' } });
+  const { i18n, warnings, errors } = buildData(root);
+  assert.deepEqual(errors, []);
+  assert.equal(i18n.ko['unit.riflemen_veteran_us.name'], '역전의 소총수 분대');
+  assert.equal(i18n.en['unit.riflemen_us.name'], 'Riflemen Squad', 'base text stays');
+  assert.equal(i18n.fr['unit.riflemen_us.name'], 'Fusiliers');
+  assert.ok(!warnings.some(w => w.startsWith('i18n ko') || w.startsWith('i18n en')), warnings.join('\n'));
+  assert.ok(warnings.some(w => w.startsWith('i18n fr: ')), 'a partial language is reported, not rejected');
+});
+
+test('without its text the new squad is reported as missing text', () => {
+  const root = withMods([EXAMPLE]);
+  fs.rmSync(path.join(root, 'mods', EXAMPLE, 'i18n'), { recursive: true });
+  const { warnings } = buildData(root);
+  assert.ok(warnings.some(w => w.startsWith('i18n ko: 3 of') && w.includes('unit.riflemen_veteran_us.desc')), warnings.join('\n'));
+});
+
+test('a text file must be named by a language code and hold strings', () => {
+  const root = withMods([EXAMPLE]);
+  write(root, `mods/${EXAMPLE}/i18n/korean.json`, { strings: {} });
+  write(root, `mods/${EXAMPLE}/i18n/de.json`, { strings: { 'Unit.Name': 'x' } });
+  const { errors } = buildData(root);
+  assert.ok(errors.includes(`mod:${EXAMPLE} i18n/korean.json: file name must be a language code (ko.json, en.json)`));
+  assert.ok(errors.some(e => e.startsWith(`mod:${EXAMPLE} i18n/de.json $.strings.Unit.Name: key: does not match`)));
+});
