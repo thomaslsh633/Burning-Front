@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (buildings destructible, HQ rebuild, status report)
+- **Done:** every building destructible in every mode (HQ 3000, production buildings 1500 / 2000 HP, CoH3); map production
+  buildings compiled as structures; a destroyed HQ stops base income, HQ production and its supply link; `Rebuild` of the
+  HQ by engineers (`logic/build`). Capture mode still won by tickets. Status report `docs/reviews/status-2026-11-26.md`.
+  282 tests.
+- **Next:** decisions in the status report; stage G.
+- **Blocked:** nothing.
+
 ## 2026-11-26 (annihilation HQ, conversions)
 - **Done:** annihilation is won by destroying the enemy HQ or eliminating every enemy unit (HQ capture and "cannot deploy"
   dropped; HQ destructible in annihilation mode only). `Convert` command and `data/rules/conversions.json` (23 CoH3 field

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { settle, hqDestroyed } from '../../../src/logic/victory/index.js';
-import { damageStructure } from '../../../src/logic/terrain/index.js';
+import { settle } from '../../../src/logic/victory/index.js';
+import { damageStructure, hqDestroyed } from '../../../src/logic/terrain/index.js';
 import { testMatch } from '../../helpers/match.js';
 
 const H = (c, r) => ({ c, r });
@@ -40,18 +40,18 @@ test('annihilation: a side with no units left loses at once, money or not; both 
   assert.deepEqual(settle({ ...state, units: {} }, data, 'red').state.match.over, { winner: 'red', reason: 'annihilation' });
 });
 
-test('annihilation: destroying the enemy HQ wins; in capture mode the HQ cannot be destroyed', () => {
+test('annihilation: destroying the enemy HQ wins; in capture mode it does not (VPs decide)', () => {
   const hqs = { structures: [{ id: 'hq_b', kind: 'hq', team: 'blue', hexes: ['1,1'] }, { id: 'hq_r', kind: 'hq', team: 'red', hexes: ['10,8'] }] };
   const units = [{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 3) }, { team: 'red', sbps: 'grenadier_ger', pos: H(8, 8) }];
+  const shell = { weapon: { damage_type: 'explosive', category: 'tank_gun' }, amount: 99999, pen: 999 };
   const { state, data } = testMatch(units, { ...hqs, mode: 'annihilation' });
-  const shell = { weapon: { damage_type: 'explosive', category: 'tank_gun' }, amount: 5000, pen: 999 };
   const hit = damageStructure(state, data, 'hq_r', shell);
-  assert.equal(hit.collapsed, true);
   assert.equal(hqDestroyed(hit.state, data, 'red'), true);
   assert.deepEqual(settle(hit.state, data, 'blue').state.match.over, { winner: 'blue', reason: 'hq_destroyed' });
   const { state: cap, data: d2 } = testMatch(units, hqs);
-  const held = damageStructure(cap, d2, 'hq_r', shell);
-  assert.deepEqual([held.collapsed, held.state.map.changes.structures.hq_r.hp], [false, 1]);
+  const down = damageStructure(cap, d2, 'hq_r', shell);
+  assert.equal(down.collapsed, true);
+  assert.equal(settle(down.state, d2, 'blue').state.match.over, null);
 });
 
 test('annihilation round cap: after it the higher surviving value wins, equal is a draw', () => {

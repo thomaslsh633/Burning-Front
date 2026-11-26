@@ -9,7 +9,7 @@
 - room for new modes
 
 ## Public API (exported from `index.js`)
-- `settle(state, data, side)` (the `victory` slot of the turn start), `hqDestroyed(state, data, team)` — done (D2-9)
+- `settle(state, data, side)` (the `victory` slot of the turn start), `hqDestroyed` is `logic/terrain`'s — done (D2-9)
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

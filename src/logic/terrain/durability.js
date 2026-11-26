@@ -56,14 +56,13 @@ export function crushEdge(state, data, a, b, moveClass) {
 
 /**
  * Damage a building. A collapse turns its footprint to rubble and reports the units inside (container = building id):
- * lifecycle kills them (SPEC §10). Buildings indestructible in the match mode (HQ in capture mode) stop at 1 HP. → { state, events, collapsed, garrison }
+ * lifecycle kills them (SPEC §10). Every building can be destroyed, the HQ included (2026-11-26). → { state, events, collapsed, garrison }
  */
 export function damageStructure(state, data, id, hit) {
   const m = mapOf(state, data), s = m.structures[id], def = data.rules.terrain.structures[s.kind], ch = state.map.changes.structures[id] || {};
   const none = { state, events: [], collapsed: false, garrison: [] };
   if (ch.collapsed || !canDamage(data, { group: 'building' }, hit.weapon)) return none;
-  const floor = (def.indestructible_in_modes || []).includes(state.match.mode) ? 1 : 0;   // the HQ: indestructible in capture mode
-  const hp = Math.max(floor, Math.round((ch.hp ?? def.hp) - effective(hit.amount, hit.pen, def.armor)));
+  const hp = Math.max(0, Math.round((ch.hp ?? def.hp) - effective(hit.amount, hit.pen, def.armor)));
   if (hp > 0) {
     return { ...none, state: withChanges(state, c => ({ ...c, structures: { ...c.structures, [id]: { hp } } })), events: [ev('FeatureDamaged', { feature: id, kind: s.kind, hp })] };
   }
@@ -116,4 +115,16 @@ export function clearWreck(state, data, h) {
   }
   return { state: withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: { ...ch, wreck: { ...ch.wreck, work } } } })),
     events: [ev('WreckClearing', { hex: { ...h }, kind: ch.wreck.kind, work, of: need })], cleared: false };
+}
+
+/**
+ * One turn of rebuilding work on a collapsed building whose kind can be rebuilt (the HQ): it stands again after its
+ * rebuild.turns at rebuild.hp_share of its HP. → { state, events, done }
+ */
+export function rebuildStructure(state, data, id) {
+  const s = mapOf(state, data).structures[id], r = data.rules.terrain.structures[s.kind].rebuild, ch = state.map.changes.structures[id];
+  const work = (ch.work ?? 0) + 1, done = work >= r.turns;
+  const next = done ? { hp: Math.round(data.rules.terrain.structures[s.kind].hp * r.hp_share) } : { ...ch, work };
+  return { state: withChanges(state, c => ({ ...c, structures: { ...c.structures, [id]: next } })), done,
+    events: [ev(done ? 'StructureRebuilt' : 'StructureRebuilding', { feature: id, kind: s.kind, work, of: r.turns })] };
 }

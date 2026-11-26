@@ -72,6 +72,17 @@ export function compileMap(def, rules) {
     structures[s.id] = { kind: s.kind, hexes: [...s.hexes], ...(s.team ? { team: s.team } : {}) };
   }
 
+  // production buildings are structures too: they block movement and can be destroyed
+  for (const p of def.production || []) {
+    const kind = p.kind ?? 'production';
+    for (const k of p.hexes) {
+      if (!isIn(k)) errors.push(`production ${p.id}: hex ${k} outside the map`);
+      else if (structureAt[k]) errors.push(`production ${p.id}: hex ${k} already belongs to ${structureAt[k]}`);
+      else structureAt[k] = p.id;
+    }
+    structures[p.id] = { kind, hexes: [...p.hexes], team: p.team };
+  }
+
   const passable = k => isIn(k) && !structureAt[k] && !hexes[k]?.oob && rules.ground[hexes[k]?.ground ?? rules.default_ground]?.cost.infantry != null;
   const points = (def.points || []).map(p => {
     if (!passable(p.hex)) errors.push(`point ${p.id}: hex ${p.hex} is not open ground inside the map`);

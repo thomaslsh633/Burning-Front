@@ -17,12 +17,12 @@ export const MORALE = defineMachine('morale', 'NORMAL', {
       SuppressionChanged: (u, ctx) => level(u, ctx) === 'PINNED' ? 'PINNED' : u.suppression < ctx.data.balance.status.suppression.recover_below ? 'NORMAL' : null },
   },
   PINNED: {
-    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned', Hold: 'pinned', ClearWreck: 'pinned' },
+    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned', Hold: 'pinned', ClearWreck: 'pinned', Rebuild: 'pinned' },
     on: { Retreat: 'RETREATING',
       SuppressionChanged: (u, ctx) => (level(u, ctx) === 'PINNED' ? null : level(u, ctx) ?? 'NORMAL') },
   },
   RETREATING: {
-    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Retreat', 'Counter'].map(c => [c, 'retreating'])),
+    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Rebuild', 'Retreat', 'Counter'].map(c => [c, 'retreating'])),
     on: { Arrived: 'NORMAL' },
   },
 });

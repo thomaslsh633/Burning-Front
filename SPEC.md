@@ -35,8 +35,11 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Annihilation mode (2026-11-26): win by destroying the enemy HQ or by eliminating every enemy unit (passengers included);
   no HQ capture, no "cannot deploy" clause; optional round cap (v202). Checked at each side's turn start; both sides out at
   once: the side whose turn starts wins; after the round cap the higher surviving unit value wins, equal is a draw.
-- HQ HP 690 (v59, v126); indestructible in capture mode (stops at 1 HP), destructible in annihilation mode
-  (`data/rules/terrain.json` `indestructible_in_modes`).
+- Every building can be destroyed, in every mode (2026-11-26): HQ 3000 HP, production buildings 1500 (tier 1–2) / 2000
+  (tier 3–4) HP (CoH3 values, `data/rules/terrain.json`). Capture mode is still won by VP tickets only. A destroyed HQ pays
+  no base income, produces nothing and links no sector; the side's engineers may rebuild it on its own footprint (one HQ
+  per side at a time): 500 MP (CoH3 HQ cost) when work starts, 2 turns of work within 2 hexes, it stands again at 50 % HP.
+  A destroyed production building produces nothing (not rebuildable yet).
 - Start resources, standard: 600 MP / 10 munitions / 20 fuel; the side moving second gets +40 MP / +10 munitions once (editable in setup) (v206).
   Larger test presets: fuel = 7 % of funds, munitions 60 (v206).
 - Turn-start order: strikes → status → capture tick → victory settlement → income (v59).
@@ -49,7 +52,7 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   Both sides armed in the zone = contested, progress frozen; leaving the zone loses the progress (v59).
 - Who counts: armed, un-pinned infantry / crews capture; pinned infantry and armed vehicles only contest; unarmed vehicles and passengers are ignored (v59).
 - Sectors: a captured point takes its sector; resources pay only while the sector links to the HQ sector through own sectors; VPs always count (v131).
-- Income per own turn: HQ 60 MP + 5 fuel + 10 munitions; manpower points 70 MP; fuel points 12 fuel + 10 MP; munition points
+- Income per own turn: HQ 60 MP + 5 fuel + 10 munitions (none while the HQ is destroyed); manpower points 70 MP; fuel points 12 fuel + 10 MP; munition points
   11 munitions + 10 MP; VPs pay nothing; a map may set a point's own yield (`yield`) (D2-8, confirmed 2026-11-26).
   Sectors (when the map defines them) as above.
 - Upkeep (D2-8): each active unit 2 % of its manpower price, at most 20 MP per unit, the excess / 3 paid in fuel; net MP income
@@ -244,7 +247,7 @@ Confirmed 2026-11-25 (rewrite):
   cover (fences, hedges, walls, debris) has HP and is destructible but shows no HP bar. Defensive structures (sandbags, wire,
   tank traps, bunkers) take HP and armour per faction from CoH3; they fall to explosives, fire, AT weapons and vehicle crush
   (tank traps cannot be crushed). Destroyed vehicles and emplacements leave wreck objects: heavy cover (green) for infantry.
-  HQ buildings: indestructible in capture mode only (§2).
+  Every building, the HQ included, can be destroyed (§2).
 - Walls, hedges, fences, sandbags and wire are drawn as free lines; a line occupies the hex edge between two hexes when it
   crosses the segment joining their centres (`docs/map-design.md` §2 B).
 - Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.

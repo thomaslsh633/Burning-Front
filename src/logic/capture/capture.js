@@ -5,7 +5,7 @@
 import { key, fromKey, neighbours } from '../hex/index.js';
 import { ev } from '../events/index.js';
 import { enemyOf } from '../state/index.js';
-import { mapOf } from '../terrain/index.js';
+import { mapOf, isCollapsed } from '../terrain/index.js';
 import { firingWeapons } from '../combat/index.js';
 
 const onMap = u => u.fsm.life === 'ACTIVE' && u.fsm.location === 'ON_MAP';
@@ -51,7 +51,8 @@ export function suppliedPoints(state, data, team) {
   for (const s of m.sectors) for (const k of s.hexes) sectorOf[k] = s.id;
   const pointSector = Object.fromEntries(m.points.map(p => [p.id, p.sector ?? sectorOf[p.hex]]));
   const own = new Set(owned.map(id => pointSector[id]).filter(Boolean));
-  const hq = Object.values(m.structures).filter(s => s.kind === 'hq' && s.team === team).flatMap(s => s.hexes.map(k => sectorOf[k])).filter(Boolean);
+  const hq = Object.entries(m.structures).filter(([id, s]) => s.kind === 'hq' && s.team === team && !isCollapsed(state, id))   // a destroyed HQ links nothing
+    .flatMap(([, s]) => s.hexes.map(k => sectorOf[k])).filter(Boolean);
   hq.forEach(s => own.add(s));
   const linked = new Set(hq), queue = [...hq];
   while (queue.length) {

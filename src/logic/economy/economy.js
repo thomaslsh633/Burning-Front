@@ -3,7 +3,7 @@
 import { ev } from '../events/index.js';
 import { distance, fromKey } from '../hex/index.js';
 import { unitAt } from '../state/index.js';
-import { mapOf } from '../terrain/index.js';
+import { mapOf, isCollapsed, hqDestroyed } from '../terrain/index.js';
 import { stepCost, moveClass } from '../movement/index.js';
 import { suppliedPoints } from '../capture/index.js';
 
@@ -11,10 +11,10 @@ const RESOURCES = ['manpower', 'munition', 'fuel'];
 /** A squad's price: { manpower?, munition?, fuel? }. */
 export const priceOf = (sbps, data) => data.units.sbps[sbps].price?.cost ?? {};
 
-/** Gross income per resource: base plus the yields of owned points that are supplied (VPs pay nothing). */
+/** Gross income per resource: the HQ's base (none while it is destroyed) plus the yields of owned, supplied points (VPs pay nothing). */
 export function grossIncome(state, data, team) {
-  const inc = data.balance.economy.income, supplied = suppliedPoints(state, data, team);
-  const out = Object.fromEntries(RESOURCES.map(r => [r, inc.base[r] ?? 0]));
+  const inc = data.balance.economy.income, supplied = suppliedPoints(state, data, team), hq = !hqDestroyed(state, data, team);
+  const out = Object.fromEntries(RESOURCES.map(r => [r, hq ? inc.base[r] ?? 0 : 0]));
   for (const p of mapOf(state, data).points) {
     if (!supplied.has(p.id)) continue;
     for (const [r, v] of Object.entries(p.yield ?? inc.points[p.kind] ?? {})) out[r] += v;   // a map may set a point's own yield
@@ -75,10 +75,11 @@ export function pay(state, team, cost) {
   return { state: { ...state, teams: { ...state.teams, [team]: { ...state.teams[team], resources } } }, events: [] };
 }
 
-/** Buildings that produce: the map's production buildings and each side's HQ (type 'hq'). */
+/** Buildings that produce: the map's production buildings and each side's HQ (type 'hq'), while they stand. */
 export function producers(state, data) {
   const m = mapOf(state, data);
-  return [...m.production, ...Object.entries(m.structures).filter(([, s]) => s.kind === 'hq').map(([id, s]) => ({ id, type: 'hq', team: s.team, hexes: s.hexes }))];
+  return [...m.production, ...Object.entries(m.structures).filter(([, s]) => s.kind === 'hq').map(([id, s]) => ({ id, type: 'hq', team: s.team, hexes: s.hexes }))]
+    .filter(b => !isCollapsed(state, b.id));
 }
 
 /**

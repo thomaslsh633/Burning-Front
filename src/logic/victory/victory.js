@@ -2,7 +2,7 @@
 // GameState.victory ({ leader, streak, prevLead }: the Victory Meter's momentum) and match.over ({ winner, reason }).
 import { ev } from '../events/index.js';
 import { enemyOf, unitsOf } from '../state/index.js';
-import { mapOf } from '../terrain/index.js';
+import { mapOf, hqDestroyed } from '../terrain/index.js';
 import { unitValue } from '../status/index.js';
 
 const vpCount = (state, data, team) => {
@@ -43,12 +43,6 @@ function settleCapture(state, data) {
   const winner = ta <= 0 && tb <= 0 ? (vpCount(s, data, b) > va ? b : a) : ta <= 0 ? b : a;
   const e = end(s, winner, 'tickets');
   return { state: e.state, events: [...events, ...e.events] };
-}
-
-/** Has the side lost its HQ (every HQ structure it has on the map collapsed)? A side without an HQ on the map never loses it. */
-export function hqDestroyed(state, data, team) {
-  const hqs = Object.entries(mapOf(state, data).structures).filter(([, s]) => s.kind === 'hq' && s.team === team);
-  return hqs.length > 0 && hqs.every(([id]) => state.map.changes.structures[id]?.collapsed);
 }
 
 /**

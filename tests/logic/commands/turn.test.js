@@ -263,3 +263,20 @@ test('Convert: paid in the field, same id and hex, HP share and veterancy kept; 
   const engaged = tweak(hurt, 'u1', { engaged: true });
   assert.equal(apply(engaged, { type: 'Convert', side: 'blue', unit: 'u1', to: 'mortar_81mm_us' }, data, createRng(1)).error, 'engaged');
 });
+
+test('Rebuild: an engineer rebuilds its destroyed HQ on the footprint (paid once, 2 turns of work); not while standing', () => {
+  const map = { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['3,3'] }] };
+  const { state: s0, data: d0 } = testMatch([blue('riflemen_us', H(5, 3)), red('grenadier_ger', H(10, 9))], map);
+  const data = { ...d0, units: { ...d0.units, sbps: { ...d0.units.sbps, riflemen_us: { ...d0.units.sbps.riflemen_us, role: 'engineer' } } } };
+  assert.equal(apply(s0, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'hq' }, data, createRng(1)).error, 'not_destroyed');
+  const down = { ...s0, map: { ...s0.map, changes: { ...s0.map.changes, structures: { hq: { hp: 0, collapsed: true } } } } };
+  assert.equal(apply(down, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'hq' }, d0, createRng(1)).error, 'cannot_build', 'riflemen are not engineers');
+  const one = run(down, data, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'hq' });
+  assert.equal(one.state.teams.blue.resources.manpower, 600 - 500);
+  const own = endTurn(endTurn(one.state, data).state, data).state;
+  assert.equal(own.teams.blue.resources.manpower >= 100, true);
+  const two = run(own, data, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'hq' });
+  assert.equal(two.state.teams.blue.resources.manpower, own.teams.blue.resources.manpower, 'paid only when work starts');
+  assert.ok(types(two.events).includes('StructureRebuilt'));
+  assert.equal(two.state.map.changes.structures.hq.hp, 1500);
+});

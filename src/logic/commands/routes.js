@@ -13,6 +13,7 @@ import * as crew from '../crew/index.js';
 import * as lifecycle from '../lifecycle/index.js';
 import * as terrain from '../terrain/index.js';
 import * as economy from '../economy/index.js';
+import * as build from '../build/index.js';
 import { spawnUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { MACHINES, chain, ifUnit, featureSteps, fire, counterFire, overwatchStep } from './steps.js';
@@ -129,6 +130,16 @@ export const ROUTES = {
       x => economy.pay(x, x.units[c.unit].team, economy.conversionOf(d, x.units[c.unit].sbps, c.to).cost),
       x => combat.setMembers(x, c.unit, lifecycle.convertedMembers(x, c.unit, c.to, d)),
       x => lifecycle.convert(x, c.unit, c.to),
+      x => turn.spend(x, c.unit, { action: 1 }),
+    ]),
+  },
+  /** { unit, structure }: one turn of rebuilding work on the side's destroyed HQ; paid when work starts. */
+  Rebuild: {
+    unit: true,
+    validate: (s, c, d) => build.validateRebuild(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'Rebuild'),
+    apply: (s, c, d) => chain(s, [
+      x => economy.pay(x, x.units[c.unit].team, build.rebuildCost(x, d, c.structure)),
+      x => terrain.rebuildStructure(x, d, c.structure),
       x => turn.spend(x, c.unit, { action: 1 }),
     ]),
   },

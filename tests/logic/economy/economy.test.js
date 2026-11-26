@@ -76,3 +76,12 @@ test('pay', () => {
   assert.equal(economy.canAfford(state, 'red', { manpower: 340, fuel: 90 }), false, 'red has 20 fuel');
   assert.deepEqual(economy.pay(state, 'blue', { manpower: 270 }).state.teams.blue.resources, { manpower: 330, munition: 10, fuel: 20 });
 });
+
+test('a destroyed HQ pays no base income and produces nothing; a destroyed production building produces nothing', () => {
+  const map = { ...MAP, structures: [{ id: 'hqb', kind: 'hq', team: 'blue', hexes: ['1,1'] }] };
+  const { state, data } = testMatch([], map);
+  const down = { ...state, map: { ...state.map, changes: { ...state.map.changes, structures: { hqb: { hp: 0, collapsed: true }, bx: { hp: 0, collapsed: true } } } } };
+  assert.deepEqual(economy.grossIncome(down, data, 'blue'), { manpower: 0, munition: 0, fuel: 0 });
+  assert.deepEqual(economy.producers(down, data).filter(b => b.team === 'blue'), []);
+  assert.equal(economy.validateProduce(down, { side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(1, 2) }, data), 'no_such_building');
+});

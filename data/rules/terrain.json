@@ -1,5 +1,5 @@
 {
-  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint; wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
+  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint (every building can be destroyed; map production buildings are structures of kind production, CoH3 HP 1500, or production_heavy, 2000; HQ HP and rebuild cost from CoH3); wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
   "pass_classes": {
     "infantry": "infantry",
     "vaulting_infantry": "infantry",
@@ -399,11 +399,23 @@
       "leaves": "rubble"
     },
     "hq": {
-      "hp": 690,
+      "hp": 3000,
       "armor": 40,
       "garrison": 0,
       "height": 3,
-      "indestructible_in_modes": ["capture"]
+      "rebuild": { "roles": ["engineer"], "cost": { "manpower": 500 }, "turns": 2, "hp_share": 0.5 }
+    },
+    "production": {
+      "hp": 1500,
+      "armor": 40,
+      "garrison": 0,
+      "height": 3
+    },
+    "production_heavy": {
+      "hp": 2000,
+      "armor": 40,
+      "garrison": 0,
+      "height": 3
     }
   },
   "structure_terrain": {

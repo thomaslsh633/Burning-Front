@@ -51,3 +51,11 @@ export function edgeAt(state, data, a, b) {
   }
   return best;
 }
+
+export const isCollapsed = (state, id) => !!state.map.changes.structures[id]?.collapsed;
+
+/** Has the side lost its HQ (every HQ it has on the map collapsed)? A side without an HQ on the map never loses one. */
+export function hqDestroyed(state, data, team) {
+  const hqs = Object.entries(mapOf(state, data).structures).filter(([, s]) => s.kind === 'hq' && s.team === team);
+  return hqs.length > 0 && hqs.every(([id]) => isCollapsed(state, id));
+}

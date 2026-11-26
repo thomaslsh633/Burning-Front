@@ -16,7 +16,7 @@ One folder per map: `data/maps/<id>/map.json` (schema `data/schema/map.schema.js
 | `lines` | `[{ id, kind, points: [[x, row], …], team? }]` | walls, hedges, fences, sandbags, wire at any angle; a line takes the hex edge whose centre-to-centre segment it crosses. `x` is in hex columns (odd rows sit half a hex right), `row` in rows |
 | `edges` | `{ "c,r,d": kind }` | a line on exactly one edge (d = 0 E, 1 SE, 2 SW) |
 | `structures` | `[{ id, kind, hexes, team?, name? }]` | buildings (house_small … church, hq): HP by size, garrison, collapse |
-| `production` | `[{ id, type, team, hexes }]` | production buildings (used by the economy) |
+| `production` | `[{ id, type, team, hexes, kind? }]` | production buildings (used by the economy); also structures of `kind` production (1500 HP, default) or production_heavy (2000 HP), so they block movement and can be destroyed |
 | `points` | `[{ id, kind: vp \| manpower \| munition \| fuel, hex, radius, sector?, name }]` | zones are the hexes within `radius` |
 | `sectors` | `[{ id, hexes }]` | supply areas |
 | `deploy` | `{ team: { zone: [hexes] \| { rows: [a, b] }, rally } }` | deployment zone and retreat point |

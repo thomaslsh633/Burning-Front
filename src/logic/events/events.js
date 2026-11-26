@@ -16,7 +16,7 @@ export const EVENT = Object.freeze(Object.fromEntries([
   // crew and lifecycle
   'Emplacing', 'Emplaced', 'Packing', 'Packed', 'CrewWiped', 'Abandoned', 'Recrewed', 'Captured', 'Wrecked', 'WreckClearing', 'WreckCleared', 'Converted',
   // map features
-  'FeatureDamaged', 'FeatureDestroyed', 'StructureCollapsed', 'WreckPlaced', 'Crushed',
+  'FeatureDamaged', 'FeatureDestroyed', 'StructureCollapsed', 'StructureRebuilding', 'StructureRebuilt', 'WreckPlaced', 'Crushed',
   // points and economy
   'PointProgress', 'PointNeutralised', 'PointCaptured', 'IncomeReceived', 'UpkeepPaid', 'TicketsLost', 'UnitProduced',
 ].map(n => [n, n])));

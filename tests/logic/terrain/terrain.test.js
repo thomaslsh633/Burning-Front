@@ -108,11 +108,24 @@ test('buildings: HP by size, block movement and sight; collapse leaves rubble an
   assert.equal(coverAgainst(r.state, data, { ...r.state.units.u2, fsm: { ...r.state.units.u2.fsm, location: 'ON_MAP' } }, H(2, 5)), 'light');
 });
 
-test('HQ buildings never collapse', () => {
-  const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', hexes: ['2,2'] }] });
+test('every building can be destroyed, the HQ too, in either mode; production buildings are structures', () => {
+  const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['2,2'] }],
+    production: [{ id: 'bx', type: 'barracks', team: 'blue', hexes: ['5,5'] }] });
   const r = terrain.damageStructure(state, data, 'hq', { amount: 99999, weapon: weapon('81mm_mortar_us') });
-  assert.equal(r.collapsed, false);
-  assert.equal(terrain.structureAt(r.state, data, H(2, 2)).hp, 1);
+  assert.equal(r.collapsed, true);
+  assert.equal(terrain.hqDestroyed(r.state, data, 'blue'), true);
+  assert.equal(terrain.hqDestroyed(state, data, 'red'), false, 'no HQ on the map: never lost');
+  assert.equal(terrain.structureAt(state, data, H(5, 5)).hp, 1500);
+  assert.equal(terrain.damageStructure(state, data, 'bx', { amount: 99999, weapon: weapon('81mm_mortar_us') }).collapsed, true);
+});
+
+test('rebuildStructure: the HQ stands again after its rebuild turns at half HP', () => {
+  const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['2,2'] }] });
+  const down = terrain.damageStructure(state, data, 'hq', { amount: 99999, weapon: weapon('81mm_mortar_us') }).state;
+  const one = terrain.rebuildStructure(down, data, 'hq');
+  assert.deepEqual([one.done, terrain.isCollapsed(one.state, 'hq'), one.events[0].type], [false, true, 'StructureRebuilding']);
+  const two = terrain.rebuildStructure(one.state, data, 'hq');
+  assert.deepEqual([two.done, terrain.structureAt(two.state, data, H(2, 2)).hp], [true, 1500]);
 });
 
 test('AttackFeature with explosives brings a house down and kills the garrison', () => {

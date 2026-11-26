@@ -313,9 +313,16 @@
           "leaves": {
             "$ref": "types.schema.json#/$defs/Id"
           },
-          "indestructible_in_modes": {
-            "type": "array",
-            "items": { "enum": ["capture", "annihilation"] }
+          "rebuild": {
+            "type": "object",
+            "properties": {
+              "roles": { "type": "array", "items": { "type": "string", "vocab": "role" } },
+              "cost": { "type": "object", "propertyVocab": "resource", "additionalProperties": { "type": "integer", "minimum": 0 } },
+              "turns": { "type": "integer", "minimum": 1 },
+              "hp_share": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+            },
+            "additionalProperties": false,
+            "required": ["roles", "cost", "turns", "hp_share"]
           }
         },
         "additionalProperties": false,

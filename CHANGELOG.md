@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — every building destructible, HQ rebuild (2026-11-26)
+- HQs and production buildings can be destroyed in every mode; capture mode is still won by tickets.
+- A destroyed HQ gives no income and produces nothing until engineers rebuild it on its footprint.
+
 ## rewrite — annihilation by HQ, field conversions (2026-11-26)
 - Annihilation: destroy the enemy HQ or every enemy unit; the HQ can be destroyed in this mode only.
 - Units convert in the field (e.g. 251 → Stummel, M3 → M16, Crusader II → III) for munitions / fuel / manpower.
