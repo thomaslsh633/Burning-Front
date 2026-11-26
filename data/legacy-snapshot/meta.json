@@ -1,0 +1,74 @@
+{
+ "source": "legacy",
+ "version": "214",
+ "tables": {
+  "units": [
+   "UNIT_ROSTER",
+   "CATS",
+   "MACRO_CAT",
+   "ROLE_CODE",
+   "COH3_RAW",
+   "COH3_IND",
+   "COH3_COST",
+   "KIT_INFO",
+   "SQUAD_N",
+   "AOE_MODEL_CAP",
+   "REINF_VEH",
+   "V199",
+   "V200",
+   "V214"
+  ],
+  "rules": [
+   "TERRAIN_DEFS",
+   "GROUND_DEFS",
+   "OBJ_DEFS",
+   "EDGE_DEFS",
+   "COV_RANK",
+   "COV_LEGACY",
+   "COV_NEW",
+   "TECH",
+   "BLD",
+   "BLD_T",
+   "BLD_LIST",
+   "FORT",
+   "UPG",
+   "UPG_BY_CAT",
+   "BASE_INCOME",
+   "HUB_G",
+   "HUB_F",
+   "BASE_FUEL",
+   "BASE_MUN",
+   "YIELD",
+   "ZONE_R",
+   "ZONE_R_SMALL",
+   "SUPP_MAX",
+   "SUPP_RECOVER",
+   "K_PEN_UNIT",
+   "K_PEN_BLD",
+   "PEN_CUTOFF",
+   "COVER_SOFT_YELLOW",
+   "COVER_SOFT_HARD",
+   "COVER_FLAME_HARD",
+   "BAND_N"
+  ],
+  "veterancy": [
+   "VET_THRESHOLDS",
+   "VET_TABLE",
+   "VET_MULT",
+   "VET_ACC_ALL",
+   "VET_CLASS_OF",
+   "VET_RAW_BASE"
+  ],
+  "doctrines": [
+   "DOC",
+   "PKG",
+   "BG"
+  ]
+ },
+ "maps": [
+  "skirmish",
+  "faymonville"
+ ],
+ "missing": [],
+ "page_errors": []
+}

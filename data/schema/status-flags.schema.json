@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "required": [
+    "flags"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "flags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "from",
+          "owner",
+          "effects",
+          "icon_priority"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "vocab": "status_flag"
+          },
+          "kind": {
+            "enum": [
+              "stored",
+              "derived"
+            ]
+          },
+          "from": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "clears": {
+            "type": "string"
+          },
+          "effects": {
+            "type": "string"
+          },
+          "icon_priority": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

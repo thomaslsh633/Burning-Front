@@ -1,0 +1,88 @@
+{
+ "infantry": {
+  "riflemen_us": {
+   "coh3_ref": "sbps/races/american/infantry/riflemen_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "rifleman_squad_leader_us",
+     "count": 1
+    },
+    {
+     "entity": "rifleman_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "rifleman",
+    "tier1",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "bar_rifleman_squad_us",
+     "m1941_lmg_rifleman_us",
+     "m1919a6_rifleman_squad_us",
+     "french_old_guard_lmg_m1919a6s_rifleman_us",
+     "lmg_m24_29_chatellerault_riflemen_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "grenade_riflemen_us",
+    "veterancy_1_unlock_a_riflemen_us",
+    "veterancy_1_unlock_b_riflemen_us",
+    "veterancy_1a_fire_superiority_riflemen_us",
+    "veterancy_1b_tactical_movement_riflemen_us",
+    "sticky_bomb_riflemen_us",
+    "breach",
+    "fighting_position_auto_grenade_us",
+    "vault_movement",
+    "c_airborne_infantry_medkits_us",
+    "passive_instant_withdraw_retreat_in_hold_global_us",
+    "french_old_guard_retreat_buff_us",
+    "french_grenade_assault_riflemen_us"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.67
+   },
+   "veterancy": {
+    "set": "riflemen_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "mine_heavy_engineer_us",
+     "demo_charge_standard_us",
+     "partisan_tunnel_constructed_us",
+     "belgian_gate_french_us",
+     "concrete_bastion_infantry_us",
+     "fighting_position_french_old_guard_us",
+     "tourelle_emplacement_us",
+     "tank_trap_french_us",
+     "observation_post_french_us",
+     "barbed_wire_fence_french_engineering_upgrade_us",
+     "sandbag_wall_french_infantry_us"
+    ]
+   }
+  }
+ }
+}

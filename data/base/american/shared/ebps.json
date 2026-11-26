@@ -1,0 +1,88 @@
+{
+ "buildings": {
+  "sandbag_wall_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/sandbag_wall_us",
+   "tags": [
+    "building",
+    "cover_object"
+   ],
+   "hp": 300,
+   "target_size": 25,
+   "armor": {
+    "front": 25,
+    "side": 25,
+    "rear": 25
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  },
+  "barbed_wire_fence_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/barbed_wire_fence_us",
+   "tags": [
+    "building"
+   ],
+   "hp": 150,
+   "target_size": 25,
+   "armor": {
+    "front": 20,
+    "side": 20,
+    "rear": 20
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  },
+  "tank_trap_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/tank_trap_us",
+   "tags": [
+    "cover_object",
+    "building"
+   ],
+   "hp": 400,
+   "target_size": 25,
+   "armor": {
+    "front": 50,
+    "side": 50,
+    "rear": 50
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "traits": [
+    "repairable"
+   ],
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg42_bunker_ger": {
+   "name": "weapon.mg42_bunker_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "hmg_bunker_ger": {
+   "name": "entity.hmg_bunker_ger.name",
+   "model": {
+    "id": "hmg_bunker_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_mg42_bunker_ger": {
+   "name": "unit.hmg_mg42_bunker_ger.name",
+   "short_name": "unit.hmg_mg42_bunker_ger.short",
+   "desc": "unit.hmg_mg42_bunker_ger.desc",
+   "icon": "hmg_mg42_bunker_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

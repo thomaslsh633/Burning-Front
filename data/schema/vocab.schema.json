@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": [
+    "lists"
+  ],
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "veterancy_modifiers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Z0-9_]+$"
+        },
+        "minItems": 1
+      }
+    },
+    "veterancy_ignored": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

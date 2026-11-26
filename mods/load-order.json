@@ -1,0 +1,4 @@
+{
+  "about": "Enabled mods, first loaded first. Each id is a folder under mods/. npm run build:data merges them after data/base and data/units.",
+  "enabled": []
+}

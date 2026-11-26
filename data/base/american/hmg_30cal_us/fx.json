@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "30cal_hmg_us": {
+   "name": "weapon.30cal_hmg_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "crew_hmg_us": {
+   "name": "entity.crew_hmg_us.name",
+   "model": {
+    "id": "crew_hmg_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_30cal_us": {
+   "name": "unit.hmg_30cal_us.name",
+   "short_name": "unit.hmg_30cal_us.short",
+   "desc": "unit.hmg_30cal_us.desc",
+   "icon": "hmg_30cal_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

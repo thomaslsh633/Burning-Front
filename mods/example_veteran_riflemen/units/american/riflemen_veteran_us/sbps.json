@@ -1,0 +1,60 @@
+{
+ "infantry": {
+  "riflemen_veteran_us": {
+   "coh3_ref": null,
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "rifleman_squad_leader_us",
+     "count": 1
+    },
+    {
+     "entity": "rifleman_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 330
+    },
+    "from": "entities"
+   },
+   "pop": 8,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "rifleman",
+    "tier1",
+    "infantry_anti_infantry"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "bar_rifleman_squad_us",
+     "m1941_lmg_rifleman_us",
+     "m1919a6_rifleman_squad_us",
+     "french_old_guard_lmg_m1919a6s_rifleman_us",
+     "lmg_m24_29_chatellerault_riflemen_us"
+    ]
+   },
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.67
+   },
+   "veterancy": {
+    "set": "riflemen_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "traits": [
+    "desert_veteran"
+   ]
+  }
+ }
+}

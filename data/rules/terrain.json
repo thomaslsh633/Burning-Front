@@ -1,0 +1,443 @@
+{
+  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint; wrecks are placed when vehicles and emplacements die. cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
+  "pass_classes": {
+    "infantry": "infantry",
+    "vaulting_infantry": "infantry",
+    "vehicle_ultra_light": "vehicle",
+    "vehicle_light": "vehicle",
+    "vehicle_medium": "vehicle",
+    "trench_crossing_vehicle_light": "vehicle",
+    "trench_crossing_vehicle_medium": "vehicle",
+    "trench_crossing_vehicle_heavy": "vehicle"
+  },
+  "default_ground": "plains",
+  "groups": {
+    "terrain": {
+      "damaged_by": [],
+      "hp_bar": "never"
+    },
+    "natural": {
+      "damaged_by": [
+        "explosive",
+        "fire",
+        "anti_tank"
+      ],
+      "hp_bar": "never"
+    },
+    "defensive": {
+      "damaged_by": [
+        "explosive",
+        "fire",
+        "anti_tank"
+      ],
+      "hp_bar": "on_select"
+    },
+    "building": {
+      "damaged_by": [
+        "explosive",
+        "fire",
+        "anti_tank"
+      ],
+      "hp_bar": "on_select",
+      "on_destroyed": "collapse"
+    },
+    "wreck": {
+      "damaged_by": [
+        "explosive",
+        "anti_tank"
+      ],
+      "hp_bar": "never"
+    }
+  },
+  "damage_sources": {
+    "explosive": {
+      "damage_types": [
+        "explosive"
+      ]
+    },
+    "fire": {
+      "damage_types": [
+        "flame"
+      ]
+    },
+    "anti_tank": {
+      "weapon_categories": [
+        "anti_tank_gun",
+        "tank_gun",
+        "infantry_anti_tank_weapon"
+      ]
+    }
+  },
+  "ground": {
+    "plains": {
+      "cost": {
+        "infantry": 1,
+        "vehicle": 2
+      }
+    },
+    "road": {
+      "cost": {
+        "infantry": 1,
+        "vehicle": 1
+      }
+    },
+    "cobblestone": {
+      "cost": {
+        "infantry": 1,
+        "vehicle": 1
+      }
+    },
+    "field": {
+      "cost": {
+        "infantry": 1,
+        "vehicle": 2
+      }
+    },
+    "snow": {
+      "cost": {
+        "infantry": 2,
+        "vehicle": 2
+      }
+    },
+    "ice": {
+      "cost": {
+        "infantry": 2,
+        "vehicle": 1
+      }
+    },
+    "desert": {
+      "cost": {
+        "infantry": 2,
+        "vehicle": 2
+      }
+    },
+    "shallow_water": {
+      "cost": {
+        "infantry": 2,
+        "vehicle": 3
+      },
+      "cover": "water"
+    },
+    "deep_water": {
+      "cost": {
+        "infantry": null,
+        "vehicle": null
+      },
+      "cover": "water"
+    }
+  },
+  "objects": {
+    "crater": {
+      "cover": "light",
+      "sight": "none",
+      "height": 0,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 2
+      },
+      "group": "terrain"
+    },
+    "trench": {
+      "cover": "heavy",
+      "sight": "none",
+      "height": 0,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 3
+      },
+      "group": "terrain"
+    },
+    "bush": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 2
+      },
+      "group": "terrain"
+    },
+    "dune": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cost": {
+        "infantry": 2,
+        "vehicle": 3
+      },
+      "group": "terrain"
+    },
+    "rubble": {
+      "cover": "light",
+      "sight": "partial",
+      "height": 2,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 3
+      },
+      "group": "natural",
+      "hp": 200,
+      "armor": 1
+    },
+    "forest_light": {
+      "cover": "light",
+      "sight": "partial",
+      "height": 3,
+      "cost": {
+        "infantry": 2,
+        "vehicle": 2
+      },
+      "group": "terrain"
+    },
+    "forest": {
+      "cover": "light",
+      "sight": "block",
+      "height": 3,
+      "cost": {
+        "infantry": 2,
+        "vehicle": 3
+      },
+      "group": "terrain"
+    },
+    "forest_dense": {
+      "cover": "heavy",
+      "sight": "block",
+      "height": 3,
+      "cost": {
+        "infantry": 2,
+        "vehicle": null
+      },
+      "group": "terrain"
+    },
+    "rock": {
+      "cover": "heavy",
+      "sight": "block",
+      "height": 3,
+      "cost": {
+        "infantry": 3,
+        "vehicle": null
+      },
+      "group": "terrain"
+    },
+    "debris": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 2
+      },
+      "group": "natural",
+      "hp": 150,
+      "armor": 1,
+      "crushable": true
+    },
+    "tank_trap": {
+      "cover": "heavy",
+      "sight": "none",
+      "height": 1,
+      "cost": {
+        "infantry": 1,
+        "vehicle": null
+      },
+      "group": "defensive",
+      "faction_ebps": {
+        "american": "tank_trap_us",
+        "german": "tank_trap_ger",
+        "afrika_korps": "tank_trap_ak",
+        "british": "tank_trap_uk"
+      },
+      "hp": 400,
+      "armor": 50
+    }
+  },
+  "lines": {
+    "hedge": {
+      "cover": "light",
+      "sight": "partial",
+      "height": 2,
+      "cross": {
+        "infantry": 1,
+        "vehicle": 1
+      },
+      "group": "natural",
+      "hp": 150,
+      "armor": 1,
+      "crushable": true
+    },
+    "fence": {
+      "cover": "none",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 0,
+        "vehicle": 0
+      },
+      "group": "natural",
+      "hp": 60,
+      "armor": 1,
+      "crushable": true
+    },
+    "stone_wall": {
+      "cover": "heavy",
+      "sight": "block",
+      "height": 2,
+      "cross": {
+        "infantry": 1,
+        "vehicle": null
+      },
+      "group": "natural",
+      "hp": 400,
+      "armor": 20,
+      "leaves": "rubble_wall"
+    },
+    "sandbag_row": {
+      "cover": "heavy",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 1,
+        "vehicle": 1
+      },
+      "group": "defensive",
+      "hp": 300,
+      "armor": 25,
+      "crushable": true,
+      "faction_ebps": {
+        "american": "sandbag_wall_us",
+        "german": "sandbag_wall_ger",
+        "afrika_korps": "sandbag_wall_ak",
+        "british": "sandbag_wall_uk"
+      }
+    },
+    "wire": {
+      "cover": "none",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 2,
+        "vehicle": 0
+      },
+      "group": "defensive",
+      "hp": 150,
+      "armor": 20,
+      "crushable": true,
+      "faction_ebps": {
+        "american": "barbed_wire_fence_us",
+        "german": "barbed_wire_fence_ger",
+        "afrika_korps": "barbed_wire_fence_ak",
+        "british": "barbed_wire_fence_uk"
+      }
+    },
+    "low_wall": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 1,
+        "vehicle": 1
+      },
+      "group": "natural",
+      "hp": 200,
+      "armor": 10,
+      "leaves": "rubble_wall"
+    },
+    "balustrade": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 1,
+        "vehicle": null
+      },
+      "group": "natural",
+      "hp": 200,
+      "armor": 10,
+      "leaves": "rubble_wall"
+    },
+    "rubble_wall": {
+      "cover": "light",
+      "sight": "none",
+      "height": 1,
+      "cross": {
+        "infantry": 1,
+        "vehicle": 1
+      },
+      "group": "natural",
+      "hp": 150,
+      "armor": 1,
+      "crushable": true
+    }
+  },
+  "structures": {
+    "house_small": {
+      "hp": 600,
+      "armor": 30,
+      "garrison": 1,
+      "height": 3,
+      "leaves": "rubble"
+    },
+    "house": {
+      "hp": 1200,
+      "armor": 40,
+      "garrison": 1,
+      "height": 3,
+      "leaves": "rubble"
+    },
+    "house_large": {
+      "hp": 2000,
+      "armor": 50,
+      "garrison": 2,
+      "height": 3,
+      "leaves": "rubble"
+    },
+    "church": {
+      "hp": 3000,
+      "armor": 60,
+      "garrison": 3,
+      "height": 3,
+      "leaves": "rubble"
+    },
+    "hq": {
+      "hp": 690,
+      "armor": 40,
+      "garrison": 0,
+      "height": 3,
+      "indestructible": true
+    }
+  },
+  "structure_terrain": {
+    "cover": "heavy",
+    "sight": "block",
+    "cost": {
+      "infantry": null,
+      "vehicle": null
+    }
+  },
+  "wrecks": {
+    "vehicle": {
+      "cover": "heavy",
+      "sight": "partial",
+      "height": 2,
+      "cost": {
+        "infantry": 1,
+        "vehicle": null
+      },
+      "group": "wreck",
+      "hp": 400,
+      "armor": 30
+    },
+    "emplacement": {
+      "cover": "heavy",
+      "sight": "none",
+      "height": 1,
+      "cost": {
+        "infantry": 1,
+        "vehicle": 3
+      },
+      "group": "wreck",
+      "hp": 300,
+      "armor": 20
+    }
+  }
+}

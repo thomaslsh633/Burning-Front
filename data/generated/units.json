@@ -1,0 +1,4969 @@
+{
+ "factions": {
+  "american": {
+   "weapon": {
+    "anti_tank_gun": {
+     "57mm_at_gun_us": {
+      "coh3_ref": "weapon/american/ballistic_weapon/anti_tank_gun/57mm_at_gun_us",
+      "class": "at_gun",
+      "fire_rule": "single_shot",
+      "damage": 160,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 300,
+       "mid": 150,
+       "far": 120
+      },
+      "vs_target": {
+       "infantry": {
+        "damage": 0.25
+       },
+       "building": {
+        "damage": 0.75
+       }
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "friendly_fire",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.07,
+        "mid": 0.05,
+        "far": 0.05
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 10
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 202,
+        "mid": 201,
+        "far": 199
+       },
+       "arc_deg": 66,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 1,
+        "mid": 0.15,
+        "far": 0.05
+       },
+       "distance_m": {
+        "near": 0.1,
+        "mid": 0.2,
+        "far": 0.25
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": -1,
+       "friendly_fire": false
+      },
+      "scatter": {
+       "angle_deg": 10,
+       "distance_ratio": 0.1,
+       "distance_max_m": 3
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "deflection": {
+       "damage_ratio": 0
+      }
+     }
+    },
+    "heavy_machine_gun": {
+     "30cal_hmg_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/heavy_machine_gun/30cal_hmg_us",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 5,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.75,
+        "mid": 0.52,
+        "far": 0.4
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 58,
+        "mid": 41,
+        "far": 30
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "arc_deg": 95,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.4,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.4,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.45,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.4
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "suppression": {
+       "amount": 0.015,
+       "nearby_mult": 1,
+       "nearby_radius_m": 15
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     },
+     "30cal_fighting_position_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/heavy_machine_gun/30cal_fighting_position_us",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 10,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.66,
+        "mid": 0.32,
+        "far": 0.14
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 37,
+        "mid": 30,
+        "far": 30
+       },
+       "damage_per_shot": {
+        "near": 10,
+        "mid": 10,
+        "far": 10
+       },
+       "arc_deg": 95,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "suppression": {
+       "amount": 0.018,
+       "nearby_mult": 1,
+       "nearby_radius_m": 13
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "mortar": {
+     "81mm_mortar_us": {
+      "coh3_ref": "weapon/american/explosive_weapon/mortar/81mm_mortar_us",
+      "class": "mortar",
+      "fire_rule": "artillery",
+      "damage": 100,
+      "damage_type": "explosive",
+      "penetration": {
+       "near": 20,
+       "mid": 20,
+       "far": 20
+      },
+      "vs_target": {
+       "sniper": {
+        "damage": 0.8
+       },
+       "bunker": {
+        "damage": 0.75,
+        "penetration": 2
+       },
+       "emplacement": {
+        "damage": 0.75,
+        "penetration": 2
+       },
+       "vehicle": {
+        "damage": 0.5
+       },
+       "team_weapon": {
+        "penetration": 3
+       }
+      },
+      "traits": [
+       "ignores_blockers",
+       "emplace_required",
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "indirect",
+       "accuracy": {
+        "near": 1,
+        "mid": 0.88,
+        "far": 0.24
+       },
+       "range_hex": {
+        "min": 3,
+        "max": 12
+       },
+       "shots_per_turn": {
+        "near": 2,
+        "mid": 2,
+        "far": 2
+       },
+       "damage_per_shot": {
+        "near": 100,
+        "mid": 100,
+        "far": 100
+       },
+       "accuracy_scale": {
+        "near": 0.89,
+        "mid": 0.89,
+        "far": 0.89
+       },
+       "arc_deg": 360,
+       "vs_cover": {
+        "light": {
+         "suppression": 0.5
+        },
+        "heavy": {
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.75,
+         "suppression": 0
+        },
+        "negative": {
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 0.25,
+        "mid": 0.18,
+        "far": 0.15
+       },
+       "distance_m": {
+        "near": 0,
+        "mid": 0.5,
+        "far": 4.5
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": 4,
+       "friendly_fire": true
+      },
+      "scatter": {
+       "angle_deg": 8.5,
+       "distance_ratio": 0.1,
+       "distance_max_m": 7.5
+      },
+      "deflection": {
+       "damage_ratio": 0.2
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": false
+      },
+      "indirect": {
+       "class": "mortar",
+       "usage_turns": 1,
+       "spread_hex": 0,
+       "min_range_hex": 3,
+       "range_hex": 12
+      }
+     }
+    },
+    "sub_machine_gun": {
+     "thompson_riflemen_leader_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_riflemen_leader_us",
+      "class": "smg",
+      "fire_rule": "volley",
+      "damage": 3,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.56,
+        "mid": 0.55,
+        "far": 0.37
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 22,
+        "mid": 14,
+        "far": 10
+       },
+       "damage_per_shot": {
+        "near": 2,
+        "mid": 2,
+        "far": 2
+       },
+       "shot_multiplier": 1.5,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.85
+      }
+     }
+    },
+    "rifle": {
+     "garand_rifleman_us": {
+      "coh3_ref": "weapon/american/small_arms/single_fire/rifle/garand_rifleman_us",
+      "class": "rifle",
+      "fire_rule": "volley",
+      "damage": 12,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 2,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.68,
+        "mid": 0.62,
+        "far": 0.35
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 13,
+        "mid": 9,
+        "far": 7
+       },
+       "damage_per_shot": {
+        "near": 3,
+        "mid": 3,
+        "far": 3
+       },
+       "shot_multiplier": 4,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      }
+     },
+     "carbine_crew_us": {
+      "coh3_ref": "weapon/american/small_arms/single_fire/rifle/carbine_crew_us",
+      "class": "rifle",
+      "fire_rule": "volley",
+      "damage": 10,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 2,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.4,
+        "mid": 0.25,
+        "far": 0.2
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 9,
+        "mid": 6,
+        "far": 5
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "shot_multiplier": 2,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "light_machine_gun": {
+     "bar_riflemen_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/bar_riflemen_us",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 5,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 2,
+       "mid": 2,
+       "far": 1
+      },
+      "traits": [
+       "friendly_fire",
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.6,
+        "mid": 0.46,
+        "far": 0.42
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 17,
+        "mid": 15,
+        "far": 13
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "shot_multiplier": 1.05,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      }
+     },
+     "m1941_lmg_devils_brigade_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/m1941_lmg_devils_brigade_us",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 5,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.57,
+        "mid": 0.5,
+        "far": 0.41
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 21,
+        "mid": 17,
+        "far": 10
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "shot_multiplier": 1.05,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      }
+     },
+     "m1919a6_old_guard_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/m1919a6_old_guard_us",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 6,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "replaceable",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.54,
+        "mid": 0.42,
+        "far": 0.38
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 13,
+        "mid": 15,
+        "far": 16
+       },
+       "damage_per_shot": {
+        "near": 6,
+        "mid": 6,
+        "far": 6
+       },
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     },
+     "lmg_m24_29_chatellerault_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/lmg_m24_29_chatellerault_us",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.56,
+        "mid": 0.53,
+        "far": 0.48
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 18,
+        "mid": 19,
+        "far": 16
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "shot_multiplier": 0.88,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      }
+     },
+     "30cal_coaxial_sherman_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/30cal_coaxial_sherman_us",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.7,
+        "mid": 0.5,
+        "far": 0.45
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 27,
+        "mid": 24,
+        "far": 20
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "arc_deg": 0,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.75
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     },
+     "30cal_hull_sherman_us": {
+      "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/30cal_hull_sherman_us",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.7,
+        "mid": 0.5,
+        "far": 0.45
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 28,
+        "mid": 26,
+        "far": 23
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "arc_deg": 70,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.75
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "tank_gun": {
+     "75mm_sherman_us": {
+      "coh3_ref": "weapon/american/ballistic_weapon/tank_gun/75mm_sherman_us",
+      "class": "cannon",
+      "fire_rule": "single_shot",
+      "damage": 120,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 135,
+       "mid": 123,
+       "far": 110
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.08,
+        "mid": 0.05,
+        "far": 0.04
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 125,
+        "mid": 125,
+        "far": 125
+       },
+       "arc_deg": 360,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.4,
+         "damage": 0.25,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 0.84,
+        "mid": 0.25,
+        "far": 0.15
+       },
+       "distance_m": {
+        "near": 0.25,
+        "mid": 0.75,
+        "far": 4.5
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": 3,
+       "friendly_fire": true
+      },
+      "scatter": {
+       "angle_deg": 10,
+       "distance_ratio": 1,
+       "distance_max_m": 6
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      },
+      "deflection": {
+       "damage_ratio": 0
+      }
+     }
+    },
+    "smoke": {
+     "2inch_mortar_smoke_sherman_us": {
+      "coh3_ref": "weapon/american/explosive_weapon/mortar/2inch_mortar_smoke_sherman_us",
+      "class": "mortar",
+      "fire_rule": "volley",
+      "damage": 0,
+      "damage_type": "explosive",
+      "penetration": {
+       "near": 35,
+       "mid": 35,
+       "far": 35
+      },
+      "traits": [
+       "ignores_blockers",
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 9
+       },
+       "shots_per_turn": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "damage_per_shot": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "arc_deg": 0,
+       "vs_cover": {
+        "light": {
+         "suppression": 0.5
+        },
+        "heavy": {
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.75,
+         "suppression": 0
+        },
+        "negative": {
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "scatter": {
+       "angle_deg": 7,
+       "distance_ratio": 0.0875,
+       "distance_max_m": 8
+      },
+      "use": {
+       "by_ability": true
+      }
+     }
+    }
+   },
+   "ebps": {
+    "infantry": {
+     "crew_at_gun_57mm_us": {
+      "coh3_ref": "ebps/races/american/infantry/crew_at_gun_57mm_us",
+      "tags": [
+       "infantry"
+      ],
+      "hp": 90,
+      "target_size": 1.33,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 50
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "carbine_crew_us",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "crew_hmg_us": {
+      "coh3_ref": "ebps/races/american/infantry/crew_hmg_us",
+      "tags": [
+       "infantry",
+       "rapid_response"
+      ],
+      "hp": 90,
+      "target_size": 1.45,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 50
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "carbine_crew_us",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "crew_mortar_us": {
+      "coh3_ref": "ebps/races/american/infantry/crew_mortar_us",
+      "tags": [
+       "infantry",
+       "rapid_response"
+      ],
+      "hp": 80,
+      "target_size": 1.33,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 45
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "carbine_crew_us",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "rifleman_squad_leader_us": {
+      "coh3_ref": "ebps/races/american/infantry/rifleman_squad_leader_us",
+      "tags": [
+       "infantry",
+       "rapid_response",
+       "rifleman"
+      ],
+      "hp": 95,
+      "target_size": 1,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 45
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "vaulting_infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "thompson_riflemen_leader_us",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "rifleman_us": {
+      "coh3_ref": "ebps/races/american/infantry/rifleman_us",
+      "tags": [
+       "infantry",
+       "rapid_response",
+       "rifleman"
+      ],
+      "hp": 95,
+      "target_size": 1,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 45
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "vaulting_infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "garand_rifleman_us",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     }
+    },
+    "team_weapons": {
+     "tw_at_gun_57mm_us": {
+      "coh3_ref": "ebps/races/american/team_weapons/tw_at_gun_57mm_us",
+      "tags": [
+       "team_weapon",
+       "cover_object",
+       "anti_tank_weapon"
+      ],
+      "hp": 350,
+      "target_size": 20,
+      "armor": {
+       "front": 70,
+       "side": 70,
+       "rear": 70
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 20
+      },
+      "traits": [
+       "repairable",
+       "recrewable",
+       "towable"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "57mm_at_gun_us",
+        "mount": "fixed",
+        "slot": "main"
+       }
+      ],
+      "crew": {
+       "min": 2,
+       "roles": [
+        "gunner",
+        "loader"
+       ]
+      },
+      "recrew": {
+       "by_faction": {
+        "american": "at_gun_57mm_us",
+        "german": "at_gun_57mm_us",
+        "british": "at_gun_57mm_us",
+        "afrika_korps": "at_gun_57mm_us"
+       },
+       "min_crew": 2,
+       "max_squad": 5,
+       "manual_abandon": true,
+       "abandoned_on_spawn": false
+      },
+      "tow": {
+       "by": []
+      }
+     }
+    },
+    "buildings": {
+     "hmg_fighting_position_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/hmg_fighting_position_us",
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "weapons": [
+       {
+        "weapon": "30cal_fighting_position_us",
+        "mount": "turret",
+        "slot": "main"
+       }
+      ],
+      "construction": {
+       "build_turns": 2,
+       "footprint_hex": 1
+      }
+     },
+     "sandbag_wall_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/sandbag_wall_us",
+      "tags": [
+       "building",
+       "cover_object"
+      ],
+      "hp": 300,
+      "target_size": 25,
+      "armor": {
+       "front": 25,
+       "side": 25,
+       "rear": 25
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     },
+     "barbed_wire_fence_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/barbed_wire_fence_us",
+      "tags": [
+       "building"
+      ],
+      "hp": 150,
+      "target_size": 25,
+      "armor": {
+       "front": 20,
+       "side": 20,
+       "rear": 20
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     },
+     "tank_trap_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/tank_trap_us",
+      "tags": [
+       "cover_object",
+       "building"
+      ],
+      "hp": 400,
+      "target_size": 25,
+      "armor": {
+       "front": 50,
+       "side": 50,
+       "rear": 50
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "traits": [
+       "repairable"
+      ],
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     }
+    },
+    "vehicles": {
+     "sherman_us": {
+      "coh3_ref": "ebps/races/american/vehicles/sherman_us",
+      "tags": [
+       "vehicle",
+       "cover_object",
+       "sherman",
+       "rideable_tank",
+       "vehicle_treaded",
+       "allow_track_damage_when_immobilized",
+       "allow_turret_off",
+       "allow_brew_up",
+       "base_sherman"
+      ],
+      "hp": 720,
+      "target_size": 20,
+      "armor": {
+       "front": 195,
+       "side": 100,
+       "rear": 80
+      },
+      "directional_damage": {
+       "front": 1,
+       "side": 1,
+       "rear": 1.33334
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": -1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 340,
+       "fuel": 90
+      },
+      "traits": [
+       "repairable"
+      ],
+      "move": {
+       "hex": 6,
+       "pass": "trench_crossing_vehicle_medium"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "75mm_sherman_us",
+        "mount": "turret",
+        "slot": "main"
+       },
+       {
+        "weapon": "30cal_coaxial_sherman_us",
+        "mount": "turret",
+        "slot": "secondary"
+       },
+       {
+        "weapon": "30cal_hull_sherman_us",
+        "mount": "hull",
+        "slot": "secondary"
+       },
+       {
+        "weapon": "2inch_mortar_smoke_sherman_us",
+        "mount": "turret",
+        "slot": "accessory"
+       }
+      ],
+      "wreck": {
+       "entity": "sherman_wreck_us",
+       "cover": "heavy",
+       "blocks_vehicles": true
+      }
+     }
+    }
+   },
+   "sbps": {
+    "team_weapons": {
+     "at_gun_57mm_us": {
+      "coh3_ref": "sbps/races/american/team_weapons/at_gun_57mm_us",
+      "kind": "team_weapon",
+      "role": "anti_tank",
+      "members": [
+       {
+        "entity": "tw_at_gun_57mm_us",
+        "count": 1
+       },
+       {
+        "entity": "crew_at_gun_57mm_us",
+        "count": 5
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 270
+       },
+       "from": "coh3stats"
+      },
+      "pop": 8,
+      "build_turns": 5,
+      "tags": [
+       "teamweapon",
+       "anti_tank",
+       "teamweapon_anti_tank",
+       "tier3"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak"
+       ]
+      },
+      "abilities": [
+       "towing_attach",
+       "prioritize_vehicles",
+       "hold_fire",
+       "veterancy_1_unlock_a_at_gun_57mm_us",
+       "veterancy_1_unlock_b_at_gun_57mm_us",
+       "at_gun_57mm_fast_move_us",
+       "veterancy_1a_focused_sight_at_gun_57mm_us"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.58
+      },
+      "veterancy": {
+       "set": "at_gun_57mm_us"
+      },
+      "team_weapon": {
+       "weapon_entity": "tw_at_gun_57mm_us",
+       "crew_entity": "crew_at_gun_57mm_us"
+      },
+      "supply": {
+       "ammo": 16
+      }
+     },
+     "hmg_30cal_us": {
+      "coh3_ref": "sbps/races/american/team_weapons/hmg_30cal_us",
+      "kind": "team_weapon",
+      "role": "suppression",
+      "members": [
+       {
+        "entity": "crew_hmg_us",
+        "count": 4
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 240
+       },
+       "from": "coh3stats"
+      },
+      "pop": 7,
+      "build_turns": 3,
+      "tags": [
+       "teamweapon",
+       "suppression",
+       "teamweapon_burst",
+       "infantry_anti_infantry"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak",
+        "50cal_hmg_us"
+       ]
+      },
+      "abilities": [
+       "reload_hmg_us",
+       "veterancy_1_unlock_a_hmg_30cal_us",
+       "veterancy_1_unlock_b_hmg_30cal_us",
+       "veterancy_1a_button_vehicle_hmg_30cal_us",
+       "defensive_set_up_hmg_30cal_us",
+       "defensive_set_up_hmg_30cal_upgraded_us",
+       "camouflage_in_cover_hmg_ger",
+       "passive_instant_withdraw_retreat_in_hold_global_us"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.56
+      },
+      "veterancy": {
+       "set": "hmg_30cal_us"
+      },
+      "team_weapon": {
+       "weapon": "30cal_hmg_us",
+       "crew_entity": "crew_hmg_us"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     },
+     "mortar_81mm_us": {
+      "coh3_ref": "sbps/races/american/team_weapons/mortar_81mm_us",
+      "kind": "team_weapon",
+      "role": "indirect",
+      "members": [
+       {
+        "entity": "crew_mortar_us",
+        "count": 4
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 240
+       },
+       "from": "coh3stats"
+      },
+      "pop": 7,
+      "build_turns": 3,
+      "tags": [
+       "teamweapon",
+       "mortar",
+       "infantry_anti_infantry",
+       "tier1"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak"
+       ]
+      },
+      "abilities": [
+       "veterancy_1_unlock_a_81mm_us",
+       "veterancy_1_unlock_b_81mm_us",
+       "barrage_81mm_mortar_us",
+       "smoke_81mm_mortar_us",
+       "veterancy_1a_timed_fuze_mortar_81mm_us",
+       "veterancy_1b_delayed_fuze_mortar_81mm_us",
+       "hold_fire",
+       "siegebreakers_siege_specialists_range_in_ger",
+       "brazilian_squad_counterbattery_us",
+       "veterancy_1a_suppression_airburst_mortar_81mm_us"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.63
+      },
+      "veterancy": {
+       "set": "mortar_81mm_us"
+      },
+      "team_weapon": {
+       "weapon": "81mm_mortar_us",
+       "crew_entity": "crew_mortar_us"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     }
+    },
+    "emplacements": {
+     "hmg_fighting_position_us": {
+      "coh3_ref": "sbps/races/american/emplacements/hmg_fighting_position_us",
+      "kind": "structure",
+      "role": "suppression",
+      "members": [
+       {
+        "entity": "hmg_fighting_position_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 100
+       },
+       "from": "coh3stats"
+      },
+      "pop": 0,
+      "build_turns": 2,
+      "tags": [
+       "teamweapon",
+       "suppression",
+       "building",
+       "invisible_to_scar"
+      ],
+      "source": "built",
+      "abilities": [
+       "squad_building_retreat_held_squads"
+      ],
+      "supply": {
+       "ammo": 30
+      }
+     }
+    },
+    "infantry": {
+     "riflemen_us": {
+      "coh3_ref": "sbps/races/american/infantry/riflemen_us",
+      "kind": "squad",
+      "role": "anti_infantry",
+      "members": [
+       {
+        "entity": "rifleman_squad_leader_us",
+        "count": 1
+       },
+       {
+        "entity": "rifleman_us",
+        "count": 5
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 270
+       },
+       "from": "coh3stats"
+      },
+      "pop": 8,
+      "build_turns": 2,
+      "tags": [
+       "infantry",
+       "standard_infantry",
+       "rifleman",
+       "tier1",
+       "infantry_anti_infantry"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [
+        "bar_rifleman_squad_us",
+        "m1941_lmg_rifleman_us",
+        "m1919a6_rifleman_squad_us",
+        "french_old_guard_lmg_m1919a6s_rifleman_us",
+        "lmg_m24_29_chatellerault_riflemen_us"
+       ]
+      },
+      "abilities": [
+       "italian_airborne_weapon_canister_interact_ak",
+       "grenade_riflemen_us",
+       "veterancy_1_unlock_a_riflemen_us",
+       "veterancy_1_unlock_b_riflemen_us",
+       "veterancy_1a_fire_superiority_riflemen_us",
+       "veterancy_1b_tactical_movement_riflemen_us",
+       "sticky_bomb_riflemen_us",
+       "breach",
+       "fighting_position_auto_grenade_us",
+       "vault_movement",
+       "c_airborne_infantry_medkits_us",
+       "passive_instant_withdraw_retreat_in_hold_global_us",
+       "french_old_guard_retreat_buff_us",
+       "french_grenade_assault_riflemen_us"
+      ],
+      "capture": {
+       "rate": 1.25
+      },
+      "reinforce": {
+       "cost_ratio": 0.67
+      },
+      "veterancy": {
+       "set": "riflemen_us"
+      },
+      "supply": {
+       "ammo": 20
+      },
+      "build": {
+       "menu": [
+        "mine_heavy_engineer_us",
+        "demo_charge_standard_us",
+        "partisan_tunnel_constructed_us",
+        "belgian_gate_french_us",
+        "concrete_bastion_infantry_us",
+        "fighting_position_french_old_guard_us",
+        "tourelle_emplacement_us",
+        "tank_trap_french_us",
+        "observation_post_french_us",
+        "barbed_wire_fence_french_engineering_upgrade_us",
+        "sandbag_wall_french_infantry_us"
+       ]
+      }
+     }
+    },
+    "vehicles": {
+     "sherman_us": {
+      "coh3_ref": "sbps/races/american/vehicles/sherman_us",
+      "kind": "vehicle",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "sherman_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 340,
+        "fuel": 90
+       },
+       "from": "coh3stats"
+      },
+      "pop": 12,
+      "build_turns": 6,
+      "tags": [
+       "vehicle",
+       "medium_armor",
+       "tier4",
+       "vehicle_turret"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "hmg_sherman_us"
+       ]
+      },
+      "abilities": [
+       "prioritize_vehicles",
+       "veterancy_1_unlock_b_sherman_us",
+       "white_phosphorous_sherman_us",
+       "smoke_infantry_support_us",
+       "radio_net_passive_us",
+       "repair_critical_engine_damage_us",
+       "hold_fire",
+       "veterancy_1a_suppressing_fire_sherman_us",
+       "veterancy_1_unlock_a_sherman_suppressing_fire_us"
+      ],
+      "veterancy": {
+       "set": "sherman_us"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     }
+    }
+   },
+   "upgrade": {
+    "infantry": {
+     "bar_rifleman_squad_us": {
+      "coh3_ref": "upgrade/american/infantry/bar_rifleman_squad_us",
+      "scope": "unit",
+      "cost": {
+       "munition": 60
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "bar_riflemen_global_us"
+       ],
+       "any_upgrades": [
+        "mechanized_support_center_us",
+        "infantry_support_center_us",
+        "air_support_center_us"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "bar_riflemen_us"
+       }
+      ]
+     },
+     "m1941_lmg_rifleman_us": {
+      "coh3_ref": "upgrade/american/infantry/m1941_lmg_rifleman_us",
+      "scope": "unit",
+      "cost": {
+       "munition": 75
+      },
+      "build_turns": 5,
+      "requires": {
+       "upgrades": [
+        "c_special_operations_special_arms_passive_us",
+        "m1941_lmg_rifleman_global_us"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "m1941_lmg_devils_brigade_us"
+       }
+      ]
+     },
+     "m1919a6_rifleman_squad_us": {
+      "coh3_ref": "upgrade/american/infantry/m1919a6_rifleman_squad_us",
+      "scope": "unit",
+      "cost": {
+       "munition": 90
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "infantry_right_1b_m1919a6_us"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "m1919a6_old_guard_us"
+       }
+      ]
+     },
+     "french_old_guard_lmg_m1919a6s_rifleman_us": {
+      "coh3_ref": "upgrade/american/infantry/french_old_guard_lmg_m1919a6s_rifleman_us",
+      "scope": "unit",
+      "cost": {
+       "munition": 70
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "french_us",
+        "french_old_guard_us"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "m1919a6_old_guard_us"
+       }
+      ]
+     },
+     "lmg_m24_29_chatellerault_riflemen_us": {
+      "coh3_ref": "upgrade/american/infantry/lmg_m24_29_chatellerault_riflemen_us",
+      "scope": "unit",
+      "cost": {
+       "munition": 80
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "french_us",
+        "french_new_blood_us"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "lmg_m24_29_chatellerault_us"
+       }
+      ]
+     }
+    }
+   },
+   "veterancy": {
+    "at_gun_57mm_us": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "hp_add": 15
+      },
+      {
+       "weapon_accuracy": 1.25,
+       "attack_speed": 0.85
+      },
+      {
+       "received_damage": 0.8,
+       "attack_speed": 0.75
+      }
+     ]
+    },
+    "hmg_30cal_us": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/hmg",
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "hp_add": 10
+      },
+      {
+       "hp_add": 15,
+       "weapon_suppression": 1.5
+      },
+      {
+       "received_damage": 0.7
+      }
+     ]
+    },
+    "mortar_81mm_us": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/mortar",
+     "xp": [
+      400,
+      1200,
+      2400
+     ],
+     "ranks": [
+      {
+       "attack_speed": -0.1
+      },
+      {
+       "weapon_damage": 1.15,
+       "ability_cooldown": 0.65
+      },
+      {
+       "attack_speed": -0.5,
+       "received_damage": 0.8
+      }
+     ]
+    },
+    "riflemen_us": {
+     "coh3_ref": "custom_property_container/veterancy/american/infantry/riflemen",
+     "xp": [
+      900,
+      2700,
+      5400
+     ],
+     "ranks": [
+      {
+       "received_accuracy": 0.9
+      },
+      {
+       "weapon_accuracy": 1.25,
+       "attack_speed": 0.9
+      },
+      {
+       "received_accuracy": 0.8,
+       "hp_add": 15,
+       "attack_speed": 0.75
+      }
+     ]
+    },
+    "sherman_us": {
+     "coh3_ref": "custom_property_container/veterancy/common/vehicle/generic_medium",
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {},
+      {
+       "weapon_penetration": 1.2
+      },
+      {
+       "hp_add": 80,
+       "attack_speed": 0.75
+      }
+     ]
+    }
+   },
+   "fx": {
+    "weapon": {
+     "57mm_at_gun_us": {
+      "name": "weapon.57mm_at_gun_us.name",
+      "sound": {
+       "fire": "at_gun"
+      }
+     },
+     "30cal_hmg_us": {
+      "name": "weapon.30cal_hmg_us.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "30cal_fighting_position_us": {
+      "name": "weapon.30cal_fighting_position_us.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "81mm_mortar_us": {
+      "name": "weapon.81mm_mortar_us.name",
+      "sound": {
+       "fire": "mortar"
+      }
+     },
+     "thompson_riflemen_leader_us": {
+      "name": "weapon.thompson_riflemen_leader_us.name",
+      "sound": {
+       "fire": "smg"
+      }
+     },
+     "garand_rifleman_us": {
+      "name": "weapon.garand_rifleman_us.name",
+      "sound": {
+       "fire": "rifle"
+      }
+     },
+     "bar_riflemen_us": {
+      "name": "weapon.bar_riflemen_us.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "m1941_lmg_devils_brigade_us": {
+      "name": "weapon.m1941_lmg_devils_brigade_us.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "m1919a6_old_guard_us": {
+      "name": "weapon.m1919a6_old_guard_us.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "lmg_m24_29_chatellerault_us": {
+      "name": "weapon.lmg_m24_29_chatellerault_us.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "carbine_crew_us": {
+      "name": "weapon.carbine_crew_us.name",
+      "sound": {
+       "fire": "rifle"
+      }
+     },
+     "75mm_sherman_us": {
+      "name": "weapon.75mm_sherman_us.name",
+      "sound": {
+       "fire": "cannon"
+      }
+     },
+     "30cal_coaxial_sherman_us": {
+      "name": "weapon.30cal_coaxial_sherman_us.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "30cal_hull_sherman_us": {
+      "name": "weapon.30cal_hull_sherman_us.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "2inch_mortar_smoke_sherman_us": {
+      "name": "weapon.2inch_mortar_smoke_sherman_us.name",
+      "sound": {
+       "fire": "mortar"
+      }
+     }
+    },
+    "ebps": {
+     "tw_at_gun_57mm_us": {
+      "name": "entity.tw_at_gun_57mm_us.name",
+      "model": {
+       "id": "tw_at_gun_57mm_us",
+       "anim_class": "crew"
+      }
+     },
+     "crew_at_gun_57mm_us": {
+      "name": "entity.crew_at_gun_57mm_us.name",
+      "model": {
+       "id": "crew_at_gun_57mm_us",
+       "anim_class": "infantry"
+      }
+     },
+     "crew_hmg_us": {
+      "name": "entity.crew_hmg_us.name",
+      "model": {
+       "id": "crew_hmg_us",
+       "anim_class": "infantry"
+      }
+     },
+     "hmg_fighting_position_us": {
+      "name": "entity.hmg_fighting_position_us.name",
+      "model": {
+       "id": "hmg_fighting_position_us",
+       "anim_class": "static"
+      }
+     },
+     "crew_mortar_us": {
+      "name": "entity.crew_mortar_us.name",
+      "model": {
+       "id": "crew_mortar_us",
+       "anim_class": "infantry"
+      }
+     },
+     "rifleman_squad_leader_us": {
+      "name": "entity.rifleman_squad_leader_us.name",
+      "model": {
+       "id": "rifleman_squad_leader_us",
+       "anim_class": "infantry"
+      }
+     },
+     "rifleman_us": {
+      "name": "entity.rifleman_us.name",
+      "model": {
+       "id": "rifleman_us",
+       "anim_class": "infantry"
+      }
+     },
+     "sandbag_wall_us": {
+      "name": "entity.sandbag_wall_us.name",
+      "model": {
+       "id": "sandbag_wall_us",
+       "anim_class": "static"
+      }
+     },
+     "barbed_wire_fence_us": {
+      "name": "entity.barbed_wire_fence_us.name",
+      "model": {
+       "id": "barbed_wire_fence_us",
+       "anim_class": "static"
+      }
+     },
+     "tank_trap_us": {
+      "name": "entity.tank_trap_us.name",
+      "model": {
+       "id": "tank_trap_us",
+       "anim_class": "static"
+      }
+     },
+     "sherman_us": {
+      "name": "entity.sherman_us.name",
+      "model": {
+       "id": "sherman_us",
+       "anim_class": "tank_medium"
+      }
+     }
+    },
+    "sbps": {
+     "at_gun_57mm_us": {
+      "name": "unit.at_gun_57mm_us.name",
+      "short_name": "unit.at_gun_57mm_us.short",
+      "desc": "unit.at_gun_57mm_us.desc",
+      "icon": "at_gun_57mm_us",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "hmg_30cal_us": {
+      "name": "unit.hmg_30cal_us.name",
+      "short_name": "unit.hmg_30cal_us.short",
+      "desc": "unit.hmg_30cal_us.desc",
+      "icon": "hmg_30cal_us",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "hmg_fighting_position_us": {
+      "name": "unit.hmg_fighting_position_us.name",
+      "short_name": "unit.hmg_fighting_position_us.short",
+      "desc": "unit.hmg_fighting_position_us.desc",
+      "icon": "hmg_fighting_position_us",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "mortar_81mm_us": {
+      "name": "unit.mortar_81mm_us.name",
+      "short_name": "unit.mortar_81mm_us.short",
+      "desc": "unit.mortar_81mm_us.desc",
+      "icon": "mortar_81mm_us",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "riflemen_us": {
+      "name": "unit.riflemen_us.name",
+      "short_name": "unit.riflemen_us.short",
+      "desc": "unit.riflemen_us.desc",
+      "icon": "riflemen_us",
+      "menu": {
+       "tab": "infantry",
+       "order": 0
+      }
+     },
+     "sherman_us": {
+      "name": "unit.sherman_us.name",
+      "short_name": "unit.sherman_us.short",
+      "desc": "unit.sherman_us.desc",
+      "icon": "sherman_us",
+      "menu": {
+       "tab": "vehicles",
+       "order": 0
+      }
+     }
+    },
+    "upgrade": {
+     "bar_rifleman_squad_us": {
+      "name": "upgrade.bar_rifleman_squad_us.name",
+      "icon": "bar_rifleman_squad_us"
+     },
+     "m1941_lmg_rifleman_us": {
+      "name": "upgrade.m1941_lmg_rifleman_us.name",
+      "icon": "m1941_lmg_rifleman_us"
+     },
+     "m1919a6_rifleman_squad_us": {
+      "name": "upgrade.m1919a6_rifleman_squad_us.name",
+      "icon": "m1919a6_rifleman_squad_us"
+     },
+     "french_old_guard_lmg_m1919a6s_rifleman_us": {
+      "name": "upgrade.french_old_guard_lmg_m1919a6s_rifleman_us.name",
+      "icon": "french_old_guard_lmg_m1919a6s_rifleman_us"
+     },
+     "lmg_m24_29_chatellerault_riflemen_us": {
+      "name": "upgrade.lmg_m24_29_chatellerault_riflemen_us.name",
+      "icon": "lmg_m24_29_chatellerault_riflemen_us"
+     }
+    }
+   }
+  },
+  "german": {
+   "weapon": {
+    "anti_tank_gun": {
+     "75mm_at_gun_ger": {
+      "coh3_ref": "weapon/german/ballistic_weapon/anti_tank_gun/75mm_at_gun_ger",
+      "class": "at_gun",
+      "fire_rule": "single_shot",
+      "damage": 160,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 380,
+       "mid": 260,
+       "far": 130
+      },
+      "vs_target": {
+       "infantry": {
+        "damage": 0.25
+       },
+       "building": {
+        "damage": 0.75
+       }
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "friendly_fire",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.08,
+        "mid": 0.05,
+        "far": 0.05
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 10
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 192,
+        "mid": 191,
+        "far": 190
+       },
+       "arc_deg": 66,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 1,
+        "mid": 0.15,
+        "far": 0.05
+       },
+       "distance_m": {
+        "near": 0.15,
+        "mid": 0.2,
+        "far": 0.25
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": -1,
+       "friendly_fire": false
+      },
+      "scatter": {
+       "angle_deg": 10,
+       "distance_ratio": 0.1,
+       "distance_max_m": 3
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "deflection": {
+       "damage_ratio": 0
+      }
+     }
+    },
+    "rifle": {
+     "kar98k_grenadier_ger": {
+      "coh3_ref": "weapon/german/small_arms/single_fire/rifle/kar98k_grenadier_ger",
+      "class": "rifle",
+      "fire_rule": "volley",
+      "damage": 14,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 2,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.75,
+        "mid": 0.69,
+        "far": 0.68
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 5,
+        "mid": 4,
+        "far": 4
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "shot_multiplier": 2.8,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "sub_machine_gun": {
+     "mp40_grenadier_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/sub_machine_gun/mp40_grenadier_ger",
+      "class": "smg",
+      "fire_rule": "volley",
+      "damage": 5,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.5,
+        "mid": 0.39,
+        "far": 0.15
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 22,
+        "mid": 17,
+        "far": 4
+       },
+       "damage_per_shot": {
+        "near": 5,
+        "mid": 5,
+        "far": 5
+       },
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.85
+      }
+     },
+     "mp40_crew_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/sub_machine_gun/mp40_crew_ger",
+      "class": "smg",
+      "fire_rule": "volley",
+      "damage": 2,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.42,
+        "mid": 0.25,
+        "far": 0.1
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 23,
+        "mid": 8,
+        "far": 3
+       },
+       "damage_per_shot": {
+        "near": 2,
+        "mid": 2,
+        "far": 2
+       },
+       "arc_deg": 120,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.85
+      }
+     }
+    },
+    "flame_throwers": {
+     "flamethrower_panzerpioneer_ak": {
+      "coh3_ref": "weapon/afrika_korps/flame_throwers/flamethrower_panzerpioneer_ak",
+      "class": "flame",
+      "fire_rule": "volley",
+      "damage": 2,
+      "damage_type": "flame",
+      "penetration": {
+       "near": 3,
+       "mid": 3,
+       "far": 3
+      },
+      "vs_target": {
+       "building": {
+        "damage": 3.5,
+        "penetration": 25
+       },
+       "bunker": {
+        "damage": 2.5,
+        "penetration": 20
+       },
+       "emplacement": {
+        "damage": 2.5,
+        "penetration": 20
+       }
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 4
+       },
+       "shots_per_turn": {
+        "near": 17,
+        "mid": 17,
+        "far": 17
+       },
+       "damage_per_shot": {
+        "near": 2,
+        "mid": 2,
+        "far": 2
+       },
+       "arc_deg": 90,
+       "vs_cover": {
+        "light": {
+         "suppression": 0.5
+        },
+        "heavy": {
+         "damage": 1.25,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 1.5,
+         "suppression": 0
+        },
+        "negative": {
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "heavy_machine_gun": {
+     "mg42_bunker_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/heavy_machine_gun/mg42_bunker_ger",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 10,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.66,
+        "mid": 0.32,
+        "far": 0.14
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 37,
+        "mid": 30,
+        "far": 30
+       },
+       "damage_per_shot": {
+        "near": 10,
+        "mid": 10,
+        "far": 10
+       },
+       "arc_deg": 125,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "suppression": {
+       "amount": 0.018,
+       "nearby_mult": 1,
+       "nearby_radius_m": 13
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     },
+     "mg42_hmg_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/heavy_machine_gun/mg42_hmg_ger",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 2,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "emplace_required",
+       "emplace_faces_target",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.7,
+        "mid": 0.51,
+        "far": 0.28
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 90,
+        "mid": 74,
+        "far": 64
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "arc_deg": 110,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.4,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.4,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.45,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.4
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "suppression": {
+       "amount": 0.0115,
+       "nearby_mult": 1,
+       "nearby_radius_m": 17.5
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": true
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "mortar": {
+     "81mm_mortar_ger": {
+      "coh3_ref": "weapon/german/explosive_weapon/mortar/81mm_mortar_ger",
+      "class": "mortar",
+      "fire_rule": "artillery",
+      "damage": 100,
+      "damage_type": "explosive",
+      "penetration": {
+       "near": 20,
+       "mid": 20,
+       "far": 20
+      },
+      "vs_target": {
+       "sniper": {
+        "damage": 0.8
+       },
+       "bunker": {
+        "damage": 0.75,
+        "penetration": 2
+       },
+       "emplacement": {
+        "damage": 0.75,
+        "penetration": 2
+       },
+       "vehicle": {
+        "damage": 0.5
+       },
+       "team_weapon": {
+        "penetration": 3
+       }
+      },
+      "traits": [
+       "ignores_blockers",
+       "emplace_required",
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "indirect",
+       "accuracy": {
+        "near": 1,
+        "mid": 0.88,
+        "far": 0.24
+       },
+       "range_hex": {
+        "min": 3,
+        "max": 12
+       },
+       "shots_per_turn": {
+        "near": 2,
+        "mid": 2,
+        "far": 2
+       },
+       "damage_per_shot": {
+        "near": 100,
+        "mid": 100,
+        "far": 100
+       },
+       "accuracy_scale": {
+        "near": 0.89,
+        "mid": 0.89,
+        "far": 0.89
+       },
+       "arc_deg": 360,
+       "vs_cover": {
+        "light": {
+         "suppression": 0.5
+        },
+        "heavy": {
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.75,
+         "suppression": 0
+        },
+        "negative": {
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 0.25,
+        "mid": 0.18,
+        "far": 0.15
+       },
+       "distance_m": {
+        "near": 0,
+        "mid": 0.5,
+        "far": 4.5
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": 4,
+       "friendly_fire": true
+      },
+      "scatter": {
+       "angle_deg": 8.5,
+       "distance_ratio": 0.1,
+       "distance_max_m": 7.5
+      },
+      "deflection": {
+       "damage_ratio": 0.2
+      },
+      "emplace": {
+       "required": true,
+       "setup_turns": 1,
+       "teardown_turns": 0,
+       "faces_target": false
+      },
+      "indirect": {
+       "class": "mortar",
+       "usage_turns": 1,
+       "spread_hex": 0,
+       "min_range_hex": 3,
+       "range_hex": 12
+      }
+     }
+    },
+    "tank_gun": {
+     "75mm_panzer_iv_ger": {
+      "coh3_ref": "weapon/german/ballistic_weapon/tank_gun/75mm_panzer_iv_ger",
+      "class": "cannon",
+      "fire_rule": "single_shot",
+      "damage": 120,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 200,
+       "mid": 170,
+       "far": 140
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.08,
+        "mid": 0.05,
+        "far": 0.05
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 7
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 152,
+        "mid": 152,
+        "far": 152
+       },
+       "arc_deg": 360,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.4,
+         "damage": 0.25,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 1,
+        "mid": 0.33,
+        "far": 0.25
+       },
+       "distance_m": {
+        "near": 0.33,
+        "mid": 0.5,
+        "far": 4
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": 4,
+       "friendly_fire": true
+      },
+      "scatter": {
+       "angle_deg": 9.5,
+       "distance_ratio": 1,
+       "distance_max_m": 4
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      },
+      "deflection": {
+       "damage_ratio": 0
+      }
+     }
+    },
+    "light_machine_gun": {
+     "mg34_coaxial_panzer_iv_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/light_machine_gun/mg34_coaxial_panzer_iv_ger",
+      "class": "hmg",
+      "fire_rule": "volley",
+      "damage": 3,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.35,
+        "mid": 0.3,
+        "far": 0.18
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 53,
+        "mid": 46,
+        "far": 40
+       },
+       "damage_per_shot": {
+        "near": 3,
+        "mid": 3,
+        "far": 3
+       },
+       "arc_deg": 6,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     },
+     "mg34_hull_panzer_iv_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/light_machine_gun/mg34_hull_panzer_iv_ger",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 3,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.35,
+        "mid": 0.3,
+        "far": 0.18
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 53,
+        "mid": 46,
+        "far": 40
+       },
+       "damage_per_shot": {
+        "near": 3,
+        "mid": 3,
+        "far": 3
+       },
+       "arc_deg": 70,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     }
+    },
+    "smoke": {
+     "tank_smoke_ak": {
+      "coh3_ref": "weapon/afrika_korps/explosive_weapon/mortar/tank_smoke_ak",
+      "class": "smoke",
+      "fire_rule": "volley",
+      "damage": 0,
+      "damage_type": "explosive",
+      "penetration": {
+       "near": 35,
+       "mid": 35,
+       "far": 35
+      },
+      "traits": [
+       "ignores_blockers",
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 9
+       },
+       "shots_per_turn": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "damage_per_shot": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "arc_deg": 0,
+       "vs_cover": {
+        "light": {
+         "suppression": 0.5
+        },
+        "heavy": {
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "damage": 0.75,
+         "suppression": 0
+        },
+        "negative": {
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "scatter": {
+       "angle_deg": 7,
+       "distance_ratio": 0.0875,
+       "distance_max_m": 8
+      },
+      "use": {
+       "by_ability": true
+      }
+     }
+    }
+   },
+   "ebps": {
+    "infantry": {
+     "crew_at_gun_75mm_ger": {
+      "coh3_ref": "ebps/races/german/infantry/crew_at_gun_75mm_ger",
+      "tags": [
+       "infantry",
+       "german_infantry"
+      ],
+      "hp": 90,
+      "target_size": 1.33,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 50
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "mp40_crew_ger",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "grenadier_ger": {
+      "coh3_ref": "ebps/races/german/infantry/grenadier_ger",
+      "tags": [
+       "infantry",
+       "german_infantry",
+       "grenadier_ger",
+       "squad_entity_max_6"
+      ],
+      "hp": 80,
+      "target_size": 1,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 42
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "vaulting_infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "kar98k_grenadier_ger",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "crew_hmg_ger": {
+      "coh3_ref": "ebps/races/german/infantry/crew_hmg_ger",
+      "tags": [
+       "infantry",
+       "german_infantry"
+      ],
+      "hp": 90,
+      "target_size": 1.45,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 50
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "mp40_crew_ger",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     },
+     "crew_mortar_ger": {
+      "coh3_ref": "ebps/races/german/infantry/crew_mortar_ger",
+      "tags": [
+       "infantry",
+       "german_infantry"
+      ],
+      "hp": 80,
+      "target_size": 1.33,
+      "armor": {
+       "front": 1,
+       "side": 1,
+       "rear": 1
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 45
+      },
+      "traits": [
+       "receives_cover"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "mp40_crew_ger",
+        "mount": "hull",
+        "slot": "main"
+       }
+      ]
+     }
+    },
+    "team_weapons": {
+     "tw_at_gun_75mm_ger": {
+      "coh3_ref": "ebps/races/german/team_weapons/tw_at_gun_75mm_ger",
+      "tags": [
+       "team_weapon",
+       "cover_object",
+       "anti_tank_weapon"
+      ],
+      "hp": 350,
+      "target_size": 20,
+      "armor": {
+       "front": 70,
+       "side": 70,
+       "rear": 70
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 30
+      },
+      "traits": [
+       "repairable",
+       "recrewable",
+       "towable"
+      ],
+      "move": {
+       "hex": 4,
+       "pass": "infantry"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "75mm_at_gun_ger",
+        "mount": "fixed",
+        "slot": "main"
+       }
+      ],
+      "crew": {
+       "min": 2,
+       "roles": [
+        "gunner",
+        "loader"
+       ]
+      },
+      "recrew": {
+       "by_faction": {
+        "german": "at_gun_75mm_ger",
+        "american": "at_gun_75mm_ger",
+        "british": "at_gun_75mm_ger",
+        "afrika_korps": "at_gun_75mm_ger"
+       },
+       "min_crew": 2,
+       "max_squad": 5,
+       "manual_abandon": true,
+       "abandoned_on_spawn": false
+      },
+      "tow": {
+       "by": []
+      }
+     }
+    },
+    "buildings": {
+     "hmg_bunker_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/hmg_bunker_ger",
+      "tags": [
+       "building",
+       "bunker",
+       "emplacement_no_teardown"
+      ],
+      "hp": 720,
+      "target_size": 20,
+      "armor": {
+       "front": 35,
+       "side": 35,
+       "rear": 35
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 250
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "weapons": [
+       {
+        "weapon": "mg42_bunker_ger",
+        "mount": "turret",
+        "slot": "main"
+       }
+      ],
+      "construction": {
+       "build_turns": 4,
+       "footprint_hex": 1
+      }
+     },
+     "sandbag_wall_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/sandbag_wall_ger",
+      "tags": [
+       "building",
+       "cover_object"
+      ],
+      "hp": 300,
+      "target_size": 25,
+      "armor": {
+       "front": 25,
+       "side": 25,
+       "rear": 25
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     },
+     "barbed_wire_fence_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/barbed_wire_fence_ger",
+      "tags": [
+       "building"
+      ],
+      "hp": 150,
+      "target_size": 25,
+      "armor": {
+       "front": 20,
+       "side": 20,
+       "rear": 20
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     },
+     "tank_trap_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/tank_trap_ger",
+      "tags": [
+       "cover_object",
+       "building"
+      ],
+      "hp": 400,
+      "target_size": 25,
+      "armor": {
+       "front": 50,
+       "side": 50,
+       "rear": 50
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {},
+      "traits": [
+       "repairable"
+      ],
+      "construction": {
+       "build_turns": 1,
+       "footprint_hex": 1
+      }
+     }
+    },
+    "vehicles": {
+     "panzer_iv_ger": {
+      "coh3_ref": "ebps/races/german/vehicles/panzer_iv_ger",
+      "tags": [
+       "vehicle",
+       "cover_object",
+       "panzer_iv",
+       "rideable_tank",
+       "vehicle_treaded",
+       "allow_track_damage_when_immobilized",
+       "allow_turret_off",
+       "allow_brew_up",
+       "side_armor_tank"
+      ],
+      "hp": 720,
+      "target_size": 20,
+      "armor": {
+       "front": 170,
+       "side": 95,
+       "rear": 70
+      },
+      "directional_damage": {
+       "front": 1,
+       "side": 1,
+       "rear": 1.33334
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 360,
+       "fuel": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "move": {
+       "hex": 6,
+       "pass": "trench_crossing_vehicle_medium"
+      },
+      "sight": {
+       "hex": 6,
+       "detect_hex": 1
+      },
+      "weapons": [
+       {
+        "weapon": "75mm_panzer_iv_ger",
+        "mount": "turret",
+        "slot": "main"
+       },
+       {
+        "weapon": "mg34_coaxial_panzer_iv_ger",
+        "mount": "turret",
+        "slot": "secondary"
+       },
+       {
+        "weapon": "mg34_hull_panzer_iv_ger",
+        "mount": "hull",
+        "slot": "secondary"
+       },
+       {
+        "weapon": "tank_smoke_ak",
+        "mount": "turret",
+        "slot": "secondary"
+       }
+      ],
+      "stealth": {
+       "detected_hex": 2,
+       "first_strike_shots": 1,
+       "recloak_turns": 1
+      },
+      "wreck": {
+       "entity": "panzer_iv_wreck_ger",
+       "cover": "heavy",
+       "blocks_vehicles": true
+      }
+     }
+    }
+   },
+   "sbps": {
+    "team_weapons": {
+     "at_gun_75mm_ger": {
+      "coh3_ref": "sbps/races/german/team_weapons/at_gun_75mm_ger",
+      "kind": "team_weapon",
+      "role": "anti_tank",
+      "members": [
+       {
+        "entity": "tw_at_gun_75mm_ger",
+        "count": 1
+       },
+       {
+        "entity": "crew_at_gun_75mm_ger",
+        "count": 5
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 280
+       },
+       "from": "coh3stats"
+      },
+      "pop": 8,
+      "build_turns": 5,
+      "tags": [
+       "teamweapon",
+       "anti_tank",
+       "tier2",
+       "panzergrenadier_kompanie",
+       "teamweapon_anti_tank"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak",
+        "blocking_force_team_weapons_marking_fire_ger"
+       ]
+      },
+      "abilities": [
+       "towing_attach",
+       "prioritize_vehicles",
+       "hold_fire",
+       "camo_first_strike_team_weapon_ger",
+       "toggle_ambush_camouflage_ger",
+       "blocking_force_marking_fire_team_weapon_dummy_ger",
+       "blocking_force_panzergranate_ammo_at_gun_ger"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.58
+      },
+      "veterancy": {
+       "set": "at_gun_75mm_ger"
+      },
+      "team_weapon": {
+       "weapon_entity": "tw_at_gun_75mm_ger",
+       "crew_entity": "crew_at_gun_75mm_ger"
+      },
+      "supply": {
+       "ammo": 16
+      }
+     },
+     "hmg_mg42_ger": {
+      "coh3_ref": "sbps/races/german/team_weapons/hmg_mg42_ger",
+      "kind": "team_weapon",
+      "role": "suppression",
+      "members": [
+       {
+        "entity": "crew_hmg_ger",
+        "count": 4
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 240
+       },
+       "from": "coh3stats"
+      },
+      "pop": 7,
+      "build_turns": 2,
+      "tags": [
+       "teamweapon",
+       "suppression",
+       "tier1",
+       "infanterie_kompanie",
+       "teamweapon_burst",
+       "infantry_anti_infantry"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak",
+        "blocking_force_team_weapons_marking_fire_ger"
+       ]
+      },
+      "abilities": [
+       "white_phosphorus_rounds_hmg_vet_ger",
+       "reload_hmg42_ger",
+       "camouflage_in_cover_hmg_ger",
+       "blocking_force_marking_fire_team_weapon_dummy_ger"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.56
+      },
+      "veterancy": {
+       "set": "hmg_mg42_ger"
+      },
+      "team_weapon": {
+       "weapon": "mg42_hmg_ger",
+       "crew_entity": "crew_hmg_ger"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     },
+     "mortar_81mm_ger": {
+      "coh3_ref": "sbps/races/german/team_weapons/mortar_81mm_ger",
+      "kind": "team_weapon",
+      "role": "indirect",
+      "members": [
+       {
+        "entity": "crew_mortar_ger",
+        "count": 4
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 240
+       },
+       "from": "coh3stats"
+      },
+      "pop": 7,
+      "build_turns": 3,
+      "tags": [
+       "teamweapon",
+       "mortar",
+       "tier1",
+       "infanterie_kompanie",
+       "infantry_anti_infantry"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "elite_forces_medical_supplements_squad_upgrade_ak",
+        "blocking_force_team_weapons_marking_fire_ger"
+       ]
+      },
+      "abilities": [
+       "barrage_81mm_mortar_ger",
+       "smoke_81mm_mortar_ger",
+       "flare_81mm_mortar_vet_ger",
+       "hold_fire",
+       "siegebreakers_siege_specialists_range_in_ger",
+       "blocking_force_marking_fire_team_weapon_dummy_ger"
+      ],
+      "capture": {
+       "rate": 1
+      },
+      "reinforce": {
+       "cost_ratio": 0.63
+      },
+      "veterancy": {
+       "set": "mortar_81mm_ger"
+      },
+      "team_weapon": {
+       "weapon": "81mm_mortar_ger",
+       "crew_entity": "crew_mortar_ger"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     }
+    },
+    "infantry": {
+     "grenadier_ger": {
+      "coh3_ref": "sbps/races/german/infantry/grenadier_ger",
+      "kind": "squad",
+      "role": "anti_infantry",
+      "members": [
+       {
+        "entity": "grenadier_ger",
+        "count": 6
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 250
+       },
+       "from": "coh3stats"
+      },
+      "pop": 7,
+      "build_turns": 3,
+      "tags": [
+       "infantry",
+       "standard_infantry",
+       "tier1",
+       "infanterie_kompanie",
+       "grenadier",
+       "infantry_anti_infantry"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [
+        "assault_package_grenadiers_ger",
+        "flamethrower_grenadier_ger"
+       ]
+      },
+      "abilities": [
+       "panzerfaust_grenadier_ger",
+       "grenade_m24_stick_grenadier_ger",
+       "vault_movement",
+       "merge_gernadier_ger",
+       "grenade_assault_grenadier_ger",
+       "sprint_grenadiers_ger",
+       "mountain_zeal_squad_ger",
+       "medkits_aura_grenadier_vet_ger",
+       "terror_infantry_interrogate_ger",
+       "terror_infantry_no_quarter_grenadier_ger",
+       "grenade_incendiary_grenadier_ger",
+       "blocking_force_infantry_setup_incursion_response_ger"
+      ],
+      "capture": {
+       "rate": 1.25
+      },
+      "reinforce": {
+       "cost_ratio": 0.6
+      },
+      "veterancy": {
+       "set": "grenadier_ger"
+      },
+      "supply": {
+       "ammo": 20
+      },
+      "build": {
+       "menu": [
+        "sandbag_wall_grenadier_ger",
+        "barbed_wire_fence_ger",
+        "fighting_nest_ger"
+       ]
+      }
+     }
+    },
+    "emplacements": {
+     "hmg_mg42_bunker_ger": {
+      "coh3_ref": "sbps/races/german/emplacements/hmg_mg42_bunker_ger",
+      "kind": "structure",
+      "role": "suppression",
+      "members": [
+       {
+        "entity": "hmg_bunker_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 250
+       },
+       "from": "coh3stats"
+      },
+      "pop": 0,
+      "build_turns": 4,
+      "tags": [
+       "teamweapon",
+       "suppression",
+       "building",
+       "invisible_to_scar"
+      ],
+      "source": "built",
+      "abilities": [
+       "squad_building_retreat_held_squads"
+      ],
+      "supply": {
+       "ammo": 30
+      }
+     }
+    },
+    "vehicles": {
+     "panzer_iv_ger": {
+      "coh3_ref": "sbps/races/german/vehicles/panzer_iv_ger",
+      "kind": "vehicle",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "panzer_iv_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 360,
+        "fuel": 100
+       },
+       "from": "coh3stats"
+      },
+      "pop": 13,
+      "build_turns": 6,
+      "tags": [
+       "vehicle",
+       "medium_armor",
+       "tier4",
+       "vehicle_turret",
+       "panzer_kompanie",
+       "vehicle_anti_tank"
+      ],
+      "source": "produced",
+      "upgrades": {
+       "slots": -1,
+       "list": [],
+       "pending": [
+        "mg42_panzer_ger",
+        "camouflage_special_ops_ger",
+        "side_skirts_mechanized_ger",
+        "hulldown_ger",
+        "spotting_scopes_ger"
+       ]
+      },
+      "abilities": [
+       "prioritize_vehicles",
+       "critical_repair_mechanized_ger",
+       "camouflage_special_ops_ger",
+       "mechanized_self_repair_ger",
+       "mechanized_smoke_canisters_ger",
+       "hulldown_activate_ger",
+       "hulldown_deactivate_ger",
+       "blitzkrieg_vehicles_ger",
+       "hold_fire",
+       "terror_vehicle_heavy_gunnery_ger",
+       "siegebreakers_grinding_advance_heavy_ger",
+       "siege_leader_siegebreaker_passive_ger",
+       "s_mine_launcher_grinding_advance_ger",
+       "siege_leader_siegebreaker_passive_triggered_ger",
+       "blocking_force_panzergranate_ammo_piv_ger",
+       "blitzkrieg_vehicles_veteran_ger"
+      ],
+      "veterancy": {
+       "set": "panzer_iv_ger"
+      },
+      "supply": {
+       "ammo": 12
+      }
+     }
+    }
+   },
+   "upgrade": {
+    "infantry": {
+     "assault_package_grenadiers_ger": {
+      "coh3_ref": "upgrade/german/infantry/assault_package_grenadiers_ger",
+      "scope": "unit",
+      "cost": {
+       "munition": 50
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "breakthrough_right_1_assault_grenadiers_ger"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "mp40_grenadier_ger"
+       }
+      ]
+     },
+     "flamethrower_grenadier_ger": {
+      "coh3_ref": "upgrade/german/infantry/flamethrower_grenadier_ger",
+      "scope": "unit",
+      "cost": {
+       "munition": 70
+      },
+      "build_turns": 3,
+      "requires": {
+       "upgrades": [
+        "siegebreakers_firestorm_doctrine_ger",
+        "siegebreakers_ger"
+       ]
+      },
+      "limit": 1,
+      "effects": [
+       {
+        "type": "add_weapon",
+        "weapon": "flamethrower_panzerpioneer_ak"
+       }
+      ]
+     }
+    }
+   },
+   "veterancy": {
+    "at_gun_75mm_ger": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+     "xp": [
+      1100,
+      3300,
+      6600
+     ],
+     "ranks": [
+      {
+       "hp_add": 15
+      },
+      {
+       "weapon_accuracy": 1.25,
+       "attack_speed": 0.85
+      },
+      {
+       "received_damage": 0.8,
+       "attack_speed": 0.75
+      }
+     ]
+    },
+    "grenadier_ger": {
+     "coh3_ref": "custom_property_container/veterancy/german/infantry/grenadier",
+     "xp": [
+      750,
+      2250,
+      4500
+     ],
+     "ranks": [
+      {
+       "received_accuracy": 0.9
+      },
+      {
+       "weapon_accuracy": 1.25,
+       "ability_cooldown": 0.67
+      },
+      {
+       "hp_add": 20,
+       "weapon_accuracy": 1.15
+      }
+     ]
+    },
+    "hmg_mg42_ger": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/hmg",
+     "xp": [
+      700,
+      2100,
+      4200
+     ],
+     "ranks": [
+      {
+       "hp_add": 10
+      },
+      {
+       "hp_add": 15,
+       "weapon_suppression": 1.4
+      },
+      {
+       "received_damage": 0.8,
+       "attack_speed": 0.8
+      }
+     ]
+    },
+    "mortar_81mm_ger": {
+     "coh3_ref": "custom_property_container/veterancy/common/team_weapon/mortar",
+     "xp": [
+      400,
+      1200,
+      2400
+     ],
+     "ranks": [
+      {
+       "attack_speed": -0.1
+      },
+      {
+       "weapon_damage": 1.15,
+       "ability_cooldown": 0.65
+      },
+      {
+       "attack_speed": -0.25,
+       "received_damage": 0.8,
+       "weapon_damage": 1.2
+      }
+     ]
+    },
+    "panzer_iv_ger": {
+     "coh3_ref": "custom_property_container/veterancy/german/vehicles/panzer_iv_ger",
+     "xp": [
+      1800,
+      5400,
+      10800
+     ],
+     "ranks": [
+      {},
+      {
+       "weapon_penetration": 1.25
+      },
+      {
+       "hp_add": 80,
+       "attack_speed": 0.75
+      }
+     ]
+    }
+   },
+   "fx": {
+    "weapon": {
+     "75mm_at_gun_ger": {
+      "name": "weapon.75mm_at_gun_ger.name",
+      "sound": {
+       "fire": "at_gun"
+      }
+     },
+     "kar98k_grenadier_ger": {
+      "name": "weapon.kar98k_grenadier_ger.name",
+      "sound": {
+       "fire": "rifle"
+      }
+     },
+     "mp40_grenadier_ger": {
+      "name": "weapon.mp40_grenadier_ger.name",
+      "sound": {
+       "fire": "smg"
+      }
+     },
+     "flamethrower_panzerpioneer_ak": {
+      "name": "weapon.flamethrower_panzerpioneer_ak.name",
+      "sound": {
+       "fire": "flame"
+      }
+     },
+     "mg42_bunker_ger": {
+      "name": "weapon.mg42_bunker_ger.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "mg42_hmg_ger": {
+      "name": "weapon.mg42_hmg_ger.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "81mm_mortar_ger": {
+      "name": "weapon.81mm_mortar_ger.name",
+      "sound": {
+       "fire": "mortar"
+      }
+     },
+     "75mm_panzer_iv_ger": {
+      "name": "weapon.75mm_panzer_iv_ger.name",
+      "sound": {
+       "fire": "cannon"
+      }
+     },
+     "mg34_coaxial_panzer_iv_ger": {
+      "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
+      "sound": {
+       "fire": "hmg"
+      }
+     },
+     "mg34_hull_panzer_iv_ger": {
+      "name": "weapon.mg34_hull_panzer_iv_ger.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "tank_smoke_ak": {
+      "name": "weapon.tank_smoke_ak.name",
+      "sound": {
+       "fire": "smoke"
+      }
+     },
+     "mp40_crew_ger": {
+      "name": "weapon.mp40_crew_ger.name",
+      "sound": {
+       "fire": "smg"
+      }
+     }
+    },
+    "ebps": {
+     "tw_at_gun_75mm_ger": {
+      "name": "entity.tw_at_gun_75mm_ger.name",
+      "model": {
+       "id": "tw_at_gun_75mm_ger",
+       "anim_class": "crew"
+      }
+     },
+     "crew_at_gun_75mm_ger": {
+      "name": "entity.crew_at_gun_75mm_ger.name",
+      "model": {
+       "id": "crew_at_gun_75mm_ger",
+       "anim_class": "infantry"
+      }
+     },
+     "grenadier_ger": {
+      "name": "entity.grenadier_ger.name",
+      "model": {
+       "id": "grenadier_ger",
+       "anim_class": "infantry"
+      }
+     },
+     "hmg_bunker_ger": {
+      "name": "entity.hmg_bunker_ger.name",
+      "model": {
+       "id": "hmg_bunker_ger",
+       "anim_class": "static"
+      }
+     },
+     "crew_hmg_ger": {
+      "name": "entity.crew_hmg_ger.name",
+      "model": {
+       "id": "crew_hmg_ger",
+       "anim_class": "infantry"
+      }
+     },
+     "crew_mortar_ger": {
+      "name": "entity.crew_mortar_ger.name",
+      "model": {
+       "id": "crew_mortar_ger",
+       "anim_class": "infantry"
+      }
+     },
+     "panzer_iv_ger": {
+      "name": "entity.panzer_iv_ger.name",
+      "model": {
+       "id": "panzer_iv_ger",
+       "anim_class": "tank_medium"
+      }
+     },
+     "sandbag_wall_ger": {
+      "name": "entity.sandbag_wall_ger.name",
+      "model": {
+       "id": "sandbag_wall_ger",
+       "anim_class": "static"
+      }
+     },
+     "barbed_wire_fence_ger": {
+      "name": "entity.barbed_wire_fence_ger.name",
+      "model": {
+       "id": "barbed_wire_fence_ger",
+       "anim_class": "static"
+      }
+     },
+     "tank_trap_ger": {
+      "name": "entity.tank_trap_ger.name",
+      "model": {
+       "id": "tank_trap_ger",
+       "anim_class": "static"
+      }
+     }
+    },
+    "sbps": {
+     "at_gun_75mm_ger": {
+      "name": "unit.at_gun_75mm_ger.name",
+      "short_name": "unit.at_gun_75mm_ger.short",
+      "desc": "unit.at_gun_75mm_ger.desc",
+      "icon": "at_gun_75mm_ger",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "grenadier_ger": {
+      "name": "unit.grenadier_ger.name",
+      "short_name": "unit.grenadier_ger.short",
+      "desc": "unit.grenadier_ger.desc",
+      "icon": "grenadier_ger",
+      "menu": {
+       "tab": "infantry",
+       "order": 0
+      }
+     },
+     "hmg_mg42_bunker_ger": {
+      "name": "unit.hmg_mg42_bunker_ger.name",
+      "short_name": "unit.hmg_mg42_bunker_ger.short",
+      "desc": "unit.hmg_mg42_bunker_ger.desc",
+      "icon": "hmg_mg42_bunker_ger",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "hmg_mg42_ger": {
+      "name": "unit.hmg_mg42_ger.name",
+      "short_name": "unit.hmg_mg42_ger.short",
+      "desc": "unit.hmg_mg42_ger.desc",
+      "icon": "hmg_mg42_ger",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "mortar_81mm_ger": {
+      "name": "unit.mortar_81mm_ger.name",
+      "short_name": "unit.mortar_81mm_ger.short",
+      "desc": "unit.mortar_81mm_ger.desc",
+      "icon": "mortar_81mm_ger",
+      "menu": {
+       "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "panzer_iv_ger": {
+      "name": "unit.panzer_iv_ger.name",
+      "short_name": "unit.panzer_iv_ger.short",
+      "desc": "unit.panzer_iv_ger.desc",
+      "icon": "panzer_iv_ger",
+      "menu": {
+       "tab": "vehicles",
+       "order": 0
+      }
+     }
+    },
+    "upgrade": {
+     "assault_package_grenadiers_ger": {
+      "name": "upgrade.assault_package_grenadiers_ger.name",
+      "icon": "assault_package_grenadiers_ger"
+     },
+     "flamethrower_grenadier_ger": {
+      "name": "upgrade.flamethrower_grenadier_ger.name",
+      "icon": "flamethrower_grenadier_ger"
+     }
+    }
+   }
+  }
+ },
+ "layers": {
+  "mods": []
+ }
+}

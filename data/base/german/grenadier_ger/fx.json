@@ -1,0 +1,53 @@
+{
+ "weapon": {
+  "kar98k_grenadier_ger": {
+   "name": "weapon.kar98k_grenadier_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "mp40_grenadier_ger": {
+   "name": "weapon.mp40_grenadier_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_panzerpioneer_ak": {
+   "name": "weapon.flamethrower_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "grenadier_ger": {
+   "name": "entity.grenadier_ger.name",
+   "model": {
+    "id": "grenadier_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "grenadier_ger": {
+   "name": "unit.grenadier_ger.name",
+   "short_name": "unit.grenadier_ger.short",
+   "desc": "unit.grenadier_ger.desc",
+   "icon": "grenadier_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "assault_package_grenadiers_ger": {
+   "name": "upgrade.assault_package_grenadiers_ger.name",
+   "icon": "assault_package_grenadiers_ger"
+  },
+  "flamethrower_grenadier_ger": {
+   "name": "upgrade.flamethrower_grenadier_ger.name",
+   "icon": "flamethrower_grenadier_ger"
+  }
+ }
+}

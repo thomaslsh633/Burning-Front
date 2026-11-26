@@ -1,0 +1,322 @@
+{
+  "about": "Status flags of a unit: what the HUD marks and what rules read. 'stored' flags are kept in the unit state (docs/unit-state.md §4); 'derived' flags are computed from the six state axes and stored values, never stored twice. 'owner' is the system that sets or computes the flag. 'icon_priority': lower shows first when space is short.",
+  "flags": [
+    {
+      "id": "emplaced",
+      "kind": "derived",
+      "from": "fsm.stance = EMPLACED",
+      "owner": "crew",
+      "effects": "can fire; received damage −10 %, suppression −20 % (SPEC §5)",
+      "icon_priority": 40
+    },
+    {
+      "id": "setting_up",
+      "kind": "derived",
+      "from": "fsm.stance = SETTING_UP",
+      "owner": "crew",
+      "effects": "cannot move or fire until set up",
+      "icon_priority": 30
+    },
+    {
+      "id": "packing_up",
+      "kind": "derived",
+      "from": "fsm.stance = PACKING_UP",
+      "owner": "crew",
+      "effects": "cannot fire",
+      "icon_priority": 30
+    },
+    {
+      "id": "packed",
+      "kind": "derived",
+      "from": "team weapon with fsm.stance = MOBILE",
+      "owner": "crew",
+      "effects": "can move, cannot fire",
+      "icon_priority": 45
+    },
+    {
+      "id": "overwatch",
+      "kind": "derived",
+      "from": "fsm.action = OVERWATCH",
+      "owner": "turn",
+      "effects": "MG team reacts once in the enemy turn",
+      "icon_priority": 20
+    },
+    {
+      "id": "overwatch_fired",
+      "kind": "stored",
+      "from": "set when the overwatch reaction fires",
+      "owner": "turn",
+      "clears": "own turn start",
+      "effects": "no second overwatch shot",
+      "icon_priority": 60
+    },
+    {
+      "id": "counter_used",
+      "kind": "stored",
+      "from": "budget.counter = 0",
+      "owner": "turn",
+      "clears": "own turn start",
+      "effects": "no more counter fire this enemy turn",
+      "icon_priority": 70
+    },
+    {
+      "id": "moved",
+      "kind": "derived",
+      "from": "budget.move < max",
+      "owner": "turn",
+      "effects": "moving accuracy if it fires",
+      "icon_priority": 80
+    },
+    {
+      "id": "acted",
+      "kind": "derived",
+      "from": "budget.action = 0",
+      "owner": "turn",
+      "effects": "no action left",
+      "icon_priority": 80
+    },
+    {
+      "id": "exhausted",
+      "kind": "derived",
+      "from": "fsm.action = EXHAUSTED",
+      "owner": "turn",
+      "effects": "nothing left this turn (greyed out)",
+      "icon_priority": 90
+    },
+    {
+      "id": "reloading",
+      "kind": "stored",
+      "from": "timers.reload > 0 (weapon reload_turns)",
+      "owner": "turn",
+      "clears": "counts down at own turn start",
+      "effects": "cannot fire or counter-fire that weapon",
+      "icon_priority": 15
+    },
+    {
+      "id": "low_ammo",
+      "kind": "derived",
+      "from": "ammo ≤ low_ammo_share × supply.ammo (data/balance)",
+      "owner": "status",
+      "effects": "warning only",
+      "icon_priority": 25
+    },
+    {
+      "id": "out_of_ammo",
+      "kind": "derived",
+      "from": "ammo = 0",
+      "owner": "status",
+      "effects": "cannot fire or counter-fire",
+      "icon_priority": 5
+    },
+    {
+      "id": "in_supply",
+      "kind": "derived",
+      "from": "within range of a supply truck / supply source",
+      "owner": "status",
+      "effects": "ammo refilled at own turn start",
+      "icon_priority": 75
+    },
+    {
+      "id": "repairing",
+      "kind": "stored",
+      "from": "set by a Repair action (repairer)",
+      "owner": "status",
+      "clears": "own turn start",
+      "effects": "repairer cannot attack or use abilities this turn (SPEC §7)",
+      "icon_priority": 35
+    },
+    {
+      "id": "being_repaired",
+      "kind": "stored",
+      "from": "marks.repair (repaired unit)",
+      "owner": "status",
+      "clears": "its side's next turn",
+      "effects": "received hit chance ×2 (cap 100 %), received damage ×2 (SPEC §7)",
+      "icon_priority": 10
+    },
+    {
+      "id": "healing",
+      "kind": "derived",
+      "from": "out of combat near HQ / medic (SPEC §7)",
+      "owner": "status",
+      "effects": "HP restored at turn start",
+      "icon_priority": 75
+    },
+    {
+      "id": "engaged",
+      "kind": "stored",
+      "from": "set by attacking (SPEC §4)",
+      "owner": "status",
+      "clears": "own turn end without an attack, or retreat",
+      "effects": "no reinforce, no healing",
+      "icon_priority": 50
+    },
+    {
+      "id": "suppressed",
+      "kind": "derived",
+      "from": "fsm.morale = SUPPRESSED",
+      "owner": "status",
+      "effects": "move −50 %, accuracy ×0.5",
+      "icon_priority": 12
+    },
+    {
+      "id": "pinned",
+      "kind": "derived",
+      "from": "fsm.morale = PINNED",
+      "owner": "status",
+      "effects": "no move except retreat, accuracy ×0.25, cannot capture",
+      "icon_priority": 8
+    },
+    {
+      "id": "retreating",
+      "kind": "derived",
+      "from": "fsm.morale = RETREATING",
+      "owner": "status",
+      "effects": "auto-moves to rally point, no attack, received accuracy ×0.5",
+      "icon_priority": 6
+    },
+    {
+      "id": "concealed",
+      "kind": "derived",
+      "from": "fsm.visibility = CONCEALED",
+      "owner": "vision",
+      "effects": "seen only within detection range",
+      "icon_priority": 55
+    },
+    {
+      "id": "revealed_by_fire",
+      "kind": "stored",
+      "from": "timers.revealedUntil",
+      "owner": "vision",
+      "clears": "its next turn",
+      "effects": "visible to the enemy",
+      "icon_priority": 85
+    },
+    {
+      "id": "sound_ranged",
+      "kind": "stored",
+      "from": "set on the hex an indirect weapon fired from (counter-battery)",
+      "owner": "vision",
+      "clears": "end of the opponent's next turn (data/balance/indirect.json counter_battery.mark_turns)",
+      "effects": "opponent may fire at this hex without the blind-fire penalty, even out of sight",
+      "icon_priority": 58
+    },
+    {
+      "id": "in_smoke",
+      "kind": "derived",
+      "from": "hex has smoke (timers in map state)",
+      "owner": "vision",
+      "effects": "blocks sight through the hex",
+      "icon_priority": 65
+    },
+    {
+      "id": "garrisoned",
+      "kind": "derived",
+      "from": "fsm.location = GARRISONED",
+      "owner": "transport",
+      "effects": "garrison cover",
+      "icon_priority": 50
+    },
+    {
+      "id": "loaded",
+      "kind": "derived",
+      "from": "fsm.location = LOADED",
+      "owner": "transport",
+      "effects": "only Dismount",
+      "icon_priority": 50
+    },
+    {
+      "id": "decrewed",
+      "kind": "derived",
+      "from": "fsm.life = DECREWED",
+      "owner": "lifecycle",
+      "effects": "no owner; can be recrewed",
+      "icon_priority": 3
+    },
+    {
+      "id": "abandoned",
+      "kind": "derived",
+      "from": "fsm.life = ABANDONED",
+      "owner": "lifecycle",
+      "effects": "no owner; can be recrewed",
+      "icon_priority": 3
+    },
+    {
+      "id": "wrecked",
+      "kind": "derived",
+      "from": "fsm.life = WRECKED",
+      "owner": "lifecycle",
+      "effects": "terrain: cover and obstacle; engineers clear it",
+      "icon_priority": 2
+    },
+    {
+      "id": "engine_damaged",
+      "kind": "stored",
+      "from": "criticals",
+      "owner": "lifecycle",
+      "clears": "repair",
+      "effects": "move −50 %",
+      "icon_priority": 14
+    },
+    {
+      "id": "immobilised",
+      "kind": "stored",
+      "from": "criticals",
+      "owner": "lifecycle",
+      "clears": "repair",
+      "effects": "cannot move; turret can turn",
+      "icon_priority": 9
+    },
+    {
+      "id": "main_gun_damaged",
+      "kind": "stored",
+      "from": "criticals",
+      "owner": "lifecycle",
+      "clears": "repair",
+      "effects": "main weapon cannot fire",
+      "icon_priority": 11
+    },
+    {
+      "id": "crew_shocked",
+      "kind": "stored",
+      "from": "criticals",
+      "owner": "lifecycle",
+      "clears": "after its next own turn",
+      "effects": "no action next turn",
+      "icon_priority": 7
+    },
+    {
+      "id": "under_construction",
+      "kind": "stored",
+      "from": "structure build progress < 100 %",
+      "owner": "build",
+      "effects": "produces nothing, 50 % HP at start (SPEC §3)",
+      "icon_priority": 40
+    },
+    {
+      "id": "reinforcing",
+      "kind": "stored",
+      "from": "set by a Reinforce action",
+      "owner": "economy",
+      "clears": "own turn start",
+      "effects": "squad refilled; not while engaged (SPEC §3)",
+      "icon_priority": 70
+    },
+    {
+      "id": "veteran",
+      "kind": "derived",
+      "from": "rank 1–3",
+      "owner": "status",
+      "effects": "rank modifiers (veterancy.json)",
+      "icon_priority": 95
+    },
+    {
+      "id": "hero",
+      "kind": "derived",
+      "from": "sbps unique = true",
+      "owner": "economy",
+      "effects": "one per side; named unit",
+      "icon_priority": 96
+    }
+  ]
+}

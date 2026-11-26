@@ -1,0 +1,41 @@
+{
+ "infantry": {
+  "bar_rifleman_squad_us": {
+   "coh3_ref": "upgrade/american/infantry/bar_rifleman_squad_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "bar_riflemen_global_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bar_riflemen_us",
+     "members": 2
+    }
+   ]
+  }
+ },
+ "research": {
+  "bar_riflemen_global_us": {
+   "coh3_ref": "upgrade/american/research/barracks/bar_riflemen_global_us",
+   "scope": "player",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 4,
+   "effects": [
+    {
+     "type": "unlock",
+     "upgrade": "bar_rifleman_squad_us"
+    }
+   ]
+  }
+ }
+}

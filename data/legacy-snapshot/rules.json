@@ -1,0 +1,803 @@
+{
+ "TERRAIN_DEFS": {
+  "plains": {
+   "fill": "#4d6342",
+   "inf": 1,
+   "veh": 2,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "평지",
+   "code": ""
+  },
+  "road": {
+   "fill": "#a08544",
+   "inf": 1,
+   "veh": 1,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "포장도로",
+   "code": "═"
+  },
+  "cobblestone": {
+   "fill": "#5b5f66",
+   "inf": 1,
+   "veh": 1,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "도시 벽돌길",
+   "code": "☷"
+  },
+  "snow": {
+   "fill": "#dbe7ef",
+   "inf": 2,
+   "veh": 2,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "설원",
+   "code": "❄"
+  },
+  "ice": {
+   "fill": "#9ec4d5",
+   "inf": 2,
+   "veh": 1,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "얼음 빙판",
+   "code": "◇"
+  },
+  "desert": {
+   "fill": "#c99f5e",
+   "inf": 2,
+   "veh": 2,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "모래 사막",
+   "code": "〜"
+  },
+  "dune": {
+   "fill": "#b88942",
+   "inf": 2,
+   "veh": 3,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "사막 모래언덕",
+   "code": "▲"
+  },
+  "field": {
+   "fill": "#6e7a46",
+   "inf": 1,
+   "veh": 2,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "경작지",
+   "code": "⁞"
+  },
+  "bush": {
+   "fill": "#3d6132",
+   "inf": 1,
+   "veh": 2,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "수풀림",
+   "code": "░"
+  },
+  "forest": {
+   "fill": "#1b3b19",
+   "inf": 2,
+   "veh": 3,
+   "cover": "yellow",
+   "sightBlock": true,
+   "name": "울창한 숲",
+   "code": "🌲"
+  },
+  "hedge": {
+   "fill": "#274b24",
+   "noBuild": true,
+   "inf": 2,
+   "veh": 2,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "산울타리(보카쥬)",
+   "code": "▓"
+  },
+  "fence": {
+   "fill": "#735738",
+   "noBuild": true,
+   "inf": 2,
+   "veh": 1,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "목재 울타리",
+   "code": "☲"
+  },
+  "rubble": {
+   "fill": "#45433e",
+   "inf": 1,
+   "veh": 3,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "건물 잔해",
+   "code": "∴"
+  },
+  "crater": {
+   "fill": "#372a1e",
+   "inf": 1,
+   "veh": 2,
+   "cover": "yellow",
+   "sightBlock": false,
+   "name": "포탄 구덩이",
+   "code": "◌"
+  },
+  "trench": {
+   "fill": "#3a2d21",
+   "noBuild": true,
+   "inf": 1,
+   "veh": 3,
+   "cover": "hard",
+   "sightBlock": false,
+   "name": "방호 참호",
+   "code": "☲"
+  },
+  "rock": {
+   "fill": "#374151",
+   "noBuild": true,
+   "inf": 3,
+   "veh": null,
+   "cover": "hard",
+   "sightBlock": true,
+   "name": "바위 암벽",
+   "code": "▲▲"
+  },
+  "building": {
+   "fill": "#252930",
+   "noBuild": true,
+   "inf": 1,
+   "veh": null,
+   "cover": "hard",
+   "sightBlock": true,
+   "name": "석조 가옥",
+   "code": "⛊"
+  },
+  "shallow_water": {
+   "fill": "#3a7fa8",
+   "noBuild": true,
+   "inf": 2,
+   "veh": 3,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "얕은 물/여울목",
+   "code": "≈"
+  },
+  "deep_water": {
+   "fill": "#143d66",
+   "noBuild": true,
+   "inf": null,
+   "veh": null,
+   "cover": "none",
+   "sightBlock": false,
+   "name": "깊은 물(도하 불가)",
+   "code": "≋"
+  }
+ },
+ "GROUND_DEFS": {
+  "plains": {
+   "inf": 1,
+   "veh": 2
+  },
+  "road": {
+   "inf": 1,
+   "veh": 1
+  },
+  "cobblestone": {
+   "inf": 1,
+   "veh": 1
+  },
+  "field": {
+   "inf": 1,
+   "veh": 2
+  },
+  "snow": {
+   "inf": 2,
+   "veh": 2
+  },
+  "ice": {
+   "inf": 2,
+   "veh": 1
+  },
+  "desert": {
+   "inf": 2,
+   "veh": 2
+  },
+  "shallow_water": {
+   "inf": 2,
+   "veh": 3,
+   "water": true
+  },
+  "deep_water": {
+   "inf": null,
+   "veh": null,
+   "water": true
+  }
+ },
+ "OBJ_DEFS": {
+  "crater": {
+   "h": 0,
+   "cover": "light",
+   "sight": "none",
+   "inf": 1,
+   "veh": 2,
+   "tt": "crater",
+   "top": true
+  },
+  "trench": {
+   "h": 0,
+   "cover": "heavy",
+   "sight": "none",
+   "inf": 1,
+   "veh": 3,
+   "tt": "trench",
+   "top": true
+  },
+  "bush": {
+   "h": 1,
+   "cover": "light",
+   "sight": "none",
+   "inf": 1,
+   "veh": 2,
+   "tt": "bush",
+   "top": true
+  },
+  "dune": {
+   "h": 1,
+   "cover": "light",
+   "sight": "none",
+   "inf": 2,
+   "veh": 3,
+   "tt": "dune",
+   "top": true,
+   "ground": "desert"
+  },
+  "rubble": {
+   "h": 2,
+   "cover": "light",
+   "sight": "partial",
+   "inf": 1,
+   "veh": 3,
+   "tt": "rubble",
+   "top": true
+  },
+  "tree_stand": {
+   "h": 3,
+   "tt": "forest",
+   "top": true,
+   "dens": {
+    "1": {
+     "cover": "light",
+     "sight": "partial",
+     "inf": 2,
+     "veh": 2
+    },
+    "2": {
+     "cover": "light",
+     "sight": "block",
+     "inf": 2,
+     "veh": 3
+    },
+    "3": {
+     "cover": "heavy",
+     "sight": "block",
+     "inf": 2,
+     "veh": null
+    }
+   }
+  },
+  "rock": {
+   "h": 3,
+   "cover": "heavy",
+   "sight": "block",
+   "inf": 3,
+   "veh": null,
+   "tt": "rock",
+   "top": true
+  },
+  "building": {
+   "h": 3,
+   "cover": "heavy",
+   "sight": "block",
+   "inf": 1,
+   "veh": null,
+   "tt": "building",
+   "top": true
+  },
+  "hedge": {
+   "h": 2,
+   "cover": "light",
+   "sight": "partial",
+   "inf": 2,
+   "veh": 2,
+   "tt": "hedge",
+   "top": true,
+   "edge": "hedge"
+  },
+  "fence": {
+   "h": 1,
+   "cover": "light",
+   "sight": "none",
+   "inf": 2,
+   "veh": 1,
+   "tt": "fence",
+   "top": true,
+   "edge": "fence"
+  },
+  "sandbag": {
+   "h": 1,
+   "cover": "heavy",
+   "sight": "none",
+   "name": "샌드백 진지",
+   "code": "☲",
+   "edge": "sandbag_row"
+  }
+ },
+ "EDGE_DEFS": {
+  "hedge": {
+   "h": 2,
+   "cover": "light",
+   "sight": "partial",
+   "cross": {
+    "inf": 1,
+    "veh": 1
+   },
+   "burns": true
+  },
+  "fence": {
+   "h": 1,
+   "cover": "none",
+   "sight": "none",
+   "cross": {
+    "inf": 0,
+    "veh": 0
+   },
+   "breaks": true
+  },
+  "stone_wall": {
+   "h": 2,
+   "cover": "heavy",
+   "sight": "block",
+   "cross": {
+    "inf": 1,
+    "veh": null
+   },
+   "breaks": true
+  },
+  "sandbag_row": {
+   "h": 1,
+   "cover": "heavy",
+   "sight": "none",
+   "cross": {
+    "inf": 1,
+    "veh": 1
+   }
+  },
+  "wire": {
+   "h": 1,
+   "cover": "none",
+   "sight": "none",
+   "cross": {
+    "inf": 2,
+    "veh": 0
+   },
+   "breaks": true
+  },
+  "low_wall": {
+   "h": 1,
+   "cover": "light",
+   "sight": "none",
+   "cross": {
+    "inf": 1,
+    "veh": 1
+   },
+   "breaks": true
+  },
+  "balustrade": {
+   "h": 1,
+   "cover": "light",
+   "sight": "none",
+   "cross": {
+    "inf": 1,
+    "veh": null
+   }
+  }
+ },
+ "COV_RANK": {
+  "none": 0,
+  "light": 1,
+  "heavy": 2
+ },
+ "COV_LEGACY": {
+  "none": "none",
+  "light": "yellow",
+  "heavy": "hard"
+ },
+ "COV_NEW": {
+  "none": "none",
+  "yellow": "light",
+  "hard": "heavy"
+ },
+ "TECH": {
+  "cheap": [
+   "야전 축성술",
+   "[스킬] 공병 건설 비용 -15%",
+   300,
+   1,
+   "hq"
+  ],
+  "heavy": [
+   "중전차 설계",
+   "중전차 징집 해금 🔒",
+   700,
+   3,
+   "tank_depot"
+  ]
+ },
+ "BLD": {
+  "hq": {
+   "n": "사령부",
+   "s": "HQ",
+   "tier": 0
+  },
+  "outpost": {
+   "n": "전초 기지",
+   "s": "OUT",
+   "tier": 0
+  },
+  "barracks": {
+   "n": "병영",
+   "s": "T1",
+   "tier": 1,
+   "g": 80,
+   "f": 15,
+   "hp": 320,
+   "armor": 0,
+   "req": [
+    "hq"
+   ],
+   "make": "infantry"
+  },
+  "support_center": {
+   "n": "중화기 지원소",
+   "s": "T1b",
+   "tier": 1,
+   "g": 80,
+   "f": 15,
+   "hp": 350,
+   "armor": 0,
+   "req": [
+    "hq"
+   ],
+   "make": "heavy",
+   "only": "blue"
+  },
+  "motor_pool": {
+   "n": "차량 정비소",
+   "s": "T2",
+   "tier": 2,
+   "g": 150,
+   "f": 50,
+   "hp": 400,
+   "armor": 0,
+   "req": [
+    "barracks",
+    "support_center"
+   ],
+   "make": "support"
+  },
+  "air_coy": {
+   "n": "공군 중대",
+   "s": "T2b",
+   "tier": 2,
+   "g": 150,
+   "f": 50,
+   "hp": 380,
+   "armor": 0,
+   "req": [
+    "barracks"
+   ],
+   "make": "heavy",
+   "only": "red"
+  },
+  "tank_depot": {
+   "n": "전차 공창",
+   "s": "T3",
+   "tier": 3,
+   "g": 300,
+   "f": 135,
+   "hp": 480,
+   "armor": 0,
+   "req": [
+    "motor_pool"
+   ],
+   "make": "tank"
+  },
+  "doc_inf": {
+   "n": "보병 지원소",
+   "s": "DI",
+   "tier": 0,
+   "g": 150,
+   "f": 40,
+   "hp": 350,
+   "armor": 0,
+   "req": [
+    "hq"
+   ],
+   "make": "infantry",
+   "doc": "inf"
+  },
+  "doc_mech": {
+   "n": "기갑 지원소",
+   "s": "DM",
+   "tier": 0,
+   "g": 150,
+   "f": 40,
+   "hp": 350,
+   "armor": 0,
+   "req": [
+    "hq"
+   ],
+   "make": "tank",
+   "doc": "mech"
+  },
+  "doc_air": {
+   "n": "공수 지원소",
+   "s": "DA",
+   "tier": 0,
+   "g": 150,
+   "f": 40,
+   "hp": 350,
+   "armor": 0,
+   "req": [
+    "hq"
+   ],
+   "make": "infantry",
+   "doc": "air"
+  }
+ },
+ "BLD_T": {
+  "red": {
+   "barracks": {
+    "n": "보병 중대"
+   },
+   "motor_pool": {
+    "n": "판처그레나디어 중대",
+    "s": "T2a",
+    "g": 150,
+    "f": 40,
+    "hp": 370,
+    "req": [
+     "barracks"
+    ]
+   },
+   "tank_depot": {
+    "n": "기갑 중대",
+    "g": 300,
+    "req": [
+     "motor_pool",
+     "air_coy"
+    ]
+   },
+   "doc_inf": {
+    "n": "돌격 지원소"
+   },
+   "doc_air": {
+    "n": "공군 지원소"
+   }
+  }
+ },
+ "BLD_LIST": {
+  "blue": [
+   "barracks",
+   "support_center",
+   "motor_pool",
+   "tank_depot"
+  ],
+  "red": [
+   "barracks",
+   "motor_pool",
+   "air_coy",
+   "tank_depot"
+  ]
+ },
+ "FORT": {
+  "trench": {
+   "n": "참호",
+   "g": 60
+  },
+  "sandbag": {
+   "n": "샌드백",
+   "g": 60
+  },
+  "mine": {
+   "n": "지뢰",
+   "g": 90
+  },
+  "mg_bunker": {
+   "n": "MG 벙커",
+   "g": 150
+  },
+  "medic_bunker": {
+   "n": "메딕 벙커",
+   "g": 150
+  },
+  "at_bunker": {
+   "n": "대전차 벙커",
+   "g": 320,
+   "f": 30,
+   "s": "▷",
+   "team": "red",
+   "empl": true,
+   "big": false
+  },
+  "flak36_empl": {
+   "n": "88mm 고사포 진지",
+   "g": 320,
+   "f": 65,
+   "s": "⌃▷",
+   "team": "red",
+   "empl": true,
+   "big": true
+  },
+  "flak38_empl": {
+   "n": "20mm 대공포 진지",
+   "g": 260,
+   "f": 15,
+   "s": "⌃",
+   "team": "red",
+   "empl": true,
+   "big": false
+  },
+  "obice_empl": {
+   "n": "210mm 포병 진지",
+   "g": 360,
+   "f": 60,
+   "s": "⌒",
+   "team": "red",
+   "empl": true,
+   "big": true
+  },
+  "mortar_pit": {
+   "n": "박격포 진지",
+   "g": 220,
+   "f": 0,
+   "s": "⌒",
+   "team": "blue",
+   "empl": true,
+   "big": false
+  },
+  "howitzer_pit": {
+   "n": "105mm 포병 진지",
+   "g": 320,
+   "f": 60,
+   "s": "⌒⌒",
+   "team": "blue",
+   "empl": true,
+   "big": true
+  }
+ },
+ "UPG": {
+  "atk": [
+   "공격력",
+   10
+  ],
+  "hp": [
+   "체력",
+   10
+  ],
+  "acc": [
+   "명중",
+   12
+  ],
+  "armor": [
+   "장갑",
+   8
+  ],
+  "sight": [
+   "시야",
+   10
+  ],
+  "reflect": [
+   "반사피해",
+   12
+  ],
+  "rof": [
+   "연사",
+   10
+  ],
+  "move": [
+   "이동",
+   10
+  ]
+ },
+ "UPG_BY_CAT": {
+  "infantry": [
+   "atk",
+   "hp",
+   "acc",
+   "armor",
+   "sight",
+   "move"
+  ],
+  "heavy": [
+   "atk",
+   "hp",
+   "acc",
+   "armor",
+   "sight",
+   "rof"
+  ],
+  "support": [
+   "atk",
+   "hp",
+   "acc",
+   "armor",
+   "sight",
+   "rof",
+   "move"
+  ],
+  "tank": [
+   "atk",
+   "hp",
+   "acc",
+   "armor",
+   "sight",
+   "reflect",
+   "rof",
+   "move"
+  ]
+ },
+ "BASE_INCOME": 60,
+ "HUB_G": 100,
+ "HUB_F": 15,
+ "BASE_FUEL": 5,
+ "BASE_MUN": 10,
+ "YIELD": {
+  "vp": {},
+  "manpower": {
+   "g": 70
+  },
+  "fuel": {
+   "f": 12
+  },
+  "fuel_minor": {
+   "f": 6
+  },
+  "mun": {
+   "m": 14
+  }
+ },
+ "ZONE_R": {
+  "vp": 2,
+  "manpower": 1,
+  "fuel": 1,
+  "fuel_minor": 1,
+  "mun": 1
+ },
+ "ZONE_R_SMALL": {
+  "vp": 2,
+  "manpower": 1,
+  "fuel": 1,
+  "fuel_minor": 1,
+  "mun": 1
+ },
+ "SUPP_MAX": 100,
+ "SUPP_RECOVER": 35,
+ "K_PEN_UNIT": 1,
+ "K_PEN_BLD": 1,
+ "PEN_CUTOFF": 0.08,
+ "COVER_SOFT_YELLOW": 0.5,
+ "COVER_SOFT_HARD": 0.25,
+ "COVER_FLAME_HARD": 1.25,
+ "BAND_N": [
+  "근접",
+  "중거리",
+  "원거리"
+ ]
+}

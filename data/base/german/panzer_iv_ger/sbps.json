@@ -1,0 +1,68 @@
+{
+ "vehicles": {
+  "panzer_iv_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/panzer_iv_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "panzer_iv_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360,
+     "fuel": 100
+    },
+    "from": "coh3stats"
+   },
+   "pop": 13,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret",
+    "panzer_kompanie",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg42_panzer_ger",
+     "camouflage_special_ops_ger",
+     "side_skirts_mechanized_ger",
+     "hulldown_ger",
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "critical_repair_mechanized_ger",
+    "camouflage_special_ops_ger",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "hulldown_activate_ger",
+    "hulldown_deactivate_ger",
+    "blitzkrieg_vehicles_ger",
+    "hold_fire",
+    "terror_vehicle_heavy_gunnery_ger",
+    "siegebreakers_grinding_advance_heavy_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger",
+    "blocking_force_panzergranate_ammo_piv_ger",
+    "blitzkrieg_vehicles_veteran_ger"
+   ],
+   "veterancy": {
+    "set": "panzer_iv_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

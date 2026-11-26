@@ -1,0 +1,36 @@
+{
+ "emplacements": {
+  "hmg_fighting_position_us": {
+   "coh3_ref": "sbps/races/american/emplacements/hmg_fighting_position_us",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "hmg_fighting_position_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 100
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 2,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "building",
+    "invisible_to_scar"
+   ],
+   "source": "built",
+   "abilities": [
+    "squad_building_retreat_held_squads"
+   ],
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

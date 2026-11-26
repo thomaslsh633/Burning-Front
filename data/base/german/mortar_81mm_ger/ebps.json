@@ -1,0 +1,45 @@
+{
+ "infantry": {
+  "crew_mortar_ger": {
+   "coh3_ref": "ebps/races/german/infantry/crew_mortar_ger",
+   "tags": [
+    "infantry",
+    "german_infantry"
+   ],
+   "hp": 80,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 45
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "mp40_crew_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "weapon": {
+  "carbine_crew_us": {
+   "name": "weapon.carbine_crew_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "sandbag_wall_us": {
+   "name": "entity.sandbag_wall_us.name",
+   "model": {
+    "id": "sandbag_wall_us",
+    "anim_class": "static"
+   }
+  },
+  "barbed_wire_fence_us": {
+   "name": "entity.barbed_wire_fence_us.name",
+   "model": {
+    "id": "barbed_wire_fence_us",
+    "anim_class": "static"
+   }
+  },
+  "tank_trap_us": {
+   "name": "entity.tank_trap_us.name",
+   "model": {
+    "id": "tank_trap_us",
+    "anim_class": "static"
+   }
+  }
+ }
+}

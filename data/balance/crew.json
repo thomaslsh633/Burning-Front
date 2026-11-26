@@ -1,0 +1,5 @@
+{
+  "about": "Team weapon stance (SPEC §5, docs/unit-state.md §5.2). Setup and teardown turns come from the weapon's emplace data, else data/balance/scale.json emplace.",
+  "auto_emplace_at_turn_end": true,
+  "emplace_spends_remaining_move": true
+}

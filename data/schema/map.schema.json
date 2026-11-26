@@ -1,0 +1,113 @@
+{
+  "about": "data/maps/<id>/map.json: a map definition (docs/map-design.md §3). Compiled by npm run build:data into data/generated/maps/<id>.json.",
+  "$defs": {
+    "HexKey": { "type": "string", "pattern": "^[0-9]+,[0-9]+$" },
+    "Rows": { "type": "array", "items": { "type": "string" } },
+    "Team": { "enum": ["blue", "red"] },
+    "Point": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 }
+  },
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "types.schema.json#/$defs/Id" },
+        "cols": { "type": "integer", "minimum": 4, "maximum": 96 },
+        "rows": { "type": "integer", "minimum": 4, "maximum": 96 },
+        "theatre": { "type": "string", "vocab": "theatre" },
+        "name": { "$ref": "types.schema.json#/$defs/I18nKey" },
+        "briefing": { "$ref": "types.schema.json#/$defs/I18nKey" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": false,
+      "required": ["id", "cols", "rows"]
+    },
+    "legend": {
+      "type": "object",
+      "properties": {
+        "ground": { "type": "object", "additionalProperties": { "type": "string" } },
+        "objects": { "type": "object", "additionalProperties": { "type": ["string", "null"] } }
+      },
+      "additionalProperties": false
+    },
+    "ground": { "$ref": "#/$defs/Rows" },
+    "objects": { "$ref": "#/$defs/Rows" },
+    "elevation": { "$ref": "#/$defs/Rows" },
+    "bounds": { "$ref": "#/$defs/Rows" },
+    "hexes": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[0-9]+,[0-9]+$" },
+      "additionalProperties": {
+        "type": "object",
+        "properties": { "ground": { "type": "string" }, "object": { "type": "string" }, "elev": { "type": "integer", "minimum": 0, "maximum": 9 }, "oob": { "type": "boolean" } },
+        "additionalProperties": false
+      }
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "kind": { "type": "string" }, "points": { "type": "array", "items": { "$ref": "#/$defs/Point" }, "minItems": 2 }, "team": { "$ref": "#/$defs/Team" } },
+        "additionalProperties": false,
+        "required": ["id", "kind", "points"]
+      }
+    },
+    "edges": { "type": "object", "propertyNames": { "pattern": "^[0-9]+,[0-9]+,[0-2]$" }, "additionalProperties": { "type": "string" } },
+    "structures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "kind": { "type": "string" }, "hexes": { "type": "array", "items": { "$ref": "#/$defs/HexKey" }, "minItems": 1 }, "team": { "$ref": "#/$defs/Team" }, "name": { "$ref": "types.schema.json#/$defs/I18nKey" } },
+        "additionalProperties": false,
+        "required": ["id", "kind", "hexes"]
+      }
+    },
+    "production": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "type": { "type": "string" }, "team": { "$ref": "#/$defs/Team" }, "hexes": { "type": "array", "items": { "$ref": "#/$defs/HexKey" } } },
+        "additionalProperties": false,
+        "required": ["id", "type", "team", "hexes"]
+      }
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "kind": { "enum": ["vp", "manpower", "munition", "fuel"] }, "hex": { "$ref": "#/$defs/HexKey" },
+          "radius": { "type": "integer", "minimum": 0 }, "sector": { "type": "string" }, "name": { "$ref": "types.schema.json#/$defs/I18nKey" } },
+        "additionalProperties": false,
+        "required": ["id", "kind", "hex"]
+      }
+    },
+    "sectors": { "type": "array", "items": { "type": "object", "properties": { "id": { "type": "string" }, "hexes": { "type": "array", "items": { "$ref": "#/$defs/HexKey" } } }, "additionalProperties": false, "required": ["id", "hexes"] } },
+    "deploy": {
+      "type": "object",
+      "propertyNames": { "enum": ["blue", "red"] },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "zone": { "anyOf": [{ "type": "array", "items": { "$ref": "#/$defs/HexKey" } }, { "type": "object", "properties": { "rows": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 } }, "additionalProperties": false, "required": ["rows"] }] },
+          "rally": { "$ref": "#/$defs/HexKey" }
+        },
+        "additionalProperties": false,
+        "required": ["zone", "rally"]
+      }
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": { "team": { "$ref": "#/$defs/Team" }, "sbps": { "$ref": "types.schema.json#/$defs/Id" }, "hex": { "$ref": "#/$defs/HexKey" },
+          "facing": { "type": "integer", "minimum": 0, "maximum": 5 }, "stance": { "type": "string", "vocab": "state_stance" } },
+        "additionalProperties": false,
+        "required": ["team", "sbps", "hex"]
+      }
+    },
+    "mines": { "type": "array", "items": { "type": "object", "properties": { "team": { "$ref": "#/$defs/Team" }, "hex": { "$ref": "#/$defs/HexKey" } }, "additionalProperties": false, "required": ["team", "hex"] } }
+  },
+  "additionalProperties": false,
+  "required": ["meta"]
+}

@@ -1,0 +1,85 @@
+{
+  "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC \u00a710). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time \u00f7 CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres \u00f7 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins. Minimum range = round(CoH3 min \u00f7 CoH3 max \u00d7 our range), at least min_range_floor_hex. max_shells caps a normal-fire volley (rockets). Blind fire (target hex not seen): accuracy \u00f7 CoH3 scatter fow_angle \u00d7 fow_distance multipliers and spread + blind.extra_spread_hex. Counter-battery: a hex an indirect weapon fired from is sound-ranged for the opponent for counter_battery.mark_turns turns; firing at it is not blind.",
+  "classes": {
+    "mortar": {
+      "patterns": [
+        "mortar",
+        "grw",
+        "4_2"
+      ],
+      "usage_turns": 1,
+      "range_cap_hex": 12,
+      "spread_hex": 0,
+      "min_range_floor_hex": 2
+    },
+    "spg": {
+      "patterns": [
+        "priest",
+        "hummel",
+        "wespe",
+        "bishop",
+        "sexton"
+      ],
+      "usage_turns": 1,
+      "range_cap_hex": 16,
+      "spread_hex": 1,
+      "min_range_floor_hex": 3
+    },
+    "rocket": {
+      "patterns": [
+        "nebelwerfer",
+        "whizbang",
+        "land_mattress",
+        "stuka",
+        "calliope",
+        "rocket"
+      ],
+      "usage_turns": 2,
+      "range_cap_hex": 16,
+      "spread_hex": 2,
+      "min_range_floor_hex": 3,
+      "max_shells": 3
+    },
+    "heavy": {
+      "patterns": [
+        "105mm_howitzer",
+        "howitzer_105",
+        "cannone_da_105",
+        "105mm_cannone",
+        "bl_5_5",
+        "5_5",
+        "155mm",
+        "150mm",
+        "obice",
+        "210",
+        "howitzer_25pdr",
+        "25pdr"
+      ],
+      "usage_turns": 2,
+      "range_cap_hex": 18,
+      "spread_hex": 1,
+      "min_range_floor_hex": 3
+    },
+    "light": {
+      "patterns": [
+        "pack_howitzer",
+        "leig",
+        "75mm_howitzer",
+        "scott",
+        "stummel",
+        "halftrack_75mm"
+      ],
+      "usage_turns": 1,
+      "range_cap_hex": 14,
+      "spread_hex": 0,
+      "min_range_floor_hex": 2
+    }
+  },
+  "blind": {
+    "extra_spread_hex": 1,
+    "default_fow_multiplier": 1.25
+  },
+  "counter_battery": {
+    "mark_turns": 1
+  }
+}

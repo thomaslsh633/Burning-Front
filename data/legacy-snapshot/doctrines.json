@@ -1,0 +1,357 @@
+{
+ "DOC": {
+  "inf": {
+   "n": {
+    "blue": "보병 중대",
+    "red": "돌격 전투단"
+   },
+   "d": "충원비 −25% · 보병 HP +10% · 수류탄/연막 사거리 +1"
+  },
+  "mech": {
+   "n": {
+    "blue": "기갑 중대",
+    "red": "기갑 전투단"
+   },
+   "d": "HP 수리 ×1.5 · 전차/경차량 이동 +1 · 셔먼·4호 주포 관통 +5"
+  },
+  "air": {
+   "n": {
+    "blue": "공수 중대",
+    "red": "공군 지원 전투단"
+   },
+   "d": "MUN +15/턴 · 정찰기/폭격 비용 −30% · 명중 감쇄 −0.03/칸"
+  }
+ },
+ "PKG": {
+  "bar": {
+   "n": "BAR 자동소총",
+   "mun": 50,
+   "keys": {
+    "blue": [
+     "infantry"
+    ],
+    "red": []
+   },
+   "sk": {
+    "id": "volley",
+    "n": "일제 사격",
+    "mun": 15,
+    "cd": 3,
+    "dur": 2
+   }
+  },
+  "lmg": {
+   "n": "MG42 경기관총",
+   "mun": 50,
+   "keys": {
+    "blue": [],
+    "red": [
+     "infantry",
+     "fp_pioneer"
+    ]
+   },
+   "sk": {
+    "id": "hold",
+    "n": "저지 사격",
+    "mun": 20,
+    "cd": 2,
+    "dur": 1
+   }
+  },
+  "flame_kit": {
+   "n": "화염방사 키트",
+   "mun": 40,
+   "keys": {
+    "blue": [
+     "engineer",
+     "assault_eng"
+    ],
+    "red": [
+     "engineer"
+    ]
+   }
+  },
+  "schreck": {
+   "n": "대전차 로켓",
+   "mun": 60,
+   "keys": {
+    "blue": [
+     "ranger"
+    ],
+    "red": [
+     "jager",
+     "fj"
+    ]
+   },
+   "sk": {
+    "id": "pierce",
+    "n": "장갑 관통 일격",
+    "mun": 25,
+    "cd": 3,
+    "dur": 1
+   }
+  },
+  "thompson": {
+   "n": "톰슨 기관단총",
+   "mun": 40,
+   "keys": {
+    "blue": [
+     "captain",
+     "paratrooper",
+     "ranger",
+     "scout",
+     "pathfinder",
+     "commando",
+     "at_inf"
+    ],
+    "red": []
+   }
+  },
+  "bazooka": {
+   "n": "M1 바주카 증설",
+   "mun": 55,
+   "keys": {
+    "blue": [
+     "infantry",
+     "paratrooper"
+    ],
+    "red": []
+   },
+   "sk": {
+    "id": "pierce",
+    "n": "장갑 관통 일격",
+    "mun": 25,
+    "cd": 3,
+    "dur": 1
+   }
+  },
+  "stg44": {
+   "n": "StG44 돌격소총",
+   "mun": 45,
+   "keys": {
+    "blue": [],
+    "red": [
+     "infantry",
+     "panzergren",
+     "sturmtruppen",
+     "at_inf"
+    ]
+   }
+  },
+  "fg42": {
+   "n": "FG42 자동소총",
+   "mun": 45,
+   "keys": {
+    "blue": [],
+    "red": [
+     "fj"
+    ]
+   }
+  },
+  "panzerfaust": {
+   "n": "판저파우스트 ×2",
+   "mun": 45,
+   "keys": {
+    "blue": [],
+    "red": [
+     "fp_pioneer",
+     "panzergren",
+     "engineer",
+     "sturmtruppen"
+    ]
+   }
+  }
+ },
+ "BG": {
+  "air": [
+   {
+    "id": "a1",
+    "cp": 1,
+    "mun": 30,
+    "cd": 3,
+    "n": {
+     "blue": "패스파인더 낙하",
+     "red": "팔슈름예거 낙하"
+    },
+    "t": "drop",
+    "key": {
+     "blue": "pathfinder",
+     "red": "fj"
+    }
+   },
+   {
+    "id": "a2",
+    "cp": 2,
+    "mun": 0,
+    "cd": 5,
+    "n": {
+     "blue": "보급 투하",
+     "red": "보급 투하"
+    },
+    "t": "supply"
+   },
+   {
+    "id": "a3",
+    "cp": 3,
+    "mun": 40,
+    "cd": 4,
+    "n": {
+     "blue": "57mm 대전차포 낙하",
+     "red": "Pak 40 낙하"
+    },
+    "t": "drop",
+    "key": {
+     "blue": "at_gun",
+     "red": "at_gun"
+    },
+    "face": 1
+   },
+   {
+    "id": "a4",
+    "cp": 4,
+    "mun": 80,
+    "cd": 5,
+    "n": {
+     "blue": "P-47 로켓 폭격",
+     "red": "슈투카 급강하 폭격"
+    },
+    "t": "line"
+   },
+   {
+    "id": "a5",
+    "cp": 8,
+    "mun": 110,
+    "cd": 6,
+    "n": {
+     "blue": "공수 정예 낙하",
+     "red": "팔슈름 정예 낙하"
+    },
+    "t": "drop",
+    "key": {
+     "blue": "paratrooper",
+     "red": "fj"
+    },
+    "pair": true
+   }
+  ],
+  "inf": [
+   {
+    "id": "i1",
+    "cp": 1,
+    "mun": 30,
+    "cd": 2,
+    "n": {
+     "blue": "정찰 사격",
+     "red": "정찰 사격"
+    },
+    "t": "shell"
+   },
+   {
+    "id": "i2",
+    "cp": 2,
+    "mun": 0,
+    "cd": 3,
+    "n": {
+     "blue": "보병 증원",
+     "red": "그레나디어 증원"
+    },
+    "t": "spawn",
+    "key": "infantry"
+   },
+   {
+    "id": "i3",
+    "cp": 3,
+    "mun": 40,
+    "cd": 3,
+    "n": {
+     "blue": "돌격 구령",
+     "red": "돌격 구령"
+    },
+    "t": "charge"
+   },
+   {
+    "id": "i4",
+    "cp": 4,
+    "mun": 90,
+    "cd": 5,
+    "n": {
+     "blue": "집중 포격",
+     "red": "집중 포격"
+    },
+    "t": "barrage"
+   },
+   {
+    "id": "i5",
+    "cp": 8,
+    "mun": 120,
+    "cd": 6,
+    "n": {
+     "blue": "연속 집중 포격",
+     "red": "연속 집중 포격"
+    },
+    "t": "barrage",
+    "twice": true
+   }
+  ],
+  "mech": [
+   {
+    "id": "m1",
+    "cp": 1,
+    "mun": 20,
+    "cd": 3,
+    "n": {
+     "blue": "응급 수리 지시",
+     "red": "응급 수리 지시"
+    },
+    "t": "fix"
+   },
+   {
+    "id": "m2",
+    "cp": 2,
+    "mun": 0,
+    "cd": 4,
+    "n": {
+     "blue": "차량 증원",
+     "red": "Sd.Kfz.221 증원"
+    },
+    "t": "spawn",
+    "key": "vehicle"
+   },
+   {
+    "id": "m3",
+    "cp": 3,
+    "mun": 30,
+    "cd": 3,
+    "n": {
+     "blue": "전진 기동",
+     "red": "전진 기동"
+    },
+    "t": "adv"
+   },
+   {
+    "id": "m4",
+    "cp": 4,
+    "mun": 60,
+    "cd": 5,
+    "n": {
+     "blue": "기갑 돌격",
+     "red": "기갑 돌격"
+    },
+    "t": "assault"
+   },
+   {
+    "id": "m5",
+    "cp": 8,
+    "mun": 90,
+    "cd": 6,
+    "n": {
+     "blue": "기갑 총돌격",
+     "red": "기갑 총돌격"
+    },
+    "t": "assault",
+    "rad": 4,
+    "mv": 3
+   }
+  ]
+ }
+}

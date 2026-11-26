@@ -1,0 +1,11 @@
+{
+ "rifle": {
+  "garand_rifleman_us": {
+   "attack": {
+    "accuracy": {
+     "far": 0.4
+    }
+   }
+  }
+ }
+}

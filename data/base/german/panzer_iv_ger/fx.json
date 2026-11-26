@@ -1,0 +1,49 @@
+{
+ "weapon": {
+  "75mm_panzer_iv_ger": {
+   "name": "weapon.75mm_panzer_iv_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "mg34_coaxial_panzer_iv_ger": {
+   "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_panzer_iv_ger": {
+   "name": "weapon.mg34_hull_panzer_iv_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  }
+ },
+ "ebps": {
+  "panzer_iv_ger": {
+   "name": "entity.panzer_iv_ger.name",
+   "model": {
+    "id": "panzer_iv_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "panzer_iv_ger": {
+   "name": "unit.panzer_iv_ger.name",
+   "short_name": "unit.panzer_iv_ger.short",
+   "desc": "unit.panzer_iv_ger.desc",
+   "icon": "panzer_iv_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

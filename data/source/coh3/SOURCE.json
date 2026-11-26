@@ -1,0 +1,217 @@
+{
+  "repo": "https://github.com/cohstats/coh3-data.git",
+  "commit": "49fc4dbcfb3c5f1bf84e920d96e46de3c0324d61",
+  "commit_date": "2026-11-18T20:42:17+01:00",
+  "files": [
+    {
+      "source": "data/chunked/weapon/german.json",
+      "target": "weapon/german.json",
+      "bytes": 8719219,
+      "sha256": "a0923827316505346559c55a26adb4c49cb0bf7630807b01e3c2514c469a0122"
+    },
+    {
+      "source": "data/chunked/weapon/american.json",
+      "target": "weapon/american.json",
+      "bytes": 8657768,
+      "sha256": "4f41154046b301f885f2acfdaeb87fcd4545b260a6c7bb761fa02187077ead9f"
+    },
+    {
+      "source": "data/chunked/weapon/afrika_korps.json",
+      "target": "weapon/afrika_korps.json",
+      "bytes": 6268243,
+      "sha256": "88f7ebb4e797f6923b5b4699d9dfacf5f5e53e8d634c1f53b937f0c1ba277567"
+    },
+    {
+      "source": "data/chunked/weapon/british.json",
+      "target": "weapon/british.json",
+      "bytes": 6712806,
+      "sha256": "d96e21324aa6ef061f6462aecdec5d0e8f8553dbab73bda6ac0766efcdcfc2f0"
+    },
+    {
+      "source": "data/chunked/weapon/british_africa.json",
+      "target": "weapon/british_africa.json",
+      "bytes": 1862589,
+      "sha256": "3be302261baa30466c356047aa7d2294f63cf863c11ab5d19d707d5e7c08b073"
+    },
+    {
+      "source": "data/chunked/weapon/common.json",
+      "target": "weapon/common.json",
+      "bytes": 1790813,
+      "sha256": "70e9c52acf74adc9d95bd008b122c5297983bc1d05fa12623d807c2db0538205"
+    },
+    {
+      "source": "data/chunked/ebps/races/german.json",
+      "target": "ebps/german.json",
+      "bytes": 12247528,
+      "sha256": "3ba246eec427de65311c879553bbf82a4b47545f49aa594ddf41a9dca0930443"
+    },
+    {
+      "source": "data/chunked/ebps/races/american.json",
+      "target": "ebps/american.json",
+      "bytes": 11923215,
+      "sha256": "3d59488363f80441c041efbc71e13f1312e2d664d5c2f53876b8bf5b95579e7e"
+    },
+    {
+      "source": "data/chunked/ebps/races/afrika_korps.json",
+      "target": "ebps/afrika_korps.json",
+      "bytes": 9471930,
+      "sha256": "3545a7ea477b3bcc9eba7a29cc33db1e9c7378e4ed22ff49206ba4e85bf99eb0"
+    },
+    {
+      "source": "data/chunked/ebps/races/british.json",
+      "target": "ebps/british.json",
+      "bytes": 7279943,
+      "sha256": "c6d044a02f55373c5acc7cbc5c44e0fb3da4ae4c18a651fdca93eec9ecf824ff"
+    },
+    {
+      "source": "data/chunked/ebps/races/british_africa.json",
+      "target": "ebps/british_africa.json",
+      "bytes": 7234100,
+      "sha256": "dfc264ae501be0e449f6ba3fb8fa2616f6f52229665505d17e1a5fbceca95cd8"
+    },
+    {
+      "source": "data/chunked/ebps/races/common.json",
+      "target": "ebps/common.json",
+      "bytes": 1471298,
+      "sha256": "2acdb323d69501ec2bf1718f4f8fe7e8f79d05da38fa0e51dfa26e6a3ffb9208"
+    },
+    {
+      "source": "data/chunked/sbps/races/german.json",
+      "target": "sbps/german.json",
+      "bytes": 6748614,
+      "sha256": "459a7636e5c81693d22d6205c604ba1c6106e55ee2e3e6a3af017cef766e5601"
+    },
+    {
+      "source": "data/chunked/sbps/races/american.json",
+      "target": "sbps/american.json",
+      "bytes": 7096090,
+      "sha256": "59787cf5c80a6dbca546c3c9eec581fd06425bcbfd8f7cc88462c6de2a8181a0"
+    },
+    {
+      "source": "data/chunked/sbps/races/afrika_korps.json",
+      "target": "sbps/afrika_korps.json",
+      "bytes": 5050276,
+      "sha256": "9897b27d0801f59e34ef34437fee0b066857d26250f1a915f7622e83e6ea5ed6"
+    },
+    {
+      "source": "data/chunked/sbps/races/british.json",
+      "target": "sbps/british.json",
+      "bytes": 4894241,
+      "sha256": "960ffcd8eab2944e5422d6784369c2f090e20dcfb27816d0c8fd62d861a3f9ec"
+    },
+    {
+      "source": "data/chunked/sbps/races/british_africa.json",
+      "target": "sbps/british_africa.json",
+      "bytes": 4896643,
+      "sha256": "9f2338d1f8879e13fcfcb36e8696fd64aefa7ef147f788edbbfd697d77354ec6"
+    },
+    {
+      "source": "data/chunked/sbps/races/common.json",
+      "target": "sbps/common.json",
+      "bytes": 814800,
+      "sha256": "975022d71337020d9d10e8fef5072dd760ad51eb574d71a0da34fa16ba3c8626"
+    },
+    {
+      "source": "data/chunked/upgrade/german.json",
+      "target": "upgrade/german.json",
+      "bytes": 5006982,
+      "sha256": "b60f8778fc4baa159b1968565f2dce91a304d36bcc58de4586de6ed773b3dd89"
+    },
+    {
+      "source": "data/chunked/upgrade/american.json",
+      "target": "upgrade/american.json",
+      "bytes": 6297349,
+      "sha256": "9cea61dc47531f8e8d0538f56ca3659f2a6cbb347a3c44f68788ac8314977b54"
+    },
+    {
+      "source": "data/chunked/upgrade/afrika_korps.json",
+      "target": "upgrade/afrika_korps.json",
+      "bytes": 6246224,
+      "sha256": "605c4e3df9f0ec14a9c714c4e787456b1196ad84abd5118edf2055ff4b494135"
+    },
+    {
+      "source": "data/chunked/upgrade/british.json",
+      "target": "upgrade/british.json",
+      "bytes": 3859523,
+      "sha256": "5c786bc2eb1867435742487ce2ca9d7497dc9d7c80023bcb6d7f538c25e7f2d6"
+    },
+    {
+      "source": "data/chunked/upgrade/british_africa.json",
+      "target": "upgrade/british_africa.json",
+      "bytes": 636568,
+      "sha256": "923643b5a33c3fbcf9df8e6dbd10c5de871d0f1973dbf0c6142c5c8286fe8bf1"
+    },
+    {
+      "source": "data/chunked/upgrade/common.json",
+      "target": "upgrade/common.json",
+      "bytes": 801269,
+      "sha256": "a9b51280fe67c90e3db292666e133bee9e429403ea2118d7cdc42dc2aad67c64"
+    },
+    {
+      "source": "data/chunked/veterancy/german.json",
+      "target": "veterancy/german.json",
+      "bytes": 357209,
+      "sha256": "86f3188eec0ff57db1c0f2fb94a375a61fe50275773966095ef882607fd40008"
+    },
+    {
+      "source": "data/chunked/veterancy/american.json",
+      "target": "veterancy/american.json",
+      "bytes": 296091,
+      "sha256": "cff83e9935c84b40a32da3dfa168cf0d2a330b12f248c693ca150aaa88e420fe"
+    },
+    {
+      "source": "data/chunked/veterancy/afrika_korps.json",
+      "target": "veterancy/afrika_korps.json",
+      "bytes": 360949,
+      "sha256": "78e907115eee0250673dd021da63aac0c89c554cc5b62b790b13a23539537013"
+    },
+    {
+      "source": "data/chunked/veterancy/british.json",
+      "target": "veterancy/british.json",
+      "bytes": 344575,
+      "sha256": "f4a44178a3271a760ed657f5c8fd3d9dbeea735bd3b3ef15a2b12528f2e21d4d"
+    },
+    {
+      "source": "data/chunked/veterancy/common.json",
+      "target": "veterancy/common.json",
+      "bytes": 88622,
+      "sha256": "1299cc1747fc8076e7170b420e2a543cbcfa46e83f68382bc98646aed19b388e"
+    },
+    {
+      "source": "data/chunked/abilities/races/german.json",
+      "target": "abilities/german.json",
+      "bytes": 9815165,
+      "sha256": "54baa23b8e8716508613fe9111e59b9700e8cd4dee158538a21a22546c8e86aa"
+    },
+    {
+      "source": "data/chunked/abilities/races/american.json",
+      "target": "abilities/american.json",
+      "bytes": 15400344,
+      "sha256": "363c8e3e31fd7acff13c8ad8d4ac887b78547ab22ce453c6f4b550fabb289078"
+    },
+    {
+      "source": "data/chunked/abilities/races/afrika_korps.json",
+      "target": "abilities/afrika_korps.json",
+      "bytes": 9733423,
+      "sha256": "1005c78e21a2e01a496fa6f2ef9f3d256dc20188173288c750d7698b5345ca70"
+    },
+    {
+      "source": "data/chunked/abilities/races/british.json",
+      "target": "abilities/british.json",
+      "bytes": 6370992,
+      "sha256": "da2c1539a8878ae6536c2c5ce5834b99f7ceb3ff89adfbaf4b8f7fd69322c464"
+    },
+    {
+      "source": "data/chunked/abilities/races/british_africa.json",
+      "target": "abilities/british_africa.json",
+      "bytes": 1931284,
+      "sha256": "474a4b93078475b886cc697b436a309fcc32113e4a02cccadf9b4f58acf0418e"
+    },
+    {
+      "source": "data/chunked/abilities/races/common.json",
+      "target": "abilities/common.json",
+      "bytes": 3495515,
+      "sha256": "851524d8b15216dd94b658a41f2411cd9098a30938bfb77cfa10ae3ac6d8ef7a"
+    }
+  ]
+}

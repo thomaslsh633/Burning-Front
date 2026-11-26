@@ -1,0 +1,132 @@
+{
+  "about": "data/balance/combat.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "lost_men_received_accuracy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "attacker_morale_accuracy": {
+      "type": "object",
+      "propertyVocab": "state_morale",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "retreating_received_accuracy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "emplaced_received": {
+      "type": "object",
+      "properties": {
+        "damage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "suppression": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "damage",
+        "suppression"
+      ]
+    },
+    "armor_arcs_deg": {
+      "type": "object",
+      "properties": {
+        "front": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "side": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 180
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "front",
+        "side"
+      ]
+    },
+    "aoe": {
+      "type": "object",
+      "properties": {
+        "squad_spread_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "miss_splash": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "squad_spread_m",
+        "miss_splash"
+      ]
+    },
+    "suppression_points": {
+      "type": "number",
+      "minimum": 0
+    },
+    "criticals": {
+      "type": "object",
+      "propertyVocab": "critical",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "no_fire_rules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "vocab": "fire_rule"
+      }
+    },
+    "no_fire_categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "vocab": "weapon_category"
+      }
+    },
+    "feature_target_size": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "lost_men_received_accuracy",
+    "attacker_morale_accuracy",
+    "retreating_received_accuracy",
+    "emplaced_received",
+    "armor_arcs_deg",
+    "aoe",
+    "suppression_points",
+    "criticals",
+    "no_fire_rules",
+    "no_fire_categories",
+    "feature_target_size"
+  ]
+}

@@ -1,0 +1,4 @@
+data/source/coh3/**/*.json -diff linguist-generated
+data/generated/*.json -diff linguist-generated
+data/base/**/*.json linguist-generated
+data/generated/maps/*.json -diff linguist-generated

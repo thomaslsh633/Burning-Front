@@ -1,0 +1,47 @@
+{
+  "bands": [
+    "near",
+    "mid",
+    "far"
+  ],
+  "decimals": 0,
+  "groups": {
+    "per_use": [
+      "grenade",
+      "mine"
+    ],
+    "single_shot": [
+      "tank_gun",
+      "anti_tank_gun",
+      "infantry_anti_tank_weapon",
+      "tungsten_round_upgrade"
+    ],
+    "artillery": [
+      "heavy_artillery",
+      "light_artillery",
+      "mortar"
+    ]
+  },
+  "volley": {
+    "tolerance": 0.05,
+    "max_multiplier": 6
+  },
+  "artillery": {
+    "max_reload_turns": 4,
+    "min_raw": 0.05
+  },
+  "skip_categories": [
+    "campaign",
+    "parent",
+    "preroll_destruction",
+    "dummy_construction_barbed_wire",
+    "dummy_construction_demo",
+    "dummy_construction_landmine",
+    "dummy_construction_landmine_german",
+    "dummy_construction_minefield",
+    "dummy_construction_sandbag",
+    "dummy_construction_shovel",
+    "dummy_construction_welding_gear",
+    "dummy_wire_cutters"
+  ]
+}

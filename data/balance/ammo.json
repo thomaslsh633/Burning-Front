@@ -1,0 +1,7 @@
+{
+  "about": "Per-unit ammunition (SPEC §10: unit ammo kept, unit fuel removed). Capacity by unit kind, overridden by role or indirect class; one shot volley / one shell uses ammo.per_shot (default 1). CoH3 has no ammo, so these are Burning Front values (decision G).",
+  "by_kind": { "squad": 20, "team_weapon": 12, "vehicle": 12, "structure": 30 },
+  "by_role": { "anti_tank": 16, "recon": 16 },
+  "by_indirect_class": { "mortar": 12, "light": 10, "spg": 10, "heavy": 8, "rocket": 6 },
+  "low_ammo_share": 0.25
+}

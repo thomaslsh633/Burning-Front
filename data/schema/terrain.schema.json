@@ -1,0 +1,475 @@
+{
+  "about": "data/rules/terrain.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "pass_classes": {
+      "type": "object",
+      "propertyVocab": "pass",
+      "additionalProperties": {
+        "enum": [
+          "infantry",
+          "vehicle"
+        ]
+      }
+    },
+    "default_ground": {
+      "type": "string"
+    },
+    "groups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "damaged_by": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "explosive",
+                "fire",
+                "anti_tank"
+              ]
+            }
+          },
+          "hp_bar": {
+            "enum": [
+              "never",
+              "on_select",
+              "always"
+            ]
+          },
+          "on_destroyed": {
+            "enum": [
+              "collapse"
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "damaged_by",
+          "hp_bar"
+        ]
+      }
+    },
+    "damage_sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "damage_types": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "vocab": "damage_type"
+            }
+          },
+          "weapon_categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "vocab": "weapon_category"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "ground": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cost"
+        ]
+      }
+    },
+    "objects": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          },
+          "sight": {
+            "enum": [
+              "none",
+              "partial",
+              "block"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "group": {
+            "enum": [
+              "terrain",
+              "natural",
+              "defensive",
+              "building",
+              "wreck"
+            ]
+          },
+          "hp": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "armor": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "crushable": {
+            "type": "boolean"
+          },
+          "faction_ebps": {
+            "type": "object",
+            "propertyVocab": "faction",
+            "additionalProperties": {
+              "$ref": "types.schema.json#/$defs/Id"
+            }
+          },
+          "leaves": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cost",
+          "cover",
+          "sight",
+          "height",
+          "group"
+        ]
+      }
+    },
+    "lines": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cross": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          },
+          "sight": {
+            "enum": [
+              "none",
+              "partial",
+              "block"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "group": {
+            "enum": [
+              "terrain",
+              "natural",
+              "defensive",
+              "building",
+              "wreck"
+            ]
+          },
+          "hp": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "armor": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "crushable": {
+            "type": "boolean"
+          },
+          "faction_ebps": {
+            "type": "object",
+            "propertyVocab": "faction",
+            "additionalProperties": {
+              "$ref": "types.schema.json#/$defs/Id"
+            }
+          },
+          "leaves": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cross",
+          "cover",
+          "sight",
+          "height",
+          "group"
+        ]
+      }
+    },
+    "structures": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "hp": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "armor": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "garrison": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "leaves": {
+            "$ref": "types.schema.json#/$defs/Id"
+          },
+          "indestructible": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "hp",
+          "armor",
+          "garrison",
+          "height"
+        ]
+      }
+    },
+    "structure_terrain": {
+      "type": "object",
+      "properties": {
+        "cost": {
+          "type": "object",
+          "properties": {
+            "infantry": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "vehicle": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "infantry",
+            "vehicle"
+          ]
+        },
+        "cover": {
+          "type": "string",
+          "vocab": "cover"
+        },
+        "sight": {
+          "enum": [
+            "none",
+            "partial",
+            "block"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "cost",
+        "cover",
+        "sight"
+      ]
+    },
+    "wrecks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          },
+          "sight": {
+            "enum": [
+              "none",
+              "partial",
+              "block"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "group": {
+            "enum": [
+              "terrain",
+              "natural",
+              "defensive",
+              "building",
+              "wreck"
+            ]
+          },
+          "hp": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "armor": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "crushable": {
+            "type": "boolean"
+          },
+          "faction_ebps": {
+            "type": "object",
+            "propertyVocab": "faction",
+            "additionalProperties": {
+              "$ref": "types.schema.json#/$defs/Id"
+            }
+          },
+          "leaves": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cost",
+          "cover",
+          "sight",
+          "height",
+          "group"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pass_classes",
+    "default_ground",
+    "groups",
+    "damage_sources",
+    "ground",
+    "objects",
+    "lines",
+    "structures",
+    "structure_terrain",
+    "wrecks"
+  ]
+}

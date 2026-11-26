@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "required": [
+    "flags"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "flags": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "coh3",
+          "use",
+          "meaning"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "types.schema.json#/$defs/Id"
+          },
+          "coh3": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "use": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": "string"
+          },
+          "values": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer"
+            }
+          },
+          "system": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

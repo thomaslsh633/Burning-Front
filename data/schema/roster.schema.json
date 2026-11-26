@@ -1,0 +1,157 @@
+{
+  "type": "object",
+  "required": [
+    "factions",
+    "restore",
+    "clone"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "factions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "german": {
+          "type": "object",
+          "required": [
+            "sources"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sources": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "vocab": "coh3_race"
+              }
+            }
+          }
+        },
+        "american": {
+          "type": "object",
+          "required": [
+            "sources"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sources": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "vocab": "coh3_race"
+              }
+            }
+          }
+        },
+        "afrika_korps": {
+          "type": "object",
+          "required": [
+            "sources"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sources": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "vocab": "coh3_race"
+              }
+            }
+          }
+        },
+        "british": {
+          "type": "object",
+          "required": [
+            "sources"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sources": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "vocab": "coh3_race"
+              }
+            }
+          }
+        }
+      }
+    },
+    "restore": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "$ref": "types.schema.json#/$defs/Id"
+        }
+      }
+    },
+    "clone": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "from",
+          "fields"
+        ],
+        "properties": {
+          "from": {
+            "$ref": "types.schema.json#/$defs/Id"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "why": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "battlegroup_units": {
+      "enum": [
+        "doctrine_unlock"
+      ]
+    },
+    "coh3stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "include_named_units": {
+          "type": "boolean"
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        },
+        "squad_price_from_coh3stats": {
+          "type": "boolean"
+        }
+      }
+    },
+    "heroes": {
+      "type": "object",
+      "required": [
+        "rule",
+        "units"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "type": "string"
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        }
+      }
+    }
+  }
+}

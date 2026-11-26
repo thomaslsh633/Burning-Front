@@ -1,0 +1,85 @@
+{
+  "about": "data/balance/status.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "suppression": {
+      "type": "object",
+      "properties": {
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suppressed_at": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pinned_at": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "recover_below": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "decay_per_turn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "decay_in_cover": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "max",
+        "suppressed_at",
+        "pinned_at",
+        "recover_below",
+        "decay_per_turn",
+        "decay_in_cover"
+      ]
+    },
+    "retreat": {
+      "type": "object",
+      "properties": {
+        "arrive_within_hex": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "arrive_within_hex"
+      ]
+    },
+    "xp": {
+      "type": "object",
+      "properties": {
+        "per_value_destroyed": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "per_value_destroyed"
+      ]
+    },
+    "low_ammo_share": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "suppression",
+    "retreat",
+    "xp",
+    "low_ammo_share"
+  ]
+}

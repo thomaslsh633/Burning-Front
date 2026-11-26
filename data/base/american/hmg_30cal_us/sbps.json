@@ -1,0 +1,64 @@
+{
+ "team_weapons": {
+  "hmg_30cal_us": {
+   "coh3_ref": "sbps/races/american/team_weapons/hmg_30cal_us",
+   "kind": "team_weapon",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "crew_hmg_us",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "teamweapon_burst",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak",
+     "50cal_hmg_us"
+    ]
+   },
+   "abilities": [
+    "reload_hmg_us",
+    "veterancy_1_unlock_a_hmg_30cal_us",
+    "veterancy_1_unlock_b_hmg_30cal_us",
+    "veterancy_1a_button_vehicle_hmg_30cal_us",
+    "defensive_set_up_hmg_30cal_us",
+    "defensive_set_up_hmg_30cal_upgraded_us",
+    "camouflage_in_cover_hmg_ger",
+    "passive_instant_withdraw_retreat_in_hold_global_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "hmg_30cal_us"
+   },
+   "team_weapon": {
+    "weapon": "30cal_hmg_us",
+    "crew_entity": "crew_hmg_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

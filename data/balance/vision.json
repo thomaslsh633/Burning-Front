@@ -1,0 +1,25 @@
+{
+  "about": "Sight and cover (v214 v144–v159 rules, SPEC §4, §5, §10). Heights in object-height units; one elevation step = elevation_height.",
+  "elevation_height": 2,
+  "eye_height": {
+    "squad": 1.5,
+    "team_weapon": 1.5,
+    "vehicle": 2,
+    "structure": 3
+  },
+  "target_height": 1,
+  "ignore_low_objects_next_to_viewer": 2,
+  "obscured_accuracy": 0.85,
+  "sight_penalty": {
+    "PINNED": 1
+  },
+  "terrain_concealment": {
+    "bush": 2,
+    "forest_light": 2,
+    "forest": 2,
+    "forest_dense": 1
+  },
+  "emplaced_concealment_hex": 2,
+  "revealed_after_firing_turns": 2,
+  "garrison_concealment_hex": 1
+}

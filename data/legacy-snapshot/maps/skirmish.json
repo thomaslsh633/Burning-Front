@@ -1,0 +1,3907 @@
+{
+ "id": "skirmish",
+ "cols": 22,
+ "rows": 14,
+ "terrain": {
+  "0,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,0": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,0": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,1": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,1": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "15,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,1": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,2": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "8,2": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "9,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,2": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,2": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,3": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "9,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,3": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,3": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "12,3": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "13,3": {
+   "terrainType": "building",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "석조 가옥",
+   "code": "⛊",
+   "defense": 0
+  },
+  "14,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,3": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,4": {
+   "terrainType": "crater",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "포탄 구덩이",
+   "code": "◌",
+   "defense": 0
+  },
+  "10,4": {
+   "terrainType": "building",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "석조 가옥",
+   "code": "⛊",
+   "defense": 0
+  },
+  "11,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,4": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "16,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,4": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,5": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "8,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,5": {
+   "terrainType": "rubble",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "건물 잔해",
+   "code": "∴",
+   "defense": 0
+  },
+  "11,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,5": {
+   "terrainType": "rubble",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "건물 잔해",
+   "code": "∴",
+   "defense": 0
+  },
+  "13,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "샌드백 진지",
+   "code": "☲",
+   "defense": 24,
+   "fort": {
+    "team": "red",
+    "cost": {
+     "g": 60,
+     "f": 0
+    },
+    "orig": {
+     "terrainType": "plains",
+     "elevation": 0,
+     "cover": "none",
+     "name": "평지",
+     "code": "",
+     "defense": 0
+    }
+   }
+  },
+  "16,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,5": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,6": {
+   "terrainType": "trench",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "방호 참호",
+   "code": "☲",
+   "defense": 24,
+   "fort": {
+    "team": "blue",
+    "cost": {
+     "g": 60,
+     "f": 0
+    },
+    "orig": {
+     "terrainType": "plains",
+     "elevation": 0,
+     "cover": "none",
+     "name": "평지",
+     "code": "",
+     "defense": 0
+    }
+   }
+  },
+  "7,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,6": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,6": {
+   "terrainType": "crater",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "포탄 구덩이",
+   "code": "◌",
+   "defense": 0
+  },
+  "13,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,6": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "1,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "2,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "3,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "4,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "5,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "6,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "7,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "8,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "9,7": {
+   "terrainType": "crater",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "포탄 구덩이",
+   "code": "◌",
+   "defense": 0
+  },
+  "10,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "11,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "12,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "13,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "14,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "15,7": {
+   "terrainType": "trench",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "방호 참호",
+   "code": "☲",
+   "defense": 24,
+   "fort": {
+    "team": "red",
+    "cost": {
+     "g": 60,
+     "f": 0
+    },
+    "orig": {
+     "terrainType": "road",
+     "elevation": 0,
+     "cover": "none",
+     "name": "포장도로",
+     "code": "═",
+     "defense": 0
+    }
+   }
+  },
+  "16,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "17,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "18,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "19,7": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "21,7": {
+   "terrainType": "road",
+   "elevation": 0,
+   "cover": "none",
+   "name": "포장도로",
+   "code": "═",
+   "defense": 0
+  },
+  "0,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "샌드백 진지",
+   "code": "☲",
+   "defense": 24,
+   "fort": {
+    "team": "blue",
+    "cost": {
+     "g": 60,
+     "f": 0
+    },
+    "orig": {
+     "terrainType": "plains",
+     "elevation": 0,
+     "cover": "none",
+     "name": "평지",
+     "code": "",
+     "defense": 0
+    }
+   }
+  },
+  "7,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,8": {
+   "terrainType": "rubble",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "건물 잔해",
+   "code": "∴",
+   "defense": 0
+  },
+  "10,8": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,8": {
+   "terrainType": "rubble",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "건물 잔해",
+   "code": "∴",
+   "defense": 0
+  },
+  "12,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,8": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "15,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,8": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,9": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "7,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,9": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,9": {
+   "terrainType": "building",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "석조 가옥",
+   "code": "⛊",
+   "defense": 0
+  },
+  "12,9": {
+   "terrainType": "crater",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "포탄 구덩이",
+   "code": "◌",
+   "defense": 0
+  },
+  "13,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,9": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,10": {
+   "terrainType": "building",
+   "elevation": 0,
+   "cover": "hard",
+   "name": "석조 가옥",
+   "code": "⛊",
+   "defense": 0
+  },
+  "9,10": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "10,10": {
+   "terrainType": "bush",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "수풀림",
+   "code": "░",
+   "defense": 0
+  },
+  "11,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,10": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "14,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,10": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,11": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,11": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "14,11": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "15,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,11": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,12": {
+   "terrainType": "forest",
+   "elevation": 0,
+   "cover": "yellow",
+   "name": "울창한 숲",
+   "code": "🌲",
+   "defense": 0
+  },
+  "8,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,12": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,12": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "0,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "1,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "2,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "3,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "4,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "5,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "6,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "7,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "8,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "9,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "10,13": {
+   "terrainType": "field",
+   "elevation": 0,
+   "cover": "none",
+   "name": "경작지",
+   "code": "⁞",
+   "defense": 0
+  },
+  "11,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "12,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "13,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "14,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "15,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "16,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "17,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "18,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "19,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "20,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  },
+  "21,13": {
+   "terrainType": "plains",
+   "elevation": 0,
+   "cover": "none",
+   "name": "평지",
+   "code": "",
+   "defense": 0
+  }
+ },
+ "edges": {},
+ "points": [
+  {
+   "id": "cp_0",
+   "name": "중앙 교차로",
+   "code": "VP",
+   "cls": "vp",
+   "kind": "vp",
+   "c": 10,
+   "r": 7,
+   "cores": [
+    [
+     10,
+     7
+    ]
+   ],
+   "radius": 2,
+   "owner": null,
+   "zone": [
+    "9,5",
+    "10,5",
+    "11,5",
+    "9,6",
+    "10,6",
+    "11,6",
+    "12,6",
+    "8,7",
+    "9,7",
+    "10,7",
+    "11,7",
+    "12,7",
+    "9,8",
+    "10,8",
+    "11,8",
+    "12,8",
+    "9,9",
+    "10,9",
+    "11,9"
+   ],
+   "zoneList": [
+    [
+     9,
+     5
+    ],
+    [
+     10,
+     5
+    ],
+    [
+     11,
+     5
+    ],
+    [
+     9,
+     6
+    ],
+    [
+     10,
+     6
+    ],
+    [
+     11,
+     6
+    ],
+    [
+     12,
+     6
+    ],
+    [
+     8,
+     7
+    ],
+    [
+     9,
+     7
+    ],
+    [
+     10,
+     7
+    ],
+    [
+     11,
+     7
+    ],
+    [
+     12,
+     7
+    ],
+    [
+     9,
+     8
+    ],
+    [
+     10,
+     8
+    ],
+    [
+     11,
+     8
+    ],
+    [
+     12,
+     8
+    ],
+    [
+     9,
+     9
+    ],
+    [
+     10,
+     9
+    ],
+    [
+     11,
+     9
+    ]
+   ],
+   "yield": null
+  },
+  {
+   "id": "cp_1",
+   "name": "제재소 (연합)",
+   "code": "FUEL",
+   "cls": "fuel",
+   "kind": "oil",
+   "c": 7,
+   "r": 3,
+   "cores": [
+    [
+     7,
+     3
+    ]
+   ],
+   "radius": 1,
+   "owner": null,
+   "zone": [
+    "7,2",
+    "8,2",
+    "6,3",
+    "7,3",
+    "8,3",
+    "7,4",
+    "8,4"
+   ],
+   "zoneList": [
+    [
+     7,
+     2
+    ],
+    [
+     8,
+     2
+    ],
+    [
+     6,
+     3
+    ],
+    [
+     7,
+     3
+    ],
+    [
+     8,
+     3
+    ],
+    [
+     7,
+     4
+    ],
+    [
+     8,
+     4
+    ]
+   ],
+   "yield": {
+    "f": 12,
+    "g": 10
+   },
+   "sector": {
+    "id": 2,
+    "c": 7,
+    "r": 3,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "제재소 (연합)",
+    "hexes": [
+     "6,0",
+     "7,0",
+     "8,0",
+     "9,0",
+     "10,0",
+     "11,0",
+     "6,1",
+     "7,1",
+     "8,1",
+     "9,1",
+     "10,1",
+     "6,2",
+     "7,2",
+     "8,2",
+     "9,2",
+     "10,2",
+     "11,2",
+     "6,3",
+     "7,3",
+     "8,3",
+     "9,3",
+     "10,3",
+     "6,4",
+     "7,4",
+     "8,4",
+     "9,4",
+     "10,4",
+     "11,4",
+     "6,5",
+     "7,5",
+     "8,5",
+     "9,5",
+     "10,5",
+     "11,5",
+     "7,6",
+     "8,6",
+     "9,6",
+     "10,6",
+     "11,6",
+     "7,7",
+     "8,7",
+     "9,7"
+    ],
+    "adj": [
+     6,
+     5,
+     0,
+     3,
+     4
+    ]
+   }
+  },
+  {
+   "id": "cp_2",
+   "name": "제재소 (추축)",
+   "code": "FUEL",
+   "cls": "fuel",
+   "kind": "oil",
+   "c": 14,
+   "r": 10,
+   "cores": [
+    [
+     14,
+     10
+    ]
+   ],
+   "radius": 1,
+   "owner": null,
+   "zone": [
+    "13,9",
+    "14,9",
+    "13,10",
+    "14,10",
+    "15,10",
+    "13,11",
+    "14,11"
+   ],
+   "zoneList": [
+    [
+     13,
+     9
+    ],
+    [
+     14,
+     9
+    ],
+    [
+     13,
+     10
+    ],
+    [
+     14,
+     10
+    ],
+    [
+     15,
+     10
+    ],
+    [
+     13,
+     11
+    ],
+    [
+     14,
+     11
+    ]
+   ],
+   "yield": {
+    "f": 12,
+    "g": 10
+   },
+   "sector": {
+    "id": 3,
+    "c": 14,
+    "r": 10,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "제재소 (추축)",
+    "hexes": [
+     "12,6",
+     "13,6",
+     "14,6",
+     "10,7",
+     "11,7",
+     "12,7",
+     "13,7",
+     "14,7",
+     "10,8",
+     "11,8",
+     "12,8",
+     "13,8",
+     "14,8",
+     "15,8",
+     "10,9",
+     "11,9",
+     "12,9",
+     "13,9",
+     "14,9",
+     "15,9",
+     "11,10",
+     "12,10",
+     "13,10",
+     "14,10",
+     "15,10",
+     "10,11",
+     "11,11",
+     "12,11",
+     "13,11",
+     "14,11",
+     "15,11",
+     "11,12",
+     "12,12",
+     "13,12",
+     "14,12",
+     "15,12",
+     "10,13",
+     "11,13",
+     "12,13",
+     "13,13",
+     "14,13",
+     "15,13"
+    ],
+    "adj": [
+     2,
+     5,
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "id": "cp_3",
+   "name": "탄약고 (연합)",
+   "code": "MUN",
+   "cls": "mun",
+   "kind": "mun",
+   "c": 6,
+   "r": 11,
+   "cores": [
+    [
+     6,
+     11
+    ]
+   ],
+   "radius": 1,
+   "owner": null,
+   "zone": [
+    "6,10",
+    "7,10",
+    "5,11",
+    "6,11",
+    "7,11",
+    "6,12",
+    "7,12"
+   ],
+   "zoneList": [
+    [
+     6,
+     10
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     7,
+     11
+    ],
+    [
+     6,
+     12
+    ],
+    [
+     7,
+     12
+    ]
+   ],
+   "yield": {
+    "m": 11,
+    "g": 10
+   },
+   "sector": {
+    "id": 4,
+    "c": 6,
+    "r": 11,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "탄약고 (연합)",
+    "hexes": [
+     "6,7",
+     "6,8",
+     "7,8",
+     "8,8",
+     "9,8",
+     "5,9",
+     "6,9",
+     "7,9",
+     "8,9",
+     "9,9",
+     "4,10",
+     "5,10",
+     "6,10",
+     "7,10",
+     "8,10",
+     "9,10",
+     "10,10",
+     "3,11",
+     "4,11",
+     "5,11",
+     "6,11",
+     "7,11",
+     "8,11",
+     "9,11",
+     "3,12",
+     "4,12",
+     "5,12",
+     "6,12",
+     "7,12",
+     "8,12",
+     "9,12",
+     "10,12",
+     "2,13",
+     "3,13",
+     "4,13",
+     "5,13",
+     "6,13",
+     "7,13",
+     "8,13",
+     "9,13"
+    ],
+    "adj": [
+     0,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "id": "cp_4",
+   "name": "탄약고 (추축)",
+   "code": "MUN",
+   "cls": "mun",
+   "kind": "mun",
+   "c": 15,
+   "r": 2,
+   "cores": [
+    [
+     15,
+     2
+    ]
+   ],
+   "radius": 1,
+   "owner": null,
+   "zone": [
+    "14,1",
+    "15,1",
+    "14,2",
+    "15,2",
+    "16,2",
+    "14,3",
+    "15,3"
+   ],
+   "zoneList": [
+    [
+     14,
+     1
+    ],
+    [
+     15,
+     1
+    ],
+    [
+     14,
+     2
+    ],
+    [
+     15,
+     2
+    ],
+    [
+     16,
+     2
+    ],
+    [
+     14,
+     3
+    ],
+    [
+     15,
+     3
+    ]
+   ],
+   "yield": {
+    "m": 11,
+    "g": 10
+   },
+   "sector": {
+    "id": 5,
+    "c": 15,
+    "r": 2,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "탄약고 (추축)",
+    "hexes": [
+     "12,0",
+     "13,0",
+     "14,0",
+     "15,0",
+     "16,0",
+     "17,0",
+     "18,0",
+     "19,0",
+     "11,1",
+     "12,1",
+     "13,1",
+     "14,1",
+     "15,1",
+     "16,1",
+     "17,1",
+     "18,1",
+     "12,2",
+     "13,2",
+     "14,2",
+     "15,2",
+     "16,2",
+     "17,2",
+     "18,2",
+     "11,3",
+     "12,3",
+     "13,3",
+     "14,3",
+     "15,3",
+     "16,3",
+     "17,3",
+     "12,4",
+     "13,4",
+     "14,4",
+     "15,4",
+     "16,4",
+     "12,5",
+     "13,5",
+     "14,5",
+     "15,5",
+     "15,6"
+    ],
+    "adj": [
+     2,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "id": "cp_5",
+   "name": "농가 (연합)",
+   "code": "MAN",
+   "cls": "manpower",
+   "kind": "money",
+   "c": 4,
+   "r": 3,
+   "cores": [
+    [
+     4,
+     3
+    ]
+   ],
+   "radius": 1,
+   "owner": "blue",
+   "zone": [
+    "4,2",
+    "5,2",
+    "3,3",
+    "4,3",
+    "5,3",
+    "4,4",
+    "5,4"
+   ],
+   "zoneList": [
+    [
+     4,
+     2
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     5,
+     3
+    ],
+    [
+     4,
+     4
+    ],
+    [
+     5,
+     4
+    ]
+   ],
+   "yield": null,
+   "sector": {
+    "id": 6,
+    "c": 4,
+    "r": 3,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "농가 (연합)",
+    "hexes": [
+     "2,0",
+     "3,0",
+     "4,0",
+     "5,0",
+     "2,1",
+     "3,1",
+     "4,1",
+     "5,1",
+     "3,2",
+     "4,2",
+     "5,2",
+     "3,3",
+     "4,3",
+     "5,3",
+     "4,4",
+     "5,4",
+     "5,5"
+    ],
+    "adj": [
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "cp_6",
+   "name": "농가 (추축)",
+   "code": "MAN",
+   "cls": "manpower",
+   "kind": "money",
+   "c": 17,
+   "r": 10,
+   "cores": [
+    [
+     17,
+     10
+    ]
+   ],
+   "radius": 1,
+   "owner": "red",
+   "zone": [
+    "16,9",
+    "17,9",
+    "16,10",
+    "17,10",
+    "18,10",
+    "16,11",
+    "17,11"
+   ],
+   "zoneList": [
+    [
+     16,
+     9
+    ],
+    [
+     17,
+     9
+    ],
+    [
+     16,
+     10
+    ],
+    [
+     17,
+     10
+    ],
+    [
+     18,
+     10
+    ],
+    [
+     16,
+     11
+    ],
+    [
+     17,
+     11
+    ]
+   ],
+   "yield": null,
+   "sector": {
+    "id": 7,
+    "c": 17,
+    "r": 10,
+    "hq": null,
+    "cp": "[ref]",
+    "name": "농가 (추축)",
+    "hexes": [
+     "16,8",
+     "16,9",
+     "17,9",
+     "16,10",
+     "17,10",
+     "18,10",
+     "16,11",
+     "17,11",
+     "18,11",
+     "16,12",
+     "17,12",
+     "18,12",
+     "19,12",
+     "16,13",
+     "17,13",
+     "18,13",
+     "19,13"
+    ],
+    "adj": [
+     1,
+     3
+    ]
+   }
+  }
+ ],
+ "buildings": [
+  {
+   "id": "base_blue",
+   "type": "hq",
+   "team": "blue",
+   "className": "연합군 사령부",
+   "name": "교전 테스트 연합 기지",
+   "c": 2,
+   "r": 6,
+   "hp": 690,
+   "maxHp": 690,
+   "armor": 0,
+   "sight": 5,
+   "cells": [
+    [
+     2,
+     6
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     1,
+     5
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "base_red",
+   "type": "hq",
+   "team": "red",
+   "className": "추축군 사령부",
+   "name": "교전 테스트 추축 기지",
+   "c": 19,
+   "r": 7,
+   "hp": 690,
+   "maxHp": 690,
+   "armor": 0,
+   "sight": 5,
+   "cells": [
+    [
+     19,
+     7
+    ],
+    [
+     20,
+     8
+    ],
+    [
+     19,
+     8
+    ]
+   ],
+   "_v133f": 4
+  },
+  {
+   "id": "b24",
+   "type": "barracks",
+   "team": "blue",
+   "className": "병영",
+   "name": "병영 #24",
+   "c": 3,
+   "r": 4,
+   "hp": 320,
+   "maxHp": 320,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 80,
+    "f": 15
+   },
+   "cells": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     4
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b25",
+   "type": "support_center",
+   "team": "blue",
+   "className": "중화기 지원소",
+   "name": "중화기 지원소 #25",
+   "c": 4,
+   "r": 6,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 80,
+    "f": 15
+   },
+   "cells": [
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b26",
+   "type": "motor_pool",
+   "team": "blue",
+   "className": "차량 정비소",
+   "name": "차량 정비소 #26",
+   "c": 0,
+   "r": 3,
+   "hp": 400,
+   "maxHp": 400,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 50
+   },
+   "cells": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     3
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b27",
+   "type": "tank_depot",
+   "team": "blue",
+   "className": "전차 공창",
+   "name": "전차 공창 #27",
+   "c": 1,
+   "r": 8,
+   "hp": 480,
+   "maxHp": 480,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 300,
+    "f": 135
+   },
+   "cells": [
+    [
+     1,
+     8
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     1,
+     9
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b28",
+   "type": "doc_inf",
+   "team": "blue",
+   "className": "보병 지원소",
+   "name": "보병 지원소 #28",
+   "c": 3,
+   "r": 9,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     3,
+     9
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b29",
+   "type": "doc_mech",
+   "team": "blue",
+   "className": "기갑 지원소",
+   "name": "기갑 지원소 #29",
+   "c": 0,
+   "r": 10,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     0,
+     10
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b30",
+   "type": "doc_air",
+   "team": "blue",
+   "className": "공수 지원소",
+   "name": "공수 지원소 #30",
+   "c": 3,
+   "r": 2,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     3,
+     2
+    ]
+   ],
+   "_v133f": 0
+  },
+  {
+   "id": "b31",
+   "type": "barracks",
+   "team": "red",
+   "className": "보병 중대",
+   "name": "보병 중대 #31",
+   "c": 18,
+   "r": 5,
+   "hp": 320,
+   "maxHp": 320,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 80,
+    "f": 15
+   },
+   "cells": [
+    [
+     18,
+     5
+    ],
+    [
+     18,
+     6
+    ]
+   ],
+   "_v133f": 20
+  },
+  {
+   "id": "b32",
+   "type": "motor_pool",
+   "team": "red",
+   "className": "판처그레나디어 중대",
+   "name": "판처그레나디어 중대 #32",
+   "c": 21,
+   "r": 9,
+   "hp": 370,
+   "maxHp": 370,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     21,
+     9
+    ],
+    [
+     21,
+     10
+    ]
+   ],
+   "_v133f": 20
+  },
+  {
+   "id": "b33",
+   "type": "air_coy",
+   "team": "red",
+   "className": "공군 중대",
+   "name": "공군 중대 #33",
+   "c": 19,
+   "r": 10,
+   "hp": 380,
+   "maxHp": 380,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 50
+   },
+   "cells": [
+    [
+     19,
+     10
+    ],
+    [
+     19,
+     11
+    ]
+   ],
+   "_v133f": 4
+  },
+  {
+   "id": "b34",
+   "type": "tank_depot",
+   "team": "red",
+   "className": "기갑 중대",
+   "name": "기갑 중대 #34",
+   "c": 20,
+   "r": 5,
+   "hp": 480,
+   "maxHp": 480,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 300,
+    "f": 135
+   },
+   "cells": [
+    [
+     20,
+     5
+    ],
+    [
+     21,
+     5
+    ],
+    [
+     21,
+     6
+    ]
+   ],
+   "_v133f": 4
+  },
+  {
+   "id": "b35",
+   "type": "doc_inf",
+   "team": "red",
+   "className": "돌격 지원소",
+   "name": "돌격 지원소 #35",
+   "c": 17,
+   "r": 9,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     17,
+     9
+    ]
+   ],
+   "_v133f": 4
+  },
+  {
+   "id": "b36",
+   "type": "doc_mech",
+   "team": "red",
+   "className": "기갑 지원소",
+   "name": "기갑 지원소 #36",
+   "c": 21,
+   "r": 3,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     21,
+     3
+    ]
+   ],
+   "_v133f": 4
+  },
+  {
+   "id": "b37",
+   "type": "doc_air",
+   "team": "red",
+   "className": "공군 지원소",
+   "name": "공군 지원소 #37",
+   "c": 19,
+   "r": 3,
+   "hp": 350,
+   "maxHp": 350,
+   "armor": 0,
+   "sight": 4,
+   "cost": {
+    "g": 150,
+    "f": 40
+   },
+   "cells": [
+    [
+     19,
+     3
+    ]
+   ],
+   "_v133f": 4
+  }
+ ],
+ "bunkers": [
+  {
+   "id": 9000,
+   "c": 5,
+   "r": 4,
+   "team": "blue",
+   "type": "mg",
+   "hp": 145,
+   "maxHp": 145,
+   "cost": {
+    "g": 150,
+    "f": 0
+   },
+   "_v133f": 0
+  },
+  {
+   "id": 9001,
+   "c": 16,
+   "r": 9,
+   "team": "red",
+   "type": "mg",
+   "hp": 145,
+   "maxHp": 145,
+   "cost": {
+    "g": 150,
+    "f": 0
+   }
+  },
+  {
+   "id": 9002,
+   "c": 4,
+   "r": 9,
+   "team": "blue",
+   "type": "medic",
+   "hp": 145,
+   "maxHp": 145,
+   "cost": {
+    "g": 150,
+    "f": 0
+   },
+   "_v133f": 0
+  },
+  {
+   "id": 9003,
+   "c": 17,
+   "r": 4,
+   "team": "red",
+   "type": "medic",
+   "hp": 145,
+   "maxHp": 145,
+   "cost": {
+    "g": 150,
+    "f": 0
+   }
+  }
+ ],
+ "mines": [
+  {
+   "c": 8,
+   "r": 7,
+   "team": "blue",
+   "cost": {
+    "g": 90,
+    "f": 0
+   },
+   "dmgMul": 1
+  },
+  {
+   "c": 13,
+   "r": 6,
+   "team": "red",
+   "cost": {
+    "g": 90,
+    "f": 0
+   },
+   "dmgMul": 1
+  }
+ ],
+ "units": [
+  {
+   "id": 10,
+   "team": "blue",
+   "key": "engineer",
+   "c": 2,
+   "r": 5
+  },
+  {
+   "id": 11,
+   "team": "blue",
+   "key": "infantry",
+   "c": 3,
+   "r": 6
+  },
+  {
+   "id": 12,
+   "team": "blue",
+   "key": "infantry",
+   "c": 1,
+   "r": 7
+  },
+  {
+   "id": 13,
+   "team": "blue",
+   "key": "at_inf",
+   "c": 2,
+   "r": 7
+  },
+  {
+   "id": 14,
+   "team": "blue",
+   "key": "hmg",
+   "c": 1,
+   "r": 4
+  },
+  {
+   "id": 15,
+   "team": "blue",
+   "key": "at_gun",
+   "c": 2,
+   "r": 4
+  },
+  {
+   "id": 16,
+   "team": "blue",
+   "key": "sherman",
+   "c": 0,
+   "r": 5
+  },
+  {
+   "id": 17,
+   "team": "red",
+   "key": "engineer",
+   "c": 19,
+   "r": 6
+  },
+  {
+   "id": 18,
+   "team": "red",
+   "key": "infantry",
+   "c": 20,
+   "r": 6
+  },
+  {
+   "id": 19,
+   "team": "red",
+   "key": "infantry",
+   "c": 18,
+   "r": 7
+  },
+  {
+   "id": 20,
+   "team": "red",
+   "key": "panzergren",
+   "c": 20,
+   "r": 7
+  },
+  {
+   "id": 21,
+   "team": "red",
+   "key": "hmg",
+   "c": 19,
+   "r": 5
+  },
+  {
+   "id": 22,
+   "team": "red",
+   "key": "at_gun",
+   "c": 17,
+   "r": 7
+  },
+  {
+   "id": 23,
+   "team": "red",
+   "key": "panzer4",
+   "c": 21,
+   "r": 7
+  }
+ ]
+}

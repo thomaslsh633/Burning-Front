@@ -1,5 +1,7 @@
 # SPEC — rules in force (v209)
 
+> The rules below are the target for the rewrite in `src/`. File and function references (`js/…`, `tools/…`) point into `legacy/`.
+
 What the game does **now**, checked against the v209 code (= v208 behaviour). One line per rule, newest decision only.
 `(vNNN)` = version that set the rule; the code for it carries the same tag (`node tools/where.js` / grep `vNNN`).
 Unit numbers are not copied here: `python3 -I tools/unit.py <unit>` prints them from the running game.
@@ -9,6 +11,7 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 
 ## 1. Scale and data
 - 1 hex = 7 m, 1 turn = 10 s; rate of fire = shots in 6 s per turn, the fraction carries over to the next turn (v162, v164, v165).
+  The scale numbers in this section live in `data/balance/scale.json`; tools read them from there.
 - Unit data: CoH3 in-game JSON (US / Wehrmacht) + coh3stats 3.0.1; units without CoH3 data are estimates on the same scale (v162, v167).
 - Engine scale: HP / damage ×0.36, penetration / armour ×0.12; every number the player sees is the raw CoH3 value (v162, v167).
 - Stats are whole numbers where the player sees them (v162).
@@ -130,6 +133,113 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - No flags or antennas drawn on vehicles (v181, v183).
 
 ## 10. Decided, not in the code yet
+Confirmed 2026-11-25 (rewrite):
+- Per-unit ammunition stays: each attack spends ammo; supply trucks / supply sources refill it.
+- Per-unit fuel consumption is removed: vehicles move without spending unit fuel. Fuel remains a faction resource (prices, upkeep, income).
+- Release scope: North Africa and Italy only (factions: Afrikakorps, British Forces, US Forces, Wehrmacht); free web release.
+- Campaign: veterancy does not carry over between missions.
+- Data authority: all unit stats, weapon values and mechanics come from the CoH3 data (`data/source/coh3`), converted and tuned
+  for turns and hexes. v214 is a gameplay reference only, not a data baseline; differences from v214 are reported, not errors.
+- Unit state: every unit is in one state on each of six axes (action, stance, location, morale, lifecycle, visibility);
+  behaviour comes from these state machines (`docs/unit-state.md`). Critical conditions are a set on an active vehicle.
+- Fire rate (replaces the §1 fraction carry-over): the CoH3 rate per range band comes from CoH3 timings (aim, wind-up / down,
+  burst, cooldown, reload) over a 6 s fire window; the game uses whole shots, and expected damage per turn stays the CoH3 rate:
+  · small arms (volley): whole damage per shot (≥ CoH3 damage ÷ 6) and whole shots, the largest damage that keeps every
+    band within 5 % where possible; suppression per shot scaled the same way (Kar98k: 5 / 4 / 4 shots at 5);
+  · tank guns, AT guns, infantry AT (and small arms slower than one shot per turn): one shot per turn, damage × rate
+    (Sherman 75 mm 120 → 125);
+  · artillery (mortars, howitzers, heavy artillery): CoH3 damage per shell kept; rate rounded up as shells per turn or
+    reload turns, accuracy × (CoH3 rate ÷ game rate) (81 mm: 2 shells, accuracy ×0.89; 105 mm: 1 shell every 2 turns,
+    accuracy ×0.83); further balance through reload, scatter and accuracy overrides. Artillery too slow for normal fire is
+    fired by abilities only;
+  · grenades and mines: one shot per use at CoH3 damage. Settings: `data/balance/fire-rate.json`.
+- Numbers are whole wherever possible (rounded): shots, damage per shot, HP, cost. Small arms pick a whole damage per shot
+  and whole shots together (Kar98k: 5 / 4 / 4 shots at 5; Garand: 13 / 9 / 7 at 3); single-shot damage is rounded
+  (57 mm AT 202 / 201 / 199). Only ratios (accuracy, multipliers) keep two decimals.
+- Factions and data sets: Wehrmacht, US Forces, Afrikakorps from their CoH3 sets; British Forces use CoH3 `british_africa`
+  in North Africa and CoH3 `british` in Italy (`data/rules/roster.json`).
+- Roster: units CoH3 produces, builds, spawns by upgrade or calls in, plus units restored from v214 (Fallschirmjäger,
+  Fallschirmpioniere, medical half-track, Stummel, recovery vehicle, medical truck; US ambulance, recovery vehicle, 6×6 truck).
+  British North Africa: every CoH3 `british_africa` squad (73), incl. Indian infantry, SAS, Commandos, Crusader 57 mm, Priest.
+  Missing stats come from comparable units (`clone` in roster.json): Australian supply truck cost from the CWT 15 flatbed.
+  Every unit coh3stats.com lists with an English name is in the roster too (e.g. Assault Grenadiers, Guastatori, Folgore,
+  Goliath, Panzer IV for Afrikakorps); squad price, population and build time come from coh3stats where it has the unit.
+- CoH3 battlegroup units are unlocked by Burning Front's own doctrines, not produced by buildings.
+- Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
+  at most one of each per side (`data/rules/roster.json` heroes).
+- Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,
+  penetration, scatter) × NUM_SHOTS shells; recharge ÷ 10 s → turns (e.g. 81 mm barrage 6 × 100, 2 turns; 105 mm howitzer
+  6 × 160, 6 turns; Hummel 6 × 200, 5 turns). Off-map strikes: CoH3 does not publish their shells; set in doctrine design.
+- Indirect fire for turn play (`data/balance/indirect.json`), normal fire and barrages alike: one volley every N turns —
+  mortars 1, Priest / Hummel / Wespe (and Bishop) 1, light guns 1, 105 mm / 155-class howitzers and Obice 2, Nebelwerfer
+  and other rockets 2. Shells per volley = CoH3 damage rate over N turns ÷ CoH3 damage per shell, rounded up (barrages:
+  CoH3 shells × N × 10 s ÷ CoH3 recharge, never more than CoH3), so a faster cadence fires fewer shells; shell damage stays
+  CoH3; accuracy × carries the rounding. Range = CoH3 metres ÷ 7 capped: mortar 12, light 14, SPG 16, rockets 16, heavy 18.
+  Spread: mortars and light guns land on the aimed hex; SPGs and heavy howitzers put each shell on a random hex within 1
+  (7 hexes), rockets within 2 (19 hexes); on the hex where it lands the shell rolls accuracy against the units there.
+  Examples: 81 mm barrage 3 shells every turn; 105 mm barrage 2 shells every 2 turns over 7 hexes; Hummel barrage 2 shells
+  every turn at accuracy ×0.67.
+- Minimum range: indirect weapons cannot fire at targets closer than round(CoH3 min ÷ CoH3 max × our range) hexes, at least
+  the class floor (mortar 2, light 2, SPG 3, heavy 3, rocket 3); direct fire keeps CoH3 min ÷ 7 (almost always 0).
+- Rocket volleys in normal fire are capped at 3 rockets (as their barrage); their damage per turn is then below CoH3.
+- Fire beyond sight: indirect weapons without `needs_sight` may target any hex in range, seen or not. Blind fire: accuracy ÷
+  CoH3 scatter fog multipliers (angle × distance, usually 1.25 × 1.25 → ×0.64) and spread one hex wider.
+- Counter-barrage: the hex an indirect weapon fires from is sound-ranged for the opponent until the end of the opponent's next
+  turn (status flag `sound_ranged`); fire at a sound-ranged hex has no blind penalty, even out of sight.
+- Weapon operation rules come from CoH3 weapon behaviour (`data/rules/weapon-flags.json`): ignores blockers, needs sight,
+  anti-air, emplace required / faces target, friendly fire, piercing, hits all on miss / hit, attack ground, targets garrison,
+  sniper kill, replaceable by upgrades, fire on move, reveals on fire.
+- Status flags (`data/rules/status-flags.json`): stored or derived from the six state axes; e.g. reloading, low / out of ammo,
+  repairing / being repaired, emplaced / setting up / packed, overwatch, engaged, criticals, decrewed, hero.
+- Recrew and capture (approved 2026-11-25, `docs/unit-state.md` §6): a team weapon whose crew dies stays on its hex,
+  decrewed; abandoned vehicles come from missions or a crew bail-out critical; an infantry squad with enough men spends its
+  action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
+- Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
+  uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
+  The move is a pool of move points: Move and hull Turn spend from it, in as many steps as it lasts (D2).
+- Terrain (`data/rules/terrain.json`, v214 values): a hex has a ground (cost per move class: infantry / vehicle) and at most
+  one object (crater, trench, bush, dune, rubble, debris, three forest densities, rock, tank trap) whose cost replaces the
+  ground's; a line on a hex edge (hedge, fence, stone wall, low wall, balustrade, sandbag row, wire) adds a crossing cost;
+  null = impassable. Buildings are structures with a footprint: nobody walks in (garrisoning is a command). Wrecks: infantry
+  cross them, vehicles cannot. Units pass through friendly units but never stop on them; enemies block (D2).
+  Shots that miss fly on into the line on the target's covering edge; shells damage what stands on the hex they land on.
+- Overwatch is for machine-gun teams only (HMG team weapons, e.g. M1919 / MG42 / Vickers teams). An emplaced MG team that
+  holds (does not fire in its turn) fires once in the enemy turn at the first enemy that moves into its arc, range and sight.
+  Infantry with LMGs, vehicles with MGs and every other weapon never overwatch; this replaces crew watch fire (§5).
+  Counter fire stays for all units (§4).
+- Suppression has two states: suppressed (move −50 %, accuracy ×0.5) and pinned (no move except retreat, cannot capture);
+  it decays at the own turn start, faster in cover. Values are tuned in data.
+  D2 values (`data/balance/status.json`, 0–100): suppressed at 30, pinned at 80, back to normal below 20; decay 35 per own turn
+  start, 50 in cover. Emplacing spends the rest of the move and the action; a packed crew that must emplace sets up by itself
+  at its turn end. Veterancy XP = share of the victim's HP destroyed × its price; ranks at the CoH3 thresholds.
+- Edge cover is directional: hedges, walls, fences and sandbags on a hex edge protect only against fire that crosses that edge.
+- Vehicle criticals: a penetrating hit can roll engine damaged (move −50 %), immobilised, main gun damaged or crew shocked
+  (no action next turn); chances from data.
+- Destruction: tanks crush hedges and fences; HE damages buildings into ruins (cover changes); heavy shells leave craters (light cover).
+- Map features (2026-11-26, `docs/map-design.md` §5): garrisonable buildings have HP by size (hundreds to thousands, HP bar on
+  hover / select); when one collapses, every garrisoned infantry man dies and garrisoned team weapons are destroyed. Natural
+  cover (fences, hedges, walls, debris) has HP and is destructible but shows no HP bar. Defensive structures (sandbags, wire,
+  tank traps, bunkers) take HP and armour per faction from CoH3; they fall to explosives, fire, AT weapons and vehicle crush
+  (tank traps cannot be crushed). Destroyed vehicles and emplacements leave wreck objects: heavy cover (green) for infantry.
+  HQ buildings stay indestructible (§2).
+- Walls, hedges, fences, sandbags and wire are drawn as free lines; a line occupies the hex edge between two hexes when it
+  crosses the segment joining their centres (`docs/map-design.md` §2 B).
+- Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
+- Attack resolution (D2, `data/balance/combat.json`): every living member fires its main / secondary weapons (carried team
+  weapons fire the crew weapon once; towed guns fire the gun; smoke launchers, grenades and ability weapons do not).
+  Each shot: hit = CoH3 accuracy[band] × target size × weapon cover / target-morale modifiers × attacker morale (suppressed
+  ×0.5, pinned ×0.25) × moving accuracy after a move × (1 + 0.3 × lost men ÷ (N − 1)) × retreating ×0.5 × obscured ×0.85 (≤ 1);
+  then penetration = penetration ÷ armour of the face hit (front within 60°, side within 120°, else rear), else CoH3
+  deflection damage; damage × cover and target-type modifiers × directional damage; emplaced targets take ×0.9 damage, ×0.8
+  suppression. AoE weapons splash squads at the falloff for a 2.5 m spread (miss: half). Penetrating hits on vehicles roll
+  criticals (chances in data). An attack spends one volley of ammo (indirect: one per shell). Suppression = CoH3 amount × 100
+  per shot ÷ the volley multiplier × cover / morale modifiers; vehicles and structures take none.
+- Sight (D2, v214 v144 rules, `data/balance/vision.json`): a line is blocked where ground or a `block` object / edge rises above
+  the line from the viewer's eye (infantry and crews 1.5, vehicles 2, structures 3) to 1 above the target's ground; `partial`
+  objects obscure (hit ×0.85); low objects (height ≤ 2) beside the viewer are ignored; neighbours always see each other.
+  Units in bush or light forest are seen from 2 hexes, dense forest and buildings from 1; an emplaced crew in cover that
+  neither moved nor fired conceals at its turn end (seen from 2); CoH3 camouflage units use their `detected_hex`.
+
 Confirmed 2026-11-22:
 - Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn
   (e.g. 2 men together neutralise an enemy point in one turn instead of 2). Still 2 points per step.

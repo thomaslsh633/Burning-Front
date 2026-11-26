@@ -1,0 +1,132 @@
+{
+  "about": "fx.json per faction: { weapon | ebps | sbps | upgrade: { <id>: fx } }. Looks, sound and names only.",
+  "$defs": {
+    "fx": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "types.schema.json#/$defs/I18nKey"
+        },
+        "short_name": {
+          "$ref": "types.schema.json#/$defs/I18nKey"
+        },
+        "desc": {
+          "$ref": "types.schema.json#/$defs/I18nKey"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "portrait": {
+          "type": "string"
+        },
+        "model": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "sprite_scale": {
+              "type": "number",
+              "minimum": 0
+            },
+            "anim_class": {
+              "type": "string",
+              "vocab": "anim_class"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "id"
+          ]
+        },
+        "menu": {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string"
+            },
+            "order": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "tab"
+          ]
+        },
+        "sound": {
+          "type": "object",
+          "properties": {
+            "fire": {
+              "type": "string"
+            },
+            "impact": {
+              "type": "string"
+            },
+            "move": {
+              "type": "string"
+            },
+            "death": {
+              "type": "string"
+            },
+            "select": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "effect": {
+          "type": "object",
+          "properties": {
+            "muzzle": {
+              "type": "string"
+            },
+            "tracer": {
+              "type": "string"
+            },
+            "impact": {
+              "type": "string"
+            },
+            "death": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "name"
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "weapon": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/fx"
+      }
+    },
+    "ebps": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/fx"
+      }
+    },
+    "sbps": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/fx"
+      }
+    },
+    "upgrade": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/fx"
+      }
+    }
+  }
+}

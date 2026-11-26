@@ -1,0 +1,46 @@
+{
+  "about": "veterancy.json per faction: { <set id>: { xp, ranks } }.",
+  "$defs": {
+    "set": {
+      "type": "object",
+      "properties": {
+        "coh3_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "xp": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "ranks": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "propertyVocab": "veterancy_modifier",
+            "additionalProperties": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "xp",
+        "ranks"
+      ]
+    }
+  },
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/$defs/set"
+  }
+}

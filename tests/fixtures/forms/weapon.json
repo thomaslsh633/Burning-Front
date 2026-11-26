@@ -1,0 +1,876 @@
+{
+ "rifle": {
+  "garand_rifleman_us": {
+   "coh3_ref": "weapon/american/small_arms/single_fire/rifle/garand_rifleman_us",
+   "class": "rifle",
+   "fire_rule": "volley",
+   "damage": 12,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 2,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.68,
+     "mid": 0.62,
+     "far": 0.35
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 13,
+     "mid": 9,
+     "far": 7
+    },
+    "damage_per_shot": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "shot_multiplier": 4,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.75
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.75
+     }
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.5
+   },
+   "traits": [
+    "fire_on_move",
+    "replaceable"
+   ]
+  }
+ },
+ "sidearm": {
+  "colt_m1911_us": {
+   "coh3_ref": "weapon/american/small_arms/single_fire/sidearm/colt_m1911_us",
+   "class": "pistol",
+   "fire_rule": "volley",
+   "damage": 8,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.6,
+     "mid": 0.4,
+     "far": 0.2
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 3
+    },
+    "shots_per_turn": {
+     "near": 5,
+     "mid": 3,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 8,
+     "mid": 8,
+     "far": 8
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   }
+  }
+ },
+ "sub_machine_gun": {
+  "thompson_riflemen_leader_us": {
+   "coh3_ref": "weapon/american/small_arms/machine_gun/sub_machine_gun/thompson_riflemen_leader_us",
+   "class": "smg",
+   "fire_rule": "volley",
+   "damage": 3,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.3,
+     "far": 0.2
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 22,
+     "mid": 14,
+     "far": 10
+    },
+    "damage_per_shot": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "shot_multiplier": 1.5
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.75
+   }
+  }
+ },
+ "light_machine_gun": {
+  "bar_riflemen_us": {
+   "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/bar_riflemen_us",
+   "class": "lmg",
+   "fire_rule": "volley",
+   "damage": 5.25,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.4,
+     "far": 0.3
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 17,
+     "mid": 15,
+     "far": 13
+    },
+    "damage_per_shot": {
+     "near": 5,
+     "mid": 5,
+     "far": 5
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "suppression": {
+    "amount": 0.002
+   }
+  }
+ },
+ "heavy_machine_gun": {
+  "m1919a4_30cal_hmg_us": {
+   "coh3_ref": "weapon/american/small_arms/machine_gun/heavy_machine_gun/30cal_hmg_us",
+   "class": "hmg",
+   "fire_rule": "volley",
+   "damage": 4,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 1.5,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.4,
+     "far": 0.3
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 60,
+     "mid": 50,
+     "far": 40
+    },
+    "damage_per_shot": {
+     "near": 4,
+     "mid": 4,
+     "far": 4
+    },
+    "arc_deg": 60
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "suppression": {
+    "amount": 0.032,
+    "nearby_mult": 0.5,
+    "nearby_radius_m": 5
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "traits": [
+    "emplace_required",
+    "emplace_faces_target"
+   ]
+  }
+ },
+ "infantry_anti_tank_weapon": {
+  "bazooka_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/infantry_anti_tank_weapon/bazooka_us",
+   "class": "bazooka",
+   "fire_rule": "single_shot",
+   "damage": 100,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 120,
+    "mid": 100,
+    "far": 80
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.95,
+     "mid": 0.72,
+     "far": 0.55
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 96,
+     "mid": 96,
+     "far": 96
+    }
+   },
+   "deflection": {
+    "damage_ratio": 0.25
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "vs_target": {
+    "infantry": {
+     "damage": 0.25
+    }
+   }
+  }
+ },
+ "tank_gun": {
+  "75mm_sherman_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/tank_gun/75mm_sherman_us",
+   "class": "cannon",
+   "fire_rule": "single_shot",
+   "damage": 120,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 135,
+    "mid": 123,
+    "far": 110
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.08,
+     "mid": 0.05,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 125,
+     "mid": 125,
+     "far": 125
+    },
+    "arc_deg": 360
+   },
+   "deflection": {
+    "damage_ratio": 0.1
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "persons": {
+    "vs_infantry": 2
+   }
+  }
+ },
+ "tungsten_round_upgrade": {
+  "76mm_sherman_hvap_us": {
+   "coh3_ref": null,
+   "estimated": true,
+   "class": "cannon",
+   "fire_rule": "single_shot",
+   "damage": 160,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 220,
+    "mid": 200,
+    "far": 180
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.08,
+     "mid": 0.05,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 150,
+     "mid": 150,
+     "far": 150
+    }
+   },
+   "deflection": {
+    "damage_ratio": 0.1
+   },
+   "ammo": {
+    "per_shot": 2
+   },
+   "traits": [
+    "replacement"
+   ]
+  }
+ },
+ "anti_tank_gun": {
+  "57mm_at_gun_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/anti_tank_gun/57mm_at_gun_us",
+   "class": "at_gun",
+   "fire_rule": "single_shot",
+   "damage": 160,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 180,
+    "mid": 165,
+    "far": 150
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.07,
+     "mid": 0.06,
+     "far": 0.05
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 8
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 202,
+     "mid": 201,
+     "far": 199
+    },
+    "arc_deg": 60
+   },
+   "deflection": {
+    "damage_ratio": 0.1
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "vs_target": {
+    "infantry": {
+     "damage": 0.25
+    }
+   }
+  }
+ },
+ "anti_air_gun": {
+  "20mm_flak_ger": {
+   "coh3_ref": "weapon/german/anti_air_gun/20mm_flak_ger",
+   "class": "cannon_burst",
+   "fire_rule": "volley",
+   "damage": 12,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 20,
+    "mid": 15,
+    "far": 10
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.4,
+     "far": 0.3
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 6,
+     "mid": 5,
+     "far": 4
+    },
+    "damage_per_shot": {
+     "near": 12,
+     "mid": 12,
+     "far": 12
+    }
+   },
+   "emplace": {
+    "required": true
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "traits": [
+    "anti_air",
+    "anti_air_through_cover"
+   ]
+  }
+ },
+ "mortar": {
+  "81mm_mortar_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/mortar/81mm_mortar_us",
+   "class": "mortar",
+   "fire_rule": "artillery",
+   "damage": 100,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 20,
+    "mid": 20,
+    "far": 20
+   },
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 0.6,
+     "mid": 0.5,
+     "far": 0.4
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 12
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 100,
+     "mid": 100,
+     "far": 100
+    },
+    "accuracy_scale": {
+     "near": 0.89,
+     "mid": 0.89,
+     "far": 0.89
+    }
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.35,
+     "far": 0.05
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 2.5,
+     "far": 4.5
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 8.5,
+    "distance_ratio": 0.1,
+    "distance_max_m": 7.5
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0
+   },
+   "indirect": {
+    "class": "mortar",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 3,
+    "range_hex": 12,
+    "blind_accuracy_scale": 0.64
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "traits": [
+    "ignores_blockers",
+    "attack_ground",
+    "friendly_fire"
+   ]
+  }
+ },
+ "light_artillery": {
+  "75mm_pack_howitzer_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/light_artillery/75mm_pack_howitzer_us",
+   "class": "artillery_small",
+   "fire_rule": "artillery",
+   "damage": 120,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 20,
+    "mid": 20,
+    "far": 20
+   },
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.45,
+     "far": 0.4
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 14
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 120,
+     "mid": 120,
+     "far": 120
+    },
+    "accuracy_scale": {
+     "near": 0.72,
+     "mid": 0.72,
+     "far": 0.72
+    }
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.35,
+     "far": 0.05
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 3,
+     "far": 5
+    }
+   },
+   "scatter": {
+    "angle_deg": 7,
+    "distance_ratio": 0.125,
+    "distance_max_m": 10
+   },
+   "indirect": {
+    "class": "light",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 3,
+    "range_hex": 14
+   },
+   "emplace": {
+    "required": true
+   },
+   "ammo": {
+    "per_shot": 1
+   }
+  }
+ },
+ "heavy_artillery": {
+  "105mm_howitzer_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/heavy_artillery/105mm_howitzer_us",
+   "class": "artillery_medium",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.45,
+     "far": 0.4
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 18
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.82,
+     "mid": 0.82,
+     "far": 0.82
+    }
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.4,
+     "far": 0.1
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 4,
+     "far": 8
+    },
+    "max_members": 4
+   },
+   "scatter": {
+    "angle_deg": 8.5,
+    "distance_ratio": 0.125,
+    "distance_max_m": 12
+   },
+   "indirect": {
+    "class": "heavy",
+    "usage_turns": 2,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 18
+   },
+   "reload": {
+    "turns": 1
+   },
+   "emplace": {
+    "required": true
+   },
+   "ammo": {
+    "per_shot": 1
+   }
+  }
+ },
+ "grenade": {
+  "grenade_rifleman_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/grenade_rifleman_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 80,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.1
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 2,
+     "far": 4
+    }
+   },
+   "use": {
+    "by_ability": true
+   },
+   "traits": [
+    "ignores_blockers"
+   ]
+  }
+ },
+ "mine": {
+  "m2_mine_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/mine/m2_mine_us",
+   "class": "mine",
+   "fire_rule": "per_use",
+   "damage": 100,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 100,
+    "mid": 100,
+    "far": 100
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.1
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 2,
+     "far": 4
+    }
+   },
+   "trigger": {
+    "on": "enter_hex",
+    "targets": [
+     "infantry",
+     "light_vehicle"
+    ]
+   }
+  }
+ },
+ "flame_throwers": {
+  "m2_flamethrower_us": {
+   "coh3_ref": "weapon/american/flame_throwers/m2_flamethrower_us",
+   "class": "flame",
+   "fire_rule": "volley",
+   "damage": 6,
+   "damage_type": "flame",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 3
+    },
+    "shots_per_turn": {
+     "near": 17,
+     "mid": 17,
+     "far": 17
+    },
+    "damage_per_shot": {
+     "near": 6,
+     "mid": 6,
+     "far": 6
+    }
+   },
+   "burn": {
+    "turns": 1,
+    "damage": 10
+   },
+   "ammo": {
+    "per_shot": 1
+   }
+  }
+ },
+ "aircraft": {
+  "strafing_run_p47_us": {
+   "coh3_ref": null,
+   "estimated": true,
+   "class": "cannon_burst",
+   "fire_rule": "ability",
+   "damage": 12,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 10,
+    "mid": 10,
+    "far": 10
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.1
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 3
+    }
+   },
+   "use": {
+    "by_ability": true
+   }
+  }
+ },
+ "smoke": {
+  "m2_smoke_mortar_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/mortar/81mm_smoke_mortar_us",
+   "class": "mortar",
+   "fire_rule": "artillery",
+   "damage": 0,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "use": {
+    "by_ability": true
+   },
+   "aoe": {
+    "damage": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 3,
+     "far": 6
+    }
+   },
+   "scatter": {
+    "angle_deg": 8.5,
+    "distance_ratio": 0.1,
+    "distance_max_m": 7.5
+   }
+  }
+ }
+}
