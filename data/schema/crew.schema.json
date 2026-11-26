@@ -1,0 +1,20 @@
+{
+  "about": "data/balance/crew.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "auto_emplace_at_turn_end": {
+      "type": "boolean"
+    },
+    "emplace_spends_remaining_move": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "auto_emplace_at_turn_end",
+    "emplace_spends_remaining_move"
+  ]
+}

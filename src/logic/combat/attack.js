@@ -5,6 +5,7 @@ import { distance, disk, inside } from '../hex/index.js';
 import { unitAt, putUnit, isOnMap } from '../state/index.js';
 import { canSee, coverAgainst, sightLine, eyeHeight } from '../vision/index.js';
 import { ev } from '../events/index.js';
+import { rankMods } from '../status/index.js';
 import { band, armorFace, penChance, splashFactor, targetMods, hitChance, wholeDamage } from './formulas.js';
 import { firingWeapons, weaponReach } from './weapons.js';
 
@@ -43,11 +44,13 @@ export function volleyModel(state, data, att, w, tgt) {
     tgt.kind === 'squad' && n > 1 ? 1 + (c.lost_men_received_accuracy * lost) / (n - 1) : 1,
     tgt.fsm.morale === 'RETREATING' ? c.retreating_received_accuracy : 1,
     obscured ? data.balance.vision.obscured_accuracy : 1,
+    rankMods(att, data).weapon_accuracy ?? 1, rankMods(tgt, data).received_accuracy ?? 1,
   ];
   const emplaced = tgt.fsm.stance === 'EMPLACED';
   const supp = takesSuppression(tgt) ? ((wp.suppression?.amount ?? 0) * c.suppression_points) / (a.shot_multiplier ?? 1)
     * (coverMods.suppression ?? 1) * (moraleMods.suppression ?? 1) * (emplaced ? c.emplaced_received.suppression : 1) : 0;
-  return { band: b, cover, shots: a.shots_per_turn[b], factors, damage: a.damage_per_shot[b] * (coverMods.damage ?? 1) * (emplaced ? c.emplaced_received.damage : 1),
+  const shots = Math.max(1, Math.round(a.shots_per_turn[b] / (rankMods(att, data).attack_speed ?? 1)));   // faster cycle, more shots
+  return { band: b, cover, shots, factors, damage: a.damage_per_shot[b] * (coverMods.damage ?? 1) * (emplaced ? c.emplaced_received.damage : 1),
     suppressionPerShot: supp, indirect: a.fire_mode === 'indirect' };
 }
 

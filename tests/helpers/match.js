@@ -7,7 +7,8 @@ import { gameData } from './game-data.js';
 export function testMatch(units, map = {}) {
   const data = gameData();
   let state = createMatch({ map: { cols: 12, rows: 10, ...map }, order: ['blue', 'red'], rng: 1,
-    teams: { blue: { faction: 'american', resources: { manpower: 600, munition: 10, fuel: 20 } }, red: { faction: 'german', resources: { manpower: 600, munition: 10, fuel: 20 } } },
+    teams: { blue: { faction: 'american', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 0, r: 0 } },
+      red: { faction: 'german', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 11, r: 9 } } },
     units }, data);
   state = { ...state, match: { ...state.match, turn: 1, side: 'blue' } };
   for (const u of Object.values(state.units)) if (u.team === 'blue') state = refreshUnit(state, u.id, data).state;

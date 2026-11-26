@@ -49,3 +49,10 @@ export function spend(state, unitId, { move = 0, action = 0, fired = false }) {
   }
   return { state: putUnit(state, unit), events };
 }
+
+/** End the unit's turn now (retreat, leaving ACTIVE): no budget, EXHAUSTED, overwatch dropped. */
+export function exhaust(state, unitId) {
+  const u = state.units[unitId];
+  const t = transition(ACTION, { ...u, budget: { ...u.budget, move: 0, action: 0, counter: 0 }, overwatch: null }, 'EXHAUSTED');
+  return { state: putUnit(state, t.unit), events: t.events };
+}

@@ -7,7 +7,7 @@ export const UNIT_FIELD_OWNERS = {
   'fsm.action': 'turn', budget: 'turn', overwatch: 'turn',
   'fsm.stance': 'crew', 'timers.stance': 'crew',
   'fsm.location': 'transport', container: 'transport',
-  'fsm.morale': 'status', suppression: 'status', retreatTo: 'status',
+  'fsm.morale': 'status', suppression: 'status', retreatTo: 'status', xp: 'status', rank: 'status',
   'fsm.life': 'lifecycle', criticals: 'lifecycle', crew: 'lifecycle', team: 'lifecycle',
   'fsm.visibility': 'vision', 'timers.revealedUntil': 'vision',
   pos: 'movement', facing: 'movement', turretFacing: 'movement',

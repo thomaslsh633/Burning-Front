@@ -7,12 +7,9 @@
 - critical conditions set: engine_damaged, immobilised, main_gun_damaged, crew_shocked (set by combat, cleared by repair)
 - recrew / capture command (approved design), manual abandon, wreck creation and clearance, denial of own abandoned equipment
 
-## Public API (planned, exported from `index.js`)
-- `lifeMachine` (FSM definition)
-- `canRecrew(state, squadId, targetId, data) → ok | reason`
-- `recrew(state, squadId, targetId, data) → { state, events }`
-- `abandon(state, unitId, data) → { state, events }`
-- `clearWreck(state, engineerId, wreckId, data) → { state, events }`
+## Public API (exported from `index.js`)
+- `LIFE` machine, `checkDeaths` (squad removed, crewless gun DECREWED, vehicle / structure / gun WRECKED), `applyCriticals` — done
+- `canRecrew`, `recrew`, `abandon`, `clearWreck` — planned (D2-7)
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

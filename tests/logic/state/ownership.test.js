@@ -14,7 +14,7 @@ test('each FSM axis has exactly one owner', () => {
   const axes = ['action', 'stance', 'location', 'morale', 'life', 'visibility'];
   assert.deepEqual(axes.map(a => ownerOf(`fsm.${a}`)), ['turn', 'crew', 'transport', 'status', 'lifecycle', 'vision']);
   assert.equal(ownerOf('budget.move'), 'turn', 'a path owns everything below it');
-  assert.equal(ownerOf('xp'), null);
+  assert.equal(ownerOf('marks.repair'), null);
 });
 
 test('changedPaths: nested objects by field, arrays as a whole', () => {
@@ -26,8 +26,9 @@ test('changedPaths: nested objects by field, arrays as a whole', () => {
 
 test('foreignWrites names the owner of each field a system should not have touched', () => {
   const a = unit(), b = unit();
-  b.fsm.action = 'MOVING'; b.budget.move = 0; b.suppression = 40; b.xp = 1;
-  assert.deepEqual(foreignWrites('turn', a, b), [{ path: 'suppression', owner: 'status' }, { path: 'xp', owner: null }]);
+  b.fsm.action = 'MOVING'; b.budget.move = 0; b.suppression = 40; b.xp = 1; b.marks = { x: 1 };
+  const byPath = (x, y) => x.path.localeCompare(y.path);
+  assert.deepEqual(foreignWrites('turn', a, b).sort(byPath), [{ path: 'marks.x', owner: null }, { path: 'suppression', owner: 'status' }, { path: 'xp', owner: 'status' }]);
 });
 
 test('assertOwnsOnly passes for own fields and fails with the owner named', () => {

@@ -1,0 +1,7 @@
+{
+  "about": "Morale and suppression (SPEC §4, §10; docs/unit-state.md §5.4) and veterancy XP. CoH3's global suppression thresholds are not in coh3-data, so these are design values on a 0–100 scale (weapon suppression × 100 per shot, data/balance/combat.json).",
+  "suppression": { "max": 100, "suppressed_at": 30, "pinned_at": 80, "recover_below": 20, "decay_per_turn": 35, "decay_in_cover": 50 },
+  "retreat": { "arrive_within_hex": 3 },
+  "xp": { "per_value_destroyed": 1 },
+  "low_ammo_share": 0.25
+}

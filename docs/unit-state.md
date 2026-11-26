@@ -207,7 +207,7 @@ Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckClear
 | Action FSM, budgets, overwatch eligibility | `logic/turn` | `fsm.action`, `budget`, `overwatch` | weapon classes, move points |
 | Stance FSM | `logic/crew` | `fsm.stance`, `timers.stance` | `setup_turns`, `teardown_turns`, arcs |
 | Location FSM | `logic/transport` | `fsm.location`, `container` | capacities, garrison rules |
-| Morale FSM, suppression points | `logic/status` | `fsm.morale`, `suppression`, `retreatTo` | thresholds, decay, multipliers |
+| Morale FSM, suppression points, veterancy | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank` | thresholds, decay, multipliers, veterancy sets |
 | Lifecycle FSM, criticals, recrew, wrecks | `logic/lifecycle` | `fsm.life`, `criticals`, `crew`, team | recrewable data, crit chances, wreck rules |
 | Visibility FSM | `logic/vision` | `fsm.visibility`, `timers.revealedUntil` | stealth data, sight |
 | Position and facing | `logic/movement` | `pos`, `facing`, `turretFacing` | move points, pass types, terrain costs |
@@ -216,7 +216,7 @@ Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckClear
 | Generic machine helper | `logic/fsm` | — | — |
 
 The "Stored in unit" column is also code: `src/logic/state/ownership.js` (`UNIT_FIELD_OWNERS`). Change both together.
-`xp`, `rank`, `timers.smoke` and `marks` have no owner yet; the system that first writes one adds its row here and there.
+`timers.smoke` and `marks` have no owner yet; the system that first writes one adds its row here and there.
 Each system's apply test checks it with `assertOwnsOnly` (`tests/helpers/ownership.js`).
 
 ## 8. What this means for data

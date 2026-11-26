@@ -10,7 +10,7 @@ export const EVENT = Object.freeze(Object.fromEntries([
   'Moved', 'Turned', 'MoveInterrupted',
   // combat
   'Fired', 'ShotMissed', 'ShotHit', 'PenetrationFailed', 'Damaged', 'ModelKilled', 'UnitDestroyed', 'Suppressed', 'AmmoSpent',
-  'CounterFired', 'OverwatchFired', 'CriticalInflicted',
+  'CounterFired', 'OverwatchFired', 'CriticalInflicted', 'RankGained', 'Retreated',
   // vision
   'Revealed', 'Concealed', 'Spotted',
   // crew and lifecycle

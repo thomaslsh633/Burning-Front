@@ -1,6 +1,6 @@
 // Movement (SPEC §1, §4, §6): move points, reachable hexes, paths, hull turning and reverse.
 // Writes only pos, facing and turretFacing (src/logic/state/ownership.js); the move budget is the turn system's.
-import { key, fromKey, equals, neighbours, direction, turnSteps, angle } from '../hex/index.js';
+import { key, fromKey, equals, neighbours, direction, turnSteps, angle, distance } from '../hex/index.js';
 import { unitAt, putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { stepCost } from './terrain.js';
@@ -103,10 +103,11 @@ const withFacing = (u, facing) => ({ ...u, facing, turretFacing: u.turretFacing 
 
 /**
  * Walk the path hex by hex. onStep(state, unitId) → { state, events, stop } lets reactions (overwatch) interrupt.
+ * points: move points to path with (default: the unit's move budget; retreat passes its own).
  * → { state, events, cost } (cost = move points actually spent).
  */
-export function applyMove(state, cmd, data, onStep) {
-  const reach = reachable(state, data, cmd.unit, { reverse: !!cmd.reverse });
+export function applyMove(state, cmd, data, onStep, points) {
+  const reach = reachable(state, data, cmd.unit, { reverse: !!cmd.reverse, points });
   const path = pathTo(reach, cmd.to);
   let s = state, cost = 0;
   const events = [];
@@ -136,4 +137,17 @@ export function validateTurn(state, cmd, data) {
 export function applyTurn(state, cmd, data) {
   const u = state.units[cmd.unit];
   return { state: putUnit(state, withFacing(u, cmd.facing)), events: [ev('Turned', { unit: u.id, from: u.facing, to: cmd.facing })], cost: turnCost(u, data, cmd.facing) };
+}
+
+/** Walk as close to `goal` as `points` allow (retreat): the free reachable hex nearest the goal, cheapest on ties. */
+export function moveToward(state, data, unitId, goal, points) {
+  const reach = reachable(state, data, unitId, { points });
+  let best = null;
+  for (const [k, v] of reach) {
+    if (!v.stop) continue;
+    const h = fromKey(k), d = distance(h, goal);
+    if (!best || d < best.d || (d === best.d && v.cost < best.cost)) best = { h, d, cost: v.cost };
+  }
+  if (!best || equals(best.h, state.units[unitId].pos)) return { state, events: [], cost: 0 };
+  return applyMove(state, { unit: unitId, to: best.h }, data, undefined, points);
 }

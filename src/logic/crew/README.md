@@ -8,11 +8,8 @@
 - firing arc of emplaced weapons
 - auto-emplace at end of turn
 
-## Public API (planned, exported from `index.js`)
-- `emplace`
-- `pack`
-- `canFire`
-- `arcOf`
+## Public API (exported from `index.js`)
+- `STANCE` machine, `emplace`, `pack`, `validateEmplace`, `validatePack`, `crewTurnStart`, `crewTurnEnd` (auto-emplace), `setupTurns` / `teardownTurns` — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

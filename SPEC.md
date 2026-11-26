@@ -207,6 +207,9 @@ Confirmed 2026-11-25 (rewrite):
   Counter fire stays for all units (§4).
 - Suppression has two states: suppressed (move −50 %, accuracy ×0.5) and pinned (no move except retreat, cannot capture);
   it decays at the own turn start, faster in cover. Values are tuned in data.
+  D2 values (`data/balance/status.json`, 0–100): suppressed at 30, pinned at 80, back to normal below 20; decay 35 per own turn
+  start, 50 in cover. Emplacing spends the rest of the move and the action; a packed crew that must emplace sets up by itself
+  at its turn end. Veterancy XP = share of the victim's HP destroyed × its price; ranks at the CoH3 thresholds.
 - Edge cover is directional: hedges, walls, fences and sandbags on a hex edge protect only against fire that crosses that edge.
 - Vehicle criticals: a penetrating hit can roll engine damaged (move −50 %), immobilised, main gun damaged or crew shocked
   (no action next turn); chances from data.
