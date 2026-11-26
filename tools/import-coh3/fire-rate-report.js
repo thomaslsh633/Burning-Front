@@ -6,10 +6,10 @@ import { fileURLToPath } from 'node:url';
 import { RACES } from '../coh3/fetch.js';
 import { records } from '../coh3/census.js';
 import { fireRate } from './fire-rate.js';
+import { loadConfig } from '../lib/config.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const cfg = { ...JSON.parse(fs.readFileSync(path.join(root, 'data/balance/fire-rate.json'), 'utf8')),
-  indirect: JSON.parse(fs.readFileSync(path.join(root, 'data/balance/indirect.json'), 'utf8')) };
+const cfg = loadConfig(root).fire;
 const source = JSON.parse(fs.readFileSync(path.join(root, 'data/source/coh3/SOURCE.json'), 'utf8'));
 
 const rows = [];

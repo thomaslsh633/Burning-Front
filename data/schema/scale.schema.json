@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metres_per_hex",
+    "seconds_per_turn",
+    "fire_window_seconds",
+    "infantry_speed_mps",
+    "infantry_move_hex",
+    "direct_range_bonus_hex",
+    "sight_bonus_hex",
+    "emplace",
+    "wreck",
+    "engine"
+  ],
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "metres_per_hex": {
+      "type": "number",
+      "minimum": 0
+    },
+    "seconds_per_turn": {
+      "type": "number",
+      "minimum": 0
+    },
+    "fire_window_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "infantry_speed_mps": {
+      "type": "number",
+      "minimum": 0
+    },
+    "infantry_move_hex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "direct_range_bonus_hex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sight_bonus_hex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "emplace": {
+      "type": "object",
+      "required": [
+        "setup_turns",
+        "teardown_turns"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "setup_turns": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "teardown_turns": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "wreck": {
+      "type": "object",
+      "required": [
+        "cover",
+        "blocks_vehicles"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cover": {
+          "type": "string",
+          "vocab": "cover"
+        },
+        "blocks_vehicles": {
+          "type": "boolean"
+        }
+      }
+    },
+    "engine": {
+      "type": "object",
+      "required": [
+        "hp_damage_scale",
+        "penetration_armor_scale"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "hp_damage_scale": {
+          "type": "number",
+          "minimum": 0
+        },
+        "penetration_armor_scale": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

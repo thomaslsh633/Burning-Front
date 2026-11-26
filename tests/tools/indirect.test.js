@@ -7,7 +7,7 @@ const cfg = { classes: {
   spg: { patterns: ['hummel', 'priest'], usage_turns: 1, range_cap_hex: 16, spread_hex: 1 },
   rocket: { patterns: ['nebelwerfer'], usage_turns: 2, range_cap_hex: 16, spread_hex: 2, min_range_floor_hex: 3, max_shells: 3 },
   heavy: { patterns: ['105mm_howitzer', 'obice'], usage_turns: 2, range_cap_hex: 18, spread_hex: 1, min_range_floor_hex: 3 },
-}, blind: { extra_spread_hex: 1, default_fow_multiplier: 1.25 } };
+}, blind: { extra_spread_hex: 1, default_fow_multiplier: 1.25 }, scale: { metres_per_hex: 7, seconds_per_turn: 10 } };
 
 test('class by id pattern, first match wins; unknown → null', () => {
   assert.equal(classOf('81mm_mortar_us', cfg).id, 'mortar');

@@ -1,6 +1,12 @@
 # data/balance/
 
-Turn-based tuning: scale (HP ×0.36, pen ×0.12, 1 hex = 7 m, 1 turn = 10 s / 6 s fire window), range and sight bonuses, band rules, AI profiles.
+Turn-based tuning, read by the tools through `tools/lib/config.js` (`loadConfig`):
+
+- `scale.json` — game scale: metres per hex, seconds per turn, fire window, infantry speed → hexes, range and sight bonuses,
+  emplace turns, wreck cover, engine HP / penetration scale. No tool may hard-code these.
+- `fire-rate.json` — fire-rate rules (volley, single shot, artillery). The fire window comes from `scale.json`.
+- `indirect.json` — indirect-fire classes, barrages, blind fire.
+- `ammo.json` — ammunition per weapon class.
 
 - Format: JSON
 - Edited by: You, when balancing

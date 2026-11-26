@@ -1,7 +1,6 @@
 {
   "type": "object",
   "required": [
-    "window_seconds",
     "bands",
     "groups",
     "volley",
@@ -9,10 +8,6 @@
   ],
   "additionalProperties": false,
   "properties": {
-    "window_seconds": {
-      "type": "number",
-      "minimum": 1
-    },
     "bands": {
       "type": "array",
       "items": {

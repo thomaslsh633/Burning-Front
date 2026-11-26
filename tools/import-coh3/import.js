@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { indexKind } from '../coh3/catalog.js';
 import { records } from '../coh3/census.js';
 import { classOf } from './indirect.js';
+import { loadConfig } from '../lib/config.js';
 import { EXT, FLAG_TESTS, convertWeapon, convertEntity, convertSquad, convertVeterancy, convertUpgrade } from './convert.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
@@ -23,9 +24,8 @@ export const PILOT = {
 
 export function importFaction(faction, squadIds) {
   const dir = path.join(root, 'data/source/coh3');
-  const vocab = read('data/rules/vocab.json'), profiles = read('data/schema/profiles.json'), roster = read('data/rules/roster.json');
-  const cfg = { ...read('data/balance/fire-rate.json'), indirect: read('data/balance/indirect.json') };
-  const ammo = read('data/balance/ammo.json');
+  const conf = loadConfig(root);
+  const { vocab, profiles, roster, ammo, scale } = conf, cfg = conf.fire;
   const catalog = read('reports/catalog.json').catalog;
   const races = Object.values(roster.factions[faction].sources);
   const byId = (kind, prefix) => {
@@ -80,7 +80,7 @@ export function importFaction(faction, squadIds) {
     let category = e.path[0];
     if (category === 'weapons') { report.push({ id, kind: 'entity', notes: ['weapon item (carried weapon), not an entity record'] }); return; }
     if (!profiles.ebps.categories[category]) category = 'vehicles';
-    const { record, notes } = convertEntity(e.rec, { ref: e.ref, category, vocab, profiles, weaponIdsOf });
+    const { record, notes } = convertEntity(e.rec, { ref: e.ref, category, vocab, profiles, weaponIdsOf, scale });
     put('ebps', category, id, record);
     for (const w of record.weapons || []) addWeapon(w.weapon);
     files.fx.ebps[id] = { name: `entity.${id}.name`, model: { id, anim_class: category === 'infantry' ? 'infantry' : category === 'team_weapons' ? 'crew' : category === 'vehicles' ? 'tank_medium' : 'static' } };
@@ -101,7 +101,7 @@ export function importFaction(faction, squadIds) {
     const mainWeapon = members.map(m => ebpsByRef.get(m)).map(e => (e?.path[0] === 'weapons' ? weaponOfItem(e.ref) : weaponIdsOf(e?.rec)[0]?.id)).find(Boolean);
     const mainBag = weapons.get(mainWeapon)?.rec?.weapon_bag;
     const { record, notes } = convertSquad(s.rec, { ref: s.ref, id, category, catalogUnit: catUnits[id], mainWeaponClass: mainBag?.weapon_class,
-      memberCategory: eid => (ebps.get(eid)?.path[0] === 'weapons' ? 'weapons' : memberCategory(eid)), ammo, profiles,
+      memberCategory: eid => (ebps.get(eid)?.path[0] === 'weapons' ? 'weapons' : memberCategory(eid)), ammo, profiles, scale,
       entityTags: members.flatMap(m => (EXT(ebpsByRef.get(m)?.rec, 'type_ext')?.unit_type_list || []).map(t => t.unit_type)),
       indirectClass: mainWeapon ? classOf(mainWeapon, cfg.indirect)?.id : null });
     // carried team weapon: weapon item member → record the weapon item as the team weapon entity
@@ -121,7 +121,7 @@ export function importFaction(faction, squadIds) {
     for (const u of record.upgrades?.list || []) {
       const up = upgrades.get(u);
       if (!up) { report.push({ id: u, kind: 'upgrade', notes: ['upgrade not found'] }); continue; }
-      const { record: ur, notes: un } = convertUpgrade(up.rec.upgrade_bag, { ref: up.ref, weaponOfItem });
+      const { record: ur, notes: un } = convertUpgrade(up.rec.upgrade_bag, { ref: up.ref, weaponOfItem, scale });
       report.push({ id: u, kind: 'upgrade', notes: un });
       if (!ur) continue;
       const ucat = vocab.lists.upgrade_category.includes(up.path[0]) ? up.path[0] : 'infantry';

@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { RACES } from './fetch.js';
 import { records } from './census.js';
 import { fireRate } from '../import-coh3/fire-rate.js';
+import { loadConfig } from '../lib/config.js';
 
 export const FACTIONS = RACES.filter(r => r !== 'common');
 const EXT = (rec, name) => (rec.extensions || []).map(x => x.exts || x.squadexts || x)
@@ -40,8 +41,7 @@ export function buildCatalog(dir) {
   const sbps = indexKind(dir, 'sbps', r => `sbps/races/${r}`);
   const weapons = indexKind(dir, 'weapon', r => `weapon/${r}`);
   const upgrades = indexKind(dir, 'upgrade', r => `upgrade/${r}`);
-  const fireCfg = { ...JSON.parse(fs.readFileSync(path.join(dir, '../../balance/fire-rate.json'), 'utf8')),
-    indirect: JSON.parse(fs.readFileSync(path.join(dir, '../../balance/indirect.json'), 'utf8')) };
+  const fireCfg = loadConfig(path.join(dir, '../../..')).fire;
   const roster = JSON.parse(fs.readFileSync(path.join(dir, '../../rules/roster.json'), 'utf8'));
   // coh3stats.com unit statistics (data/source/coh3stats, tools/coh3stats/fetch.js): names, squad price / pop / time
   const statsOf = race => { const f = path.join(dir, '../coh3stats', `${race}.json`); return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : {}; };

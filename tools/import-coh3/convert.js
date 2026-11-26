@@ -3,13 +3,11 @@
 import { fireRate } from './fire-rate.js';
 import { classOf } from './indirect.js';
 
-export const M_PER_HEX = 7;
-export const INFANTRY_SPEED = 3.6;   // m/s = 4 hexes per turn (SPEC §1)
 const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
 const r2 = x => Math.round(x * 100) / 100;
 const isTrue = v => v === 'True' || v === true;
 const band = (o, f = r2) => (o ? { near: f(o.near ?? 0), mid: f(o.mid ?? 0), far: f(o.far ?? 0) } : null);
-const turnsOf = s => Math.max(0, Math.ceil((s ?? 0) / 10));
+const turnsOf = (s, scale) => Math.max(0, Math.ceil((s ?? 0) / scale.seconds_per_turn));
 export const EXT = (rec, n) => (rec?.extensions || []).map(x => x.exts || x.squadexts || x).find(x => x.template_reference?.value?.endsWith(n));
 const last = p => String(p ?? '').split('/').pop();
 const nonOne = mods => Object.fromEntries(Object.entries(mods).filter(([, v]) => v != null && Math.abs(v - 1) > 1e-9));
@@ -19,10 +17,10 @@ const COVER = { tp_defcover: 'none', tp_light_cover: 'light', tp_heavy_cover: 'h
 const modsOf = m => nonOne({ accuracy: m.accuracy_multiplier, damage: m.damage_multiplier, penetration: m.penetration_multiplier ?? m['penetration_ multiplier'], suppression: m.suppression_multiplier });
 const INDIRECT_CATS = ['mortar', 'light_artillery', 'heavy_artillery'];
 
-/** Chance a shell lands within the target hex (radius ≈ M_PER_HEX / 2): scatter ellipse at distance d (CoH3 metres),
+/** Chance a shell lands within the target hex (radius ≈ metres per hex / 2): scatter ellipse at distance d (CoH3 metres),
  *  lateral half-axis d · tan(angle / 2), longitudinal min(d · ratio, max); uniform over the ellipse. */
-export function hexHitChance(scatter, d) {
-  const r = M_PER_HEX / 2;
+export function hexHitChance(scatter, d, metresPerHex) {
+  const r = metresPerHex / 2;
   const lat = d * Math.tan(((scatter?.angle_scatter ?? 0) / 2) * Math.PI / 180);
   const lon = Math.min(d * (scatter?.distance_scatter_ratio ?? 0), scatter?.distance_scatter_max ?? 0);
   const a = Math.max(lat, r), b = Math.max(lon, r);
@@ -41,6 +39,7 @@ export function applyProfile(record, profiles, kind, category, notes) {
 
 export function convertWeapon(bag, { id, category, ref, cfg, vocab, profiles, flags }) {
   const notes = [];
+  const scale = cfg.scale;
   const fr = fireRate(bag, category, cfg, id);
   const indirect = INDIRECT_CATS.includes(category);
   const cls = indirect ? classOf(id, cfg.indirect) : null;
@@ -61,13 +60,13 @@ export function convertWeapon(bag, { id, category, ref, cfg, vocab, profiles, fl
   if (fr.rule !== 'per_use' && fr.rule !== 'ability') {
     const maxM = bag.range?.max ?? 0, minM = bag.range?.min ?? 0;
     const range = indirect && fr.range_hex != null ? { min: fr.min_range_hex, max: fr.range_hex }
-      : { min: Math.round(minM / M_PER_HEX), max: Math.round(maxM / M_PER_HEX) + 1 };   // +1 for direct fire (SPEC §1)
+      : { min: Math.round(minM / scale.metres_per_hex), max: Math.round(maxM / scale.metres_per_hex) + scale.direct_range_bonus_hex };   // SPEC §1
     const l = bag.tracking?.normal?.max_left ?? -180, r = bag.tracking?.normal?.max_right ?? 180;
     const vc = {};
     for (const [k, name] of Object.entries(COVER)) { const m = bag.cover_table?.[k]; if (m) { const mm = modsOf(m); if (Object.keys(mm).length) vc[name] = mm; } }
     // CoH3 artillery has no accuracy (it hits by scatter): accuracy = chance to land on the target hex at each band's distance
     const dist = { near: bag.range?.distance?.near ?? 0, mid: bag.range?.distance?.mid ?? 0, far: (bag.range?.distance?.far ?? -1) < 0 ? maxM : bag.range.distance.far };
-    const acc = indirect && !((bag.accuracy?.near ?? 0) > 0) ? band(Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, hexHitChance(bag.scatter, d)]))) : band(bag.accuracy);
+    const acc = indirect && !((bag.accuracy?.near ?? 0) > 0) ? band(Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, hexHitChance(bag.scatter, d, scale.metres_per_hex)]))) : band(bag.accuracy);
     if (indirect && !((bag.accuracy?.near ?? 0) > 0)) notes.push('accuracy derived from scatter (chance to land on the hex)');
     rec.attack = { fire_mode: indirect ? 'indirect' : 'direct', accuracy: acc, range_hex: range,
       shots_per_turn: fr.shots_per_turn, damage_per_shot: fr.damage_per_shot,
@@ -89,7 +88,7 @@ export function convertWeapon(bag, { id, category, ref, cfg, vocab, profiles, fl
     nearby_radius_m: bag.suppression.nearby_suppression_radius ?? 0, ...(fr.suppression_scale && fr.suppression_scale !== 1 ? { scale: fr.suppression_scale } : {}) };
   if (isTrue(bag.deflection?.has_deflection_damage)) rec.deflection = { damage_ratio: bag.deflection.deflection_damage_multiplier };
   if (fr.reload_turns > 0) rec.reload = { turns: fr.reload_turns };
-  if (isTrue(bag.behaviour?.non_moving_setup)) rec.emplace = { required: true, setup_turns: 1, teardown_turns: 0, faces_target: isTrue(bag.behaviour?.non_moving_setup_requires_facing) };
+  if (isTrue(bag.behaviour?.non_moving_setup)) rec.emplace = { required: true, ...scale.emplace, faces_target: isTrue(bag.behaviour?.non_moving_setup_requires_facing) };
   if (bag.moving) rec.moving = { can_fire: isTrue(bag.moving.can_fire_while_moving), accuracy: bag.moving.accuracy_multiplier ?? 1 };
   if (category === 'mine') rec.trigger = { on: 'enter_hex' };
   if (category === 'grenade' || category === 'aircraft' || category === 'smoke' || fr.rule === 'ability') rec.use = { by_ability: true };
@@ -99,14 +98,14 @@ export function convertWeapon(bag, { id, category, ref, cfg, vocab, profiles, fl
   const missing = applyProfile(rec, profiles, 'weapon', category, notes);
   for (const m of missing) {
     if (m === 'deflection') { rec.deflection = { damage_ratio: 0 }; notes.push('deflection defaulted to 0 (CoH3: no deflection damage)'); }
-    else if (m === 'emplace') { rec.emplace = { required: true, setup_turns: 1, teardown_turns: 0 }; notes.push('emplace defaulted (category requires it)'); }
+    else if (m === 'emplace') { rec.emplace = { required: true, ...scale.emplace }; notes.push('emplace defaulted (category requires it)'); }
     else if (m === 'scatter') { rec.scatter = { angle_deg: 0, distance_ratio: 0, distance_max_m: 0 }; notes.push('scatter defaulted to 0'); }
     else notes.push(`missing module ${m}`);
   }
   return { record: rec, notes };
 }
 
-export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf }) {
+export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf, scale }) {
   const notes = [];
   const h = EXT(rec, 'health_ext') || {}, al = h.armor_layout_option || {};
   const tags = (EXT(rec, 'type_ext')?.unit_type_list || []).map(t => t.unit_type).filter(t => vocab.lists.unit_tags.includes(t));
@@ -124,9 +123,9 @@ export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf
   if (traits.length) out.traits = traits;
   const mv = EXT(rec, 'moving_ext');
   const speed = mv?.speed_scaling_table?.default_speed > 0 ? mv.speed_scaling_table.default_speed : mv?.speed_scaling_table?.max_speed;
-  if (speed) out.move = { hex: Math.max(1, Math.round((speed / INFANTRY_SPEED) * 4)), pass: last(mv.pass_type?.instance_reference) };   // 3.6 m/s = 4 hexes
+  if (speed) out.move = { hex: Math.max(1, Math.round((speed / scale.infantry_speed_mps) * scale.infantry_move_hex)), pass: last(mv.pass_type?.instance_reference) };
   const sg = EXT(rec, 'sight_ext');
-  if (sg) out.sight = { hex: Math.round((sg.sight_package?.outer_radius ?? 0) / M_PER_HEX) + 1, detect_hex: Math.round(Math.max(0, sg.detect_camouflage?.tp_global ?? 0) / M_PER_HEX) };
+  if (sg) out.sight = { hex: Math.round((sg.sight_package?.outer_radius ?? 0) / scale.metres_per_hex) + scale.sight_bonus_hex, detect_hex: Math.round(Math.max(0, sg.detect_camouflage?.tp_global ?? 0) / scale.metres_per_hex) };
   const ws = weaponIdsOf(rec);
   if (ws.length) {
     const fixed = tags.includes('fixed_turret') || category === 'team_weapons' || category === 'emplacements';
@@ -134,7 +133,7 @@ export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf
       slot: w.type === 'accessory' ? 'accessory' : i === 0 ? 'main' : 'secondary' }));
   }
   const cam = EXT(rec, 'camouflage_ext');
-  if ((cam?.detection_radius ?? 0) > 0) out.stealth = { detected_hex: Math.max(1, Math.round(cam.detection_radius / M_PER_HEX)), first_strike_shots: cam.first_strike_shots ?? 0, recloak_turns: turnsOf(cam.combat_reset_time) };
+  if ((cam?.detection_radius ?? 0) > 0) out.stealth = { detected_hex: Math.max(1, Math.round(cam.detection_radius / scale.metres_per_hex)), first_strike_shots: cam.first_strike_shots ?? 0, recloak_turns: turnsOf(cam.combat_reset_time, scale) };
   const twe = EXT(rec, 'team_weapon_ext');
   if (twe) out.crew = { min: (twe.role_list || []).filter(r => isTrue(r.role?.required)).length || 1, roles: (twe.role_list || []).map(r => r.role?.role_name).filter(Boolean) };
   const rc = EXT(rec, 'recrewable_ext');
@@ -147,11 +146,11 @@ export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf
       manual_abandon: isTrue(twe?.can_manual_abandon), abandoned_on_spawn: isTrue(info.is_abandoned_on_spawn) };
   }
   const wreck = last(h.wreck_entity_option?.wreck_entities?.default?.instance_reference);
-  if (wreck) out.wreck = { entity: wreck, cover: 'heavy', blocks_vehicles: true };
+  if (wreck) out.wreck = { entity: wreck, ...scale.wreck };
   const tow = EXT(rec, 'towing_trailer_ext');
   if (tow) out.tow = { by: [] };
   const con = EXT(rec, 'construction_ext');
-  if (con || category === 'emplacements' || category === 'buildings') out.construction = { build_turns: Math.max(1, turnsOf(EXT(rec, 'cost_ext')?.time_cost?.time_seconds)), footprint_hex: 1 };
+  if (con || category === 'emplacements' || category === 'buildings') out.construction = { build_turns: Math.max(1, turnsOf(EXT(rec, 'cost_ext')?.time_cost?.time_seconds, scale)), footprint_hex: 1 };
   if ((h.regeneration ?? 0) > 0) out.regen = { per_turn: r2(h.regeneration * 10) };
   if (EXT(rec, 'flight_ext')) out.flight = {};
   const missing = applyProfile(out, profiles, 'ebps', category, notes);
@@ -200,7 +199,7 @@ export function convertSquad(rec, ctx) {
   const out = { coh3_ref: ctx.ref, kind, role, members,
     price: u.price ? { cost: u.price.cost, from: u.price.from } : { cost: {}, from: 'entities' },
     pop: Math.round(u.pop ?? EXT(rec, 'squad_population_ext')?.personnel_pop ?? 0),
-    ...(u.build_seconds ? { build_turns: Math.max(1, Math.ceil(u.build_seconds / 10)) } : {}),
+    ...(u.build_seconds ? { build_turns: Math.max(1, turnsOf(u.build_seconds, ctx.scale)) } : {}),
     ...(u.name ? { name_en: u.name } : {}), ...(tags.length ? { tags } : {}), source: u.source ?? 'produced' };
   if (u.hero) { out.unique = true; out.traits = ['unique', 'hero']; }
   const ups = (EXT(rec, 'squad_upgrade_ext')?.upgrades || []).map(x => last(x.upgrade?.instance_reference)).filter(Boolean);
@@ -217,7 +216,8 @@ export function convertSquad(rec, ctx) {
     if (gun && crew) out.team_weapon = { weapon_entity: gun.entity, crew_entity: crew.entity };
   }
   const a = ctx.ammo;
-  out.supply = { ammo: a.by_indirect_class[ctx.indirectClass] ?? a.by_role[role] ?? a.by_kind[kind] ?? 20 };
+  out.supply = { ammo: a.by_indirect_class[ctx.indirectClass] ?? a.by_role[role] ?? a.by_kind[kind] };
+  if (out.supply.ammo == null) notes.push(`no ammo setting for kind ${kind}`);
   const eng = EXT(rec, 'squad_engineer_ext');
   if (eng) out.build = { menu: [...new Set(JSON.stringify(eng.construction_groups || []).match(/ebps\/races\/[a-z_]+\/[a-z0-9_/]+/g) || [])].map(last) };
   const missing = applyProfile(out, ctx.profiles, 'sbps', ctx.category, notes);
@@ -255,7 +255,7 @@ export function convertVeterancy(rec, { vetIndex, vocab }) {
 }
 
 /** upgrade_bag → upgrade record; null when its effect is not in the data (written by hand later). */
-export function convertUpgrade(bag, { ref, weaponOfItem }) {
+export function convertUpgrade(bag, { ref, weaponOfItem, scale }) {
   const notes = [];
   const item = (JSON.stringify(bag.requirements_to_complete || []).match(/ebps\/races\/[a-z_]+\/weapons\/[a-z0-9_/]+/) || [])[0];
   const weapon = item ? weaponOfItem(item) : null;
@@ -270,7 +270,7 @@ export function convertUpgrade(bag, { ref, weaponOfItem }) {
     const anyHere = any || t.endsWith('required_any_in_list');
     for (const v of Object.values(o)) walk(v, anyHere); } };
   walk(bag.requirements || [], false);
-  return { record: { coh3_ref: ref, scope: bag.owner_type === 'player' ? 'player' : 'unit', cost, build_turns: turnsOf(bag.time_cost?.time_seconds),
+  return { record: { coh3_ref: ref, scope: bag.owner_type === 'player' ? 'player' : 'unit', cost, build_turns: turnsOf(bag.time_cost?.time_seconds, scale),
     ...(reqs.length || anyReqs.length ? { requires: { ...(reqs.length ? { upgrades: reqs } : {}), ...(anyReqs.length ? { any_upgrades: anyReqs } : {}) } } : {}), ...(bag.local_max_limit ? { limit: Math.round(bag.local_max_limit) } : {}),
     effects: [{ type: 'add_weapon', weapon }] }, notes };
 }

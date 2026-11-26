@@ -1,7 +1,6 @@
 {
  "source": "49fc4dbcfb3c5f1bf84e920d96e46de3c0324d61",
  "config": {
-  "window_seconds": 6,
   "bands": [
    "near",
    "mid",
@@ -47,6 +46,7 @@
    "dummy_construction_welding_gear",
    "dummy_wire_cutters"
   ],
+  "window_seconds": 6,
   "indirect": {
    "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC §10). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time ÷ CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres ÷ 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins. Minimum range = round(CoH3 min ÷ CoH3 max × our range), at least min_range_floor_hex. max_shells caps a normal-fire volley (rockets). Blind fire (target hex not seen): accuracy ÷ CoH3 scatter fow_angle × fow_distance multipliers and spread + blind.extra_spread_hex. Counter-battery: a hex an indirect weapon fired from is sound-ranged for the opponent for counter_battery.mark_turns turns; firing at it is not blind.",
    "classes": {
@@ -130,6 +130,50 @@
    },
    "counter_battery": {
     "mark_turns": 1
+   },
+   "scale": {
+    "about": "Game scale (SPEC §1). Every conversion from CoH3 metres and seconds reads these values; no tool or rule hard-codes them.",
+    "metres_per_hex": 7,
+    "seconds_per_turn": 10,
+    "fire_window_seconds": 6,
+    "infantry_speed_mps": 3.6,
+    "infantry_move_hex": 4,
+    "direct_range_bonus_hex": 1,
+    "sight_bonus_hex": 1,
+    "emplace": {
+     "setup_turns": 1,
+     "teardown_turns": 0
+    },
+    "wreck": {
+     "cover": "heavy",
+     "blocks_vehicles": true
+    },
+    "engine": {
+     "hp_damage_scale": 0.36,
+     "penetration_armor_scale": 0.12
+    }
+   }
+  },
+  "scale": {
+   "about": "Game scale (SPEC §1). Every conversion from CoH3 metres and seconds reads these values; no tool or rule hard-codes them.",
+   "metres_per_hex": 7,
+   "seconds_per_turn": 10,
+   "fire_window_seconds": 6,
+   "infantry_speed_mps": 3.6,
+   "infantry_move_hex": 4,
+   "direct_range_bonus_hex": 1,
+   "sight_bonus_hex": 1,
+   "emplace": {
+    "setup_turns": 1,
+    "teardown_turns": 0
+   },
+   "wreck": {
+    "cover": "heavy",
+    "blocks_vehicles": true
+   },
+   "engine": {
+    "hp_damage_scale": 0.36,
+    "penetration_armor_scale": 0.12
    }
   }
  },

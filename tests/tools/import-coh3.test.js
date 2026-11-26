@@ -28,8 +28,8 @@ test('one weapon per hardpoint: upgrade alternatives are not extra guns', () => 
 test('indirect accuracy = chance to land on the hex from the scatter ellipse', () => {
   const m = find('weapon', '81mm_mortar_us').attack.accuracy;
   assert.ok(m.near > 0 && m.near <= 1 && m.far <= m.near);
-  assert.equal(hexHitChance({ angle_scatter: 0, distance_scatter_ratio: 0, distance_scatter_max: 0 }, 50), 1);
-  assert.ok(hexHitChance({ angle_scatter: 10, distance_scatter_ratio: 0.1, distance_scatter_max: 10 }, 80) < 0.5);
+  assert.equal(hexHitChance({ angle_scatter: 0, distance_scatter_ratio: 0, distance_scatter_max: 0 }, 50, 7), 1);
+  assert.ok(hexHitChance({ angle_scatter: 10, distance_scatter_ratio: 0.1, distance_scatter_max: 10 }, 80, 7) < 0.5);
 });
 
 test('team weapons find their veterancy in the common file; upgrades keep only required player upgrades', () => {

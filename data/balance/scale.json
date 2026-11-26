@@ -1,0 +1,13 @@
+{
+  "about": "Game scale (SPEC §1). Every conversion from CoH3 metres and seconds reads these values; no tool or rule hard-codes them.",
+  "metres_per_hex": 7,
+  "seconds_per_turn": 10,
+  "fire_window_seconds": 6,
+  "infantry_speed_mps": 3.6,
+  "infantry_move_hex": 4,
+  "direct_range_bonus_hex": 1,
+  "sight_bonus_hex": 1,
+  "emplace": { "setup_turns": 1, "teardown_turns": 0 },
+  "wreck": { "cover": "heavy", "blocks_vehicles": true },
+  "engine": { "hp_damage_scale": 0.36, "penetration_armor_scale": 0.12 }
+}

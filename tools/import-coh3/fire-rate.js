@@ -91,7 +91,7 @@ export function fireRate(bag, category, cfg, id = '') {
       const per = each(b => normalFire(raw[b], cls));
       return { ...out, indirect_class: cls.id, shots_per_turn: each(b => per[b].shells), damage_per_shot: each(() => damage),
         reload_turns: cls.usage_turns - 1, accuracy_scale: each(b => per[b].accuracy_scale), spread_hex: cls.spread_hex,
-        range_hex: Math.min(Math.round((bag.range?.max ?? 0) / 7), cls.range_cap_hex),
+        range_hex: Math.min(Math.round((bag.range?.max ?? 0) / cls.metres_per_hex), cls.range_cap_hex),
         min_range_hex: minRangeHex(bag.range?.min ?? 0, bag.range?.max ?? 0, cls) };
     }
     const shells = each(b => (minRaw < 1 ? 1 : Math.max(1, Math.ceil(raw[b] - 0.02))));

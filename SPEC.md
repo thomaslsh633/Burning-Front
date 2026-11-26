@@ -11,6 +11,7 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 
 ## 1. Scale and data
 - 1 hex = 7 m, 1 turn = 10 s; rate of fire = shots in 6 s per turn, the fraction carries over to the next turn (v162, v164, v165).
+  The scale numbers in this section live in `data/balance/scale.json`; tools read them from there.
 - Unit data: CoH3 in-game JSON (US / Wehrmacht) + coh3stats 3.0.1; units without CoH3 data are estimates on the same scale (v162, v167).
 - Engine scale: HP / damage ×0.36, penetration / armour ×0.12; every number the player sees is the raw CoH3 value (v162, v167).
 - Stats are whole numbers where the player sees them (v162).
