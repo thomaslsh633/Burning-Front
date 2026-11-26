@@ -10,6 +10,7 @@
 
 ## Public API (exported from `index.js`)
 - `MORALE` machine, `applySuppression`, `decaySuppression`, `validateRetreat`, `startRetreat`, `arriveIfNear`, `ammoState` — done
+- `setEngaged`, `engagedTurnEnd` (engaged: set by attacking, cleared at an own turn end without an attack, SPEC §4), `resetMorale` (recrew / capture) — done (D2-7)
 - `xpFor`, `gainXp`, `rankMods`, `unitValue` (veterancy) — done; repair mark and healing follow with skills
 
 ## May import

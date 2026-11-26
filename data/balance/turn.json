@@ -1,0 +1,5 @@
+{
+  "about": "Turn reactions (SPEC §4, §10; docs/unit-state.md §5.1). Counter fire: every unit fires back once per enemy turn at a unit that attacked it. Overwatch: only emplaced machine-gun teams (these kinds with a weapon of these classes) hold; the reaction fires once at the first enemy that steps into arc, range and sight, and stops that enemy's move when it ends in one of stops_mover (or dies).",
+  "counter": { "per_enemy_turn": 1 },
+  "overwatch": { "kinds": ["team_weapon"], "weapon_classes": ["hmg"], "stops_mover": ["PINNED"] }
+}

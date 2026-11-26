@@ -55,7 +55,8 @@ export function permits(machines, unit, commandType) { /* → { ok: true } | { o
 - **Command validity** is the intersection of all axes: each state lists what it `allows` (whitelist) or `denies`
   (with a reason code). The controller shows the reason; the AI skips the command.
 - **Order of phase hooks** at a side's turn start: lifecycle → location → stance → morale → action → visibility.
-  At turn end the order is reversed. The order is fixed in `logic/turn` and tested.
+  At turn end the order is reversed. The order is fixed in `logic/commands/phases.js` (it sequences every owner, which
+  `logic/turn` cannot import without cycles) and tested.
 - **Each machine has a transition table test**: every (state, event) pair → expected state and events.
 
 ## 4. Unit runtime state (`src/logic/state/unit.js`)
@@ -69,13 +70,17 @@ export function permits(machines, unit, commandType) { /* → { ok: true } | { o
   ammo: 18,                                               // per-unit ammunition (SPEC §10)
   xp: 0, rank: 0,
   fsm: { life: 'ACTIVE', location: 'ON_MAP', stance: 'MOBILE', morale: 'NORMAL', action: 'IDLE', visibility: 'REVEALED' },
-  budget: { move: 4, action: 1, counter: 1 },             // reset at own turn start by the action FSM
+  budget: { move: 4, action: 1, counter: 0, moved: false, fired: false, shocked: false },
+                                                          // move / action reset at own turn start; counter armed at the
+                                                          // enemy turn start (moved / fired cleared then); shocked: this
+                                                          // turn's action was lost to crew_shocked
   suppression: 0,                                         // points; morale FSM thresholds come from data
+  engaged: false,                                         // attacked in its last own turn (or by counter / overwatch since)
   criticals: [],                                          // vehicle conditions: engine_damaged, immobilised, main_gun_damaged, crew_shocked
   timers: { stance: 0, smoke: 0, revealedUntil: 0 },      // turns left for timed states
-  overwatch: null,                                        // { arc: [from, to], weapon } while in OVERWATCH
+  overwatch: null,                                        // { weapon, facing, arc_deg } while in OVERWATCH
   container: null,                                        // building or transport id while GARRISONED / LOADED
-  crew: null,                                             // team weapon / vehicle: id of the crewing squad record (see §6)
+  crew: null,                                             // reserved (vehicle crews, §6); team weapon crews are members
   retreatTo: null,                                        // rally point while RETREATING
   marks: {}                                               // repair mark and other short effects (SPEC §7)
 }
@@ -99,7 +104,12 @@ Invariants (tested): `container != null` ⇔ location ∈ {GARRISONED, LOADED}; 
 Transitions: IDLE →(Move)→ MOVING →(path done / interrupted)→ IDLE if budget left else EXHAUSTED ·
 IDLE →(Attack)→ ATTACKING →(resolved)→ IDLE / EXHAUSTED · IDLE →(Hold)→ OVERWATCH · IDLE →(EndTurn)→ EXHAUSTED ·
 OVERWATCH →(triggered)→ EXHAUSTED · any →(own turn start)→ IDLE (unless morale = RETREATING, which runs the retreat move first).
-Counter fire is a reaction during the enemy turn; it uses `budget.counter`, not the action state.
+Counter fire is a reaction during the enemy turn; it uses `budget.counter`, not the action state. It is checked like a
+command named `Counter`: EXHAUSTED and OVERWATCH permit it; RETREATING, SETTING_UP / PACKING_UP and every state but
+ACTIVE veto it; the unit must be able to attack the attacker from where it stands (sight, range, arc, ammo), so a flank
+attack outside the weapon arc draws none. Overwatch fire and counter fire draw no counter fire.
+A move that triggers overwatch stops on that hex when the mover dies or ends in a morale state listed in
+`data/balance/turn.json` (`stops_mover`, PINNED); only the steps taken are paid, and the move cannot be undone.
 
 #### 5.1.1 Overwatch eligibility (SPEC §10)
 
@@ -165,7 +175,7 @@ Top level of the hierarchy: the other axes only run while `ACTIVE`.
 
 **Critical conditions** are a set (`criticals`), not exclusive states, because several can hold at once:
 `engine_damaged` (move ×0.5), `immobilised` (no move, can still turn the turret), `main_gun_damaged` (main weapon
-disabled), `crew_shocked` (action budget 0 at the next own turn start, then cleared). Repair removes them (SPEC §7).
+disabled), `crew_shocked` (action budget 0 at the next own turn start, cleared at that turn's end). Repair removes them (SPEC §7).
 They are set by `logic/combat` on a penetrating hit (chances from data) and read by the other axes' vetoes.
 
 ### 5.6 Visibility FSM — owner `logic/vision`
@@ -198,7 +208,18 @@ per capturing faction, the squad blueprint it becomes, `min_capture_crew_size` (
 | Upkeep and population | captured equipment counts for its new owner from the next turn |
 | Later (optional) | dropped weapons (LMGs, launchers) picked up by squads, CoH3 `unequip_weapons_on_death` + `entity_inventory_ext` |
 
-Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckCleared`.
+Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckClearing`, `WreckCleared`.
+
+Built in D2-7 (`logic/lifecycle/crewing.js`, routes `Recrew`, `Abandon`, `ClearWreck`):
+- Recrew of team weapons, own or enemy: the squad's living men become crewmen of the capturing faction's blueprint (HP kept,
+  capped at the crew entity's HP); the squad unit is removed. A crew without its gun counts as men on foot and may recrew.
+  `Recrewed` is emitted for both cases (the previous owner is not stored).
+- Abandon: the living crew steps onto the first free neighbouring hex as a new unit of the same blueprint without the gun
+  (`state.spawnUnit`); without a free hex the order is refused (`no_room`). A crew whose gun is gone (abandoned or
+  destroyed) fights with its own small arms, cannot emplace and leaves no wreck when it dies.
+- Wreck clearing: units whose squad `role` is in `data/rules/terrain.json` `wreck_clearing.roles` (engineers) spend their
+  action on or next to a wreck; the wreck goes after its `clear_turns` turns of work (vehicle 2, emplacement 1).
+- Not yet: vehicle recrew (no recrewable vehicle blueprints in the data), crew bail-out critical, denial demolition.
 
 ## 7. Ownership summary
 
@@ -207,8 +228,8 @@ Events: `CrewWiped`, `Abandoned`, `Recrewed`, `Captured`, `Wrecked`, `WreckClear
 | Action FSM, budgets, overwatch eligibility | `logic/turn` | `fsm.action`, `budget`, `overwatch` | weapon classes, move points |
 | Stance FSM | `logic/crew` | `fsm.stance`, `timers.stance` | `setup_turns`, `teardown_turns`, arcs |
 | Location FSM | `logic/transport` | `fsm.location`, `container` | capacities, garrison rules |
-| Morale FSM, suppression points, veterancy | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank` | thresholds, decay, multipliers, veterancy sets |
-| Lifecycle FSM, criticals, recrew, wrecks | `logic/lifecycle` | `fsm.life`, `criticals`, `crew`, team | recrewable data, crit chances, wreck rules |
+| Morale FSM, suppression points, veterancy, engaged | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank`, `engaged` | thresholds, decay, multipliers, veterancy sets |
+| Lifecycle FSM, criticals, recrew, wrecks | `logic/lifecycle` | `fsm.life`, `criticals`, `crew`, `team`, `sbps` (a captured gun takes its new blueprint) | recrewable data, crit chances, wreck rules |
 | Visibility FSM | `logic/vision` | `fsm.visibility`, `timers.revealedUntil` | stealth data, sight |
 | Position and facing | `logic/movement` | `pos`, `facing`, `turretFacing` | move points, pass types, terrain costs |
 | Cover (derived) | `logic/vision` | — | terrain, edges, cover tables |

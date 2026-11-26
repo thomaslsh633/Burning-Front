@@ -112,3 +112,13 @@ test('Turn command spends move points', () => {
   assert.equal(r.events[0].type, 'Turned');
   assert.equal(apply(state, { type: 'Turn', side: 'blue', unit: 'u1', facing: 0 }, data, null).error, 'already_facing');
 });
+
+test('turretReturn: an unengaged turret swings back to the hull at the turn end; an engaged one holds', () => {
+  const { state } = testMatch([tank(H(3, 3), { facing: 0 })]);
+  const aimed = tweak(state, 'u1', { turretFacing: 2 });
+  const r = mv.turretReturn(aimed, 'u1', false);
+  assert.equal(r.state.units.u1.turretFacing, 0);
+  assert.deepEqual(r.events, [{ type: 'TurretTurned', unit: 'u1', from: 2, to: 0 }]);
+  assert.equal(mv.turretReturn(aimed, 'u1', true).state, aimed);
+  assertOwnsOnly('movement', aimed, r.state);
+});

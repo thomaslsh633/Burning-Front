@@ -84,3 +84,12 @@ export function canSee(state, data, team, unit, seen = visibleHexes(state, data,
   const k = detectionRange(state, data, unit);
   return !k || viewers(state, team).some(v => distance(v.pos, unit.pos) <= k && !equals(v.pos, unit.pos));
 }
+
+/** Does one unit see another with its own eyes (overwatch)? In sight range, line of sight, and close enough if concealed. */
+export function unitSees(state, data, viewer, target) {
+  const d = distance(viewer.pos, target.pos);
+  if (target.fsm.location === 'LOADED' || d > sightRange(viewer, state, data) || !hasLineOfSight(state, data, viewer, target.pos)) return false;
+  if (state.match.turn < target.timers.revealedUntil) return true;
+  const k = detectionRange(state, data, target);
+  return !k || d <= k;
+}

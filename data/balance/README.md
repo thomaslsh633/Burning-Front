@@ -7,6 +7,8 @@ Turn-based tuning, read by the tools through `tools/lib/config.js` (`loadConfig`
 - `fire-rate.json` — fire-rate rules (volley, single shot, artillery). The fire window comes from `scale.json`.
 - `indirect.json` — indirect-fire classes, barrages, blind fire.
 - `ammo.json` — ammunition per weapon class.
+- `movement.json`, `vision.json`, `combat.json`, `status.json`, `crew.json` — rule tuning read by `src/logic` (D2).
+- `turn.json` — turn reactions: counter fire per enemy turn, which units overwatch and what stops a mover.
 
 - Format: JSON
 - Edited by: You, when balancing

@@ -18,6 +18,7 @@
     "data/balance/vision.json": "vision.schema.json",
     "data/balance/combat.json": "combat.schema.json",
     "data/balance/status.json": "status.schema.json",
-    "data/balance/crew.json": "crew.schema.json"
+    "data/balance/crew.json": "crew.schema.json",
+    "data/balance/turn.json": "turn.schema.json"
   }
 }

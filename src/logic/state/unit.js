@@ -4,14 +4,15 @@
 export const AXES = Object.freeze(['life', 'location', 'stance', 'morale', 'action', 'visibility']);
 
 /**
- * spec: { id, team, sbps, pos, facing?, stance? } · data: { units: { sbps, ebps } } (services/data indexUnits).
+ * spec: { id, team, sbps, pos, facing?, stance?, members? } · data: { units: { sbps, ebps } } (services/data indexUnits).
+ * members: carried-over members with their HP (a crew leaving its gun); default the blueprint's, at full HP.
  * A new unit has spent its turn (EXHAUSTED, empty budget); the turn system gives it a budget at its side's turn start.
  * Team weapons may start EMPLACED (game start, SPEC §5); everything else starts MOBILE.
  */
 export function createUnit(spec, data) {
   const def = data.units.sbps[spec.sbps];
   if (!def) throw new Error(`unknown squad ${spec.sbps}`);
-  const members = def.members.flatMap(m => {
+  const members = spec.members ? spec.members.map(m => ({ ebps: m.ebps, hp: m.hp })) : def.members.flatMap(m => {
     const e = data.units.ebps[m.entity];
     if (!e) throw new Error(`squad ${spec.sbps}: unknown entity ${m.entity}`);
     return Array.from({ length: m.count }, () => ({ ebps: m.entity, hp: e.hp }));
@@ -24,7 +25,7 @@ export function createUnit(spec, data) {
     fsm: { life: 'ACTIVE', location: 'ON_MAP', stance: def.kind === 'team_weapon' ? spec.stance ?? 'MOBILE' : 'MOBILE',
       morale: 'NORMAL', action: 'EXHAUSTED', visibility: 'REVEALED' },
     budget: { move: 0, action: 0, counter: 0, moved: false, fired: false },
-    suppression: 0, criticals: [], timers: { stance: 0, smoke: 0, revealedUntil: 0 },
+    suppression: 0, engaged: false, criticals: [], timers: { stance: 0, smoke: 0, revealedUntil: 0 },
     overwatch: null, container: null, crew: null, retreatTo: null, marks: {},
   };
 }

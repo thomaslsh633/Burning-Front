@@ -26,3 +26,10 @@ export function createMatch(setup, data) {
     rng: setup.rng >>> 0,
   };
 }
+
+/** Add a new unit with the next free id (match.nextId). spec as createUnit, without id. → { state, id } */
+export function spawnUnit(state, spec, data) {
+  const id = `u${state.match.nextId}`;
+  const unit = createUnit({ ...spec, id }, data);
+  return { state: { ...state, match: { ...state.match, nextId: state.match.nextId + 1 }, units: { ...state.units, [id]: unit } }, id };
+}

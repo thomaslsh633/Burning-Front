@@ -1,12 +1,12 @@
 // Lifecycle axis (docs/unit-state.md §5.5): the top of the hierarchy. Owns fsm.life, criticals, crew, team.
-// D2-6: deaths and criticals. Recrew, abandon and wreck clearing follow (D2-7).
+// Deaths and criticals; recrew, abandon and wreck clearing are in crewing.js.
 import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { exhaust } from '../turn/index.js';
 import { placeWreck } from '../terrain/index.js';
 
-const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, reason])) });
+const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Retreat', 'Counter'].map(c => [c, reason])) });
 
 export const LIFE = defineMachine('life', 'ACTIVE', {
   ACTIVE: {},
@@ -24,7 +24,7 @@ function retire(state, unitId, to, extraEvents) {
 }
 
 /** Remove a dead unit; vehicles, emplacements and guns leave a wreck object on their hex (logic/terrain, SPEC §10). */
-function remove(state, data, unitId, wreck) {
+export function remove(state, data, unitId, wreck) {
   const u = state.units[unitId], { [unitId]: gone, ...units } = state.units;
   let s = { ...state, units }, events = [ev('UnitDestroyed', { unit: unitId, team: u.team }), ev('UnitRemoved', { unit: unitId })];
   if (wreck && u.fsm.location === 'ON_MAP') { const w = placeWreck(s, data, u.pos, wreck); s = w.state; events = [...events, ev('Wrecked', { unit: unitId }), ...w.events]; }
@@ -36,7 +36,7 @@ const wreckKind = u => (u.kind === 'vehicle' ? 'vehicle' : u.kind === 'structure
 /**
  * After damage: an infantry squad with no men is removed; a team weapon whose crew died while the gun stands is DECREWED;
  * a vehicle, structure or gun with no HP is removed and leaves a wreck. A towed gun destroyed under a living crew leaves
- * the crew as the unit (it can no longer fire, but can retreat and recrew).
+ * the crew as the unit: a small infantry squad with its own small arms (logic/combat firingWeapons) that can recrew.
  */
 export function checkDeaths(state, unitId, data) {
   const u = state.units[unitId];
@@ -46,7 +46,7 @@ export function checkDeaths(state, unitId, data) {
   if (tw?.weapon_entity) {
     const gun = u.members.find(m => m.ebps === tw.weapon_entity), crew = u.members.filter(m => m.ebps === tw.crew_entity);
     if (gun && alive(gun) && !crew.some(alive)) return retire(state, unitId, 'DECREWED', [ev('CrewWiped', { unit: unitId, team: u.team })]);
-    if (!living.length) return remove(state, data, unitId, wreckKind(u));
+    if (!living.length) return remove(state, data, unitId, gun ? wreckKind(u) : null);   // a crew without its gun leaves no wreck
     return { state, events: [] };
   }
   if (living.length) return { state, events: [] };
@@ -63,6 +63,13 @@ export function killGarrison(state, data, unitIds) {
     s = r.state; events.push(...r.events);
   }
   return { state: s, events };
+}
+
+/** Own turn end: a crew shock that cost this turn's action is over (docs/unit-state.md §5.5). */
+export function lifeTurnEnd(state, unitId) {
+  const u = state.units[unitId];
+  if (!u.budget.shocked || !u.criticals.includes('crew_shocked')) return { state, events: [] };
+  return { state: putUnit(state, { ...u, criticals: u.criticals.filter(c => c !== 'crew_shocked') }), events: [] };
 }
 
 /** Criticals from combat (a set: each at most once). */

@@ -1,6 +1,6 @@
 // Action axis (docs/unit-state.md §5.1) and the per-unit budget: one move allowance (move points, spent by Move and
 // Turn, in any number of steps) and one action (fire, ability, emplace, build, repair, board …) in either order,
-// plus one counter fire in the enemy turn (SPEC §10). Owns fsm.action, budget, overwatch.
+// plus counter fire in the enemy turn (SPEC §10). Owns fsm.action, budget, overwatch.
 import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { movePoints } from '../movement/index.js';
@@ -8,21 +8,27 @@ import { movePoints } from '../movement/index.js';
 /** Commands that spend move points; every other unit command spends the action. */
 export const MOVE_COMMANDS = Object.freeze(['Move', 'Turn']);
 
+/** 'Counter' is the reaction in the enemy turn: every axis may veto it like a command. */
+const SPENT = ['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck'];
+
 export const ACTION = defineMachine('action', 'EXHAUSTED', {
   IDLE: {},
   MOVING: { allows: [] },      // only inside a Move command (events), never stored between commands
   ATTACKING: { allows: [] },   // only inside an Attack command
-  OVERWATCH: { denies: { Move: 'on_overwatch', Turn: 'on_overwatch' }, allows: [] },
-  EXHAUSTED: { allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew']
-    .map(c => [c, 'no_actions_left'])) },
+  OVERWATCH: { denies: { Move: 'on_overwatch', Turn: 'on_overwatch' }, allows: ['Counter'] },
+  EXHAUSTED: { allows: ['Counter'], denies: Object.fromEntries(SPENT.map(c => [c, 'no_actions_left'])) },
 });
 
-/** Budget at the unit's own turn start (SPEC §10); a shocked crew gets no action (§5.5 criticals). */
+/**
+ * Budget at the unit's own turn start (SPEC §10). A shocked crew gets no action (§5.5 criticals); `shocked` tells
+ * lifecycle the shock was served, so it clears it at the turn end. The counter is armed at the enemy's turn start.
+ */
 export function freshBudget(unit, data) {
-  return { move: movePoints(unit, data), action: unit.criticals.includes('crew_shocked') ? 0 : 1, counter: 1, moved: false, fired: false };
+  const shocked = unit.criticals.includes('crew_shocked');
+  return { move: movePoints(unit, data), action: shocked ? 0 : 1, counter: 0, moved: false, fired: false, shocked };
 }
 
-/** Own turn start for one unit: fresh budget, IDLE. Inactive units stay EXHAUSTED with nothing. */
+/** Own turn start for one unit: fresh budget, IDLE (overwatch ends). Inactive units stay EXHAUSTED with nothing. */
 export function refreshUnit(state, unitId, data) {
   const u = state.units[unitId];
   if (u.fsm.life !== 'ACTIVE') return { state, events: [] };
@@ -55,4 +61,26 @@ export function exhaust(state, unitId) {
   const u = state.units[unitId];
   const t = transition(ACTION, { ...u, budget: { ...u.budget, move: 0, action: 0, counter: 0 }, overwatch: null }, 'EXHAUSTED');
   return { state: putUnit(state, t.unit), events: t.events };
+}
+
+/** Own turn end: whatever is left lapses; an MG on overwatch keeps waiting through the enemy turn. */
+export function actionTurnEnd(state, unitId) {
+  const u = state.units[unitId];
+  if (u.fsm.action === 'OVERWATCH' || u.fsm.life !== 'ACTIVE') return { state, events: [] };
+  const t = transition(ACTION, { ...u, budget: { ...u.budget, move: 0, action: 0 } }, 'EXHAUSTED');
+  return { state: putUnit(state, t.unit), events: t.events };
+}
+
+/** Enemy turn start: counter fire armed (data/balance/turn.json); last turn's moved / fired no longer apply. */
+export function armCounter(state, unitId, data) {
+  const u = state.units[unitId];
+  if (u.fsm.life !== 'ACTIVE') return { state, events: [] };
+  return { state: putUnit(state, { ...u, budget: { ...u.budget, counter: data.balance.turn.counter.per_enemy_turn, moved: false, fired: false } }), events: [] };
+}
+
+export const counterCheck = unit => (unit.budget.counter > 0 ? null : 'no_counter_left');
+
+export function spendCounter(state, unitId) {
+  const u = state.units[unitId];
+  return { state: putUnit(state, { ...u, budget: { ...u.budget, counter: u.budget.counter - 1 } }), events: [] };
 }

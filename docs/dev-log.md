@@ -2,6 +2,18 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D2-7 turn flow, reactions, recrew)
+- **Done:** turn phases in `logic/commands/phases.js` (per-unit hooks in axis order, SPEC §2 side phases with empty slots for
+  strikes / capture / victory / income), `EndTurn` and `StartMatch` commands, match clock in `logic/turn`; counter fire
+  (one per enemy turn, armed at the enemy turn start, vetoed like a command named `Counter`); MG overwatch (`Hold`, move
+  hook, stop on death / pin, no undo after a reaction); engaged (status) and turret return (movement); crew shock cleared
+  after the turn it cost; `Recrew` (team weapons, own or enemy), `Abandon` (crew becomes its own unit beside the gun; a
+  crew without its gun fights with small arms), `ClearWreck` (engineer role, `clear_turns`). New `data/balance/turn.json`,
+  wreck `clear_turns` and `wreck_clearing` in `data/rules/terrain.json`. Unit fields: `engaged` (status), `sbps` owned by
+  lifecycle. 247 tests.
+- **Next:** D2-8 `logic/capture`, `logic/economy`, `logic/build`.
+- **Blocked:** nothing; open questions in `docs/handover.md` §5.
+
 ## 2026-11-26 (D2-1 … D2-6, map design)
 - **Done:** D2-1 `logic/hex`, `services/rng`; D2-2 `fsm`, `events`, `state`, `commands`, `store`, `services/data indexUnits`;
   D2-3 `movement` + action budget (`data/rules/terrain.json`, `data/balance/movement.json`); D2-4 `vision` (sight lines,

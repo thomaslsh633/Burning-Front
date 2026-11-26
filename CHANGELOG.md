@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — D2-7 turn flow and reactions (2026-11-26)
+- `EndTurn` / `StartMatch`: turn-end and turn-start hooks in a fixed order; retreating units walk on by themselves.
+- Counter fire once per enemy turn; MG overwatch (`Hold`) that can stop a move; engaged mark and turret return.
+- `Recrew`, `Abandon` and `ClearWreck` commands; a crew without its gun fights as a small squad.
+
 ## rewrite — folder structure (2026-11-25)
 - v214 moved to `legacy/` unchanged (frozen, builds with `node legacy/build.js`); it is the reference for the rewrite.
 - New tree: `src/` in three layers (presentation / logic / services) plus `app/`, one folder per system, `data/` per data form.

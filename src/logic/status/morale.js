@@ -1,4 +1,4 @@
-// Morale axis and suppression points (docs/unit-state.md §5.4, SPEC §4, §10). Owns fsm.morale, suppression, retreatTo.
+// Morale axis and suppression points (docs/unit-state.md §5.4, SPEC §4, §10). Owns fsm.morale, suppression, retreatTo, engaged.
 // Thresholds and decay: data/balance/status.json.
 import { defineMachine, send, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
@@ -17,12 +17,12 @@ export const MORALE = defineMachine('morale', 'NORMAL', {
       SuppressionChanged: (u, ctx) => level(u, ctx) === 'PINNED' ? 'PINNED' : u.suppression < ctx.data.balance.status.suppression.recover_below ? 'NORMAL' : null },
   },
   PINNED: {
-    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned' },
+    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned', Hold: 'pinned', ClearWreck: 'pinned' },
     on: { Retreat: 'RETREATING',
       SuppressionChanged: (u, ctx) => (level(u, ctx) === 'PINNED' ? null : level(u, ctx) ?? 'NORMAL') },
   },
   RETREATING: {
-    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, 'retreating'])),
+    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Retreat', 'Counter'].map(c => [c, 'retreating'])),
     on: { Arrived: 'NORMAL' },
   },
 });
@@ -57,7 +57,7 @@ export function validateRetreat(state, cmd) {
 
 export function startRetreat(state, unitId) {
   const u = state.units[unitId];
-  const r = send(MORALE, { ...u, retreatTo: { ...state.teams[u.team].rally } }, 'Retreat');
+  const r = send(MORALE, { ...u, retreatTo: { ...state.teams[u.team].rally }, engaged: false }, 'Retreat');
   return { state: putUnit(state, r.unit), events: r.events };
 }
 
@@ -67,6 +67,27 @@ export function arriveIfNear(state, unitId, data, distanceToRally) {
   if (u.fsm.morale !== 'RETREATING' || distanceToRally > data.balance.status.retreat.arrive_within_hex) return { state, events: [] };
   const r = transition(MORALE, { ...u, suppression: 0, retreatTo: null }, 'NORMAL');
   return { state: putUnit(state, r.unit), events: r.events };
+}
+
+/** Engaged (SPEC §4): set by attacking (own attack, counter fire, overwatch), never by taking damage. */
+export function setEngaged(state, unitId) {
+  const u = state.units[unitId];
+  if (!u || u.engaged) return { state, events: [] };
+  return { state: putUnit(state, { ...u, engaged: true }), events: [] };
+}
+
+/** Own turn end: a unit that did not attack in this turn is no longer engaged. */
+export function engagedTurnEnd(state, unitId) {
+  const u = state.units[unitId];
+  if (!u.engaged || u.budget.fired) return { state, events: [] };
+  return { state: putUnit(state, { ...u, engaged: false }), events: [] };
+}
+
+/** A captured or recrewed unit starts over: no veterancy, no suppression, not engaged (docs/unit-state.md §6). */
+export function resetMorale(state, unitId) {
+  const u = state.units[unitId];
+  const t = transition(MORALE, { ...u, xp: 0, rank: 0, suppression: 0, retreatTo: null, engaged: false }, 'NORMAL');
+  return { state: putUnit(state, t.unit), events: t.events };
 }
 
 /** 'ok' | 'low' | 'out' (status flag, derived). */

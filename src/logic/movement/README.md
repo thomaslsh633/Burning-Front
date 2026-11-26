@@ -10,6 +10,7 @@
 
 ## Public API (exported from `index.js`)
 - `moveClass`, `movePoints`, `reachable`, `pathTo`, `turnCost`, `validateMove` / `applyMove(…, onStep)`, `validateTurn` / `applyTurn` — done
+- `moveToward(…, onStep)` (retreat walk), `turretReturn` (unengaged turrets swing back at the own turn end) — done (D2-7)
 - `stepCost` (reads the map through `logic/terrain`); vehicles crush crushable lines as they cross them — done
 
 ## May import

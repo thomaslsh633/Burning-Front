@@ -1,5 +1,5 @@
 {
-  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint; wrecks are placed when vehicles and emplacements die. cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
+  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint; wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
   "pass_classes": {
     "infantry": "infantry",
     "vaulting_infantry": "infantry",
@@ -425,7 +425,8 @@
       },
       "group": "wreck",
       "hp": 400,
-      "armor": 30
+      "armor": 30,
+      "clear_turns": 2
     },
     "emplacement": {
       "cover": "heavy",
@@ -437,7 +438,11 @@
       },
       "group": "wreck",
       "hp": 300,
-      "armor": 20
+      "armor": 20,
+      "clear_turns": 1
     }
+  },
+  "wreck_clearing": {
+    "roles": ["engineer"]
   }
 }

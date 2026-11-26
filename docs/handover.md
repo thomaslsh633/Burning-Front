@@ -1,4 +1,4 @@
-# Handover: Burning Front rewrite (2026-11-26)
+# Handover: Burning Front rewrite (2026-11-26, after D2-7)
 
 Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `docs/unit-state.md` (CLAUDE.md "Start of every task").
 
@@ -7,10 +7,10 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Item | State |
 | --- | --- |
 | Repository | `thomaslsh633/Burning-Front` |
-| Working branch | `claude/focused-davinci-afa1h6`, pushed; last commit `b61e8ca` |
+| Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-7 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (204 tests) |
-| Phase | **D2 rules engine: steps 1–6 done**, plus map work (terrain system, map files). Next: **D2-7** |
+| Checks | `npm run check` passes; `npm test` passes (247 tests) |
+| Phase | **D2 rules engine: steps 1–7 done**, plus map work (terrain system, map files). Next: **D2-8** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
 
@@ -47,6 +47,7 @@ Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, Pix
 | `aefc784` | **option B chosen**: `logic/terrain` (lines compiled to hex edges, compiler, change overlay, destructible buildings / natural cover / defenses, collapse kills garrison, wreck objects) |
 | `584f380` | importer adds each faction's CoH3 sandbags / wire / tank traps |
 | `b61e8ca` | map files `data/maps/<id>/map.json`, compiled by `npm run build:data`; v214 maps converted |
+| D2-7 (branch head) | turn phases (`logic/commands/phases.js`), `EndTurn` / `StartMatch`, match clock, counter fire, MG overwatch (`Hold`), engaged + turret return, crew-shock clearing, `Recrew`, `Abandon`, `ClearWreck`; `data/balance/turn.json`; wreck `clear_turns` |
 
 D2 readiness fixes 1–7:
 1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
@@ -60,26 +61,15 @@ D2 readiness fixes 1–7:
 
 ## 4. Next steps (in order)
 
-1. **D2-7 `logic/turn` + rest of `logic/lifecycle`**
-   - **Turn order and phases:** turn start runs strikes → status → capture tick → victory → income (SPEC §2).
-     - Per unit, in hook order: lifecycle → location → stance → morale → action → visibility (`docs/unit-state.md` §3).
-     - At turn start: `turn.refreshUnit`, `crew.crewTurnStart`, `status.decaySuppression`, and the retreat auto-move
-       (`movement.moveToward` + `status.arriveIfNear`).
-     - At turn end: `crew.crewTurnEnd` (auto-emplace) and `vision.visibilityTurnEnd`.
-     - Also: turn-end engaged / turret return, and the `EndTurn` command.
-   - **Counter fire:** each unit has one counter per enemy turn, spending `budget.counter`; reloading and retreating units do not
-     counter (SPEC §4, §5).
-   - **MG overwatch:** emplaced HMG teams only (`docs/unit-state.md` §5.1.1). Uses `Hold` → `OVERWATCH`, and the
-     `applyMove(…, onStep)` hook to interrupt moves.
-   - **Recrew / capture, abandon, wreck clearing:** `docs/unit-state.md` §6.
-   - **Wreck clearing:** wrecks are now map objects (`terrain.placeWreck`), so clearing removes `changes.hexes[k].wreck`.
-2. **D2-8** `logic/capture`, `logic/economy`, `logic/build`.
+1. **D2-8** `logic/capture`, `logic/economy`, `logic/build`.
    - Capture by strength: 2 ticks per step (SPEC §3, §10).
    - Sectors and supply connection; income; upkeep 2 %, at most 20.
    - Production from `map.production`; build menu.
-3. **D2-9** `logic/victory` (tickets, annihilation) and an integration test that finishes a 1v1 match using commands only.
-   This test is the D2 exit gate (`docs/dev-plan.ko.md`).
-4. Then stage **G (greybox)**: import all four factions, art-free view with a map editor, time-to-kill report. After that, D3.
+   - Plug into the empty slots of `SIDE_TURN_START` in `src/logic/commands/phases.js` (`capture`, `income`; `strikes` for
+     pending barrages later).
+2. **D2-9** `logic/victory` (tickets, annihilation) and an integration test that finishes a 1v1 match using commands only.
+   This test is the D2 exit gate (`docs/dev-plan.ko.md`). Victory goes into the `victory` slot of `SIDE_TURN_START`.
+3. Then stage **G (greybox)**: import all four factions, art-free view with a map editor, time-to-kill report. After that, D3.
 
 ## 5. Open issues and follow-ups
 
@@ -103,14 +93,27 @@ D2 readiness fixes 1–7:
   commands yet (only normal indirect fire).
 - **Veterancy `hp_add`:** in the data but not applied (there is no max-HP field on members yet).
 - **Ownership:** `timers.smoke` and `marks` have no owner yet (`src/logic/state/ownership.js`).
-- **Towed gun destroyed under a living crew:** the crew stays as the unit and cannot fire. The design says it should become
-  a small infantry squad.
+- **Crews without guns (D2-7):** a crew whose towed gun is destroyed or abandoned stays a `team_weapon` unit of the same
+  blueprint with only crew members; it fires its own small arms, cannot emplace and may recrew. A separate infantry
+  blueprint was not introduced.
 - **Carried team weapons** (HMG, mortar): removed when the crew dies. The design says they should be left `DECREWED`, which
   needs a gun HP for carried weapons.
 - **Suppression thresholds and combat tuning** are design values (CoH3 does not publish them):
   `data/balance/status.json`, `combat.json` (including `criticals`, `feature_target_size`).
 - **HQ:** indestructible (stops at 1 HP), following SPEC §2. The user has not confirmed this for the new building rules.
-- **Choices the user has not confirmed:**
+- **D2-7 choices the user has not confirmed:**
+  - suppressed and pinned units still counter fire (at ×0.5 / ×0.25 accuracy); v214 let neither counter. Only retreating
+    units and crews setting up / packing up do not;
+  - counter fire needs the attacker inside the counter-firing weapon's arc (v214 flank rule kept);
+  - an overwatch burst stops the mover only if it dies or is pinned;
+  - a retreating unit that reaches its rally point at its turn start is spent for that turn;
+  - recrew takes `min_crew`–`max_squad` living men, so a full 6-man rifle or grenadier squad cannot recrew a 57 mm / Pak 40
+    (CoH3 max 5) until it loses a man;
+  - wreck clearing turns: vehicle 2, emplacement 1; the abandoning crew gets a fresh ammo load.
+- **Not built in D2-7:** vehicle recrew (no recrewable vehicle blueprints imported), crew bail-out critical, denial
+  demolition, reload timers (so "reloading units do not counter" has nothing to check yet), `Captured` vs `Recrewed`
+  (the previous owner of a decrewed gun is not stored), reason-code text in `data/i18n`.
+- **Choices the user has not confirmed (earlier):**
   - sandbags, wire and tank traps show an HP bar on select;
   - fire does not damage wrecks;
   - building HP values: small house 600, house 1,200, large house 2,000, church 3,000.
@@ -144,7 +147,7 @@ D2 readiness fixes 1–7:
   - coh3stats.com works with curl, and with Node fetch only with `NODE_USE_ENV_PROXY=1`.
   - wikidocs.net is blocked.
 - **Git:**
-  - Commit on `claude/focused-davinci-afa1h6`, then push with `git push -u origin claude/focused-davinci-afa1h6`.
+  - Commit on the session's branch (this one: `claude/serene-fermat-1ih1m8`) and push with `git push -u origin <branch>`.
   - No pull request unless asked.
   - Commit messages end with the Co-Authored-By / Claude-Session lines given by the session.
 
@@ -219,4 +222,4 @@ node tools/i18n/seed.js
 **External sources**
 - CoH3 data: https://github.com/cohstats/coh3-data (`data/chunked`), statistics: https://coh3stats.com/
 - Burning Bridges notes: https://github.com/thomaslsh633/burning-bridge-data
-- Branch: https://github.com/thomaslsh633/Burning-Front/tree/claude/focused-davinci-afa1h6
+- Branch: https://github.com/thomaslsh633/Burning-Front/tree/claude/serene-fermat-1ih1m8

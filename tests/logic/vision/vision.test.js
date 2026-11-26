@@ -80,3 +80,11 @@ test('moving reveals a concealed unit (Move route)', () => {
   const r = apply(hidden, { type: 'Move', side: 'blue', unit: 'u1', to: H(3, 2) }, data, null);
   assert.equal(r.state.units.u1.fsm.visibility, 'REVEALED');
 });
+
+test('unitSees: one viewer\'s own sight range and line of sight, concealment respected', () => {
+  const { state, data } = testMatch([blue('hmg_30cal_us', H(1, 5)), red('grenadier_ger', H(4, 5)), red('grenadier_ger', H(11, 5))]);
+  assert.equal(vision.unitSees(state, data, state.units.u1, state.units.u2), true);
+  assert.equal(vision.unitSees(state, data, state.units.u1, state.units.u3), false, 'beyond sight range');
+  const hidden = tweak(state, 'u2', { fsm: { ...state.units.u2.fsm, visibility: 'CONCEALED' } });
+  assert.equal(vision.unitSees(hidden, data, hidden.units.u1, hidden.units.u2), vision.detectionRange(hidden, data, hidden.units.u2) >= 3);
+});

@@ -141,8 +141,8 @@ export function applyTurn(state, cmd, data) {
   return { state: putUnit(state, withFacing(u, cmd.facing)), events: [ev('Turned', { unit: u.id, from: u.facing, to: cmd.facing })], cost: turnCost(u, data, cmd.facing) };
 }
 
-/** Walk as close to `goal` as `points` allow (retreat): the free reachable hex nearest the goal, cheapest on ties. */
-export function moveToward(state, data, unitId, goal, points) {
+/** Walk as close to `goal` as `points` allow (retreat): the free reachable hex nearest the goal, cheapest on ties. onStep as applyMove. */
+export function moveToward(state, data, unitId, goal, points, onStep) {
   const reach = reachable(state, data, unitId, { points });
   let best = null;
   for (const [k, v] of reach) {
@@ -151,5 +151,12 @@ export function moveToward(state, data, unitId, goal, points) {
     if (!best || d < best.d || (d === best.d && v.cost < best.cost)) best = { h, d, cost: v.cost };
   }
   if (!best || equals(best.h, state.units[unitId].pos)) return { state, events: [], cost: 0 };
-  return applyMove(state, { unit: unitId, to: best.h }, data, undefined, points);
+  return applyMove(state, { unit: unitId, to: best.h }, data, onStep, points);
+}
+
+/** Own turn end: a turret that is not engaged swings back to the hull (SPEC §6). engaged: read from status by the caller. */
+export function turretReturn(state, unitId, engaged) {
+  const u = state.units[unitId];
+  if (engaged || u.turretFacing === u.facing) return { state, events: [] };
+  return { state: putUnit(state, { ...u, turretFacing: u.facing }), events: [ev('TurretTurned', { unit: unitId, from: u.turretFacing, to: u.facing })] };
 }

@@ -23,5 +23,5 @@ export function apply(state, cmd, data, rng, routes = ROUTES, machines = MACHINE
   const error = validate(state, cmd, data, routes, machines);
   if (error) return { error };
   const r = routes[cmd.type].apply(state, cmd, data, rng);
-  return { state: r.state, events: r.events, undoable: !!routes[cmd.type].undoable };
+  return { state: r.state, events: r.events, undoable: !!routes[cmd.type].undoable && r.undoable !== false };
 }

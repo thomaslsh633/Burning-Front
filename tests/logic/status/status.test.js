@@ -68,3 +68,30 @@ test('ammo state', () => {
   assert.equal(status.ammoState({ ...u, ammo: 5 }, data), 'low');
   assert.equal(status.ammoState({ ...u, ammo: 0 }, data), 'out');
 });
+
+test('engaged: set by attacking, kept through an own turn end with an attack, cleared without one and by retreat', () => {
+  const { state } = rifles();
+  const e = status.setEngaged(state, 'u1').state;
+  assert.equal(e.units.u1.engaged, true);
+  const fired = tweak(e, 'u1', { budget: { ...e.units.u1.budget, fired: true } });
+  assert.equal(status.engagedTurnEnd(fired, 'u1').state.units.u1.engaged, true);
+  const quiet = status.engagedTurnEnd(e, 'u1').state;
+  assert.equal(quiet.units.u1.engaged, false);
+  assert.equal(status.startRetreat(e, 'u1').state.units.u1.engaged, false);
+  assertOwnsOnly('status', state, quiet);
+  assertOwnsOnly('status', state, e);
+});
+
+test('resetMorale: a recrewed unit starts with no veterancy, suppression or engagement', () => {
+  const { state } = rifles();
+  const worn = tweak(state, 'u1', { xp: 500, rank: 2, suppression: 85, engaged: true, fsm: { ...state.units.u1.fsm, morale: 'PINNED' } });
+  const r = status.resetMorale(worn, 'u1'), u = r.state.units.u1;
+  assert.deepEqual([u.xp, u.rank, u.suppression, u.engaged, u.fsm.morale], [0, 0, 0, false, 'NORMAL']);
+  assertOwnsOnly('status', worn, r.state);
+});
+
+test('retreating units never counter fire', () => {
+  const { state } = rifles();
+  const r = status.startRetreat(state, 'u1').state.units.u1;
+  assert.equal(status.MORALE.states[r.fsm.morale].denies.Counter, 'retreating');
+});

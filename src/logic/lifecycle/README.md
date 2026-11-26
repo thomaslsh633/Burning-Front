@@ -9,7 +9,11 @@
 
 ## Public API (exported from `index.js`)
 - `LIFE` machine, `checkDeaths` (squad removed, crewless gun DECREWED, vehicle / structure / gun WRECKED), `applyCriticals` — done
-- `canRecrew`, `recrew`, `abandon`, `clearWreck` — planned (D2-7)
+- `lifeTurnEnd` (a served crew shock is cleared) — done (D2-7)
+- `validateRecrew`, `recrewMembers`, `recrew` (team weapons; own or enemy guns alike) — done (D2-7)
+- `validateAbandon`, `freeNeighbour`, `splitCrew`, `abandon` (the crew becomes a separate unit beside its gun) — done (D2-7)
+- `validateClearWreck` (who may clear; `logic/terrain` `clearWreck` applies the work) — done (D2-7)
+- vehicle recrew (abandoned vehicles): waits for recrewable vehicle blueprints in the data
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

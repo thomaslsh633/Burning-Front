@@ -142,3 +142,16 @@ test('defensive lines placed by a side take that faction\'s CoH3 HP and armour; 
   assert.deepEqual(terrain.featureHp(state, data, rules.lines.wire, 'red'), { hp: 150, armor: 20 });
   assert.deepEqual(terrain.featureHp(state, data, rules.lines.hedge, null), { hp: 150, armor: 1 });
 });
+
+test('clearWreck: one turn of work at a time; a vehicle wreck goes after its clear_turns', () => {
+  const { state, data } = testMatch([]);
+  const placed = terrain.placeWreck(state, data, H(4, 4), 'vehicle').state;
+  const one = terrain.clearWreck(placed, data, H(4, 4));
+  assert.deepEqual([one.cleared, one.state.map.changes.hexes['4,4'].wreck.work], [false, 1]);
+  assert.equal(one.events[0].type, 'WreckClearing');
+  const two = terrain.clearWreck(one.state, data, H(4, 4));
+  assert.equal(two.cleared, true);
+  assert.equal(terrain.hexAt(two.state, data, H(4, 4)).featureKind, null);
+  assert.deepEqual(two.events, [{ type: 'WreckCleared', hex: H(4, 4), kind: 'vehicle' }]);
+  assert.equal(terrain.clearWreck(state, data, H(4, 4)).state, state, 'no wreck: nothing');
+});

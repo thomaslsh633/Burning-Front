@@ -8,7 +8,8 @@ const alive = m => m.hp > 0;
 /**
  * Weapons that fire in an attack: [{ weapon (record), id }]. Squads: every living member's main / secondary weapon.
  * Carried team weapons (HMG, mortar): the crew's weapon once, while any crew lives (crew carbines stay quiet).
- * Towed guns: the gun entity's weapons while it and a crewman live. A damaged main gun does not fire.
+ * Towed guns: the gun entity's weapons while it and a crewman live; a crew whose gun is gone (destroyed or abandoned)
+ * fights as a small infantry squad with its own small arms. A damaged main gun does not fire.
  */
 export function firingWeapons(unit, data) {
   const sq = data.units.sbps[unit.sbps], tw = sq.team_weapon, c = data.balance.combat;
@@ -24,7 +25,8 @@ export function firingWeapons(unit, data) {
     const crewAlive = unit.members.some(m => m.ebps === tw.crew_entity && alive(m));
     if (!crewAlive) return [];
     if (tw.weapon) { const x = usable(tw.weapon); return x ? [{ ...x, mount: 'fixed' }] : []; }
-    return unit.members.some(m => m.ebps === tw.weapon_entity && alive(m)) ? fromEntity(tw.weapon_entity) : [];
+    if (unit.members.some(m => m.ebps === tw.weapon_entity && alive(m))) return fromEntity(tw.weapon_entity);
+    return unit.members.filter(m => m.ebps === tw.crew_entity && alive(m)).flatMap(m => fromEntity(m.ebps));
   }
   return unit.members.filter(alive).flatMap(m => fromEntity(m.ebps));
 }

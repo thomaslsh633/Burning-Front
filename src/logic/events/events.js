@@ -7,14 +7,14 @@ export const EVENT = Object.freeze(Object.fromEntries([
   // unit state
   'StateChanged', 'UnitCreated', 'UnitRemoved',
   // movement
-  'Moved', 'Turned', 'MoveInterrupted',
+  'Moved', 'Turned', 'TurretTurned', 'MoveInterrupted',
   // combat
   'Fired', 'ShotMissed', 'ShotHit', 'PenetrationFailed', 'Damaged', 'ModelKilled', 'UnitDestroyed', 'Suppressed', 'AmmoSpent',
   'CounterFired', 'OverwatchFired', 'CriticalInflicted', 'RankGained', 'Retreated',
   // vision
   'Revealed', 'Concealed', 'Spotted',
   // crew and lifecycle
-  'Emplacing', 'Emplaced', 'Packing', 'Packed', 'CrewWiped', 'Abandoned', 'Recrewed', 'Captured', 'Wrecked', 'WreckCleared',
+  'Emplacing', 'Emplaced', 'Packing', 'Packed', 'CrewWiped', 'Abandoned', 'Recrewed', 'Captured', 'Wrecked', 'WreckClearing', 'WreckCleared',
   // map features
   'FeatureDamaged', 'FeatureDestroyed', 'StructureCollapsed', 'WreckPlaced', 'Crushed',
   // points and economy

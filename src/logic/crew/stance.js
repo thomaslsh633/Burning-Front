@@ -4,7 +4,7 @@ import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 
-const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Board', 'Hold'].map(c => [c, reason]));
+const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Board', 'Hold', 'Counter'].map(c => [c, reason]));
 
 export const STANCE = defineMachine('stance', 'MOBILE', {
   MOBILE: { denies: { Pack: 'not_emplaced', Hold: 'not_emplaced' } },
@@ -13,10 +13,10 @@ export const STANCE = defineMachine('stance', 'MOBILE', {
   PACKING_UP: { denies: NOT_WHILE('packing_up') },
 });
 
-/** The weapon that decides the team weapon's setup (its carried weapon, or the gun's main weapon). */
+/** The weapon that decides the team weapon's setup (its carried weapon, or the gun's main weapon); null for a crew without its gun. */
 function crewWeapon(unit, data) {
   const tw = data.units.sbps[unit.sbps]?.team_weapon;
-  if (!tw) return null;
+  if (!tw || (tw.weapon_entity && !unit.members.some(m => m.ebps === tw.weapon_entity && m.hp > 0))) return null;
   const id = tw.weapon ?? data.units.ebps[tw.weapon_entity]?.weapons?.find(w => w.slot === 'main')?.weapon;
   return data.units.weapon[id] ?? null;
 }
@@ -25,8 +25,9 @@ export const setupTurns = (unit, data) => crewWeapon(unit, data)?.emplace?.setup
 export const teardownTurns = (unit, data) => crewWeapon(unit, data)?.emplace?.teardown_turns ?? data.balance.scale.emplace.teardown_turns;
 const needsEmplace = (unit, data) => (crewWeapon(unit, data)?.traits || []).includes('emplace_required');
 
-export function validateEmplace(state, cmd) {
-  return state.units[cmd.unit].kind === 'team_weapon' ? null : 'cannot_emplace';
+export function validateEmplace(state, cmd, data) {
+  const u = state.units[cmd.unit];
+  return u.kind === 'team_weapon' && crewWeapon(u, data) ? null : 'cannot_emplace';
 }
 
 /** Start setting up; EMPLACED at the own turn start after setup_turns (fires from the turn after emplacing, SPEC §5). */
@@ -57,6 +58,13 @@ export function crewTurnStart(state, unitId) {
   const to = u.fsm.stance === 'SETTING_UP' ? 'EMPLACED' : 'MOBILE';
   const t = transition(STANCE, next, to);
   return { state: putUnit(state, t.unit), events: [ev(to === 'EMPLACED' ? 'Emplaced' : 'Packed', { unit: unitId }), ...t.events] };
+}
+
+/** A recrewed or captured gun must set up again (docs/unit-state.md §6). */
+export function resetStance(state, unitId) {
+  const u = state.units[unitId];
+  const t = transition(STANCE, { ...u, timers: { ...u.timers, stance: 0 } }, 'MOBILE');
+  return { state: putUnit(state, t.unit), events: t.events };
 }
 
 /** Own turn end: teardown 0 finishes now; packed crews that must emplace to fire set up by themselves (SPEC §5). */

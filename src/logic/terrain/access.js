@@ -1,5 +1,5 @@
 // Map lookups: the compiled map (data.maps[id], immutable) with the match's changes on top (GameState.map.changes).
-// changes: { hexes: { "c,r": { object?: id | null, hp?, wreck?: { kind, hp } } },
+// changes: { hexes: { "c,r": { object?: id | null, hp?, wreck?: { kind, hp, work? } } },
 //            segments: { "line:seg": { kind: id | null, hp } }, structures: { id: { hp, collapsed? } } }
 import { key, neighbours, equals, edgeKey } from '../hex/index.js';
 

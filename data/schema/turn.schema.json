@@ -1,0 +1,59 @@
+{
+  "about": "data/balance/turn.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "counter": {
+      "type": "object",
+      "properties": {
+        "per_enemy_turn": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "per_enemy_turn"
+      ]
+    },
+    "overwatch": {
+      "type": "object",
+      "properties": {
+        "kinds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "kind"
+          }
+        },
+        "weapon_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "weapon_class"
+          }
+        },
+        "stops_mover": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "state_morale"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "kinds",
+        "weapon_classes",
+        "stops_mover"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "counter",
+    "overwatch"
+  ]
+}

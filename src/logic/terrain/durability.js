@@ -103,3 +103,16 @@ export function placeWreck(state, data, h, kind) {
   const next = withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: { ...(c.hexes[k] || {}), wreck: { kind, hp: def.hp } } } }));
   return { state: next, events: [ev('WreckPlaced', { hex: { ...h }, kind })] };
 }
+
+/** One turn of clearing work on a wreck; gone after its clear_turns (data). → { state, events, cleared } */
+export function clearWreck(state, data, h) {
+  const k = key(h), ch = state.map.changes.hexes[k] || {};
+  if (!ch.wreck) return { state, events: [], cleared: false };
+  const need = data.rules.terrain.wrecks[ch.wreck.kind].clear_turns ?? 1, work = (ch.wreck.work ?? 0) + 1;
+  if (work >= need) {
+    const { wreck, ...rest } = ch;
+    return { state: withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: rest } })), events: [ev('WreckCleared', { hex: { ...h }, kind: wreck.kind })], cleared: true };
+  }
+  return { state: withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: { ...ch, wreck: { ...ch.wreck, work } } } })),
+    events: [ev('WreckClearing', { hex: { ...h }, kind: ch.wreck.kind, work, of: need })], cleared: false };
+}

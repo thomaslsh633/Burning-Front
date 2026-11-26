@@ -7,7 +7,8 @@ import { gameData } from './game-data.js';
 /**
  * units: [{ team, sbps, pos, facing?, stance?, id? }]
  * map: { cols, rows, terrain: { "c,r": { ground?, object?, elev? } }, edges: { edgeKey: kind }, lines, structures } (map definition layers)
- * → { state, data } with data.maps.test the compiled map. Blue units get their turn budget.
+ * → { state, data } with data.maps.test the compiled map. Blue units get their turn budget; red counter fire is not armed
+ * (end the turn twice with EndTurn for a real enemy turn).
  */
 export function testMatch(units, map = {}) {
   const def = { meta: { id: 'test', cols: map.cols ?? 12, rows: map.rows ?? 10 }, hexes: map.terrain, edges: map.edges, lines: map.lines, structures: map.structures };

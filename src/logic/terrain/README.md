@@ -15,7 +15,7 @@
 - `hexCentre`, `segmentsCross`, `lineEdges` — geometry
 - `compileMap(def, rules) → { map, errors }`
 - `mapOf`, `hexAt`, `edgeAt`, `elevation`, `structureAt`
-- `canDamage`, `damageHex`, `damageEdge`, `damageStructure`, `crushEdge`, `placeWreck`
+- `canDamage`, `damageHex`, `damageEdge`, `damageStructure`, `crushEdge`, `placeWreck`, `clearWreck` (one turn of work; gone after the wreck's `clear_turns`)
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

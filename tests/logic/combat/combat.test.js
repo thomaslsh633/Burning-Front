@@ -115,3 +115,18 @@ test('mortar: indirect shells splash the squad; ammo per shell', () => {
   }
   assert.ok(hurt > 10);
 });
+
+test('a crew without its towed gun fights with its own small arms', () => {
+  const { state, data } = testMatch([blue('at_gun_57mm_us', H(2, 2))]);
+  const crewOnly = tweak(state, 'u1', { members: state.units.u1.members.filter(m => m.ebps !== 'tw_at_gun_57mm_us') });
+  assert.deepEqual(combat.firingWeapons(crewOnly.units.u1, data).map(w => w.id), Array(5).fill('carbine_crew_us'));
+  const gunDead = tweak(state, 'u1', { members: state.units.u1.members.map(m => (m.ebps === 'tw_at_gun_57mm_us' ? { ...m, hp: 0 } : m)) });
+  assert.equal(combat.firingWeapons(gunDead.units.u1, data).length, 5);
+});
+
+test('setMembers: a crew change writes members only', () => {
+  const { state } = testMatch([blue('at_gun_57mm_us', H(2, 2))]);
+  const r = combat.setMembers(state, 'u1', [{ ebps: 'tw_at_gun_57mm_us', hp: 10 }]);
+  assert.deepEqual(r.state.units.u1.members, [{ ebps: 'tw_at_gun_57mm_us', hp: 10 }]);
+  assertOwnsOnly('combat', state, r.state);
+});

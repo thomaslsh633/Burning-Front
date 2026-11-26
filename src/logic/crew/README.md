@@ -10,6 +10,7 @@
 
 ## Public API (exported from `index.js`)
 - `STANCE` machine, `emplace`, `pack`, `validateEmplace`, `validatePack`, `crewTurnStart`, `crewTurnEnd` (auto-emplace), `setupTurns` / `teardownTurns` — done
+- `resetStance` (recrewed gun starts MOBILE) — done (D2-7); a crew without its towed gun cannot emplace
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

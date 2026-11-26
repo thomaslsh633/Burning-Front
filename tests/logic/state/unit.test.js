@@ -45,3 +45,14 @@ test('createMatch and selectors', () => {
   assert.equal(moved.units.u1.pos.c, 2);
   assert.equal(s.units.u1.pos.c, 1, 'putUnit returns a new state');
 });
+
+test('spawnUnit takes the next free id; members carried over keep their HP', async () => {
+  const { spawnUnit } = await import('../../../src/logic/state/index.js');
+  const m = createMatch({ map: { id: 'skirmish' }, order: ['blue', 'red'], teams: { blue: { faction: 'american' }, red: { faction: 'german' } },
+    units: [{ team: 'blue', sbps: 'riflemen_us', pos: { c: 1, r: 1 } }], rng: 1 }, data);
+  const r = spawnUnit(m, { team: 'blue', sbps: 'at_gun_57mm_us', pos: { c: 2, r: 1 }, members: [{ ebps: 'crew_at_gun_57mm_us', hp: 40 }] }, data);
+  assert.equal(r.id, 'u2');
+  assert.equal(r.state.match.nextId, 3);
+  assert.deepEqual(r.state.units.u2.members, [{ ebps: 'crew_at_gun_57mm_us', hp: 40 }]);
+  assert.equal(r.state.units.u2.engaged, false);
+});

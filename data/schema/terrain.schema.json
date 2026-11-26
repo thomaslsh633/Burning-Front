@@ -446,6 +446,10 @@
           },
           "leaves": {
             "$ref": "types.schema.json#/$defs/Id"
+          },
+          "clear_turns": {
+            "type": "integer",
+            "minimum": 1
           }
         },
         "additionalProperties": false,
@@ -457,6 +461,22 @@
           "group"
         ]
       }
+    },
+    "wreck_clearing": {
+      "type": "object",
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "role"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "roles"
+      ]
     }
   },
   "additionalProperties": false,
@@ -470,6 +490,7 @@
     "lines",
     "structures",
     "structure_terrain",
-    "wrecks"
+    "wrecks",
+    "wreck_clearing"
   ]
 }

@@ -36,3 +36,19 @@ test('packed crews that must emplace set up by themselves at turn end; squads ca
   assert.equal(apply(state, { type: 'Emplace', side: 'blue', unit: 'u2' }, data, null).error, 'cannot_emplace');
   assert.equal(crew.setupTurns(state.units.u1, data), 1);
 });
+
+test('resetStance: a recrewed gun starts packed', () => {
+  const { state } = testMatch([{ team: 'blue', sbps: 'at_gun_57mm_us', pos: H(3, 3), stance: 'EMPLACED' }]);
+  const r = crew.resetStance(state, 'u1');
+  assert.equal(r.state.units.u1.fsm.stance, 'MOBILE');
+  assertOwnsOnly('crew', state, r.state);
+});
+
+test('a crew without its towed gun cannot emplace and does not auto-emplace', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'at_gun_57mm_us', pos: H(3, 3) }]);
+  const crewOnly = tweak(state, 'u1', { members: state.units.u1.members.filter(m => m.ebps !== 'tw_at_gun_57mm_us') });
+  assert.equal(crew.validateEmplace(crewOnly, { unit: 'u1' }, data), 'cannot_emplace');
+  assert.equal(crew.validateEmplace(state, { unit: 'u1' }, data), null);
+  assert.equal(crew.crewTurnEnd(crewOnly, 'u1', data).state, crewOnly);
+  assert.equal(crew.STANCE.states.SETTING_UP.denies.Counter, 'setting_up');
+});

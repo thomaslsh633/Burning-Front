@@ -10,7 +10,7 @@
 - garrison sight
 
 ## Public API (exported from `index.js`)
-- `sightLine`, `sightRange`, `hasLineOfSight`, `visibleHexes`, `detectionRange`, `canSee` — done
+- `sightLine`, `sightRange`, `hasLineOfSight`, `visibleHexes`, `detectionRange`, `canSee`, `unitSees` (one viewer, for overwatch) — done
 - `coverAgainst(state, data, target, fromHex)`, `receivesCover`, `hexCover` — done
 - `VISIBILITY` machine, `revealOnFire`, `revealOnMove`, `visibilityTurnEnd` — done; smoke follows with skills
 

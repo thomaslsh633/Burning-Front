@@ -239,6 +239,22 @@ Confirmed 2026-11-25 (rewrite):
   objects obscure (hit ×0.85); low objects (height ≤ 2) beside the viewer are ignored; neighbours always see each other.
   Units in bush or light forest are seen from 2 hexes, dense forest and buildings from 1; an emplaced crew in cover that
   neither moved nor fired conceals at its turn end (seen from 2); CoH3 camouflage units use their `detected_hex`.
+- Turn flow (D2-7, `logic/commands/phases.js`): `StartMatch` opens turn 1 for the first side; `EndTurn` runs the side's
+  turn-end hooks (concealment, unused move / action lapse, engaged cleared without an attack, packed crews auto-emplace,
+  served crew shock cleared, unengaged turrets swing back), then the next side's turn start (strikes → status → capture →
+  victory → income; status = setup / teardown timers, suppression decay, retreat walk or a fresh budget, and the other
+  side's counter fire armed). Retreating units walk on by themselves at their turn start and spend that turn.
+- Counter fire (D2-7, `data/balance/turn.json`): one per enemy turn; the attacked unit fires back at the attacker with every
+  weapon that can reach it from where it stands (sight, range, arc, ammo), so an attack from outside its arc draws none.
+  Retreating units and crews setting up or packing up do not counter; overwatch and counter fire draw no counter fire.
+  Counter fire, overwatch fire and ground attacks set engaged.
+- Overwatch reaction (D2-7): a move that steps into an overwatching MG's arc, range and sight draws one burst; the move stops
+  there when the mover dies or is pinned (only the steps taken are paid) and cannot be undone.
+- Abandon and crews without guns (D2-7): a towed-gun crew may abandon its gun (CoH3 `can_manual_abandon`): the crew steps
+  onto a free neighbouring hex as its own unit, the gun stays decrewed. A crew whose gun is gone fights with its small arms
+  and may recrew. Recrew takes a squad of `min_crew`–`max_squad` living men (57 mm / Pak 40: 2–5).
+- Wreck clearing (D2-7, `data/rules/terrain.json`): engineers (squad role `engineer`) spend their action on or next to a
+  wreck; vehicle wrecks go after 2 turns of work, emplacement wrecks after 1.
 
 Confirmed 2026-11-22:
 - Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn

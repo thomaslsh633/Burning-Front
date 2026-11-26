@@ -10,7 +10,7 @@
 - field ownership `ownership.js`: which system may write each unit field (`docs/unit-state.md` §7); done
 
 ## Public API (exported from `index.js`)
-- `createMatch(setup, data)`, `createUnit(spec, data)`, `checkUnit(unit)` (invariants) — done
+- `createMatch(setup, data)`, `createUnit(spec, data)` (`spec.members` carries HP over), `spawnUnit(state, spec, data)` (next free id), `checkUnit(unit)` (invariants) — done
 - selectors `unitById`, `allUnits`, `unitsOf`, `unitAt`, `enemyOf`, `isOnMap`, `isActive`, `putUnit` — done
 - `UNIT_FIELD_OWNERS`, `ownerOf(path)`, `changedPaths(a, b)`, `foreignWrites(system, before, after)` — done
 
