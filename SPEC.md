@@ -212,6 +212,15 @@ Confirmed 2026-11-25 (rewrite):
   (no action next turn); chances from data.
 - Destruction: tanks crush hedges and fences; HE damages buildings into ruins (cover changes); heavy shells leave craters (light cover).
 - Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
+- Attack resolution (D2, `data/balance/combat.json`): every living member fires its main / secondary weapons (carried team
+  weapons fire the crew weapon once; towed guns fire the gun; smoke launchers, grenades and ability weapons do not).
+  Each shot: hit = CoH3 accuracy[band] × target size × weapon cover / target-morale modifiers × attacker morale (suppressed
+  ×0.5, pinned ×0.25) × moving accuracy after a move × (1 + 0.3 × lost men ÷ (N − 1)) × retreating ×0.5 × obscured ×0.85 (≤ 1);
+  then penetration = penetration ÷ armour of the face hit (front within 60°, side within 120°, else rear), else CoH3
+  deflection damage; damage × cover and target-type modifiers × directional damage; emplaced targets take ×0.9 damage, ×0.8
+  suppression. AoE weapons splash squads at the falloff for a 2.5 m spread (miss: half). Penetrating hits on vehicles roll
+  criticals (chances in data). An attack spends one volley of ammo (indirect: one per shell). Suppression = CoH3 amount × 100
+  per shot ÷ the volley multiplier × cover / morale modifiers; vehicles and structures take none.
 - Sight (D2, v214 v144 rules, `data/balance/vision.json`): a line is blocked where ground or a `block` object / edge rises above
   the line from the viewer's eye (infantry and crews 1.5, vehicles 2, structures 3) to 1 above the target's ground; `partial`
   objects obscure (hit ×0.85); low objects (height ≤ 2) beside the viewer are ignored; neighbours always see each other.

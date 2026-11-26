@@ -15,6 +15,7 @@
     "data/i18n/ko.json": "i18n.schema.json",
     "data/rules/terrain.json": "terrain.schema.json",
     "data/balance/movement.json": "movement.schema.json",
-    "data/balance/vision.json": "vision.schema.json"
+    "data/balance/vision.json": "vision.schema.json",
+    "data/balance/combat.json": "combat.schema.json"
   }
 }

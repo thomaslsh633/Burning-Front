@@ -9,7 +9,7 @@ let cached;
 export function gameData() {
   if (cached) return cached;
   const { units } = indexUnits(read('data/generated/units.json'));
-  const balance = Object.fromEntries(['scale', 'fire-rate', 'indirect', 'ammo', 'movement', 'vision'].map(n => [n.replace('-', '_'), read(`data/balance/${n}.json`)]));
+  const balance = Object.fromEntries(['scale', 'fire-rate', 'indirect', 'ammo', 'movement', 'vision', 'combat'].map(n => [n.replace('-', '_'), read(`data/balance/${n}.json`)]));
   const rules = Object.fromEntries(['vocab', 'roster', 'weapon-flags', 'status-flags', 'terrain'].map(n => [n.replace('-', '_'), read(`data/rules/${n}.json`)]));
   cached = deepFreeze({ units, balance, rules });
   return cached;
