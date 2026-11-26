@@ -166,7 +166,7 @@ Source: `produced` = a building or vehicle produces it; `built` = referenced by 
 | sapper_piat_uk | infantry_anti_tank_weapon | grenade_launcher | single_shot | 1 / 1 / 1 | 163 / 155 / 155 | 0 | 1 / 1 / 1 |
 | 75mm_pack_howitzer_uk | light_artillery | artillery_small | artillery | 1 / 1 / 1 | 120 / 120 / 120 | 0 | 0.72 / 0.72 / 0.72 |
 | rocket_dummy_land_mattress_africa_uk | light_artillery | nebelwerfer | ability | 1 / 1 / 1 | 0 / 0 / 0 | 0 | 1 / 1 / 1 |
-| rocket_land_mattress_africa_uk | light_artillery | artillery_small | artillery | 18 / 18 / 18 | 70 / 70 / 70 | 1 | 0.99 / 0.99 / 0.99 |
+| rocket_land_mattress_africa_uk | light_artillery | artillery_small | artillery | 3 / 3 / 3 | 70 / 70 / 70 | 1 | 1 / 1 / 1 |
 | 30cal_coaxial_churchill_uk | light_machine_gun | hmg | volley | 34 / 29 / 25 | 4 / 4 / 4 | 0 | 1 / 1 / 1 |
 | 30cal_coaxial_crusader_mkiii_uk | light_machine_gun | hmg | volley | 39 / 35 / 33 | 4 / 4 / 4 | 0 | 1 / 1 / 1 |
 | 30cal_coaxial_crusader_uk | light_machine_gun | hmg | volley | 39 / 35 / 33 | 4 / 4 / 4 | 0 | 1 / 1 / 1 |

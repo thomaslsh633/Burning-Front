@@ -6,34 +6,34 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 
 ## german
 
-| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |
+| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | 2_5_logistics_truck_drop_20mm_aa_gun_ger | truck_2_5_logistics_ger | 30cal_hmg_us | 5 | 3 | 0 | — | — | 60 | 5 | 75 mun | — | | | | | | |
 | 2_5_logistics_truck_drop_hmg_ger | truck_2_5_logistics_ger | 30cal_hmg_us | 5 | 3 | 0 | — | — | 60 | 5 | 75 mun | — | | | | | | |
 | 2_5_logistics_truck_drop_mortar_ger | truck_2_5_logistics_ger | 30cal_hmg_us | 5 | 3 | 0 | — | — | 60 | 5 | 75 mun | — | | | | | | |
 | 2_5_logistics_truck_drop_pak_40_ger | truck_2_5_logistics_ger | 30cal_hmg_us | 5 | 3 | 0 | — | — | 60 | 5 | 75 mun | — | | | | | | |
 | 2_5_logistics_truck_mg34_surplus_ger | truck_2_5_logistics_ger | lmg_blocking_force_hold_ger | 4 | 3 | 0 | — | — | 0 | 15 | — | — | | | | | | |
-| barrage_81mm_mortar_bunker_ger | mortar_bunker_autobuild_ger, mortar_bunker_ger | 81mm_mortar_bunker_barrage_ger | 100 | 20 | 7 | 6 (6 / 6) | 600 | 20 | 115 | — | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
+| barrage_81mm_mortar_bunker_ger | mortar_bunker_autobuild_ger, mortar_bunker_ger | 81mm_mortar_bunker_barrage_ger | 100 | 20 | 7 | 6 (6 / 6) | 600 | 20 | 115 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
 | barrage_81mm_mortar_ger | mortar_81mm_ger, mortar_team_ak | 81mm_mortar_barrage_ger | 100 | 20 | 4.5 | — | — | 20 | 90 | — | — | | | | | | |
 | barrage_88mm_at_gun_emplacement_ger | at_gun_88mm_emplacement_ger, at_gun_88mm_no_sandbags_ger | 88mm_emplacement_at_gun_he_ger | 120 | 75 | 6.5 | 6 (6 / 6) | 720 | 45 | 135 | 35 mun | — | | | | | | |
 | barrage_borgward_iv_ger | borgward_iv_ger | 88mm_borgward_iv_ger | 60 | 300 | 0 | 6 | 360 | 30 | 40 | — | — | | | | | | |
 | barrage_halftrack_mortar_explosive_ger | halftrack_251_mortar_ger | 81mm_halftrack_mortar_barrage_ger | 100 | 20 | 4.5 | — | — | 30 | 90 | — | — | | | | | | |
 | barrage_halftrack_mortar_smoke_ger | halftrack_251_mortar_ger | 81mm_halftrack_smoke_barrage_ger | 0 | 0 | 5 | — | — | 30 | 90 | — | — | | | | | | |
-| barrage_halftrack_stummel_ger | halftrack_stummel_ger, halftrack_stummel_recrewable_ger | 75mm_barrage_halftrack_stummel_ger | 120 | 30 | 6 | 6 | 720 | 20 | 50 | — | light | 1 | 3 | 1 | 0 | 7 | 360 |
-| barrage_howitzer_cannone_105_ger | howitzer_cannone_da_105_ger | 105mm_howitzer_cannone_barrage_ger | 160 | 1000 | 8 | 6 | 960 | 60 | 140 | — | heavy | 2 | 2 | 1 | 1 | 18 | 320 |
-| barrage_howitzer_coordinated_obice_210_ger | howitzer_obice_da_210_no_sandbags_ger | obice_210_howitzer_ger | 240 | 1000 | 12 | 4 (5 / 5) | 960 | 30 | 1000 | — | heavy | 2 | 3 | 0.89 | 1 | 18 | 720 |
-| barrage_howitzer_obice_210_ger | howitzer_obice_210_ger, howitzer_obice_da_210_no_sandbags_ger | obice_210_howitzer_ger | 240 | 1000 | 12 | 4 (5 / 5) | 960 | 60 | 375 | — | heavy | 2 | 2 | 0.67 | 1 | 18 | 480 |
-| barrage_hummel_ger | hummel_ger | 150mm_hummel_ger | 200 | 1000 | 10 | 6 (6 / 6) | 1200 | 45 | 240 | — | spg | 1 | 2 | 0.67 | 1 | 16 | 400 |
-| barrage_long_range_sp_wespe_ger | wespe_ger | 105mm_long_range_sp_wespe_ger | 160 | 1000 | 6 | 5 | 800 | 60 | 220 | — | spg | 1 | 1 | 0.83 | 1 | 16 | 160 |
-| barrage_nebelwerfer_150mm_ger | nebelwerfer_150mm_ger | 150mm_nebelwerfer_ger | 80 | 35 | 7 | 6 | 480 | 70 | 160 | — | rocket | 2 | 2 | 0.86 | 2 | 16 | 160 |
-| barrage_nebelwerfer_150mm_he_ger | nebelwerfer_150mm_ger | 150mm_nebelwerfer_he_ger | 100 | 125 | 9 | 6 | 600 | 50 | 160 | 40 mun | rocket | 2 | 3 | 0.8 | 2 | 16 | 300 |
+| barrage_halftrack_stummel_ger | halftrack_stummel_ger, halftrack_stummel_recrewable_ger | 75mm_barrage_halftrack_stummel_ger | 120 | 30 | 6 | 6 | 720 | 20 | 50 | — | light | 1 | 3 | 1 | 0 | 2–7 | 360 |
+| barrage_howitzer_cannone_105_ger | howitzer_cannone_da_105_ger | 105mm_howitzer_cannone_barrage_ger | 160 | 1000 | 8 | 6 | 960 | 60 | 140 | — | heavy | 2 | 2 | 1 | 1 | 5–18 | 320 |
+| barrage_howitzer_coordinated_obice_210_ger | howitzer_obice_da_210_no_sandbags_ger | obice_210_howitzer_ger | 240 | 1000 | 12 | 4 (5 / 5) | 960 | 30 | 1000 | — | heavy | 2 | 3 | 0.89 | 1 | 3–18 | 720 |
+| barrage_howitzer_obice_210_ger | howitzer_obice_210_ger, howitzer_obice_da_210_no_sandbags_ger | obice_210_howitzer_ger | 240 | 1000 | 12 | 4 (5 / 5) | 960 | 60 | 375 | — | heavy | 2 | 2 | 0.67 | 1 | 3–18 | 480 |
+| barrage_hummel_ger | hummel_ger | 150mm_hummel_ger | 200 | 1000 | 10 | 6 (6 / 6) | 1200 | 45 | 240 | — | spg | 1 | 2 | 0.67 | 1 | 3–16 | 400 |
+| barrage_long_range_sp_wespe_ger | wespe_ger | 105mm_long_range_sp_wespe_ger | 160 | 1000 | 6 | 5 | 800 | 60 | 220 | — | spg | 1 | 1 | 0.83 | 1 | 3–16 | 160 |
+| barrage_nebelwerfer_150mm_ger | nebelwerfer_150mm_ger | 150mm_nebelwerfer_ger | 80 | 35 | 7 | 6 | 480 | 70 | 160 | — | rocket | 2 | 2 | 0.86 | 2 | 6–16 | 160 |
+| barrage_nebelwerfer_150mm_he_ger | nebelwerfer_150mm_ger | 150mm_nebelwerfer_he_ger | 100 | 125 | 9 | 6 | 600 | 50 | 160 | 40 mun | rocket | 2 | 3 | 0.8 | 2 | 6–16 | 300 |
 | barrage_semovente_ger | semovente_75_18_ger, semovente_75_18_ak | 75mm_semovente_artillery_barrage_ger | 120 | 50 | 5 | 4 (4 / 4) | 480 | 45 | 50 | — | — | | | | | | |
-| barrage_smoke_81mm_mortar_bunker_ger | mortar_bunker_autobuild_ger, mortar_bunker_ger | 81mm_mortar_bunker_smoke_barrage_ger | 0 | 0 | 0 | 6 (6 / 6) | 0 | 20 | 115 | — | mortar | 1 | 3 | 1 | 0 | 12 | 0 |
-| barrage_smoke_hummel_ger | hummel_ger | 150mm_hummel_smoke_ger | 0 | 1000 | 6 | 6 (6 / 6) | 0 | 45 | 180 | — | spg | 1 | 2 | 0.67 | 1 | 16 | 0 |
-| barrage_tight_scatter_sp_wespe_ger | wespe_ger | 105mm_tight_scatter_sp_wespe_ger | 160 | 1000 | 6 | 1 | 160 | 60 | 180 | — | spg | 1 | 1 | 0.17 | 1 | 16 | 160 |
-| barrage_wespe_ger | wespe_ger | 105mm_wespe_ger | 160 | 300 | 8 | 6 | 960 | 45 | 180 | — | spg | 1 | 2 | 0.67 | 1 | 16 | 320 |
-| barrage_wespe_tracking_ger | wespe_ger | 105mm_wespe_tracking_barrage_ger | 160 | 300 | 8 | 3 | 480 | 120 | 120 | 50 mun | spg | 1 | 1 | 0.25 | 1 | 16 | 160 |
-| barrage_wespe_tracking_veteran_ger | wespe_ger | 105mm_wespe_tracking_barrage_ger | 160 | 300 | 8 | 5 | 800 | 120 | 120 | 50 mun | spg | 1 | 1 | 0.42 | 1 | 16 | 160 |
+| barrage_smoke_81mm_mortar_bunker_ger | mortar_bunker_autobuild_ger, mortar_bunker_ger | 81mm_mortar_bunker_smoke_barrage_ger | 0 | 0 | 0 | 6 (6 / 6) | 0 | 20 | 115 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 0 |
+| barrage_smoke_hummel_ger | hummel_ger | 150mm_hummel_smoke_ger | 0 | 1000 | 6 | 6 (6 / 6) | 0 | 45 | 180 | — | spg | 1 | 2 | 0.67 | 1 | 3–16 | 0 |
+| barrage_tight_scatter_sp_wespe_ger | wespe_ger | 105mm_tight_scatter_sp_wespe_ger | 160 | 1000 | 6 | 1 | 160 | 60 | 180 | — | spg | 1 | 1 | 0.17 | 1 | 3–16 | 160 |
+| barrage_wespe_ger | wespe_ger | 105mm_wespe_ger | 160 | 300 | 8 | 6 | 960 | 45 | 180 | — | spg | 1 | 2 | 0.67 | 1 | 3–16 | 320 |
+| barrage_wespe_tracking_ger | wespe_ger | 105mm_wespe_tracking_barrage_ger | 160 | 300 | 8 | 3 | 480 | 120 | 120 | 50 mun | spg | 1 | 1 | 0.25 | 1 | 5–16 | 160 |
+| barrage_wespe_tracking_veteran_ger | wespe_ger | 105mm_wespe_tracking_barrage_ger | 160 | 300 | 8 | 5 | 800 | 120 | 120 | 50 mun | spg | 1 | 1 | 0.42 | 1 | 5–16 | 160 |
 | blocking_force_panzergranate_ammo_at_gun_ger | at_gun_75mm_ger | 75mm_at_gun_panzergranate_ger | 192 | 456 | 0.5 | — | — | 60 | 0 | 35 mun | — | | | | | | |
 | blocking_force_panzergranate_ammo_marder_ger | marder_iii_ger | 76mm_marder_iii_panzergranate_ger | 192 | 360 | 0.5 | — | — | 60 | 0 | 35 mun | — | | | | | | |
 | blocking_force_panzergranate_ammo_nashorn_ger | nashorn_ger | 88mm_nashorn_panzergranate_ger | 288 | 480 | 4 | — | — | 60 | 0 | 35 mun | — | | | | | | |
@@ -43,7 +43,7 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | bundle_grenade_panzergrenadier_ger | panzergrenadier_ger, panzergrenadier_3man_ger | grenade_bundle_ger | 160 | 25 | 5.5 | 1 | 160 | 30 | 20 | 35 mun | — | | | | | | |
 | coastal_stronghold_defenders_ger | coastal_reserves_ger, coastal_reserve_ak | lmg_breda_m30_coastal_ger | 4 | 3 | 0 | — | — | 0 | 0 | — | — | | | | | | |
 | critical_shot_armored_car_ger | armored_car_ger, royal_engineers_armored_car_ger | 20mm_panzerbuchse_critical_shot_armored_car_ger | 80 | 200 | 0 | — | — | 30 | 45 | 35 mun | — | | | | | | |
-| flare_81mm_mortar_vet_ger | mortar_81mm_ger, mortar_team_ak | flare_81mm_mortar_ger | 0 | 0 | 0 | 1 | 0 | 180 | 100 | — | mortar | 1 | 1 | 0.06 | 0 | 12 | 0 |
+| flare_81mm_mortar_vet_ger | mortar_81mm_ger, mortar_team_ak | flare_81mm_mortar_ger | 0 | 0 | 0 | 1 | 0 | 180 | 100 | — | mortar | 1 | 1 | 0.06 | 0 | 3–12 | 0 |
 | flare_jaeger_ger | jaeger_ger, jaeger_3man_ger | flare_jaeger_ger | 0 | 0 | 0 | 1 | 0 | 180 | 45 | — | — | | | | | | |
 | grenade_anti_tank_coastal_ger | coastal_reserves_ger, coastal_reserve_ak | grenade_anti_tank_coastal_ger | 80 | 1000 | 0.2 | 1 | 80 | 30 | 15 | 25 mun | — | | | | | | |
 | grenade_assault_grenadier_ger | assault_grenadier_ger, grenadier_ger, grenadier_3man_ger | grenade_assault_grenadier_ger | 55 | 25 | 3.5 | 1 | 55 | 60 | 20 | 35 mun | — | | | | | | |
@@ -68,16 +68,16 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | satchel_charge_grenadiers_ger | — | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | satchel_charge_guastatori_ger | — | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | satchel_charge_pioneer_ger | pioneer_ger, sturmpioneer_ger | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 (1 / 1) | 600 | 30 | 10 | 45 mun | — | | | | | | |
-| siegebreakers_sturmtiger_shot_ger | sturmtiger_ger | 380mm_rocket_launcher_sturmtiger_ger | 900 | 1000 | 12 | 1 | 900 | 0 | 35 | — | rocket | 2 | 1 | 1 | 2 | 5 | 900 |
+| siegebreakers_sturmtiger_shot_ger | sturmtiger_ger | 380mm_rocket_launcher_sturmtiger_ger | 900 | 1000 | 12 | 1 | 900 | 0 | 35 | — | rocket | 2 | 1 | 1 | 2 | 3–5 | 900 |
 | smoke_81mm_mortar_ger | mortar_81mm_ger, mortar_team_ak | 81mm_mortar_smoke_ger | 0 | 0 | 0 | — | — | 20 | 90 | — | — | | | | | | |
-| smoke_barrage_halftrack_stummel_ger | halftrack_stummel_ger, halftrack_stummel_recrewable_ger | 75mm_smoke_barrage_halftrack_stummel_ger | 0 | 10 | 6 | 5 | 0 | 20 | 50 | — | light | 1 | 3 | 0.83 | 0 | 7 | 0 |
-| smoke_howitzer_cannone_105_ger | howitzer_cannone_da_105_ger | 105mm_howitzer_cannone_smoke_ger | 0 | 0 | 6 | 4 | 0 | 45 | 250 | — | heavy | 2 | 2 | 0.89 | 1 | 18 | 0 |
+| smoke_barrage_halftrack_stummel_ger | halftrack_stummel_ger, halftrack_stummel_recrewable_ger | 75mm_smoke_barrage_halftrack_stummel_ger | 0 | 10 | 6 | 5 | 0 | 20 | 50 | — | light | 1 | 3 | 0.83 | 0 | 2–7 | 0 |
+| smoke_howitzer_cannone_105_ger | howitzer_cannone_da_105_ger | 105mm_howitzer_cannone_smoke_ger | 0 | 0 | 6 | 4 | 0 | 45 | 250 | — | heavy | 2 | 2 | 0.89 | 1 | 3–18 | 0 |
 | smoke_rifle_jaeger_ger | jaeger_ger, jaeger_3man_ger | smoke_rifle_grenade_jaeger_ger | 0 | 1 | 0 | 1 | 0 | 180 | 35 | — | — | | | | | | |
 | sturmpioneer_grenade_assault_ger | sturmpioneer_ger | grenade_pioneer_m39_ger | 80 | 25 | 3.5 | — | — | 30 | 17.5 | 25 mun | — | | | | | | |
 | toggle_he_ap_rounds_panzer_iv_ger | panzer_iv_cmd_ger, panzer_iv_command_ak | 75mm_panzer_iv_he_ger | 100 | 35 | 6 | — | — | 5 | 0 | — | — | | | | | | |
 | toggle_p39_grenade_launcher_rounds_ger | — | grb_39_grenade_launcher_he_ger | 45 | 25 | 2.5 | — | — | 0 | 0 | — | — | | | | | | |
 | vet_stug_point_blank_ger | jagdpanzer_iv_sdkfz_162_ger, stug_iii_ger | 75mm_stug_he_rounds_ger | 120 | 35 | 4 | — | — | 5 | 25 | — | — | | | | | | |
-| wp_smoke_barrage_nebelwerfer_150mm_ger | — | 150mm_wp_smoke_nebelwerfer_ger | 0 | 0 | 7 | 6 | 0 | 70 | 160 | 40 mun | rocket | 2 | 2 | 0.86 | 2 | 16 | 0 |
+| wp_smoke_barrage_nebelwerfer_150mm_ger | — | 150mm_wp_smoke_nebelwerfer_ger | 0 | 0 | 7 | 6 | 0 | 70 | 160 | 40 mun | rocket | 2 | 2 | 0.86 | 2 | 6–16 | 0 |
 | blocking_force_pre_registered_artillery_ger (off-map) | — | not published | — | — | — | — | — | 180 | 0 | 125 mun | — | | | | | | |
 | coastal_officer_artillery_overwatch_ger (off-map) | coastal_officer_ger | not published | — | — | — | — | — | 30 | 35 | — | — | | | | | | |
 | coastal_officer_artillery_overwatch_veteran_ger (off-map) | coastal_officer_ger | not published | — | — | — | — | — | 30 | 35 | — | — | | | | | | |
@@ -93,25 +93,25 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 
 ## american
 
-| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |
+| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | anti_tank_satchel_saboteurs_partisan | saboteurs_partisan | satchel_anti_tank_saboteurs_partisan | 240 | 1000 | 0.5 | 1 | 240 | 30 | 10 | 40 mun | — | | | | | | |
 | barrage_180mm_rockets_whizbang_us | sherman_whizbang_us | 180mm_rocket_barrage_whizbang_us | 70 | 100 | 7 | — | — | 90 | 85 | — | — | | | | | | |
-| barrage_81mm_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_barrage_us | 100 | 20 | 4.5 | 6 (6 / 6) | 600 | 20 | 110 | — | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
-| barrage_81mm_mortar_us | mortar_81mm_us | 81mm_mortar_barrage_us | 100 | 20 | 4.5 | 6 | 600 | 20 | 90 | — | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
+| barrage_81mm_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_barrage_us | 100 | 20 | 4.5 | 6 (6 / 6) | 600 | 20 | 110 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
+| barrage_81mm_mortar_us | mortar_81mm_us | 81mm_mortar_barrage_us | 100 | 20 | 4.5 | 6 | 600 | 20 | 90 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
 | barrage_at_gun_3in_m5_us | at_gun_3in_m5_us | 3in_at_gun_barrage_us | 120 | 120 | 7 | 6 (8 / 0) | 720 | 60 | 120 | 35 mun | — | | | | | | |
 | barrage_goon_gun_pit_us | goon_gun_pit_us | goon_gun_pit_barrage_us | 120 | 20 | 7 | 6 (6 / 6) | 720 | 20 | 110 | — | — | | | | | | |
-| barrage_halftrack_75mm_suppressing_airburst_us | halftrack_75mm_us, halftrack_75mm_x2_us | 75mm_howitzer_halftrack_suppressing_airburst_us | 120 | 15 | 8.5 | 6 | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 13 | 240 |
-| barrage_halftrack_75mm_us | halftrack_75mm_us, halftrack_75mm_x2_us | 75mm_howitzer_halftrack_us | 120 | 30 | 6 | 6 (8 / 8) | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 13 | 240 |
-| barrage_howitzer_105mm_us | howitzer_105mm_us | 105mm_howitzer_us | 160 | 1000 | 9 | 6 (6 / 6) | 960 | 60 | 300 | — | heavy | 2 | 2 | 1 | 1 | 18 | 320 |
-| barrage_priest_heat_us | priest_us | 105mm_howitzer_priest_heat_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | 40 mun | spg | 1 | 2 | 0.58 | 1 | 16 | 320 |
-| barrage_priest_smoke_us | priest_us | 105mm_smoke_barrage_priest_us | 0 | 35 | 0 | 6 (6 / 6) | 0 | 45 | 90 | — | spg | 1 | 2 | 0.67 | 1 | 13 | 0 |
-| barrage_priest_suppressing_airburst_us | priest_us | 105mm_howitzer_priest_suppressing_airburst_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | 40 mun | spg | 1 | 2 | 0.58 | 1 | 16 | 320 |
-| barrage_priest_us | priest_us | 105mm_howitzer_priest_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | — | spg | 1 | 2 | 0.58 | 1 | 16 | 320 |
-| barrage_scott_bunker_buster_us | scott_us | 75mm_howitzer_barrage_bunker_buster_scott_us | 120 | 35 | 6 | 6 (6 / 6) | 720 | 45 | 90 | 35 mun | light | 1 | 2 | 0.67 | 0 | 13 | 240 |
-| barrage_scott_smoke_us | scott_us | 75mm_howitzer_smoke_barrage_scott_us | 0 | 35 | 0 | 6 (6 / 6) | 0 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 13 | 0 |
-| barrage_scott_us | scott_us | 75mm_howitzer_barrage_scott_us | 120 | 30 | 6 | 6 (6 / 6) | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 13 | 240 |
-| barrage_scott_white_phosphorus_us | scott_us | 75mm_howitzer_wp_shot_scott_us | 10 | 1 | 5 | 1 (1 / 1) | 10 | 45 | 45 | 30 mun | light | 1 | 1 | 0.22 | 0 | 6 | 10 |
+| barrage_halftrack_75mm_suppressing_airburst_us | halftrack_75mm_us, halftrack_75mm_x2_us | 75mm_howitzer_halftrack_suppressing_airburst_us | 120 | 15 | 8.5 | 6 | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 2–13 | 240 |
+| barrage_halftrack_75mm_us | halftrack_75mm_us, halftrack_75mm_x2_us | 75mm_howitzer_halftrack_us | 120 | 30 | 6 | 6 (8 / 8) | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 2–13 | 240 |
+| barrage_howitzer_105mm_us | howitzer_105mm_us | 105mm_howitzer_us | 160 | 1000 | 9 | 6 (6 / 6) | 960 | 60 | 300 | — | heavy | 2 | 2 | 1 | 1 | 3–18 | 320 |
+| barrage_priest_heat_us | priest_us | 105mm_howitzer_priest_heat_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | 40 mun | spg | 1 | 2 | 0.58 | 1 | 3–16 | 320 |
+| barrage_priest_smoke_us | priest_us | 105mm_smoke_barrage_priest_us | 0 | 35 | 0 | 6 (6 / 6) | 0 | 45 | 90 | — | spg | 1 | 2 | 0.67 | 1 | 3–13 | 0 |
+| barrage_priest_suppressing_airburst_us | priest_us | 105mm_howitzer_priest_suppressing_airburst_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | 40 mun | spg | 1 | 2 | 0.58 | 1 | 3–16 | 320 |
+| barrage_priest_us | priest_us | 105mm_howitzer_priest_us | 160 | 1000 | 9 | 7 | 1120 | 60 | 240 | — | spg | 1 | 2 | 0.58 | 1 | 3–16 | 320 |
+| barrage_scott_bunker_buster_us | scott_us | 75mm_howitzer_barrage_bunker_buster_scott_us | 120 | 35 | 6 | 6 (6 / 6) | 720 | 45 | 90 | 35 mun | light | 1 | 2 | 0.67 | 0 | 2–13 | 240 |
+| barrage_scott_smoke_us | scott_us | 75mm_howitzer_smoke_barrage_scott_us | 0 | 35 | 0 | 6 (6 / 6) | 0 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 2–13 | 0 |
+| barrage_scott_us | scott_us | 75mm_howitzer_barrage_scott_us | 120 | 30 | 6 | 6 (6 / 6) | 720 | 45 | 90 | — | light | 1 | 2 | 0.67 | 0 | 2–13 | 240 |
+| barrage_scott_white_phosphorus_us | scott_us | 75mm_howitzer_wp_shot_scott_us | 10 | 1 | 5 | 1 (1 / 1) | 10 | 45 | 45 | 30 mun | light | 1 | 1 | 0.22 | 0 | 2–6 | 10 |
 | brazilian_lieutenant_weapon_requisition_bazooka_us | brazilian_lieutenant_us | bazooka_bazooka_team_us | 60 | 200 | 0.125 | — | — | 60 | 15 | 45 mun | — | | | | | | |
 | brazilian_lieutenant_weapon_requisition_flamethrower_us | brazilian_lieutenant_us | flamethrower_engineer_us | 2 | 3 | 0 | — | — | 60 | 15 | 45 mun | — | | | | | | |
 | brazilian_lieutenant_weapon_requisition_m1919_us | brazilian_lieutenant_us | m1919a6_riflemen_us | 6 | 3 | 0 | — | — | 60 | 15 | 45 mun | — | | | | | | |
@@ -139,7 +139,7 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | satchel_charge_engineers_us | assault_engineer_us, engineer_us, heavy_engineer_us | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | satchel_charge_improved_paratrooper_us | paratrooper_us | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 (1 / 1) | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | satchel_charge_paratrooper_us | fallschirmpioneers_ger, paratrooper_us, canadian_heavy_infantry_uk | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 (1 / 1) | 600 | 30 | 10 | 45 mun | — | | | | | | |
-| smoke_81mm_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_smoke_us | 0 | 0 | 0 | 6 (6 / 6) | 0 | 20 | 110 | — | mortar | 1 | 3 | 1 | 0 | 12 | 0 |
+| smoke_81mm_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_smoke_us | 0 | 0 | 0 | 6 (6 / 6) | 0 | 20 | 110 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 0 |
 | smoke_81mm_mortar_us | mortar_81mm_us | 81mm_mortar_smoke_us | 0 | 0 | 0 | — | — | 20 | 90 | — | — | | | | | | |
 | smoke_goon_gun_pit_us | goon_gun_pit_us | goon_gun_pit_smoke_us | 0 | 0 | 0 | 6 (6 / 6) | 0 | 20 | 110 | — | — | | | | | | |
 | smoke_rifle_grenade_scout_us | artillery_observers_us, pathfinder_us, scout_us | smoke_rifle_grenade_scout_us | 0 | 1 | 0 | 1 | 0 | 180 | 35 | — | — | | | | | | |
@@ -149,11 +149,11 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | sticky_bomb_riflemen_us | riflemen_us, infantry_assault_riflemen_us | sticky_bomb_rifleman_us | 120 | 1000 | 0.2 | 1 | 120 | 30 | 15 | 25 mun | — | | | | | | |
 | tread_shot_stuart_us | stuart_blade_us | 37mm_treadshot_stuart_uk | 80 | 1000 | 2 | — | — | 60 | 40 | 30 mun | — | | | | | | |
 | veterancy_1a_air_burst_goon_gun_pit_us | goon_gun_pit_us | goon_gun_pit_airburst_us | 120 | 12 | 8.5 | 6 (6 / 6) | 720 | 20 | 110 | 20 mun | — | | | | | | |
-| veterancy_1a_air_burst_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_timed_fuze_us | 100 | 10 | 8.5 | 6 (6 / 6) | 600 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
+| veterancy_1a_air_burst_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_timed_fuze_us | 100 | 10 | 8.5 | 6 (6 / 6) | 600 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
 | veterancy_1a_bunker_buster_sherman_bulldozer_us | sherman_bulldozer_us, sherman_bulldozer_x2_us | 105mm_sherman_bulldozer_bunker_buster_us | 600 | 1000 | 5 | 1 (1 / 1) | 600 | 30 | 40 | 30 mun | — | | | | | | |
 | veterancy_1a_delayed_fuze_goon_gun_pit_us | goon_gun_pit_us | goon_gun_pit_delayed_fuze_us | 192 | 1000 | 5 | 6 (6 / 6) | 1152 | 20 | 110 | 20 mun | — | | | | | | |
-| veterancy_1a_delayed_fuze_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_delayed_fuze_us | 160 | 1000 | 5 | 6 (6 / 6) | 960 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 12 | 480 |
-| veterancy_1a_suppression_air_burst_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_suppressing_air_burst_us | 100 | 10 | 8.5 | 6 (6 / 6) | 600 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
+| veterancy_1a_delayed_fuze_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_delayed_fuze_us | 160 | 1000 | 5 | 6 (6 / 6) | 960 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 3–12 | 480 |
+| veterancy_1a_suppression_air_burst_mortar_pit_us | mortar_pit_81mm_us | 81mm_mortar_pit_suppressing_air_burst_us | 100 | 10 | 8.5 | 6 (6 / 6) | 600 | 20 | 110 | 20 mun | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
 | veterancy_1a_suppression_airburst_mortar_81mm_us | mortar_81mm_us | 81mm_mortar_suppressing_airburst_us | 100 | 10 | 8.5 | — | — | 20 | 95 | 20 mun | — | | | | | | |
 | veterancy_1a_target_weak_point_halftrack_75mm_us | — | 75mm_halftrack_75mm_twp_us | 120 | 1000 | 1.5 | — | — | 60 | 50 | 30 mun | — | | | | | | |
 | veterancy_1a_timed_fuze_mortar_81mm_us | mortar_81mm_us | 81mm_mortar_timed_fuze_us | 100 | 10 | 8.5 | — | — | 120 | 95 | 35 mun | — | | | | | | |
@@ -173,18 +173,18 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 
 ## afrika_korps
 
-| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |
+| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | anti_tank_grenade_panzergrenadier_ak | panzergrenadier_ak | anti_tank_grenade_panzergrenadier_ak | 120 | 1000 | 0.2 | 1 | 120 | 30 | 15 | 25 mun | — | | | | | | |
 | anti_tank_satchel_charge_guastatori_ak | — | satchel_charge_guastatori_ak | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | ap_rounds_flak_7_ak | halftrack_7_flak_ak | 20mm_ap_halftrack_flak_ak | 5 | 30 | 2 | — | — | 60 | 0 | 30 mun | — | | | | | | |
 | assault_anti_tank_grenades_assault_panzerjager_ak | panzerjaeger_inf_ak | anti_tank_grenade_panzerjager_ak | 60 | 1000 | 0.2 | 1 | 60 | 60 | 20 | 45 mun | — | | | | | | |
 | assault_grenades_assault_grenadier_ak | assault_panzergrenadier_ak | grenade_assault_assault_grenadier_ak | 70 | 25 | 4 | 1 | 70 | 60 | 20 | 35 mun | — | | | | | | |
-| barrage_150mm_stuka_ak | halftrack_251_stuka_ak | 280mm_stukazufuss_rocket_ak | 200 | 80 | 10 | 6 | 1200 | 90 | 150 | — | rocket | 2 | 2 | 0.67 | 2 | 16 | 400 |
-| barrage_howitzer_75mm_leig_ak | leig_75mm_ak | 75mm_barrage_leig_ak | 120 | 20 | 6 | 6 (9 / 9) | 720 | 20 | 150 | — | light | 1 | 3 | 1 | 0 | 14 | 360 |
-| barrage_howitzer_cannone_105_ak | howitzer_cannone_da_105_ak | 105mm_howitzer_cannone_barrage_ak | 160 | 1000 | 8 | 6 | 960 | 45 | 250 | — | heavy | 2 | 3 | 0.89 | 1 | 18 | 480 |
+| barrage_150mm_stuka_ak | halftrack_251_stuka_ak | 280mm_stukazufuss_rocket_ak | 200 | 80 | 10 | 6 | 1200 | 90 | 150 | — | rocket | 2 | 2 | 0.67 | 2 | 4–16 | 400 |
+| barrage_howitzer_75mm_leig_ak | leig_75mm_ak | 75mm_barrage_leig_ak | 120 | 20 | 6 | 6 (9 / 9) | 720 | 20 | 150 | — | light | 1 | 3 | 1 | 0 | 2–14 | 360 |
+| barrage_howitzer_cannone_105_ak | howitzer_cannone_da_105_ak | 105mm_howitzer_cannone_barrage_ak | 160 | 1000 | 8 | 6 | 960 | 45 | 250 | — | heavy | 2 | 3 | 0.89 | 1 | 3–18 | 480 |
 | barrage_mortar_halftrack_250_ak | halftrack_250_mortar_ak | 81mm_mortar_halftrack_barrage_ak | 100 | 20 | 4.5 | — | — | 20 | 90 | — | — | | | | | | |
-| barrage_smoke_75mm_leig_ak | leig_75mm_ak | 75mm_smoke_barrage_leig_ak | 0 | 10 | 6 | 4 | 0 | 20 | 150 | — | light | 1 | 2 | 1 | 0 | 14 | 0 |
+| barrage_smoke_75mm_leig_ak | leig_75mm_ak | 75mm_smoke_barrage_leig_ak | 0 | 10 | 6 | 4 | 0 | 20 | 150 | — | light | 1 | 2 | 1 | 0 | 2–14 | 0 |
 | barrage_smoke_mortar_halftrack_250_ak | halftrack_250_mortar_ak | 81mm_mortar_halftrack_smoke_barrage_ak | 0 | 0 | 0 | — | — | 20 | 90 | — | — | | | | | | |
 | grenade_assault_kriegsmarine_ak | kriegsmarine_infantry_ak | grenade_assault_assault_grenadier_ak | 70 | 25 | 4 | 1 | 70 | 30 | 20 | — | — | | | | | | |
 | grenade_bersaglieri_ak | bersaglieri_ak | grenade_oto_m35_bersaglieri_ak | 160 | 25 | 4.5 | 1 | 160 | 30 | 20 | 30 mun | — | | | | | | |
@@ -210,10 +210,10 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | salvage_plunder_ak | assault_panzergrenadier_ak, bersaglieri_ak, guastatori_ak, panzergrenadier_ak, panzerjaeger_inf_ak, panzerpioneer_ak | flamethrower_guastatori_ak | 2 | 3 | 0 | — | — | 0 | 4 | — | — | | | | | | |
 | satchel_charge_guastatori_ak | — | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
 | satchel_charge_panzerpioneer_ak | — | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
-| smoke_howitzer_cannone_105_ak | howitzer_cannone_da_105_ak | 105mm_howitzer_cannone_smoke_ak | 0 | 0 | 6 | 4 | 0 | 45 | 250 | — | heavy | 2 | 2 | 0.89 | 1 | 18 | 0 |
-| stuka_ace_force_fire_weapon_ak | savoia_marchetti_sm82_ak, stuka_ace_ju87_strafe_ak | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 16 | 700 |
-| stuka_ace_force_fire_weapon_rank_2_ak | — | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 16 | 700 |
-| stuka_ace_force_fire_weapon_rank_3_ak | — | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 16 | 700 |
+| smoke_howitzer_cannone_105_ak | howitzer_cannone_da_105_ak | 105mm_howitzer_cannone_smoke_ak | 0 | 0 | 6 | 4 | 0 | 45 | 250 | — | heavy | 2 | 2 | 0.89 | 1 | 3–18 | 0 |
+| stuka_ace_force_fire_weapon_ak | savoia_marchetti_sm82_ak, stuka_ace_ju87_strafe_ak | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 3–16 | 700 |
+| stuka_ace_force_fire_weapon_rank_2_ak | — | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 3–16 | 700 |
+| stuka_ace_force_fire_weapon_rank_3_ak | — | stuka_strafing_run | 35 | 1000 | 0 | 20 | 700 | 0 | 0 | — | rocket | 2 | 20 | 1 | 2 | 3–16 | 700 |
 | tiger_ace_shrapnel_round | — | 88mm_tiger_shrapnel_ak | 80 | 100 | 20 | 1 | 80 | 30 | 50 | 30 mun | — | | | | | | |
 | italian_infantry_obice_barrage_ak (off-map) | — | not published | — | — | — | — | — | 180 | 0 | 180 mun | — | | | | | | |
 | italian_infantry_registered_artillery_ak (off-map) | — | not published | — | — | — | — | — | 60 | 0 | 80 mun | — | | | | | | |
@@ -228,34 +228,34 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 
 ## british
 
-| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |
+| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | at_grenade_australian_light_infantry_uk | australian_light_infantry_uk | sticky_bomb_rifleman_us | 120 | 1000 | 0.2 | 1 | 120 | 15 | 15 | 30 mun | — | | | | | | |
 | at_grenade_sapper_uk | — | anti_tank_grenade_uk | 120 | 1000 | 0.2 | 1 | 120 | 15 | 15 | 30 mun | — | | | | | | |
-| barrage_4_2_heavy_mortar_airburst_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_airburst_uk | 100 | 10 | 9.5 | 6 (9 / 9) | 600 | 20 | 150 | 35 mun | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
-| barrage_4_2_heavy_mortar_flare_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_flare_uk | 0 | 0 | 5 | 1 (1 / 1) | 0 | 180 | 150 | — | mortar | 1 | 1 | 0.06 | 0 | 12 | 0 |
-| barrage_4_2_heavy_mortar_incendiary_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_incendiary_uk | 80 | 10 | 5 | 5 (8 / 8) | 400 | 20 | 150 | — | mortar | 1 | 3 | 0.83 | 0 | 12 | 240 |
-| barrage_4_2_heavy_mortar_smoke_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_smoke_uk | 0 | 0 | 0 | 4 (7 / 7) | 0 | 20 | 150 | — | mortar | 1 | 2 | 1 | 0 | 12 | 0 |
-| barrage_4_2_heavy_mortar_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_barrage_uk | 120 | 20 | 7 | 5 (8 / 8) | 600 | 20 | 150 | — | mortar | 1 | 3 | 0.83 | 0 | 12 | 360 |
-| barrage_75mm_pack_howitzer_incendiary_uk | pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_incendiary_uk | 80 | 10 | 5 | 8 (11 / 11) | 640 | 20 | 150 | — | light | 1 | 4 | 1 | 0 | 14 | 320 |
-| barrage_75mm_pack_howitzer_smoke_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_smoke_barrage_uk | 0 | 35 | 6 | 5 (5 / 5) | 0 | 20 | 150 | — | light | 1 | 3 | 0.83 | 0 | 14 | 0 |
-| barrage_75mm_pack_howitzer_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_barrage_us | 120 | 20 | 6 | 8 (11 / 11) | 960 | 20 | 150 | — | light | 1 | 4 | 1 | 0 | 14 | 480 |
-| barrage_75mm_pack_howitzer_white_phosphorus_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_white_phosphorus_uk | 10 | 35 | 6 | 6 | 60 | 20 | 150 | 30 mun | light | 1 | 3 | 1 | 0 | 14 | 30 |
+| barrage_4_2_heavy_mortar_airburst_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_airburst_uk | 100 | 10 | 9.5 | 6 (9 / 9) | 600 | 20 | 150 | 35 mun | mortar | 1 | 3 | 1 | 0 | 2–12 | 300 |
+| barrage_4_2_heavy_mortar_flare_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_flare_uk | 0 | 0 | 5 | 1 (1 / 1) | 0 | 180 | 150 | — | mortar | 1 | 1 | 0.06 | 0 | 2–12 | 0 |
+| barrage_4_2_heavy_mortar_incendiary_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_incendiary_uk | 80 | 10 | 5 | 5 (8 / 8) | 400 | 20 | 150 | — | mortar | 1 | 3 | 0.83 | 0 | 2–12 | 240 |
+| barrage_4_2_heavy_mortar_smoke_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_smoke_uk | 0 | 0 | 0 | 4 (7 / 7) | 0 | 20 | 150 | — | mortar | 1 | 2 | 1 | 0 | 2–12 | 0 |
+| barrage_4_2_heavy_mortar_uk | mortar_heavy_4_2_uk, mortar_heavy_4_2_africa_uk | 4_2_inch_heavy_mortar_barrage_uk | 120 | 20 | 7 | 5 (8 / 8) | 600 | 20 | 150 | — | mortar | 1 | 3 | 0.83 | 0 | 2–12 | 360 |
+| barrage_75mm_pack_howitzer_incendiary_uk | pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_incendiary_uk | 80 | 10 | 5 | 8 (11 / 11) | 640 | 20 | 150 | — | light | 1 | 4 | 1 | 0 | 2–14 | 320 |
+| barrage_75mm_pack_howitzer_smoke_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_smoke_barrage_uk | 0 | 35 | 6 | 5 (5 / 5) | 0 | 20 | 150 | — | light | 1 | 3 | 0.83 | 0 | 2–14 | 0 |
+| barrage_75mm_pack_howitzer_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_barrage_us | 120 | 20 | 6 | 8 (11 / 11) | 960 | 20 | 150 | — | light | 1 | 4 | 1 | 0 | 2–14 | 480 |
+| barrage_75mm_pack_howitzer_white_phosphorus_uk | pack_howitzer_75mm_us, pack_howitzer_75mm_uk, pack_howitzer_75mm_africa_uk | 75mm_pack_howitzer_white_phosphorus_uk | 10 | 35 | 6 | 6 | 60 | 20 | 150 | 30 mun | light | 1 | 3 | 1 | 0 | 2–14 | 30 |
 | barrage_81mm_mortar_smoke_uk | mortar_81mm_recrew_uk, mortar_81mm_uk, mortar_81mm_africa_recrew_uk, mortar_81mm_africa_uk | 81mm_mortar_smoke_uk | 0 | 0 | 0 | — | — | 20 | 90 | — | — | | | | | | |
-| barrage_81mm_mortar_uk | mortar_81mm_recrew_uk, mortar_81mm_uk, mortar_81mm_africa_recrew_uk, mortar_81mm_africa_uk | 81mm_mortar_barrage_uk | 100 | 20 | 4.5 | 6 (9) | 600 | 20 | 90 | — | mortar | 1 | 3 | 1 | 0 | 12 | 300 |
-| barrage_ap_bishop_uk | — | 25pdr_bishop_ap_uk | 160 | 1000 | 8 | 6 (6 / 6) | 960 | 60 | 160 | 30 mun | spg | 1 | 1 | 1 | 1 | 16 | 160 |
-| barrage_base_howitzer_25pdr_uk | — | 25pdr_base_howitzer_uk | 160 | 1000 | 8 | 8 (11 / 11) | 1280 | 60 | 1000 | — | heavy | 2 | 3 | 0.89 | 1 | 18 | 480 |
-| barrage_bishop_uk | bishop_uk, bishop_africa_uk | 25pdr_bishop_uk | 160 | 300 | 8 | 6 (9 / 9) | 960 | 45 | 160 | — | spg | 1 | 2 | 0.67 | 1 | 16 | 320 |
-| barrage_howitzer_bl_5_5_precision_uk | — | bl_5_5_howitzer_precision_shot_uk | 200 | 1000 | 10 | 1 (3 / 3) | 200 | 60 | 300 | 35 mun | heavy | 2 | 1 | 0.33 | 1 | 18 | 200 |
-| barrage_howitzer_bl_5_5_precision_vet_uk | howitzer_bl_5_5_uk | bl_5_5_howitzer_precision_shot_uk | 200 | 1000 | 10 | 1 (3 / 3) | 200 | 60 | 300 | 35 mun | heavy | 2 | 1 | 0.33 | 1 | 18 | 200 |
-| barrage_howitzer_bl_5_5_uk | howitzer_bl_5_5_uk, howitzer_bl_5_5_africa_uk | bl_5_5_howitzer_uk | 200 | 1000 | 10 | 7 (10 / 10) | 1400 | 60 | 300 | — | heavy | 2 | 3 | 0.78 | 1 | 18 | 600 |
-| barrage_howitzer_bl_5_5_veteran_uk | — | bl_5_5_howitzer_veteran_uk | 200 | 1000 | 10 | 7 (10 / 10) | 1400 | 60 | 300 | — | heavy | 2 | 3 | 0.78 | 1 | 18 | 600 |
-| barrage_observation_airburst_bl_5_5_uk | howitzer_bl_5_5_africa_uk | bl_5_5_airburst_howitzer_uk | 200 | 70 | 10 | 2 (5 / 5) | 400 | 0 | 1000 | — | heavy | 2 | 2 | 1 | 1 | 18 | 400 |
-| barrage_observation_base_howitzer_25pdr_uk | howitzer_base_25pdr_uk, howitzer_base_25pdr_africa_uk | 25pdr_base_howitzer_uk | 160 | 1000 | 8 | 8 (11 / 11) | 1280 | 0 | 1000 | — | heavy | 2 | 8 | 1 | 1 | 18 | 1280 |
+| barrage_81mm_mortar_uk | mortar_81mm_recrew_uk, mortar_81mm_uk, mortar_81mm_africa_recrew_uk, mortar_81mm_africa_uk | 81mm_mortar_barrage_uk | 100 | 20 | 4.5 | 6 (9) | 600 | 20 | 90 | — | mortar | 1 | 3 | 1 | 0 | 3–12 | 300 |
+| barrage_ap_bishop_uk | — | 25pdr_bishop_ap_uk | 160 | 1000 | 8 | 6 (6 / 6) | 960 | 60 | 160 | 30 mun | spg | 1 | 1 | 1 | 1 | 4–16 | 160 |
+| barrage_base_howitzer_25pdr_uk | — | 25pdr_base_howitzer_uk | 160 | 1000 | 8 | 8 (11 / 11) | 1280 | 60 | 1000 | — | heavy | 2 | 3 | 0.89 | 1 | 3–18 | 480 |
+| barrage_bishop_uk | bishop_uk, bishop_africa_uk | 25pdr_bishop_uk | 160 | 300 | 8 | 6 (9 / 9) | 960 | 45 | 160 | — | spg | 1 | 2 | 0.67 | 1 | 4–16 | 320 |
+| barrage_howitzer_bl_5_5_precision_uk | — | bl_5_5_howitzer_precision_shot_uk | 200 | 1000 | 10 | 1 (3 / 3) | 200 | 60 | 300 | 35 mun | heavy | 2 | 1 | 0.33 | 1 | 3–18 | 200 |
+| barrage_howitzer_bl_5_5_precision_vet_uk | howitzer_bl_5_5_uk | bl_5_5_howitzer_precision_shot_uk | 200 | 1000 | 10 | 1 (3 / 3) | 200 | 60 | 300 | 35 mun | heavy | 2 | 1 | 0.33 | 1 | 3–18 | 200 |
+| barrage_howitzer_bl_5_5_uk | howitzer_bl_5_5_uk, howitzer_bl_5_5_africa_uk | bl_5_5_howitzer_uk | 200 | 1000 | 10 | 7 (10 / 10) | 1400 | 60 | 300 | — | heavy | 2 | 3 | 0.78 | 1 | 3–18 | 600 |
+| barrage_howitzer_bl_5_5_veteran_uk | — | bl_5_5_howitzer_veteran_uk | 200 | 1000 | 10 | 7 (10 / 10) | 1400 | 60 | 300 | — | heavy | 2 | 3 | 0.78 | 1 | 3–18 | 600 |
+| barrage_observation_airburst_bl_5_5_uk | howitzer_bl_5_5_africa_uk | bl_5_5_airburst_howitzer_uk | 200 | 70 | 10 | 2 (5 / 5) | 400 | 0 | 1000 | — | heavy | 2 | 2 | 1 | 1 | 3–18 | 400 |
+| barrage_observation_base_howitzer_25pdr_uk | howitzer_base_25pdr_uk, howitzer_base_25pdr_africa_uk | 25pdr_base_howitzer_uk | 160 | 1000 | 8 | 8 (11 / 11) | 1280 | 0 | 1000 | — | heavy | 2 | 8 | 1 | 1 | 3–18 | 1280 |
 | body_shot_australian_light_infantry_uk | australian_light_infantry_africa_uk | lee_enfield_sharpshooter_uk | 60 | 2 | 0 | — | — | 60 | 35 | 35 mun | — | | | | | | |
 | body_shot_australian_light_infantry_vet1_uk | australian_light_infantry_africa_uk | lee_enfield_sharpshooter_uk | 60 | 2 | 0 | — | — | 60 | 35 | 35 mun | — | | | | | | |
 | body_shot_australian_light_infantry_vet2_uk | australian_light_infantry_africa_uk | lee_enfield_sharpshooter_uk | 60 | 2 | 0 | — | — | 60 | 35 | 35 mun | — | | | | | | |
-| direct_fire_bishop_uk | bishop_uk, bishop_africa_uk | 25pdr_bishop_direct_round_uk | 160 | 300 | 8 | 3 (3 / 3) | 480 | 35 | 50 | 35 mun | spg | 1 | 1 | 0.86 | 1 | 7 | 160 |
+| direct_fire_bishop_uk | bishop_uk, bishop_africa_uk | 25pdr_bishop_direct_round_uk | 160 | 300 | 8 | 3 (3 / 3) | 480 | 35 | 50 | 35 mun | spg | 1 | 1 | 0.86 | 1 | 3–7 | 160 |
 | drop_hmg_cwt_uk | cwt_15_truck_repair_resupply_uk, cwt_15_truck_repair_resupply_africa_uk | 30cal_hmg_us | 5 | 3 | 0 | — | — | 30 | 5 | 75 mun | — | | | | | | |
 | drop_mortar_cwt_uk | cwt_15_truck_repair_resupply_uk, cwt_15_truck_repair_resupply_africa_uk | 81mm_mortar_us | 100 | 20 | 4.5 | — | — | 30 | 5 | 75 mun | — | | | | | | |
 | flare_tommy_uk | tommy_uk | flare_tommy_uk | 0 | 0 | 0 | 1 | 0 | 90 | 50 | 25 mun | — | | | | | | |
@@ -265,13 +265,13 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | grenade_no69_uk | sapper_uk | grenade_no69_uk | 160 | 25 | 4.5 | 1 | 160 | 30 | 20 | 25 mun | — | | | | | | |
 | gurkha_grenade_assault_uk | gurkhas_uk, gurkhas_africa_uk | gurkha_grenade_assault_uk | 87 | 25 | 4 | 1 | 87 | 60 | 20 | 35 mun | — | | | | | | |
 | gurkha_smoke_grenade_uk | gurkhas_uk, gurkhas_africa_uk | gurkha_smoke_grenade_uk | 0 | 0 | 0 | 1 | 0 | 180 | 20 | — | — | | | | | | |
-| hand_mortar_concussion_canadian_uk | — | hand_mortar_concussion_canadian_uk | 80 | 25 | 3 | 4 | 320 | 30 | 45 | — | mortar | 1 | 2 | 0.67 | 0 | 6 | 160 |
-| hand_mortar_he_canadian_uk | canadian_heavy_infantry_africa_uk | hand_mortar_he_canadian_uk | 80 | 25 | 3 | 6 (6 / 6) | 480 | 60 | 52.5 | 25 mun | mortar | 1 | 1 | 1 | 0 | 8 | 80 |
+| hand_mortar_concussion_canadian_uk | — | hand_mortar_concussion_canadian_uk | 80 | 25 | 3 | 4 | 320 | 30 | 45 | — | mortar | 1 | 2 | 0.67 | 0 | 2–6 | 160 |
+| hand_mortar_he_canadian_uk | canadian_heavy_infantry_africa_uk | hand_mortar_he_canadian_uk | 80 | 25 | 3 | 6 (6 / 6) | 480 | 60 | 52.5 | 25 mun | mortar | 1 | 1 | 1 | 0 | 2–8 | 80 |
 | hesh_shell_centaur_uk | centaur_uk, centaur_africa_uk | 95mm_hesh_round_centaur_uk | 80 | 70 | 1.5 | — | — | 5 | 25 | — | — | | | | | | |
 | piat_critical_shot_uk | canadian_heavy_infantry_africa_uk | piat_target_weakpoint_uk | 160 | 500 | 2.5 | 1 | 160 | 30 | 25 | 35 mun | — | | | | | | |
 | rifle_grenade_tommy_uk | tommy_uk | rifle_grenade_tommy_uk | 160 | 25 | 3 | 1 | 160 | 30 | 30 | 30 mun | — | | | | | | |
 | satchel_charge_sappers_uk | sapper_uk | satchel_charge_paratrooper_us | 600 | 1000 | 5 | 1 | 600 | 30 | 10 | 45 mun | — | | | | | | |
-| smoke_cover_valentine_uk | valentine_command_uk, valentine_uk | 2inch_mortar_smoke_sherman_us | 0 | 35 | 0 | 4 | 0 | 120 | 45 | — | mortar | 1 | 1 | 0.33 | 0 | 6 | 0 |
+| smoke_cover_valentine_uk | valentine_command_uk, valentine_uk | 2inch_mortar_smoke_sherman_us | 0 | 35 | 0 | 4 | 0 | 120 | 45 | — | mortar | 1 | 1 | 0.33 | 0 | 2–6 | 0 |
 | smoke_rifle_greande_tommy_uk | tommy_uk | smoke_rifle_grenade_tommy_africa_uk | 0 | 1 | 0 | 1 | 0 | 180 | 35 | — | — | | | | | | |
 | special_services_coordinated_fire_uk | ssb_sniper_africa_us, ssb_sniper_africa_uk | grenade_smoke_red_africa_uk | 0 | 25 | 0 | 1 | 0 | 120 | 45 | 45 mun | — | | | | | | |
 | special_services_target_gunner_infantry_uk | ssb_sniper_africa_us, ssb_sniper_africa_uk | boys_at_rifle_scoped_target_gunner_africa_uk | 80 | 1000 | 0 | 1 | 80 | 60 | 50 | 35 mun | — | | | | | | |
@@ -288,11 +288,11 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 
 ## british_africa
 
-| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |
+| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | at_grenade_sapper_africa_uk | tommy_uk, tommy_africa_uk | sticky_bomb_rifleman_us | 120 | 1000 | 0.2 | 1 | 120 | 15 | 15 | 25 mun | — | | | | | | |
-| barrage_land_mattress_rocket_africa_uk | land_mattress_africa_uk | rocket_land_mattress_africa_uk | 70 | 35 | 6 | 20 (26 / 26) | 1400 | 90 | 160 | — | rocket | 2 | 5 | 0.89 | 2 | 16 | 350 |
-| barrage_land_mattress_suppression_rocket_africa_uk | land_mattress_africa_uk | rocket_land_mattress_africa_suppression_barrage_uk | 50 | 35 | 8 | 6 (12 / 12) | 300 | 40 | 160 | 40 mun | rocket | 2 | 3 | 1 | 2 | 16 | 150 |
+| barrage_land_mattress_rocket_africa_uk | land_mattress_africa_uk | rocket_land_mattress_africa_uk | 70 | 35 | 6 | 20 (26 / 26) | 1400 | 90 | 160 | — | rocket | 2 | 5 | 0.89 | 2 | 6–16 | 350 |
+| barrage_land_mattress_suppression_rocket_africa_uk | land_mattress_africa_uk | rocket_land_mattress_africa_suppression_barrage_uk | 50 | 35 | 8 | 6 (12 / 12) | 300 | 40 | 160 | 40 mun | rocket | 2 | 3 | 1 | 2 | 6–16 | 150 |
 | flare_tommy_africa_uk | tommy_africa_uk | scoped_lee_enfield_tommy_uk | 12 | 2 | 0 | 1 | 12 | 120 | 45 | — | — | | | | | | |
 | forward_observer_tommy_africa_uk | tommy_africa_uk | scoped_lee_enfield_tommy_uk | 12 | 2 | 0 | 1 | 12 | 120 | 35 | 45 mun | — | | | | | | |
 | gammon_bomb_guards_africa_uk | canadian_heavy_infantry_africa_uk, guards_africa_uk | gammon_bomb_guards_africa_uk | 160 | 25 | 6 | 1 (1 / 1) | 160 | 30 | 20 | 35 mun | — | | | | | | |
@@ -303,8 +303,8 @@ Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 ke
 | hull_mounted_flamethrower_churchill_crocodile_africa_uk | churchill_crocodile_uk, churchill_crocodile_africa_uk | flamethrower_crocodile_africa_uk | 4 | 3 | 4 | — | — | 0 | 0 | — | — | | | | | | |
 | lewes_bomb_special_services_uk | ssb_africa_uk | satchel_charge_lewes_bomb_uk | 600 | 1000 | 5 | 1 | 600 | 30 | 15 | 35 mun | — | | | | | | |
 | lewes_bomb_special_services_upgraded_uk | ssb_africa_uk | satchel_charge_lewes_bomb_uk | 600 | 1000 | 5 | 1 | 600 | 30 | 15 | 35 mun | — | | | | | | |
-| polish_cavalry_tulip_rocket_strike_humber_africa_uk | humber_africa_uk | tulip_rocket_coaxial_uk | 100 | 1000 | 6 | 1 (1 / 1) | 100 | 90 | 30 | — | rocket | 2 | 1 | 0.22 | 2 | 4 | 100 |
-| polish_cavalry_tulip_rocket_strike_stuart_africa_uk | stuart_africa_recrewable_uk, stuart_africa_uk | tulip_rocket_coaxial_uk | 100 | 1000 | 6 | 1 (1 / 1) | 100 | 90 | 30 | — | rocket | 2 | 1 | 0.22 | 2 | 4 | 100 |
+| polish_cavalry_tulip_rocket_strike_humber_africa_uk | humber_africa_uk | tulip_rocket_coaxial_uk | 100 | 1000 | 6 | 1 (1 / 1) | 100 | 90 | 30 | — | rocket | 2 | 1 | 0.22 | 2 | 3–4 | 100 |
+| polish_cavalry_tulip_rocket_strike_stuart_africa_uk | stuart_africa_recrewable_uk, stuart_africa_uk | tulip_rocket_coaxial_uk | 100 | 1000 | 6 | 1 (1 / 1) | 100 | 90 | 30 | — | rocket | 2 | 1 | 0.22 | 2 | 3–4 | 100 |
 | rifle_grenade_tommy_africa_uk | tommy_africa_uk | rifle_grenade_tommy_africa_uk | 160 | 25 | 3 | 1 (1 / 1) | 160 | 30 | 30 | 35 mun | — | | | | | | |
 | royal_engineers_avre_fire_weapon_uk | churchill_avre_africa_uk | 290mm_avre_uk | 720 | 1000 | 10 | 1 | 720 | 30 | 35 | — | — | | | | | | |
 | royal_engineers_churchill_avre_discombobulate_uk | churchill_avre_africa_uk | 290mm_avre_discombobulate_uk | 180 | 1000 | 5.5 | 1 (1 / 1) | 180 | 60 | 40 | 30 mun | — | | | | | | |

@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RACES } from './fetch.js';
 import { indexKind } from './catalog.js';
-import { classOf, rangeHex, barrageUse } from '../import-coh3/indirect.js';
+import { classOf, rangeHex, minRangeHex, barrageUse } from '../import-coh3/indirect.js';
 
 const ROUND = x => Math.round(x);
 const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
@@ -72,7 +72,8 @@ function build(dir) {
       if (cls && row.shots) {
         const g = barrageUse({ shells: row.shots, recharge_s: row.recharge_s }, cls);
         row.game = { class: cls.id, ...g, damage_per_shell: main.damage, total_damage: main.damage * g.shells,
-          range_hex: rangeHex(row.range_m || main.range_max_m, cls) };
+          range_hex: rangeHex(row.range_m || main.range_max_m, cls),
+          min_range_hex: minRangeHex(row.min_range_m || 0, row.range_m || main.range_max_m, cls) };
       }
       out.push(row);
     }
@@ -91,13 +92,13 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     'Turns: recharge ÷ 10 s rounded up; hexes: metres ÷ 7. Off-map strikes: CoH3 keeps their shells in custom_property_container/offmap, which coh3-data does not publish.', ''];
   for (const race of [...new Set(rows.map(r => r.race))]) {
     const mine = rows.filter(r => r.race === race);
-    L.push(`## ${race}`, '', '| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex | game total |',
+    L.push(`## ${race}`, '', '| Ability | casters | weapon | dmg / shell | pen | AoE m | CoH3 shells (vet) | CoH3 total | CoH3 recharge s | range m | cost | game: class | every (turns) | shells | acc × | spread hex | range hex (min–max) | game total |',
       '| --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: | ---: | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |');
     for (const r of mine.sort((a, b) => Number(a.offmap) - Number(b.offmap) || a.id.localeCompare(b.id))) {
       const w = r.weapons.find(x => x.weapon && x.damage > 0) ?? r.weapons.find(x => x.weapon) ?? {};
       L.push(`| ${r.id}${r.offmap ? ' (off-map)' : ''} | ${r.casters.join(', ') || '—'} | ${w.weapon ?? (r.offmap ? 'not published' : '—')} | ${w.damage ?? '—'} | ${w.penetration ?? '—'} | ${w.aoe_radius_m ?? '—'} | ` +
         `${r.shots ?? '—'}${r.shots_vet.length ? ` (${r.shots_vet.join(' / ')})` : ''} | ${r.total_damage ?? '—'} | ${r.recharge_s} | ${r.range_m} | ${res(r.cost)} | ` +
-        (r.game ? `${r.game.class} | ${r.game.usage_turns} | ${r.game.shells} | ${r.game.accuracy_scale} | ${r.game.spread_hex} | ${r.game.range_hex} | ${r.game.total_damage} |` : '— | | | | | | |'));
+        (r.game ? `${r.game.class} | ${r.game.usage_turns} | ${r.game.shells} | ${r.game.accuracy_scale} | ${r.game.spread_hex} | ${r.game.min_range_hex}–${r.game.range_hex} | ${r.game.total_damage} |` : '— | | | | | | |'));
     }
     L.push('');
   }

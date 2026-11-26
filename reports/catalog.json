@@ -4455,9 +4455,9 @@
      "class": "nebelwerfer",
      "rule": "artillery",
      "shots": {
-      "near": 7,
-      "mid": 7,
-      "far": 7
+      "near": 3,
+      "mid": 3,
+      "far": 3
      },
      "damage": {
       "near": 80,
@@ -4466,9 +4466,9 @@
      },
      "reload_turns": 1,
      "accuracy_scale": {
-      "near": 0.98,
-      "mid": 0.98,
-      "far": 0.98
+      "near": 1,
+      "mid": 1,
+      "far": 1
      }
     },
     {
@@ -4477,9 +4477,9 @@
      "class": "nebelwerfer",
      "rule": "artillery",
      "shots": {
-      "near": 6,
-      "mid": 6,
-      "far": 6
+      "near": 3,
+      "mid": 3,
+      "far": 3
      },
      "damage": {
       "near": 0,
@@ -4488,9 +4488,9 @@
      },
      "reload_turns": 1,
      "accuracy_scale": {
-      "near": 0.89,
-      "mid": 0.89,
-      "far": 0.89
+      "near": 1,
+      "mid": 1,
+      "far": 1
      }
     },
     {
@@ -23977,9 +23977,9 @@
      "class": "artillery_small",
      "rule": "artillery",
      "shots": {
-      "near": 18,
-      "mid": 18,
-      "far": 18
+      "near": 3,
+      "mid": 3,
+      "far": 3
      },
      "damage": {
       "near": 70,
@@ -23988,9 +23988,9 @@
      },
      "reload_turns": 1,
      "accuracy_scale": {
-      "near": 0.99,
-      "mid": 0.99,
-      "far": 0.99
+      "near": 1,
+      "mid": 1,
+      "far": 1
      }
     },
     {

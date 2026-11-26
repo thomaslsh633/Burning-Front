@@ -16,7 +16,7 @@
 //   ability      artillery slower than min_raw or needing more than max_reload_turns: fired by abilities only.
 //   per_use      grenades, mines: 1 shot per use, CoH3 damage.
 
-import { classOf, normalFire } from './indirect.js';
+import { classOf, normalFire, minRangeHex } from './indirect.js';
 
 const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
 const mult = (m, band) => (m && typeof m[band] === 'number' ? m[band] : 1);
@@ -91,7 +91,8 @@ export function fireRate(bag, category, cfg, id = '') {
       const per = each(b => normalFire(raw[b], cls));
       return { ...out, indirect_class: cls.id, shots_per_turn: each(b => per[b].shells), damage_per_shot: each(() => damage),
         reload_turns: cls.usage_turns - 1, accuracy_scale: each(b => per[b].accuracy_scale), spread_hex: cls.spread_hex,
-        range_hex: Math.min(Math.round((bag.range?.max ?? 0) / 7), cls.range_cap_hex) };
+        range_hex: Math.min(Math.round((bag.range?.max ?? 0) / 7), cls.range_cap_hex),
+        min_range_hex: minRangeHex(bag.range?.min ?? 0, bag.range?.max ?? 0, cls) };
     }
     const shells = each(b => (minRaw < 1 ? 1 : Math.max(1, Math.ceil(raw[b] - 0.02))));
     const game = b => shells[b] / (reload + 1);

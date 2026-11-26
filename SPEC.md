@@ -178,6 +178,13 @@ Confirmed 2026-11-25 (rewrite):
   (7 hexes), rockets within 2 (19 hexes); on the hex where it lands the shell rolls accuracy against the units there.
   Examples: 81 mm barrage 3 shells every turn; 105 mm barrage 2 shells every 2 turns over 7 hexes; Hummel barrage 2 shells
   every turn at accuracy ×0.67.
+- Minimum range: indirect weapons cannot fire at targets closer than round(CoH3 min ÷ CoH3 max × our range) hexes, at least
+  the class floor (mortar 2, light 2, SPG 3, heavy 3, rocket 3); direct fire keeps CoH3 min ÷ 7 (almost always 0).
+- Rocket volleys in normal fire are capped at 3 rockets (as their barrage); their damage per turn is then below CoH3.
+- Fire beyond sight: indirect weapons without `needs_sight` may target any hex in range, seen or not. Blind fire: accuracy ÷
+  CoH3 scatter fog multipliers (angle × distance, usually 1.25 × 1.25 → ×0.64) and spread one hex wider.
+- Counter-barrage: the hex an indirect weapon fires from is sound-ranged for the opponent until the end of the opponent's next
+  turn (status flag `sound_ranged`); fire at a sound-ranged hex has no blind penalty, even out of sight.
 - Weapon operation rules come from CoH3 weapon behaviour (`data/rules/weapon-flags.json`): ignores blockers, needs sight,
   anti-air, emplace required / faces target, friendly fire, piercing, hits all on miss / hit, attack ground, targets garrison,
   sniper kill, replaceable by upgrades, fire on move, reveals on fire.

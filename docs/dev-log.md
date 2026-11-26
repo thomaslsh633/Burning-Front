@@ -2,6 +2,10 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (minimum range, counter-barrage)
+- **Done:** indirect minimum range (scaled CoH3 min, class floors), rocket volley cap 3, blind fire beyond sight
+  (CoH3 fog multipliers, +1 spread), counter-battery `sound_ranged` hexes (no blind penalty). SPEC §10, status flags, labels.
+
 ## 2026-11-26 (indirect fire for turn play)
 - **Done:** `data/balance/indirect.json` + `tools/import-coh3/indirect.js` (tested): one volley every N turns per class
   (mortar / SPG / light 1, heavy / rocket 2), shells from the CoH3 rate over N turns (fewer shells for faster cadence),

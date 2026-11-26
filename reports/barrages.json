@@ -1729,7 +1729,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -1875,7 +1876,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 5
   }
  },
  {
@@ -1931,7 +1933,8 @@
    "spread_hex": 1,
    "damage_per_shell": 240,
    "total_damage": 720,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -1988,7 +1991,8 @@
    "spread_hex": 1,
    "damage_per_shell": 240,
    "total_damage": 480,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -2041,7 +2045,8 @@
    "spread_hex": 2,
    "damage_per_shell": 80,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 6
   }
  },
  {
@@ -2096,7 +2101,8 @@
    "spread_hex": 2,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 6
   }
  },
  {
@@ -2153,7 +2159,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -2250,7 +2257,8 @@
    "spread_hex": 1,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -2698,7 +2706,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 360,
-   "range_hex": 7
+   "range_hex": 7,
+   "min_range_hex": 2
   }
  },
  {
@@ -2754,7 +2763,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 400,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -2807,7 +2817,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -2910,7 +2921,8 @@
    "spread_hex": 1,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -2963,7 +2975,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -3016,7 +3029,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -3403,7 +3417,8 @@
    "spread_hex": 2,
    "damage_per_shell": 900,
    "total_damage": 900,
-   "range_hex": 5
+   "range_hex": 5,
+   "min_range_hex": 3
   }
  },
  {
@@ -3457,7 +3472,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 7
+   "range_hex": 7,
+   "min_range_hex": 2
   }
  },
  {
@@ -3555,7 +3571,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -3608,7 +3625,8 @@
    "spread_hex": 2,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 6
   }
  },
  {
@@ -3663,7 +3681,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 5
   }
  },
  {
@@ -3718,7 +3737,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 5
   }
  },
  {
@@ -5325,7 +5345,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -5378,7 +5399,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -5549,7 +5571,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -5605,7 +5628,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -5791,7 +5815,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 240,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 2
   }
  },
  {
@@ -5848,7 +5873,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 240,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 2
   }
  },
  {
@@ -5903,7 +5929,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -5959,7 +5986,8 @@
    "spread_hex": 1,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 3
   }
  },
  {
@@ -6014,7 +6042,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -6067,7 +6096,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -6125,7 +6155,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 240,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 2
   }
  },
  {
@@ -6181,7 +6212,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 2
   }
  },
  {
@@ -6237,7 +6269,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 240,
-   "range_hex": 13
+   "range_hex": 13,
+   "min_range_hex": 2
   }
  },
  {
@@ -6295,7 +6328,8 @@
    "spread_hex": 0,
    "damage_per_shell": 10,
    "total_damage": 10,
-   "range_hex": 6
+   "range_hex": 6,
+   "min_range_hex": 2
   }
  },
  {
@@ -6906,7 +6940,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -6964,7 +6999,8 @@
    "spread_hex": 0,
    "damage_per_shell": 160,
    "total_damage": 480,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -7022,7 +7058,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -7372,7 +7409,8 @@
    "spread_hex": 2,
    "damage_per_shell": 35,
    "total_damage": 700,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -7423,7 +7461,8 @@
    "spread_hex": 2,
    "damage_per_shell": 35,
    "total_damage": 700,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -7474,7 +7513,8 @@
    "spread_hex": 2,
    "damage_per_shell": 35,
    "total_damage": 700,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 3
   }
  },
  {
@@ -8676,7 +8716,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 360,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -8729,7 +8770,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 480,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -8782,7 +8824,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -8835,7 +8878,8 @@
    "spread_hex": 1,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -8933,7 +8977,8 @@
    "spread_hex": 2,
    "damage_per_shell": 200,
    "total_damage": 400,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 4
   }
  },
  {
@@ -10148,7 +10193,8 @@
    "spread_hex": 0,
    "damage_per_shell": 80,
    "total_damage": 160,
-   "range_hex": 6
+   "range_hex": 6,
+   "min_range_hex": 2
   }
  },
  {
@@ -10227,7 +10273,8 @@
    "spread_hex": 0,
    "damage_per_shell": 80,
    "total_damage": 80,
-   "range_hex": 8
+   "range_hex": 8,
+   "min_range_hex": 2
   }
  },
  {
@@ -10557,7 +10604,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 2
   }
  },
  {
@@ -10614,7 +10662,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 2
   }
  },
  {
@@ -10671,7 +10720,8 @@
    "spread_hex": 0,
    "damage_per_shell": 80,
    "total_damage": 240,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 2
   }
  },
  {
@@ -10728,7 +10778,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 2
   }
  },
  {
@@ -10785,7 +10836,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 360,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 2
   }
  },
  {
@@ -10842,7 +10894,8 @@
    "spread_hex": 0,
    "damage_per_shell": 80,
    "total_damage": 320,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -10900,7 +10953,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -10958,7 +11012,8 @@
    "spread_hex": 0,
    "damage_per_shell": 120,
    "total_damage": 480,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -11015,7 +11070,8 @@
    "spread_hex": 0,
    "damage_per_shell": 10,
    "total_damage": 30,
-   "range_hex": 14
+   "range_hex": 14,
+   "min_range_hex": 2
   }
  },
  {
@@ -11119,7 +11175,8 @@
    "spread_hex": 0,
    "damage_per_shell": 100,
    "total_damage": 300,
-   "range_hex": 12
+   "range_hex": 12,
+   "min_range_hex": 3
   }
  },
  {
@@ -11173,7 +11230,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 480,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11229,7 +11287,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 200,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11287,7 +11346,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 200,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11344,7 +11404,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 600,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11398,7 +11459,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 600,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11454,7 +11516,8 @@
    "spread_hex": 1,
    "damage_per_shell": 200,
    "total_damage": 400,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11511,7 +11574,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 1280,
-   "range_hex": 18
+   "range_hex": 18,
+   "min_range_hex": 3
   }
  },
  {
@@ -11613,7 +11677,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 4
   }
  },
  {
@@ -11670,7 +11735,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 320,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 4
   }
  },
  {
@@ -11860,7 +11926,8 @@
    "spread_hex": 0,
    "damage_per_shell": 0,
    "total_damage": 0,
-   "range_hex": 6
+   "range_hex": 6,
+   "min_range_hex": 2
   }
  },
  {
@@ -11967,7 +12034,8 @@
    "spread_hex": 1,
    "damage_per_shell": 160,
    "total_damage": 160,
-   "range_hex": 7
+   "range_hex": 7,
+   "min_range_hex": 3
   }
  },
  {
@@ -12788,7 +12856,8 @@
    "spread_hex": 2,
    "damage_per_shell": 70,
    "total_damage": 350,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 6
   }
  },
  {
@@ -12846,7 +12915,8 @@
    "spread_hex": 2,
    "damage_per_shell": 50,
    "total_damage": 150,
-   "range_hex": 16
+   "range_hex": 16,
+   "min_range_hex": 6
   }
  },
  {
@@ -12967,7 +13037,8 @@
    "spread_hex": 2,
    "damage_per_shell": 100,
    "total_damage": 100,
-   "range_hex": 4
+   "range_hex": 4,
+   "min_range_hex": 3
   }
  },
  {
@@ -13045,7 +13116,8 @@
    "spread_hex": 2,
    "damage_per_shell": 100,
    "total_damage": 100,
-   "range_hex": 4
+   "range_hex": 4,
+   "min_range_hex": 3
   }
  },
  {
