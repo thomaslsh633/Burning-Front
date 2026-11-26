@@ -49,6 +49,9 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | mg42_bunker_ger | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | hmg_bunker_ger | entity · buildings | — |
 | hmg_mg42_bunker_ger | squad · emplacements | role "suppression" guessed from main weapon class hmg |
+| sandbag_wall_ger | entity · buildings | — |
+| barbed_wire_fence_ger | entity · buildings | — |
+| tank_trap_ger | entity · buildings | — |
 
 ## v214 for reference (legacy value → imported value; differences are expected, CoH3 is the authority)
 

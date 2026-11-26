@@ -125,6 +125,12 @@ export function importFaction(faction, squadIds) {
       if (pending.length) record.upgrades.pending = pending;
     }
   }
+  // defensive structures the faction builds (sandbags, wire, tank traps): HP and armour for map lines and objects
+  const terrainRules = read('data/rules/terrain.json');
+  for (const def of [...Object.values(terrainRules.lines), ...Object.values(terrainRules.objects)]) {
+    const id = def.faction_ebps?.[faction];
+    if (id) addEntity(id);
+  }
   return { files, report };
 }
 

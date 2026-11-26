@@ -1,5 +1,7 @@
 {
  "en": {
+  "entity.barbed_wire_fence_ger.name": "Barbed Wire",
+  "entity.barbed_wire_fence_us.name": "Barbed Wire",
   "entity.crew_at_gun_57mm_us.name": "57mm AT Gun Crewman",
   "entity.crew_at_gun_75mm_ger.name": "Pak 40 Crewman",
   "entity.crew_hmg_ger.name": "Machine Gunner",
@@ -12,7 +14,11 @@
   "entity.panzer_iv_ger.name": "Panzer IV Medium Tank",
   "entity.rifleman_squad_leader_us.name": "Squad Leader",
   "entity.rifleman_us.name": "Rifleman",
+  "entity.sandbag_wall_ger.name": "Sandbag Wall",
+  "entity.sandbag_wall_us.name": "Sandbag Wall",
   "entity.sherman_us.name": "M4A1 Sherman Medium Tank",
+  "entity.tank_trap_ger.name": "Tank Trap",
+  "entity.tank_trap_us.name": "Tank Trap",
   "entity.tw_at_gun_57mm_us.name": "M1 57mm Anti-tank Gun",
   "entity.tw_at_gun_75mm_ger.name": "7.5cm Pak 40",
   "unit.at_gun_57mm_us.desc": "Effective against all vehicles. \n• Must be set-up to attack. \n• Long-range. \n• Can be towed.",
@@ -87,6 +93,8 @@
   "weapon.thompson_riflemen_leader_us.name": "Thompson Submachine Gun"
  },
  "ko": {
+  "entity.barbed_wire_fence_ger.name": "철조망",
+  "entity.barbed_wire_fence_us.name": "철조망",
   "entity.crew_at_gun_57mm_us.name": "57mm 대전차포 포수",
   "entity.crew_at_gun_75mm_ger.name": "Pak 40 포수",
   "entity.crew_hmg_ger.name": "기관총 사수",
@@ -99,7 +107,11 @@
   "entity.panzer_iv_ger.name": "4호 전차",
   "entity.rifleman_squad_leader_us.name": "분대장",
   "entity.rifleman_us.name": "소총수",
+  "entity.sandbag_wall_ger.name": "모래주머니 벽",
+  "entity.sandbag_wall_us.name": "모래주머니 벽",
   "entity.sherman_us.name": "M4A1 셔먼",
+  "entity.tank_trap_ger.name": "대전차 장애물",
+  "entity.tank_trap_us.name": "대전차 장애물",
   "entity.tw_at_gun_57mm_us.name": "M1 57mm 대전차포",
   "entity.tw_at_gun_75mm_ger.name": "7.5cm Pak 40",
   "unit.at_gun_57mm_us.desc": "차량 상대에 강한 견인식 대전차포. 사격하려면 먼저 거치해야 한다.",

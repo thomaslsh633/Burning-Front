@@ -6,5 +6,28 @@
     "fire": "smg"
    }
   }
+ },
+ "ebps": {
+  "sandbag_wall_ger": {
+   "name": "entity.sandbag_wall_ger.name",
+   "model": {
+    "id": "sandbag_wall_ger",
+    "anim_class": "static"
+   }
+  },
+  "barbed_wire_fence_ger": {
+   "name": "entity.barbed_wire_fence_ger.name",
+   "model": {
+    "id": "barbed_wire_fence_ger",
+    "anim_class": "static"
+   }
+  },
+  "tank_trap_ger": {
+   "name": "entity.tank_trap_ger.name",
+   "model": {
+    "id": "tank_trap_ger",
+    "anim_class": "static"
+   }
+  }
  }
 }

@@ -50,6 +50,9 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | 30cal_fighting_position_us | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | hmg_fighting_position_us | entity · buildings | dropped module stealth (not allowed for buildings) |
 | hmg_fighting_position_us | squad · emplacements | role "suppression" guessed from main weapon class hmg |
+| sandbag_wall_us | entity · buildings | — |
+| barbed_wire_fence_us | entity · buildings | — |
+| tank_trap_us | entity · buildings | — |
 
 ## v214 for reference (legacy value → imported value; differences are expected, CoH3 is the authority)
 

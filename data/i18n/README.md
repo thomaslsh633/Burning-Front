@@ -40,5 +40,10 @@ Every player-visible string: unit, weapon and terrain names, UI labels, log temp
 | merge (reinforce another squad) | 합류 | 1 |
 | garrison | 주둔 | 1 |
 | set up / tear down (team weapon) | 거치 / 해체 | 1 |
+| sandbag wall | 모래주머니 벽 | 1 |
+| barbed wire | 철조망 | 1 |
+| tank trap (AT obstacle) | 대전차 장애물 | 1 |
+| wreck | 잔해 | 1 |
+| collapse (building) | 붕괴 | 1 |
 
 Add a row when a new term first appears in `ko.json`, so the same word is always used.

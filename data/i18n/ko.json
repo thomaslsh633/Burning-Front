@@ -85,6 +85,12 @@
     "weapon.mp40_crew_ger.name": "MP40 기관단총",
     "weapon.mp40_grenadier_ger.name": "MP40 기관단총",
     "weapon.tank_smoke_ak.name": "연막 발사기",
-    "weapon.thompson_riflemen_leader_us.name": "톰슨 기관단총"
+    "weapon.thompson_riflemen_leader_us.name": "톰슨 기관단총",
+    "entity.barbed_wire_fence_ger.name": "철조망",
+    "entity.barbed_wire_fence_us.name": "철조망",
+    "entity.sandbag_wall_ger.name": "모래주머니 벽",
+    "entity.sandbag_wall_us.name": "모래주머니 벽",
+    "entity.tank_trap_ger.name": "대전차 장애물",
+    "entity.tank_trap_us.name": "대전차 장애물"
   }
 }

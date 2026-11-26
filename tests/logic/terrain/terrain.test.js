@@ -135,3 +135,10 @@ test('wrecks can be shot apart by AT weapons', () => {
   const r = terrain.damageHex(w.state, data, H(3, 3), { amount: 500, pen: 300, weapon: weapon('57mm_at_gun_us') });
   assert.equal(terrain.hexAt(r.state, data, H(3, 3)).featureKind, null);
 });
+
+test('defensive lines placed by a side take that faction\'s CoH3 HP and armour; neutral ones the rule values', () => {
+  const { state, data } = testMatch([]);
+  assert.deepEqual(terrain.featureHp(state, data, rules.lines.sandbag_row, 'blue'), { hp: data.units.ebps.sandbag_wall_us.hp, armor: data.units.ebps.sandbag_wall_us.armor.front });
+  assert.deepEqual(terrain.featureHp(state, data, rules.lines.wire, 'red'), { hp: 150, armor: 20 });
+  assert.deepEqual(terrain.featureHp(state, data, rules.lines.hedge, null), { hp: 150, armor: 1 });
+});
