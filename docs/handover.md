@@ -1,0 +1,222 @@
+# Handover: Burning Front rewrite (2026-11-26)
+
+Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `docs/unit-state.md` (CLAUDE.md "Start of every task").
+
+## 1. Where things stand
+
+| Item | State |
+| --- | --- |
+| Repository | `thomaslsh633/Burning-Front` |
+| Working branch | `claude/focused-davinci-afa1h6`, pushed; last commit `b61e8ca` |
+| Pull request | none (create one only when the user asks) |
+| Checks | `npm run check` passes; `npm test` passes (204 tests) |
+| Phase | **D2 rules engine: steps 1–6 done**, plus map work (terrain system, map files). Next: **D2-7** |
+| Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
+| Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
+
+The user writes in Korean (lately asking for English replies to save tokens). Code, comments and identifiers are in English.
+Personal single-developer project. The user approves designs; ask before conflicting with SPEC (CLAUDE.md).
+
+## 2. Project in one paragraph
+
+Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, PixiJS later).
+- Turn and combat mechanics follow Burning Bridges; unit and weapon data follow CoH3 (coh3-data `data/chunked`, commit
+  `49fc4dbc`, plus coh3stats.com).
+- Campaigns: North Africa (DAK view) and Italy (AFHQ view), 6 stages × 3 missions, plus 1v1 hot-seat. Korean is the main
+  language.
+- `legacy/` is the frozen v214 game, a gameplay reference only. New code lives in `src/` in three layers
+  (presentation → logic / services; logic is pure; systems talk only through `index.js`).
+- Units are driven by six state machines (`docs/unit-state.md`).
+
+## 3. Work completed (newest last)
+
+| Commit(s) | What |
+| --- | --- |
+| D0–D1 (before `318c149`) | game plan, SPEC §10 rules, CoH3 fetch / census, word lists, validator, schemas and profiles, importer pilot, fire-rate and indirect-fire conversion, coh3stats cross-check |
+| `318c149` | D2 readiness review (`docs/reviews/d2-readiness.md`) |
+| `4866636` … `204a8fd` | readiness fixes 1–7 (detail below) |
+| `f7cf867` | unit data in one folder per unit: `data/base/<faction>/<squad id>/` + `shared/` (`tools/import-coh3/layout.js`) |
+| `a0bf5d8` | Korean translation rules and glossary (`data/i18n/README.md`) |
+| `70cf962` D2-1 | `logic/hex` (odd-r pointy-top, directions 0 = E clockwise, `edgeKey`), `services/rng` (mulberry32, state is one integer) |
+| `642a9bc` D2-2 | `fsm` (defineMachine / transition / send / runHook / permits / table), `events` (`EVENT`, `ev`), `state` (createUnit, checkUnit, createMatch, selectors, putUnit), `commands` (route table + common checks), `store` (dispatch, undo for undoable commands, rng rebuilt from `state.rng`), `services/data indexUnits` |
+| `cf0058a` D2-3 | `movement` (costs, Dijkstra, reverse, hull turn, `moveToward`), `turn` action axis + budget (move-point pool + 1 action + 1 counter) |
+| `f0a3725` D2-4 | `vision` (sight lines with heights, concealment, `coverAgainst` per shot, visibility axis, reveal on fire / move) |
+| `bdc9905` D2-5 | `combat` (bands = thirds, hit × target size, penetration ÷ armour face, AoE splash, suppression, criticals, preview = resolve checked over 300 seeds, indirect shells with spread) |
+| `f985eb4` D2-6 | `crew` (stance axis, setup / teardown timers, auto-emplace), `status` (morale axis, suppression 30 / 80 / 20, decay, retreat ×1.6, XP / ranks), `lifecycle` (deaths, criticals) |
+| `d26275c` | map design proposal (`docs/map-design.md`) |
+| `aefc784` | **option B chosen**: `logic/terrain` (lines compiled to hex edges, compiler, change overlay, destructible buildings / natural cover / defenses, collapse kills garrison, wreck objects) |
+| `584f380` | importer adds each faction's CoH3 sandbags / wire / tank traps |
+| `b61e8ca` | map files `data/maps/<id>/map.json`, compiled by `npm run build:data`; v214 maps converted |
+
+D2 readiness fixes 1–7:
+1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
+2. **Scale:** game scale lives in `data/balance/scale.json`; tools read it through `tools/lib/config.js`.
+3. **Roster:** `tools/coh3/roster.js` is pure; shared helpers are in `tools/lib/coh3.js`; nothing reads `reports/` as input.
+4. **Link check:** `tools/data-links.js` checks links in the merged data.
+5. **Mods:** `mods/load-order.json`, `mod.json`, and the example mod `mods/example_veteran_riflemen` (not enabled).
+6. **Layer checks:** `check-layers` rejects unit ids in `src/logic`; `src/logic/state/ownership.js` defines field owners, and
+   `assertOwnsOnly` tests them.
+7. **Text:** `data/i18n/ko.json` and `en.json`.
+
+## 4. Next steps (in order)
+
+1. **D2-7 `logic/turn` + rest of `logic/lifecycle`**
+   - **Turn order and phases:** turn start runs strikes → status → capture tick → victory → income (SPEC §2).
+     - Per unit, in hook order: lifecycle → location → stance → morale → action → visibility (`docs/unit-state.md` §3).
+     - At turn start: `turn.refreshUnit`, `crew.crewTurnStart`, `status.decaySuppression`, and the retreat auto-move
+       (`movement.moveToward` + `status.arriveIfNear`).
+     - At turn end: `crew.crewTurnEnd` (auto-emplace) and `vision.visibilityTurnEnd`.
+     - Also: turn-end engaged / turret return, and the `EndTurn` command.
+   - **Counter fire:** each unit has one counter per enemy turn, spending `budget.counter`; reloading and retreating units do not
+     counter (SPEC §4, §5).
+   - **MG overwatch:** emplaced HMG teams only (`docs/unit-state.md` §5.1.1). Uses `Hold` → `OVERWATCH`, and the
+     `applyMove(…, onStep)` hook to interrupt moves.
+   - **Recrew / capture, abandon, wreck clearing:** `docs/unit-state.md` §6.
+   - **Wreck clearing:** wrecks are now map objects (`terrain.placeWreck`), so clearing removes `changes.hexes[k].wreck`.
+2. **D2-8** `logic/capture`, `logic/economy`, `logic/build`.
+   - Capture by strength: 2 ticks per step (SPEC §3, §10).
+   - Sectors and supply connection; income; upkeep 2 %, at most 20.
+   - Production from `map.production`; build menu.
+3. **D2-9** `logic/victory` (tickets, annihilation) and an integration test that finishes a 1v1 match using commands only.
+   This test is the D2 exit gate (`docs/dev-plan.ko.md`).
+4. Then stage **G (greybox)**: import all four factions, art-free view with a map editor, time-to-kill report. After that, D3.
+
+## 5. Open issues and follow-ups
+
+- **Garrison command** (`logic/transport`, location axis): not built.
+  - `container` is set by hand in tests.
+  - Building collapse already kills `container === id` units.
+- **Map follow-ups:**
+  - Mines (in map files, not simulated).
+  - Smoke; craters from heavy shells.
+  - Forest burning.
+  - Production buildings (`map.production`, passed through only).
+  - Mod maps (`mods/<id>/maps/` not merged yet).
+- **CoH3 weapon modifiers vs `sandbag`, `barbed_wire`, `ambient_building`:** the importer drops them (not in vocab; see
+  `reports/import/american.md`). Add them to the vocab and use them in `terrain.damage*`.
+- **Not imported yet:**
+  - Squads: engineers (`engineer_us`, `pioneer_ger`), `bazooka_team_us`, `panzergrenadier_ger`. Their placements were left
+    out of the converted maps (`reports/maps/legacy-import.md`).
+  - Abilities: the 86 ids in the link warnings (`reports/data-links.md`).
+  - Global and doctrine upgrades: the `requires.*` warnings.
+- **Barrages / blind fire / counter-battery:** rules in SPEC §10 and `data/balance/indirect.json`; not wired into combat
+  commands yet (only normal indirect fire).
+- **Veterancy `hp_add`:** in the data but not applied (there is no max-HP field on members yet).
+- **Ownership:** `timers.smoke` and `marks` have no owner yet (`src/logic/state/ownership.js`).
+- **Towed gun destroyed under a living crew:** the crew stays as the unit and cannot fire. The design says it should become
+  a small infantry squad.
+- **Carried team weapons** (HMG, mortar): removed when the crew dies. The design says they should be left `DECREWED`, which
+  needs a gun HP for carried weapons.
+- **Suppression thresholds and combat tuning** are design values (CoH3 does not publish them):
+  `data/balance/status.json`, `combat.json` (including `criticals`, `feature_target_size`).
+- **HQ:** indestructible (stops at 1 HP), following SPEC §2. The user has not confirmed this for the new building rules.
+- **Choices the user has not confirmed:**
+  - sandbags, wire and tank traps show an HP bar on select;
+  - fire does not damage wrecks;
+  - building HP values: small house 600, house 1,200, large house 2,000, church 3,000.
+- **Presentation not built:** HP bars, cover tint near the selected unit, XCOM-style shield icons in move previews,
+  three-tone line strokes.
+
+## 6. Precautions (rules that bite)
+
+- **Unit data:**
+  - Never edit `data/base/` by hand (the importer rewrites a whole faction folder).
+  - Designer changes go in `data/units/<faction>/<squad id>/` (only the changed fields).
+  - After any data change, run `npm run build:data`. `npm run check` fails if `data/generated/` is stale (units, i18n,
+    maps).
+- **`src/logic` is pure:** no DOM, clock, timers or `Math.random`; rng is passed in.
+  - Never write a string literal that is a unit id (check-layers rejects it).
+  - A system writes only the unit fields it owns (`ownership.js`); every system's apply test ends with
+    `assertOwnsOnly(system, before, after)`.
+  - Command routes in `src/logic/commands/routes.js` only sequence owner functions; there are no rules there.
+- **Tunable numbers** go in `data/balance/*.json` or `data/rules/*.json` with a schema in `data/schema/` and an entry in
+  `data/schema/index.json`. Tools read balance and scale only through `tools/lib/config.js`.
+- **Display text** goes only in `data/i18n/ko.json` / `en.json`, following the Korean translation rules in
+  `data/i18n/README.md` (natural Korean where it exists, otherwise transliterate, e.g. hulldown → 헐다운).
+- **SPEC:** a rule change updates its line in `SPEC.md` (§10 holds decided rules not yet in code). If a request conflicts
+  with SPEC, say so before changing.
+- **New system folders** need approval before code (CLAUDE.md). `logic/terrain` was approved with option B.
+- **Tests:**
+  - Use `tests/helpers/match.js` (`testMatch(units, mapLayers)`, `tweak`), `tests/helpers/game-data.js` (frozen real data
+    incl. generated maps), `tests/helpers/temp-root.js` (build tests) and `tests/helpers/ownership.js`.
+  - Do not import one test file from another (its tests run twice).
+- **Network:**
+  - coh3stats.com works with curl, and with Node fetch only with `NODE_USE_ENV_PROXY=1`.
+  - wikidocs.net is blocked.
+- **Git:**
+  - Commit on `claude/focused-davinci-afa1h6`, then push with `git push -u origin claude/focused-davinci-afa1h6`.
+  - No pull request unless asked.
+  - Commit messages end with the Co-Authored-By / Claude-Session lines given by the session.
+
+## 7. Map and terrain model (quick reference)
+
+- **Map definition** (`data/maps/<id>/map.json`, schema `data/schema/map.schema.json`, guide `data/maps/README.md`):
+  - row layers `ground` / `objects` / `elevation` / `bounds` with a `legend`;
+  - `hexes` overrides;
+  - `lines` (polylines `[[x, row], …]`) and `edges` (single edge);
+  - `structures`, `production`, `points`, `sectors`, `deploy`, `placements`, `mines`.
+- **Compile:** `src/logic/terrain/compile.js compileMap(def, rules)`, run by `tools/build-data.js buildMaps` into
+  `data/generated/maps/<id>.json`, which the game reads as `data.maps[id]`.
+- **Match state:** `GameState.map = { id, cols, rows, changes: { hexes, segments, structures } }`.
+  - Lookups: `terrain.hexAt` (structure > wreck > object, plus `oob`), `edgeAt`, `elevation`, `structureAt`.
+- **Line rule:** a line occupies the edge between hexes P and Q when it crosses the segment joining their centres
+  (`terrain/geometry.js lineEdges`). Centre of (c, r) = (c + (r & 1) / 2, r·√3/2).
+- **Durability:** `data/rules/terrain.json`
+  - `groups`: terrain / natural / defensive / building / wreck, each with `damaged_by` and `hp_bar`;
+  - `damage_sources`: explosive, fire, anti_tank;
+  - `faction_ebps` for defenses; `structures` by size; `wrecks`.
+- **Damage:**
+  - combat returns `featureHits` (shells: the hex they land on; direct misses: the covering edge);
+  - the `Attack` and `AttackFeature` routes apply them through `terrain.damageEdge` / `damageHex`;
+  - when a building collapses, `lifecycle.killGarrison` removes the units inside.
+
+## 8. Reference links
+
+**Documents**
+
+| Document | Path |
+| --- | --- |
+| Working rules | `CLAUDE.md` (root), `legacy/CLAUDE.md` (frozen game) |
+| Architecture, layers, folders | `docs/ARCHITECTURE.md` |
+| Unit state machines, owners, recrew design | `docs/unit-state.md` |
+| Rules in force / decided | `SPEC.md` (§10 = decided, D2 lines included) |
+| Map design and destruction rules | `docs/map-design.md` |
+| Data labels and decisions | `docs/data-labels.md`, `docs/unit-data-format.md`, `docs/data-form-roadmap.md` |
+| Game plan / development plan (Korean) | `docs/game-plan.ko.md`, `docs/dev-plan.ko.md` |
+| Dev log | `docs/dev-log.md` |
+| D2 readiness review | `docs/reviews/d2-readiness.md` |
+| Data folder guides | `data/base/README.md`, `data/units/README.md`, `mods/README.md`, `data/i18n/README.md`, `data/maps/README.md`, `data/balance/README.md` |
+| Reports (generated, never inputs) | `reports/README.md`, `reports/data-links.md`, `reports/overrides.md`, `reports/import/`, `reports/maps/legacy-import.md`, `reports/fire-rate.md`, `reports/barrages.md`, `reports/coh3stats-compare.md`, `reports/catalog/` |
+
+**Systems:** each folder under `src/logic/*/` and `src/services/*/` has a README with what it owns and its API.
+
+**Commands**
+
+```bash
+npm run check
+```
+
+```bash
+npm test
+```
+
+```bash
+npm run build:data
+```
+
+```bash
+node tools/import-coh3/import.js american
+```
+
+```bash
+node tools/maps/import-legacy.js
+```
+
+```bash
+node tools/i18n/seed.js
+```
+
+**External sources**
+- CoH3 data: https://github.com/cohstats/coh3-data (`data/chunked`), statistics: https://coh3stats.com/
+- Burning Bridges notes: https://github.com/thomaslsh633/burning-bridge-data
+- Branch: https://github.com/thomaslsh633/Burning-Front/tree/claude/focused-davinci-afa1h6
