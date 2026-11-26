@@ -17,3 +17,5 @@
 
 ## Must not
 - patch data at load time (values are final when generated)
+
+Done: `mergeKind`, `combineFiles`, `deepMerge` (layers), `indexUnits(generated)` → flat maps by id for the rules (`data.units.sbps[id]` …).

@@ -6,9 +6,8 @@
 - event type names and payload shapes (Moved, Turned, Fired, ShotHit, PenetrationFailed, Damaged, Suppressed, ModelKilled, UnitDestroyed, PointCaptured, IncomeReceived, TurnStarted …)
 - helpers to build events
 
-## Public API (planned, exported from `index.js`)
-- `EVENT (frozen name table)`
-- `make.<event>(payload)`
+## Public API (exported from `index.js`)
+- `EVENT` (frozen name table), `ev(type, payload)` (unknown type throws) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

@@ -7,11 +7,8 @@
 - `transition`, `send`: pure state changes returning `{ unit, events }`
 - `permits(machines, unit, command)`: command validity as the intersection of all axes, with the vetoing axis and reason
 
-## Public API (planned, exported from `index.js`)
-- `defineMachine(axis, initial, states)`
-- `transition(machine, unit, to, ctx) → { unit, events }`
-- `send(machine, unit, eventName, ctx) → { unit, events }`
-- `permits(machines, unit, commandType) → { ok } | { ok: false, axis, reason }`
+## Public API (exported from `index.js`)
+- `defineMachine`, `stateOf`, `transition`, `send`, `runHook`, `permits`, `table` — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

@@ -9,9 +9,9 @@
 - selectors: unitAt, unitsOf, teamOf, isEngaged …
 - field ownership `ownership.js`: which system may write each unit field (`docs/unit-state.md` §7); done
 
-## Public API (planned, exported from `index.js`)
-- `createMatch(setup, data, seed) → GameState`
-- `selectors (pure functions of state)`
+## Public API (exported from `index.js`)
+- `createMatch(setup, data)`, `createUnit(spec, data)`, `checkUnit(unit)` (invariants) — done
+- selectors `unitById`, `allUnits`, `unitsOf`, `unitAt`, `enemyOf`, `isOnMap`, `isActive`, `putUnit` — done
 - `UNIT_FIELD_OWNERS`, `ownerOf(path)`, `changedPaths(a, b)`, `foreignWrites(system, before, after)` — done
 
 ## May import

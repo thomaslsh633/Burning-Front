@@ -8,12 +8,8 @@
 - subscribe(listener(state, events))
 - dev mode: freezes state so presentation cannot mutate it
 
-## Public API (planned, exported from `index.js`)
-- `createStore(initialState, data, rng)`
-- `dispatch(command) → events`
-- `getState()`
-- `undo()`
-- `subscribe(fn)`
+## Public API (exported from `index.js`)
+- `createStore(initial, data, { rngFrom, freeze })` → `dispatch`, `getState`, `undo`, `canUndo`, `replace`, `subscribe` — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)
