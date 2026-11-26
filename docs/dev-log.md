@@ -8,7 +8,8 @@ Newest first. One entry per finished task: done / next / blocked.
   D2-8: `logic/capture` (strength ticks, contest, sector supply), `logic/economy` (income, upkeep, `Produce`),
   `data/balance/economy.json`, `data/rules/production.json`. 263 tests.
   Follow-up: capture per squad, map point yield override, production generated from CoH3 spawner data
-  (`tools/coh3/production.js`; battlegroup / restored units in research lists), HQ produces, population cap 300. 268 tests.
+  (`tools/coh3/production.js`), HQ produces, population cap 300. Then: non-production units produced directly, research
+  only for high-tier units, support vehicles in Tier 2. 269 tests.
 - **Next:** decide when to build `logic/build`; D2-9 victory and the full-match integration test.
 - **Blocked:** `logic/build` waits for the build-menu entities (stage G import).
 

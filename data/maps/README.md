@@ -1,5 +1,7 @@
 # data/maps/
 
+The current maps (`skirmish`, `faymonville`) are converted from v214 for reference only; new maps are made from scratch.
+
 One folder per map: `data/maps/<id>/map.json` (schema `data/schema/map.schema.json`, design `docs/map-design.md`).
 `npm run build:data` checks and compiles every map into `data/generated/maps/<id>.json`; the game reads only the compiled map.
 

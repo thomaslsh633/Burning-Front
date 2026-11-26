@@ -26,6 +26,7 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Flow: lobby → setup → (briefing) → play → turn curtain (pass & play) or flash banner (skirmish) → AAR; autosave, also on leaving the app; move undo (v202).
 - Two players on one screen, no AI (v202).
 - Maps: Skirmish 1v1 22×14 (every tier building pre-built; modes capture, annihilation); Faymonville 48×48 at 0.9 scale (capture) (v162, v168, v169, v202).
+  The converted v214 maps (`data/maps/skirmish`, `faymonville`) are reference only; new maps are made from scratch (2026-11-26).
 - Capture mode: the opponent's Victory-Meter tickets reach 0 (default 350). No turn limit, no HQ-kill or resource win (v59).
 - Annihilation mode (Skirmish only): win when every enemy unit is gone (passengers included) AND the enemy cannot deploy a new one
   (no working production building, or not enough resources for its cheapest unit); optional round cap (v202).
@@ -173,7 +174,10 @@ Confirmed 2026-11-25 (rewrite):
   Every unit coh3stats.com lists with an English name is in the roster too (e.g. Assault Grenadiers, Guastatori, Folgore,
   Goliath, Panzer IV for Afrikakorps); squad price, population and build time come from coh3stats where it has the unit.
 - No battlegroup call-ins (2026-11-26): units no CoH3 production building makes (battlegroup call-ins, restored v214 units)
-  join a building's production, locked behind research until a research system exists (`data/rules/production.json` `research`).
+  join the most similar production building and are produced there directly; only high-tier units (heroes, heavy armour)
+  and pricier variants of a squad the faction already produces need research, done in that (tier) building.
+  Non-tank support vehicles (trucks, ambulances, medical and recovery vehicles) are produced in the faction's Tier 2 building.
+  Research itself is not built yet (`data/rules/production.json` `research` lists).
 - Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
   at most one of each per side (`data/rules/roster.json` heroes).
 - Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,

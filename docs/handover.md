@@ -111,13 +111,13 @@ D2 readiness fixes 1–7:
 - **D2-8 follow-ups (decided 2026-11-26, done):** capture is per squad (1 point each); HQ 60 MP / 5 fuel / 10 munitions,
   manpower points 70 (a map point may override its yield); production generated from CoH3 spawner data
   (`tools/coh3/production.js`, map type → building in `data/rules/production.json` `types`); population cap 300.
-- **Not confirmed yet:**
-  - non-production units are placed in `research` lists by similarity (trucks and medics may land in tank buildings);
-    move them with `place` in `data/rules/production.json`. Research itself is not built, so they cannot be produced yet;
-  - map slot mapping, e.g. German `support_center` → Support Armory (Pak 40, StuG), `motor_pool` → Mechanized Kompanie;
-    British factions have no `support_center`; v214 doctrine buildings (`doc_*`, `air_coy`) produce nothing;
-  - the skirmish map's red side has no support_center, so the Pak 40 cannot be produced there;
-  - produced units face east whatever their side.
+- **Production (decided 2026-11-26, done):** non-production units are produced directly in the most similar building;
+  research only for heroes, heavy armour and pricier variants (7 buildings have research lists); non-tank support vehicles
+  in the Tier 2 building (`tier2` in `data/rules/production.json`); `place` / `research` overrides by hand. The research
+  command itself (cost, turns) is not built: it needs numbers.
+- The converted v214 maps are reference only; new maps will be made from scratch.
+- **Not confirmed yet:** map-type mapping (German `support_center` → Support Armory, `motor_pool` → Mechanized Kompanie;
+  British factions have no `support_center`; v214 doctrine buildings produce nothing); produced units face east.
 - **Decided 2026-11-26 and done:** vehicles are never abandoned or captured (ABANDONED state removed); crewless guns are
   ownerless targets any side may destroy (CoH3); reloading units do not counter fire (`timers.reload`).
 - **Not built:** dropped weapon pickups (decided: upgrade / slot weapons only), `Captured` vs `Recrewed` (the previous
