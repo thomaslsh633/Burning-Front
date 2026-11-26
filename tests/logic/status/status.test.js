@@ -29,10 +29,9 @@ test('suppression adds up to the cap and moves the morale state; decay is faster
   assert.equal(b.state.units.u1.fsm.morale, 'PINNED');
   assertOwnsOnly('status', state, b.state);
   assert.equal(status.decaySuppression(b.state, 'u1', data).state.units.u1.suppression, 65);
-  const cover = rifles();
-  const inCrater = { ...status.applySuppression(cover.state, 'u1', 100, data).state };
-  inCrater.map = { ...inCrater.map, terrain: { '5,5': { object: 'crater' } } };
-  assert.equal(status.decaySuppression(inCrater, 'u1', data).state.units.u1.suppression, 50);
+  const cover = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }], { terrain: { '5,5': { object: 'crater' } } });
+  const inCrater = status.applySuppression(cover.state, 'u1', 100, cover.data).state;
+  assert.equal(status.decaySuppression(inCrater, 'u1', cover.data).state.units.u1.suppression, 50);
 });
 
 test('pinned units cannot move; retreat is still allowed; retreat moves ×1.6 toward the rally point and ends the turn', () => {

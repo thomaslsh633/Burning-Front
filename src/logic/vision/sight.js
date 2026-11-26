@@ -1,10 +1,10 @@
 // Sight lines, sight range and what a side sees (v214 v144 rules; tuning in data/balance/vision.json).
 // Heights: a hex's elevation × elevation_height, plus object / edge heights from data/rules/terrain.json.
 import { key, line, distance, disk, inside, equals } from '../hex/index.js';
-import { hexTerrain, edgeBetween } from '../movement/index.js';
+import { hexAt, edgeAt, elevation } from '../terrain/index.js';
 import { allUnits } from '../state/index.js';
 
-const elevOf = (state, h) => state.map.terrain[key(h)]?.elev ?? 0;
+const elevOf = (state, h, data) => elevation(state, data, h);
 
 /**
  * Straight line a → b for a viewer whose eye is `eye` above its ground. The two end hexes never block; the edge the
@@ -14,19 +14,19 @@ export function sightLine(state, data, a, b, eye) {
   const v = data.balance.vision, E = v.elevation_height;
   const path = line(a, b), n = path.length - 1;
   if (n <= 1) return { block: false, obscured: false };
-  const z0 = elevOf(state, a) * E + eye, z1 = elevOf(state, b) * E + v.target_height;
+  const z0 = elevOf(state, a, data) * E + eye, z1 = elevOf(state, b, data) * E + v.target_height;
   let obscured = false;
   for (let i = 1; i < n; i++) {
-    const h = path[i], z = z0 + ((z1 - z0) * i) / n, g = elevOf(state, h) * E;
+    const h = path[i], z = z0 + ((z1 - z0) * i) / n, g = elevOf(state, h, data) * E;
     if (i >= 2) {
-      const edge = edgeBetween(state, data, path[i - 1], h);
+      const edge = edgeAt(state, data, path[i - 1], h)?.def;
       if (edge && edge.sight !== 'none') {
-        const ze = z0 + ((z1 - z0) * (i - 0.5)) / n, ge = Math.max(elevOf(state, h), elevOf(state, path[i - 1])) * E;
+        const ze = z0 + ((z1 - z0) * (i - 0.5)) / n, ge = Math.max(elevOf(state, h, data), elevOf(state, path[i - 1], data)) * E;
         if (ge + edge.height > ze) { if (edge.sight === 'block') return { block: true, obscured }; obscured = true; }
       }
     }
     if (g > z) return { block: true, obscured };
-    const obj = hexTerrain(state, data, h).object;
+    const obj = hexAt(state, data, h).feature;
     if (!obj || obj.sight === 'none' || g + obj.height <= z || (i === 1 && obj.height <= v.ignore_low_objects_next_to_viewer)) continue;
     if (obj.sight === 'block') return { block: true, obscured };
     obscured = true;
@@ -39,7 +39,7 @@ export const eyeHeight = (unit, data) => data.balance.vision.eye_height[unit.kin
 /** Hexes a unit sees: best member sight + its hex's elevation, minus the morale penalty. */
 export function sightRange(unit, state, data) {
   const base = Math.max(0, ...unit.members.map(m => data.units.ebps[m.ebps]?.sight?.hex ?? 0));
-  return Math.max(1, base + elevOf(state, unit.pos) - (data.balance.vision.sight_penalty[unit.fsm.morale] ?? 0));
+  return Math.max(1, base + elevOf(state, unit.pos, data) - (data.balance.vision.sight_penalty[unit.fsm.morale] ?? 0));
 }
 
 export function hasLineOfSight(state, data, unit, h) {
@@ -66,8 +66,9 @@ export function visibleHexes(state, data, team) {
  */
 export function detectionRange(state, data, unit) {
   const v = data.balance.vision, ranges = [];
-  const obj = state.map.terrain[key(unit.pos)]?.object;
-  if (obj && v.terrain_concealment[obj]) ranges.push(v.terrain_concealment[obj]);
+  const t = hexAt(state, data, unit.pos);
+  if (t.featureKind === 'object' && v.terrain_concealment[t.featureId]) ranges.push(v.terrain_concealment[t.featureId]);
+  if (unit.fsm.location === 'GARRISONED') ranges.push(v.garrison_concealment_hex);
   if (unit.fsm.visibility === 'CONCEALED') {
     const stealth = unit.members.map(m => data.units.ebps[m.ebps]?.stealth?.detected_hex).find(x => x != null);
     ranges.push(stealth ?? v.emplaced_concealment_hex);

@@ -52,6 +52,10 @@
     "revealed_after_firing_turns": {
       "type": "integer",
       "minimum": 0
+    },
+    "garrison_concealment_hex": {
+      "type": "integer",
+      "minimum": 0
     }
   },
   "additionalProperties": false,
@@ -64,6 +68,7 @@
     "sight_penalty",
     "terrain_concealment",
     "emplaced_concealment_hex",
-    "revealed_after_firing_turns"
+    "revealed_after_firing_turns",
+    "garrison_concealment_hex"
   ]
 }

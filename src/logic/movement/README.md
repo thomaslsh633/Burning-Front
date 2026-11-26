@@ -10,7 +10,7 @@
 
 ## Public API (exported from `index.js`)
 - `moveClass`, `movePoints`, `reachable`, `pathTo`, `turnCost`, `validateMove` / `applyMove(…, onStep)`, `validateTurn` / `applyTurn` — done
-- `hexTerrain`, `edgeBetween`, `stepCost` (data/rules/terrain.json) — done
+- `stepCost` (reads the map through `logic/terrain`); vehicles crush crushable lines as they cross them — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

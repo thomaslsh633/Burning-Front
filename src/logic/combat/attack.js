@@ -3,7 +3,7 @@
 // action budget belong to status, lifecycle, vision and turn; resolveAttack returns them for the route to apply.
 import { distance, disk, inside } from '../hex/index.js';
 import { unitAt, putUnit, isOnMap } from '../state/index.js';
-import { canSee, coverAgainst, sightLine, eyeHeight } from '../vision/index.js';
+import { canSee, coverAgainst, sightLine, eyeHeight, entryHex } from '../vision/index.js';
 import { ev } from '../events/index.js';
 import { rankMods } from '../status/index.js';
 import { band, armorFace, penChance, splashFactor, targetMods, hitChance, wholeDamage } from './formulas.js';
@@ -113,18 +113,21 @@ function splash(unit, amount, count, skip, rng, events) {
 /**
  * Resolve one attack: every firing weapon in reach fires its volley; each shot rolls hit, then penetration; a hit lands on
  * one member and never carries over; AoE splashes squads. Indirect shells may land off target (spread).
- * → { state, events, suppression: { unitId: points }, criticals: [{ unit, critical }], ammo }
+ * Map features take the rest (logic/terrain applies them): each indirect shell hits whatever stands on its hex, and direct
+ * misses fly into the line on the target's covering edge.
+ * → { state, events, suppression: { unitId: points }, criticals: [{ unit, critical }], featureHits: [{ hex | edge, amount, pen, weapon }] }
  */
 export function resolveAttack(state, data, attackerId, targetId, rng) {
   const c = data.balance.combat;
   let s = state;
-  const att = s.units[attackerId], events = [], suppression = {}, criticals = [];
+  const att = s.units[attackerId], events = [], suppression = {}, criticals = [], featureHits = [];
   let perShotAmmo = 0;
   for (const w of firingWeapons(att, data)) {
     const tgt0 = s.units[targetId];
     if (weaponReach(s, data, att, w, tgt0.pos)) continue;
     const m = volleyModel(s, data, att, w, tgt0);
-    let hits = 0, pens = 0;
+    let hits = 0, pens = 0, misses = 0;
+    const pen = w.weapon.penetration[m.band];
     const shotEvents = [];
     perShotAmmo = Math.max(perShotAmmo, (w.weapon.ammo?.per_shot ?? 1) * (m.indirect ? m.shots : 1));
     for (let shot = 0; shot < m.shots; shot++) {
@@ -134,6 +137,7 @@ export function resolveAttack(state, data, attackerId, targetId, rng) {
         const spots = disk(tgt0.pos, w.weapon.indirect.spread_hex).filter(h => inside(h, s.map.cols, s.map.rows));
         aimed = spots[rng.int(spots.length)];
       }
+      if (m.indirect) featureHits.push({ hex: { ...aimed }, amount: m.damage, pen, weapon: w.weapon });
       const victim = m.indirect ? unitAt(s, aimed) : s.units[targetId];
       if (!victim || victim.fsm.life !== 'ACTIVE') continue;
       let v = victim;
@@ -157,16 +161,50 @@ export function resolveAttack(state, data, attackerId, targetId, rng) {
           if (h.deflect > 0) v = damageMember(v, i, h.deflect, shotEvents);
         }
         if (multi && sf > 0) v = splash(v, m.damage * sf, (w.weapon.aoe.max_members ?? 1) - 1, i, rng, shotEvents);
-      } else if (multi && sf > 0) {
-        v = splash(v, m.damage * sf * c.aoe.miss_splash, w.weapon.aoe.max_members ?? 1, -1, rng, shotEvents);
+      } else {
+        misses++;
+        if (multi && sf > 0) v = splash(v, m.damage * sf * c.aoe.miss_splash, w.weapon.aoe.max_members ?? 1, -1, rng, shotEvents);
       }
       s = putUnit(s, v);
     }
+    if (!m.indirect && misses && distance(att.pos, tgt0.pos) > 1) featureHits.push({ edge: [entryHex(att.pos, tgt0.pos), { ...tgt0.pos }], amount: misses * m.damage, pen, weapon: w.weapon });
     events.push(ev('Fired', { unit: attackerId, target: targetId, weapon: w.id, band: m.band, shots: m.shots, hits, penetrations: pens }), ...shotEvents);
   }
   const a = s.units[attackerId], spent = Math.min(a.ammo, perShotAmmo);
   s = putUnit(s, { ...a, ammo: a.ammo - spent });
   events.push(ev('AmmoSpent', { unit: attackerId, amount: spent, left: a.ammo - spent }));
   for (const id of Object.keys(suppression)) suppression[id] = Math.round(suppression[id]);
-  return { state: s, events, suppression, criticals };
+  return { state: s, events, suppression, criticals, featureHits };
+}
+
+/**
+ * Fire at a map feature: a building, wreck or hex object on `hex`, or the line on the edge between `hex` and `from`
+ * (attack ground). Weapons that cannot hurt it still fire (the terrain decides). → reason or null
+ */
+export function canAttackFeature(state, data, attackerId, target) {
+  const att = state.units[attackerId];
+  if (att.ammo <= 0) return 'out_of_ammo';
+  const ws = firingWeapons(att, data).filter(w => (w.weapon.traits || []).includes('attack_ground'));
+  if (!ws.length) return 'cannot_attack_ground';
+  const reasons = ws.map(w => weaponReach(state, data, att, w, target.hex));
+  return reasons.some(r => r === null) ? null : reasons[0];
+}
+
+/** Shots at a feature: each hit (accuracy of the band) adds its damage. → { state, events, featureHits } */
+export function resolveFeatureAttack(state, data, attackerId, target, rng) {
+  const att = state.units[attackerId], events = [], featureHits = [];
+  let spent = 0;
+  for (const w of firingWeapons(att, data)) {
+    if (!(w.weapon.traits || []).includes('attack_ground') || weaponReach(state, data, att, w, target.hex)) continue;
+    const a = w.weapon.attack, b = band(distance(att.pos, target.hex), a.range_hex.max), shots = a.shots_per_turn[b];
+    let hits = 0;
+    for (let i = 0; i < shots; i++) if (rng.next() < Math.min(1, a.accuracy[b] * (a.accuracy_scale?.[b] ?? 1) * data.balance.combat.feature_target_size)) hits++;
+    spent = Math.max(spent, (w.weapon.ammo?.per_shot ?? 1) * (a.fire_mode === 'indirect' ? shots : 1));
+    const hit = { amount: hits * a.damage_per_shot[b], pen: w.weapon.penetration[b], weapon: w.weapon };
+    featureHits.push(target.from ? { ...hit, edge: [target.from, target.hex] } : { ...hit, hex: target.hex });
+    events.push(ev('Fired', { unit: attackerId, target: null, at: target.hex, weapon: w.id, band: b, shots, hits, penetrations: hits }));
+  }
+  const left = Math.max(0, att.ammo - spent);
+  events.push(ev('AmmoSpent', { unit: attackerId, amount: att.ammo - left, left }));
+  return { state: putUnit(state, { ...att, ammo: left }), events, featureHits };
 }

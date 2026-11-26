@@ -1,13 +1,36 @@
 {
   "about": "Combat tuning (SPEC §4, §5, §10). Weapon numbers come from the weapon data; these are the rules around them.",
   "lost_men_received_accuracy": 0.3,
-  "attacker_morale_accuracy": { "SUPPRESSED": 0.5, "PINNED": 0.25 },
+  "attacker_morale_accuracy": {
+    "SUPPRESSED": 0.5,
+    "PINNED": 0.25
+  },
   "retreating_received_accuracy": 0.5,
-  "emplaced_received": { "damage": 0.9, "suppression": 0.8 },
-  "armor_arcs_deg": { "front": 60, "side": 120 },
-  "aoe": { "squad_spread_m": 2.5, "miss_splash": 0.5 },
+  "emplaced_received": {
+    "damage": 0.9,
+    "suppression": 0.8
+  },
+  "armor_arcs_deg": {
+    "front": 60,
+    "side": 120
+  },
+  "aoe": {
+    "squad_spread_m": 2.5,
+    "miss_splash": 0.5
+  },
   "suppression_points": 100,
-  "criticals": { "engine_damaged": 0.06, "immobilised": 0.02, "main_gun_damaged": 0.03, "crew_shocked": 0.05 },
-  "no_fire_rules": ["per_use", "ability"],
-  "no_fire_categories": ["smoke"]
+  "criticals": {
+    "engine_damaged": 0.06,
+    "immobilised": 0.02,
+    "main_gun_damaged": 0.03,
+    "crew_shocked": 0.05
+  },
+  "no_fire_rules": [
+    "per_use",
+    "ability"
+  ],
+  "no_fire_categories": [
+    "smoke"
+  ],
+  "feature_target_size": 4
 }

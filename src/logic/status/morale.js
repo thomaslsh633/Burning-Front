@@ -22,7 +22,7 @@ export const MORALE = defineMachine('morale', 'NORMAL', {
       SuppressionChanged: (u, ctx) => (level(u, ctx) === 'PINNED' ? null : level(u, ctx) ?? 'NORMAL') },
   },
   RETREATING: {
-    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, 'retreating'])),
+    denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, 'retreating'])),
     on: { Arrived: 'NORMAL' },
   },
 });

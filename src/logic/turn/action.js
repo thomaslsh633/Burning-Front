@@ -13,7 +13,7 @@ export const ACTION = defineMachine('action', 'EXHAUSTED', {
   MOVING: { allows: [] },      // only inside a Move command (events), never stored between commands
   ATTACKING: { allows: [] },   // only inside an Attack command
   OVERWATCH: { denies: { Move: 'on_overwatch', Turn: 'on_overwatch' }, allows: [] },
-  EXHAUSTED: { allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew']
+  EXHAUSTED: { allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew']
     .map(c => [c, 'no_actions_left'])) },
 });
 

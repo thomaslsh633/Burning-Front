@@ -36,16 +36,16 @@ test('terrain costs: infantry 1 on plains, vehicles 2 off road, 1 on road', () =
 
 test('impassable terrain and edges', () => {
   const { state, data } = testMatch([tank(H(2, 2))], {
-    terrain: { '3,2': { object: 'building' }, '2,3': { ground: 'deep_water' } },
+    structures: [{ id: 'h1', kind: 'house', hexes: ['3,2'] }], terrain: { '2,3': { ground: 'deep_water' } },
     edges: { [edgeKey(H(2, 2), 3)]: 'stone_wall', [edgeKey(H(2, 2), 4)]: 'hedge' } });
   const reach = mv.reachable(state, data, 'u1');
-  assert.equal(reach.has('3,2'), false, 'vehicles cannot enter buildings');
+  assert.equal(reach.has('3,2'), false, 'nobody walks into a building (garrison is a command)');
   assert.equal(reach.has('2,3'), false, 'deep water');
   assert.equal(reach.get('1,2').cost, 4, 'stone wall: the tank goes round it (1,3), not over it');
   assert.equal(reach.get('1,2').prev, '1,3');
   assert.equal(reach.get('1,1').cost, 3, 'hedge adds 1 to a plains step');
-  const inf = testMatch([rifle(H(2, 2))], { terrain: { '3,2': { object: 'building' } }, edges: { [edgeKey(H(2, 2), 3)]: 'stone_wall' } });
-  assert.equal(mv.reachable(inf.state, inf.data, 'u1').get('3,2').cost, 1, 'infantry enters buildings');
+  const inf = testMatch([rifle(H(2, 2))], { terrain: { '3,2': { object: 'rubble' } }, edges: { [edgeKey(H(2, 2), 3)]: 'stone_wall' } });
+  assert.equal(mv.reachable(inf.state, inf.data, 'u1').get('3,2').cost, 1, 'infantry crosses rubble');
   assert.equal(mv.reachable(inf.state, inf.data, 'u1').get('1,2').cost, 2, 'infantry climbs the wall');
 });
 

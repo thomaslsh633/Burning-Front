@@ -10,6 +10,7 @@ import * as combat from '../combat/index.js';
 import * as status from '../status/index.js';
 import * as crew from '../crew/index.js';
 import * as lifecycle from '../lifecycle/index.js';
+import * as terrain from '../terrain/index.js';
 import { distance } from '../hex/index.js';
 
 /** Unit axes in hierarchy order: lifecycle first (docs/unit-state.md §3). */
@@ -22,6 +23,15 @@ function chain(state, steps) {
   for (const step of steps) { const r = step(s); s = r.state; events.push(...r.events); }
   return { state: s, events };
 }
+
+/** Feature hits from combat → terrain damage; a collapsing building kills its garrison (lifecycle). */
+const featureSteps = (hits, d) => hits.map(h => x => {
+  if (h.edge) return terrain.damageEdge(x, d, h.edge[0], h.edge[1], h);
+  const r = terrain.damageHex(x, d, h.hex, h);
+  if (!r.collapsed) return r;
+  const k = lifecycle.killGarrison(r.state, d, r.garrison);
+  return { state: k.state, events: [...r.events, ...k.events] };
+});
 
 const moveCost = (s, c, d) => movement.reachable(s, d, c.unit, { reverse: !!c.reverse }).get(`${c.to.c},${c.to.r}`)?.cost ?? 0;
 const hpOf = u => (u ? u.members.reduce((a, m) => a + m.hp, 0) : 0);
@@ -59,11 +69,21 @@ export const ROUTES = {
       const out = chain(r.state, [
         ...Object.entries(r.suppression).map(([id, pts]) => x => status.applySuppression(x, id, pts, d)),
         x => lifecycle.applyCriticals(x, r.criticals),
+        ...featureSteps(r.featureHits, d),
         x => status.gainXp(x, c.unit, enemyLoss, d),
-        ...hit.map(id => x => lifecycle.checkDeaths(x, id, d)),
+        ...hit.map(id => x => (x.units[id] ? lifecycle.checkDeaths(x, id, d) : { state: x, events: [] })),
         x => vision.revealOnFire(x, c.unit, d),
         x => turn.spend(x, c.unit, { action: 1, fired: true }),
       ]);
+      return { state: out.state, events: [...r.events, ...out.events] };
+    },
+  },
+  AttackFeature: {
+    unit: true,
+    validate: (s, c, d) => combat.canAttackFeature(s, d, c.unit, c.target) ?? turn.budgetCheck(s.units[c.unit], 'Attack'),
+    apply(s, c, d, rng) {
+      const r = combat.resolveFeatureAttack(s, d, c.unit, c.target, rng);
+      const out = chain(r.state, [...featureSteps(r.featureHits, d), x => vision.revealOnFire(x, c.unit, d), x => turn.spend(x, c.unit, { action: 1, fired: true })]);
       return { state: out.state, events: [...r.events, ...out.events] };
     },
   },

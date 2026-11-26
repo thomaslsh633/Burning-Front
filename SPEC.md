@@ -198,9 +198,11 @@ Confirmed 2026-11-25 (rewrite):
   uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
   The move is a pool of move points: Move and hull Turn spend from it, in as many steps as it lasts (D2).
 - Terrain (`data/rules/terrain.json`, v214 values): a hex has a ground (cost per move class: infantry / vehicle) and at most
-  one object (crater, trench, bush, dune, rubble, three forest densities, rock, building) whose cost replaces the ground's;
-  an edge object (hedge, fence, stone wall, sandbag row, wire, low wall, balustrade) adds a crossing cost; null = impassable.
-  Units pass through friendly units but never stop on them; enemies block; infantry pass wrecks (D2).
+  one object (crater, trench, bush, dune, rubble, debris, three forest densities, rock, tank trap) whose cost replaces the
+  ground's; a line on a hex edge (hedge, fence, stone wall, low wall, balustrade, sandbag row, wire) adds a crossing cost;
+  null = impassable. Buildings are structures with a footprint: nobody walks in (garrisoning is a command). Wrecks: infantry
+  cross them, vehicles cannot. Units pass through friendly units but never stop on them; enemies block (D2).
+  Shots that miss fly on into the line on the target's covering edge; shells damage what stands on the hex they land on.
 - Overwatch is for machine-gun teams only (HMG team weapons, e.g. M1919 / MG42 / Vickers teams). An emplaced MG team that
   holds (does not fire in its turn) fires once in the enemy turn at the first enemy that moves into its arc, range and sight.
   Infantry with LMGs, vehicles with MGs and every other weapon never overwatch; this replaces crew watch fire (§5).
@@ -214,6 +216,14 @@ Confirmed 2026-11-25 (rewrite):
 - Vehicle criticals: a penetrating hit can roll engine damaged (move −50 %), immobilised, main gun damaged or crew shocked
   (no action next turn); chances from data.
 - Destruction: tanks crush hedges and fences; HE damages buildings into ruins (cover changes); heavy shells leave craters (light cover).
+- Map features (2026-11-26, `docs/map-design.md` §5): garrisonable buildings have HP by size (hundreds to thousands, HP bar on
+  hover / select); when one collapses, every garrisoned infantry man dies and garrisoned team weapons are destroyed. Natural
+  cover (fences, hedges, walls, debris) has HP and is destructible but shows no HP bar. Defensive structures (sandbags, wire,
+  tank traps, bunkers) take HP and armour per faction from CoH3; they fall to explosives, fire, AT weapons and vehicle crush
+  (tank traps cannot be crushed). Destroyed vehicles and emplacements leave wreck objects: heavy cover (green) for infantry.
+  HQ buildings stay indestructible (§2).
+- Walls, hedges, fences, sandbags and wire are drawn as free lines; a line occupies the hex edge between two hexes when it
+  crosses the segment joining their centres (`docs/map-design.md` §2 B).
 - Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
 - Attack resolution (D2, `data/balance/combat.json`): every living member fires its main / secondary weapons (carried team
   weapons fire the crew weapon once; towed guns fire the gun; smoke launchers, grenades and ability weapons do not).

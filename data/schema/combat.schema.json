@@ -109,6 +109,10 @@
         "type": "string",
         "vocab": "weapon_category"
       }
+    },
+    "feature_target_size": {
+      "type": "number",
+      "minimum": 0
     }
   },
   "additionalProperties": false,
@@ -122,6 +126,7 @@
     "suppression_points",
     "criticals",
     "no_fire_rules",
-    "no_fire_categories"
+    "no_fire_categories",
+    "feature_target_size"
   ]
 }

@@ -1,6 +1,7 @@
 # Map design: layers, linear obstacles, new maps
 
-Status: **proposal** (2026-11-26), waiting for a decision on §2. Nothing here is implemented yet.
+Status: **decided** (2026-11-26): candidate **B** for linear obstacles, `logic/terrain` and the layered map file; destruction
+rules in §5. Being implemented.
 Rules it touches: SPEC §2 (maps), §3 (points, sectors), §5 (emplacements), §10 (edge cover, destruction).
 
 ## 1. Audit: is the map split into tiles and objects?
@@ -186,7 +187,30 @@ Movement keeps costs and paths, vision keeps sight lines and cover per shot; bot
 4. Theatre presets: North Africa (desert, dunes, wadis as elevation, minefields, stone sangars as lines) and Italy
    (terraces as elevation steps, stone walls and hedges as lines, villages as structures).
 
-## 4. Decisions needed
+## 4. Decisions (2026-11-26)
+
+1. Linear obstacles: **B**, polylines compiled to hex edges, plus the visibility measures of A.
+2. `src/logic/terrain/` owns map lookups, the line-to-edge geometry and the change overlay.
+3. Map files: text-row layers plus lists, compiled by `npm run build:data`.
+
+## 5. Destruction and wrecks (decided 2026-11-26)
+
+| Feature | Examples | HP | HP bar | Destroyed by | When destroyed |
+| --- | --- | --- | --- | --- | --- |
+| Garrisonable building | houses, church, farm | hundreds to thousands, by size (`data/rules/terrain.json` structures) | on hover / select | explosives, fire, AT weapons | **collapses**: every garrisoned infantry man dies, garrisoned team weapons are destroyed; the footprint becomes rubble |
+| Natural cover | fences, hedges, walls, debris | per kind | none by default | explosives, fire, AT weapons; fences and hedges also by vehicle crush | the segment / hex is gone (rubble walls leave light cover) |
+| Defensive structure | sandbags, wire, tank traps, bunkers | **per faction from CoH3** (sandbags 300 / armour 25, wire 150 / 20, tank traps 400 / 50) | on select | explosives, fire, AT weapons, vehicle crush (not tank traps) | gone; a bunker leaves a wreck |
+| Wreck | destroyed vehicles and emplacements | per kind | none | explosives, AT weapons | heavy cover (green shield) for infantry; blocks vehicles where the data says so |
+
+HQ buildings stay indestructible (crippled state, SPEC §2). "AT weapons" are the weapon categories `anti_tank_gun`, `tank_gun`
+and `infantry_anti_tank_weapon`; explosives and fire are the CoH3 damage types `explosive` and `flame`.
+A shot or shell damages a feature when it crosses the feature's edge (lines) or lands on its hex (hex cover, buildings);
+a vehicle crushes a crushable line segment it crosses.
+
+Changes from the earlier documents: a building's garrison now dies when the building collapses (was: leaves damaged,
+`docs/unit-state.md` §5.3), and wrecks are map objects in the change overlay instead of units in a `WRECKED` state.
+
+## 6. Earlier decision list
 
 1. Linear obstacles: **B** (recommended), A, C or D.
 2. New system folder `src/logic/terrain/` for map lookups and the change overlay.

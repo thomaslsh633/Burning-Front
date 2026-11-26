@@ -4,6 +4,7 @@ import { key, fromKey, equals, neighbours, direction, turnSteps, angle, distance
 import { unitAt, putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { stepCost } from './terrain.js';
+import { crushEdge } from '../terrain/index.js';
 
 const membersWithMove = (unit, data) => unit.members.map(m => data.units.ebps[m.ebps]?.move).filter(mv => mv && mv.hex > 0);
 
@@ -37,8 +38,7 @@ function occupancy(state, unit, h, data) {
   const other = unitAt(state, h);
   if (!other || other.id === unit.id) return { pass: true, stop: true };
   const friendly = other.team === unit.team && other.fsm.life === 'ACTIVE';
-  const wreckForInfantry = other.fsm.life === 'WRECKED' && moveClass(unit, data) === 'infantry';
-  return { pass: (friendly && data.balance.movement.friendly_pass_through) || wreckForInfantry, stop: false };
+  return { pass: friendly && data.balance.movement.friendly_pass_through, stop: false };
 }
 
 /**
@@ -117,6 +117,8 @@ export function applyMove(state, cmd, data, onStep, points) {
     s = putUnit(s, { ...withFacing(u, facing), pos: { ...h } });
     cost = reach.get(key(h)).cost;
     events.push(ev('Moved', { unit: cmd.unit, from, to: { ...h }, facing, reverse: !!cmd.reverse }));
+    const crush = crushEdge(s, data, from, h, moveClass(u, data));   // vehicles break fences, hedges, wire, sandbags
+    s = crush.state; events.push(...crush.events);
     if (onStep) {
       const r = onStep(s, cmd.unit);
       s = r.state; events.push(...r.events);

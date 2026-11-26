@@ -135,7 +135,7 @@ from terrain and the edge the shot crosses (directional edge cover, SPEC §10). 
 | State | Meaning | Allows | Transitions |
 | --- | --- | --- | --- |
 | `ON_MAP` | on its hex | everything the other axes allow | Garrison → `GARRISONED`; Board → `LOADED` |
-| `GARRISONED` | inside a building (`container` = building id) | Attack from the building, Exit | building destroyed → `ON_MAP` with damage; Exit → `ON_MAP` |
+| `GARRISONED` | inside a building (`container` = building id) | Attack from the building, Exit | building collapses → infantry die, team weapons destroyed (2026-11-26); Exit → `ON_MAP` |
 | `LOADED` | inside a transport (`container` = vehicle id) | Dismount | transport destroyed → `ON_MAP` (casualties from data) |
 
 Stance and location exclude each other: a team weapon must be `MOBILE` to board; only MGs may garrison (SPEC §5).
@@ -161,7 +161,7 @@ Top level of the hierarchy: the other axes only run while `ACTIVE`.
 | `ACTIVE` | all | normal; may carry **critical conditions** (below) | last crew member dies (team weapon) → `DECREWED`; crew bails out / manual abandon (vehicle) → `ABANDONED`; HP 0 → `WRECKED` (vehicles, guns, structures) or removed (infantry) |
 | `DECREWED` | team weapons | gun left on its hex without a crew, owner `null`; keeps HP, ammo, facing, stance | an infantry squad recrews → `ACTIVE` under the squad's side; destroyed → `WRECKED` |
 | `ABANDONED` | vehicles | vehicle without crew, owner `null`; keeps HP, ammo, criticals | recrewed → `ACTIVE`; destroyed → `WRECKED` |
-| `WRECKED` | vehicles, guns, structures | terrain object: cover and obstacle | cleared by engineers → removed |
+| `WRECKED` | vehicles, guns, structures | the unit is removed and a **wreck object** is placed on its hex in the map change overlay (`logic/terrain`): heavy cover for infantry, obstacle for vehicles | cleared by engineers → wreck removed |
 
 **Critical conditions** are a set (`criticals`), not exclusive states, because several can hold at once:
 `engine_damaged` (move ×0.5), `immobilised` (no move, can still turn the turret), `main_gun_damaged` (main weapon
@@ -193,7 +193,7 @@ per capturing faction, the squad blueprint it becomes, `min_capture_crew_size` (
 | Recrew / capture | an infantry squad, `IDLE` with its action left, not PINNED or RETREATING, on or next to the hex, with members between `min_capture_crew_size` and `recrew_max_squad_size`, spends its action. Own or enemy equipment alike: capturing is recrewing |
 | Result: team weapon | the squad becomes the crew (all its members); the gun turns `ACTIVE` under the squad's side as that faction's capture blueprint; stance `MOBILE` (must set up again); veterancy reset; ammo kept |
 | Result: vehicle | `min_capture_crew_size` members leave the squad into the vehicle as crew (`crew` record); the rest stay on the hex as the squad; the vehicle turns `ACTIVE` with its HP, ammo and criticals |
-| Wrecks | `WRECKED` vehicles become terrain: heavy cover (light for small vehicles), block vehicle movement, infantry may pass; engineers clear them (action, `clear_turns` from data); a recovery vehicle may tow them |
+| Wrecks | `WRECKED` vehicles become terrain: heavy cover (green) for infantry, as a wreck object in the map change overlay (2026-11-26), block vehicle movement, infantry may pass; engineers clear them (action, `clear_turns` from data); a recovery vehicle may tow them |
 | Denial | a side may destroy its own `DECREWED` gun or `ABANDONED` vehicle (attack or demolition) to keep it from the enemy |
 | Upkeep and population | captured equipment counts for its new owner from the next turn |
 | Later (optional) | dropped weapons (LMGs, launchers) picked up by squads, CoH3 `unequip_weapons_on_death` + `entity_inventory_ext` |

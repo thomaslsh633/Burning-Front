@@ -4,14 +4,14 @@ import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { exhaust } from '../turn/index.js';
+import { placeWreck } from '../terrain/index.js';
 
-const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, reason])) });
+const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Retreat'].map(c => [c, reason])) });
 
 export const LIFE = defineMachine('life', 'ACTIVE', {
   ACTIVE: {},
   DECREWED: NOTHING('decrewed'),
   ABANDONED: NOTHING('abandoned'),
-  WRECKED: NOTHING('wrecked'),
 });
 
 const alive = m => m.hp > 0;
@@ -23,10 +23,20 @@ function retire(state, unitId, to, extraEvents) {
   return { state: putUnit(x.state, t.unit), events: [...extraEvents, ...x.events, ...t.events] };
 }
 
+/** Remove a dead unit; vehicles, emplacements and guns leave a wreck object on their hex (logic/terrain, SPEC §10). */
+function remove(state, data, unitId, wreck) {
+  const u = state.units[unitId], { [unitId]: gone, ...units } = state.units;
+  let s = { ...state, units }, events = [ev('UnitDestroyed', { unit: unitId, team: u.team }), ev('UnitRemoved', { unit: unitId })];
+  if (wreck && u.fsm.location === 'ON_MAP') { const w = placeWreck(s, data, u.pos, wreck); s = w.state; events = [...events, ev('Wrecked', { unit: unitId }), ...w.events]; }
+  return { state: s, events };
+}
+
+const wreckKind = u => (u.kind === 'vehicle' ? 'vehicle' : u.kind === 'structure' || u.kind === 'team_weapon' ? 'emplacement' : null);
+
 /**
  * After damage: an infantry squad with no men is removed; a team weapon whose crew died while the gun stands is DECREWED;
- * a vehicle, structure or gun with no HP becomes a WRECK (terrain). A towed gun destroyed under a living crew leaves the
- * crew as the unit (it can no longer fire, but can retreat and recrew).
+ * a vehicle, structure or gun with no HP is removed and leaves a wreck. A towed gun destroyed under a living crew leaves
+ * the crew as the unit (it can no longer fire, but can retreat and recrew).
  */
 export function checkDeaths(state, unitId, data) {
   const u = state.units[unitId];
@@ -36,15 +46,23 @@ export function checkDeaths(state, unitId, data) {
   if (tw?.weapon_entity) {
     const gun = u.members.find(m => m.ebps === tw.weapon_entity), crew = u.members.filter(m => m.ebps === tw.crew_entity);
     if (gun && alive(gun) && !crew.some(alive)) return retire(state, unitId, 'DECREWED', [ev('CrewWiped', { unit: unitId, team: u.team })]);
-    if (!living.length) return retire(state, unitId, 'WRECKED', [ev('UnitDestroyed', { unit: unitId, team: u.team }), ev('Wrecked', { unit: unitId })]);
+    if (!living.length) return remove(state, data, unitId, wreckKind(u));
     return { state, events: [] };
   }
   if (living.length) return { state, events: [] };
-  if (u.kind === 'vehicle' || u.kind === 'structure') {
-    return retire(state, unitId, 'WRECKED', [ev('UnitDestroyed', { unit: unitId, team: u.team }), ev('Wrecked', { unit: unitId })]);
+  return remove(state, data, unitId, wreckKind(u));
+}
+
+/** A building collapsed: every unit inside dies — infantry men and team weapons alike, no wreck (SPEC §10). */
+export function killGarrison(state, data, unitIds) {
+  let s = state;
+  const events = [];
+  for (const id of unitIds) {
+    if (!s.units[id]) continue;
+    const r = remove(s, data, id, null);
+    s = r.state; events.push(...r.events);
   }
-  const { [unitId]: gone, ...units } = state.units;
-  return { state: { ...state, units }, events: [ev('UnitDestroyed', { unit: unitId, team: u.team }), ev('UnitRemoved', { unit: unitId })] };
+  return { state: s, events };
 }
 
 /** Criticals from combat (a set: each at most once). */

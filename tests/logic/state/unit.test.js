@@ -30,9 +30,11 @@ test('invariants catch inconsistent units', () => {
 });
 
 test('createMatch and selectors', () => {
-  const s = createMatch({ map: { cols: 10, rows: 8 }, order: ['blue', 'red'], rng: 99,
+  const s = createMatch({ map: { id: 'm' }, order: ['blue', 'red'], rng: 99,
     teams: { blue: { faction: 'american', resources: { manpower: 600 } }, red: { faction: 'german', resources: { manpower: 600 } } },
-    units: [{ team: 'blue', sbps: 'riflemen_us', pos: { c: 1, r: 1 } }, { team: 'red', sbps: 'grenadier_ger', pos: { c: 8, r: 6 } }] }, data);
+    units: [{ team: 'blue', sbps: 'riflemen_us', pos: { c: 1, r: 1 } }, { team: 'red', sbps: 'grenadier_ger', pos: { c: 8, r: 6 } }] },
+    { ...data, maps: { m: { cols: 10, rows: 8 } } });
+  assert.deepEqual(s.map, { id: 'm', cols: 10, rows: 8, changes: { hexes: {}, segments: {}, structures: {} } });
   assert.deepEqual(Object.keys(s.units), ['u1', 'u2']);
   assert.equal(unitAt(s, { c: 8, r: 6 }).sbps, 'grenadier_ger');
   assert.equal(unitAt(s, { c: 0, r: 0 }), undefined);
