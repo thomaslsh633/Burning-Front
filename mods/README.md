@@ -8,7 +8,8 @@ mods/
   load-order.json                 { "enabled": ["mod_a", "mod_b"] }   first loaded first; later mods win
   <id>/
     mod.json                      id (= folder name), name, version (1.2.3), data_format, load_after (optional)
-    units/<faction>/<kind>.json   weapon, ebps, sbps, upgrade, veterancy, fx — only the fields you change, or whole new records
+    units/<faction>/<unit>/<kind>.json  one folder per unit (squad id) or shared/: weapon, ebps, sbps, upgrade, veterancy,
+                                        fx — only the fields you change, or whole new records
     rules/vocab.json              { "lists": { "<existing list>": ["new_word"] } }
     i18n/<lang>.json              { "strings": { "unit.<id>.name": "…" } }  text for new records, changed text, or a new language
     README.md                     optional

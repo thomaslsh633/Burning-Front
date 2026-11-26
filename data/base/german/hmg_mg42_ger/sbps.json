@@ -1,0 +1,62 @@
+{
+ "team_weapons": {
+  "hmg_mg42_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/hmg_mg42_ger",
+   "kind": "team_weapon",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "crew_hmg_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 2,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "tier1",
+    "infanterie_kompanie",
+    "teamweapon_burst",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak",
+     "blocking_force_team_weapons_marking_fire_ger"
+    ]
+   },
+   "abilities": [
+    "white_phosphorus_rounds_hmg_vet_ger",
+    "reload_hmg42_ger",
+    "camouflage_in_cover_hmg_ger",
+    "blocking_force_marking_fire_team_weapon_dummy_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "hmg_mg42_ger"
+   },
+   "team_weapon": {
+    "weapon": "mg42_hmg_ger",
+    "crew_entity": "crew_hmg_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

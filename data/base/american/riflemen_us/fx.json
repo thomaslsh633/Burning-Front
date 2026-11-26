@@ -1,0 +1,90 @@
+{
+ "weapon": {
+  "thompson_riflemen_leader_us": {
+   "name": "weapon.thompson_riflemen_leader_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "garand_rifleman_us": {
+   "name": "weapon.garand_rifleman_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "bar_riflemen_us": {
+   "name": "weapon.bar_riflemen_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "m1941_lmg_devils_brigade_us": {
+   "name": "weapon.m1941_lmg_devils_brigade_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "m1919a6_old_guard_us": {
+   "name": "weapon.m1919a6_old_guard_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "lmg_m24_29_chatellerault_us": {
+   "name": "weapon.lmg_m24_29_chatellerault_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "rifleman_squad_leader_us": {
+   "name": "entity.rifleman_squad_leader_us.name",
+   "model": {
+    "id": "rifleman_squad_leader_us",
+    "anim_class": "infantry"
+   }
+  },
+  "rifleman_us": {
+   "name": "entity.rifleman_us.name",
+   "model": {
+    "id": "rifleman_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "riflemen_us": {
+   "name": "unit.riflemen_us.name",
+   "short_name": "unit.riflemen_us.short",
+   "desc": "unit.riflemen_us.desc",
+   "icon": "riflemen_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "bar_rifleman_squad_us": {
+   "name": "upgrade.bar_rifleman_squad_us.name",
+   "icon": "bar_rifleman_squad_us"
+  },
+  "m1941_lmg_rifleman_us": {
+   "name": "upgrade.m1941_lmg_rifleman_us.name",
+   "icon": "m1941_lmg_rifleman_us"
+  },
+  "m1919a6_rifleman_squad_us": {
+   "name": "upgrade.m1919a6_rifleman_squad_us.name",
+   "icon": "m1919a6_rifleman_squad_us"
+  },
+  "french_old_guard_lmg_m1919a6s_rifleman_us": {
+   "name": "upgrade.french_old_guard_lmg_m1919a6s_rifleman_us.name",
+   "icon": "french_old_guard_lmg_m1919a6s_rifleman_us"
+  },
+  "lmg_m24_29_chatellerault_riflemen_us": {
+   "name": "upgrade.lmg_m24_29_chatellerault_riflemen_us.name",
+   "icon": "lmg_m24_29_chatellerault_riflemen_us"
+  }
+ }
+}

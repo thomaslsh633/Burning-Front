@@ -45,3 +45,21 @@ test('removing a record that others still use breaks its links', () => {
   assert.ok(errors.some(e => e.includes('sbps riflemen_us members[].entity: no ebps record "rifleman_us"')));
   assert.ok(errors.some(e => e.includes('fx ebps/rifleman_us: no ebps record')));
 });
+
+test('overrides can sit in a unit folder; the base is split into unit folders and shared/', () => {
+  const root = tempRoot();
+  write(root, 'data/units/american/riflemen_us/weapon.json', { rifle: { garand_rifleman_us: { attack: { accuracy: { far: 0.4 } } } } });
+  const { out, errors } = buildData(root);
+  assert.deepEqual(errors, []);
+  assert.equal(garand(out).attack.accuracy.far, 0.4);
+});
+
+test('one id in two files of the same layer, or folders nested too deep, are errors', () => {
+  const root = tempRoot();
+  write(root, 'data/units/american/riflemen_us/weapon.json', { rifle: { garand_rifleman_us: { damage: 12 } } });
+  write(root, 'data/units/american/shared/weapon.json', { rifle: { garand_rifleman_us: { damage: 13 } } });
+  write(root, 'data/units/american/riflemen_us/extra/weapon.json', {});
+  const { errors } = buildData(root);
+  assert.ok(errors.includes('american/weapon units: id "garand_rifleman_us" is in riflemen_us/weapon.json and shared/weapon.json'), errors.join('\n'));
+  assert.ok(errors.some(e => e.startsWith('data/units/american/riflemen_us/extra: folders go one level deep')));
+});

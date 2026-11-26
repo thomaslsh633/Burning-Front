@@ -73,10 +73,10 @@ test('manifest problems stop the build', () => {
 
 test('unknown factions and files in override or mod folders are errors, not silently ignored', () => {
   const root = withMods([EXAMPLE]);
-  write(root, `mods/${EXAMPLE}/units/american/weapons.json`, {});
+  write(root, `mods/${EXAMPLE}/units/american/riflemen_us/weapons.json`, {});
   write(root, 'data/units/japanese/sbps.json', {});
   const { errors } = buildData(root);
-  assert.ok(errors.some(e => e.startsWith(`mod:${EXAMPLE} units/american/weapons.json: unknown file`)));
+  assert.ok(errors.some(e => e.startsWith(`mod:${EXAMPLE} units/american/riflemen_us/weapons.json: unknown file`)));
   assert.ok(errors.includes('data/units/japanese: no faction "japanese" in data/base'));
 });
 

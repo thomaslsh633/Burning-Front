@@ -25,8 +25,8 @@ no new features in it).
 - Unit behaviour comes from state machines: add or change a state handler in the owning system, never an if/else chain.
 - Unit numbers come from CoH3 (`data/source/coh3`); v214 is a gameplay reference, not a data baseline.
 - Numbers a designer tunes go in `data/balance/` or the data forms; player-visible text goes in `data/i18n/`.
-- Unit data: never edit `data/base/` (importer output); change a unit in `data/units/<faction>/` (only the changed
-  fields), then `npm run build:data`. Tools read balance and scale only through `tools/lib/config.js`.
+- Unit data: never edit `data/base/` (importer output); change a unit in `data/units/<faction>/<squad id>/` (only the changed
+  fields; records several units use go in `shared/`), then `npm run build:data`. Tools read balance and scale only through `tools/lib/config.js`.
 - `src/logic/` never names a unit id; each unit field has one owner (`src/logic/state/ownership.js`), and every
   system's apply test ends with `assertOwnsOnly` (`tests/helpers/ownership.js`).
 - Every logic function gets a Node test in `tests/` (mirrors `src/`).

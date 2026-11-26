@@ -1,0 +1,96 @@
+{
+ "heavy_machine_gun": {
+  "30cal_hmg_us": {
+   "coh3_ref": "weapon/american/small_arms/machine_gun/heavy_machine_gun/30cal_hmg_us",
+   "class": "hmg",
+   "fire_rule": "volley",
+   "damage": 5,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 3,
+    "mid": 2,
+    "far": 2
+   },
+   "traits": [
+    "emplace_required",
+    "emplace_faces_target",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.75,
+     "mid": 0.52,
+     "far": 0.4
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 58,
+     "mid": 41,
+     "far": 30
+    },
+    "damage_per_shot": {
+     "near": 5,
+     "mid": 5,
+     "far": 5
+    },
+    "arc_deg": 95,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.4,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.4,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.45,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.4
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "suppression": {
+    "amount": 0.015,
+    "nearby_mult": 1,
+    "nearby_radius_m": 15
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

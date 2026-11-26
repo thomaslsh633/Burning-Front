@@ -40,7 +40,7 @@ data/units/
   british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 "british_africa" in North Africa, "british" in Italy)
 ```
 
-Inside each file, records are grouped **one level** by category (`{ "<category>": { "<id>": record } }`, decision V in
+Each unit has its own folder (`<faction>/<squad id>/`, shared records in `shared/`). Inside each file, records are grouped **one level** by category (`{ "<category>": { "<id>": record } }`, decision V in
 `docs/data-labels.md`; CoH3's own tree has varying depth and stays in each record's `coh3_ref`). Categories:
 
 | File | Top level → sub level (kept) | Dropped |
@@ -234,8 +234,9 @@ illustrative; the importer computes it from CoH3; v214 differences are reported 
 data/source/coh3/<race>/{weapon,ebps,sbps}.json   (raw, untouched)
         │ tools/import-coh3 <race> <sbps id…>      picks a unit and follows sbps → ebps → weapon,
         ▼                                          converts distance / time, writes new records, reports diffs
-data/units/<faction>/{weapon,ebps,sbps,fx}.json    (hand-editable source of truth)
-        │ build: resolve parent, apply defaults, check schema + vocab + every link
+data/base/<faction>/<squad id | shared>/{weapon,ebps,sbps,upgrade,veterancy,fx}.json   (generated, never edited)
+        │ + data/units/<faction>/… (designer overrides) + mods/<id>/units/<faction>/… (load order)
+        │ build: merge by id, check schema + profiles + vocab + every link
         ▼
 data/generated/units.json                           (flat, what the game loads)
         │ oracle

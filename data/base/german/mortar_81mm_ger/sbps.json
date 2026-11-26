@@ -1,0 +1,63 @@
+{
+ "team_weapons": {
+  "mortar_81mm_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/mortar_81mm_ger",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "crew_mortar_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "tier1",
+    "infanterie_kompanie",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak",
+     "blocking_force_team_weapons_marking_fire_ger"
+    ]
+   },
+   "abilities": [
+    "barrage_81mm_mortar_ger",
+    "smoke_81mm_mortar_ger",
+    "flare_81mm_mortar_vet_ger",
+    "hold_fire",
+    "siegebreakers_siege_specialists_range_in_ger",
+    "blocking_force_marking_fire_team_weapon_dummy_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "mortar_81mm_ger"
+   },
+   "team_weapon": {
+    "weapon": "81mm_mortar_ger",
+    "crew_entity": "crew_mortar_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

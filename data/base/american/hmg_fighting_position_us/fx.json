@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "30cal_fighting_position_us": {
+   "name": "weapon.30cal_fighting_position_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "hmg_fighting_position_us": {
+   "name": "entity.hmg_fighting_position_us.name",
+   "model": {
+    "id": "hmg_fighting_position_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_fighting_position_us": {
+   "name": "unit.hmg_fighting_position_us.name",
+   "short_name": "unit.hmg_fighting_position_us.short",
+   "desc": "unit.hmg_fighting_position_us.desc",
+   "icon": "hmg_fighting_position_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

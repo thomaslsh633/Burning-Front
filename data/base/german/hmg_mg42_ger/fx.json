@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg42_hmg_ger": {
+   "name": "weapon.mg42_hmg_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "crew_hmg_ger": {
+   "name": "entity.crew_hmg_ger.name",
+   "model": {
+    "id": "crew_hmg_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_mg42_ger": {
+   "name": "unit.hmg_mg42_ger.name",
+   "short_name": "unit.hmg_mg42_ger.short",
+   "desc": "unit.hmg_mg42_ger.desc",
+   "icon": "hmg_mg42_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

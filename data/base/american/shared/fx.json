@@ -1,0 +1,10 @@
+{
+ "weapon": {
+  "carbine_crew_us": {
+   "name": "weapon.carbine_crew_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ }
+}

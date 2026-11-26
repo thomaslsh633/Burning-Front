@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { deepMerge, mergeKind } from '../../../src/services/data/index.js';
+import { deepMerge, mergeKind, combineFiles } from '../../../src/services/data/index.js';
 
 test('deepMerge: objects merge field by field, arrays are replaced, null deletes', () => {
   const base = { hp: 95, armor: { front: 1, side: 1, rear: 1 }, tags: ['a', 'b'], move: { hex: 4 } };
@@ -47,4 +47,16 @@ test('sections kind (fx): ids are unique per section only', () => {
 test('flat kind (veterancy)', () => {
   const r = mergeKind('flat', [L('base', { riflemen_us: { xp: [1, 2, 3] } }), L('units', { riflemen_us: { xp: [9, 9, 9] } })]);
   assert.deepEqual(r.data.riflemen_us.xp, [9, 9, 9]);
+});
+
+test('combineFiles joins the unit folders of one layer; an id may sit in only one file', () => {
+  const r = combineFiles('grouped', [
+    { name: 'riflemen_us/weapon.json', data: { rifle: { garand: { d: 1 } } } },
+    { name: 'shared/weapon.json', data: { rifle: { carbine: { d: 2 } }, smg: { thompson: { d: 3 } } } },
+  ]);
+  assert.deepEqual(r, { data: { rifle: { garand: { d: 1 }, carbine: { d: 2 } }, smg: { thompson: { d: 3 } } }, errors: [] });
+  const dup = combineFiles('grouped', [{ name: 'a/weapon.json', data: { rifle: { garand: {} } } }, { name: 'b/weapon.json', data: { smg: { garand: {} } } }]);
+  assert.deepEqual(dup.errors, ['id "garand" is in a/weapon.json and b/weapon.json']);
+  assert.deepEqual(combineFiles('sections', [{ name: 'a/fx.json', data: { weapon: { x: {} } } }, { name: 'b/fx.json', data: { ebps: { x: {} } } }]).errors, []);
+  assert.deepEqual(combineFiles('flat', [{ name: 'a/veterancy.json', data: { s1: {} } }, { name: 'b/veterancy.json', data: { s2: {} } }]).data, { s1: {}, s2: {} });
 });

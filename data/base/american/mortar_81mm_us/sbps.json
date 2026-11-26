@@ -1,0 +1,65 @@
+{
+ "team_weapons": {
+  "mortar_81mm_us": {
+   "coh3_ref": "sbps/races/american/team_weapons/mortar_81mm_us",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "crew_mortar_us",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "infantry_anti_infantry",
+    "tier1"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "veterancy_1_unlock_a_81mm_us",
+    "veterancy_1_unlock_b_81mm_us",
+    "barrage_81mm_mortar_us",
+    "smoke_81mm_mortar_us",
+    "veterancy_1a_timed_fuze_mortar_81mm_us",
+    "veterancy_1b_delayed_fuze_mortar_81mm_us",
+    "hold_fire",
+    "siegebreakers_siege_specialists_range_in_ger",
+    "brazilian_squad_counterbattery_us",
+    "veterancy_1a_suppression_airburst_mortar_81mm_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "mortar_81mm_us"
+   },
+   "team_weapon": {
+    "weapon": "81mm_mortar_us",
+    "crew_entity": "crew_mortar_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

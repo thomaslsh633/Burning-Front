@@ -1,0 +1,72 @@
+{
+ "infantry": {
+  "grenadier_ger": {
+   "coh3_ref": "sbps/races/german/infantry/grenadier_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "grenadier_ger",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier1",
+    "infanterie_kompanie",
+    "grenadier",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "assault_package_grenadiers_ger",
+     "flamethrower_grenadier_ger"
+    ]
+   },
+   "abilities": [
+    "panzerfaust_grenadier_ger",
+    "grenade_m24_stick_grenadier_ger",
+    "vault_movement",
+    "merge_gernadier_ger",
+    "grenade_assault_grenadier_ger",
+    "sprint_grenadiers_ger",
+    "mountain_zeal_squad_ger",
+    "medkits_aura_grenadier_vet_ger",
+    "terror_infantry_interrogate_ger",
+    "terror_infantry_no_quarter_grenadier_ger",
+    "grenade_incendiary_grenadier_ger",
+    "blocking_force_infantry_setup_incursion_response_ger"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.6
+   },
+   "veterancy": {
+    "set": "grenadier_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_grenadier_ger",
+     "barbed_wire_fence_ger",
+     "fighting_nest_ger"
+    ]
+   }
+  }
+ }
+}

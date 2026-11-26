@@ -1,0 +1,10 @@
+{
+ "weapon": {
+  "mp40_crew_ger": {
+   "name": "weapon.mp40_crew_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ }
+}

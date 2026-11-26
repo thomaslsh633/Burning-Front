@@ -1,0 +1,68 @@
+{
+ "team_weapons": {
+  "at_gun_75mm_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/at_gun_75mm_ger",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_75mm_ger",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_75mm_ger",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "tier2",
+    "panzergrenadier_kompanie",
+    "teamweapon_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak",
+     "blocking_force_team_weapons_marking_fire_ger"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "hold_fire",
+    "camo_first_strike_team_weapon_ger",
+    "toggle_ambush_camouflage_ger",
+    "blocking_force_marking_fire_team_weapon_dummy_ger",
+    "blocking_force_panzergranate_ammo_at_gun_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_75mm_ger"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_75mm_ger",
+    "crew_entity": "crew_at_gun_75mm_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

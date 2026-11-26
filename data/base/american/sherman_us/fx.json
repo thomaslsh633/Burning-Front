@@ -1,0 +1,49 @@
+{
+ "weapon": {
+  "75mm_sherman_us": {
+   "name": "weapon.75mm_sherman_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_sherman_us": {
+   "name": "weapon.30cal_coaxial_sherman_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_sherman_us": {
+   "name": "weapon.30cal_hull_sherman_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "2inch_mortar_smoke_sherman_us": {
+   "name": "weapon.2inch_mortar_smoke_sherman_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  }
+ },
+ "ebps": {
+  "sherman_us": {
+   "name": "entity.sherman_us.name",
+   "model": {
+    "id": "sherman_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_us": {
+   "name": "unit.sherman_us.name",
+   "short_name": "unit.sherman_us.short",
+   "desc": "unit.sherman_us.desc",
+   "icon": "sherman_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

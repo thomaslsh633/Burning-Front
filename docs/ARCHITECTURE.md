@@ -109,8 +109,9 @@ values from `data/generated/`; nothing is patched at load time.
 data/
   schema/          field definitions (JSON Schema subset), profiles per category, index of checked files
   source/coh3/     raw CoH3 files, untouched;  source/coh3stats/  coh3stats.com statistics
-  base/<faction>/  weapon, ebps, sbps, upgrade, veterancy, fx: importer output, never edited by hand
-  units/<faction>/ designer overrides: only the fields that change (same files and layout as base)
+  base/<faction>/  importer output, never edited by hand: <squad id>/ per unit (its sbps, ebps, weapon, upgrade,
+                   veterancy, fx) and shared/ for records several units use
+  units/<faction>/ designer overrides: only the fields that change (same folders as base)
   balance/         turn scale (scale.json) and tuning (fire-rate, indirect, ammo)
   rules/           closed word lists (vocab.json), roster, weapon and status flags; terrain and cover later
   i18n/            ko.json, en.json: every player-visible string

@@ -1,4 +1,5 @@
 // Data layers: generated base → designer overrides → mods, merged by id (docs/reviews/d2-readiness.md §5).
+// Inside a layer a kind may be split over files (one folder per unit, plus shared/); combineFiles joins them first.
 // Pure: plain objects in, new objects out; the same function serves the build step (Node) and the game.
 //
 // Shapes of a data kind:
@@ -59,6 +60,26 @@ export function mergeKind(shape, layers) {
     (out[group] ??= {})[id] = rec;
   }
   return { data: shape === 'flat' ? out._ ?? {} : out, origin, errors };
+}
+
+/**
+ * One layer's files of one kind, combined into one object: a layer may split a kind over several files (one folder per
+ * unit plus shared/). files: [{ name, data }] → { data, errors }. A record id may appear in only one file of a layer.
+ */
+export function combineFiles(shape, files) {
+  const errors = [], out = {}, from = new Map();   // key → file name
+  for (const { name, data } of files) {
+    for (const [group, recs] of Object.entries(groupsOf(shape, data))) {
+      if (!isObject(recs)) { errors.push(`${name}: group "${group}" is not an object`); continue; }
+      for (const [id, rec] of Object.entries(recs)) {
+        const key = shape === 'sections' ? `${group}/${id}` : id;
+        if (from.has(key) && from.get(key) !== name) { errors.push(`id "${id}" is in ${from.get(key)} and ${name}`); continue; }
+        from.set(key, name);
+        (out[group] ??= {})[id] = rec;
+      }
+    }
+  }
+  return { data: shape === 'flat' ? out._ ?? {} : out, errors };
 }
 
 /** The six unit data kinds and their shapes. */

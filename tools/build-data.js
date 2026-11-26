@@ -8,7 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { mergeKind, UNIT_KINDS } from '../src/services/data/index.js';
+import { mergeKind, combineFiles, UNIT_KINDS } from '../src/services/data/index.js';
 import { validate, loadContext } from './validate.js';
 import { checkGroupedFile } from './profiles.js';
 import { checkLinks, checkI18n } from './data-links.js';
@@ -19,17 +19,32 @@ const readJson = f => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8'))
 
 const subdirs = dir => (fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => fs.statSync(path.join(dir, f)).isDirectory()).sort() : []);
 
-/** Override and mod folders may only hold known factions and kind files; anything else would be silently ignored. */
+/**
+ * A layer's files of one kind for one faction: <faction>/<kind>.json and <faction>/<folder>/<kind>.json, where a folder
+ * is one unit (named by squad id) or shared/ (records several units use). → [{ name: "folder/kind.json", data }]
+ */
+export function layerFiles(dir, kind) {
+  const file = `${kind}.json`;
+  return ['', ...subdirs(dir)].map(sub => path.join(sub, file)).filter(rel => fs.existsSync(path.join(dir, rel)))
+    .map(rel => ({ name: rel.split(path.sep).join('/'), data: readJson(path.join(dir, rel)) }));
+}
+
+/** Override and mod folders may only hold known factions, one level of unit folders and kind files; anything else would be ignored. */
 export function strayFiles(rootDir, factions, mods) {
   const errors = [], kinds = Object.keys(UNIT_KINDS).map(k => `${k}.json`);
   const roots = [{ name: 'data/units', dir: path.join(rootDir, 'data/units') },
     ...mods.map(m => ({ name: `mod:${m.id} units`, dir: path.join(m.dir, 'units') }))];
+  const checkFiles = (where, dir, allowFolders) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (e.isDirectory() && allowFolders) checkFiles(`${where}/${e.name}`, path.join(dir, e.name), false);
+      else if (e.isDirectory()) errors.push(`${where}/${e.name}: folders go one level deep (<faction>/<unit or shared>/<kind>.json)`);
+      else if (!kinds.includes(e.name)) errors.push(`${where}/${e.name}: unknown file (expected ${kinds.join(', ')})`);
+    }
+  };
   for (const { name, dir } of roots) {
     for (const f of subdirs(dir)) {
       if (!factions.includes(f)) { errors.push(`${name}/${f}: no faction "${f}" in data/base`); continue; }
-      for (const file of fs.readdirSync(path.join(dir, f))) {
-        if (!kinds.includes(file)) errors.push(`${name}/${f}/${file}: unknown file (expected ${kinds.join(', ')})`);
-      }
+      checkFiles(`${name}/${f}`, path.join(dir, f), true);
     }
   }
   return errors;
@@ -80,7 +95,12 @@ export function buildData(rootDir = root) {
     const layers = layersFor(rootDir, faction, mods);
     const merged = {};
     for (const [kind, shape] of Object.entries(UNIT_KINDS)) {
-      const data = layers.map(l => ({ name: l.name, data: readJson(path.join(l.dir, `${kind}.json`)) }));
+      const data = layers.map(l => {
+        const files = layerFiles(l.dir, kind);
+        const c = combineFiles(shape, files);
+        for (const e of c.errors) errors.push(`${faction}/${kind} ${l.name}: ${e}`);
+        return { name: l.name, data: files.length ? c.data : null };
+      });
       const r = mergeKind(shape, data);
       merged[kind] = r.data;
       for (const e of r.errors) errors.push(`${faction}/${kind}: ${e}`);
