@@ -42,3 +42,18 @@ test('a broken override is rejected and the error names the layers', () => {
   assert.ok(errors.some(e => e.includes('garand_rifleman_us (from base → units)') && e.includes('"laser" not in vocab list weapon_class')));
   assert.ok(errors.some(e => e.includes('shots_per_turn.near: expected integer')));
 });
+
+test('the link check runs on the merged data: an override pointing at a missing record is rejected', () => {
+  const root = tempRoot();
+  write(root, 'data/units/american/ebps.json', { infantry: { rifleman_us: { weapons: [{ weapon: 'garand_typo_us', mount: 'hull', slot: 'main' }] } } });
+  const { errors } = buildData(root);
+  assert.ok(errors.includes('american: ebps rifleman_us weapons[].weapon: no weapon record "garand_typo_us"'), errors.join('\n'));
+});
+
+test('removing a record that others still use breaks its links', () => {
+  const root = tempRoot();
+  write(root, 'data/units/american/ebps.json', { infantry: { rifleman_us: { remove: true } } });
+  const { errors } = buildData(root);
+  assert.ok(errors.some(e => e.includes('sbps riflemen_us members[].entity: no ebps record "rifleman_us"')));
+  assert.ok(errors.some(e => e.includes('fx ebps/rifleman_us: no ebps record')));
+});

@@ -123,6 +123,12 @@
               "items": {
                 "$ref": "types.schema.json#/$defs/Id"
               }
+            },
+            "pending": {
+              "type": "array",
+              "items": {
+                "$ref": "types.schema.json#/$defs/Id"
+              }
             }
           },
           "additionalProperties": false,
@@ -204,19 +210,39 @@
           ]
         },
         "team_weapon": {
-          "type": "object",
-          "properties": {
-            "weapon_entity": {
-              "$ref": "types.schema.json#/$defs/Id"
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "weapon_entity": {
+                  "$ref": "types.schema.json#/$defs/Id"
+                },
+                "crew_entity": {
+                  "$ref": "types.schema.json#/$defs/Id"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "weapon_entity",
+                "crew_entity"
+              ]
             },
-            "crew_entity": {
-              "$ref": "types.schema.json#/$defs/Id"
+            {
+              "type": "object",
+              "properties": {
+                "weapon": {
+                  "$ref": "types.schema.json#/$defs/Id"
+                },
+                "crew_entity": {
+                  "$ref": "types.schema.json#/$defs/Id"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "weapon",
+                "crew_entity"
+              ]
             }
-          },
-          "additionalProperties": false,
-          "required": [
-            "weapon_entity",
-            "crew_entity"
           ]
         },
         "supply": {

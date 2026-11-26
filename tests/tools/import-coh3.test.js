@@ -37,8 +37,19 @@ test('team weapons find their veterancy in the common file; upgrades keep only r
   assert.deepEqual(find('upgrade', 'bar_rifleman_squad_us').requires?.upgrades, ['bar_riflemen_global_us']);
 });
 
-test('carried team weapon: crew members only, weapon item as the team weapon', () => {
+test('carried team weapon: crew members only, the crew carries the weapon', () => {
   const hmg = find('sbps', 'hmg_30cal_us');
   assert.deepEqual(hmg.members, [{ entity: 'crew_hmg_us', count: 4 }]);
-  assert.equal(hmg.team_weapon.weapon_entity, 'w_30cal_hmg_us');
+  assert.deepEqual(hmg.team_weapon, { weapon: '30cal_hmg_us', crew_entity: 'crew_hmg_us' });
+  assert.ok(find('weapon', '30cal_hmg_us'), 'the carried weapon is imported');
+  // towed gun: the gun is an entity with its own HP
+  assert.deepEqual(find('sbps', 'at_gun_57mm_us').team_weapon, { weapon_entity: 'tw_at_gun_57mm_us', crew_entity: 'crew_at_gun_57mm_us' });
+});
+
+test('squad upgrades: imported ones in list, the rest pending', () => {
+  const riflemen = find('sbps', 'riflemen_us'), hmg = find('sbps', 'hmg_30cal_us');
+  assert.ok(riflemen.upgrades.list.includes('bar_rifleman_squad_us'));
+  for (const u of riflemen.upgrades.list) assert.ok(find('upgrade', u), `${u} is imported`);
+  assert.deepEqual(hmg.upgrades.list, []);
+  assert.ok(hmg.upgrades.pending.includes('50cal_hmg_us'));
 });

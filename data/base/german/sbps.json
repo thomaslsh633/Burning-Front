@@ -102,7 +102,8 @@
    "source": "produced",
    "upgrades": {
     "slots": -1,
-    "list": [
+    "list": [],
+    "pending": [
      "mg42_panzer_ger",
      "camouflage_special_ops_ger",
      "side_skirts_mechanized_ger",
@@ -170,7 +171,8 @@
    "source": "produced",
    "upgrades": {
     "slots": -1,
-    "list": [
+    "list": [],
+    "pending": [
      "elite_forces_medical_supplements_squad_upgrade_ak",
      "blocking_force_team_weapons_marking_fire_ger"
     ]
@@ -230,7 +232,8 @@
    "source": "produced",
    "upgrades": {
     "slots": -1,
-    "list": [
+    "list": [],
+    "pending": [
      "elite_forces_medical_supplements_squad_upgrade_ak",
      "blocking_force_team_weapons_marking_fire_ger"
     ]
@@ -253,7 +256,7 @@
     "set": "mortar_81mm_ger"
    },
    "team_weapon": {
-    "weapon_entity": "w_81mm_mortar_ger",
+    "weapon": "81mm_mortar_ger",
     "crew_entity": "crew_mortar_ger"
    },
    "supply": {
@@ -290,7 +293,8 @@
    "source": "produced",
    "upgrades": {
     "slots": -1,
-    "list": [
+    "list": [],
+    "pending": [
      "elite_forces_medical_supplements_squad_upgrade_ak",
      "blocking_force_team_weapons_marking_fire_ger"
     ]
@@ -311,7 +315,7 @@
     "set": "hmg_mg42_ger"
    },
    "team_weapon": {
-    "weapon_entity": "w_mg42_hmg_ger",
+    "weapon": "mg42_hmg_ger",
     "crew_entity": "crew_hmg_ger"
    },
    "supply": {

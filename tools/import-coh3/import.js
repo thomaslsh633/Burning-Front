@@ -94,15 +94,9 @@ export function importFaction(faction, squadIds) {
     const mainWeapon = members.map(m => ebpsByRef.get(m)).map(e => (e?.path[0] === 'weapons' ? weaponOfItem(e.ref) : weaponIdsOf(e?.rec)[0]?.id)).find(Boolean);
     const mainBag = weapons.get(mainWeapon)?.rec?.weapon_bag;
     const { record, notes } = convertSquad(s.rec, { ref: s.ref, id, category, catalogUnit: catUnits[id], mainWeaponClass: mainBag?.weapon_class,
-      memberCategory: eid => (ebps.get(eid)?.path[0] === 'weapons' ? 'weapons' : memberCategory(eid)), ammo, profiles, scale,
+      memberCategory, carriedWeapon: eid => weaponOfItem(ebps.get(eid)?.ref), ammo, profiles, scale,
       entityTags: members.flatMap(m => (EXT(ebpsByRef.get(m)?.rec, 'type_ext')?.unit_type_list || []).map(t => t.unit_type)),
       indirectClass: mainWeapon ? classOf(mainWeapon, cfg.indirect)?.id : null });
-    // carried team weapon: weapon item member → record the weapon item as the team weapon entity
-    if (record.team_weapon === undefined && category === 'team_weapons') {
-      const item = members.find(m => ebpsByRef.get(m)?.path[0] === 'weapons'), crew = members.find(m => ebpsByRef.get(m)?.path[0] === 'infantry');
-      if (item && crew) { record.team_weapon = { weapon_entity: last(item), crew_entity: last(crew) }; notes.push('carried team weapon: weapon item + crew'); }
-    }
-    record.members = record.members.filter(m => ebpsByRef.get([...ebpsByRef.keys()].find(k => k.endsWith('/' + m.entity)))?.path[0] !== 'weapons' || category !== 'team_weapons');
     put('sbps', category, id, record);
     files.fx.sbps[id] = { name: `unit.${id}.name`, short_name: `unit.${id}.short`, desc: `unit.${id}.desc`, icon: id, menu: { tab: category, order: 0 } };
     report.push({ id, kind: `squad · ${category}`, notes });
@@ -111,16 +105,23 @@ export function importFaction(faction, squadIds) {
       files.veterancy[id] = v.record;
       report.push({ id, kind: 'veterancy', notes: v.notes });
     }
+    // squad upgrades: `list` keeps the ones imported (weapon kits so far), `pending` the ones not imported yet
+    const imported = [], pending = [];
     for (const u of record.upgrades?.list || []) {
       const up = upgrades.get(u);
-      if (!up) { report.push({ id: u, kind: 'upgrade', notes: ['upgrade not found'] }); continue; }
+      if (!up) { report.push({ id: u, kind: 'upgrade', notes: ['upgrade not found'] }); pending.push(u); continue; }
       const { record: ur, notes: un } = convertUpgrade(up.rec.upgrade_bag, { ref: up.ref, weaponOfItem, scale });
       report.push({ id: u, kind: 'upgrade', notes: un });
-      if (!ur) continue;
+      if (!ur) { pending.push(u); continue; }
+      imported.push(u);
       const ucat = vocab.lists.upgrade_category.includes(up.path[0]) ? up.path[0] : 'infantry';
       put('upgrade', ucat, u, ur);
       files.fx.upgrade[u] = { name: `upgrade.${u}.name`, icon: u };
       for (const e of ur.effects) if (e.weapon) addWeapon(e.weapon);
+    }
+    if (record.upgrades) {
+      record.upgrades.list = imported;
+      if (pending.length) record.upgrades.pending = pending;
     }
   }
   return { files, report };

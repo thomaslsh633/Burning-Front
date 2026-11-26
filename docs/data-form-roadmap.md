@@ -133,7 +133,7 @@ The vehicle profile follows SPEC (no `capture`, trait `contests`).
 ### sbps
 
 - **Core:** `id`, `coh3_ref`, `parent`, `tags`, `role`, `members`, `cost` (sum or `cost_override`), `pop`, `requires`, `upgrades`, `abilities`, `traits`
-- **Modules:** `capture`, `reinforce`, `veterancy`, `build`, `team_weapon` `{ weapon_entity, crew_entity }`, `supply` `{ ammo }` (unit fuel removed 2026-11-25)
+- **Modules:** `capture`, `reinforce`, `veterancy`, `build`, `team_weapon` `{ weapon_entity, crew_entity }` (towed gun) or `{ weapon, crew_entity }` (carried weapon), `supply` `{ ammo }` (unit fuel removed 2026-11-25)
 
 | Profile | Must | May |
 | --- | --- | --- |
@@ -173,7 +173,7 @@ Each phase ends with a gate. The next phase starts when the gate passes. Sizes: 
 | 6 | American + German | every unit in the v214 roster (as a checklist of what to cover), plus the upgrades (kits) they use: `upgrade.json` per faction with the same core + module pattern | records validate; conversion report (CoH3 → game values) reviewed by you; v214 differences listed for reference | L |
 | 7 | Afrika Korps + British | full rosters from CoH3; units with no CoH3 data marked `estimated` | validate; your balance review | L |
 | G | Greybox play (data check) | all four factions imported and played on a grey, art-free screen with debug numbers on top of the rules engine; automatic time-to-kill / cost-efficiency report | every unit spawns, moves, fires and dies; time-to-kill within the ranges in `data/balance/greybox.json` or the reason recorded; developer signs off the data | M |
-| 8 | Build and links | build step: resolve `parent`, apply profile defaults, check every id link (members, weapons, upgrades, fx, i18n keys), write `data/generated/units.json`; runs in `npm run check` | a broken link or unknown word fails the build | M |
+| 8 | Build and links | build step: resolve `parent`, apply profile defaults, check every id link (members, weapons, upgrades, fx, i18n keys), write `data/generated/units.json`; runs in `npm run check`. **Link check done (D2 fix 4):** `tools/data-links.js`, rules as a table; links the game follows are errors, links to things not imported yet are grouped warnings in `reports/data-links.md` | a broken link or unknown word fails the build | M |
 | 9 | Editing workflow | `tools/unit.js <id>` (final values from `data/generated`, no browser, replaces `unit.py`), `tools/new-unit <category> <id>` (starts from the profile defaults), a short "add or change a unit" guide | you add one unit using only the guide | S |
 
 Phases 2–4 need no CoH3 import and can be reviewed on small hand-written samples. Phase 5 is where the format

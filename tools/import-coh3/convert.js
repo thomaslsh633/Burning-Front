@@ -181,11 +181,14 @@ const ROLE_BY_CLASS = { rifle: 'anti_infantry', smg: 'anti_infantry', pistol: 'a
   cannon: 'all_round', cannon_large: 'anti_tank', cannon_small: 'anti_light_vehicle', cannon_burst: 'anti_light_vehicle',
   mortar: 'indirect', artillery_small: 'indirect', artillery_medium: 'indirect', artillery_mobile: 'indirect', nebelwerfer: 'indirect' };
 
-/** sbps → squad record. ctx: { ref, category, id, catalogUnit, mainWeaponClass, memberCategory, ammo, cfg } */
+/** sbps → squad record. ctx: { ref, category, id, catalogUnit, mainWeaponClass, memberCategory, carriedWeapon, ammo, profiles, scale } */
 export function convertSquad(rec, ctx) {
   const notes = [];
   const kind = KIND[ctx.category];
-  const members = (EXT(rec, 'squad_loadout_ext')?.unit_list || []).map(u => ({ entity: last(u.loadout_data.type.instance_reference), count: u.loadout_data.num }));
+  const loadout = (EXT(rec, 'squad_loadout_ext')?.unit_list || []).map(u => ({ entity: last(u.loadout_data.type.instance_reference), count: u.loadout_data.num }));
+  // a weapon item in the loadout (HMG, mortar) is carried by the crew, not a member on the map
+  const carried = loadout.find(m => ctx.memberCategory(m.entity) === 'weapons');
+  const members = loadout.filter(m => m !== carried);
   const tags = (EXT(rec, 'squad_type_ext')?.squad_type_list || []).map(t => t.squad_type).filter(Boolean);
   let role = ROLE_BY_CLASS[ctx.mainWeaponClass] ?? 'logistics';
   const engineer = tags.includes('engineer') || (ctx.entityTags || []).includes('engineer');
@@ -209,7 +212,9 @@ export function convertSquad(rec, ctx) {
   if (EXT(rec, 'squad_veterancy_ext')) out.veterancy = { set: ctx.id };
   if (kind === 'team_weapon') {
     const gun = members.find(m => ctx.memberCategory(m.entity) !== 'infantry'), crew = members.find(m => ctx.memberCategory(m.entity) === 'infantry');
+    const weapon = carried && ctx.carriedWeapon(carried.entity);
     if (gun && crew) out.team_weapon = { weapon_entity: gun.entity, crew_entity: crew.entity };
+    else if (weapon && crew) { out.team_weapon = { weapon, crew_entity: crew.entity }; notes.push('carried team weapon: crew carries the weapon'); }
   }
   const a = ctx.ammo;
   out.supply = { ammo: a.by_indirect_class[ctx.indirectClass] ?? a.by_role[role] ?? a.by_kind[kind] };

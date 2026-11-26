@@ -38,12 +38,12 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 81mm_mortar_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
 | crew_mortar_us | entity · infantry | — |
-| mortar_81mm_us | squad · team_weapons | role "indirect" guessed from main weapon class mortar |
+| mortar_81mm_us | squad · team_weapons | role "indirect" guessed from main weapon class mortar; carried team weapon: crew carries the weapon |
 | mortar_81mm_us | veterancy | — |
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 30cal_hmg_us | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | crew_hmg_us | entity · infantry | — |
-| hmg_30cal_us | squad · team_weapons | role "suppression" guessed from main weapon class hmg |
+| hmg_30cal_us | squad · team_weapons | role "suppression" guessed from main weapon class hmg; carried team weapon: crew carries the weapon |
 | hmg_30cal_us | veterancy | — |
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 50cal_hmg_us | upgrade | effect not in CoH3 data (state tree): write by hand |
