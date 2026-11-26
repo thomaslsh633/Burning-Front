@@ -6,13 +6,8 @@
 - offset / cube / axial coordinates
 - distance, neighbours, line, ring, arcs
 
-## Public API (planned, exported from `index.js`)
-- `distance`
-- `neighbours`
-- `line`
-- `ring`
-- `arcContains`
-- `direction`
+## Public API (exported from `index.js`)
+- `distance`, `neighbour(s)`, `line`, `ring`, `disk`, `direction`, `angle`, `turnSteps`, `arcContains`, `inside`, `toCube` / `fromCube`, `key` — done (odd-r pointy-top, directions 0 E clockwise)
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)
