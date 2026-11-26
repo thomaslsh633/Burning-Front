@@ -9,11 +9,10 @@
 - concealment, camouflage, detection
 - garrison sight
 
-## Public API (planned, exported from `index.js`)
-- `visibleHexes`
-- `hasLineOfSight`
-- `isConcealed`
-- `isDetected`
+## Public API (exported from `index.js`)
+- `sightLine`, `sightRange`, `hasLineOfSight`, `visibleHexes`, `detectionRange`, `canSee` — done
+- `coverAgainst(state, data, target, fromHex)`, `receivesCover`, `hexCover` — done
+- `VISIBILITY` machine, `revealOnFire`, `revealOnMove`, `visibilityTurnEnd` — done; smoke follows with skills
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

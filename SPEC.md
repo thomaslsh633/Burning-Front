@@ -212,6 +212,11 @@ Confirmed 2026-11-25 (rewrite):
   (no action next turn); chances from data.
 - Destruction: tanks crush hedges and fences; HE damages buildings into ruins (cover changes); heavy shells leave craters (light cover).
 - Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
+- Sight (D2, v214 v144 rules, `data/balance/vision.json`): a line is blocked where ground or a `block` object / edge rises above
+  the line from the viewer's eye (infantry and crews 1.5, vehicles 2, structures 3) to 1 above the target's ground; `partial`
+  objects obscure (hit ×0.85); low objects (height ≤ 2) beside the viewer are ignored; neighbours always see each other.
+  Units in bush or light forest are seen from 2 hexes, dense forest and buildings from 1; an emplaced crew in cover that
+  neither moved nor fired conceals at its turn end (seen from 2); CoH3 camouflage units use their `detected_hex`.
 
 Confirmed 2026-11-22:
 - Capture by strength: each capturing man adds 1 point per tick; 2 points neutralise or capture in one turn

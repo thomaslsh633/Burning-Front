@@ -5,9 +5,10 @@
 //          unit?: true (cmd.unit must be an own unit and every axis must permit cmd.type), undoable?: true }
 import * as movement from '../movement/index.js';
 import * as turn from '../turn/index.js';
+import * as vision from '../vision/index.js';
 
 /** Unit axes in hierarchy order (lifecycle first); filled as their owning systems ship. */
-export const MACHINES = [turn.ACTION];
+export const MACHINES = [turn.ACTION, vision.VISIBILITY];
 
 const moveCost = (s, c, d) => movement.reachable(s, d, c.unit, { reverse: !!c.reverse }).get(`${c.to.c},${c.to.r}`)?.cost ?? 0;
 
@@ -18,7 +19,8 @@ export const ROUTES = {
     apply(s, c, d) {
       const m = movement.applyMove(s, c, d);
       const t = turn.spend(m.state, c.unit, { move: m.cost });
-      return { state: t.state, events: [...m.events, ...t.events] };
+      const v = vision.revealOnMove(t.state, c.unit);
+      return { state: v.state, events: [...m.events, ...t.events, ...v.events] };
     },
   },
   Turn: {

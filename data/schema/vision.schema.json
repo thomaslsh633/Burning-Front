@@ -1,0 +1,69 @@
+{
+  "about": "data/balance/vision.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "elevation_height": {
+      "type": "number",
+      "minimum": 0
+    },
+    "eye_height": {
+      "type": "object",
+      "propertyVocab": "kind",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "target_height": {
+      "type": "number",
+      "minimum": 0
+    },
+    "ignore_low_objects_next_to_viewer": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "obscured_accuracy": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "sight_penalty": {
+      "type": "object",
+      "propertyVocab": "state_morale",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "terrain_concealment": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "emplaced_concealment_hex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "revealed_after_firing_turns": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "elevation_height",
+    "eye_height",
+    "target_height",
+    "ignore_low_objects_next_to_viewer",
+    "obscured_accuracy",
+    "sight_penalty",
+    "terrain_concealment",
+    "emplaced_concealment_hex",
+    "revealed_after_firing_turns"
+  ]
+}
