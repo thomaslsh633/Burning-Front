@@ -40,7 +40,8 @@ data/units/
   british/       weapon.json  ebps.json  sbps.json  fx.json   British Forces (CoH3 "british_africa" in North Africa, "british" in Italy)
 ```
 
-Inside each file, records keep the CoH3 category tree, so the files read like the game's own tree:
+Inside each file, records are grouped **one level** by category (`{ "<category>": { "<id>": record } }`, decision V in
+`docs/data-labels.md`; CoH3's own tree has varying depth and stays in each record's `coh3_ref`). Categories:
 
 | File | Top level → sub level (kept) | Dropped |
 | --- | --- | --- |

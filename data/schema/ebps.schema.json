@@ -1,0 +1,335 @@
+{
+  "about": "ebps.json per faction: { <unit_category>: { <id>: entity } }.",
+  "$defs": {
+    "entity": {
+      "type": "object",
+      "properties": {
+        "coh3_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent": {
+          "$ref": "types.schema.json#/$defs/Id"
+        },
+        "estimated": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "unit_tags"
+          }
+        },
+        "hp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "target_size": {
+          "type": "number",
+          "minimum": 0
+        },
+        "armor": {
+          "$ref": "types.schema.json#/$defs/Armor3"
+        },
+        "directional_damage": {
+          "$ref": "types.schema.json#/$defs/Armor3"
+        },
+        "resist": {
+          "type": "object",
+          "properties": {
+            "ballistic": {
+              "type": "number"
+            },
+            "explosive": {
+              "type": "number"
+            },
+            "flame": {
+              "type": "number"
+            },
+            "true": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "cost": {
+          "$ref": "types.schema.json#/$defs/Resources"
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "unit_trait"
+          }
+        },
+        "move": {
+          "type": "object",
+          "properties": {
+            "hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "pass": {
+              "type": "string",
+              "vocab": "pass"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "hex",
+            "pass"
+          ]
+        },
+        "sight": {
+          "type": "object",
+          "properties": {
+            "hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "detect_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "hex"
+          ]
+        },
+        "weapons": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "weapon": {
+                "$ref": "types.schema.json#/$defs/Id"
+              },
+              "mount": {
+                "type": "string",
+                "vocab": "mount"
+              },
+              "slot": {
+                "type": "string",
+                "vocab": "weapon_slot"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "weapon",
+              "mount",
+              "slot"
+            ]
+          }
+        },
+        "stealth": {
+          "type": "object",
+          "properties": {
+            "detected_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "first_strike_shots": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "recloak_turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "detected_hex"
+          ]
+        },
+        "hold": {
+          "type": "object",
+          "properties": {
+            "slots": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "slots"
+          ]
+        },
+        "crew": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "roles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "min"
+          ]
+        },
+        "recrew": {
+          "type": "object",
+          "properties": {
+            "by_faction": {
+              "type": "object",
+              "propertyVocab": "faction",
+              "additionalProperties": {
+                "$ref": "types.schema.json#/$defs/Id"
+              }
+            },
+            "min_crew": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max_squad": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "manual_abandon": {
+              "type": "boolean"
+            },
+            "abandoned_on_spawn": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "min_crew"
+          ]
+        },
+        "wreck": {
+          "type": "object",
+          "properties": {
+            "entity": {
+              "$ref": "types.schema.json#/$defs/Id"
+            },
+            "cover": {
+              "type": "string",
+              "vocab": "cover"
+            },
+            "blocks_vehicles": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "cover"
+          ]
+        },
+        "tow": {
+          "type": "object",
+          "properties": {
+            "by": {
+              "type": "array",
+              "items": {
+                "$ref": "types.schema.json#/$defs/Id"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "by"
+          ]
+        },
+        "produces": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/$defs/Id"
+          }
+        },
+        "aura": {
+          "type": "object",
+          "properties": {
+            "heal_per_turn": {
+              "type": "number",
+              "minimum": 0
+            },
+            "radius_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "heal_per_turn",
+            "radius_hex"
+          ]
+        },
+        "construction": {
+          "type": "object",
+          "properties": {
+            "build_turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            },
+            "footprint_hex": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "build_turns"
+          ]
+        },
+        "flight": {
+          "type": "object",
+          "properties": {
+            "speed": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "regen": {
+          "type": "object",
+          "properties": {
+            "per_turn": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "per_turn"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "coh3_ref",
+        "tags",
+        "hp",
+        "target_size",
+        "armor",
+        "cost"
+      ]
+    }
+  },
+  "type": "object",
+  "propertyVocab": "unit_category",
+  "properties": {
+    "about": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/$defs/entity"
+    }
+  }
+}

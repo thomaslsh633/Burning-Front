@@ -1,5 +1,5 @@
 {
-  "about": "Closed word lists. Every tag, class, trait, state, flag and modifier a data file uses must be in one of these lists; tools/validate.js rejects anything else (schema keyword \"vocab\"). CoH3 lists (weapon_class, damage_type, unit_tags, pass) keep CoH3's words and are kept complete with `node tools/vocab/sync.js --check / --seed`.",
+  "about": "Closed word lists. Every tag, class, trait, state, flag and modifier a data file uses must be in one of these lists; tools/validate.js rejects anything else (schema keyword \"vocab\"). CoH3 lists (weapon_class, damage_type, unit_tags, pass) keep CoH3's words and are kept complete with `node tools/vocab/sync.js --check / --seed`. Words used only outside the roster (mines placed by abilities, aircraft of off-map strikes) are added by hand.",
   "lists": {
     "faction": [
       "german",
@@ -263,6 +263,7 @@
       "grenade_launcher",
       "hmg",
       "lmg",
+      "mine",
       "mortar",
       "nebelwerfer",
       "panzerbuchse",
@@ -282,6 +283,7 @@
     ],
     "unit_tags": [
       "8_rad",
+      "aircraft",
       "allow_brew_up",
       "allow_track_damage_when_immobilized",
       "allow_turret_off",
@@ -404,6 +406,52 @@
       "vehicle_light",
       "vehicle_medium",
       "vehicle_ultra_light"
+    ],
+    "veterancy_modifier": [
+      "ability_cooldown",
+      "ability_cost",
+      "ability_range",
+      "aoe_member_cap",
+      "armor_add",
+      "attack_speed",
+      "build_speed",
+      "capture_rate",
+      "detection",
+      "hp_add",
+      "move",
+      "received_accuracy",
+      "received_damage",
+      "scatter",
+      "sight",
+      "weapon_accuracy",
+      "weapon_damage",
+      "weapon_penetration",
+      "weapon_range",
+      "weapon_suppression"
+    ],
+    "upgrade_category": [
+      "infantry",
+      "vehicle",
+      "team_weapons",
+      "research",
+      "defense"
+    ],
+    "anim_class": [
+      "infantry",
+      "crew",
+      "wheeled",
+      "tank_medium",
+      "tank_heavy",
+      "static"
+    ],
+    "price_source": [
+      "coh3stats",
+      "entities",
+      "override"
+    ],
+    "trigger_on": [
+      "enter_hex",
+      "turn_start"
     ]
   },
   "veterancy_modifiers": {

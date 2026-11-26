@@ -1,0 +1,187 @@
+{
+ "infantry": {
+  "riflemen_us": {
+   "coh3_ref": "sbps/races/american/infantry/riflemen_us",
+   "kind": "squad",
+   "name_en": "Riflemen Squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "rifleman_squad_leader_us",
+     "count": 1
+    },
+    {
+     "entity": "rifleman_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.67
+   },
+   "veterancy": {
+    "set": "riflemen_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "bar_rifleman_squad_us"
+    ]
+   },
+   "abilities": [
+    "grenade_rifleman_us"
+   ],
+   "source": "produced"
+  }
+ },
+ "vehicles": {
+  "sherman_us": {
+   "coh3_ref": "sbps/races/american/vehicles/sherman_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "veterancy": {
+    "set": "generic_medium_us"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "traits": [
+    "contests_only"
+   ],
+   "source": "produced"
+  }
+ },
+ "team_weapons": {
+  "at_gun_57mm_us": {
+   "coh3_ref": "sbps/races/american/team_weapons/at_gun_57mm_us",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_57mm_us",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_57mm_us",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "at_gun_us"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_57mm_us",
+    "crew_entity": "crew_at_gun_57mm_us"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "source": "produced"
+  }
+ },
+ "emplacements": {
+  "hmg_fighting_position_us": {
+   "coh3_ref": "sbps/races/american/emplacements/hmg_fighting_position_us",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "hmg_fighting_position_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "supply": {
+    "ammo": 30
+   },
+   "source": "built"
+  }
+ },
+ "buildings": {
+  "barracks_us": {
+   "coh3_ref": null,
+   "estimated": true,
+   "kind": "structure",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "barracks_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0
+  }
+ },
+ "aircraft": {
+  "p47_strafing_us": {
+   "coh3_ref": null,
+   "estimated": true,
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "p47_strafing_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {},
+    "from": "override"
+   },
+   "pop": 0,
+   "source": "called_in"
+  }
+ }
+}

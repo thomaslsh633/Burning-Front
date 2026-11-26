@@ -1,0 +1,425 @@
+{
+  "about": "weapon.json per faction: { <weapon_category>: { <id>: weapon } }. Core + modules; modules per category in profiles.json.",
+  "$defs": {
+    "weapon": {
+      "type": "object",
+      "properties": {
+        "coh3_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "parent": {
+          "$ref": "types.schema.json#/$defs/Id"
+        },
+        "estimated": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string",
+          "vocab": "weapon_class"
+        },
+        "fire_rule": {
+          "type": "string",
+          "vocab": "fire_rule"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "damage": {
+          "type": "number",
+          "minimum": 0
+        },
+        "damage_type": {
+          "type": "string",
+          "vocab": "damage_type"
+        },
+        "penetration": {
+          "$ref": "types.schema.json#/$defs/Band3"
+        },
+        "vs_target": {
+          "type": "object",
+          "propertyVocab": "unit_tags",
+          "additionalProperties": {
+            "$ref": "types.schema.json#/$defs/Mods"
+          }
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "vocab": "weapon_trait"
+          }
+        },
+        "attack": {
+          "type": "object",
+          "properties": {
+            "fire_mode": {
+              "type": "string",
+              "vocab": "fire_mode"
+            },
+            "accuracy": {
+              "$ref": "types.schema.json#/$defs/Band3"
+            },
+            "accuracy_scale": {
+              "$ref": "types.schema.json#/$defs/Band3"
+            },
+            "range_hex": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "$ref": "types.schema.json#/$defs/HexInt"
+                },
+                "max": {
+                  "$ref": "types.schema.json#/$defs/HexInt"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "min",
+                "max"
+              ]
+            },
+            "band_end_hex": {
+              "type": "object",
+              "properties": {
+                "near": {
+                  "$ref": "types.schema.json#/$defs/HexInt"
+                },
+                "mid": {
+                  "$ref": "types.schema.json#/$defs/HexInt"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "near",
+                "mid"
+              ]
+            },
+            "shots_per_turn": {
+              "$ref": "types.schema.json#/$defs/IntBand3"
+            },
+            "damage_per_shot": {
+              "$ref": "types.schema.json#/$defs/IntBand3"
+            },
+            "shot_multiplier": {
+              "type": "number",
+              "minimum": 0
+            },
+            "arc_deg": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            "vs_cover": {
+              "type": "object",
+              "propertyVocab": "cover",
+              "additionalProperties": {
+                "$ref": "types.schema.json#/$defs/Mods"
+              }
+            },
+            "vs_suppressed": {
+              "$ref": "types.schema.json#/$defs/Mods"
+            },
+            "vs_pinned": {
+              "$ref": "types.schema.json#/$defs/Mods"
+            },
+            "height": {
+              "type": "object",
+              "properties": {
+                "advantage": {
+                  "$ref": "types.schema.json#/$defs/Mods"
+                },
+                "disadvantage": {
+                  "$ref": "types.schema.json#/$defs/Mods"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "fire_mode",
+            "accuracy",
+            "range_hex",
+            "shots_per_turn",
+            "damage_per_shot"
+          ]
+        },
+        "aoe": {
+          "type": "object",
+          "properties": {
+            "damage": {
+              "$ref": "types.schema.json#/$defs/Band3"
+            },
+            "distance_m": {
+              "$ref": "types.schema.json#/$defs/Band3"
+            },
+            "suppression": {
+              "$ref": "types.schema.json#/$defs/Band3"
+            },
+            "max_members": {
+              "type": "integer"
+            },
+            "friendly_fire": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "damage",
+            "distance_m"
+          ]
+        },
+        "scatter": {
+          "type": "object",
+          "properties": {
+            "angle_deg": {
+              "type": "number",
+              "minimum": 0
+            },
+            "distance_ratio": {
+              "type": "number",
+              "minimum": 0
+            },
+            "distance_max_m": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "angle_deg",
+            "distance_ratio",
+            "distance_max_m"
+          ]
+        },
+        "suppression": {
+          "type": "object",
+          "properties": {
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "nearby_mult": {
+              "type": "number",
+              "minimum": 0
+            },
+            "nearby_radius_m": {
+              "type": "number",
+              "minimum": 0
+            },
+            "scale": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "amount"
+          ]
+        },
+        "deflection": {
+          "type": "object",
+          "properties": {
+            "damage_ratio": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "damage_ratio"
+          ]
+        },
+        "reload": {
+          "type": "object",
+          "properties": {
+            "turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "turns"
+          ]
+        },
+        "emplace": {
+          "type": "object",
+          "properties": {
+            "required": {
+              "type": "boolean"
+            },
+            "setup_turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            },
+            "teardown_turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            },
+            "faces_target": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "required"
+          ]
+        },
+        "moving": {
+          "type": "object",
+          "properties": {
+            "can_fire": {
+              "type": "boolean"
+            },
+            "accuracy": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "can_fire"
+          ]
+        },
+        "persons": {
+          "type": "object",
+          "properties": {
+            "vs_infantry": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "vs_infantry"
+          ]
+        },
+        "trigger": {
+          "type": "object",
+          "properties": {
+            "on": {
+              "type": "string",
+              "vocab": "trigger_on"
+            },
+            "targets": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "vocab": "unit_tags"
+              }
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "on"
+          ]
+        },
+        "burn": {
+          "type": "object",
+          "properties": {
+            "turns": {
+              "$ref": "types.schema.json#/$defs/Turns"
+            },
+            "damage": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "turns",
+            "damage"
+          ]
+        },
+        "use": {
+          "type": "object",
+          "properties": {
+            "by_ability": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "by_ability"
+          ]
+        },
+        "indirect": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "string",
+              "vocab": "indirect_class"
+            },
+            "usage_turns": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "spread_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "min_range_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "range_hex": {
+              "$ref": "types.schema.json#/$defs/HexInt"
+            },
+            "blind_accuracy_scale": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "class",
+            "usage_turns",
+            "spread_hex",
+            "min_range_hex",
+            "range_hex"
+          ]
+        },
+        "ammo": {
+          "type": "object",
+          "properties": {
+            "per_shot": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "per_shot"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "coh3_ref",
+        "class",
+        "fire_rule",
+        "damage",
+        "damage_type",
+        "penetration"
+      ]
+    }
+  },
+  "type": "object",
+  "propertyVocab": "weapon_category",
+  "properties": {
+    "about": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": {
+      "$ref": "#/$defs/weapon"
+    }
+  }
+}

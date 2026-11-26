@@ -1,0 +1,48 @@
+{
+ "weapon": {
+  "garand_rifleman_us": {
+   "name": "weapon.garand_rifleman_us.name",
+   "sound": {
+    "fire": "rifle",
+    "impact": "bullet"
+   },
+   "effect": {
+    "muzzle": "rifle",
+    "tracer": "none"
+   }
+  }
+ },
+ "ebps": {
+  "sherman_us": {
+   "name": "entity.sherman_us.name",
+   "model": {
+    "id": "sherman",
+    "sprite_scale": 1,
+    "anim_class": "tank_medium"
+   },
+   "sound": {
+    "move": "engine_medium",
+    "death": "vehicle_explode"
+   }
+  }
+ },
+ "sbps": {
+  "riflemen_us": {
+   "name": "unit.riflemen_us.name",
+   "short_name": "unit.riflemen_us.short",
+   "desc": "unit.riflemen_us.desc",
+   "icon": "rifle_squad",
+   "portrait": "riflemen_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 1
+   }
+  }
+ },
+ "upgrade": {
+  "bar_rifleman_squad_us": {
+   "name": "upgrade.bar_rifleman_squad_us.name",
+   "icon": "bar"
+  }
+ }
+}

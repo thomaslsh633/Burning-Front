@@ -2,6 +2,16 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D1-4 schemas and profiles; Greybox stage)
+- **Done:** six unit-data schemas (`data/schema/{weapon,ebps,sbps,veterancy,upgrade,fx}.schema.json`: core + modules, shared
+  types, vocab-checked words and keys), category profiles `data/schema/profiles.json` (17 weapon, 6 entity, 6 squad
+  categories), `tools/profiles.js`, validator keyword `propertyVocab`, hand-written samples for every category
+  (`tests/fixtures/forms`). Gate passed: samples valid; a mine with attack, a mortar without scatter, a capturing vehicle,
+  wrong words / shapes rejected. Files grouped one level by category (decision V). Vocab: `mine`, `aircraft` added by hand.
+- **Plan:** stage **G Greybox play** inserted after D2 (rules engine) and before D3 (first screen): all four factions
+  imported, art-free Canvas view with debug numbers, automatic time-to-kill report, data sign-off. D6 becomes balance tuning.
+- **Next:** D1-5 importer pilot (one unit per category from CoH3 into the new forms).
+
 ## 2026-11-26 (D1-3 word lists and validator)
 - **Done:** `data/rules/vocab.json` (31 lists: CoH3 weapon classes 25, damage types 4, unit tags 113, pass 8, plus game
   lists — states of the six axes, status flags, weapon traits, unit traits, roles, cover, fire modes / rules, indirect

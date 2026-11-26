@@ -1,0 +1,639 @@
+{
+  "about": "Category profiles: modules a record must / may have; every other module is not allowed (docs/data-form-roadmap.md, census in data/source/coh3/CENSUS.md).",
+  "weapon": {
+    "modules": [
+      "attack",
+      "aoe",
+      "scatter",
+      "suppression",
+      "deflection",
+      "reload",
+      "emplace",
+      "moving",
+      "persons",
+      "trigger",
+      "burn",
+      "use",
+      "indirect",
+      "ammo"
+    ],
+    "categories": {
+      "rifle": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "suppression",
+          "moving"
+        ],
+        "must_not": [
+          "aoe",
+          "scatter",
+          "deflection",
+          "reload",
+          "emplace",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "sidearm": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "suppression",
+          "moving"
+        ],
+        "must_not": [
+          "aoe",
+          "scatter",
+          "deflection",
+          "reload",
+          "emplace",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "sub_machine_gun": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "suppression",
+          "moving"
+        ],
+        "must_not": [
+          "aoe",
+          "scatter",
+          "deflection",
+          "reload",
+          "emplace",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "light_machine_gun": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "suppression",
+          "moving"
+        ],
+        "must_not": [
+          "aoe",
+          "scatter",
+          "deflection",
+          "reload",
+          "emplace",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "heavy_machine_gun": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "suppression",
+          "emplace",
+          "moving",
+          "aoe"
+        ],
+        "must_not": [
+          "scatter",
+          "deflection",
+          "reload",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "infantry_anti_tank_weapon": {
+        "must": [
+          "attack",
+          "deflection",
+          "ammo"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "moving",
+          "persons"
+        ],
+        "must_not": [
+          "suppression",
+          "reload",
+          "emplace",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "tank_gun": {
+        "must": [
+          "attack",
+          "deflection",
+          "ammo"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "persons",
+          "moving",
+          "reload",
+          "suppression"
+        ],
+        "must_not": [
+          "emplace",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "tungsten_round_upgrade": {
+        "must": [
+          "attack",
+          "deflection",
+          "ammo"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "persons",
+          "moving",
+          "reload"
+        ],
+        "must_not": [
+          "suppression",
+          "emplace",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "anti_tank_gun": {
+        "must": [
+          "attack",
+          "deflection",
+          "emplace",
+          "ammo"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "suppression"
+        ],
+        "must_not": [
+          "reload",
+          "moving",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "anti_air_gun": {
+        "must": [
+          "attack",
+          "emplace",
+          "ammo"
+        ],
+        "may": [
+          "aoe",
+          "scatter",
+          "suppression",
+          "moving"
+        ],
+        "must_not": [
+          "deflection",
+          "reload",
+          "persons",
+          "trigger",
+          "burn",
+          "use",
+          "indirect"
+        ]
+      },
+      "mortar": {
+        "must": [
+          "attack",
+          "aoe",
+          "scatter",
+          "emplace",
+          "indirect",
+          "ammo"
+        ],
+        "may": [
+          "reload",
+          "suppression",
+          "deflection"
+        ],
+        "must_not": [
+          "moving",
+          "persons",
+          "trigger",
+          "burn",
+          "use"
+        ]
+      },
+      "light_artillery": {
+        "must": [
+          "attack",
+          "aoe",
+          "scatter",
+          "indirect",
+          "ammo"
+        ],
+        "may": [
+          "emplace",
+          "reload",
+          "suppression",
+          "deflection",
+          "moving"
+        ],
+        "must_not": [
+          "persons",
+          "trigger",
+          "burn",
+          "use"
+        ]
+      },
+      "heavy_artillery": {
+        "must": [
+          "attack",
+          "aoe",
+          "scatter",
+          "indirect",
+          "ammo"
+        ],
+        "may": [
+          "emplace",
+          "reload",
+          "suppression",
+          "deflection",
+          "moving"
+        ],
+        "must_not": [
+          "persons",
+          "trigger",
+          "burn",
+          "use"
+        ]
+      },
+      "grenade": {
+        "must": [
+          "aoe",
+          "use"
+        ],
+        "may": [
+          "attack",
+          "scatter",
+          "suppression",
+          "deflection",
+          "burn"
+        ],
+        "must_not": [
+          "reload",
+          "emplace",
+          "moving",
+          "persons",
+          "trigger",
+          "indirect",
+          "ammo"
+        ]
+      },
+      "mine": {
+        "must": [
+          "aoe",
+          "trigger"
+        ],
+        "may": [
+          "deflection",
+          "suppression"
+        ],
+        "must_not": [
+          "attack",
+          "scatter",
+          "reload",
+          "emplace",
+          "moving",
+          "persons",
+          "burn",
+          "use",
+          "indirect",
+          "ammo"
+        ]
+      },
+      "flame_throwers": {
+        "must": [
+          "attack",
+          "ammo"
+        ],
+        "may": [
+          "burn",
+          "moving",
+          "suppression"
+        ],
+        "must_not": [
+          "aoe",
+          "scatter",
+          "deflection",
+          "reload",
+          "emplace",
+          "persons",
+          "trigger",
+          "use",
+          "indirect"
+        ]
+      },
+      "aircraft": {
+        "must": [
+          "aoe",
+          "use"
+        ],
+        "may": [
+          "attack",
+          "scatter",
+          "suppression",
+          "deflection"
+        ],
+        "must_not": [
+          "reload",
+          "emplace",
+          "moving",
+          "persons",
+          "trigger",
+          "burn",
+          "indirect",
+          "ammo"
+        ]
+      }
+    }
+  },
+  "ebps": {
+    "modules": [
+      "move",
+      "sight",
+      "weapons",
+      "stealth",
+      "hold",
+      "crew",
+      "recrew",
+      "wreck",
+      "tow",
+      "produces",
+      "aura",
+      "construction",
+      "flight",
+      "regen"
+    ],
+    "categories": {
+      "infantry": {
+        "must": [
+          "move",
+          "sight",
+          "weapons"
+        ],
+        "may": [
+          "stealth",
+          "regen",
+          "aura",
+          "construction"
+        ],
+        "must_not": [
+          "hold",
+          "crew",
+          "recrew",
+          "wreck",
+          "tow",
+          "produces",
+          "flight"
+        ]
+      },
+      "vehicles": {
+        "must": [
+          "move",
+          "sight"
+        ],
+        "may": [
+          "weapons",
+          "hold",
+          "crew",
+          "recrew",
+          "wreck",
+          "produces",
+          "aura",
+          "stealth",
+          "tow",
+          "regen"
+        ],
+        "must_not": [
+          "construction",
+          "flight"
+        ]
+      },
+      "team_weapons": {
+        "must": [
+          "sight",
+          "weapons",
+          "crew"
+        ],
+        "may": [
+          "tow",
+          "move",
+          "stealth",
+          "recrew",
+          "wreck"
+        ],
+        "must_not": [
+          "hold",
+          "produces",
+          "aura",
+          "construction",
+          "flight",
+          "regen"
+        ]
+      },
+      "emplacements": {
+        "must": [
+          "sight",
+          "construction"
+        ],
+        "may": [
+          "weapons",
+          "crew",
+          "recrew",
+          "aura",
+          "hold",
+          "stealth",
+          "wreck"
+        ],
+        "must_not": [
+          "move",
+          "tow",
+          "produces",
+          "flight",
+          "regen"
+        ]
+      },
+      "buildings": {
+        "must": [
+          "construction"
+        ],
+        "may": [
+          "produces",
+          "sight",
+          "weapons",
+          "hold",
+          "aura",
+          "wreck"
+        ],
+        "must_not": [
+          "move",
+          "stealth",
+          "crew",
+          "recrew",
+          "tow",
+          "flight",
+          "regen"
+        ]
+      },
+      "aircraft": {
+        "must": [
+          "flight"
+        ],
+        "may": [
+          "weapons",
+          "sight"
+        ],
+        "must_not": [
+          "move",
+          "stealth",
+          "hold",
+          "crew",
+          "recrew",
+          "wreck",
+          "tow",
+          "produces",
+          "aura",
+          "construction",
+          "regen"
+        ]
+      }
+    }
+  },
+  "sbps": {
+    "modules": [
+      "capture",
+      "reinforce",
+      "veterancy",
+      "build",
+      "team_weapon",
+      "supply"
+    ],
+    "categories": {
+      "infantry": {
+        "must": [
+          "capture",
+          "reinforce",
+          "veterancy",
+          "supply"
+        ],
+        "may": [
+          "build"
+        ],
+        "must_not": [
+          "team_weapon"
+        ]
+      },
+      "vehicles": {
+        "must": [
+          "veterancy",
+          "supply"
+        ],
+        "may": [
+          "build"
+        ],
+        "must_not": [
+          "capture",
+          "reinforce",
+          "team_weapon"
+        ]
+      },
+      "team_weapons": {
+        "must": [
+          "capture",
+          "reinforce",
+          "veterancy",
+          "team_weapon",
+          "supply"
+        ],
+        "may": [],
+        "must_not": [
+          "build"
+        ]
+      },
+      "emplacements": {
+        "must": [],
+        "may": [
+          "team_weapon",
+          "veterancy",
+          "supply"
+        ],
+        "must_not": [
+          "capture",
+          "reinforce",
+          "build"
+        ]
+      },
+      "buildings": {
+        "must": [],
+        "may": [],
+        "must_not": [
+          "capture",
+          "reinforce",
+          "veterancy",
+          "build",
+          "team_weapon",
+          "supply"
+        ]
+      },
+      "aircraft": {
+        "must": [],
+        "may": [],
+        "must_not": [
+          "capture",
+          "reinforce",
+          "veterancy",
+          "build",
+          "team_weapon",
+          "supply"
+        ]
+      }
+    }
+  }
+}

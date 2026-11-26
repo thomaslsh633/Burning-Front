@@ -61,6 +61,7 @@ Status codes used in the label tables:
 | S | Weapon operation flags from CoH3 `behaviour` | `data/rules/weapon-flags.json` (19 used, 12 ignored); weapon `traits` take these ids |
 | T | Status flags | `data/rules/status-flags.json` (37 flags, stored or derived, with owner system and HUD priority) |
 | U | Indirect fire cadence, shells, range cap, spread for turn play | `data/balance/indirect.json` (classes mortar / spg / light / heavy / rocket); `tools/import-coh3/indirect.js`; weapon labels `indirect_class`, `spread_hex`, `range_hex` (C); barrage game columns in `reports/barrages.md` |
+| V | Data files are grouped one level by category: `{ "<category>": { "<id>": record } }` (CoH3's tree has varying depth; the full path stays in `coh3_ref`) | schemas `data/schema/{weapon,ebps,sbps,veterancy,upgrade,fx}.schema.json`, profiles `data/schema/profiles.json` |
 | O | Numbers are whole wherever possible | shots, damage per shot, HP, cost rounded; only ratios keep two decimals |
 
 ---

@@ -133,7 +133,7 @@ in `logic/turn` alone, so an AP model can replace it later without touching othe
 ```text
 src/
   app/
-  presentation/  input  controller  render  models  animation  ui  audio
+  presentation/  input  controller  render  models  animation  ui  audio  greybox (art-free debug view, stage G)
   logic/         state  store  commands  events  fsm  hex  movement  vision  combat  crew
                  status  lifecycle  capture  economy  build  skills  transport  turn  victory  ai
   services/      data  assets  save  storage  rng  clock  i18n

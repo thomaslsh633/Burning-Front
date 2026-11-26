@@ -1,13 +1,16 @@
 // Dependency-free validator for the data files: a small JSON-Schema subset plus the keyword "vocab".
 // Supported: type (incl. integer, arrays of types), properties, required, additionalProperties (bool or schema),
 // items, minItems, maxItems, enum, const, minimum, maximum, pattern, anyOf, $ref ("file#/$defs/Name" or "#/$defs/Name"),
-// vocab ("<list>": the string must be in data/rules/vocab.json lists.<list>).
+// vocab ("<list>": the string must be in data/rules/vocab.json lists.<list>), propertyVocab (every object key must be).
+// Index entries may be { schema, profile }: the file is grouped by category and each record is checked against
+// data/schema/profiles.json (tools/profiles.js).
 //
 // usage: node tools/validate.js            validate every file listed in data/schema/index.json (exit 1 on errors)
 //        node tools/validate.js <schema> <file …>
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { checkGroupedFile } from './profiles.js';
 
 const typeOf = v => (v === null ? 'null' : Array.isArray(v) ? 'array' : Number.isInteger(v) ? 'integer' : typeof v);
 const matches = (t, v) => t === typeOf(v) || (t === 'number' && typeOf(v) === 'integer');
@@ -53,6 +56,10 @@ function check(schema, value, at, ctx, opts, errors) {
   }
   if (typeOf(value) === 'object') {
     for (const k of schema.required || []) if (!(k in value)) err(`missing required "${k}"`);
+    if (schema.propertyVocab) {
+      const list = opts.vocab?.lists?.[schema.propertyVocab];
+      for (const k of Object.keys(value)) if (!list?.includes(k)) err(`key "${k}" not in vocab list ${schema.propertyVocab}`);
+    }
     for (const [k, v] of Object.entries(value)) {
       const sub = schema.properties?.[k];
       if (sub) check(sub, v, `${at}.${k}`, ctx, opts, errors);
@@ -83,9 +90,12 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const pairs = process.argv.length > 3
     ? process.argv.slice(3).map(f => [f, path.basename(process.argv[2])])
     : Object.entries(JSON.parse(fs.readFileSync(path.join(root, 'data/schema/index.json'), 'utf8')).files);
+  const profiles = JSON.parse(fs.readFileSync(path.join(root, 'data/schema/profiles.json'), 'utf8'));
   let bad = 0;
-  for (const [file, schemaName] of pairs) {
-    const errors = validate(opts.schemas[schemaName], JSON.parse(fs.readFileSync(path.join(root, file), 'utf8')), opts);
+  for (const [file, entry] of pairs) {
+    const { schema: schemaName, profile } = typeof entry === 'string' ? { schema: entry } : entry;
+    const data = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+    const errors = [...validate(opts.schemas[schemaName], data, opts), ...(profile ? checkGroupedFile(profiles, profile, data) : [])];
     for (const e of errors.slice(0, 20)) console.log(`${file} ${e.path}: ${e.message}`);
     if (errors.length > 20) console.log(`${file}: … ${errors.length - 20} more`);
     bad += errors.length;
