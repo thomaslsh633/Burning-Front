@@ -1,0 +1,10 @@
+{
+  "about": "mods/<id>/rules/vocab.json: words a mod adds to existing word lists of data/rules/vocab.json.",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "lists": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9_]+$" } } }
+  },
+  "additionalProperties": false,
+  "required": ["lists"]
+}

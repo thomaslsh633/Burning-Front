@@ -1,21 +1,9 @@
 // Data layers end to end: base → designer overrides, checked after merging (tools/build-data.js).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-import os from 'node:os';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { buildData } from '../../tools/build-data.js';
+import { tempRoot, writeJson as write } from '../helpers/temp-root.js';
 
-const repo = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-
-/** A temporary repo root with the real schemas, rules and the American base data. */
-export function tempRoot() {
-  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'bf-data-'));
-  for (const d of ['data/schema', 'data/rules', 'data/balance', 'data/base/american']) fs.cpSync(path.join(repo, d), path.join(dir, d), { recursive: true });
-  return dir;
-}
-const write = (root, rel, obj) => { fs.mkdirSync(path.dirname(path.join(root, rel)), { recursive: true }); fs.writeFileSync(path.join(root, rel), JSON.stringify(obj)); };
 const garand = out => out.factions.american.weapon.rifle.garand_rifleman_us;
 
 test('base alone builds without errors', () => {

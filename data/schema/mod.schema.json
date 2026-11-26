@@ -1,0 +1,14 @@
+{
+  "about": "mods/<id>/mod.json: a mod's manifest (tools/mods.js).",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "types.schema.json#/$defs/Id" },
+    "name": { "type": "string" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "data_format": { "type": "integer", "minimum": 1 },
+    "load_after": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } },
+    "description": { "type": "string" }
+  },
+  "additionalProperties": false,
+  "required": ["id", "name", "version", "data_format"]
+}

@@ -138,6 +138,7 @@ src/
                  status  lifecycle  capture  economy  build  skills  transport  turn  victory  ai
   services/      data  assets  save  storage  rng  clock  i18n
 data/            (above)
+mods/            load-order.json + one folder per mod (units overrides / new records, vocab words); see mods/README.md
 tools/           check-layers.js, validate.js + profiles.js (schemas), build-data.js (base + units + mods → generated),
                  data-links.js, mods.js
   lib/           config.js (the one reader of data/balance), coh3.js (CoH3 source helpers + loadSource)

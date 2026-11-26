@@ -1,0 +1,7 @@
+{
+  "id": "example_veteran_riflemen",
+  "name": "Example: veteran riflemen",
+  "version": "1.0.0",
+  "data_format": 1,
+  "description": "Shows the three things a mod can do: change a value (Garand far accuracy), add a record (a veteran rifle squad), add a word to a word list (the trait desert_veteran)."
+}

@@ -1,0 +1,10 @@
+{
+  "about": "mods/load-order.json: the enabled mods, first loaded first (tools/mods.js).",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "enabled": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } }
+  },
+  "additionalProperties": false,
+  "required": ["enabled"]
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "riflemen_veteran_us": {
+   "name": "unit.riflemen_veteran_us.name",
+   "short_name": "unit.riflemen_veteran_us.short",
+   "desc": "unit.riflemen_veteran_us.desc",
+   "icon": "riflemen_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

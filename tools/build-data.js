@@ -11,10 +11,28 @@ import { mergeKind, UNIT_KINDS } from '../src/services/data/index.js';
 import { validate, loadContext } from './validate.js';
 import { checkGroupedFile } from './profiles.js';
 import { checkLinks } from './data-links.js';
-import { enabledMods, mergeVocab } from './mods.js';
+import { loadMods, mergeVocab } from './mods.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const readJson = f => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null);
+
+const subdirs = dir => (fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => fs.statSync(path.join(dir, f)).isDirectory()).sort() : []);
+
+/** Override and mod folders may only hold known factions and kind files; anything else would be silently ignored. */
+export function strayFiles(rootDir, factions, mods) {
+  const errors = [], kinds = Object.keys(UNIT_KINDS).map(k => `${k}.json`);
+  const roots = [{ name: 'data/units', dir: path.join(rootDir, 'data/units') },
+    ...mods.map(m => ({ name: `mod:${m.id} units`, dir: path.join(m.dir, 'units') }))];
+  for (const { name, dir } of roots) {
+    for (const f of subdirs(dir)) {
+      if (!factions.includes(f)) { errors.push(`${name}/${f}: no faction "${f}" in data/base`); continue; }
+      for (const file of fs.readdirSync(path.join(dir, f))) {
+        if (!kinds.includes(file)) errors.push(`${name}/${f}/${file}: unknown file (expected ${kinds.join(', ')})`);
+      }
+    }
+  }
+  return errors;
+}
 
 /** Layers in merge order for one faction: base, designer, then each enabled mod. */
 export function layersFor(rootDir, faction, mods) {
@@ -27,11 +45,14 @@ export function layersFor(rootDir, faction, mods) {
 
 export function buildData(rootDir = root) {
   const ctx = loadContext(rootDir);
-  const mods = enabledMods(rootDir);
-  ctx.vocab = mergeVocab(ctx.vocab, mods);
-  const profiles = readJson(path.join(rootDir, 'data/schema/profiles.json'));
-  const factions = fs.readdirSync(path.join(rootDir, 'data/base')).filter(f => fs.statSync(path.join(rootDir, 'data/base', f)).isDirectory()).sort();
   const errors = [], warnings = [], overrides = [];
+  const { mods, errors: modErrors } = loadMods(rootDir, ctx);
+  const vocab = mergeVocab(ctx.vocab, mods, ctx);
+  ctx.vocab = vocab.vocab;
+  errors.push(...modErrors, ...vocab.errors);
+  const profiles = readJson(path.join(rootDir, 'data/schema/profiles.json'));
+  const factions = subdirs(path.join(rootDir, 'data/base'));
+  errors.push(...strayFiles(rootDir, factions, mods));
   const out = { factions: {} };
   for (const faction of factions) {
     const layers = layersFor(rootDir, faction, mods);
