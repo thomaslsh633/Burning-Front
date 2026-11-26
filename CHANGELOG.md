@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — D2-9 victory, D2 done (2026-11-26)
+- Capture mode: the Victory Meter bleeds the side behind on VPs every turn start; 0 tickets loses.
+- Annihilation: a side with no units that cannot field a new one loses; optional round cap.
+- A whole 1v1 match now plays to the end through commands alone (integration test).
+
 ## rewrite — D2-8 points and economy (2026-11-26)
 - Points are taken at turn-start ticks, one point per capturing squad; contested zones freeze; sectors decide supply.
 - Income and upkeep at each own turn start; `Produce` buys a squad beside the HQ or a production building, with the CoH3

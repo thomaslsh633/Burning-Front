@@ -7,6 +7,7 @@ import { gameData } from './game-data.js';
 /**
  * units: [{ team, sbps, pos, facing?, stance?, id? }]
  * map: { cols, rows, terrain: { "c,r": { ground?, object?, elev? } }, edges: { edgeKey: kind }, lines, structures, points, sectors, production } (map definition layers)
+ * map.mode: match mode, default capture (without VPs it never ends; annihilation ends when a side has nothing left).
  * → { state, data } with data.maps.test the compiled map. Blue units get their turn budget; red counter fire is not armed
  * (end the turn twice with EndTurn for a real enemy turn).
  */
@@ -17,7 +18,7 @@ export function testMatch(units, map = {}) {
   const compiled = compileMap(def, base.rules.terrain);
   if (compiled.errors.length) throw new Error(compiled.errors.join('\n'));
   const data = { ...base, maps: { ...base.maps, test: compiled.map } };
-  let state = createMatch({ map: { id: 'test' }, order: ['blue', 'red'], rng: 1,
+  let state = createMatch({ map: { id: 'test' }, mode: map.mode ?? 'capture', order: ['blue', 'red'], rng: 1,
     teams: { blue: { faction: 'american', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 0, r: 0 } },
       red: { faction: 'german', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 11, r: 9 } } },
     units }, data);

@@ -28,8 +28,14 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Maps: Skirmish 1v1 22×14 (every tier building pre-built; modes capture, annihilation); Faymonville 48×48 at 0.9 scale (capture) (v162, v168, v169, v202).
   The converted v214 maps (`data/maps/skirmish`, `faymonville`) are reference only; new maps are made from scratch (2026-11-26).
 - Capture mode: the opponent's Victory-Meter tickets reach 0 (default 350). No turn limit, no HQ-kill or resource win (v59).
+  Settlement at every side's turn start (D2-9, `data/balance/victory.json`, v214 values): the side behind on VPs loses
+  2 / 5 / 10 tickets for a lead of 1 / 2 / 3+, +1 per 6 consecutive settlements with the same leader (a shrinking lead halves
+  the streak); at VP parity a resource-control gap of 4 (fuel / munition / manpower points 2 each) costs the weaker side 1.
+  Both at 0: more VPs wins.
 - Annihilation mode (Skirmish only): win when every enemy unit is gone (passengers included) AND the enemy cannot deploy a new one
   (no working production building, or not enough resources for its cheapest unit); optional round cap (v202).
+  D2-9: checked at each side's turn start; both sides out at once: the side whose turn starts wins; after the round cap the
+  higher surviving unit value wins, equal is a draw. Population counts toward "cannot deploy" (cap 300).
 - HQ cannot be destroyed (crippled state); HQ HP 690 (v59, v126).
 - Start resources, standard: 600 MP / 10 munitions / 20 fuel; the side moving second gets +40 MP / +10 munitions once (editable in setup) (v206).
   Larger test presets: fuel = 7 % of funds, munitions 60 (v206).

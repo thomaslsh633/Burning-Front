@@ -2,6 +2,15 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D2-9, D2 exit gate)
+- **Done:** production rules (non-production units produced directly, research only for high tier, support vehicles in
+  Tier 2); v214 maps recorded as reference only. D2-9 `logic/victory`: Victory Meter (VP-lead bleed, momentum, parity
+  tiebreak), annihilation (no units + cannot deploy, round cap), `data/balance/victory.json`; the victory slot of the turn
+  start. D2 exit gate: `tests/integration/match.test.js` plays an annihilation and a capture match to the end through
+  `store.dispatch` only. 275 tests.
+- **Next:** stage G (greybox); decide when to build `logic/build`, research and the annihilation HQ.
+- **Blocked:** nothing.
+
 ## 2026-11-26 (rule decisions, D2-8)
 - **Done:** decisions: vehicles never abandoned or captured (ABANDONED removed), crewless guns are targets for every side
   (wreck at 0 HP, no XP), reload timers block fire and counter fire, pickups limited to upgrade / slot weapons (not built).

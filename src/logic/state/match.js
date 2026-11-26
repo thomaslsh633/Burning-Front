@@ -1,12 +1,13 @@
 // GameState: the whole simulation as one plain object. Units are kept by id.
 // { match: { mode, turn, side, order, over }, map: { id, cols, rows, changes (logic/terrain) }, units: { id: unit }, teams: { team: { faction, resources, tickets } },
-//   points: [{ id, owner, progress, by }] (logic/capture), rng: integer (services/rng state; the store restores the generator from it) }
+//   points: [{ id, owner, progress, by }] (logic/capture), victory (logic/victory), rng: integer (services/rng state; the store restores the generator from it) }
 import { createUnit } from './unit.js';
 import { fromKey } from '../hex/index.js';
 
 /**
  * setup: { mode, map: { id } (compiled map in data.maps), order: [first team, second], teams: { team: { faction, resources, tickets? } },
- *          units?: [{ team, sbps, pos, facing?, stance? }], rng: integer }; every map point starts neutral
+ *          units?: [{ team, sbps, pos, facing?, stance? }], roundCap?, rng: integer }; every map point starts neutral;
+ *          tickets default to data/balance/victory.json
  * Without `units` the map's placements are used; a team without `rally` takes the map's deploy rally point.
  */
 export function createMatch(setup, data) {
@@ -18,11 +19,12 @@ export function createMatch(setup, data) {
     units[id] = createUnit({ ...spec, id }, data);
   });
   return {
-    match: { mode: setup.mode ?? 'annihilation', turn: 0, side: null, order: [...setup.order], over: null, nextId: specs.length + 1 },
+    match: { mode: setup.mode ?? 'annihilation', turn: 0, side: null, order: [...setup.order], over: null, nextId: specs.length + 1, roundCap: setup.roundCap ?? null },
     map: { id: setup.map.id, cols: map.cols, rows: map.rows, changes: { hexes: {}, segments: {}, structures: {} } },
     units,
-    teams: Object.fromEntries(Object.entries(setup.teams).map(([t, v]) => [t, { ...structuredClone(v), rally: v.rally ?? (map.deploy?.[t] ? fromKey(map.deploy[t].rally) : null) }])),
+    teams: Object.fromEntries(Object.entries(setup.teams).map(([t, v]) => [t, { tickets: data.balance?.victory?.tickets ?? null, ...structuredClone(v), rally: v.rally ?? (map.deploy?.[t] ? fromKey(map.deploy[t].rally) : null) }])),
     points: (map.points || []).map(p => ({ id: p.id, owner: null, progress: 0, by: null })),
+    victory: { leader: null, streak: 0, prevLead: 0 },
     rng: setup.rng >>> 0,
   };
 }

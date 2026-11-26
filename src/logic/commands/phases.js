@@ -8,6 +8,7 @@ import * as crew from '../crew/index.js';
 import * as lifecycle from '../lifecycle/index.js';
 import * as capture from '../capture/index.js';
 import * as economy from '../economy/index.js';
+import * as victory from '../victory/index.js';
 import { distance } from '../hex/index.js';
 import { unitsOf, enemyOf } from '../state/index.js';
 import { chain, ifUnit, overwatchStep } from './steps.js';
@@ -53,7 +54,7 @@ function eachUnit(state, d, rng, team, hooks) {
 /**
  * Side turn start in SPEC §2 order: strikes → status → capture tick → victory settlement → income.
  * status: the side's units run their turn-start hooks; the other side's units get their counter fire for this turn.
- * Phases with run null are filled by later systems (D2-9 victory, skills: pending strikes).
+ * Phases with run null are filled by later systems (skills: pending strikes).
  */
 export const SIDE_TURN_START = Object.freeze([
   { phase: 'strikes', run: null },
@@ -62,7 +63,7 @@ export const SIDE_TURN_START = Object.freeze([
     x => eachUnit(x, d, rng, enemyOf(x, x.match.side), [{ run: (y, dd, r, id) => turn.armCounter(y, id, dd) }]),
   ]) },
   { phase: 'capture', run: (s, d) => capture.captureTick(s, d, s.match.side) },
-  { phase: 'victory', run: null },
+  { phase: 'victory', run: (s, d) => victory.settle(s, d, s.match.side) },
   { phase: 'income', run: (s, d) => economy.collectIncome(s, d, s.match.side) },
 ]);
 

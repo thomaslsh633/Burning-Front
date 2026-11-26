@@ -21,6 +21,7 @@
     "data/balance/crew.json": "crew.schema.json",
     "data/balance/turn.json": "turn.schema.json",
     "data/balance/economy.json": "economy.schema.json",
-    "data/rules/production.json": "production.schema.json"
+    "data/rules/production.json": "production.schema.json",
+    "data/balance/victory.json": "victory.schema.json"
   }
 }

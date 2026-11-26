@@ -1,0 +1,7 @@
+{
+  "about": "Win conditions (SPEC §2; v214 Victory Meter v59). Capture mode: each side starts with `tickets` (setup may set its own); at every side's turn start (victory settlement) the side behind on victory points loses bleed_by_vp_lead[lead] (lead 3+ uses the last), +1 per momentum_every consecutive settlements with the same leader (a shrinking lead halves the streak, a new leader resets it); at VP parity a resource-control gap of parity.control_gap (point weights) bleeds parity.bleed from the weaker side. 0 tickets loses; both at 0: more VPs wins (blue on a tie). Annihilation mode: a side with no units left that cannot field a new one (nothing it can afford within the population cap) loses; with a round cap, after that round the higher surviving unit value wins, equal is a draw.",
+  "tickets": 350,
+  "bleed_by_vp_lead": [0, 2, 5, 10],
+  "momentum_every": 6,
+  "parity": { "control_gap": 4, "bleed": 1, "weights": { "manpower": 2, "munition": 2, "fuel": 2 } }
+}

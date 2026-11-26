@@ -1,0 +1,22 @@
+{
+  "about": "data/balance/victory.json",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "tickets": { "type": "integer", "minimum": 1 },
+    "bleed_by_vp_lead": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2 },
+    "momentum_every": { "type": "integer", "minimum": 1 },
+    "parity": {
+      "type": "object",
+      "properties": {
+        "control_gap": { "type": "integer", "minimum": 1 },
+        "bleed": { "type": "integer", "minimum": 0 },
+        "weights": { "type": "object", "propertyNames": { "enum": ["manpower", "munition", "fuel"] }, "additionalProperties": { "type": "integer", "minimum": 0 } }
+      },
+      "additionalProperties": false,
+      "required": ["control_gap", "bleed", "weights"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["tickets", "bleed_by_vp_lead", "momentum_every", "parity"]
+}
