@@ -9,8 +9,7 @@
 //   max_shells   caps a normal-fire volley (rockets); damage per turn then falls below CoH3 (accuracy cannot exceed 1).
 //   blind fire   target hex not seen by the firing side: accuracy ÷ (CoH3 fow_angle × fow_distance multipliers),
 //                spread + blind.extra_spread_hex. A sound-ranged hex (an enemy indirect weapon fired from it) is not blind.
-
-const r2 = x => Math.round(x * 100) / 100;
+import { r2 } from '../lib/coh3.js';
 
 /** Indirect class of a weapon / ability / squad id, or null. */
 export function classOf(id, cfg) {

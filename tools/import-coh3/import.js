@@ -7,15 +7,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { indexKind } from '../coh3/catalog.js';
-import { records } from '../coh3/census.js';
+import { loadSource, byId, EXT, last } from '../lib/coh3.js';
+import { buildRoster } from '../coh3/roster.js';
 import { classOf } from './indirect.js';
 import { loadConfig } from '../lib/config.js';
-import { EXT, FLAG_TESTS, convertWeapon, convertEntity, convertSquad, convertVeterancy, convertUpgrade } from './convert.js';
+import { FLAG_TESTS, convertWeapon, convertEntity, convertSquad, convertVeterancy, convertUpgrade } from './convert.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
-const last = p => String(p ?? '').split('/').pop();
 
 export const PILOT = {
   american: ['riflemen_us', 'sherman_us', 'at_gun_57mm_us', 'mortar_81mm_us', 'hmg_30cal_us', 'hmg_fighting_position_us'],
@@ -23,18 +22,11 @@ export const PILOT = {
 };
 
 export function importFaction(faction, squadIds) {
-  const dir = path.join(root, 'data/source/coh3');
+  const src = loadSource(root), dir = src.dir;
   const conf = loadConfig(root);
   const { vocab, profiles, roster, ammo, scale } = conf, cfg = conf.fire;
-  const catalog = read('reports/catalog.json').catalog;
   const races = Object.values(roster.factions[faction].sources);
-  const byId = (kind, prefix) => {
-    const m = new Map();
-    for (const [p, v] of indexKind(dir, kind, prefix)) m.set(last(p), { ...v, ref: p });
-    return m;
-  };
-  const ebps = byId('ebps', r => `ebps/races/${r}`), sbps = byId('sbps', r => `sbps/races/${r}`);
-  const weapons = byId('weapon', r => `weapon/${r}`), upgrades = byId('upgrade', r => `upgrade/${r}`);
+  const ebps = byId(src.ebps), sbps = byId(src.sbps), weapons = byId(src.weapons), upgrades = byId(src.upgrades);
   const ebpsByRef = new Map([...ebps.values()].map(v => [v.ref, v]));
   const vetIndex = new Map();
   for (const race of [...new Set([...races, 'british', 'common'])]) {
@@ -56,7 +48,8 @@ export function importFaction(faction, squadIds) {
     if (direct && !out.some(x => x.id === direct)) out.push({ id: direct, type: 'default' });
     return out;
   };
-  const catUnits = Object.fromEntries(races.flatMap(r => (catalog[r]?.units || []).map(u => [u.id, u])));
+  const rosterUnits = buildRoster(src, roster, races);
+  const catUnits = Object.fromEntries(races.flatMap(r => rosterUnits[r].units.map(u => [u.id, u])));
 
   const files = { weapon: {}, ebps: {}, sbps: {}, veterancy: {}, upgrade: {}, fx: { weapon: {}, ebps: {}, sbps: {}, upgrade: {} } };
   const report = [];

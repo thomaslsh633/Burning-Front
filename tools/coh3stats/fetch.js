@@ -9,13 +9,14 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { r2 } from '../lib/coh3.js';
 
 export const SITE = 'https://coh3stats.com';
 // coh3stats race id → our CoH3 race id (coh3stats "british" is the multiplayer British Forces = british_africa)
 export const RACE_MAP = { german: 'german', american: 'american', dak: 'afrika_korps', british: 'british_africa' };
 const PAUSE_MS = 150;
 
-const r2 = x => (typeof x === 'number' ? Math.round(x * 100) / 100 : x);
+const round2 = x => (typeof x === 'number' ? r2(x) : x);   // coh3stats values may be strings
 
 /** Keep what Burning Front uses from one unit page's calculatedData. */
 export function trimUnit(cd) {
@@ -38,7 +39,7 @@ export function trimUnit(cd) {
     })),
     weapons: (cd.squadWeapons || []).map(w => ({
       id: w.weapon_id, name: w.weapon?.ui_name ?? w.description ?? '', class: w.weapon?.weapon_class ?? '', num: w.num, carrier: w.unit,
-      dps: (w.dps_default || []).map(p => [r2(p.x), r2(p.y)]),
+      dps: (w.dps_default || []).map(p => [round2(p.x), round2(p.y)]),
     })),
     upgrades: (cd.upgrades || []).map(u => ({ id: u.id, name: u.ui?.screenName ?? '', brief: u.ui?.briefText ?? '', cost: u.cost ?? u.time_cost ?? null })),
     upgrade_weapons: (cd.upgradeWeaponLoadouts || []).map(u => ({ upgrade: u.upgrade?.id, weapons: (u.weapons || u.loadout || []).map(w => w.weapon_id ?? w.id).filter(Boolean) })),

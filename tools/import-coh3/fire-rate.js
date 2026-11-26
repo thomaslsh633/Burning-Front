@@ -17,11 +17,9 @@
 //   per_use      grenades, mines: 1 shot per use, CoH3 damage.
 
 import { classOf, normalFire, minRangeHex } from './indirect.js';
+import { avg, isTrue, r2 } from '../lib/coh3.js';
 
-const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
 const mult = (m, band) => (m && typeof m[band] === 'number' ? m[band] : 1);
-const isTrue = v => v === 'True' || v === true;
-const round2 = x => Math.round(x * 100) / 100;
 const roundTo = (x, d) => Math.round(x * 10 ** d) / 10 ** d;
 
 export function magazineTime(bag, band) {
@@ -74,7 +72,7 @@ export function fireRate(bag, category, cfg, id = '') {
   const raw = Object.fromEntries(bands.map(b => [b, rawShots(bag, b, cfg.window_seconds)]));
   const each = f => Object.fromEntries(bands.map(b => [b, f(b)]));
   let rule = ruleOf(category, cfg);
-  const out = { rule, raw: each(b => round2(raw[b])), multiplier: 1, suppression_scale: 1, reload_turns: 0, accuracy_scale: each(() => 1) };
+  const out = { rule, raw: each(b => r2(raw[b])), multiplier: 1, suppression_scale: 1, reload_turns: 0, accuracy_scale: each(() => 1) };
 
   if (rule === 'per_use') return { ...out, raw: each(() => null), shots_per_turn: each(() => 1), damage_per_shot: each(() => damage) };
 
@@ -97,7 +95,7 @@ export function fireRate(bag, category, cfg, id = '') {
     const shells = each(b => (minRaw < 1 ? 1 : Math.max(1, Math.ceil(raw[b] - 0.02))));
     const game = b => shells[b] / (reload + 1);
     return { ...out, shots_per_turn: shells, damage_per_shot: each(() => damage), reload_turns: reload,
-      accuracy_scale: each(b => round2(Math.min(1, raw[b] / game(b)))) };
+      accuracy_scale: each(b => r2(Math.min(1, raw[b] / game(b)))) };
   }
 
   if (rule === 'volley' && bands.some(b => raw[b] < 1)) { rule = 'single_shot'; out.rule = rule; out.slower_than_one = true; }
@@ -108,6 +106,6 @@ export function fireRate(bag, category, cfg, id = '') {
 
   const v = volley(raw, damage, cfg.volley.tolerance, cfg.volley.max_multiplier);
   const scale = damage > 0 ? v.damage / damage : 1;
-  return { ...out, multiplier: damage > 0 ? round2(damage / v.damage) : 1, suppression_scale: round2(scale), shots_per_turn: v.shots,
+  return { ...out, multiplier: damage > 0 ? r2(damage / v.damage) : 1, suppression_scale: r2(scale), shots_per_turn: v.shots,
     damage_per_shot: each(() => v.damage) };
 }

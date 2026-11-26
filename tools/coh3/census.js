@@ -6,16 +6,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RACES } from './fetch.js';
+import { records } from '../lib/coh3.js';
 
 const T = v => v === 'True' || v === true;
 const num = v => (typeof v === 'number' ? v : 0);
-
-// Leaf records: a weapon has weapon_bag, an upgrade upgrade_bag; an ebps / sbps record has extensions.
-export function* records(node, pathParts = []) {
-  if (!node || typeof node !== 'object' || Array.isArray(node)) return;
-  if ('weapon_bag' in node || 'upgrade_bag' in node || 'extensions' in node) { yield { path: pathParts, rec: node }; return; }
-  for (const [k, v] of Object.entries(node)) yield* records(v, [...pathParts, k]);
-}
 
 // Weapon blocks that carry a value (one test per module of the planned weapon form).
 export const WEAPON_CHECKS = {

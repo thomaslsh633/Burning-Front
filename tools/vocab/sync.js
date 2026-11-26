@@ -6,30 +6,25 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { indexKind } from '../coh3/catalog.js';
+import { loadSource, byId, EXT, last } from '../lib/coh3.js';
+import { buildRoster } from '../coh3/roster.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const COH3_LISTS = ['weapon_class', 'damage_type', 'unit_tags', 'pass'];
 
-const EXT = (rec, n) => (rec?.extensions || []).map(x => x.exts || x.squadexts || x).find(x => x.template_reference?.value?.endsWith(n));
-
-/** CoH3 words used by the units in reports/catalog.json. */
-export function collectCoh3Words() {
-  const dir = path.join(root, 'data/source/coh3');
-  const catalog = JSON.parse(fs.readFileSync(path.join(root, 'reports/catalog.json'), 'utf8')).catalog;
-  const byId = idx => new Map([...idx].map(([p, v]) => [p.split('/').pop(), v.rec]));
-  const ebps = byId(indexKind(dir, 'ebps', r => `ebps/races/${r}`));
-  const weapons = byId(indexKind(dir, 'weapon', r => `weapon/${r}`));
+/** CoH3 words used by the roster's units (tools/coh3/roster.js). */
+export function collectCoh3Words(src, roster) {
+  const ebps = byId(src.ebps), weapons = byId(src.weapons);
   const words = Object.fromEntries(COH3_LISTS.map(k => [k, new Set()]));
-  for (const faction of Object.values(catalog)) {
+  for (const faction of Object.values(buildRoster(src, roster))) {
     for (const u of faction.units) for (const m of u.members) {
-      const e = ebps.get(m.entity);
+      const e = ebps.get(m.entity)?.rec;
       for (const t of EXT(e, 'type_ext')?.unit_type_list || []) words.unit_tags.add(t.unit_type);
       const pass = EXT(e, 'moving_ext')?.pass_type?.instance_reference;
-      if (pass) words.pass.add(pass.split('/').pop());
+      if (pass) words.pass.add(last(pass));
     }
     for (const w of faction.weapons) {
-      const bag = weapons.get(w.id)?.weapon_bag;
+      const bag = weapons.get(w.id)?.rec?.weapon_bag;
       if (bag?.weapon_class) words.weapon_class.add(bag.weapon_class);
       if (bag?.damage?.damage_type) words.damage_type.add(bag.damage.damage_type);
     }
@@ -50,7 +45,8 @@ export function missingWords(vocab, words) {
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const file = path.join(root, 'data/rules/vocab.json');
   const vocab = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const missing = missingWords(vocab, collectCoh3Words());
+  const roster = JSON.parse(fs.readFileSync(path.join(root, 'data/rules/roster.json'), 'utf8'));
+  const missing = missingWords(vocab, collectCoh3Words(loadSource(root), roster));
   if (process.argv.includes('--seed')) {
     for (const [k, miss] of Object.entries(missing)) vocab.lists[k] = [...new Set([...(vocab.lists[k] || []), ...miss])].sort();
     fs.writeFileSync(file, JSON.stringify(vocab, null, 2) + '\n');

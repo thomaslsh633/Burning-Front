@@ -8,13 +8,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RACES } from './fetch.js';
-import { indexKind } from './catalog.js';
 import { classOf, rangeHex, minRangeHex, barrageUse } from '../import-coh3/indirect.js';
 import { loadConfig } from '../lib/config.js';
+import { indexKind, EXT, avg } from '../lib/coh3.js';
 
 const ROUND = x => Math.round(x);
-const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
-const EXT = (rec, name) => (rec?.extensions || []).map(x => x.exts || x.squadexts || x).find(x => x.template_reference?.value?.endsWith(name));
 
 /** Ability records (records holding ability_bag) with their path. */
 export function* abilityRecords(node, p = []) {

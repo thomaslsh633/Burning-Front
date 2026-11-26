@@ -2,14 +2,10 @@
 // plus `notes` describing every value that was guessed, defaulted or dropped. Used by tools/import-coh3/import.js.
 import { fireRate } from './fire-rate.js';
 import { classOf } from './indirect.js';
+import { EXT, avg, r2, isTrue, last } from '../lib/coh3.js';
 
-const avg = r => ((r?.min ?? 0) + (r?.max ?? 0)) / 2;
-const r2 = x => Math.round(x * 100) / 100;
-const isTrue = v => v === 'True' || v === true;
 const band = (o, f = r2) => (o ? { near: f(o.near ?? 0), mid: f(o.mid ?? 0), far: f(o.far ?? 0) } : null);
 const turnsOf = (s, scale) => Math.max(0, Math.ceil((s ?? 0) / scale.seconds_per_turn));
-export const EXT = (rec, n) => (rec?.extensions || []).map(x => x.exts || x.squadexts || x).find(x => x.template_reference?.value?.endsWith(n));
-const last = p => String(p ?? '').split('/').pop();
 const nonOne = mods => Object.fromEntries(Object.entries(mods).filter(([, v]) => v != null && Math.abs(v - 1) > 1e-9));
 
 const COVER = { tp_defcover: 'none', tp_light_cover: 'light', tp_heavy_cover: 'heavy', tp_garrison_cover: 'garrison',

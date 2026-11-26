@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RACES } from '../coh3/fetch.js';
-import { records } from '../coh3/census.js';
+import { records } from '../lib/coh3.js';
 import { fireRate } from './fire-rate.js';
 import { loadConfig } from '../lib/config.js';
 
