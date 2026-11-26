@@ -107,16 +107,23 @@ values from `data/generated/`; nothing is patched at load time.
 
 ```text
 data/
-  schema/          field definitions (JSON Schema), checked at build
-  source/coh3/     raw CoH3 files, untouched
-  source/burning-bridges/  notes on turn mechanics (reference only, no assets copied)
-  balance/         turn scale and tuning
-  factions/ units/ entities/ weapons/ upgrades/ abilities/ veterancy/
-  rules/           terrain, cover, buildings, closed vocabularies
-  maps/  presentation/  i18n/
-  generated/       built by the derive pipeline, never hand-edited
+  schema/          field definitions (JSON Schema subset), profiles per category, index of checked files
+  source/coh3/     raw CoH3 files, untouched;  source/coh3stats/  coh3stats.com statistics
+  base/<faction>/  weapon, ebps, sbps, upgrade, veterancy, fx: importer output, never edited by hand
+  units/<faction>/ designer overrides: only the fields that change (same files and layout as base)
+  balance/         turn scale (scale.json) and tuning (fire-rate, indirect, ammo)
+  rules/           closed word lists (vocab.json), roster, weapon and status flags; terrain and cover later
+  i18n/            ko.json, en.json: every player-visible string
+  generated/       units.json, i18n.json: built by npm run build:data, never hand-edited
   legacy-snapshot/ values dumped from v214, gameplay reference (differences are reported, not errors)
+mods/              load-order.json + mods/<id>/ (units overrides and new records, vocab words, i18n)
 ```
+
+Unit data is layered and merged by id (`src/services/data/merge.js`): `data/base` → `data/units` → each enabled mod.
+Objects merge by field, arrays are replaced, `null` deletes a field, `{ "remove": true }` deletes a record. The merged
+result is checked by schema, category profile, word lists and links (`tools/build-data.js`, `tools/data-links.js`);
+`reports/overrides.md` lists every override next to its base value. Re-running the importer only rewrites `data/base`,
+so designer edits and mods survive a CoH3 update.
 
 Shared pieces every form is built from:
 

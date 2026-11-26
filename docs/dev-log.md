@@ -2,6 +2,20 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (D2 readiness fixes 1–7)
+- **Done:** (1) data layers: importer writes `data/base`, designers override in `data/units`, `npm run build:data` merges
+  by id into `data/generated/units.json`; (2) game scale in `data/balance/scale.json`, read only through
+  `tools/lib/config.js`; (3) pure `tools/coh3/roster.js` and shared `tools/lib/coh3.js`, nothing reads `reports/` as input;
+  (4) link check on the merged data (`tools/data-links.js`), carried team weapons as `team_weapon.weapon`, squad
+  upgrades split into imported `list` and `pending`; (5) mods: `mods/load-order.json`, manifest, same merge and checks,
+  example mod (not enabled); (6) `check-layers` rejects unit ids in `logic/`, unit field owners in
+  `src/logic/state/ownership.js` + `assertOwnsOnly` test helper; (7) `data/i18n/ko.json` (hand-written) and `en.json`
+  (CoH3 names + hand-written gaps) cover all 85 keys in use, merged with mod text into `data/generated/i18n.json`.
+  Generated unit values unchanged by fixes 2–3; 106 tests.
+- **Next:** D2 rules engine (hex, fsm, state, events, commands, store …), each system's apply test ending with
+  `assertOwnsOnly`.
+- **Blocked:** nothing.
+
 ## 2026-11-26 (D1-5 importer pilot)
 - **Done:** `tools/import-coh3/convert.js` (weapon, entity, squad, veterancy, upgrade conversions, profile-driven module
   filter, weapon-flag tests) and `import.js` (follows sbps → ebps → weapons, kits, veterancy, fx stubs). Pilot: 6 US and

@@ -25,11 +25,17 @@ no new features in it).
 - Unit behaviour comes from state machines: add or change a state handler in the owning system, never an if/else chain.
 - Unit numbers come from CoH3 (`data/source/coh3`); v214 is a gameplay reference, not a data baseline.
 - Numbers a designer tunes go in `data/balance/` or the data forms; player-visible text goes in `data/i18n/`.
+- Unit data: never edit `data/base/` (importer output); change a unit in `data/units/<faction>/` (only the changed
+  fields), then `npm run build:data`. Tools read balance and scale only through `tools/lib/config.js`.
+- `src/logic/` never names a unit id; each unit field has one owner (`src/logic/state/ownership.js`), and every
+  system's apply test ends with `assertOwnsOnly` (`tests/helpers/ownership.js`).
 - Every logic function gets a Node test in `tests/` (mirrors `src/`).
 - Changed a rule? Update its line in `SPEC.md` in the same change.
 
 ## Check
-- `npm run check` — layer and purity rules, every data file against its schema and word lists (`tools/validate.js`,
-  `data/schema/index.json`), and CoH3 word coverage (`tools/vocab/sync.js --check`). New data file → add it to the index.
+- `npm run check` — layer, purity and unit-id rules, every rule / balance / text file against its schema and word lists
+  (`tools/validate.js`, `data/schema/index.json`), CoH3 word coverage (`tools/vocab/sync.js --check`), and the merged unit
+  data (`tools/build-data.js --check`: schema, profiles, links, generated files up to date). New data file → add it to the index.
+- `npm run build:data` — merges base → units → mods into `data/generated/` and writes `reports/overrides.md`, `reports/data-links.md`.
 - `npm test` — all tests (`node --test`).
 - `npm run legacy:build` — builds the v214 reference into `legacy/dist/`.

@@ -90,12 +90,14 @@ data/generated/units.json         final values the game loads (never edited)
 
 ## 6. Recommended order (before or at the start of D2)
 
-| Order | Work | Fixes |
-| --- | --- | --- |
-| 1 | `data/base` + `data/units` overrides + merge function + build step; importer writes base only | D1, mods §5 |
-| 2 | `data/balance/scale.json`; tools read it | D2 |
-| 3 | `tools/coh3/roster.js` (pure) and `tools/lib/coh3.js` (shared helpers) | C1, C2, C3 |
-| 4 | Link check in the merge step | D4 |
-| 5 | Mod manifest, `mods/` folder, load order, the same merge; an example mod (e.g. one changed weapon, one new unit) as a test | mods §4 |
-| 6 | `check-layers` rules: no unit-id literals in `logic/`; per-system ownership test pattern | §1 |
-| 7 | `data/i18n/ko.json` / `en.json` seeds | D3 |
+All seven fixes are done (2026-11-26); the verdict questions above describe the state before them.
+
+| Order | Work | Fixes | Status |
+| --- | --- | --- | --- |
+| 1 | `data/base` + `data/units` overrides + merge function + build step; importer writes base only | D1, mods §5 | done (4866636) |
+| 2 | `data/balance/scale.json`; tools read it | D2 | done (e2ee940) |
+| 3 | `tools/coh3/roster.js` (pure) and `tools/lib/coh3.js` (shared helpers) | C1, C2, C3 | done (e620247) |
+| 4 | Link check in the merge step | D4 | done (4980f5a) |
+| 5 | Mod manifest, `mods/` folder, load order, the same merge; an example mod (e.g. one changed weapon, one new unit) as a test | mods §4 | done (eded8aa) |
+| 6 | `check-layers` rules: no unit-id literals in `logic/`; per-system ownership test pattern | §1 | done (6154bcb) |
+| 7 | `data/i18n/ko.json` / `en.json` seeds | D3 | done (204a8fd) |
