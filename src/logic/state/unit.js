@@ -23,7 +23,7 @@ export function createUnit(spec, data) {
     members, ammo: def.supply?.ammo ?? 0, xp: 0, rank: 0,
     fsm: { life: 'ACTIVE', location: 'ON_MAP', stance: def.kind === 'team_weapon' ? spec.stance ?? 'MOBILE' : 'MOBILE',
       morale: 'NORMAL', action: 'EXHAUSTED', visibility: 'REVEALED' },
-    budget: { move: 0, action: 0, counter: 0 },
+    budget: { move: 0, action: 0, counter: 0, moved: false, fired: false },
     suppression: 0, criticals: [], timers: { stance: 0, smoke: 0, revealedUntil: 0 },
     overwatch: null, container: null, crew: null, retreatTo: null, marks: {},
   };

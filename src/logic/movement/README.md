@@ -8,12 +8,9 @@
 - facing, hull turn cost, reverse
 - retreat movement multiplier
 
-## Public API (planned, exported from `index.js`)
-- `moveCost`
-- `findPath`
-- `reachable`
-- `turnCost`
-- `applyMove`
+## Public API (exported from `index.js`)
+- `moveClass`, `movePoints`, `reachable`, `pathTo`, `turnCost`, `validateMove` / `applyMove(…, onStep)`, `validateTurn` / `applyTurn` — done
+- `hexTerrain`, `edgeBetween`, `stepCost` (data/rules/terrain.json) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

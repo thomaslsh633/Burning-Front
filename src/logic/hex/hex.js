@@ -103,3 +103,11 @@ export function arcContains(origin, facing, arcDeg, target) {
   const diff = Math.abs(((angle(origin, target) - facing * 60 + 540) % 360) - 180);
   return diff <= arcDeg / 2 + 1e-9;
 }
+
+/** One key per hex edge, the same from both sides: the edge in direction d of h. */
+export function edgeKey(h, d) {
+  const dir = ((d % 6) + 6) % 6;
+  if (dir < 3) return `${h.c},${h.r},${dir}`;
+  const n = neighbour(h, dir);
+  return `${n.c},${n.r},${dir - 3}`;
+}

@@ -196,6 +196,11 @@ Confirmed 2026-11-25 (rewrite):
   action to recrew own or enemy equipment; destroyed vehicles leave wrecks (cover, obstacle, cleared by engineers).
 - Unit turn: one move and one action (fire, ability, emplace, build, repair, board) in either order; firing after moving
   uses the weapon's moving accuracy; weapons that cannot fire on the move must fire first or not move.
+  The move is a pool of move points: Move and hull Turn spend from it, in as many steps as it lasts (D2).
+- Terrain (`data/rules/terrain.json`, v214 values): a hex has a ground (cost per move class: infantry / vehicle) and at most
+  one object (crater, trench, bush, dune, rubble, three forest densities, rock, building) whose cost replaces the ground's;
+  an edge object (hedge, fence, stone wall, sandbag row, wire, low wall, balustrade) adds a crossing cost; null = impassable.
+  Units pass through friendly units but never stop on them; enemies block; infantry pass wrecks (D2).
 - Overwatch is for machine-gun teams only (HMG team weapons, e.g. M1919 / MG42 / Vickers teams). An emplaced MG team that
   holds (does not fire in its turn) fires once in the enemy turn at the first enemy that moves into its arc, range and sight.
   Infantry with LMGs, vehicles with MGs and every other weapon never overwatch; this replaces crew watch fire (§5).

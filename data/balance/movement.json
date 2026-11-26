@@ -1,0 +1,7 @@
+{
+  "about": "Movement tuning (SPEC §4, §6, §10). Multipliers apply to a unit's move points at its turn start (rounded down, at least 1 unless 0).",
+  "multipliers": { "suppressed": 0.5, "engine_damaged": 0.5, "retreating": 1.6 },
+  "hull_turn_cost": [0, 1, 1, 2],
+  "reverse": { "arc_deg": 120, "extra_cost_per_hex": 1 },
+  "friendly_pass_through": true
+}

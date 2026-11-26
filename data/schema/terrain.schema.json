@@ -1,0 +1,180 @@
+{
+  "about": "data/rules/terrain.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "pass_classes": {
+      "type": "object",
+      "propertyVocab": "pass",
+      "additionalProperties": {
+        "enum": [
+          "infantry",
+          "vehicle"
+        ]
+      }
+    },
+    "default_ground": {
+      "type": "string"
+    },
+    "ground": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cost"
+        ]
+      }
+    },
+    "objects": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          },
+          "sight": {
+            "enum": [
+              "none",
+              "partial",
+              "block"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cost",
+          "cover",
+          "sight",
+          "height"
+        ]
+      }
+    },
+    "edges": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "cross": {
+            "type": "object",
+            "properties": {
+              "infantry": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "vehicle": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "infantry",
+              "vehicle"
+            ]
+          },
+          "cover": {
+            "type": "string",
+            "vocab": "cover"
+          },
+          "sight": {
+            "enum": [
+              "none",
+              "partial",
+              "block"
+            ]
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "cross",
+          "cover",
+          "sight",
+          "height"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "pass_classes",
+    "default_ground",
+    "ground",
+    "objects",
+    "edges"
+  ]
+}

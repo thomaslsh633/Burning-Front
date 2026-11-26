@@ -1,0 +1,73 @@
+{
+  "about": "data/balance/movement.json",
+  "type": "object",
+  "properties": {
+    "about": {
+      "type": "string"
+    },
+    "multipliers": {
+      "type": "object",
+      "properties": {
+        "suppressed": {
+          "type": "number",
+          "minimum": 0
+        },
+        "engine_damaged": {
+          "type": "number",
+          "minimum": 0
+        },
+        "retreating": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "suppressed",
+        "engine_damaged",
+        "retreating"
+      ]
+    },
+    "hull_turn_cost": {
+      "type": "array",
+      "items": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "reverse": {
+      "type": "object",
+      "properties": {
+        "arc_deg": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "extra_cost_per_hex": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "arc_deg",
+        "extra_cost_per_hex"
+      ]
+    },
+    "friendly_pass_through": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "multipliers",
+    "hull_turn_cost",
+    "reverse",
+    "friendly_pass_through"
+  ]
+}

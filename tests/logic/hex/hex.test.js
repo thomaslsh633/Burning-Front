@@ -55,3 +55,9 @@ test('inside the map', () => {
   assert.equal(hex.inside(H(22, 0), 22, 14), false);
   assert.equal(hex.inside(H(0, -1), 22, 14), false);
 });
+
+test('an edge has one key from both sides', () => {
+  const a = H(4, 4);
+  hex.neighbours(a).forEach((n, d) => assert.equal(hex.edgeKey(a, d), hex.edgeKey(n, (d + 3) % 6)));
+  assert.equal(new Set([0, 1, 2, 3, 4, 5].map(d => hex.edgeKey(a, d))).size, 6);
+});

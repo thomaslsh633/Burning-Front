@@ -12,6 +12,8 @@
     "data/balance/scale.json": "scale.schema.json",
     "mods/load-order.json": "load-order.schema.json",
     "data/i18n/en.json": "i18n.schema.json",
-    "data/i18n/ko.json": "i18n.schema.json"
+    "data/i18n/ko.json": "i18n.schema.json",
+    "data/rules/terrain.json": "terrain.schema.json",
+    "data/balance/movement.json": "movement.schema.json"
   }
 }
