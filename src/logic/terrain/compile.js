@@ -30,6 +30,7 @@ export function compileMap(def, rules) {
   for (const [k, v] of Object.entries(rowsOf(def, 'ground', cols, rows, errors, def.legend?.ground, 'ground'))) if (v !== rules.default_ground) set(k, 'ground', v);
   for (const [k, v] of Object.entries(rowsOf(def, 'objects', cols, rows, errors, def.legend?.objects, 'objects'))) if (v) set(k, 'object', v);
   for (const [k, v] of Object.entries(rowsOf(def, 'elevation', cols, rows, errors))) set(k, 'elev', v);
+  for (const k of Object.keys(rowsOf(def, 'bounds', cols, rows, errors, { '.': null, '#': true }, 'bounds'))) set(k, 'oob', true);   // scenery outside the play area
   for (const [k, v] of Object.entries(def.hexes || {})) {
     if (!isIn(k)) { errors.push(`hexes.${k}: outside the map`); continue; }
     for (const [field, x] of Object.entries(v)) set(k, field, x);
@@ -71,7 +72,7 @@ export function compileMap(def, rules) {
     structures[s.id] = { kind: s.kind, hexes: [...s.hexes], ...(s.team ? { team: s.team } : {}) };
   }
 
-  const passable = k => isIn(k) && !structureAt[k] && rules.ground[hexes[k]?.ground ?? rules.default_ground]?.cost.infantry != null;
+  const passable = k => isIn(k) && !structureAt[k] && !hexes[k]?.oob && rules.ground[hexes[k]?.ground ?? rules.default_ground]?.cost.infantry != null;
   const points = (def.points || []).map(p => {
     if (!passable(p.hex)) errors.push(`point ${p.id}: hex ${p.hex} is not open ground inside the map`);
     return { ...p, zone: disk(fromKey(p.hex), p.radius ?? 0).filter(h => inside(h, cols, rows)).map(key) };
@@ -87,7 +88,8 @@ export function compileMap(def, rules) {
 
   const map = { id, cols, rows, ...(def.meta.theatre ? { theatre: def.meta.theatre } : {}),
     ...(def.meta.name ? { name: def.meta.name } : {}), ...(def.meta.briefing ? { briefing: def.meta.briefing } : {}),
-    hexes, edges, lines, structures, structureAt, points, sectors: def.sectors || [], deploy, placements: def.placements || [] };
+    hexes, edges, lines, structures, structureAt, points, sectors: def.sectors || [], deploy, placements: def.placements || [],
+    production: def.production || [], mines: def.mines || [] };
   return { map, errors };
 }
 

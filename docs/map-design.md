@@ -1,7 +1,9 @@
 # Map design: layers, linear obstacles, new maps
 
-Status: **decided** (2026-11-26): candidate **B** for linear obstacles, `logic/terrain` and the layered map file; destruction
-rules in §5. Being implemented.
+Status: **decided and implemented** (2026-11-26): candidate **B** (`src/logic/terrain`), layered map files (`data/maps`, compiled
+by `npm run build:data`), destruction rules (§5), the two v214 maps converted. Open: garrison command (transport), production
+buildings (economy), mines, smoke / craters from shells, CoH3 weapon modifiers against sandbags / wire / buildings (dropped by
+the importer today), the map editor (stage G).
 Rules it touches: SPEC §2 (maps), §3 (points, sectors), §5 (emplacements), §10 (edge cover, destruction).
 
 ## 1. Audit: is the map split into tiles and objects?

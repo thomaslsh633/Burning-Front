@@ -18,13 +18,14 @@ export function structureAt(state, data, h) {
 }
 
 /**
- * What a hex is made of now: { ground, elev, feature, featureKind ('structure' | 'wreck' | 'object' | null), featureId }.
+ * What a hex is made of now: { ground, elev, oob, feature, featureKind ('structure' | 'wreck' | 'object' | null), featureId }.
+ * oob: scenery outside the play area (seen, never entered).
  * `feature` carries cost / cover / sight / height: a standing building first, then a wreck, then the hex object.
  */
 export function hexAt(state, data, h) {
   const rules = data.rules.terrain, k = key(h), base = mapOf(state, data).hexes[k] || {}, ch = state.map.changes.hexes[k] || {};
   const ground = rules.ground[base.ground ?? rules.default_ground];
-  const out = { ground, elev: base.elev ?? 0, feature: null, featureKind: null, featureId: null };
+  const out = { ground, elev: base.elev ?? 0, oob: !!base.oob, feature: null, featureKind: null, featureId: null };
   const s = structureAt(state, data, h);
   if (s) return { ...out, feature: { ...rules.structure_terrain, height: s.def.height }, featureKind: 'structure', featureId: s.id };
   if (ch.wreck) return { ...out, feature: rules.wrecks[ch.wreck.kind], featureKind: 'wreck', featureId: ch.wreck.kind };

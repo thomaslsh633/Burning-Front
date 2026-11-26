@@ -115,7 +115,8 @@ data/
   balance/         turn scale (scale.json) and tuning (fire-rate, indirect, ammo)
   rules/           closed word lists (vocab.json), roster, weapon and status flags; terrain and cover later
   i18n/            ko.json, en.json: every player-visible string
-  generated/       units.json, i18n.json: built by npm run build:data, never hand-edited
+  maps/<id>/       map.json: layered map definition (ground, objects, elevation, lines, structures, points, deploy …)
+  generated/       units.json, i18n.json, maps/<id>.json: built by npm run build:data, never hand-edited
   legacy-snapshot/ values dumped from v214, gameplay reference (differences are reported, not errors)
 mods/              load-order.json + mods/<id>/ (units overrides and new records, vocab words, i18n)
 ```
@@ -147,7 +148,7 @@ in `logic/turn` alone, so an AP model can replace it later without touching othe
 src/
   app/
   presentation/  input  controller  render  models  animation  ui  audio  greybox (art-free debug view, stage G)
-  logic/         state  store  commands  events  fsm  hex  movement  vision  combat  crew
+  logic/         state  store  commands  events  fsm  hex  terrain  movement  vision  combat  crew
                  status  lifecycle  capture  economy  build  skills  transport  turn  victory  ai
   services/      data  assets  save  storage  rng  clock  i18n
 data/            (above)

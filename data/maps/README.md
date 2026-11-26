@@ -1,7 +1,26 @@
 # data/maps/
 
-Skirmish 22×14 and Faymonville 48×48: tiles, edges, objects, points, sectors, spawn and HQ positions.
+One folder per map: `data/maps/<id>/map.json` (schema `data/schema/map.schema.json`, design `docs/map-design.md`).
+`npm run build:data` checks and compiles every map into `data/generated/maps/<id>.json`; the game reads only the compiled map.
 
-- Format: JSON
-- Edited by: Map tools
-- Data files hold numbers, ids and keys only — never functions, never display text (that goes in data/i18n).
+| Layer | Form | Notes |
+| --- | --- | --- |
+| `meta` | `{ id, cols, rows, theatre?, name, briefing? }` | `id` = folder name; `name` / `briefing` are i18n keys |
+| `legend` | `{ ground: { code: id }, objects: { code: id \| null } }` | one character per hex in the row layers |
+| `ground`, `objects` | rows of codes | ground ids and hex objects from `data/rules/terrain.json` |
+| `elevation` | rows of digits | one step = `elevation_height` (data/balance/vision.json) |
+| `bounds` | rows of `.` / `#` | `#` = scenery outside the play area (seen, never entered) |
+| `hexes` | `{ "c,r": { ground?, object?, elev?, oob? } }` | single-hex overrides |
+| `lines` | `[{ id, kind, points: [[x, row], …], team? }]` | walls, hedges, fences, sandbags, wire at any angle; a line takes the hex edge whose centre-to-centre segment it crosses. `x` is in hex columns (odd rows sit half a hex right), `row` in rows |
+| `edges` | `{ "c,r,d": kind }` | a line on exactly one edge (d = 0 E, 1 SE, 2 SW) |
+| `structures` | `[{ id, kind, hexes, team?, name? }]` | buildings (house_small … church, hq): HP by size, garrison, collapse |
+| `production` | `[{ id, type, team, hexes }]` | production buildings (used by the economy) |
+| `points` | `[{ id, kind: vp \| manpower \| munition \| fuel, hex, radius, sector?, name }]` | zones are the hexes within `radius` |
+| `sectors` | `[{ id, hexes }]` | supply areas |
+| `deploy` | `{ team: { zone: [hexes] \| { rows: [a, b] }, rally } }` | deployment zone and retreat point |
+| `placements` | `[{ team, sbps, hex, facing?, stance? }]` | units at match start |
+| `mines` | `[{ team, hex }]` | |
+
+No display text in a map file: names live in `data/i18n` under `map.<id>.…`.
+`skirmish` and `faymonville` were converted from v214 by `node tools/maps/import-legacy.js` (what was left out:
+`reports/maps/legacy-import.md`).

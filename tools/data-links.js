@@ -89,9 +89,9 @@ export function textKeys(merged) {
     .flatMap(rec => TEXT_FIELDS.map(f => rec?.[f]).filter(k => typeof k === 'string'));
 }
 
-/** factions: { faction: merged data }; i18n: { lang: { key: text } } → { warnings } per language, grouped. */
-export function checkI18n(factions, i18n) {
-  const used = [...new Set(Object.values(factions).flatMap(textKeys))].sort();
+/** factions: { faction: merged data }; i18n: { lang: { key: text } }; extra: other keys in use (maps) → { warnings } per language. */
+export function checkI18n(factions, i18n, extra = []) {
+  const used = [...new Set([...Object.values(factions).flatMap(textKeys), ...extra])].sort();
   const warnings = [];
   for (const [lang, strings] of Object.entries(i18n)) {
     const missing = used.filter(k => !(k in strings));

@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { mergeKind, combineFiles, UNIT_KINDS } from '../src/services/data/index.js';
+import { compileMap } from '../src/logic/terrain/index.js';
 import { validate, loadContext } from './validate.js';
 import { checkGroupedFile } from './profiles.js';
 import { checkLinks, checkI18n } from './data-links.js';
@@ -69,6 +70,30 @@ export function mergeI18n(rootDir, mods, ctx) {
   }
   for (const lang of Object.keys(i18n)) i18n[lang] = Object.fromEntries(Object.entries(i18n[lang]).sort(([a], [b]) => a.localeCompare(b)));
   return { i18n, errors };
+}
+
+/**
+ * Every map definition (data/maps/<id>/map.json) checked and compiled (src/logic/terrain compileMap). Placements must name
+ * squads in the merged unit data. → { maps: { id: compiled }, errors, textKeys }
+ */
+export function buildMaps(rootDir, ctx, factions) {
+  const dir = path.join(rootDir, 'data/maps'), maps = {}, errors = [], textKeys = [];
+  const rules = readJson(path.join(rootDir, 'data/rules/terrain.json'));
+  const squads = new Set(Object.values(factions).flatMap(f => Object.values(f.sbps || {}).flatMap(Object.keys)));
+  for (const id of subdirs(dir)) {
+    const def = readJson(path.join(dir, id, 'map.json'));
+    if (!def) { errors.push(`data/maps/${id}: no map.json`); continue; }
+    const bad = validate(ctx.schemas['map.schema.json'], def, ctx).map(e => `map ${id} ${e.path}: ${e.message}`);
+    if (def.meta?.id !== id) bad.push(`map ${id}: meta.id "${def.meta?.id}" must match the folder name`);
+    errors.push(...bad);
+    if (bad.length) continue;
+    const r = compileMap(def, rules);
+    errors.push(...r.errors.map(e => `map ${id}: ${e}`));
+    for (const p of def.placements || []) if (!squads.has(p.sbps)) errors.push(`map ${id}: placement at ${p.hex} names unknown squad "${p.sbps}"`);
+    textKeys.push(...[def.meta.name, def.meta.briefing, ...(def.points || []).map(p => p.name), ...(def.structures || []).map(s => s.name)].filter(Boolean));
+    maps[id] = r.map;
+  }
+  return { maps, errors, textKeys };
 }
 
 /** Layers in merge order for one faction: base, designer, then each enabled mod. */
@@ -132,8 +157,10 @@ export function buildData(rootDir = root) {
   out.layers = { mods: mods.map(m => ({ id: m.id, version: m.version })) };
   const text = mergeI18n(rootDir, mods, ctx);
   errors.push(...text.errors);
-  warnings.push(...checkI18n(out.factions, text.i18n).warnings);
-  return { out, i18n: text.i18n, errors, warnings, overrides };
+  const maps = buildMaps(rootDir, ctx, out.factions);
+  errors.push(...maps.errors);
+  warnings.push(...checkI18n(out.factions, text.i18n, maps.textKeys).warnings);
+  return { out, i18n: text.i18n, maps: maps.maps, errors, warnings, overrides };
 }
 
 const flatten = (o, pre = '') => Object.entries(o).flatMap(([k, v]) =>
@@ -151,12 +178,13 @@ function overridesReport(overrides) {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const check = process.argv.includes('--check');
-  const { out, i18n, errors, warnings, overrides } = buildData();
-  const outputs = { 'data/generated/units.json': JSON.stringify(out, null, 1) + '\n', 'data/generated/i18n.json': JSON.stringify(i18n, null, 1) + '\n' };
+  const { out, i18n, maps, errors, warnings, overrides } = buildData();
+  const outputs = { 'data/generated/units.json': JSON.stringify(out, null, 1) + '\n', 'data/generated/i18n.json': JSON.stringify(i18n, null, 1) + '\n',
+    ...Object.fromEntries(Object.entries(maps).map(([id, m]) => [`data/generated/maps/${id}.json`, JSON.stringify(m) + '\n'])) };
   for (const e of errors.slice(0, 40)) console.log(`error: ${e}`);
   if (errors.length > 40) console.log(`… ${errors.length - 40} more errors`);
   if (!check) {
-    fs.mkdirSync(path.join(root, 'data/generated'), { recursive: true });
+    fs.mkdirSync(path.join(root, 'data/generated/maps'), { recursive: true });
     for (const [rel, json] of Object.entries(outputs)) fs.writeFileSync(path.join(root, rel), json);
     fs.writeFileSync(path.join(root, 'reports/overrides.md'), overridesReport(overrides));
     fs.writeFileSync(path.join(root, 'reports/data-links.md'), ['# Link warnings', '',
@@ -168,6 +196,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const stale = staleFiles.length > 0;
   const n = Object.values(out.factions).reduce((a, f) => a + Object.values(f.sbps).reduce((b, g) => b + Object.keys(g).length, 0), 0);
   console.log(`${errors.length || stale ? 'unit data has errors' : 'unit data ok'}: ${Object.keys(out.factions).length} factions, ${n} squads, ` +
-    `${overrides.length} overridden fields, ${warnings.length} link warnings${check ? '' : ' → data/generated/units.json, i18n.json'}`);
+    `${overrides.length} overridden fields, ${Object.keys(maps).length} maps, ${warnings.length} link warnings${check ? '' : ' → data/generated/'}`);
   process.exit(errors.length || stale ? 1 : 0);
 }

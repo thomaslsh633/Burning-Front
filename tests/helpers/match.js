@@ -14,7 +14,7 @@ export function testMatch(units, map = {}) {
   const base = gameData();
   const compiled = compileMap(def, base.rules.terrain);
   if (compiled.errors.length) throw new Error(compiled.errors.join('\n'));
-  const data = { ...base, maps: { test: compiled.map } };
+  const data = { ...base, maps: { ...base.maps, test: compiled.map } };
   let state = createMatch({ map: { id: 'test' }, order: ['blue', 'red'], rng: 1,
     teams: { blue: { faction: 'american', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 0, r: 0 } },
       red: { faction: 'german', resources: { manpower: 600, munition: 10, fuel: 20 }, rally: { c: 11, r: 9 } } },
