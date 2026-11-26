@@ -1,4 +1,4 @@
-// Recrew, capture, manual abandon and wreck clearing (docs/unit-state.md §6). Owns fsm.life, team, sbps.
+// Recrew, capture, manual abandon, wreck clearing and conversion (docs/unit-state.md §6). Owns fsm.life, team, sbps.
 // The route sequences the other owners: members (combat), stance (crew), morale and veterancy (status), the wreck (terrain).
 import { transition } from '../fsm/index.js';
 import { putUnit, unitAt } from '../state/index.js';
@@ -55,6 +55,25 @@ export function recrew(state, gunId, squadId, data) {
   const t = transition(LIFE, { ...gun, team: squad.team, sbps }, 'ACTIVE');
   const { [squadId]: gone, ...units } = putUnit(state, t.unit).units;
   return { state: { ...state, units }, events: [ev('Recrewed', { unit: gunId, by: squadId, team: squad.team, sbps }), ...t.events, ev('UnitRemoved', { unit: squadId })] };
+}
+
+/**
+ * Members after a conversion: the new blueprint's members; member i keeps the HP share of old member i (dead stay dead),
+ * members the old blueprint did not have start at the unit's overall HP share.
+ */
+export function convertedMembers(state, unitId, to, data) {
+  const u = state.units[unitId], max = m => data.units.ebps[m.ebps].hp;
+  const share = u.members.reduce((s, m) => s + m.hp, 0) / u.members.reduce((s, m) => s + max(m), 0);
+  return data.units.sbps[to].members.flatMap(m => Array(m.count).fill(m.entity)).map((ebps, i) => {
+    const old = u.members[i], hp = data.units.ebps[ebps].hp;
+    return { ebps, hp: Math.round(hp * (old ? old.hp / max(old) : share)) };
+  });
+}
+
+/** The unit becomes another blueprint in place (id, hex, facing, veterancy kept). */
+export function convert(state, unitId, to) {
+  const u = state.units[unitId];
+  return { state: putUnit(state, { ...u, sbps: to }), events: [ev('Converted', { unit: unitId, from: u.sbps, to })] };
 }
 
 /** A free hex next to the unit that men on foot can step onto (the first in direction order), or null. */

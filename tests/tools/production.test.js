@@ -33,3 +33,8 @@ test('hand overrides: place and research', () => {
   const r = buildProduction(roster, { ...prod, place: { para_us: 'depot' }, research: { para_us: true, heavy_us: false } });
   assert.deepEqual(r.depot, { squads: ['heavy_us', 'tank_us'], research: ['para_us', 'tank_cmd_us'] });
 });
+
+test('squads reached only by conversion are not produced', () => {
+  const r = buildProduction(roster, prod, new Set(['para_us']));
+  assert.deepEqual(r.bar.squads, ['rifles_us']);
+});

@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { settle, canDeploy } from '../../../src/logic/victory/index.js';
+import { settle, hqDestroyed } from '../../../src/logic/victory/index.js';
+import { damageStructure } from '../../../src/logic/terrain/index.js';
 import { testMatch } from '../../helpers/match.js';
 
 const H = (c, r) => ({ c, r });
@@ -33,16 +34,24 @@ test('capture: at VP parity a resource-control gap of 4 bleeds 1; 0 tickets ends
   assert.equal(settle(r.state, data, 'blue').state, r.state, 'over: nothing more');
 });
 
-test('annihilation: no units and nothing affordable loses; money and a building keep a side alive', () => {
-  const map = { mode: 'annihilation', production: [{ id: 'rb', type: 'barracks', team: 'red', hexes: ['10,8'] }] };
-  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(1, 1) }], map);
-  assert.equal(canDeploy(state, data, 'red'), true);
-  assert.equal(settle(state, data, 'blue').state.match.over, null);
-  const broke = { ...state, teams: { ...state.teams, red: { ...state.teams.red, resources: { manpower: 100, munition: 0, fuel: 0 } } } };
-  assert.equal(canDeploy(broke, data, 'red'), false);
-  assert.deepEqual(settle(broke, data, 'blue').state.match.over, { winner: 'blue', reason: 'annihilation' });
-  const bothOut = { ...broke, units: {}, teams: { ...broke.teams, blue: { ...broke.teams.blue, resources: { manpower: 0 } } } };
-  assert.deepEqual(settle(bothOut, data, 'red').state.match.over, { winner: 'red', reason: 'annihilation' }, 'the side that did not act');
+test('annihilation: a side with no units left loses at once, money or not; both at once: the side that did not act wins', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(1, 1) }], { mode: 'annihilation' });
+  assert.deepEqual(settle(state, data, 'blue').state.match.over, { winner: 'blue', reason: 'annihilation' });
+  assert.deepEqual(settle({ ...state, units: {} }, data, 'red').state.match.over, { winner: 'red', reason: 'annihilation' });
+});
+
+test('annihilation: destroying the enemy HQ wins; in capture mode the HQ cannot be destroyed', () => {
+  const hqs = { structures: [{ id: 'hq_b', kind: 'hq', team: 'blue', hexes: ['1,1'] }, { id: 'hq_r', kind: 'hq', team: 'red', hexes: ['10,8'] }] };
+  const units = [{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 3) }, { team: 'red', sbps: 'grenadier_ger', pos: H(8, 8) }];
+  const { state, data } = testMatch(units, { ...hqs, mode: 'annihilation' });
+  const shell = { weapon: { damage_type: 'explosive', category: 'tank_gun' }, amount: 5000, pen: 999 };
+  const hit = damageStructure(state, data, 'hq_r', shell);
+  assert.equal(hit.collapsed, true);
+  assert.equal(hqDestroyed(hit.state, data, 'red'), true);
+  assert.deepEqual(settle(hit.state, data, 'blue').state.match.over, { winner: 'blue', reason: 'hq_destroyed' });
+  const { state: cap, data: d2 } = testMatch(units, hqs);
+  const held = damageStructure(cap, d2, 'hq_r', shell);
+  assert.deepEqual([held.collapsed, held.state.map.changes.structures.hq_r.hp], [false, 1]);
 });
 
 test('annihilation round cap: after it the higher surviving value wins, equal is a draw', () => {

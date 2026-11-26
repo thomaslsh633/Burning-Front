@@ -1,0 +1,24 @@
+{
+  "about": "data/rules/conversions.json",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "conversions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": { "$ref": "types.schema.json#/$defs/Id" },
+          "to": { "$ref": "types.schema.json#/$defs/Id" },
+          "cost": { "type": "object", "propertyVocab": "resource", "additionalProperties": { "type": "integer", "minimum": 0 } },
+          "research": { "type": "boolean" },
+          "global": { "type": "boolean" }
+        },
+        "additionalProperties": false,
+        "required": ["from", "to", "cost"]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["conversions"]
+}

@@ -8,4 +8,5 @@ Terrain types, cover levels (and the CoH3 tp_* → cover mapping), buildings, fo
 - `roster.json`: faction → CoH3 data sets per theatre, units restored from v214, clones for units without CoH3 data, how battlegroup units unlock (production research, see production.json).
 - `weapon-flags.json`: weapon operation rules and special action flags from CoH3 `behaviour` (used / ignored).
 - `status-flags.json`: unit status flags, stored or derived, owner system, clears, HUD priority.
+- `conversions.json`: unit conversions (blueprint changes bought in the field), cost, research-locked ones.
 - `production.json`: map building type → each faction's CoH3 production building (`types`, hand-edited), research placements (`place`, hand-edited), and the squads each building produces or unlocks by research (`buildings`, written by `node tools/coh3/production.js`).

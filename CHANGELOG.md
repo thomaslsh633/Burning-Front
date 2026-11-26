@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — annihilation by HQ, field conversions (2026-11-26)
+- Annihilation: destroy the enemy HQ or every enemy unit; the HQ can be destroyed in this mode only.
+- Units convert in the field (e.g. 251 → Stummel, M3 → M16, Crusader II → III) for munitions / fuel / manpower.
+
 ## rewrite — D2-9 victory, D2 done (2026-11-26)
 - Capture mode: the Victory Meter bleeds the side behind on VPs every turn start; 0 tickets loses.
 - Annihilation: a side with no units that cannot field a new one loses; optional round cap.

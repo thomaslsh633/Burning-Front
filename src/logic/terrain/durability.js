@@ -56,13 +56,14 @@ export function crushEdge(state, data, a, b, moveClass) {
 
 /**
  * Damage a building. A collapse turns its footprint to rubble and reports the units inside (container = building id):
- * lifecycle kills them (SPEC §10). Indestructible buildings (HQ) stop at 1 HP. → { state, events, collapsed, garrison }
+ * lifecycle kills them (SPEC §10). Buildings indestructible in the match mode (HQ in capture mode) stop at 1 HP. → { state, events, collapsed, garrison }
  */
 export function damageStructure(state, data, id, hit) {
   const m = mapOf(state, data), s = m.structures[id], def = data.rules.terrain.structures[s.kind], ch = state.map.changes.structures[id] || {};
   const none = { state, events: [], collapsed: false, garrison: [] };
   if (ch.collapsed || !canDamage(data, { group: 'building' }, hit.weapon)) return none;
-  const hp = Math.max(def.indestructible ? 1 : 0, Math.round((ch.hp ?? def.hp) - effective(hit.amount, hit.pen, def.armor)));
+  const floor = (def.indestructible_in_modes || []).includes(state.match.mode) ? 1 : 0;   // the HQ: indestructible in capture mode
+  const hp = Math.max(floor, Math.round((ch.hp ?? def.hp) - effective(hit.amount, hit.pen, def.armor)));
   if (hp > 0) {
     return { ...none, state: withChanges(state, c => ({ ...c, structures: { ...c.structures, [id]: { hp } } })), events: [ev('FeatureDamaged', { feature: id, kind: s.kind, hp })] };
   }

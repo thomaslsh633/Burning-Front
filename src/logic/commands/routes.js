@@ -121,6 +121,17 @@ export const ROUTES = {
       return { state: born.state, events: [ev('UnitProduced', { unit: born.id, team: c.side, sbps: c.sbps, building: c.building })] };
     },
   },
+  /** { unit, to }: a field conversion (data/rules/conversions.json); spends the action. */
+  Convert: {
+    unit: true,
+    validate: (s, c, d) => economy.validateConvert(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'Convert'),
+    apply: (s, c, d) => chain(s, [
+      x => economy.pay(x, x.units[c.unit].team, economy.conversionOf(d, x.units[c.unit].sbps, c.to).cost),
+      x => combat.setMembers(x, c.unit, lifecycle.convertedMembers(x, c.unit, c.to, d)),
+      x => lifecycle.convert(x, c.unit, c.to),
+      x => turn.spend(x, c.unit, { action: 1 }),
+    ]),
+  },
   EndTurn: {
     apply: (s, c, d, rng) => chain(s, [x => endTurn(x, d, rng), x => startTurn(x, d, rng)]),
   },

@@ -245,3 +245,21 @@ test('turn start: capture tick, then income for the side to move', () => {
   const fuelIncome = own.events.find(e => e.type === 'IncomeReceived' && e.team === 'blue').gross.fuel;
   assert.equal(fuelIncome, 5 + 12, 'the point pays in the same turn start it is taken');
 });
+
+test('Convert: paid in the field, same id and hex, HP share and veterancy kept; research-locked ones refused', () => {
+  const { state: s0, data: d0 } = testMatch([blue('hmg_30cal_us', H(3, 3), { facing: 2 }), blue('riflemen_us', H(5, 5)), red('grenadier_ger', H(10, 9))]);
+  const data = { ...d0, rules: { ...d0.rules, conversions: { conversions: [{ from: 'hmg_30cal_us', to: 'mortar_81mm_us', cost: { munition: 5 } }] } } };
+  const hurt = tweak(s0, 'u1', { xp: 120, members: s0.units.u1.members.map((m, i) => (i === 0 ? { ...m, hp: 0 } : i === 1 ? { ...m, hp: Math.round(m.hp / 2) } : m)) });
+  const r = run(hurt, data, { type: 'Convert', side: 'blue', unit: 'u1', to: 'mortar_81mm_us' });
+  const u = r.state.units.u1, crewHp = data.units.ebps.crew_mortar_us.hp;
+  assert.deepEqual([u.sbps, u.pos, u.facing, u.xp, u.budget.action], ['mortar_81mm_us', H(3, 3), 2, 120, 0]);
+  assert.deepEqual(u.members.map(m => m.ebps), Array(4).fill('crew_mortar_us'));
+  assert.equal(u.members[0].hp, 0, 'the dead stay dead');
+  assert.equal(u.members[1].hp, Math.round(crewHp / 2));
+  assert.equal(r.state.teams.blue.resources.munition, 10 - 5);
+  assert.ok(types(r.events).includes('Converted'));
+  assert.equal(apply(s0, { type: 'Convert', side: 'blue', unit: 'u2', to: 'ranger_us' }, d0, createRng(1)).error, 'needs_research');
+  assert.equal(apply(s0, { type: 'Convert', side: 'blue', unit: 'u2', to: 'sherman_us' }, d0, createRng(1)).error, 'cannot_convert');
+  const engaged = tweak(hurt, 'u1', { engaged: true });
+  assert.equal(apply(engaged, { type: 'Convert', side: 'blue', unit: 'u1', to: 'mortar_81mm_us' }, data, createRng(1)).error, 'engaged');
+});

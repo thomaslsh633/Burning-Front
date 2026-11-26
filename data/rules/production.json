@@ -52,11 +52,9 @@
         "churchill_africa_uk",
         "churchill_avre_africa_uk",
         "churchill_na75_75mm_africa_uk",
-        "crusader_57mm_africa_uk",
         "crusader_aa_africa_uk",
         "crusader_africa_uk",
         "cwt_15_flatbed_africa_uk",
-        "cwt_15_quad_mount_africa_uk",
         "grant_africa_uk",
         "guards_africa_uk",
         "marmon_herrington_africa_uk",
@@ -237,14 +235,10 @@
         "armored_car_8_rad_command_ak",
         "armored_tractor_254_ak",
         "goliath_ak",
-        "halftrack_250_vampire_ak",
         "marder_iii_ak",
         "stug_iii_d_ak"
       ],
-      "research": [
-        "halftrack_250_20mm_ak",
-        "halftrack_250_mortar_ak"
-      ]
+      "research": []
     },
     "mechanized_kompanie_ger": {
       "squads": [
@@ -252,12 +246,8 @@
         "armored_car_222_specialist_ger",
         "armored_car_ger",
         "borgward_iv_ger",
-        "halftrack_stummel_ger",
-        "hummel_ger",
         "jaeger_ger",
-        "jagdpanzer_iv_sdkfz_162_ger",
         "marder_iii_ger",
-        "panzer_iv_cmd_ger",
         "wirbelwind_ger"
       ],
       "research": []
@@ -268,7 +258,6 @@
         "australian_supplytruck_africa_uk",
         "bishop_africa_uk",
         "cwt_15_truck_africa_uk",
-        "cwt_15_truck_medical_africa_uk",
         "cwt_15_truck_repair_resupply_africa_uk",
         "cwt_lrdg_truck_africa_uk_uk",
         "hmg_commando_africa_uk",
@@ -304,8 +293,11 @@
     "panzer_armory_ger": {
       "squads": [
         "brummbar_ger",
+        "hummel_ger",
+        "jagdpanzer_iv_sdkfz_162_ger",
         "nashorn_ger",
         "panther_ger",
+        "panzer_iv_cmd_ger",
         "panzer_iv_ger",
         "stormtrooper_ger",
         "stug_iii_d_ger",
@@ -333,7 +325,6 @@
       "squads": [
         "at_gun_75mm_ger",
         "halftrack_ger",
-        "halftrack_medical_ger",
         "nebelwerfer_150mm_ger",
         "panzergrenadier_ger",
         "panzergrenadier_tankhunter_specialist_ger",

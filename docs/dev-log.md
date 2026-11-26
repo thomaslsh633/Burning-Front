@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-26 (annihilation HQ, conversions)
+- **Done:** annihilation is won by destroying the enemy HQ or eliminating every enemy unit (HQ capture and "cannot deploy"
+  dropped; HQ destructible in annihilation mode only). `Convert` command and `data/rules/conversions.json` (23 CoH3 field
+  conversions; battlegroup / global ones need research); conversion-only squads left out of production. 279 tests.
+- **Next:** stage G; research and the weapon-upgrade system need numbers and a design.
+- **Blocked:** nothing.
+
 ## 2026-11-26 (D2-9, D2 exit gate)
 - **Done:** production rules (non-production units produced directly, research only for high tier, support vehicles in
   Tier 2); v214 maps recorded as reference only. D2-9 `logic/victory`: Victory Meter (VP-lead bleed, momentum, parity

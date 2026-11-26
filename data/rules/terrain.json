@@ -403,7 +403,7 @@
       "armor": 40,
       "garrison": 0,
       "height": 3,
-      "indestructible": true
+      "indestructible_in_modes": ["capture"]
     }
   },
   "structure_terrain": {

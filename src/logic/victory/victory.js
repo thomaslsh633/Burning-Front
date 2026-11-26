@@ -4,7 +4,6 @@ import { ev } from '../events/index.js';
 import { enemyOf, unitsOf } from '../state/index.js';
 import { mapOf } from '../terrain/index.js';
 import { unitValue } from '../status/index.js';
-import { producers, offers, priceOf, canAfford, population } from '../economy/index.js';
 
 const vpCount = (state, data, team) => {
   const kind = Object.fromEntries(mapOf(state, data).points.map(p => [p.id, p.kind]));
@@ -46,21 +45,24 @@ function settleCapture(state, data) {
   return { state: e.state, events: [...events, ...e.events] };
 }
 
-/** Can a side field a new unit: something its HQ or production buildings offer that it can afford within the population cap. */
-export function canDeploy(state, data, team) {
-  const room = data.balance.economy.population_cap - population(state, data, team);
-  return producers(state, data).filter(b => b.team === team)
-    .some(b => offers(state, data, b.id).some(id => canAfford(state, team, priceOf(id, data)) && (data.units.sbps[id].pop ?? 0) <= room));
+/** Has the side lost its HQ (every HQ structure it has on the map collapsed)? A side without an HQ on the map never loses it. */
+export function hqDestroyed(state, data, team) {
+  const hqs = Object.entries(mapOf(state, data).structures).filter(([, s]) => s.kind === 'hq' && s.team === team);
+  return hqs.length > 0 && hqs.every(([id]) => state.map.changes.structures[id]?.collapsed);
 }
 
 /**
- * Annihilation settlement: a side with no active units that cannot deploy loses; both at once: the side whose turn starts
- * (it did not act) wins. With a round cap (match.roundCap), once the turn passes it the higher surviving value wins.
+ * Annihilation settlement (2026-11-26): a side whose HQ is destroyed or that has no active units left loses; both at once:
+ * the side whose turn starts (it did not act) wins. With a round cap (match.roundCap), once the turn passes it the higher
+ * surviving value wins.
  */
 function settleAnnihilation(state, data, side) {
-  const out = t => !unitsOf(state, t).some(u => u.fsm.life === 'ACTIVE') && !canDeploy(state, data, t);
-  const [a, b] = state.match.order;
-  if (out(a) || out(b)) return end(state, out(a) && out(b) ? side : out(a) ? b : a, 'annihilation');
+  const lost = t => hqDestroyed(state, data, t) ? 'hq_destroyed' : !unitsOf(state, t).some(u => u.fsm.life === 'ACTIVE') ? 'annihilation' : null;
+  const [a, b] = state.match.order, la = lost(a), lb = lost(b);
+  if (la || lb) {
+    const winner = la && lb ? side : la ? b : a;
+    return end(state, winner, winner === a ? lb : la);
+  }
   if (state.match.roundCap && state.match.turn > state.match.roundCap) {
     const value = t => unitsOf(state, t).filter(u => u.fsm.life === 'ACTIVE').reduce((s, u) => s + unitValue(u, data), 0);
     const va = value(a), vb = value(b);

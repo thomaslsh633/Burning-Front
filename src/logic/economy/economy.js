@@ -44,6 +44,24 @@ export function collectIncome(state, data, team) {
     events: [ev('IncomeReceived', { team, gross, net }), ev('UpkeepPaid', { team, ...up })] };
 }
 
+/** The conversion of a blueprint into another (data/rules/conversions.json), or null. */
+export const conversionOf = (data, from, to) => data.rules.conversions.conversions.find(c => c.from === from && c.to === to) ?? null;
+
+/**
+ * Convert command: { unit, to }. A conversion the data lists for the unit's blueprint, not research-locked (research is not
+ * built), the target blueprint in the unit data and of the same kind, out of combat, paid, within the population cap.
+ */
+export function validateConvert(state, cmd, data) {
+  const u = state.units[cmd.unit], c = conversionOf(data, u.sbps, cmd.to), to = data.units.sbps[cmd.to];
+  if (!c) return 'cannot_convert';
+  if (c.research) return 'needs_research';
+  if (!to || to.kind !== u.kind) return 'not_available';
+  if (u.engaged) return 'engaged';
+  if (!canAfford(state, u.team, c.cost)) return 'cannot_afford';
+  const extra = (to.pop ?? 0) - (data.units.sbps[u.sbps].pop ?? 0);
+  return population(state, data, u.team) + extra > data.balance.economy.population_cap ? 'population_cap' : null;
+}
+
 /** Population a side fields: the pop of its active units. */
 export const population = (state, data, team) => Object.values(state.units)
   .filter(u => u.team === team && u.fsm.life === 'ACTIVE').reduce((s, u) => s + (data.units.sbps[u.sbps].pop ?? 0), 0);

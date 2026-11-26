@@ -12,6 +12,7 @@
 - `lifeTurnEnd` (a served crew shock is cleared) — done (D2-7)
 - `validateRecrew`, `recrewMembers`, `recrew` (team weapons; own or enemy guns alike) — done (D2-7)
 - `validateAbandon`, `freeNeighbour`, `splitCrew`, `abandon` (the crew becomes a separate unit beside its gun) — done (D2-7)
+- `convertedMembers`, `convert` (field conversion: the new blueprint, members' HP share) — done
 - `validateClearWreck` (who may clear; `logic/terrain` `clearWreck` applies the work) — done (D2-7)
 
 ## May import

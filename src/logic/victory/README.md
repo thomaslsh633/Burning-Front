@@ -5,12 +5,11 @@
 ## Owns
 - `teams[team].tickets`, `GameState.victory` (Victory Meter momentum), `match.over` (`{ winner, reason }`)
 - capture: VP-lead ticket bleed with momentum, parity tiebreak by resource control (v214 Victory Meter)
-- annihilation: no units and cannot deploy; optional round cap (`match.roundCap`) decided by surviving value
+- annihilation: enemy HQ destroyed or no enemy units left (2026-11-26); optional round cap (`match.roundCap`) decided by surviving value
 - room for new modes
 
 ## Public API (exported from `index.js`)
-- `settle(state, data, side)` (the `victory` slot of the turn start), `canDeploy(state, data, team)` — done (D2-9)
-- the dedicated capturable HQ of annihilation mode (SPEC §10) — not built
+- `settle(state, data, side)` (the `victory` slot of the turn start), `hqDestroyed(state, data, team)` — done (D2-9)
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

@@ -98,3 +98,10 @@ test('a crew without its gun dies without leaving a wreck', () => {
   assert.equal(r.state.units.u1, undefined);
   assert.equal(r.state.map.changes.hexes['4,4'], undefined);
 });
+
+test('convert writes the blueprint only', () => {
+  const { state } = testMatch([{ team: 'blue', sbps: 'hmg_30cal_us', pos: H(3, 4) }]);
+  const r = life.convert(state, 'u1', 'mortar_81mm_us');
+  assert.equal(r.state.units.u1.sbps, 'mortar_81mm_us');
+  assertOwnsOnly('lifecycle', state, r.state);
+});

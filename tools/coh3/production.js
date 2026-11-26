@@ -22,13 +22,14 @@ const total = u => Object.values(u.price?.cost ?? {}).reduce((a, b) => a + b, 0)
 const base = id => id.replace(/_[a-z]+$/, '');   // race suffix off: panzer_iv_cmd_ger → panzer_iv_cmd
 
 /**
- * rosterOut: buildRoster result; prod: data/rules/production.json (types, tier2, place, research).
+ * rosterOut: buildRoster result; prod: data/rules/production.json (types, tier2, place, research); converted: squad ids
+ * reached by conversion (data/rules/conversions.json) — without a CoH3 producer they are never produced.
  * Squads a mapped CoH3 building spawns are produced there; support vehicles go to the race's Tier 2 building; squads no
  * mapped building spawns join the most similar building, directly, unless they are high tier (hero, heavy armour) or a
  * pricier variant of a squad the race already produces: then research. place / research override per squad.
  * → { building: { squads, research } }
  */
-export function buildProduction(rosterOut, { types, tier2 = {}, place = {}, research = {} }) {
+export function buildProduction(rosterOut, { types, tier2 = {}, place = {}, research = {} }, converted = new Set()) {
   const mapped = new Set(Object.values(types).flatMap(t => Object.values(t)));
   const out = Object.fromEntries([...mapped].sort().map(b => [b, { squads: [], research: [] }]));
   const all = Object.values(rosterOut).flatMap(r => r.units);
@@ -41,6 +42,7 @@ export function buildProduction(rosterOut, { types, tier2 = {}, place = {}, rese
     for (const u of r.units) {
       if (SKIP(u) || !candidates.length && !spawned(u).length) continue;
       const support = isSupportVehicle(u) && tier2[race];
+      if (!spawned(u).length && converted.has(u.id) && !place[u.id]) continue;
       if (spawned(u).length) {
         for (const b of place[u.id] ? [place[u.id]] : support ? [tier2[race]] : spawned(u)) put(b, research[u.id] ? 'research' : 'squads', u.id);
         continue;
@@ -65,7 +67,8 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
   const file = path.join(root, 'data/rules/production.json');
   const prod = JSON.parse(fs.readFileSync(file, 'utf8'));
-  prod.buildings = buildProduction(buildRoster(loadSource(root), loadConfig(root).roster), prod);
+  const conv = JSON.parse(fs.readFileSync(path.join(root, 'data/rules/conversions.json'), 'utf8')).conversions;
+  prod.buildings = buildProduction(buildRoster(loadSource(root), loadConfig(root).roster), prod, new Set(conv.map(c => c.to)));
   fs.writeFileSync(file, `${JSON.stringify(prod, null, 2)}\n`);
   console.log(`production: ${Object.keys(prod.buildings).length} buildings`);
 }

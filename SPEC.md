@@ -32,11 +32,11 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   2 / 5 / 10 tickets for a lead of 1 / 2 / 3+, +1 per 6 consecutive settlements with the same leader (a shrinking lead halves
   the streak); at VP parity a resource-control gap of 4 (fuel / munition / manpower points 2 each) costs the weaker side 1.
   Both at 0: more VPs wins.
-- Annihilation mode (Skirmish only): win when every enemy unit is gone (passengers included) AND the enemy cannot deploy a new one
-  (no working production building, or not enough resources for its cheapest unit); optional round cap (v202).
-  D2-9: checked at each side's turn start; both sides out at once: the side whose turn starts wins; after the round cap the
-  higher surviving unit value wins, equal is a draw. Population counts toward "cannot deploy" (cap 300).
-- HQ cannot be destroyed (crippled state); HQ HP 690 (v59, v126).
+- Annihilation mode (2026-11-26): win by destroying the enemy HQ or by eliminating every enemy unit (passengers included);
+  no HQ capture, no "cannot deploy" clause; optional round cap (v202). Checked at each side's turn start; both sides out at
+  once: the side whose turn starts wins; after the round cap the higher surviving unit value wins, equal is a draw.
+- HQ HP 690 (v59, v126); indestructible in capture mode (stops at 1 HP), destructible in annihilation mode
+  (`data/rules/terrain.json` `indestructible_in_modes`).
 - Start resources, standard: 600 MP / 10 munitions / 20 fuel; the side moving second gets +40 MP / +10 munitions once (editable in setup) (v206).
   Larger test presets: fuel = 7 % of funds, munitions 60 (v206).
 - Turn-start order: strikes → status → capture tick → victory settlement → income (v59).
@@ -127,10 +127,12 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   The repaired vehicle carries the repair mark until its side's next turn: received hit chance ×2 (cap 100 %), received damage ×2.
   The repairer cannot attack or use abilities in the turn it repairs, and cannot start repairing after attacking (v158).
 - Healing out of combat at turn start: HQ +20 within 3 hexes, medical vehicles / medic bunkers +15 within 3 (v140); none while engaged (v158).
-- Conversion (v208), in place, keeping id, hex, facing, veterancy and HP ratio; needs a building that can produce the target, near own HQ (3) or outpost (2), out of combat:
-  promotion (full squad): US Riflemen → Rangers / Paratroopers / Commandos · Grenadiers → Panzergrenadiers / Sturmtruppen / Jäger / Fallschirmjäger;
-  price = MP cost difference, rounded to 5.
-  refit: M3 half-track → M3 GMC · Sd.Kfz. 221 → 221 sPzB · Sd.Kfz. 251 → Stummel; price = 2 × MP and fuel difference, rounded to 5.
+- Conversion (2026-11-26, replaces v208): CoH3 field conversions to another blueprint (`data/rules/conversions.json`), anywhere,
+  out of combat (not engaged), for the listed cost and the unit's action; in place, keeping id, hex, facing and veterancy;
+  each member keeps its HP share (dead men stay dead, new members start at the unit's share). Battlegroup-tied and global
+  conversions (e.g. Riflemen → Rangers, M1919 → M2HB, M4A1 → M4A1(76)) need research (not built yet). Weapon upgrades on the
+  same blueprint (221 Panzerbüchse 41 and radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.
+  Squads reached only by conversion are not produced by buildings.
 
 ## 8. UI conventions
 - Tile colours: green = move (selected path a little darker, blinking), red = attack range (smoke and grenades too), yellow = buff / heal only,
@@ -242,7 +244,7 @@ Confirmed 2026-11-25 (rewrite):
   cover (fences, hedges, walls, debris) has HP and is destructible but shows no HP bar. Defensive structures (sandbags, wire,
   tank traps, bunkers) take HP and armour per faction from CoH3; they fall to explosives, fire, AT weapons and vehicle crush
   (tank traps cannot be crushed). Destroyed vehicles and emplacements leave wreck objects: heavy cover (green) for infantry.
-  HQ buildings stay indestructible (§2).
+  HQ buildings: indestructible in capture mode only (§2).
 - Walls, hedges, fences, sandbags and wire are drawn as free lines; a line occupies the hex edge between two hexes when it
   crosses the segment joining their centres (`docs/map-design.md` §2 B).
 - Smoke blocks sight for 1–2 turns. A unit that fires is visible to the enemy until its next turn.
@@ -281,7 +283,6 @@ Confirmed 2026-11-25 (rewrite):
 
 Confirmed 2026-11-22:
 - Delete the Wehrmacht Panzerschreck squad (`at_inf`, duplicates Jäger).
-- Annihilation mode gets a dedicated, capturable HQ building (capturing it is a win route next to "no units and cannot deploy").
 
 From the v211+ planning (code is still v208 behaviour):
 - Add CoH3 stats for units missing from the list (Grant, Pz III, Flak 36 / 38, 150 mm sFH 18 as a stand-in from similar real guns, Obice, …);
