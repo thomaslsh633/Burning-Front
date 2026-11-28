@@ -7,9 +7,11 @@
 - debug overlay: range and minimum range, hit and penetration chance with expected damage per target, shots per turn, the six state axes and status flags, indirect spread area
 - a build entry so the greybox can be opened on a phone
 
-## Public API (planned, exported from `index.js`)
-- `createGreybox(canvas, { onIntent })`
-- `draw(state, ui, data, debug)`
+## Public API (exported from `index.js`)
+- `createView(size)` → `{ centre, toHex, fit(cols, rows), draw(ctx, state, ui, data) }` — done (G-2)
+- `debugText(state, ui, data)`: match, resources, the selected unit's six axes, budget, suppression, ammo, reload, weapons
+  (range, shots, accuracy, damage, penetration, spread) and the attack / move preview — done (G-3)
+- opened through `greybox.html` (boot: `src/app/greybox.js`; serve: `node tools/greybox/serve.js`)
 
 ## May import
 - `presentation/*`, `logic/<system>/index.js`, `services/<system>/index.js`

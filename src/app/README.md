@@ -9,6 +9,9 @@
 - screen flow: lobby → setup → play → AAR
 - frame loop
 
+Done: `greybox.js` `bootGreybox(document)` — the greybox (dev plan G-2): fetch data, start a 1v1, wire input → controller →
+store → view. URL options `?map=&blue=&red=&mode=&seed=`.
+
 ## Public API (planned, exported from `index.js`)
 - `boot(window)`
 

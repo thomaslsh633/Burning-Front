@@ -7,8 +7,8 @@
 - gesture recognition: tap, long press, drag, pan, pinch
 - keyboard shortcuts
 
-## Public API (planned, exported from `index.js`)
-- `attach(canvas, onIntent)`
+## Public API (exported from `index.js`)
+- `attach(canvas, toHex, onIntent)` — done for taps (`tapHex`); long press, drag, pan, pinch, keys follow (D3)
 - `intents: tapHex(c, r) · longPressHex · dragFacing · pan · pinch · tapButton(id) · key(name)`
 
 ## May import

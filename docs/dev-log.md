@@ -2,6 +2,16 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (G-2, G-3: greybox view)
+- **Done:** `greybox.html` + `src/app/greybox.js` (fetches the game files listed by `services/data gameFiles`, starts a
+  1v1 on a map), `presentation/input` (taps), `presentation/controller` (select, two-tap move / attack, end turn, emplace,
+  pack, hold, retreat; refusals shown), `presentation/greybox` (Canvas 2D grey hexes, team discs with kind letter and HP,
+  points, reachable hexes; debug panel with state axes, budget, weapons, attack preview). `node tools/greybox/serve.js`
+  serves it (also to a phone on the same network). Checked in Chromium: select, move, end turn, no errors. 293 tests.
+- **Next:** G-5 decisions (roles, ammo), G-6 phone check and playing 1v1s by faction pair; production / conversion
+  buttons in the greybox.
+- **Blocked:** the phone check needs the developer's phone.
+
 ## 2026-11-28 (G-4: time-to-kill report)
 - **Done:** `tools/greybox/report.js` duels every armed squad (217) against 8 reference targets with the rules engine
   (200 seeds, 20 turns, mid-band range, open ground) → `reports/greybox/ttk.md`; criteria `data/balance/greybox.json`

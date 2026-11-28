@@ -7,10 +7,9 @@
 - modes: idle → unitSelected → movePreview / attackPreview / skillTargeting / deployPlacement / buildPlacement / turnStage (one file per mode)
 - UI rules from SPEC §8: two-tap confirm, tap elsewhere cancels, turn tray, long-press range view
 
-## Public API (planned, exported from `index.js`)
-- `createController({ store, data, onUiChange })`
-- `onIntent(intent) → command | uiChange`
-- `mode file: onIntent(intent, ui, state, data) → { command?, ui? }`
+## Public API (exported from `index.js`)
+- `createController({ store, data, onUiChange })` → `{ ui(), onIntent(intent) }` — done for the greybox: select, two-tap
+  move and attack, buttons end / emplace / pack / hold / retreat; one file per mode follows with the real screen (D3)
 
 ## May import
 - `presentation/*`, `logic/<system>/index.js`, `services/<system>/index.js`

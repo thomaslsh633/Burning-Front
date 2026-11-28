@@ -6,6 +6,7 @@ New entries go on top, one short block per delivered version.
 ## rewrite — G-1 all factions, G-4 TTK report (2026-11-28)
 - US Forces, Wehrmacht, Afrikakorps and British Forces imported from CoH3: 287 squads.
 - A time-to-kill report duels every armed squad against reference targets and flags outliers.
+- Greybox: an art-free playable screen (`greybox.html`) with a debug panel, served by `node tools/greybox/serve.js`.
 
 ## rewrite — unit unlocks (2026-11-28)
 - Each faction's tier buildings list their units as base, doctrine-unlocked or research-unlocked.

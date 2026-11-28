@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burning Front greybox</title>
+<style>
+  body { background: #16181a; color: #d8d8d8; font: 12px/1.35 ui-monospace, monospace; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  canvas { touch-action: none; max-width: 100%; height: auto; }
+  #side { padding: 8px; flex: 1 1 320px; min-width: 280px; }
+  button { font: 14px sans-serif; margin: 2px; padding: 8px 12px; background: #34393e; color: #eee; border: 1px solid #555; border-radius: 2px; }
+  pre { white-space: pre-wrap; margin: 8px 0; }
+</style>
+</head>
+<body>
+<canvas id="map"></canvas>
+<div id="side">
+  <div>
+    <button data-button="end">End turn</button>
+    <button data-button="emplace">Emplace</button>
+    <button data-button="pack">Pack</button>
+    <button data-button="hold">Hold</button>
+    <button data-button="retreat">Retreat</button>
+  </div>
+  <pre id="debug">loading…</pre>
+</div>
+<script type="module">
+  import { bootGreybox } from './src/app/greybox.js';
+  bootGreybox(document).catch(e => { document.getElementById('debug').textContent = `error: ${e.message}`; });
+</script>
+</body>
+</html>

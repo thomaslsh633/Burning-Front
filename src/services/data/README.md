@@ -18,4 +18,5 @@
 ## Must not
 - patch data at load time (values are final when generated)
 
-Done: `mergeKind`, `combineFiles`, `deepMerge` (layers), `indexUnits(generated)` → flat maps by id for the rules (`data.units.sbps[id]` …).
+Done: `mergeKind`, `combineFiles`, `deepMerge` (layers), `indexUnits(generated)` → flat maps by id for the rules (`data.units.sbps[id]` …);
+`gameFiles()`, `assembleGameData(files, maps)` → the GameData shape the rules read (the browser fetches the files, tools read them).
