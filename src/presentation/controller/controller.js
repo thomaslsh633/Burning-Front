@@ -5,7 +5,7 @@ import { validate } from '../../logic/commands/index.js';
 import { reachable } from '../../logic/movement/index.js';
 import { previewAttack } from '../../logic/combat/index.js';
 import { unitAt } from '../../logic/state/index.js';
-import { producers, offers, priceOf, conversionOf, researchOffers, researchOf } from '../../logic/economy/index.js';
+import { producers, offers, priceOf, conversionOf, researchOffers, researchOf, doctrinesOf } from '../../logic/economy/index.js';
 import { passengers } from '../../logic/transport/index.js';
 import { buildable } from '../../logic/build/index.js';
 import { abilitiesOf, skillReady } from '../../logic/skills/index.js';
@@ -58,6 +58,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
       const drop = (data.units.sbps[id.slice(8)].traits || []).includes('paradrop');
       return set({ placing: id.slice(8), message: `${id.slice(8)}: tap ${drop ? 'any free hex (paradrop)' : 'a free hex beside the building'}` });
     }
+    if (id.startsWith('doctrine:')) return send({ type: 'ChooseDoctrine', side, doctrine: id.slice(9) });
     if (id.startsWith('research:') && ui.building) return send({ type: 'Research', side, building: ui.building, research: id.slice(9) });
     if (id.startsWith('build:') && ui.selected) return set({ placing: id.slice(6), message: `${id.slice(6)}: tap a free hex 1–2 away` });
     if (id.startsWith('skill:') && ui.selected) return set({ aiming: id.slice(6), message: `${id.slice(6)}: tap ${data.units.ability[id.slice(6)].target === 'unit' ? 'an enemy' : 'a hex'}` });
@@ -80,7 +81,9 @@ export function createController({ store, data, onUiChange = () => {} }) {
       return [...offers(s, data, ui.building).map(id => ({ id: `produce:${id}`, label: `${id} (${cost(priceOf(id, data))})` })), ...research];
     }
     const u = s.units[ui.selected];
-    if (!u) return [];
+    // nothing selected: the side picks its doctrine once (CoH3 battlegroups)
+    if (!u) return s.match.side && !s.teams[s.match.side].doctrine ? Object.entries(doctrinesOf(s, data, s.match.side))
+      .map(([id, bg]) => ({ id: `doctrine:${id}`, label: `★ doctrine ${id} (${bg.units.length} units, ${bg.upgrades.length} upgrades)` })) : [];
     const conversions = data.rules.conversions.conversions.filter(c => c.from === u.sbps).map(c => {
       const error = validate(s, { type: 'Convert', side: s.match.side, unit: u.id, to: c.to }, data);
       return { id: `convert:${c.to}`, label: `→ ${c.to} (${cost(conversionOf(data, c.from, c.to).cost)})${error ? ` [${error}]` : ''}`, disabled: !!error };

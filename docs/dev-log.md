@@ -2,6 +2,11 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (doctrines)
+- **Done:** `tools/coh3/doctrines.js` → `data/rules/doctrines.json` (43 battlegroups; doctrine units placed by the CoH3 ids
+  the battlegroup names, 4 by hand; all battlegroup upgrades); `ChooseDoctrine` (economy); greybox; autoplay. 322 tests.
+- **Next:** smoke and buffs (abilities not built), production building rebuild, D3.
+
 ## 2026-11-28 (research)
 - **Done:** `tools/coh3/research.js` → `data/rules/research.json` (15 items: CoH3 research upgrades that abilities / kits
   require, from each building's upgrade_ext; research units at recommended half price / 2 turns); economy research

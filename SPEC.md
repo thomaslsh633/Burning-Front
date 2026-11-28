@@ -229,7 +229,12 @@ Confirmed 2026-11-25 (rewrite):
   destroyed) and the side holds it from then on. Items: the CoH3 research upgrades the building lists that abilities or
   weapon kits require (CoH3 cost and time, e.g. US Riflemen grenades 100 MP / 10 fuel, 3 turns), and the building's research
   units (half the unit's price, 2 turns; data/balance/economy.json). A researched unit is produced there and opens the
-  conversions to it. Upgrades only a battlegroup gives (27) wait for doctrines.
+  conversions to it.
+- Doctrines (2026-11-28, `data/rules/doctrines.json`, `node tools/coh3/doctrines.js`): the CoH3 battlegroups of the
+  faction. A side picks one per match, in any own turn, free; it unlocks at once the battlegroup's units (produced in their
+  tier building), its CoH3 upgrades (abilities and kits that require them) and the conversions to its units. No command
+  points and no battlegroup tree: the whole battlegroup opens (recommended values). A unit CoH3 names in two battlegroups
+  comes with either; units CoH3 names in none are placed by hand (`assign`).
 - Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
   at most one of each per side (`data/rules/roster.json` heroes).
 - Abilities (2026-11-28, `logic/skills`): UseSkill fires the ability's CoH3 weapon `shells` times at a hex (each shell lands

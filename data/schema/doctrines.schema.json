@@ -1,0 +1,26 @@
+{
+  "about": "data/rules/doctrines.json: doctrines = CoH3 battlegroups. factions is written by node tools/coh3/doctrines.js; aliases and assign are hand-edited.",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "aliases": { "type": "object", "additionalProperties": { "$ref": "types.schema.json#/$defs/Id" } },
+    "assign": { "type": "object", "additionalProperties": { "$ref": "types.schema.json#/$defs/Id" } },
+    "factions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "units": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } },
+            "upgrades": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" } }
+          },
+          "additionalProperties": false,
+          "required": ["units", "upgrades"]
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["about", "aliases", "assign", "factions"]
+}

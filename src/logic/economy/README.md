@@ -13,6 +13,7 @@
 - `producers` (map production buildings + HQs), `offers`, `population`, `validateProduce` (route `Produce`: pay, then `state.spawnUnit` beside the building; population cap) — done (D2-8)
 - `conversionOf`, `validateConvert` (route `Convert`, `data/rules/conversions.json`) — done
 - `hasUnlock`, `researchOffers`, `researchOf`, `validateResearch`, `startResearch`, `researchTick` (route `Research`; tick in the income phase) — done
+- `doctrinesOf`, `validateDoctrine`, `chooseDoctrine` (route `ChooseDoctrine`, `data/rules/doctrines.json`) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

@@ -47,3 +47,17 @@ test('research a unit: the building then produces it, and the conversion to it i
   assert.ok(economy.offers(s, data, 'tx').includes('sherman_76mm_us'));
   assert.equal(economy.validateConvert(s, { unit: 'u1', to: 'sherman_76mm_us' }, data), null);
 });
+
+test('doctrine: once per match; its units are produced in their tier building, its conversions and upgrades open', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(5, 5) }], MAP);
+  assert.equal(economy.offers(state, data, 'bx').includes('paratrooper_us'), false);
+  assert.equal(economy.validateDoctrine(state, { side: 'blue', doctrine: 'luftwaffe' }, data), 'no_such_doctrine', 'a German battlegroup');
+  const r = run(state, data, { type: 'ChooseDoctrine', side: 'blue', doctrine: 'infantry' });
+  const t = r.state.teams.blue;
+  assert.equal(t.doctrine, 'infantry');
+  assert.ok(economy.offers(r.state, data, 'bx').includes('ranger_us'), 'Rangers join the barracks');
+  assert.equal(economy.validateConvert({ ...r.state, teams: { ...r.state.teams, blue: { ...t, resources: { manpower: 600, munition: 0, fuel: 0 } } } }, { unit: 'u1', to: 'ranger_us' }, data), null,
+    'Riflemen → Rangers (your BG Advanced Infantry = CoH3 infantry)');
+  assert.ok(t.unlocks.includes('infantry_right_1b_m1919a6_us'), 'the battlegroup\'s CoH3 upgrades');
+  assert.equal(economy.validateDoctrine(r.state, { side: 'blue', doctrine: 'airborne' }, data), 'doctrine_chosen');
+});

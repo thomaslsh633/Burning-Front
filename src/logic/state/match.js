@@ -22,7 +22,7 @@ export function createMatch(setup, data) {
     match: { mode: setup.mode ?? 'annihilation', turn: 0, side: null, order: [...setup.order], over: null, nextId: specs.length + 1, roundCap: setup.roundCap ?? null },
     map: { id: setup.map.id, cols: map.cols, rows: map.rows, changes: { hexes: {}, segments: {}, structures: {} } },
     units,
-    teams: Object.fromEntries(Object.entries(setup.teams).map(([t, v]) => [t, { tickets: data.balance?.victory?.tickets ?? null, unlocks: [], research: [], ...structuredClone(v), rally: v.rally ?? (map.deploy?.[t] ? fromKey(map.deploy[t].rally) : null) }])),
+    teams: Object.fromEntries(Object.entries(setup.teams).map(([t, v]) => [t, { tickets: data.balance?.victory?.tickets ?? null, unlocks: [], research: [], doctrine: null, ...structuredClone(v), rally: v.rally ?? (map.deploy?.[t] ? fromKey(map.deploy[t].rally) : null) }])),
     points: (map.points || []).map(p => ({ id: p.id, owner: null, progress: 0, by: null })),
     victory: { leader: null, streak: 0, prevLead: 0 },
     rng: setup.rng >>> 0,

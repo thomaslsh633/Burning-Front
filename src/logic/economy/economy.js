@@ -1,4 +1,4 @@
-// Resources, income, upkeep, unit production and research (SPEC §3, §10). Owns GameState.teams[team].resources, unlocks, research.
+// Resources, income, upkeep, unit production and research (SPEC §3, §10). Owns GameState.teams[team].resources, unlocks, research, doctrine.
 // Tuning: data/balance/economy.json; what each production building offers: data/rules/production.json; research: data/rules/research.json.
 import { ev } from '../events/index.js';
 import { distance, fromKey, inside } from '../hex/index.js';
@@ -134,6 +134,22 @@ export function researchOffers(state, data, buildingId) {
 }
 
 export const researchOf = (state, data, buildingId, id) => { const x = buildingOf(state, data, buildingId); return data.rules.research.factions[x.faction][x.coh3][id]; };
+
+/** The faction's doctrines (CoH3 battlegroups, data/rules/doctrines.json): { id: { units, upgrades } }. */
+export const doctrinesOf = (state, data, team) => data.rules.doctrines.factions[state.teams[team].faction] ?? {};
+
+/** ChooseDoctrine command: { side, doctrine } — one of the faction's doctrines, once per match. */
+export function validateDoctrine(state, cmd, data) {
+  if (state.teams[cmd.side].doctrine) return 'doctrine_chosen';
+  return doctrinesOf(state, data, cmd.side)[cmd.doctrine] ? null : 'no_such_doctrine';
+}
+
+/** The side holds the doctrine: its units (produced in their tier buildings), its CoH3 upgrades, the conversions to its units. */
+export function chooseDoctrine(state, cmd, data) {
+  const t = state.teams[cmd.side], bg = doctrinesOf(state, data, cmd.side)[cmd.doctrine];
+  const unlocks = [...new Set([...(t.unlocks ?? []), cmd.doctrine, ...bg.units, ...bg.upgrades])];
+  return { state: { ...state, teams: { ...state.teams, [cmd.side]: { ...t, doctrine: cmd.doctrine, unlocks } } }, events: [ev('DoctrineChosen', { team: cmd.side, doctrine: cmd.doctrine })] };
+}
 
 /** Research command: { side, building, research }. An own standing building that offers it, idle (one at a time), paid. */
 export function validateResearch(state, cmd, data) {

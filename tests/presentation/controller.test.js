@@ -144,3 +144,12 @@ test('research: a selected building lists its research with cost and turns; a ta
   ctl.onIntent({ type: 'tapButton', id: 'research:grenade_riflemen_us' });
   assert.match(debugText(store.getState(), ctl.ui(), data), /researching: grenade_riflemen_us \(3 turns\)/);
 });
+
+test('doctrine: with nothing selected the side is offered its battlegroups once', () => {
+  const { state, data } = testMatch([]);
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  assert.ok(ctl.actions().some(a => a.id === 'doctrine:airborne'));
+  ctl.onIntent({ type: 'tapButton', id: 'doctrine:airborne' });
+  assert.equal(store.getState().teams.blue.doctrine, 'airborne');
+  assert.deepEqual(ctl.actions(), []);
+});

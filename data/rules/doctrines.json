@@ -1,0 +1,1136 @@
+{
+  "about": "Doctrines = CoH3 battlegroups (2026-11-28). A side picks one doctrine per match, in any own turn, free (recommended values): it unlocks the battlegroup's units (they join their tier building's production), its CoH3 upgrades (abilities and kits that require them) and the conversions to its units. `factions` is written by node tools/coh3/doctrines.js; `aliases` (conversions.json battlegroup names → CoH3 ids) and `assign` (doctrine units CoH3 names in no battlegroup → one, recommended) are hand-edited.",
+  "aliases": {
+    "siege": "siegebreakers",
+    "heavy_weapons": "special_weapons",
+    "advanced_infantry": "infantry",
+    "battlefield_espionage": "subterfuge",
+    "elite_troops": "elite_forces",
+    "special_missions": "special_services"
+  },
+  "assign": {
+    "ssb_sniper_africa_us": "special_operations",
+    "stuart_blade_us": "armored",
+    "guastatori_ger": "breakthrough",
+    "jagdpanzer_iv_sdkfz_162_ger": "blocking_force"
+  },
+  "factions": {
+    "american": {
+      "airborne": {
+        "units": [
+          "at_gun_57mm_paradrop_us",
+          "hmg_30cal_paradrop_us",
+          "paratrooper_us",
+          "pathfinder_us"
+        ],
+        "upgrades": [
+          "airborne",
+          "airborne_left_1a_smoke_us",
+          "airborne_left_1b_recon_loiter_us",
+          "airborne_left_2a_supply_drop_us",
+          "airborne_left_2b_air_dropped_reinforcement_us",
+          "airborne_left_3a_rocket_strike_us",
+          "airborne_left_3b_carpet_bombing_run_us",
+          "airborne_right_1a_pathfinders_us",
+          "airborne_right_1b_paradrop_hmg_us",
+          "airborne_right_2_paratrooper_us",
+          "airborne_right_3_paradrop_at_gun_us"
+        ]
+      },
+      "armored": {
+        "units": [
+          "assault_engineer_us",
+          "stuart_blade_us"
+        ],
+        "upgrades": [
+          "armored",
+          "armored_field_repairs_buff_us",
+          "armored_left_1a_assault_engineers_us",
+          "armored_left_1b_veteran_crews_us",
+          "armored_left_2a_field_repairs",
+          "armored_left_2b_recovery_vehicle_us",
+          "armored_left_3_war_machine_us",
+          "armored_right_1a_fast_deploy_us",
+          "armored_right_1b_strength_in_steel_us",
+          "armored_right_2a_scott_us",
+          "armored_right_2b_seek_and_destroy",
+          "armored_right_3_sherman_easy_8_production_unlock_us",
+          "armored_right_3_sherman_easy_8_us",
+          "armored_vs_hellcat"
+        ]
+      },
+      "brazilian": {
+        "units": [
+          "brazilian_infantry_us",
+          "brazilian_lieutenant_us",
+          "french_infantry_us",
+          "priest_kangaroo_us",
+          "priest_us"
+        ],
+        "upgrades": [
+          "brazilian_counterbattery_buff_us",
+          "brazilian_counterbattery_triggered_us",
+          "brazilian_fire_support_grant_vet_us",
+          "brazilian_fire_support_us",
+          "brazilian_goons_and_deuces_conversions_us",
+          "brazilian_goons_and_deuces_us",
+          "brazilian_grenade_launchers_active_us",
+          "brazilian_grenade_launchers_buff_us",
+          "brazilian_hulldown_buff_kangaroo_us",
+          "brazilian_kangaroo_callin_us",
+          "brazilian_kangaroo_munitions_platform_buff_us",
+          "brazilian_lieutenant_retinue_callin_us",
+          "brazilian_lieutenant_weapon_requisition_bazooka_buff_us",
+          "brazilian_lieutenant_weapon_requisition_flamethrower_buff_us",
+          "brazilian_lieutenant_weapon_requisition_m1919_buff_us",
+          "brazilian_lieutentant_leadership_buff_us",
+          "brazilian_priest_spg_callin_us",
+          "brazilian_rifle_squad_callin_us",
+          "brazilian_stalwart_defense_us",
+          "brazilian_stalwart_defenses_hold_buff_us",
+          "brazilian_stalwart_defenses_self_buff_us",
+          "brazilian_supercharged_counterbattery_us",
+          "brazilian_us",
+          "brazilian_victor_target_buff_us",
+          "brazilian_victor_target_squad_us",
+          "brazilian_victor_target_us",
+          "brazilian_walked_barrage_us"
+        ]
+      },
+      "french": {
+        "units": [
+          "french_infantry_us"
+        ],
+        "upgrades": [
+          "french_advanced_tourelles_us",
+          "french_boundary_lockdown_aura_buff_us",
+          "french_boundary_lockdown_territory_designated_us",
+          "french_boundary_lockdown_us",
+          "french_buff_defiance_us",
+          "french_buff_elan_cooldown_us",
+          "french_buff_elan_core_us",
+          "french_buff_elan_double_us",
+          "french_buff_elan_us",
+          "french_buff_red_zone_designation_us",
+          "french_buff_reposition_sprint_us",
+          "french_buff_stabilized_shooting_us",
+          "french_buff_tourelle_maginot_line_us",
+          "french_capture_debuff_defiance_us",
+          "french_char_b1_rupture_round_debuff_us",
+          "french_char_b1_us",
+          "french_defiance_us",
+          "french_infantry_callin_us",
+          "french_maginot_line_us",
+          "french_new_blood_us",
+          "french_old_guard_us",
+          "french_railway_artillery_us",
+          "french_red_zone_us",
+          "french_stabilized_shooting_completed_us",
+          "french_stabilized_shooting_us",
+          "french_tourelle_defensive_artillery_active_us",
+          "french_tourelle_defensive_artillery_cooldown_us",
+          "french_tourelle_one_upgrade_point_us",
+          "french_us"
+        ]
+      },
+      "infantry": {
+        "units": [
+          "artillery_observers_us",
+          "infantry_assault_bazooka_team_us",
+          "infantry_assault_riflemen_us",
+          "paratrooper_us",
+          "ranger_us"
+        ],
+        "upgrades": [
+          "ammo_storage_buff_us",
+          "infantry",
+          "infantry_left_1_convert_rifleman_to_ranger_us",
+          "infantry_left_1a_rapid_training_us",
+          "infantry_left_1b_rapid_response_us",
+          "infantry_left_2_rangers_us",
+          "infantry_left_2a_designate_assault",
+          "infantry_left_2a_frontline_medical_tent_us",
+          "infantry_left_2a_weapon_crate_drop_us",
+          "infantry_left_2b_assault_halftrack_us",
+          "infantry_left_2b_expert_trackers_us",
+          "infantry_left_2b_lead_the_way_us",
+          "infantry_left_3a_manpower_us",
+          "infantry_left_3a_ranger_weapon_training_us",
+          "infantry_left_3b_emergency_combat_group_us",
+          "infantry_left_3b_infantry_assault_us",
+          "infantry_right_1a_artillery_observers_us",
+          "infantry_right_1a_defensive_operations_us",
+          "infantry_right_1b_ammunition_storage_us",
+          "infantry_right_1b_artillery_radio_beacon_us",
+          "infantry_right_1b_covering_smoke_us",
+          "infantry_right_1b_m1919a6_us",
+          "infantry_right_1b_mortar_pit_us",
+          "infantry_right_2_howitzer_105mm_us",
+          "infantry_right_2b_240mm_off_map_artillery_us",
+          "infantry_right_3a_off_map_artillery_us",
+          "infantry_right_3b_auto_fire_howitzer_us"
+        ]
+      },
+      "partisans": {
+        "units": [
+          "resistance_fighters_battlegroup_partisans",
+          "saboteurs_battlegroup_partisan"
+        ],
+        "upgrades": [
+          "partisan_tunnel_network_cooldown",
+          "partisan_tunnel_network_cooldown_entity",
+          "partisan_tunnel_network_disabled",
+          "partisan_tunnel_network_disabled_entity",
+          "partisan_tunnel_network_ready",
+          "partisan_tunnel_network_ready_entity",
+          "partisans_buff_deco_false_orders_us",
+          "partisans_buff_garrison_us",
+          "partisans_buff_medical_supplies_us",
+          "partisans_debuff_false_orders_us",
+          "partisans_dummy_buff_garrison_deco_us",
+          "partisans_duration_buff_garrison_us",
+          "partisans_false_orders_us",
+          "partisans_forward_headquarters_active_us",
+          "partisans_forward_headquarters_us",
+          "partisans_medical_caches_us",
+          "partisans_oss_coordination_us",
+          "partisans_resistance_fighters_us",
+          "partisans_saboteur_infiltration_us",
+          "partisans_smuggling_routes_us",
+          "partisans_spy_network_us",
+          "partisans_tunnel_is_smuggling_us",
+          "partisans_tunnel_network_us",
+          "partisans_underground_detonation_us",
+          "partisans_us"
+        ]
+      },
+      "special_operations": {
+        "units": [
+          "m29_weasal_us",
+          "ssb_sniper_africa_us",
+          "ssf_commandos_us"
+        ],
+        "upgrades": [
+          "special_operations_left_1a_m29_weasal_us",
+          "special_operations_left_1b_m29_weasal_with_pack_howitzer",
+          "special_operations_left_2a_mark_target_vehicle_us",
+          "special_operations_left_2b_m83_cluster_bombs_us",
+          "special_operations_left_2b_strafing_support_us",
+          "special_operations_left_3_whizbang_us",
+          "special_operations_right_1a_raiding_flares_us",
+          "special_operations_right_1b_smoke_screen_us",
+          "special_operations_right_2_devils_brigade_us",
+          "special_operations_right_3a_assault_operation_us",
+          "special_operations_right_3a_white_phosphorus_barrage_us",
+          "special_operations_right_3b_air_resupply_operation_us",
+          "special_operations_sherman_whizbang_production_unlock_us",
+          "special_operations_us"
+        ]
+      },
+      "special_weapons": {
+        "units": [
+          "halftrack_assault_us"
+        ],
+        "upgrades": [
+          "special_weapons_240mm_heavy_barrage_us",
+          "special_weapons_50cal_mg_us",
+          "special_weapons_assault_halftrack_m3_us",
+          "special_weapons_at_gun_3in_m5_us",
+          "special_weapons_bolstered_fire_teams_us",
+          "special_weapons_buff_bolstered_fire_teams_loadout_us",
+          "special_weapons_buff_gallant_stand_us",
+          "special_weapons_buff_strongpoint_aura_target_us",
+          "special_weapons_debuff_strongpoint_caster_us",
+          "special_weapons_exchangeable_parts_done_conversion",
+          "special_weapons_exchangeable_parts_trigger_displayed",
+          "special_weapons_exchangeable_parts_us",
+          "special_weapons_gallant_stand_us",
+          "special_weapons_pershing_us",
+          "special_weapons_rapid_reposition_us",
+          "special_weapons_strongpoint_us",
+          "special_weapons_us"
+        ]
+      }
+    },
+    "german": {
+      "blocking_force": {
+        "units": [
+          "assault_grenadier_ger",
+          "hummel_ger",
+          "jagdpanzer_iv_sdkfz_162_ger",
+          "truck_2_5_cargo_ger",
+          "truck_2_5_fuel_ger",
+          "truck_2_5_ger",
+          "truck_2_5_logistics_ger"
+        ],
+        "upgrades": [
+          "blocking_force_2_5_fuel_truck_callin_ger",
+          "blocking_force_2_5_fuel_truck_engine_tuning_buff_ger",
+          "blocking_force_2_5_fuel_truck_field_repairs_buff_ger",
+          "blocking_force_2_5_fuel_truck_resource_overseer_buff_ger",
+          "blocking_force_2_5_logistics_truck_callin_ger",
+          "blocking_force_2_5_logistics_truck_consolidation_active_ger",
+          "blocking_force_2_5_logistics_truck_consolidation_reinforce_speed_buff_ger",
+          "blocking_force_ger",
+          "blocking_force_hummel_callin_ger",
+          "blocking_force_incursion_response_buff_ger",
+          "blocking_force_incursion_response_ger",
+          "blocking_force_marking_fire_debuff_ger",
+          "blocking_force_marking_fire_ger",
+          "blocking_force_mg34_surplus_buff_ger",
+          "blocking_force_nashorn_production_unlock_ger",
+          "blocking_force_panzergranate_ammo_buff_ger",
+          "blocking_force_panzergranate_munitions_ger",
+          "blocking_force_picket_defences_ger",
+          "blocking_force_pre_registered_artillery_ger",
+          "blocking_force_team_weapon_bolster_buff_ger",
+          "blocking_force_territory_state_incursion_response_ger",
+          "blocking_force_weapon_delivery_ger"
+        ]
+      },
+      "breakthrough": {
+        "units": [
+          "assault_grenadier_ger",
+          "guastatori_ger",
+          "panzer_iv_cmd_ger",
+          "truck_2_5_cargo_ger",
+          "truck_2_5_ger"
+        ],
+        "upgrades": [
+          "breakthrough",
+          "breakthrough_blitzkrieg_buff_ger",
+          "breakthrough_left_1a_rapid_production_ger",
+          "breakthrough_left_1b_truck_2_5_ger",
+          "breakthrough_left_2a_blitzkrieg_ger",
+          "breakthrough_left_2b_panzer_iv_cmd_ger",
+          "breakthrough_left_3_tiger_ger",
+          "breakthrough_right_1_assault_grenadiers_ger",
+          "breakthrough_right_2a_breakthrough_ger",
+          "breakthrough_right_2b_smoke_bombing_run_ger",
+          "breakthrough_right_3a_assault_group_ger",
+          "breakthrough_right_3b_incendiary_bombing_run_ger"
+        ]
+      },
+      "coastal": {
+        "units": [
+          "coastal_officer_ger",
+          "coastal_reserves_ger",
+          "stug_iii_d_ger"
+        ],
+        "upgrades": [
+          "coastal_artillery_officer_ger",
+          "coastal_bulwark_ger",
+          "coastal_bunker_supplies",
+          "coastal_call_the_reserves_ger",
+          "coastal_early_warning_ger",
+          "coastal_early_warning_upgrade_ger",
+          "coastal_ger",
+          "coastal_left_1_coastal_reserves_ger",
+          "coastal_left_3b_semonvente7518",
+          "coastal_obice_ger",
+          "coastal_right_1a_withdraw_ger",
+          "coastal_right_1b_artillery_flares_ger",
+          "coastal_right_2a_man_the_defenses_ger",
+          "coastal_right_2b_sector_artillery_ger",
+          "coastal_right_3a_emergency_supplies_ger",
+          "coastal_right_3a_rapid_fortification_ger",
+          "coastal_right_3b_coastal_batteries_ger",
+          "coastal_support_bunkers_ger"
+        ]
+      },
+      "defense": {
+        "units": [],
+        "upgrades": [
+          "active_defensive_artillery",
+          "cut_defense_right_1a_teller_mines_ger",
+          "cut_defense_right_2b_l640_flame_tank_ger",
+          "defense_ger",
+          "defense_left_1_fortress_pioneers_ger",
+          "defense_left_1b_reinforce_bunker_ger",
+          "defense_left_2a_support_bunkers_ger",
+          "defense_left_2b_artillery_flares_ger",
+          "defense_left_2b_early_warning_ger",
+          "defense_left_3a_defensive_artillery_ger",
+          "defense_left_3a_white_phosphorus_barrage_ger",
+          "defense_left_3b_heavy_artillery_barrage_ger",
+          "defense_right_1a_kettenkrad_observation_ger",
+          "defense_right_1b_medical_halftrack_ger",
+          "defense_right_2a_sdfkz9_recovery_vehicle_ger",
+          "defense_right_2b_251_mortar_halftrack_ger",
+          "defense_right_2b_flak_halftrack_ger",
+          "defense_right_3_nashorn_tank_destroyer_ger"
+        ]
+      },
+      "last_stand": {
+        "units": [
+          "borgward_iv_ger",
+          "sturmpioneer_ger"
+        ],
+        "upgrades": [
+          "buff_last_stand_final_battle_ger",
+          "buff_scavenge_ger",
+          "last_stand_borgward_iv_ger",
+          "last_stand_borgward_iv_has_used_charge_ger",
+          "last_stand_borgward_iv_reload_charge_ger",
+          "last_stand_final_battle_ger",
+          "last_stand_ger",
+          "last_stand_immobilize_and_fortify_ger",
+          "last_stand_improvised_barrage_ger",
+          "last_stand_last_ditch_defenses_ger",
+          "last_stand_nebelwerfer_overwatch_ger",
+          "last_stand_panzerfaust_rollout_ger",
+          "last_stand_permanent_hulldown_fully_completed",
+          "last_stand_permanent_hulldown_on_target_exit_early_restore_movement_and_remove_flags",
+          "last_stand_permanent_hulldown_on_target_on_action_disable_hold_and_set_immobilize",
+          "last_stand_permanent_hulldown_on_target_pre_action_lockout_and_stop",
+          "last_stand_recovery_efforts_ger",
+          "last_stand_scavenge_ger",
+          "last_stand_sturmpioneers_ger",
+          "last_stand_volkssturm_training_completed"
+        ]
+      },
+      "luftwaffe": {
+        "units": [],
+        "upgrades": [
+          "luftwaffe",
+          "luftwaffe_left_1a_infantry_reserves",
+          "luftwaffe_left_1b_fallschirmpioneers",
+          "luftwaffe_left_2a_lg40_weapon_drop",
+          "luftwaffe_left_2b_combat_group_ger",
+          "luftwaffe_left_3_flak36_88mm",
+          "luftwaffe_relay_point_ger",
+          "luftwaffe_right_1a_recon_run",
+          "luftwaffe_right_1b_strafing_run_ger",
+          "luftwaffe_right_2_fallschirmjagers",
+          "luftwaffe_right_3a_fragmentation_bombs",
+          "luftwaffe_right_3b_attack_loiter"
+        ]
+      },
+      "mechanized": {
+        "units": [
+          "assault_grenadier_ger",
+          "wespe_ger"
+        ],
+        "upgrades": [
+          "critical_repair_mechanized_ger",
+          "mechanized",
+          "mechanized_left_1a_raid_package",
+          "mechanized_left_2a_stug_assault_group",
+          "mechanized_left_2b_8_rad",
+          "mechanized_left_3_panther",
+          "mechanized_left_panther_production_unlock_ger",
+          "mechanized_right_1a_fuel_siphon",
+          "mechanized_right_1a_mobile_repair_ger",
+          "mechanized_right_1b_smoke_canisters",
+          "mechanized_right_1b_spotting_scopes",
+          "mechanized_right_2a_mechanized_assault",
+          "mechanized_right_2b_encirclement_barrage",
+          "mechanized_right_3a_stosstruppen_package",
+          "mechanized_right_3b_wespe"
+        ]
+      },
+      "siegebreakers": {
+        "units": [
+          "halftrack_flame_ger"
+        ],
+        "upgrades": [
+          "siegebreakers_buff_critical_location_ger",
+          "siegebreakers_buff_grinding_advance_ger",
+          "siegebreakers_buff_halftrack_flamethrower_range_ger",
+          "siegebreakers_buff_into_the_breach_ger",
+          "siegebreakers_buff_range_in_ger",
+          "siegebreakers_buff_siege_leader_ger",
+          "siegebreakers_buff_sturmtiger_siegebreaker_ger",
+          "siegebreakers_buff_sturmtiger_siegebreaker_precombat_ger",
+          "siegebreakers_clearing_gear_ger",
+          "siegebreakers_critical_location_ger",
+          "siegebreakers_debuff_sturmtiger_reloading_ger",
+          "siegebreakers_debuff_sturmtiger_reloading_veteran_ger",
+          "siegebreakers_designate_siege_leader_ger",
+          "siegebreakers_firestorm_doctrine_ger",
+          "siegebreakers_ger",
+          "siegebreakers_grinding_advance_ger",
+          "siegebreakers_into_the_breach_ger",
+          "siegebreakers_probing_barrage_ger",
+          "siegebreakers_siege_camp_buff_ger",
+          "siegebreakers_siege_camp_ger",
+          "siegebreakers_siege_leader_aura_buff_ger",
+          "siegebreakers_siege_specialists_ger",
+          "siegebreakers_sturmtiger_ger",
+          "sturmtiger_passive_trigger_displayed_ger",
+          "sturmtiger_reload_intent_ger"
+        ]
+      },
+      "terror": {
+        "units": [],
+        "upgrades": [
+          "terror_ambush_camouflage_ger",
+          "terror_buff_contempt_for_the_weak_ger",
+          "terror_casualty_is_interrogated_ger",
+          "terror_contempt_for_the_weak_ger",
+          "terror_debuff_propaganda_war_ger",
+          "terror_defend_the_fatherland_ger",
+          "terror_fatherland_prototype_active",
+          "terror_ger",
+          "terror_heavy_gunnery_ger",
+          "terror_interrogate_ger",
+          "terror_jericho_trumpet_ger",
+          "terror_king_tiger_ger",
+          "terror_no_quarter_ger",
+          "terror_off_map_rocket_v1_ger",
+          "terror_propaganda_war_ger"
+        ]
+      }
+    },
+    "afrika_korps": {
+      "armored_support": {
+        "units": [
+          "panzer_ii_command_ak",
+          "panzer_iii_flame_ak",
+          "panzer_iv_ak",
+          "panzer_iv_command_ak"
+        ],
+        "upgrades": [
+          "armored_support_advanced_repair_ak",
+          "armored_support_ak",
+          "armored_support_assault_salvage_ak",
+          "armored_support_at_loiter_ak",
+          "armored_support_auto_salvage_ak",
+          "armored_support_breakthrough_ak",
+          "armored_support_breakthrough_tactics_ak",
+          "armored_support_coax_upgrade_ak",
+          "armored_support_command_p2_ak",
+          "armored_support_command_p4_ak",
+          "armored_support_flame_p3_ak",
+          "armored_support_light_mech_tactics_ak",
+          "armored_support_panzerjager_combat_group_ak",
+          "armored_support_raid_ak",
+          "armored_support_resource_blitz_ak",
+          "armored_support_stuka_dive_bomb_ak",
+          "armored_support_vehicle_awareness_ak",
+          "armored_support_vehicle_awareness_global_ak",
+          "armored_support_veteran_gunners_ak"
+        ]
+      },
+      "elite_forces": {
+        "units": [
+          "armored_car_8_rad_command_ak"
+        ],
+        "upgrades": [
+          "elite_forces_aerial_spotter_ak",
+          "elite_forces_aerial_spotter_combat_buff_ak",
+          "elite_forces_ak",
+          "elite_forces_buff_8_rad_command_coordinate_ak",
+          "elite_forces_buff_8_rad_command_coordinate_veteran_ak",
+          "elite_forces_buff_daring_assault_ak",
+          "elite_forces_buff_daring_assault_triggered_ak",
+          "elite_forces_buff_skirmisher_package_ak",
+          "elite_forces_casualty_is_medical_supplements_rescued_uk",
+          "elite_forces_command8rad_promote_buff_ak",
+          "elite_forces_command8rad_promote_buff_veteran_ak",
+          "elite_forces_command_8rad_ak",
+          "elite_forces_crack_armor_ak",
+          "elite_forces_daring_assault_ak",
+          "elite_forces_field_modifications_ak",
+          "elite_forces_gun_swap_debuff_ak",
+          "elite_forces_long_war_veterans_ak",
+          "elite_forces_long_war_veterans_squad_upgrade_ak",
+          "elite_forces_medical_supplements_ak",
+          "elite_forces_medical_supplements_player_passive_ak",
+          "elite_forces_medical_supplements_squad_upgrade_ak",
+          "elite_forces_remove_limiter_has_pushed_through_critical_ak",
+          "elite_forces_skirmisher_upgrade_ak",
+          "elite_forces_stuka_ace_ak",
+          "elite_forces_stuka_ace_bomb_payload_ak",
+          "elite_forces_stuka_ace_strafe_payload_ak",
+          "elite_forces_tiger_ace_ak",
+          "elite_forces_tiger_ace_hunter_buff_ak",
+          "elite_forces_tiger_ace_marauder_buff_ak",
+          "elite_forces_veterancy_aura_buff_armored_car_8_rad_command_ak"
+        ]
+      },
+      "italian_airborne": {
+        "units": [
+          "folgore_paratroopers_ak"
+        ],
+        "upgrades": [
+          "italian_airborne_airland_battle_buff_ak",
+          "italian_airborne_ak",
+          "italian_airborne_cluster_bombing_run_ak",
+          "italian_airborne_conceal_and_strike_buff_ak",
+          "italian_airborne_conceal_and_strike_exit_buff_ak",
+          "italian_airborne_desperate_antitank_tactics_ak",
+          "italian_airborne_dual_decker_paradrop_reinforce_active_ak",
+          "italian_airborne_emergency_reserves_ak",
+          "italian_airborne_folgore_squad_paradrop_ak",
+          "italian_airborne_folgore_upgrade_swap_ak",
+          "italian_airborne_grand_counterattack_ak",
+          "italian_airborne_heroic_rearguard_ak",
+          "italian_airborne_heroic_rearguard_buff_ak",
+          "italian_airborne_hold_to_the_last_decapture_debuff_ak",
+          "italian_airborne_hold_to_the_last_healing_buff_ak",
+          "italian_airborne_hold_to_the_last_territory_buff_ak",
+          "italian_airborne_linchpin_ak",
+          "italian_airborne_linchpin_counterattack_buff_ak",
+          "italian_airborne_linchpin_territory_child_ak",
+          "italian_airborne_linchpin_territory_designated_ak",
+          "italian_airborne_p26_40_medium_tank_production_ak",
+          "italian_airborne_sleeping_lions_ak",
+          "italian_airborne_sleeping_lions_exit_buff_ak",
+          "italian_airborne_uninterrupted_fire_buff_ak",
+          "italian_airborne_weapon_canister_consume_charge_ak",
+          "italian_airborne_weapon_canister_paradrop_ak",
+          "italian_airborne_weapon_canisters_lmg_buff_ger"
+        ]
+      },
+      "italian_combined_arms": {
+        "units": [
+          "bersaglieri_ak",
+          "m13_40_command_ak"
+        ],
+        "upgrades": [
+          "italian_combined_arms_ak",
+          "italian_combined_arms_bersaglieri_ak",
+          "italian_combined_arms_bersaglieri_armanent_ak",
+          "italian_combined_arms_bersaglieri_bolster_ak",
+          "italian_combined_arms_covering_fire_ak",
+          "italian_combined_arms_creeping_smoke_barrage_ak",
+          "italian_combined_arms_double_time_ak",
+          "italian_combined_arms_force_recon_ak",
+          "italian_combined_arms_m13_40_ak",
+          "italian_combined_arms_m13_40_command_ak",
+          "italian_combined_arms_off_map_obice_ak",
+          "italian_combined_arms_pact_of_steel_ak",
+          "italian_combined_arms_recon_loiter_mark_target_ak",
+          "italian_combined_arms_semovente_ak",
+          "italian_combined_arms_vehicle_bonus_ak",
+          "italian_combined_arms_vehicle_strafe_ak",
+          "italian_combined_italian_vehicle_improvements_ak",
+          "litalian_combined_arms_secured_flanks_ak"
+        ]
+      },
+      "italian_infantry": {
+        "units": [
+          "guastatori_ak",
+          "l6_40_ak",
+          "l6_40_flame_ak"
+        ],
+        "upgrades": [
+          "italian_infantry_ak",
+          "italian_infantry_cannone_da_105_ak",
+          "italian_infantry_counter_attack_ak",
+          "italian_infantry_covering_smoke_ak",
+          "italian_infantry_defense_of_the_motherland_ak",
+          "italian_infantry_defensive_operations_ak",
+          "italian_infantry_double_l640_ak",
+          "italian_infantry_field_support_ak",
+          "italian_infantry_guastatori_ak",
+          "italian_infantry_obice_barrage_ak",
+          "italian_infantry_off_map_nebel_ak",
+          "italian_infantry_propaganda_war_ak",
+          "italian_infantry_raiding_flares_ak",
+          "italian_infantry_rapid_assault_ak",
+          "italian_infantry_registered_artillery_ak",
+          "italian_infantry_sound_the_alarm_ak",
+          "italian_infantry_territory_booby_traps_ak"
+        ]
+      },
+      "kriegsmarine": {
+        "units": [
+          "kriegsmarine_infantry_ak"
+        ],
+        "upgrades": [
+          "kriegsmarine_ak",
+          "kriegsmarine_buff_fortification_mobility_aura_ak",
+          "kriegsmarine_buff_medical_crate_ak",
+          "kriegsmarine_buff_medical_crate_upgraded_ak",
+          "kriegsmarine_buff_munition_crate_ak",
+          "kriegsmarine_buff_munition_crate_upgraded_ak",
+          "kriegsmarine_buff_supply_designation_ak",
+          "kriegsmarine_fritz_x_ak",
+          "kriegsmarine_grenade_assault_ak",
+          "kriegsmarine_grenade_incendiary_ak",
+          "kriegsmarine_grenade_red_phosphorus_ak",
+          "kriegsmarine_grenade_tommy_ak",
+          "kriegsmarine_hardpoints_ak",
+          "kriegsmarine_improved_hardpoints_ak",
+          "kriegsmarine_kriegsmariner_squad_ak",
+          "kriegsmarine_naval_intervention_ak",
+          "kriegsmarine_sld_starburst_flares_ak",
+          "kriegsmarine_strategic_mobility_ak",
+          "kriegsmarine_stuka_tri_bomb_ak",
+          "kriegsmarine_supply_interdiction_ak",
+          "kriegsmarine_supply_reserves_ak"
+        ]
+      },
+      "panzerjager_kommand": {
+        "units": [],
+        "upgrades": [
+          "panzerjager_kommand",
+          "panzerjager_kommand_anti_tank_barrage_ak",
+          "panzerjager_kommand_buff_early_warning_ak",
+          "panzerjager_kommand_buff_early_warning_upgraded_ak",
+          "panzerjager_kommand_buttefly_bomb_drop_ak",
+          "panzerjager_kommand_crew_shock_tactics_active_ak",
+          "panzerjager_kommand_crew_shock_tactics_ak",
+          "panzerjager_kommand_early_warning_ak",
+          "panzerjager_kommand_elefant_ak",
+          "panzerjager_kommand_entrenchment_ak",
+          "panzerjager_kommand_grb_requisition_ak",
+          "panzerjager_kommand_mine_fields_ak",
+          "panzerjager_kommand_road_blocks_ak",
+          "panzerjager_kommand_tank_busters_ak"
+        ]
+      },
+      "subterfuge": {
+        "units": [
+          "goliath_ak"
+        ],
+        "upgrades": [
+          "camouflage_from_aura_upgrade_ak",
+          "infiltration_left_1_vampire_ht_goliath",
+          "infiltration_left_2a_anti_tank_specialists_ak",
+          "infiltration_left_2b_ambush_tactics_ak",
+          "infiltration_left_3_storm_operation_ak",
+          "infiltration_right_1_silent_running_ak",
+          "infiltration_right_2a_distraction_crate_ak",
+          "infiltration_right_2b_surprise_attack_ak",
+          "infiltration_right_3b_beutepanzer_reinforcement_ak",
+          "scorched_earth_left_1a_fire_grenades_ak",
+          "scorched_earth_left_1b_supply_heist_ak",
+          "scorched_earth_left_3b_burning_shells_ak",
+          "subterfuge_ak",
+          "subterfuge_black_market_fuel_player_ak",
+          "subterfuge_black_market_munitions_player_ak",
+          "subterfuge_right_1a_intel_radio_beacon",
+          "subterfuge_right_1b_siphon_radio_beacon",
+          "subterfuge_right_2a_plunder_ak",
+          "subterfuge_right_2b_black_market_ak",
+          "subterfuge_right_3a_disruption_ak",
+          "subterfuge_right_3b_firestorm_ak"
+        ]
+      }
+    },
+    "british": {
+      "australian_defense": {
+        "units": [],
+        "upgrades": [
+          "australian_defense_2pdr_at_gun_uk",
+          "australian_defense_archer_tank_destroyer_call_in_uk",
+          "australian_defense_australian_light_infantry_uk",
+          "australian_defense_bolster_defenses_uk",
+          "australian_defense_charged_creeping_barrage_off_map_uk",
+          "australian_defense_cwt_supply_truck_route_uk",
+          "australian_defense_defensive_tactics_uk",
+          "australian_defense_strengthen_economy_uk",
+          "australian_defense_tripwire_flares_uk",
+          "australian_defense_uk",
+          "australian_defense_vehicles_over_repair_uk"
+        ]
+      },
+      "british_air_and_sea": {
+        "units": [],
+        "upgrades": [
+          "british_air_and_sea",
+          "british_air_and_sea_left_1a_naval_blockade_uk",
+          "british_air_and_sea_left_1b_supply_surplus_uk",
+          "british_air_and_sea_left_2a_centaur_cs_uk",
+          "british_air_and_sea_left_3a_assault_flares_uk",
+          "british_air_and_sea_left_3b_naval_bombardment_uk",
+          "british_air_and_sea_right_1_commandos_uk",
+          "british_air_and_sea_right_2a_pack_howitzer_team_uk",
+          "british_air_and_sea_right_2b_commando_lmg_team_uk",
+          "british_air_and_sea_right_3a_incendiary_bombing_run_uk",
+          "british_air_and_sea_right_3b_anti_tank_loiter_uk"
+        ]
+      },
+      "british_armored": {
+        "units": [
+          "churchill_black_prince_uk"
+        ],
+        "upgrades": [
+          "british_armored",
+          "british_armored_churchill_production_unlock_uk",
+          "british_armored_left_1a_rigorous_vehicle_training_uk",
+          "british_armored_left_1b_radio_net_uk",
+          "british_armored_left_2_churchill",
+          "british_armored_left_3a_churchill_crocodile_uk",
+          "british_armored_left_3b_churchill_black_prince_uk",
+          "british_armored_right_1_on_hand_sappers",
+          "british_armored_right_1a_light_withdraw_and_refit_uk",
+          "british_armored_right_1b_forward_repair_assembly_uk",
+          "british_armored_right_2_crusader_aa_uk",
+          "british_armored_right_3a_recon_artillery_uk",
+          "british_armored_right_3b_designate_targets_uk"
+        ]
+      },
+      "british_canadian_vanguard": {
+        "units": [],
+        "upgrades": [
+          "british_canadian_vanguard",
+          "british_canadian_vanguard_left_1a_fast_capture_uk",
+          "british_canadian_vanguard_left_1b_spot_and_smoke_uk",
+          "british_canadian_vanguard_left_2a_light_infantry_uk",
+          "british_canadian_vanguard_left_2b_assault_enemy_sector_artillery_uk",
+          "british_canadian_vanguard_left_3a_into_the_breach_uk",
+          "british_canadian_vanguard_left_3b_priest_uk",
+          "british_canadian_vanguard_right_1_piats_uk",
+          "british_canadian_vanguard_right_2a_cwt_and_atg_uk",
+          "british_canadian_vanguard_right_2b_cwt_repair_and_resupply_uk",
+          "british_canadian_vanguard_right_3_churchill_croc_uk"
+        ]
+      },
+      "canadian_shock": {
+        "units": [],
+        "upgrades": [
+          "canadian_shock",
+          "canadian_shock_attacking_spirit_uk",
+          "canadian_shock_buff_attacking_spirit_uk",
+          "canadian_shock_buff_offensive_resupply_uk",
+          "canadian_shock_buff_point_assault_uk",
+          "canadian_shock_burnout_barrage_arrived",
+          "canadian_shock_burnout_uk",
+          "canadian_shock_canadian_shock_troops_uk",
+          "canadian_shock_churchill_crocodile_uk",
+          "canadian_shock_debuff_pyrotechnics_persistent_uk",
+          "canadian_shock_debuff_pyrotechnics_uk",
+          "canadian_shock_demolition_engineering_uk",
+          "canadian_shock_incendiary_munitions_uk",
+          "canadian_shock_offensive_resupply_uk",
+          "canadian_shock_point_assault_active_uk",
+          "canadian_shock_point_assault_uk",
+          "canadian_shock_pyrotechnics_aoe_cooldown_uk",
+          "canadian_shock_pyrotechnics_uk",
+          "canadian_shock_smoke_operation_uk",
+          "hoff_buff_attacking_spirit_uk"
+        ]
+      },
+      "indian_artillery": {
+        "units": [],
+        "upgrades": [
+          "artillery_4_2_inch_heavy_mortar_uk",
+          "artillery_airburst_uk",
+          "artillery_artillery_saturation_uk",
+          "artillery_bl_5_5_heavy_artillery_uk",
+          "artillery_gurkhas_uk",
+          "artillery_perimeter_monitor_uk",
+          "artillery_pillage_uk",
+          "artillery_valour_uk",
+          "artillery_volunteer_infantry_uk",
+          "artillery_war_cry_uk",
+          "indian_artillery",
+          "indian_artillery_buff_war_cry_uk"
+        ]
+      },
+      "polish_cavalry": {
+        "units": [],
+        "upgrades": [
+          "buff_sight_in_polish_lancer_uk",
+          "polish_cavalry_buff_grudge_uk",
+          "polish_cavalry_buff_grudge_vengeance_uk",
+          "polish_cavalry_buff_headhunter_polish_lancer_uk",
+          "polish_cavalry_buff_headhunter_sherman_firefly_uk",
+          "polish_cavalry_buff_player_timer_strategic_targets_uk",
+          "polish_cavalry_buff_vengeance_duration_infantry_uk",
+          "polish_cavalry_buff_vengeance_duration_vehicle_uk",
+          "polish_cavalry_buff_vengeance_uk",
+          "polish_cavalry_casualty_is_no_man_left_behind_rescued_uk",
+          "polish_cavalry_debuff_discarding_sabot_sherman_firefly_uk",
+          "polish_cavalry_debuff_panzerbane_tulip_debuff_uk",
+          "polish_cavalry_debuff_strategic_targets_uk",
+          "polish_cavalry_decapitation_strike_uk",
+          "polish_cavalry_lancers_uk",
+          "polish_cavalry_land_mattress_uk",
+          "polish_cavalry_no_man_left_behind_uk",
+          "polish_cavalry_panzerbane_uk",
+          "polish_cavalry_recon_mission_uk",
+          "polish_cavalry_sherman_firefly_uk",
+          "polish_cavalry_squad_is_no_man_left_behind_reinforced_uk",
+          "polish_cavalry_strategic_targets_uk",
+          "polish_cavalry_tulip_rockets_uk",
+          "polish_cavalry_uk",
+          "polish_cavalry_vengeance_uk"
+        ]
+      },
+      "royal_engineers": {
+        "units": [],
+        "upgrades": [
+          "royal_engineers_bangalores_uk",
+          "royal_engineers_buff_clearing_operation_uk",
+          "royal_engineers_buff_player_logistical_priority_fuel_boost_uk",
+          "royal_engineers_buff_player_logistical_priority_muni_boost_ku",
+          "royal_engineers_buff_player_vehicle_retrofits_uk",
+          "royal_engineers_buff_unwavering_uk",
+          "royal_engineers_churchill_arv_recovery_uk",
+          "royal_engineers_churchill_avre_artillery_uk",
+          "royal_engineers_churchill_na75_mine_plough_uk",
+          "royal_engineers_clearing_operation_uk",
+          "royal_engineers_cuckoo_heavy_salvaged_player_uk",
+          "royal_engineers_cuckoo_light_salvaged_player_uk",
+          "royal_engineers_cuckoo_medium_salvaged_player_uk",
+          "royal_engineers_debuff_churchill_avre_discombobulate_uk",
+          "royal_engineers_engineer_specialization_uk",
+          "royal_engineers_logistical_priority_uk",
+          "royal_engineers_ordnance_survey_active_ally_players_uk",
+          "royal_engineers_ordnance_survey_active_player_uk",
+          "royal_engineers_ordnance_survey_uk",
+          "royal_engineers_phosphorus_storm_uk",
+          "royal_engineers_uk",
+          "royal_engineers_vehicle_retrofits_uk"
+        ]
+      },
+      "special_services": {
+        "units": [],
+        "upgrades": [
+          "dead_drop_rendezvous_active_uk",
+          "special_services_30cwt_truck_callin_uk",
+          "special_services_best_of_the_worst_uk",
+          "special_services_buff_dead_drop_reinforce_speed_uk",
+          "special_services_buff_player_desert_raiders_uk",
+          "special_services_buff_player_force_multiplier_uk",
+          "special_services_buff_rear_havoc_uk",
+          "special_services_commando_section_callin_uk",
+          "special_services_dead_drop_rendevous_uk",
+          "special_services_debuff_escape_uk",
+          "special_services_debuff_raider_aura_uk",
+          "special_services_debuff_rear_havoc_aura_target_uk",
+          "special_services_debuff_scorched_earth_uk",
+          "special_services_debuff_thunderclap_uk",
+          "special_services_desert_raiders_uk",
+          "special_services_directed_air_support_active_uk",
+          "special_services_directed_air_support_debuff_uk",
+          "special_services_directed_air_support_uk",
+          "special_services_force_multiplier_uk",
+          "special_services_operation_thunderclap_uk",
+          "special_services_rear_havoc_uk",
+          "special_services_sniper_callin_uk",
+          "special_services_squad_aura_buff_rear_havoc_uk",
+          "special_services_target_gunner_debuff_uk",
+          "special_services_uk",
+          "special_services_ultra_uk"
+        ]
+      }
+    },
+    "british_africa": {
+      "australian_defense": {
+        "units": [
+          "archer_africa_uk",
+          "australian_light_infantry_africa_uk"
+        ],
+        "upgrades": [
+          "australian_defense_2pdr_at_gun_uk",
+          "australian_defense_archer_tank_destroyer_call_in_uk",
+          "australian_defense_australian_light_infantry_uk",
+          "australian_defense_bolster_defenses_uk",
+          "australian_defense_charged_creeping_barrage_off_map_uk",
+          "australian_defense_cwt_supply_truck_route_uk",
+          "australian_defense_defensive_tactics_uk",
+          "australian_defense_strengthen_economy_uk",
+          "australian_defense_tripwire_flares_uk",
+          "australian_defense_uk",
+          "australian_defense_vehicles_over_repair_uk"
+        ]
+      },
+      "british_air_and_sea": {
+        "units": [
+          "commando_lmg_africa_uk"
+        ],
+        "upgrades": [
+          "british_air_and_sea",
+          "british_air_and_sea_left_1a_naval_blockade_uk",
+          "british_air_and_sea_left_1b_supply_surplus_uk",
+          "british_air_and_sea_left_2a_centaur_cs_uk",
+          "british_air_and_sea_left_3a_assault_flares_uk",
+          "british_air_and_sea_left_3b_naval_bombardment_uk",
+          "british_air_and_sea_right_1_commandos_uk",
+          "british_air_and_sea_right_2a_pack_howitzer_team_uk",
+          "british_air_and_sea_right_2b_commando_lmg_team_uk",
+          "british_air_and_sea_right_3a_incendiary_bombing_run_uk",
+          "british_air_and_sea_right_3b_anti_tank_loiter_uk"
+        ]
+      },
+      "british_armored": {
+        "units": [
+          "churchill_black_prince_africa_uk",
+          "churchill_crocodile_africa_uk"
+        ],
+        "upgrades": [
+          "british_armored",
+          "british_armored_churchill_production_unlock_uk",
+          "british_armored_left_1a_rigorous_vehicle_training_uk",
+          "british_armored_left_1b_radio_net_uk",
+          "british_armored_left_2_churchill",
+          "british_armored_left_3a_churchill_crocodile_uk",
+          "british_armored_left_3b_churchill_black_prince_uk",
+          "british_armored_right_1_on_hand_sappers",
+          "british_armored_right_1a_light_withdraw_and_refit_uk",
+          "british_armored_right_1b_forward_repair_assembly_uk",
+          "british_armored_right_2_crusader_aa_uk",
+          "british_armored_right_3a_recon_artillery_uk",
+          "british_armored_right_3b_designate_targets_uk"
+        ]
+      },
+      "british_canadian_vanguard": {
+        "units": [
+          "churchill_crocodile_africa_uk"
+        ],
+        "upgrades": [
+          "british_canadian_vanguard",
+          "british_canadian_vanguard_left_1a_fast_capture_uk",
+          "british_canadian_vanguard_left_1b_spot_and_smoke_uk",
+          "british_canadian_vanguard_left_2a_light_infantry_uk",
+          "british_canadian_vanguard_left_2b_assault_enemy_sector_artillery_uk",
+          "british_canadian_vanguard_left_3a_into_the_breach_uk",
+          "british_canadian_vanguard_left_3b_priest_uk",
+          "british_canadian_vanguard_right_1_piats_uk",
+          "british_canadian_vanguard_right_2a_cwt_and_atg_uk",
+          "british_canadian_vanguard_right_2b_cwt_repair_and_resupply_uk",
+          "british_canadian_vanguard_right_3_churchill_croc_uk"
+        ]
+      },
+      "canadian_shock": {
+        "units": [
+          "canadian_heavy_infantry_africa_uk",
+          "churchill_crocodile_africa_uk"
+        ],
+        "upgrades": [
+          "canadian_shock",
+          "canadian_shock_attacking_spirit_uk",
+          "canadian_shock_buff_attacking_spirit_uk",
+          "canadian_shock_buff_offensive_resupply_uk",
+          "canadian_shock_buff_point_assault_uk",
+          "canadian_shock_burnout_barrage_arrived",
+          "canadian_shock_burnout_uk",
+          "canadian_shock_canadian_shock_troops_uk",
+          "canadian_shock_churchill_crocodile_uk",
+          "canadian_shock_debuff_pyrotechnics_persistent_uk",
+          "canadian_shock_debuff_pyrotechnics_uk",
+          "canadian_shock_demolition_engineering_uk",
+          "canadian_shock_incendiary_munitions_uk",
+          "canadian_shock_offensive_resupply_uk",
+          "canadian_shock_point_assault_active_uk",
+          "canadian_shock_point_assault_uk",
+          "canadian_shock_pyrotechnics_aoe_cooldown_uk",
+          "canadian_shock_pyrotechnics_uk",
+          "canadian_shock_smoke_operation_uk",
+          "hoff_buff_attacking_spirit_uk"
+        ]
+      },
+      "indian_artillery": {
+        "units": [
+          "gurkhas_africa_uk"
+        ],
+        "upgrades": [
+          "artillery_4_2_inch_heavy_mortar_uk",
+          "artillery_airburst_uk",
+          "artillery_artillery_saturation_uk",
+          "artillery_bl_5_5_heavy_artillery_uk",
+          "artillery_gurkhas_uk",
+          "artillery_perimeter_monitor_uk",
+          "artillery_pillage_uk",
+          "artillery_valour_uk",
+          "artillery_volunteer_infantry_uk",
+          "artillery_war_cry_uk",
+          "indian_artillery",
+          "indian_artillery_buff_war_cry_uk"
+        ]
+      },
+      "polish_cavalry": {
+        "units": [
+          "polish_lancer_africa_uk"
+        ],
+        "upgrades": [
+          "buff_sight_in_polish_lancer_uk",
+          "polish_cavalry_buff_grudge_uk",
+          "polish_cavalry_buff_grudge_vengeance_uk",
+          "polish_cavalry_buff_headhunter_polish_lancer_uk",
+          "polish_cavalry_buff_headhunter_sherman_firefly_uk",
+          "polish_cavalry_buff_player_timer_strategic_targets_uk",
+          "polish_cavalry_buff_vengeance_duration_infantry_uk",
+          "polish_cavalry_buff_vengeance_duration_vehicle_uk",
+          "polish_cavalry_buff_vengeance_uk",
+          "polish_cavalry_casualty_is_no_man_left_behind_rescued_uk",
+          "polish_cavalry_debuff_discarding_sabot_sherman_firefly_uk",
+          "polish_cavalry_debuff_panzerbane_tulip_debuff_uk",
+          "polish_cavalry_debuff_strategic_targets_uk",
+          "polish_cavalry_decapitation_strike_uk",
+          "polish_cavalry_lancers_uk",
+          "polish_cavalry_land_mattress_uk",
+          "polish_cavalry_no_man_left_behind_uk",
+          "polish_cavalry_panzerbane_uk",
+          "polish_cavalry_recon_mission_uk",
+          "polish_cavalry_sherman_firefly_uk",
+          "polish_cavalry_squad_is_no_man_left_behind_reinforced_uk",
+          "polish_cavalry_strategic_targets_uk",
+          "polish_cavalry_tulip_rockets_uk",
+          "polish_cavalry_uk",
+          "polish_cavalry_vengeance_uk"
+        ]
+      },
+      "royal_engineers": {
+        "units": [
+          "churchill_75mm_africa_uk",
+          "churchill_arv_africa_uk"
+        ],
+        "upgrades": [
+          "royal_engineers_bangalores_uk",
+          "royal_engineers_buff_clearing_operation_uk",
+          "royal_engineers_buff_player_logistical_priority_fuel_boost_uk",
+          "royal_engineers_buff_player_logistical_priority_muni_boost_ku",
+          "royal_engineers_buff_player_vehicle_retrofits_uk",
+          "royal_engineers_buff_unwavering_uk",
+          "royal_engineers_churchill_arv_recovery_uk",
+          "royal_engineers_churchill_avre_artillery_uk",
+          "royal_engineers_churchill_na75_mine_plough_uk",
+          "royal_engineers_clearing_operation_uk",
+          "royal_engineers_cuckoo_heavy_salvaged_player_uk",
+          "royal_engineers_cuckoo_light_salvaged_player_uk",
+          "royal_engineers_cuckoo_medium_salvaged_player_uk",
+          "royal_engineers_debuff_churchill_avre_discombobulate_uk",
+          "royal_engineers_engineer_specialization_uk",
+          "royal_engineers_logistical_priority_uk",
+          "royal_engineers_ordnance_survey_active_ally_players_uk",
+          "royal_engineers_ordnance_survey_active_player_uk",
+          "royal_engineers_ordnance_survey_uk",
+          "royal_engineers_phosphorus_storm_uk",
+          "royal_engineers_uk",
+          "royal_engineers_vehicle_retrofits_uk"
+        ]
+      },
+      "special_services": {
+        "units": [
+          "ssb_africa_uk",
+          "ssb_sniper_africa_uk"
+        ],
+        "upgrades": [
+          "dead_drop_rendezvous_active_uk",
+          "special_services_30cwt_truck_callin_uk",
+          "special_services_best_of_the_worst_uk",
+          "special_services_buff_dead_drop_reinforce_speed_uk",
+          "special_services_buff_player_desert_raiders_uk",
+          "special_services_buff_player_force_multiplier_uk",
+          "special_services_buff_rear_havoc_uk",
+          "special_services_commando_section_callin_uk",
+          "special_services_dead_drop_rendevous_uk",
+          "special_services_debuff_escape_uk",
+          "special_services_debuff_raider_aura_uk",
+          "special_services_debuff_rear_havoc_aura_target_uk",
+          "special_services_debuff_scorched_earth_uk",
+          "special_services_debuff_thunderclap_uk",
+          "special_services_desert_raiders_uk",
+          "special_services_directed_air_support_active_uk",
+          "special_services_directed_air_support_debuff_uk",
+          "special_services_directed_air_support_uk",
+          "special_services_force_multiplier_uk",
+          "special_services_operation_thunderclap_uk",
+          "special_services_rear_havoc_uk",
+          "special_services_sniper_callin_uk",
+          "special_services_squad_aura_buff_rear_havoc_uk",
+          "special_services_target_gunner_debuff_uk",
+          "special_services_uk",
+          "special_services_ultra_uk"
+        ]
+      }
+    }
+  }
+}
