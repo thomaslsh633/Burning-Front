@@ -301,6 +301,18 @@ test('Rebuild: an engineer rebuilds its destroyed HQ on the footprint (paid once
   assert.equal(two.state.map.changes.structures.hq.hp, 1000);
 });
 
+test('Rebuild: a destroyed tier building is rebuilt by an engineer and produces again (recommended 200 MP / 20 fuel, 2 turns)', () => {
+  const map = { production: [{ id: 'bx', type: 't1', team: 'blue', hexes: ['3,3'] }] };
+  const { state: s0, data } = testMatch([blue('engineer_us', H(5, 3)), red('grenadier_ger', H(10, 9))], map);
+  const down = { ...s0, map: { ...s0.map, changes: { ...s0.map.changes, structures: { bx: { hp: 0, collapsed: true } } } } };
+  const one = run(down, data, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'bx' });
+  assert.deepEqual([one.state.teams.blue.resources.manpower, one.state.teams.blue.resources.fuel], [400, 0]);
+  const own = endTurn(endTurn(one.state, data).state, data).state;
+  const two = run(own, data, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'bx' });
+  assert.ok(types(two.events).includes('StructureRebuilt'));
+  assert.equal(two.state.map.changes.structures.bx.hp, 500);
+});
+
 test('Upgrade: a weapon kit swaps one model\'s main weapon; requirements, limit and cost are checked', () => {
   const { state: s0, data } = testMatch([blue('riflemen_us', H(3, 3)), red('grenadier_ger', H(10, 9))]);
   const cmd = { type: 'Upgrade', side: 'blue', unit: 'u1', upgrade: 'bar_rifleman_squad_us' };

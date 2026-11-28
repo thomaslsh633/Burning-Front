@@ -3,6 +3,9 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — production rebuild (2026-11-28)
+- Engineers rebuild destroyed tier buildings; their research then carries on.
+
 ## rewrite — doctrines (2026-11-28)
 - Each side picks one CoH3 battlegroup per match: its units join the tier buildings, its abilities and conversions open.
 

@@ -83,7 +83,7 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   are readable, `docs/data-labels.md`).
 - **Abilities** (`logic/skills`, 2026-11-28): weapon abilities built (125); many need CoH3 research, so they wait for the research system (`?unlock=all` to test).
 - **Research** (2026-11-28): built (`data/rules/research.json`, regenerate with `node tools/coh3/research.js` after `npm run build:data`).
-- **Doctrines** (2026-11-28): built (`data/rules/doctrines.json`, regenerate with `node tools/coh3/doctrines.js` after `tools/coh3/production.js`). Production buildings are destructible but not rebuildable.
+- **Doctrines** (2026-11-28): built (`data/rules/doctrines.json`, regenerate with `node tools/coh3/doctrines.js` after `tools/coh3/production.js`). Production buildings are rebuilt by engineers (2026-11-28).
 - **Garrisons and transports** (`logic/transport`), fortified positions (`logic/build` Build), paradrop (production):
   built 2026-11-28. Not built: walls / wire / mines from the build menu, multi-hex footprints, towing guns.
 - **Map follow-ups:**

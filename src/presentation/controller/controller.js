@@ -62,6 +62,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
     if (id.startsWith('research:') && ui.building) return send({ type: 'Research', side, building: ui.building, research: id.slice(9) });
     if (id.startsWith('build:') && ui.selected) return set({ placing: id.slice(6), message: `${id.slice(6)}: tap a free hex 1–2 away` });
     if (id.startsWith('skill:') && ui.selected) return set({ aiming: id.slice(6), message: `${id.slice(6)}: tap ${data.units.ability[id.slice(6)].target === 'unit' ? 'an enemy' : 'a hex'}` });
+    if (id.startsWith('rebuild:') && ui.selected) return send({ type: 'Rebuild', side, unit: ui.selected, structure: id.slice(8) });
     if (id.startsWith('work:') && ui.selected) return send({ type: 'Build', side, unit: ui.selected, site: id.slice(5) });
     if (id.startsWith('convert:') && ui.selected) return send({ type: 'Convert', side, unit: ui.selected, to: id.slice(8) });
     if (id.startsWith('upgrade:') && ui.selected) return send({ type: 'Upgrade', side, unit: ui.selected, upgrade: id.slice(8) });
@@ -105,7 +106,9 @@ export function createController({ store, data, onUiChange = () => {} }) {
       const ab = data.units.ability[id], why = skillReady(s, u, id, data);
       return { id: `skill:${id}`, label: `◎ ${id} (${cost(ab.cost ?? {})}, ${ab.shells}× ${ab.weapon}, cooldown ${ab.cooldown_turns})${why ? ` [${why}]` : ''}`, disabled: !!why };
     });
-    return [...skills, ...enter, ...inside, ...carried, ...sites, ...builds, ...upgrades, ...conversions];
+    const rebuilds = Object.keys(mapOf(s, data).structures).filter(id => !validate(s, { type: 'Rebuild', side: s.match.side, unit: u.id, structure: id }, data))
+      .map(id => ({ id: `rebuild:${id}`, label: `Rebuild ${id}` }));
+    return [...skills, ...enter, ...inside, ...carried, ...rebuilds, ...sites, ...builds, ...upgrades, ...conversions];
   }
 
   function zoom(factor) {

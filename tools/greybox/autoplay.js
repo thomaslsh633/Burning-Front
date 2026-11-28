@@ -61,6 +61,8 @@ function playTurn(store, data, pick, stats) {
     const nearEnemy = enemies.some(e => distance(e.pos, u.pos) <= 6);
     if (u.container) { if (u.fsm.location === 'LOADED' && nearEnemy) act('Exit'); continue; }   // garrisoned: stays and fires
     if (nearEnemy && passengers(s, id).length && act('Unload')) continue;
+    const ruin = Object.keys(mapOf(s, data).structures).find(st => can('Rebuild', { structure: st }));   // an own destroyed building: rebuild it
+    if (ruin && act('Rebuild', { structure: ruin })) continue;
     const site = Object.values(s.units).find(x => x.team === side && x.fsm.life === 'CONSTRUCTING' && can('Build', { site: x.id }));
     if (site && act('Build', { site: site.id })) continue;
     if (nearEnemy && pick.int(4) === 0) {   // dig in: a position with a hold on the build menu, 1–2 hexes away

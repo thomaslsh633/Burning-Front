@@ -46,7 +46,8 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   no base income, produces nothing and links no sector; the side's engineers may rebuild it on its own footprint (one HQ
   per side at a time): 500 MP (CoH3 HQ cost) when work starts, 2 turns of work within 2 hexes, it stands again at 50 % HP
   (design values, confirmed 2026-11-28).
-  A destroyed production building produces nothing (not rebuildable yet).
+  A destroyed production building produces nothing and pauses its research; engineers rebuild it like the HQ (2026-11-28,
+  recommended: T1–T2 200 MP / 20 fuel over 2 turns, T3 300 MP / 60 fuel over 3 turns, back at 50 % HP).
 - Start resources, standard: 600 MP / 10 munitions / 20 fuel; the side moving second gets +40 MP / +10 munitions once (editable in setup) (v206).
   Larger test presets: fuel = 7 % of funds, munitions 60 (v206).
 - Turn-start order: strikes → status → capture tick → victory settlement → income (v59).
