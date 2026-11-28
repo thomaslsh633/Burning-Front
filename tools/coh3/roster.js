@@ -100,6 +100,12 @@ export function buildRoster(src, roster, races = FACTIONS) {
         price: squadPrice(cs, members, ebpsById, csCfg), pop: cs?.cost?.popcap ?? cs?.pop ?? null, build_seconds: cs?.cost?.time_seconds ?? null });
     }
 
+    // roster.json clone: a squad without a CoH3 value takes it from a comparable squad (only `cost` so far)
+    for (const u of units) {
+      const src = u.clone && units.find(x => x.id === u.clone.from);
+      if (src && u.clone.fields.includes('cost') && !Object.keys(u.price.cost).length) u.price = { cost: { ...src.price.cost }, from: 'clone' };
+    }
+
     // weapons in use, from whichever race file defines them
     const used = new Set(units.flatMap(u => [...u.members.flatMap(m => m.weapons), ...u.upgrades.map(k => k.weapon).filter(Boolean)]));
     const weapons = [], listed = new Set();

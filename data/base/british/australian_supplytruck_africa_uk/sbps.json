@@ -11,8 +11,11 @@
     }
    ],
    "price": {
-    "cost": {},
-    "from": "coh3stats"
+    "cost": {
+     "manpower": 240,
+     "fuel": 20
+    },
+    "from": "clone"
    },
    "pop": 4,
    "tags": [

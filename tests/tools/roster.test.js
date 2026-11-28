@@ -83,3 +83,9 @@ test('weaponsOf: the entity itself is a weapon item, or its hardpoints point to 
   assert.deepEqual(weaponsOf(src.ebps.get(`${E}/weapons/bar_item_us`).rec, src.ebps), [BAR]);
   assert.deepEqual(weaponsOf(src.ebps.get(`${E}/infantry/rifleman_us`).rec, src.ebps), [GARAND]);
 });
+
+test('roster.json clone: a squad with no CoH3 cost takes the cost of its comparable squad (real data)', async () => {
+  const { gameData } = await import('../helpers/game-data.js');
+  const sq = gameData().units.sbps;
+  assert.deepEqual(sq.australian_supplytruck_africa_uk.price, { cost: sq.cwt_15_flatbed_africa_uk.price.cost, from: 'clone' });
+});

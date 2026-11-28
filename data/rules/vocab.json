@@ -445,6 +445,7 @@
       "static"
     ],
     "price_source": [
+      "clone",
       "coh3stats",
       "entities",
       "override"
