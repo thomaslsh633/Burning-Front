@@ -84,5 +84,13 @@
       "tiger_boss_ger",
       "torch_artillery_obice_210_ger"
     ]
+  },
+  "loadout": {
+    "guards_uk": [
+      {
+        "weapon": "bazooka_guards_uk",
+        "num": 2
+      }
+    ]
   }
 }

@@ -102,7 +102,8 @@ export function importFaction(faction, squadIds) {
       indirectClass: mainWeapon ? classOf(mainWeapon, cfg.indirect)?.id : null });
     // weapons CoH3 hands `num` models at spawn (not on the entity record): coh3stats lists them with the carrier count
     const onEntities = new Set(members.flatMap(m => weaponIdsOf(ebpsByRef.get(m)?.rec).map(w => w.id)));
-    const loadout = (src.coh3stats[s.race]?.[id]?.weapons || []).filter(w => !onEntities.has(w.id) && w.id !== mainWeapon && !/dummy/.test(w.id) && weapons.get(w.id));
+    const listed = src.coh3stats[s.race]?.[id]?.weapons ?? (roster.loadout?.[id] || []).map(w => ({ id: w.weapon, num: w.num }));   // hand loadout when coh3stats has none
+    const loadout = listed.filter(w => !onEntities.has(w.id) && w.id !== mainWeapon && !/dummy/.test(w.id) && weapons.get(w.id));
     for (const w of loadout) addWeapon(w.id);
     const granted = loadout.filter(w => Object.values(files.weapon).some(c => w.id in c)).map(w => ({ weapon: w.id, num: w.num ?? 1 }));
     if (granted.length) { record.loadout_weapons = granted; notes.push(`loadout weapons from coh3stats: ${granted.map(w => `${w.weapon} ×${w.num}`).join(', ')}`); }

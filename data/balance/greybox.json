@@ -74,6 +74,7 @@
     "ssb_sniper_africa_uk": "anti-tank sniper: kills light vehicles, slow against medium tanks by design",
     "sturmtiger_ger": "380 mm rocket mortar fired by an ability only (not built); hull MG meanwhile",
     "howitzer_cannone_da_105_ger": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built",
-    "howitzer_cannone_da_105_ak": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built"
+    "howitzer_cannone_da_105_ak": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built",
+    "indian_africa_uk": "support infantry with crew Lee-Enfields (CoH3: 2 damage per shot); its role is support, not killing"
   }
 }

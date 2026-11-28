@@ -50,7 +50,13 @@
    },
    "build": {
     "menu": []
-   }
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "bazooka_guards_uk",
+     "num": 2
+    }
+   ]
   }
  }
 }

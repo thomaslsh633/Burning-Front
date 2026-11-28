@@ -87,6 +87,7 @@
       "per_use"
     ],
     "indirect_class": [
+      "assault",
       "heavy",
       "light",
       "mortar",

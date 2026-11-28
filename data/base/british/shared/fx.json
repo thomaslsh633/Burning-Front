@@ -251,6 +251,12 @@
    "sound": {
     "fire": "smoke"
    }
+  },
+  "bazooka_guards_uk": {
+   "name": "weapon.bazooka_guards_uk.name",
+   "sound": {
+    "fire": "bazooka"
+   }
   }
  },
  "ebps": {

@@ -38,13 +38,13 @@
      "far": 1
     },
     "range_hex": {
-     "min": 3,
+     "min": 0,
      "max": 5
     },
     "shots_per_turn": {
-     "near": 2,
-     "mid": 2,
-     "far": 2
+     "near": 1,
+     "mid": 1,
+     "far": 1
     },
     "damage_per_shot": {
      "near": 160,
@@ -120,18 +120,15 @@
    "deflection": {
     "damage_ratio": 0.25
    },
-   "reload": {
-    "turns": 1
-   },
    "moving": {
     "can_fire": true,
     "accuracy": 0.5
    },
    "indirect": {
-    "class": "heavy",
-    "usage_turns": 2,
-    "spread_hex": 1,
-    "min_range_hex": 3,
+    "class": "assault",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 0,
     "range_hex": 5
    }
   }

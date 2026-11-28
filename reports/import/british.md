@@ -354,7 +354,8 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | howitzer_bl_5_5_uk | veterancy | — |
 | thompson_guards_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | guards_uk | entity · infantry | — |
-| guards_uk | squad · infantry | role "anti_tank" guessed from CoH3 squad type |
+| bazooka_guards_uk | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
+| guards_uk | squad · infantry | role "anti_tank" guessed from CoH3 squad type; loadout weapons from coh3stats: bazooka_guards_uk ×2 |
 | guards_uk | veterancy | — |
 | 9mm_sten_sapper_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | sapper_uk | entity · infantry | — |

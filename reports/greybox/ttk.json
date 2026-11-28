@@ -10527,65 +10527,63 @@
    "cost": 400,
    "ttk": {
     "riflemen_us": {
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "grenadier_ger": {
      "median": 4,
      "killRate": 1,
      "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
-    "grenadier_ger": {
-     "median": 3,
-     "killRate": 1,
-     "pin": 3,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 4,
      "killRate": 1,
-     "pin": 3,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "stuart_us": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "sherman_us": {
+     "median": 8,
+     "killRate": 1,
+     "pin": 8,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "panzer_iv_ger": {
+     "median": 7,
+     "killRate": 1,
+     "pin": 7,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "hmg_mg42_ger": {
      "median": 3,
      "killRate": 1,
      "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
-    },
-    "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "hmg_mg42_ger": {
-     "median": 2,
-     "killRate": 1,
-     "pin": 2,
-     "distance": 3,
-     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_tank vs vehicle: best TTK — outside 2–6"
-   ]
+   "flags": []
   },
   {
    "id": "gurkhas_africa_uk",
@@ -10717,9 +10715,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 18 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "support infantry with crew Lee-Enfields (CoH3: 2 damage per shot); its role is support, not killing"
   },
   {
    "id": "officer_africa_uk",
@@ -12118,65 +12115,63 @@
    "cost": 520,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.405,
-     "pin": null,
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 3,
-     "outOfAmmo": 119
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.405,
-     "pin": null,
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 3,
-     "outOfAmmo": 119
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.425,
-     "pin": null,
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 3,
-     "outOfAmmo": 115
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.425,
-     "pin": null,
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 3,
-     "outOfAmmo": 115
+     "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.005,
-     "pin": null,
+     "median": 6,
+     "killRate": 1,
+     "pin": 6,
      "distance": 3,
-     "outOfAmmo": 199
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.42,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 116
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.55,
+     "pin": 15,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 90
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.485,
-     "pin": null,
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 3,
-     "outOfAmmo": 103
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK — outside 2–6"
-   ]
+   "flags": []
   },
   {
    "id": "halftrack_flame_ger",

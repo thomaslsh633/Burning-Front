@@ -10,7 +10,9 @@ Newest first. One entry per finished task: done / next / blocked.
   as heavy artillery). Camera turn (60° steps) and zoom (buttons, wheel, pinch) with the angle fixed. Phone check in
   Chromium emulation (Pixel 7, iPhone 13, CPU ×4): load 0.4–0.5 s, redraw 15–21 ms on skirmish, 110 ms on Faymonville
   48×48; touch tap selects. 296 tests.
-- **Next:** the 3 flagged squads; a real-phone check (pinch, Safari); production / conversion buttons in the greybox.
+- Then: the last 3 flags — Brummbär as an `assault` indirect class (every turn, no spread: kills infantry in 2 turns),
+  Guards (Italy) bazookas from a hand loadout (`data/rules/roster.json` loadout), Indian support infantry recorded. 0 flagged.
+- **Next:** production / conversion in the greybox; a real-phone check (pinch, Safari).
 - **Blocked:** a real phone and Safari are not available here.
 
 ## 2026-11-28 (quarter view)

@@ -1,6 +1,15 @@
 {
-  "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC \u00a710). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time \u00f7 CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres \u00f7 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins. Minimum range = round(CoH3 min \u00f7 CoH3 max \u00d7 our range), at least min_range_floor_hex. max_shells caps a normal-fire volley (rockets). Blind fire (target hex not seen): accuracy \u00f7 CoH3 scatter fow_angle \u00d7 fow_distance multipliers and spread + blind.extra_spread_hex. Counter-battery: a hex an indirect weapon fired from is sound-ranged for the opponent for counter_battery.mark_turns turns; firing at it is not blind.",
+  "about": "Indirect-fire cadence, range and spread for turn-based play (SPEC \u00a710). A class fires one volley every usage_turns turns. Shells per volley = CoH3 damage rate over that time \u00f7 CoH3 damage per shell, rounded up; accuracy carries the rounding. Range = CoH3 metres \u00f7 7, capped. Each shell lands on a random hex within spread_hex of the aimed hex (0 = the aimed hex). Classes match weapon / ability / squad ids by pattern, first match wins. Minimum range = round(CoH3 min \u00f7 CoH3 max \u00d7 our range), at least min_range_floor_hex. max_shells caps a normal-fire volley (rockets). Blind fire (target hex not seen): accuracy \u00f7 CoH3 scatter fow_angle \u00d7 fow_distance multipliers and spread + blind.extra_spread_hex. Counter-battery: a hex an indirect weapon fired from is sound-ranged for the opponent for counter_battery.mark_turns turns; firing at it is not blind. assault: assault guns that lob heavy HE at what they see (Brummb\u00e4r): every turn, no spread, no minimum floor (G-5, 2026-11-28); listed first because the first matching class wins.",
   "classes": {
+    "assault": {
+      "patterns": [
+        "brummbar"
+      ],
+      "usage_turns": 1,
+      "range_cap_hex": 8,
+      "spread_hex": 0,
+      "min_range_floor_hex": 0
+    },
     "mortar": {
       "patterns": [
         "mortar",

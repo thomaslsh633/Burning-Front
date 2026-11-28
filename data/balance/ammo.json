@@ -11,6 +11,7 @@
     "recon": 24
   },
   "by_indirect_class": {
+    "assault": 15,
     "mortar": 18,
     "light": 15,
     "spg": 15,

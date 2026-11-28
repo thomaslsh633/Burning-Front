@@ -134,6 +134,19 @@
         }
       }
     },
+    "loadout": {
+      "description": "Hand loadouts: weapons CoH3 gives `num` models at spawn, for squads coh3stats does not list (else coh3stats wins).",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": { "weapon": { "$ref": "types.schema.json#/$defs/Id" }, "num": { "type": "integer", "minimum": 1 } },
+          "additionalProperties": false,
+          "required": ["weapon", "num"]
+        }
+      }
+    },
     "heroes": {
       "type": "object",
       "required": [
