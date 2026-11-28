@@ -277,7 +277,7 @@ test('Convert: paid in the field, same id and hex, HP share and veterancy kept; 
   assert.equal(u.members[1].hp, Math.round(crewHp / 2));
   assert.equal(r.state.teams.blue.resources.munition, 10 - 5);
   assert.ok(types(r.events).includes('Converted'));
-  assert.equal(apply(s0, { type: 'Convert', side: 'blue', unit: 'u2', to: 'ranger_us' }, d0, createRng(1)).error, 'needs_research');
+  assert.equal(apply(s0, { type: 'Convert', side: 'blue', unit: 'u2', to: 'ranger_us' }, d0, createRng(1)).error, 'needs_doctrine');
   assert.equal(apply(s0, { type: 'Convert', side: 'blue', unit: 'u2', to: 'sherman_us' }, d0, createRng(1)).error, 'cannot_convert');
   const engaged = tweak(hurt, 'u1', { engaged: true });
   assert.equal(apply(engaged, { type: 'Convert', side: 'blue', unit: 'u1', to: 'mortar_81mm_us' }, data, createRng(1)).error, 'engaged');

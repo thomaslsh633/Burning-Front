@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (production per faction, three unlock kinds)
+- **Done:** `production.json` per faction; each building's units are base / doctrine / research (doctrine = CoH3 call-ins
+  and coh3stats-only battlegroup units, doctrine conversions; research = heroes, heavy armour, pricier variants, research
+  conversions); HQ only base engineers and recon; conversions carry `unlock` and the CoH3 battlegroup. Report by faction →
+  building. 287 tests.
+- **Next:** stage G; doctrines and research need a design and numbers.
+- **Blocked:** nothing.
+
 ## 2026-11-28 (production by tier)
 - **Done:** map production types are tier slots (`hq`, `t1`–`t3`, branches `t2a` …) per faction; no doctrine buildings;
   the HQ makes only engineers and recon; non-production units placed by CoH3 tier tag, then resemblance; research-locked

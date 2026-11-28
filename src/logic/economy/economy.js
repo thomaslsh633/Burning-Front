@@ -48,13 +48,13 @@ export function collectIncome(state, data, team) {
 export const conversionOf = (data, from, to) => data.rules.conversions.conversions.find(c => c.from === from && c.to === to) ?? null;
 
 /**
- * Convert command: { unit, to }. A conversion the data lists for the unit's blueprint, not research-locked (research is not
- * built), the target blueprint in the unit data and of the same kind, out of combat, paid, within the population cap.
+ * Convert command: { unit, to }. A conversion the data lists for the unit's blueprint, not doctrine- or research-locked
+ * (neither is built yet), the target blueprint in the unit data and of the same kind, out of combat, paid, within the population cap.
  */
 export function validateConvert(state, cmd, data) {
   const u = state.units[cmd.unit], c = conversionOf(data, u.sbps, cmd.to), to = data.units.sbps[cmd.to];
   if (!c) return 'cannot_convert';
-  if (c.research) return 'needs_research';
+  if (c.unlock && c.unlock !== 'base') return `needs_${c.unlock}`;   // doctrines and research are not built yet
   if (!to || to.kind !== u.kind) return 'not_available';
   if (u.engaged) return 'engaged';
   if (!canAfford(state, u.team, c.cost)) return 'cannot_afford';
@@ -83,13 +83,12 @@ export function producers(state, data) {
 }
 
 /**
- * Squad ids a building offers its team (data/rules/production.json): its faction's CoH3 building for the map type, the squads
- * that building produces from the start and that the unit data has. Research-locked squads are not offered (no research yet).
+ * Squad ids a building offers its team (data/rules/production.json): its faction's CoH3 building for the map tier slot, the
+ * squads it produces from the start (`base`) that the unit data has. Doctrine and research lists are not offered yet.
  */
 export function offers(state, data, buildingId) {
-  const b = producers(state, data).find(x => x.id === buildingId), p = data.rules.production;
-  const coh3 = b && p.types[b.type]?.[state.teams[b.team]?.faction];
-  return (p.buildings[coh3]?.squads ?? []).filter(id => data.units.sbps[id]);
+  const b = producers(state, data).find(x => x.id === buildingId), f = b && data.rules.production.factions[state.teams[b.team]?.faction];
+  return (f?.buildings[f.slots[b.type]]?.base ?? []).filter(id => data.units.sbps[id]);   // doctrine / research lists: locked (not built yet)
 }
 
 /**

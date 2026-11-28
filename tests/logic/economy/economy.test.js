@@ -13,8 +13,8 @@ const owned = (state, ids) => ({ ...state, points: state.points.map(p => (ids.in
 
 test('production lists are generated for every mapped CoH3 building', () => {
   const p = gameData().rules.production;
-  for (const t of Object.values(p.types)) for (const b of Object.values(t)) assert.ok(p.buildings[b], b);
-  assert.ok(p.buildings.barracks_us.squads.includes('riflemen_us'));
+  for (const f of Object.values(p.factions)) for (const b of Object.values(f.slots)) assert.ok(f.buildings[b], b);
+  assert.ok(p.factions.american.buildings.barracks_us.base.includes('riflemen_us'));
 });
 
 test('gross income: HQ base plus supplied points; VPs pay nothing', () => {

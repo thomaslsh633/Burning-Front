@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — unit unlocks (2026-11-28)
+- Each faction's tier buildings list their units as base, doctrine-unlocked or research-unlocked.
+- Mid-game engineers (Guastatori, Fallschirmpioneers, Assault Engineers) come from tier buildings, not the HQ.
+
 ## rewrite — production by tier (2026-11-28)
 - Buildings are tier slots T1–T3 per faction (a tier may branch: T2A / T2B); no doctrine buildings.
 - The HQ builds only engineers and recon units; doctrine units come from the tier buildings.

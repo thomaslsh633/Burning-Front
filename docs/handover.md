@@ -9,7 +9,7 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (288 tests) |
+| Checks | `npm run check` passes; `npm test` passes (287 tests) |
 | Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
@@ -55,6 +55,7 @@ Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, Pix
 | after D2-9 | every building destructible in every mode (HQ 3000, production 1500 / 2000 HP from CoH3; production buildings compiled as structures); destroyed HQ: no base income, no production, no supply link; `Rebuild` command (`logic/build`) |
 | 2026-11-28 | decisions: pinned units no counter; retreat arrival keeps the action; recrew any squad size; capture = sum of squad capture rates; building classes (hq / tier / doctrine / neutral); tier buildings 1000 / 1375 HP, HQ 2000, armour 35 (Sherman 8 / 11 / 16 hits) |
 | 2026-11-28 | production by tier slot (`hq`, `t1`–`t3`, branches `t2a` …), no doctrine buildings, HQ only engineers and recon, CoH3 tier tags place non-production units, research-locked conversion targets locked in production; `reports/production.md` |
+| 2026-11-28 | `production.json` per faction (`slots`, `tier2`, `buildings`); each building's units split into base / doctrine / research; HQ only base engineers and recon (mid-game engineers to tier buildings); conversions carry `unlock` + CoH3 battlegroup |
 
 D2 readiness fixes 1–7:
 1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
@@ -80,7 +81,7 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
 - **Weapon upgrades on the same blueprint** (221 Panzerbüchse 41 and radio antenna, Demo Sappers, Panzer III / StuG gun
   swap, and every CoH3 squad upgrade kit): no upgrade system yet; CoH3 upgrade effects are in state trees (only weapon kits
   are readable, `docs/data-labels.md`).
-- **Research** unlocks research-locked production (`data/rules/production.json`) and conversions (`conversions.json`).
+- **Doctrines and research** unlock the `doctrine` / `research` lists of `data/rules/production.json` and conversions (`conversions.json` `unlock`); neither system is built.
 - **Research command** (cost, turns): not built. Production buildings are destructible but not rebuildable.
 - **Garrison command** (`logic/transport`, location axis): not built.
   - `container` is set by hand in tests.

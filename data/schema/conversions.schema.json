@@ -11,7 +11,8 @@
           "from": { "$ref": "types.schema.json#/$defs/Id" },
           "to": { "$ref": "types.schema.json#/$defs/Id" },
           "cost": { "type": "object", "propertyVocab": "resource", "additionalProperties": { "type": "integer", "minimum": 0 } },
-          "research": { "type": "boolean" },
+          "unlock": { "enum": ["base", "doctrine", "research"] },
+          "doctrine": { "type": "string" },
           "global": { "type": "boolean" }
         },
         "additionalProperties": false,

@@ -1,28 +1,183 @@
 {
-  "about": "Unit conversions (CoH3 field upgrades that change the squad blueprint): the unit pays `cost` and its action, out of combat, and becomes `to` in place (id, hex, facing, veterancy and HP ratio kept). research: needs research first (CoH3 battlegroup-tied or global upgrades; research is not built yet, so these are refused). global: CoH3 upgrades every unit of the type at once (research). Costs from the design list of 2026-11-26, except Crusader II → III: 45 munitions as in the CoH3 data (2026-11-28). Weapon upgrades on the same blueprint (221 Panzerbüchse 41, 221 radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.",
+  "about": "Unit conversions (CoH3 field upgrades that change the squad blueprint): the unit pays `cost` and its action, out of combat, and becomes `to` in place (id, hex, facing, veterancy and HP share kept). unlock: base (default), doctrine (CoH3 battlegroup-tied; `doctrine` names the CoH3 battlegroup), research (e.g. the global Tank Depot upgrade); doctrines and research are not built yet, so those are refused. global: CoH3 upgrades every unit of the type at once. Costs from the design list of 2026-11-26, except Crusader II \u2192 III: 45 munitions as in the CoH3 data (2026-11-28). Weapon upgrades on the same blueprint (221 Panzerb\u00fcchse 41, 221 radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.",
   "conversions": [
-    { "from": "halftrack_ger", "to": "halftrack_stummel_ger", "cost": { "munition": 60 } },
-    { "from": "halftrack_ger", "to": "halftrack_medical_ger", "cost": { "munition": 60 } },
-    { "from": "halftrack_ger", "to": "halftrack_flame_ger", "cost": { "munition": 75 }, "research": true },
-    { "from": "pioneer_ger", "to": "sturmpioneer_ger", "cost": { "manpower": 75 }, "research": true },
-    { "from": "halftrack_us", "to": "halftrack_quad_us", "cost": { "munition": 75 } },
-    { "from": "halftrack_us", "to": "halftrack_75mm_us", "cost": { "munition": 75 } },
-    { "from": "halftrack_us", "to": "halftrack_medical_us", "cost": { "munition": 50 } },
-    { "from": "halftrack_us", "to": "halftrack_assault_us", "cost": {}, "research": true },
-    { "from": "hmg_30cal_us", "to": "hmg_50cal_us", "cost": { "munition": 60 }, "research": true },
-    { "from": "riflemen_us", "to": "ranger_us", "cost": { "manpower": 175 }, "research": true },
-    { "from": "engineer_us", "to": "assault_engineer_us", "cost": { "manpower": 80 }, "research": true },
-    { "from": "scout_us", "to": "pathfinder_us", "cost": {}, "research": true, "global": true },
-    { "from": "scout_us", "to": "artillery_observers_us", "cost": {}, "research": true, "global": true },
-    { "from": "sherman_us", "to": "sherman_76mm_us", "cost": { "manpower": 150, "fuel": 30 }, "research": true, "global": true },
-    { "from": "halftrack_250_ak", "to": "halftrack_250_20mm_ak", "cost": { "fuel": 15 } },
-    { "from": "halftrack_250_ak", "to": "halftrack_250_mortar_ak", "cost": { "munition": 60 } },
-    { "from": "halftrack_250_ak", "to": "halftrack_250_vampire_ak", "cost": {}, "research": true },
-    { "from": "truck_2_5_ak", "to": "truck_2_5_medical_ak", "cost": { "munition": 50 } },
-    { "from": "tiger_ak", "to": "tiger_ace_ak", "cost": {}, "research": true },
-    { "from": "crusader_africa_uk", "to": "crusader_57mm_africa_uk", "cost": { "munition": 45 } },
-    { "from": "cwt_15_truck_africa_uk", "to": "cwt_15_quad_mount_africa_uk", "cost": { "munition": 60 } },
-    { "from": "cwt_15_truck_africa_uk", "to": "cwt_15_truck_medical_africa_uk", "cost": { "munition": 60 } },
-    { "from": "cwt_lrdg_truck_africa_uk_uk", "to": "cwt_lrdg_truck_2pdr_africa_uk", "cost": { "munition": 30 }, "research": true }
+    {
+      "from": "halftrack_ger",
+      "to": "halftrack_stummel_ger",
+      "cost": {
+        "munition": 60
+      }
+    },
+    {
+      "from": "halftrack_ger",
+      "to": "halftrack_medical_ger",
+      "cost": {
+        "munition": 60
+      }
+    },
+    {
+      "from": "halftrack_ger",
+      "to": "halftrack_flame_ger",
+      "cost": {
+        "munition": 75
+      },
+      "unlock": "doctrine",
+      "doctrine": "siege"
+    },
+    {
+      "from": "pioneer_ger",
+      "to": "sturmpioneer_ger",
+      "cost": {
+        "manpower": 75
+      },
+      "unlock": "doctrine",
+      "doctrine": "last_stand"
+    },
+    {
+      "from": "halftrack_us",
+      "to": "halftrack_quad_us",
+      "cost": {
+        "munition": 75
+      }
+    },
+    {
+      "from": "halftrack_us",
+      "to": "halftrack_75mm_us",
+      "cost": {
+        "munition": 75
+      }
+    },
+    {
+      "from": "halftrack_us",
+      "to": "halftrack_medical_us",
+      "cost": {
+        "munition": 50
+      }
+    },
+    {
+      "from": "halftrack_us",
+      "to": "halftrack_assault_us",
+      "cost": {},
+      "unlock": "doctrine",
+      "doctrine": "heavy_weapons"
+    },
+    {
+      "from": "hmg_30cal_us",
+      "to": "hmg_50cal_us",
+      "cost": {
+        "munition": 60
+      },
+      "unlock": "doctrine",
+      "doctrine": "heavy_weapons"
+    },
+    {
+      "from": "riflemen_us",
+      "to": "ranger_us",
+      "cost": {
+        "manpower": 175
+      },
+      "unlock": "doctrine",
+      "doctrine": "advanced_infantry"
+    },
+    {
+      "from": "engineer_us",
+      "to": "assault_engineer_us",
+      "cost": {
+        "manpower": 80
+      },
+      "unlock": "doctrine",
+      "doctrine": "armored"
+    },
+    {
+      "from": "scout_us",
+      "to": "pathfinder_us",
+      "cost": {},
+      "global": true,
+      "unlock": "doctrine",
+      "doctrine": "airborne"
+    },
+    {
+      "from": "scout_us",
+      "to": "artillery_observers_us",
+      "cost": {},
+      "global": true,
+      "unlock": "doctrine",
+      "doctrine": "advanced_infantry"
+    },
+    {
+      "from": "sherman_us",
+      "to": "sherman_76mm_us",
+      "cost": {
+        "manpower": 150,
+        "fuel": 30
+      },
+      "global": true,
+      "unlock": "research"
+    },
+    {
+      "from": "halftrack_250_ak",
+      "to": "halftrack_250_20mm_ak",
+      "cost": {
+        "fuel": 15
+      }
+    },
+    {
+      "from": "halftrack_250_ak",
+      "to": "halftrack_250_mortar_ak",
+      "cost": {
+        "munition": 60
+      }
+    },
+    {
+      "from": "halftrack_250_ak",
+      "to": "halftrack_250_vampire_ak",
+      "cost": {},
+      "unlock": "doctrine",
+      "doctrine": "battlefield_espionage"
+    },
+    {
+      "from": "truck_2_5_ak",
+      "to": "truck_2_5_medical_ak",
+      "cost": {
+        "munition": 50
+      }
+    },
+    {
+      "from": "tiger_ak",
+      "to": "tiger_ace_ak",
+      "cost": {},
+      "unlock": "doctrine",
+      "doctrine": "elite_troops"
+    },
+    {
+      "from": "crusader_africa_uk",
+      "to": "crusader_57mm_africa_uk",
+      "cost": {
+        "munition": 45
+      }
+    },
+    {
+      "from": "cwt_15_truck_africa_uk",
+      "to": "cwt_15_quad_mount_africa_uk",
+      "cost": {
+        "munition": 60
+      }
+    },
+    {
+      "from": "cwt_15_truck_africa_uk",
+      "to": "cwt_15_truck_medical_africa_uk",
+      "cost": {
+        "munition": 60
+      }
+    },
+    {
+      "from": "cwt_lrdg_truck_africa_uk_uk",
+      "to": "cwt_lrdg_truck_2pdr_africa_uk",
+      "cost": {
+        "munition": 30
+      },
+      "unlock": "doctrine",
+      "doctrine": "special_missions"
+    }
   ]
 }
