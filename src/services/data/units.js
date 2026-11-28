@@ -11,7 +11,11 @@ export function indexUnits(generated) {
     for (const kind of KINDS) {
       for (const [category, recs] of Object.entries(data[kind] || {})) {
         for (const [id, rec] of Object.entries(recs)) {
-          if (units[kind][id]) { errors.push(`${kind} id "${id}" is defined by two factions`); continue; }
+          if (units[kind][id]) {   // the same CoH3 record shared by two factions (a weapon both use) is fine; a different one is not
+            const { id: _i, category: _c, ...prev } = units[kind][id];
+            if (JSON.stringify(prev) !== JSON.stringify(rec)) errors.push(`${kind} id "${id}" is defined differently by two factions`);
+            continue;
+          }
           units[kind][id] = { ...rec, id, category };
           if (kind === 'sbps') units.faction[id] = faction;
         }

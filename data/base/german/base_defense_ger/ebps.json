@@ -1,0 +1,46 @@
+{
+ "buildings": {
+  "base_defense_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/base_defense_ger",
+   "tags": [
+    "building",
+    "base_defense",
+    "emplacement"
+   ],
+   "hp": 800,
+   "target_size": 20,
+   "armor": {
+    "front": 15,
+    "side": 15,
+    "rear": 15
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 150
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "mg42_bunker_ger",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 6,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

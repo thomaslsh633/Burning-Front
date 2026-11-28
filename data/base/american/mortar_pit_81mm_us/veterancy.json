@@ -1,0 +1,23 @@
+{
+ "mortar_pit_81mm_us": {
+  "coh3_ref": "custom_property_container/veterancy/common/emplacement/emplacement_artillery",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.85
+   },
+   {
+    "ability_cooldown": 0.8,
+    "ability_range": 1.2
+   },
+   {
+    "received_damage": 0.67,
+    "attack_speed": 0.5
+   }
+  ]
+ }
+}

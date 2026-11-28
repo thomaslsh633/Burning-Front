@@ -1,0 +1,65 @@
+{
+ "vehicles": {
+  "cwt_15_quad_mount_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/cwt_15_quad_mount_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "british",
+    "upgraded_halftrack",
+    "vehicle_wheeled"
+   ],
+   "hp": 280,
+   "target_size": 16,
+   "armor": {
+    "front": 8,
+    "side": 8,
+    "rear": 8
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200,
+    "fuel": 20
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "20mm_oerlikon_mount_cwt_uk",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "cwt_15_quad_mount_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

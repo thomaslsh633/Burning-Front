@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "goon_gun_pit_us": {
+   "name": "entity.goon_gun_pit_us.name",
+   "model": {
+    "id": "goon_gun_pit_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "goon_gun_pit_us": {
+   "name": "unit.goon_gun_pit_us.name",
+   "short_name": "unit.goon_gun_pit_us.short",
+   "desc": "unit.goon_gun_pit_us.desc",
+   "icon": "goon_gun_pit_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

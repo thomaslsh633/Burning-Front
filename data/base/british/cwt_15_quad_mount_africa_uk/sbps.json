@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "cwt_15_quad_mount_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/cwt_15_quad_mount_africa_uk",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "cwt_15_quad_mount_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 20
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_critical_engine_damage_uk",
+    "shellburst_cwt_africa_uk",
+    "hold_fire",
+    "toggle_aa_mode",
+    "deploy_cwt_truck_uk",
+    "vehicle_handbrake_position_32_allow_facing"
+   ],
+   "veterancy": {
+    "set": "cwt_15_quad_mount_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

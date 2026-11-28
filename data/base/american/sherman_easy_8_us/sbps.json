@@ -1,0 +1,55 @@
+{
+ "vehicles": {
+  "sherman_easy_8_us": {
+   "coh3_ref": "sbps/races/american/vehicles/sherman_easy_8_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_easy_8_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 375,
+     "fuel": 105
+    },
+    "from": "coh3stats"
+   },
+   "pop": 14,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_sherman_easy8_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "veterancy_1_unlock_a_sherman_us",
+    "veterancy_1_unlock_b_sherman_us",
+    "hvap_sherman_easy_8_us",
+    "repair_critical_engine_damage_us",
+    "radio_net_passive_easy_8_us",
+    "hold_fire",
+    "veterancy_1a_he_rounds_sherman_us",
+    "white_phosphorous_sherman_us",
+    "hvap_sherman_easy_8_vet_3_us"
+   ],
+   "veterancy": {
+    "set": "sherman_easy_8_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

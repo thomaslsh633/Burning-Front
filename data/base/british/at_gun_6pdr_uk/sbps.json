@@ -1,0 +1,63 @@
+{
+ "team_weapons": {
+  "at_gun_6pdr_uk": {
+   "coh3_ref": "sbps/races/british/team_weapons/at_gun_6pdr_uk",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_6pdr_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 310
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "tier3"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "hold_fire",
+    "mobile_entrenchment_activate_veteran_uk",
+    "mobile_entrenchment_deactivate_veteran_uk"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_6pdr_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_6pdr_uk",
+    "crew_entity": "crew_at_gun_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

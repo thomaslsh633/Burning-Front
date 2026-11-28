@@ -1,0 +1,22 @@
+{
+ "coastal_officer_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/coastal_officer",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.8
+   },
+   {
+    "received_accuracy": 0.8,
+    "ability_range": 10
+   },
+   {
+    "hp_add": 20
+   }
+  ]
+ }
+}

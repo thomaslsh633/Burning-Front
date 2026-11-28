@@ -1,0 +1,23 @@
+{
+ "at_gun_17pdr_pheasant_emplacement_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/emplacement/emplacement_direct_fire",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {
+    "hp_add": 120
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "received_damage": 0.8,
+    "weapon_damage": 40,
+    "weapon_accuracy": 2
+   }
+  ]
+ }
+}

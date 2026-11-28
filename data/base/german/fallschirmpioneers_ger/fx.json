@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "kar98k_fallschirmpioneer_ger": {
+   "name": "weapon.kar98k_fallschirmpioneer_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "mg15_jaeger_ger": {
+   "name": "weapon.mg15_jaeger_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "fallschirmpioneers_ger": {
+   "name": "entity.fallschirmpioneers_ger.name",
+   "model": {
+    "id": "fallschirmpioneers_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "fallschirmpioneers_ger": {
+   "name": "unit.fallschirmpioneers_ger.name",
+   "short_name": "unit.fallschirmpioneers_ger.short",
+   "desc": "unit.fallschirmpioneers_ger.desc",
+   "icon": "fallschirmpioneers_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "mg15_jaeger_ger": {
+   "name": "upgrade.mg15_jaeger_ger.name",
+   "icon": "mg15_jaeger_ger"
+  },
+  "grb_39_grenade_launcher_fallschirmpioneer_ger": {
+   "name": "upgrade.grb_39_grenade_launcher_fallschirmpioneer_ger.name",
+   "icon": "grb_39_grenade_launcher_fallschirmpioneer_ger"
+  }
+ }
+}

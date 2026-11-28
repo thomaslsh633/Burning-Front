@@ -1,0 +1,54 @@
+{
+ "vehicles": {
+  "humber_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/humber_africa_uk",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "humber_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier3",
+    "vehicle_burst_weapon"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "vehicle_tulips_africa_uk",
+     "royal_engineers_vehicle_retrofits_humber_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_barrage_humber_uk",
+    "mark_area_humber_uk",
+    "hold_fire",
+    "polish_cavalry_tulip_rocket_strike_humber_africa_uk",
+    "royal_engineers_smoke_curtain_uk"
+   ],
+   "veterancy": {
+    "set": "humber_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "vehicles": {
+  "halftrack_75mm_us": {
+   "coh3_ref": "sbps/races/american/vehicles/halftrack_75mm_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "halftrack_75mm_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 265,
+     "fuel": 40
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_casemate_anti_tank",
+    "light_armor",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_quadmount_halftrack_exchangeable_parts_us",
+     "medical_halftrack_exchangeable_parts_us",
+     "75mm_halftrack_exchangeable_parts_us",
+     "assault_halftrack_exchangeable_parts_us"
+    ]
+   },
+   "abilities": [
+    "veterancy_1_unlock_a_halftrack_white_phosphorus_75mm_us",
+    "veterancy_1_unlock_b_halftrack_75mm_us",
+    "veterancy_1a_white_phosphorus_halftrack_75mm_us",
+    "veterancy_1b_improved_barrage_75mm_us",
+    "barrage_halftrack_75mm_us",
+    "self_repair_passive_halftrack_us",
+    "prioritize_vehicles_toggled_on",
+    "repair_critical_engine_damage_us",
+    "hold_fire",
+    "exchangeable_parts_us",
+    "exchangeable_parts_triggered_us",
+    "brazilian_squad_counterbattery_us",
+    "barrage_halftrack_75mm_suppressing_airburst_us"
+   ],
+   "veterancy": {
+    "set": "halftrack_75mm_us"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "sturmtiger_ger": {
+   "name": "entity.sturmtiger_ger.name",
+   "model": {
+    "id": "sturmtiger_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sturmtiger_ger": {
+   "name": "unit.sturmtiger_ger.name",
+   "short_name": "unit.sturmtiger_ger.short",
+   "desc": "unit.sturmtiger_ger.desc",
+   "icon": "sturmtiger_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

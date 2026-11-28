@@ -1,0 +1,24 @@
+{
+ "l6_40_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/l6_40_ak",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "hp_add": 40
+   },
+   {
+    "attack_speed": 0.75,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80,
+    "weapon_damage": 1.25,
+    "move": 1.2
+   }
+  ]
+ }
+}

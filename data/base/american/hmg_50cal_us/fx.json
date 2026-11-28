@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "50cal_hmg_us": {
+   "name": "weapon.50cal_hmg_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_50cal_us": {
+   "name": "unit.hmg_50cal_us.name",
+   "short_name": "unit.hmg_50cal_us.short",
+   "desc": "unit.hmg_50cal_us.desc",
+   "icon": "hmg_50cal_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

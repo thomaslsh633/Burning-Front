@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "halftrack_us": {
+   "coh3_ref": "sbps/races/american/vehicles/halftrack_us",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "halftrack_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier2",
+    "reinforce_healing_platform"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_quadmount_halftrack_us",
+     "medical_halftrack_us",
+     "75mm_halftrack_us",
+     "assault_halftrack_us"
+    ]
+   },
+   "abilities": [
+    "self_repair_passive_halftrack_us",
+    "advanced_reinforce_passive_halftrack_us",
+    "veterancy_1_unlock_a_halftrack_us",
+    "veterancy_1_unlock_b_halftrack_us",
+    "fortify_position_halftrack_us",
+    "spawn_salvage_crew_halftrack_us",
+    "towing_pickup",
+    "towing_drop",
+    "repair_critical_engine_damage_us",
+    "auto_reinforce_halftrack",
+    "common_shared_veterancy_dummy_parent",
+    "recrew_team_weapon_halftrack_us",
+    "exchangeable_parts_us",
+    "exchangeable_parts_triggered_us",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

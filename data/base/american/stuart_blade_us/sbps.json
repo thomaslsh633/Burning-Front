@@ -1,0 +1,57 @@
+{
+ "vehicles": {
+  "stuart_blade_us": {
+   "coh3_ref": "sbps/races/american/vehicles/stuart_blade_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stuart_blade_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "light_armor",
+    "tier3"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_kit_stuart_torch",
+     "commander_stuart_us",
+     "torch_5a_lessons_dummy",
+     "torch_5b_nogovernor_dummy"
+    ]
+   },
+   "abilities": [
+    "self_repair_stuart_torch",
+    "hold_fire",
+    "prioritize_vehicles",
+    "aura_commander_stuart_torch",
+    "smoke_stuart_uk",
+    "mark_target_stuart_uk",
+    "toggle_recon_stuart_torch",
+    "tread_shot_stuart_us"
+   ],
+   "veterancy": {
+    "set": "stuart_blade_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

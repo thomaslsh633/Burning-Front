@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "88mm_king_tiger_ger": {
+   "name": "weapon.88mm_king_tiger_ger.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  },
+  "mg34_coaxial_king_tiger_ger": {
+   "name": "weapon.mg34_coaxial_king_tiger_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_king_tiger_ger": {
+   "name": "weapon.mg34_hull_king_tiger_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "king_tiger_sdkfz_182_ger": {
+   "name": "entity.king_tiger_sdkfz_182_ger.name",
+   "model": {
+    "id": "king_tiger_sdkfz_182_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "king_tiger_sdkfz_182_ger": {
+   "name": "unit.king_tiger_sdkfz_182_ger.name",
+   "short_name": "unit.king_tiger_sdkfz_182_ger.short",
+   "desc": "unit.king_tiger_sdkfz_182_ger.desc",
+   "icon": "king_tiger_sdkfz_182_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

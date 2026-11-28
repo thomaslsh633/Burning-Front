@@ -1,0 +1,68 @@
+{
+ "team_weapons": {
+  "leig_75mm_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/team_weapons/leig_75mm_ak",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_howitzer_75mm_leig_ak",
+     "count": 1
+    },
+    {
+     "entity": "crew_leig_base_ak",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "teamweapon",
+    "artillery",
+    "tier2",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "barrage_howitzer_75mm_leig_ak",
+    "barrage_smoke_75mm_leig_ak",
+    "direct_shot_leig_ak",
+    "hold_fire",
+    "team_weapons_combined_arms_ak",
+    "team_weapons_combined_arms_entrenchment_ak",
+    "italian_infantry_dummy_defense_of_the_motherland_ak",
+    "siegebreakers_siege_specialists_range_in_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.62
+   },
+   "veterancy": {
+    "set": "leig_75mm_ak"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_howitzer_75mm_leig_ak",
+    "crew_entity": "crew_leig_base_ak"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "stug_iii_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/stug_iii_ak",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 120,
+    "attack_speed": 0.85,
+    "weapon_penetration": 1.2
+   }
+  ]
+ }
+}

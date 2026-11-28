@@ -1,0 +1,32 @@
+{
+ "emplacements": {
+  "base_defense_us": {
+   "coh3_ref": "sbps/races/american/emplacements/base_defense_us",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "base_defense_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "suppression",
+    "building",
+    "base_defense",
+    "teamweapon"
+   ],
+   "source": "built",
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "buildings": {
+  "bunker_ger_antitank": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/bunker_ger_antitank",
+   "tags": [
+    "building",
+    "bunker",
+    "emplacement_no_teardown",
+    "team_weapon"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200,
+    "fuel": 15
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_at_gun_bunker_ger",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

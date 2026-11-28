@@ -1,0 +1,15 @@
+{
+ "armored_car_8_rad_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/armored_car_8_rad_ger",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {},
+   {},
+   {}
+  ]
+ }
+}

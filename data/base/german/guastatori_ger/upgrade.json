@@ -1,0 +1,39 @@
+{
+ "infantry": {
+  "grb_39_grenade_launcher_pioneer_ger": {
+   "coh3_ref": "upgrade/german/infantry/grb_39_grenade_launcher_pioneer_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "defense_left_1_fortress_pioneers_ger"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "grb_39_grenade_launcher_he_ger"
+    }
+   ]
+  },
+  "flamethrower_guastatori_ger": {
+   "coh3_ref": "upgrade/german/infantry/flamethrower_guastatori_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_guastatori_ak"
+    }
+   ]
+  }
+ }
+}

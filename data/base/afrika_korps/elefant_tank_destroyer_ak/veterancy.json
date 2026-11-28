@@ -1,0 +1,20 @@
+{
+ "elefant_tank_destroyer_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/elefant_tank_destroyer_ak",
+  "xp": [
+   2750,
+   8250,
+   16500
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "weapon_range": 10,
+    "weapon_accuracy": 1.3
+   }
+  ]
+ }
+}

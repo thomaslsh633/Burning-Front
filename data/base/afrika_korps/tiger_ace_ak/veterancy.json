@@ -1,0 +1,20 @@
+{
+ "tiger_ace_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/tiger_ak",
+  "xp": [
+   4470,
+   13410,
+   26820
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

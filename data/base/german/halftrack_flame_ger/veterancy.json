@@ -1,0 +1,21 @@
+{
+ "halftrack_flame_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/halftrack_flame_ger",
+  "xp": [
+   1100,
+   3300,
+   6600
+  ],
+  "ranks": [
+   {},
+   {
+    "hp_add": 40
+   },
+   {
+    "hp_add": 80,
+    "move": 1.2,
+    "weapon_damage": 1.15
+   }
+  ]
+ }
+}

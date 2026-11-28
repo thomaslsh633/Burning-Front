@@ -1,0 +1,59 @@
+{
+ "infantry": {
+  "ssf_commandos_us": {
+   "coh3_ref": "sbps/races/american/infantry/ssf_commandos_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "ssf_commandos_us",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 4,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "SSF",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "grenade_white_phosphorus_devils_brigade_us",
+    "veterancy_1_unlock_a_devils_brigade_us",
+    "veterancy_1_unlock_b_devils_brigade_us",
+    "vault_movement",
+    "knife_throw_devils_brigade_us",
+    "toggle_lmg_bazooka_ssf_us",
+    "hold_fire",
+    "prioritize_vehicles_infantry",
+    "camouflage_in_cover_ssf_commandos"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.55
+   },
+   "veterancy": {
+    "set": "ssf_commandos_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "demo_charge_ssf_commando_us"
+    ]
+   }
+  }
+ }
+}

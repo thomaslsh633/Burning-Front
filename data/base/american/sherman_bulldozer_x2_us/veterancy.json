@@ -1,0 +1,20 @@
+{
+ "sherman_bulldozer_x2_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/sherman_bulldozer_us",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8,
+    "hp_add": 80
+   },
+   {
+    "attack_speed": 0.75
+   }
+  ]
+ }
+}

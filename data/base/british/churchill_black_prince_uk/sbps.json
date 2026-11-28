@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "churchill_black_prince_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/churchill_black_prince_uk",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "churchill_black_prince_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 690,
+     "fuel": 180
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor",
+    "apex_armor"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "prioritize_vehicles",
+    "infantry_support_smoke_churchill_uk",
+    "hold_fire",
+    "churchill_black_prince_combat_self_repair_uk",
+    "churchill_black_prince_combat_self_repair_veteran_uk",
+    "track_armor_churchill_black_prince_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_black_prince_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

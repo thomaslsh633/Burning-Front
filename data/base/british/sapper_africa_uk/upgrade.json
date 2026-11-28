@@ -1,0 +1,40 @@
+{
+ "infantry": {
+  "flamethrower_sapper_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/flamethrower_sapper_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 2,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_sapper_africa_uk"
+    }
+   ]
+  },
+  "piat_sapper_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/piat_sapper_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 90
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "royal_engineers_uk",
+     "royal_engineers_engineer_specialization_uk"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "sapper_piat_uk"
+    }
+   ]
+  }
+ }
+}

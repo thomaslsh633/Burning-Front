@@ -1,0 +1,49 @@
+{
+ "vehicles": {
+  "churchill_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/churchill_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "churchill_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400,
+     "fuel": 110
+    },
+    "from": "coh3stats"
+   },
+   "pop": 16,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "weapon_75mm_churchill_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "infantry_support_smoke_churchill_uk",
+    "hold_fire",
+    "churchill_combat_self_repair_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

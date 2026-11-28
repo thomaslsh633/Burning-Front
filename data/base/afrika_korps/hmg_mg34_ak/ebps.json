@@ -1,0 +1,44 @@
+{
+ "infantry": {
+  "crew_hmg_mg34_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/infantry/crew_hmg_mg34_ak",
+   "tags": [
+    "infantry"
+   ],
+   "hp": 90,
+   "target_size": 1.45,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "mp40_crew_ak",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

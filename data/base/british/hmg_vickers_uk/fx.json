@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "hmg_vickers_uk": {
+   "name": "unit.hmg_vickers_uk.name",
+   "short_name": "unit.hmg_vickers_uk.short",
+   "desc": "unit.hmg_vickers_uk.desc",
+   "icon": "hmg_vickers_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

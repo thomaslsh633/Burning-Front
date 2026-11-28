@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "vickers_rear_cwt_lrdg_uk": {
+   "name": "weapon.vickers_rear_cwt_lrdg_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "cwt_lrdg_truck_africa_uk": {
+   "name": "entity.cwt_lrdg_truck_africa_uk.name",
+   "model": {
+    "id": "cwt_lrdg_truck_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "cwt_lrdg_truck_africa_uk_uk": {
+   "name": "unit.cwt_lrdg_truck_africa_uk_uk.name",
+   "short_name": "unit.cwt_lrdg_truck_africa_uk_uk.short",
+   "desc": "unit.cwt_lrdg_truck_africa_uk_uk.desc",
+   "icon": "cwt_lrdg_truck_africa_uk_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_88mm_emplacement_ger": {
+   "name": "entity.tw_88mm_emplacement_ger.name",
+   "model": {
+    "id": "tw_88mm_emplacement_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_88mm_emplacement_ger": {
+   "name": "unit.at_gun_88mm_emplacement_ger.name",
+   "short_name": "unit.at_gun_88mm_emplacement_ger.short",
+   "desc": "unit.at_gun_88mm_emplacement_ger.desc",
+   "icon": "at_gun_88mm_emplacement_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "sniper_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

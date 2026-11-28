@@ -1,0 +1,79 @@
+{
+ "infantry": {
+  "sturmpioneer_ger": {
+   "coh3_ref": "sbps/races/german/infantry/sturmpioneer_ger",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "sturmpioneer_ger",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "standard_infantry",
+    "infanterie_kompanie",
+    "infantry_burst_weapon"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "sturmpioneer_leader_ir_mp44_ger",
+     "sturmpioneer_leader_urban_assault_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_pioneer_ger",
+    "vault_movement",
+    "toggle_detect_mines_ger",
+    "fast_capture_sturmpioneer_vet_ger",
+    "permanent_hulldown_target_pioneer_ger",
+    "last_stand_panzerfaust_global_ger",
+    "satchel_charge_pioneer_ger",
+    "blocking_force_infantry_setup_incursion_response_ger",
+    "sturmpioneer_grenade_assault_ger",
+    "restore_wreck_infantry_ger",
+    "salvage_pioneer_last_stand_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.51
+   },
+   "veterancy": {
+    "set": "sturmpioneer_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ger",
+     "fighting_nest_ger",
+     "tank_trap_ger",
+     "mine_pioneer_ger",
+     "bunker_ger",
+     "sandbag_wall_vision_blocker_ger",
+     "observation_post_ger",
+     "luftwaffe_relay_point_ger",
+     "propaganda_tower_ger",
+     "pantherturm_emplacement_ger"
+    ]
+   }
+  }
+ }
+}

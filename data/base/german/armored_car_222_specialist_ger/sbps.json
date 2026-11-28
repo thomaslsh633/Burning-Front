@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "armored_car_222_specialist_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/specialist/armored_car_222_specialist_ger",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "armored_car_222_specialist_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 30
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "dak_light_vehicle",
+    "light_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "smoke_discharge_8rad_ak",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak"
+   ],
+   "veterancy": {
+    "set": "armored_car_222_specialist_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

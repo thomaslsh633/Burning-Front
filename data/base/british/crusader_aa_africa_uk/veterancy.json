@@ -1,0 +1,21 @@
+{
+ "crusader_aa_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/crusader_aa_uk",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_accuracy": 1.2
+   },
+   {
+    "weapon_damage": 1.25,
+    "hp_add": 80,
+    "aoe_member_cap": 1
+   }
+  ]
+ }
+}

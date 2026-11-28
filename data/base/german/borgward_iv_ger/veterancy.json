@@ -1,0 +1,23 @@
+{
+ "borgward_iv_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/borgward_iv_ger",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.8
+   },
+   {
+    "ability_cooldown": 0.8
+   },
+   {
+    "hp_add": 80,
+    "weapon_damage": 1.25,
+    "ability_cost": 0.5
+   }
+  ]
+ }
+}

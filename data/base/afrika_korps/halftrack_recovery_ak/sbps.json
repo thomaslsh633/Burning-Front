@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "halftrack_recovery_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_recovery_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "recovery_halftrack_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "dak_light_vehicle",
+    "tier3",
+    "recovery_vehicle",
+    "vehicle_repair_recovery",
+    "light_armor"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "restore_wreck_vehicle_us",
+    "repair_vehicle_ak",
+    "salvage_recovery_vehicle_us",
+    "self_repair_passive_ui_34_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "common_shared_veterancy_dummy_parent",
+    "smoke_discharge_ui_position_23_ak",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_recovery_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

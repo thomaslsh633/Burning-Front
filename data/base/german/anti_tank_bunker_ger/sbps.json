@@ -1,0 +1,41 @@
+{
+ "emplacements": {
+  "anti_tank_bunker_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/anti_tank_bunker_ger",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "bunker_ger_antitank",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 15
+    },
+    "from": "coh3stats"
+   },
+   "pop": 2,
+   "build_turns": 4,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "building",
+    "invisible_to_scar",
+    "emplacement"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "squad_building_retreat_held_squads",
+    "force_attack_target"
+   ],
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

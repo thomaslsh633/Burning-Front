@@ -1,0 +1,61 @@
+{
+ "infantry": {
+  "gurkhas_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/gurkhas_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "gurkhas_africa_uk",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 5,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_long_range",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "lmg_bren_gurkhas_uk",
+     "smg_thompson_gurkhas_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "c_artillery_gurkhas_fearless_assault_uk",
+    "battle_charge_gurkhas_uk",
+    "valour_squad_uk",
+    "gurkha_smoke_grenade_uk",
+    "gurkha_grenade_assault_uk",
+    "forward_observer_gurkha_uk"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.59
+   },
+   "veterancy": {
+    "set": "gurkhas_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

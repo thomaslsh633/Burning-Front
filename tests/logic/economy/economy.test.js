@@ -43,7 +43,8 @@ test('collect income: net manpower never below a quarter of gross; resources nev
 test('Produce check: own building that offers the squad, money in hand, a free hex beside it', () => {
   const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 2) }], MAP);
   const cmd = (x = {}) => ({ type: 'Produce', side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(1, 2), ...x });
-  assert.deepEqual(economy.offers(state, data, 'bx'), ['mortar_81mm_us', 'riflemen_us'], 'CoH3 barracks_us, squads in the unit data');
+  assert.deepEqual(economy.offers(state, data, 'bx'), data.rules.production.factions.american.buildings.barracks_us.base, 'T1: CoH3 barracks_us base list');
+  assert.ok(economy.offers(state, data, 'bx').includes('riflemen_us'));
   assert.equal(economy.validateProduce(state, cmd(), data), null);
   assert.equal(economy.validateProduce(state, cmd({ building: 'tx' }), data), 'no_such_building');
   assert.equal(economy.validateProduce(state, cmd({ sbps: 'sherman_us' }), data), 'not_offered');
@@ -56,7 +57,7 @@ test('Produce check: own building that offers the squad, money in hand, a free h
 test('the HQ produces too (its CoH3 HQ building list)', () => {
   const { state, data } = testMatch([], { structures: [{ id: 'hqb', kind: 'hq', team: 'blue', hexes: ['1,1'] }] });
   assert.deepEqual(economy.producers(state, data).map(b => [b.id, b.type]), [['hqb', 'hq']]);
-  assert.deepEqual(economy.offers(state, data, 'hqb'), [], 'hq_us squads (engineers, scouts …) are not imported yet');
+  assert.deepEqual(economy.offers(state, data, 'hqb'), ['engineer_us', 'scout_us'], 'the HQ: base engineers and recon');
 });
 
 test('a map point may set its own yield', () => {

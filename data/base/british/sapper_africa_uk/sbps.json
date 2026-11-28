@@ -1,0 +1,88 @@
+{
+ "infantry": {
+  "sapper_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/sapper_africa_uk",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "sapper_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 210
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "standard_infantry",
+    "tier1",
+    "infantry_support",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "flamethrower_sapper_africa_uk",
+     "piat_sapper_africa_uk"
+    ],
+    "pending": [
+     "utility_sapper_africa_uk",
+     "demolition_package_sapper_africa_uk",
+     "royal_engineers_assault_engineers_thompson_africa_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_sapper_africa_uk",
+    "grenade_no69_africa_uk",
+    "defuse_mine_engineer_us",
+    "toggle_detect_mines_us",
+    "cut_wire_engineer_us",
+    "valour_squad_uk",
+    "breach_flamethrower_uk",
+    "canadian_shock_infantry_incendiary_munitions_sapper_africa_uk",
+    "canadian_shock_infantry_pyrotechnics_sapper_africa_uk",
+    "polish_cavalry_infantry_no_man_left_behind_3_3_africa_uk",
+    "royal_engineers_specialization_bolster_uk",
+    "grenade_bangalore_africa_uk"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.51
+   },
+   "veterancy": {
+    "set": "sapper_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_us",
+     "barbed_wire_fence_us",
+     "tank_trap_uk",
+     "mine_sapper_uk",
+     "forward_repair_assembly_africa_uk",
+     "tw_howitzer_bl_5_5_africa_uk",
+     "observation_post_uk",
+     "tw_bofors_emplacement_africa_uk",
+     "tw_17pdr_pheasant_emplacement_uk",
+     "tripwire_flare_mine_variant_africa_uk",
+     "observation_post_reinforced_uk",
+     "hmg_bunker_africa_uk",
+     "demo_charge_sapper_uk"
+    ]
+   }
+  }
+ }
+}

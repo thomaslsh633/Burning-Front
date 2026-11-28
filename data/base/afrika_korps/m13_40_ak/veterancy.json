@@ -1,0 +1,23 @@
+{
+ "m13_40_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/m13_40_ak",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "hp_add": 40
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "hp_add": 80,
+    "weapon_accuracy": 1.25,
+    "weapon_penetration": 1.25
+   }
+  ]
+ }
+}

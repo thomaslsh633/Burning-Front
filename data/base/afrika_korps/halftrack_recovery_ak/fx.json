@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "recovery_halftrack_ak": {
+   "name": "entity.recovery_halftrack_ak.name",
+   "model": {
+    "id": "recovery_halftrack_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_recovery_ak": {
+   "name": "unit.halftrack_recovery_ak.name",
+   "short_name": "unit.halftrack_recovery_ak.short",
+   "desc": "unit.halftrack_recovery_ak.desc",
+   "icon": "halftrack_recovery_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

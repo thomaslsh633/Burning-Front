@@ -1,0 +1,17 @@
+{
+ "halftrack_towed_88mm_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/truck_2_5_ak",
+  "xp": [
+   750,
+   2250,
+   4500
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "hp_add": 80
+   }
+  ]
+ }
+}

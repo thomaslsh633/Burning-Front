@@ -1,0 +1,21 @@
+{
+ "stuart_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/stuart_uk",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.75,
+    "weapon_accuracy": 1.15
+   },
+   {
+    "hp_add": 80,
+    "move": 1.2
+   }
+  ]
+ }
+}

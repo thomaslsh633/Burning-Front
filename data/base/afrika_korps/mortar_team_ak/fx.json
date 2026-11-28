@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "81mm_mortar_ger": {
+   "name": "weapon.81mm_mortar_ger.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  }
+ },
+ "ebps": {
+  "crew_mortar_ak": {
+   "name": "entity.crew_mortar_ak.name",
+   "model": {
+    "id": "crew_mortar_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "mortar_team_ak": {
+   "name": "unit.mortar_team_ak.name",
+   "short_name": "unit.mortar_team_ak.short",
+   "desc": "unit.mortar_team_ak.desc",
+   "icon": "mortar_team_ak",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "halftrack_250_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/halftrack_250_ak",
+  "xp": [
+   500,
+   1500,
+   3000
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.75
+   },
+   {
+    "hp_add": 40
+   },
+   {
+    "hp_add": 80,
+    "received_accuracy": 0.7,
+    "weapon_suppression": 0.0135
+   }
+  ]
+ }
+}

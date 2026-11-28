@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "partisan_tunnel_constructed_us": {
+   "name": "entity.partisan_tunnel_constructed_us.name",
+   "model": {
+    "id": "partisan_tunnel_constructed_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "partisan_tunnel_constructed_us": {
+   "name": "unit.partisan_tunnel_constructed_us.name",
+   "short_name": "unit.partisan_tunnel_constructed_us.short",
+   "desc": "unit.partisan_tunnel_constructed_us.desc",
+   "icon": "partisan_tunnel_constructed_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

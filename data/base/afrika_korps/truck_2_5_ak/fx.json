@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_2_5_ak": {
+   "name": "entity.truck_2_5_ak.name",
+   "model": {
+    "id": "truck_2_5_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "truck_2_5_ak": {
+   "name": "unit.truck_2_5_ak.name",
+   "short_name": "unit.truck_2_5_ak.short",
+   "desc": "unit.truck_2_5_ak.desc",
+   "icon": "truck_2_5_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

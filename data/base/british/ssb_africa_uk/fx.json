@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "thompson_ssb_africa_uk": {
+   "name": "weapon.thompson_ssb_africa_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "ssb_africa_uk": {
+   "name": "entity.ssb_africa_uk.name",
+   "model": {
+    "id": "ssb_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "ssb_africa_uk": {
+   "name": "unit.ssb_africa_uk.name",
+   "short_name": "unit.ssb_africa_uk.short",
+   "desc": "unit.ssb_africa_uk.desc",
+   "icon": "ssb_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

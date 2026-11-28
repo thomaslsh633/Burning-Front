@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "90mm_pershing_us": {
+   "name": "weapon.90mm_pershing_us.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  }
+ },
+ "ebps": {
+  "pershing_us": {
+   "name": "entity.pershing_us.name",
+   "model": {
+    "id": "pershing_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "pershing_us": {
+   "name": "unit.pershing_us.name",
+   "short_name": "unit.pershing_us.short",
+   "desc": "unit.pershing_us.desc",
+   "icon": "pershing_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

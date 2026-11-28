@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "9mm_sten_sapper_uk": {
+   "name": "weapon.9mm_sten_sapper_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_sapper_uk": {
+   "name": "weapon.flamethrower_sapper_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "sapper_uk": {
+   "name": "entity.sapper_uk.name",
+   "model": {
+    "id": "sapper_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sapper_uk": {
+   "name": "unit.sapper_uk.name",
+   "short_name": "unit.sapper_uk.short",
+   "desc": "unit.sapper_uk.desc",
+   "icon": "sapper_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "flamethrower_sapper_uk": {
+   "name": "upgrade.flamethrower_sapper_uk.name",
+   "icon": "flamethrower_sapper_uk"
+  },
+  "piat_sapper_uk": {
+   "name": "upgrade.piat_sapper_uk.name",
+   "icon": "piat_sapper_uk"
+  }
+ }
+}

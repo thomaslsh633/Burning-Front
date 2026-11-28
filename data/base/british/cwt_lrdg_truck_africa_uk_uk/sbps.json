@@ -1,0 +1,54 @@
+{
+ "vehicles": {
+  "cwt_lrdg_truck_africa_uk_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/cwt_lrdg_truck_africa_uk_uk",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "cwt_lrdg_truck_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier2",
+    "reinforce_healing_platform"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "cwt_lrdg_2pdr_uk"
+    ]
+   },
+   "abilities": [
+    "special_services_scarper_retreat_uk",
+    "special_services_vehicle_scorched_earth_africa_uk",
+    "special_services_force_multiplier_retreat_smoke_uk",
+    "hold_fire",
+    "towing_drop",
+    "towing_pickup",
+    "assault_transport_disable_sniper",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "cwt_lrdg_truck_africa_uk_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

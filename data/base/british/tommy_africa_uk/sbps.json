@@ -1,0 +1,71 @@
+{
+ "infantry": {
+  "tommy_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/tommy_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "officer_tommy_africa_uk",
+     "count": 1
+    },
+    {
+     "entity": "tommy_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier1",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "boys_anti_tank_rifles_tommy_africa_uk",
+     "lmg_bren_tommy_africa_uk",
+     "recon_package_tommy_africa_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "rifle_grenade_tommy_africa_uk",
+    "flare_tommy_africa_uk",
+    "forward_observer_tommy_africa_uk",
+    "valour_squad_uk",
+    "at_grenade_sapper_africa_uk",
+    "base_of_fire_tommy_uk",
+    "canadian_shock_infantry_incendiary_munitions_tommy_africa_uk",
+    "canadian_shock_infantry_pyrotechnics_tommy_africa_uk",
+    "valour_squad_display_22_uk",
+    "polish_cavalry_infantry_no_man_left_behind_africa_uk",
+    "grenade_bangalore_africa_2_2_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.62
+   },
+   "veterancy": {
+    "set": "tommy_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

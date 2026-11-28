@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "tiger_ger": {
+   "name": "unit.tiger_ger.name",
+   "short_name": "unit.tiger_ger.short",
+   "desc": "unit.tiger_ger.desc",
+   "icon": "tiger_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

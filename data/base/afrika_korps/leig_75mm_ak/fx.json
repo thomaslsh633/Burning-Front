@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "75mm_leig_ak": {
+   "name": "weapon.75mm_leig_ak.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  }
+ },
+ "ebps": {
+  "tw_howitzer_75mm_leig_ak": {
+   "name": "entity.tw_howitzer_75mm_leig_ak.name",
+   "model": {
+    "id": "tw_howitzer_75mm_leig_ak",
+    "anim_class": "crew"
+   }
+  },
+  "crew_leig_base_ak": {
+   "name": "entity.crew_leig_base_ak.name",
+   "model": {
+    "id": "crew_leig_base_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "leig_75mm_ak": {
+   "name": "unit.leig_75mm_ak.name",
+   "short_name": "unit.leig_75mm_ak.short",
+   "desc": "unit.leig_75mm_ak.desc",
+   "icon": "leig_75mm_ak",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

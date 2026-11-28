@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "grease_gun_engineer_us": {
+   "name": "weapon.grease_gun_engineer_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "engineer_us": {
+   "name": "entity.engineer_us.name",
+   "model": {
+    "id": "engineer_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "engineer_us": {
+   "name": "unit.engineer_us.name",
+   "short_name": "unit.engineer_us.short",
+   "desc": "unit.engineer_us.desc",
+   "icon": "engineer_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

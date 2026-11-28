@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "hmg_30cal_paradrop_us": {
+   "name": "unit.hmg_30cal_paradrop_us.name",
+   "short_name": "unit.hmg_30cal_paradrop_us.short",
+   "desc": "unit.hmg_30cal_paradrop_us.desc",
+   "icon": "hmg_30cal_paradrop_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

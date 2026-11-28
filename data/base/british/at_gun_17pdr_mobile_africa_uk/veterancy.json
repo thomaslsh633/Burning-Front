@@ -1,0 +1,23 @@
+{
+ "at_gun_17pdr_mobile_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "received_damage": 0.8,
+    "weapon_damage": 1.1667,
+    "weapon_accuracy": 2
+   }
+  ]
+ }
+}

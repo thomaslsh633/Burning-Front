@@ -1,0 +1,22 @@
+{
+ "kettenkrad_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/kettenkrad_ger",
+  "xp": [
+   500,
+   1500,
+   3000
+  ],
+  "ranks": [
+   {},
+   {
+    "sight": 5,
+    "detection": 5,
+    "build_speed": 1.35
+   },
+   {
+    "hp_add": 60,
+    "capture_rate": 1.5
+   }
+  ]
+ }
+}

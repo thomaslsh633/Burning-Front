@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "carcano_carbine_bersaglieri_ak": {
+   "name": "weapon.carcano_carbine_bersaglieri_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "lmg_breda_m30_bersaglieri_ak": {
+   "name": "weapon.lmg_breda_m30_bersaglieri_ak.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "bersaglieri_ak": {
+   "name": "entity.bersaglieri_ak.name",
+   "model": {
+    "id": "bersaglieri_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "bersaglieri_ak": {
+   "name": "unit.bersaglieri_ak.name",
+   "short_name": "unit.bersaglieri_ak.short",
+   "desc": "unit.bersaglieri_ak.desc",
+   "icon": "bersaglieri_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "lmg_breda_m30_bersaglieri_ak": {
+   "name": "upgrade.lmg_breda_m30_bersaglieri_ak.name",
+   "icon": "lmg_breda_m30_bersaglieri_ak"
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "infantry": {
+  "ssb_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/ssb_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "ssb_africa_uk",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "special_services_commando_firepower_bolster_uk"
+    ]
+   },
+   "abilities": [
+    "camouflage_in_cover_ssb",
+    "lewes_bomb_special_services_uk",
+    "special_services_infantry_scorched_earth_africa_uk",
+    "special_services_force_multiplier_retreat_smoke_uk",
+    "hold_fire",
+    "special_services_ssb_escape_retreat_uk",
+    "lewes_bomb_special_services_upgraded_uk",
+    "special_services_infantry_scorched_earth_africa_veteran_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.44
+   },
+   "veterancy": {
+    "set": "ssb_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

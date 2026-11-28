@@ -1,0 +1,59 @@
+{
+ "vehicles": {
+  "scott_us": {
+   "coh3_ref": "ebps/races/american/vehicles/scott_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized"
+   ],
+   "hp": 420,
+   "target_size": 19,
+   "armor": {
+    "front": 50,
+    "side": 37.5,
+    "rear": 25
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": -1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 280,
+    "fuel": 55
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "trench_crossing_vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_howitzer_scott_us",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "wreck": {
+    "entity": "scott_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

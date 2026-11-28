@@ -1,0 +1,90 @@
+{
+ "flame_throwers": {
+  "flamethrower_panzer_iii_ak": {
+   "coh3_ref": "weapon/afrika_korps/flame_throwers/flamethrower_panzer_iii_ak",
+   "class": "flame",
+   "fire_rule": "volley",
+   "damage": 3,
+   "damage_type": "flame",
+   "penetration": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "vs_target": {
+    "building": {
+     "damage": 3.5,
+     "penetration": 25
+    },
+    "bunker": {
+     "penetration": 20
+    },
+    "emplacement": {
+     "penetration": 20
+    }
+   },
+   "traits": [
+    "needs_sight",
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 30,
+     "mid": 30,
+     "far": 30
+    },
+    "damage_per_shot": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "shot_multiplier": 0.83,
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 1.25,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 1.5,
+      "suppression": 0
+     },
+     "negative": {
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

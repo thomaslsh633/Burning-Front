@@ -1,0 +1,59 @@
+{
+ "team_weapons": {
+  "howitzer_cannone_da_105_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/howitzer_cannone_da_105_ger",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_howitzer_cannone_da_105_ger",
+     "count": 1
+    },
+    {
+     "entity": "crew_bersaglieri_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "artillery",
+    "stationary_anti_tank_weapon"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "barrage_howitzer_cannone_105_ger",
+    "smoke_howitzer_cannone_105_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.62
+   },
+   "veterancy": {
+    "set": "howitzer_cannone_da_105_ger"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_howitzer_cannone_da_105_ger",
+    "crew_entity": "crew_bersaglieri_ger"
+   },
+   "supply": {
+    "ammo": 8
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "50mm_long_barrel_panzer_iii_ak": {
+   "name": "weapon.50mm_long_barrel_panzer_iii_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "panzer_iii_50mm_long_ak": {
+   "name": "entity.panzer_iii_50mm_long_ak.name",
+   "model": {
+    "id": "panzer_iii_50mm_long_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "panzer_iii_50mm_long_ak": {
+   "name": "unit.panzer_iii_50mm_long_ak.name",
+   "short_name": "unit.panzer_iii_50mm_long_ak.short",
+   "desc": "unit.panzer_iii_50mm_long_ak.desc",
+   "icon": "panzer_iii_50mm_long_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

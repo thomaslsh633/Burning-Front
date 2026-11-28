@@ -1,0 +1,66 @@
+{
+ "infantry": {
+  "stormtrooper_ger": {
+   "coh3_ref": "sbps/races/german/infantry/stormtrooper_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "stormtrooper_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "tier4",
+    "panzer_kompanie",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "stg_44_stormtrooper_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "grenade_white_phosphorus_stormtrooper_ger",
+    "vault_movement",
+    "grenade_stormtrooper_ger",
+    "mountain_zeal_squad_ger",
+    "vet_shock_assault_stosstruppen_ger",
+    "camouflage_in_cover_stormtrooper_ger",
+    "hold_fire",
+    "damage_reduction_15_percent",
+    "stormtrooper_grenade_replenishment_ger",
+    "terror_infantry_interrogate_ger",
+    "terror_infantry_no_quarter_jager_stormtrooper_ger",
+    "last_stand_panzerfaust_global_ger",
+    "blocking_force_infantry_setup_incursion_response_ger"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.42
+   },
+   "veterancy": {
+    "set": "stormtrooper_ger"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

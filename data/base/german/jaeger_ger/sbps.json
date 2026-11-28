@@ -1,0 +1,70 @@
+{
+ "infantry": {
+  "jaeger_ger": {
+   "coh3_ref": "sbps/races/german/infantry/jaeger_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "jaeger_support_ger",
+     "count": 1
+    },
+    {
+     "entity": "jaeger_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier2",
+    "luftwaffe_kompanie",
+    "jaeger_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "panzerschrek_jaeger_ger",
+     "g43_jaeger_ger",
+     "panzerschrek_jaeger_second_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "smoke_rifle_jaeger_ger",
+    "vault_movement",
+    "mountain_zeal_squad_ger",
+    "flare_jaeger_ger",
+    "hold_fire",
+    "terror_infantry_interrogate_ger",
+    "terror_infantry_no_quarter_jager_stormtrooper_ger",
+    "jager_slowing_fire_ger",
+    "last_stand_panzerfaust_global_ger",
+    "grenade_rifle_jaeger_ger",
+    "blocking_force_infantry_setup_incursion_response_ger"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.47
+   },
+   "veterancy": {
+    "set": "jaeger_ger"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

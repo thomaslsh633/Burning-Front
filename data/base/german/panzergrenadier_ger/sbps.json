@@ -1,0 +1,61 @@
+{
+ "infantry": {
+  "panzergrenadier_ger": {
+   "coh3_ref": "sbps/races/german/infantry/panzergrenadier_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "panzergrenadier_ger",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "tier2",
+    "panzergrenadier_kompanie",
+    "infantry_burst_weapon",
+    "panzergrenadier_ger",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "breach",
+    "vault_movement",
+    "bundle_grenade_panzergrenadier_ger",
+    "automatic_fire_panzergrenadier_ger",
+    "mountain_zeal_squad_ger",
+    "terror_infantry_interrogate_ger",
+    "terror_infantry_no_quarter_grenadier_ger",
+    "last_stand_panzerfaust_global_ger",
+    "grenade_smoke_panzergrenadier_ger",
+    "blocking_force_infantry_setup_incursion_response_ger"
+   ],
+   "capture": {
+    "rate": 1.5
+   },
+   "reinforce": {
+    "cost_ratio": 0.45
+   },
+   "veterancy": {
+    "set": "panzergrenadier_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

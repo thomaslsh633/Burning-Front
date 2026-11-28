@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "archer_uk": {
+   "name": "entity.archer_uk.name",
+   "model": {
+    "id": "archer_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "archer_uk": {
+   "name": "unit.archer_uk.name",
+   "short_name": "unit.archer_uk.short",
+   "desc": "unit.archer_uk.desc",
+   "icon": "archer_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

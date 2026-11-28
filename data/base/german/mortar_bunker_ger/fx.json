@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "bunker_mortar_ger": {
+   "name": "entity.bunker_mortar_ger.name",
+   "model": {
+    "id": "bunker_mortar_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "mortar_bunker_ger": {
+   "name": "unit.mortar_bunker_ger.name",
+   "short_name": "unit.mortar_bunker_ger.short",
+   "desc": "unit.mortar_bunker_ger.desc",
+   "icon": "mortar_bunker_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

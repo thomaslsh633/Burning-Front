@@ -1,0 +1,25 @@
+{
+ "kradschutzen_motorcycle_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/kradschutzen_motorcycle_ak",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "detection": 5,
+    "sight": 5
+   },
+   {
+    "detection": 5,
+    "sight": 5,
+    "capture_rate": 1.5
+   }
+  ]
+ }
+}

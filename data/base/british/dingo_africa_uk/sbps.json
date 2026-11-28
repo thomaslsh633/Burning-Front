@@ -1,0 +1,46 @@
+{
+ "vehicles": {
+  "dingo_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/dingo_africa_uk",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "dingo_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 265
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "ultra_light",
+    "tier1",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "abilities": [
+    "medical_supplies_dingo_uk",
+    "repair_critical_engine_damage_uk",
+    "towing_pickup_ultra_light",
+    "towing_drop",
+    "british_fake_flares_uk",
+    "barrage_humber_uk",
+    "common_shared_veterancy_dummy_3_2",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "dingo_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

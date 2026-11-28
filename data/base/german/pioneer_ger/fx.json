@@ -1,0 +1,41 @@
+{
+ "weapon": {
+  "mp40_pioneer_ger": {
+   "name": "weapon.mp40_pioneer_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "pioneer_ger": {
+   "name": "entity.pioneer_ger.name",
+   "model": {
+    "id": "pioneer_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "pioneer_ger": {
+   "name": "unit.pioneer_ger.name",
+   "short_name": "unit.pioneer_ger.short",
+   "desc": "unit.pioneer_ger.desc",
+   "icon": "pioneer_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "flamethrower_pioneer_ger": {
+   "name": "upgrade.flamethrower_pioneer_ger.name",
+   "icon": "flamethrower_pioneer_ger"
+  },
+  "panzerjager_package_ger": {
+   "name": "upgrade.panzerjager_package_ger.name",
+   "icon": "panzerjager_package_ger"
+  }
+ }
+}

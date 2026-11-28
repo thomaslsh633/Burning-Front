@@ -1,0 +1,80 @@
+{
+ "infantry": {
+  "french_infantry_us": {
+   "coh3_ref": "sbps/races/american/infantry/french_infantry_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "french_infantry_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier1",
+    "infantry_anti_infantry",
+    "french"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "lmg_m24_29_chatellerault_new_guard_us",
+     "french_old_guard_lmg_m1919a6s_us",
+     "lmg_m24_29_chatellerault_french_infantry_us"
+    ],
+    "pending": [
+     "french_engineering_upgrade_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "french_stabilized_shooting_us",
+    "french_elan_us",
+    "grenade_french_us",
+    "repair_french_infantry_us",
+    "french_old_guard_retreat_buff_us",
+    "french_stabilized_shooting_elan_us",
+    "french_grenade_assault_us"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.62
+   },
+   "veterancy": {
+    "set": "french_infantry_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_french_infantry_us",
+     "belgian_gate_french_us",
+     "concrete_bastion_infantry_us",
+     "mine_french_engineering_upgrade_us",
+     "barbed_wire_fence_french_engineering_upgrade_us",
+     "fighting_position_french_engineering_upgrade_us",
+     "tourelle_emplacement_us",
+     "observation_post_french_us",
+     "tank_trap_french_us",
+     "mine_heavy_engineer_us",
+     "demo_charge_standard_us"
+    ]
+   }
+  }
+ }
+}

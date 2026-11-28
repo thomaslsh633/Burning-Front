@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "sherman_whizbang_jettisoned_us": {
+   "name": "entity.sherman_whizbang_jettisoned_us.name",
+   "model": {
+    "id": "sherman_whizbang_jettisoned_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_whizbang_jettisoned_us": {
+   "name": "unit.sherman_whizbang_jettisoned_us.name",
+   "short_name": "unit.sherman_whizbang_jettisoned_us.short",
+   "desc": "unit.sherman_whizbang_jettisoned_us.desc",
+   "icon": "sherman_whizbang_jettisoned_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

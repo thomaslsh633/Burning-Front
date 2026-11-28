@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_kradschutzen_motorcycle_ak": {
+   "name": "weapon.mg34_kradschutzen_motorcycle_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "kradschutzen_motorcycle_ak": {
+   "name": "entity.kradschutzen_motorcycle_ak.name",
+   "model": {
+    "id": "kradschutzen_motorcycle_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "kradschutzen_motorcycle_ak": {
+   "name": "unit.kradschutzen_motorcycle_ak.name",
+   "short_name": "unit.kradschutzen_motorcycle_ak.short",
+   "desc": "unit.kradschutzen_motorcycle_ak.desc",
+   "icon": "kradschutzen_motorcycle_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

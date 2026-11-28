@@ -1,0 +1,21 @@
+{
+ "dingo_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/dingo_uk",
+  "xp": [
+   600,
+   1800,
+   3600
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

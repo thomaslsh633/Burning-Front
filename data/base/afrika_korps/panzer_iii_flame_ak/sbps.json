@@ -1,0 +1,52 @@
+{
+ "vehicles": {
+  "panzer_iii_flame_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/panzer_iii_flame_ak",
+   "kind": "vehicle",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "panzer_iii_flame_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 65
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "block_visor_piii_flame_ak",
+    "hold_fire",
+    "self_repair_passive_ak",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "panzer_iii_flame_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

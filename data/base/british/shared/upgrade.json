@@ -1,0 +1,19 @@
+{
+ "infantry": {
+  "lmg_bren_gurkhas_uk": {
+   "coh3_ref": "upgrade/british/infantry/lmg_bren_gurkhas_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bren_lmg_gurkhas_uk"
+    }
+   ]
+  }
+ }
+}

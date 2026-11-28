@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "g43_sniper_ger": {
+   "name": "weapon.g43_sniper_ger.name",
+   "sound": {
+    "fire": "sniper"
+   }
+  }
+ },
+ "ebps": {
+  "sniper_ger": {
+   "name": "entity.sniper_ger.name",
+   "model": {
+    "id": "sniper_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sniper_ger": {
+   "name": "unit.sniper_ger.name",
+   "short_name": "unit.sniper_ger.short",
+   "desc": "unit.sniper_ger.desc",
+   "icon": "sniper_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

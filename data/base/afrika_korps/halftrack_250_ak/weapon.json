@@ -1,0 +1,90 @@
+{
+ "light_machine_gun": {
+  "mg34_halftrack_250_ak": {
+   "coh3_ref": "weapon/afrika_korps/small_arms/machine_gun/light_machine_gun/mg34_halftrack_250_ak",
+   "class": "hmg",
+   "fire_rule": "volley",
+   "damage": 3,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 2,
+    "mid": 2,
+    "far": 2
+   },
+   "vs_target": {
+    "sniper": {
+     "accuracy": 2
+    }
+   },
+   "traits": [
+    "attack_ground",
+    "targets_garrison",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.56,
+     "mid": 0.43,
+     "far": 0.27
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 58,
+     "mid": 48,
+     "far": 43
+    },
+    "damage_per_shot": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "arc_deg": 30,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.55,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.725
+   }
+  }
+ }
+}

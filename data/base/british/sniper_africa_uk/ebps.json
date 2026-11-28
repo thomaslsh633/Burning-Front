@@ -1,0 +1,45 @@
+{
+ "infantry": {
+  "sniper_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/infantry/sniper_africa_uk",
+   "tags": [
+    "infantry",
+    "sniper"
+   ],
+   "hp": 80,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 340
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "scoped_lee_enfield_sniper_uk",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

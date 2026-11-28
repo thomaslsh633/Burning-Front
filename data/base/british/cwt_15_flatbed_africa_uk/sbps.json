@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "cwt_15_flatbed_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/cwt_15_flatbed_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "cwt_15_flatbed_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 20
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier2",
+    "reinforce_healing_platform"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_critical_engine_damage_uk",
+    "towing_pickup",
+    "towing_drop",
+    "common_shared_veterancy_dummy_parent",
+    "recrew_team_weapon_halftrack_us",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "cwt_15_flatbed_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

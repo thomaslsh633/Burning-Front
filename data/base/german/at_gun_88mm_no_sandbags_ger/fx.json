@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "anti_tank_88mm_gun_no_sandbags_ger": {
+   "name": "entity.anti_tank_88mm_gun_no_sandbags_ger.name",
+   "model": {
+    "id": "anti_tank_88mm_gun_no_sandbags_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_88mm_no_sandbags_ger": {
+   "name": "unit.at_gun_88mm_no_sandbags_ger.name",
+   "short_name": "unit.at_gun_88mm_no_sandbags_ger.short",
+   "desc": "unit.at_gun_88mm_no_sandbags_ger.desc",
+   "icon": "at_gun_88mm_no_sandbags_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "at_gun_57mm_paradrop_us": {
+   "name": "unit.at_gun_57mm_paradrop_us.name",
+   "short_name": "unit.at_gun_57mm_paradrop_us.short",
+   "desc": "unit.at_gun_57mm_paradrop_us.desc",
+   "icon": "at_gun_57mm_paradrop_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

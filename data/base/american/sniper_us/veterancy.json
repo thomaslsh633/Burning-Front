@@ -1,0 +1,22 @@
+{
+ "sniper_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/sniper",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "hp_add": 80,
+    "sight": 10
+   }
+  ]
+ }
+}

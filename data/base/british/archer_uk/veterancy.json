@@ -1,0 +1,20 @@
+{
+ "archer_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/archer_uk",
+  "xp": [
+   2020,
+   4040,
+   8080
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.6
+   }
+  ]
+ }
+}

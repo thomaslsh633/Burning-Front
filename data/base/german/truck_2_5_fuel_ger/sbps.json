@@ -1,0 +1,40 @@
+{
+ "vehicles": {
+  "truck_2_5_fuel_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/truck_2_5_fuel_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "truck_2_5_fuel_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 15
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_support"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "2_5_fuel_truck_passive_charge_counter_ger",
+    "2_5_fuel_truck_cooldown_charge_counter_ger",
+    "2_5_fuel_truck_engine_tuning_ger",
+    "2_5_fuel_truck_field_repairs_ger",
+    "blocking_force_vehicle_setup_incursion_response_ger",
+    "2_5_fuel_truck_resource_overseer_ger"
+   ],
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

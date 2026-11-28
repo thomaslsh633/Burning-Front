@@ -1,0 +1,66 @@
+{
+ "infantry": {
+  "folgore_paratroopers_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/folgore_paratroopers_ak",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "folgore_paratroopers_ak",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 396
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 5,
+   "tags": [
+    "infantry",
+    "advanced_infantry",
+    "italian",
+    "infantry_anti_infantry"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "folgore_carbinegrenade_ak",
+     "folgore_lmg_ak",
+     "folgore_smg_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "elite_forces_infantry_medical_supplements_casualties_ak",
+    "italian_airborne_conceal_and_strike_toggle_ak",
+    "italian_airborne_passaglia_at_explosive_ak",
+    "italian_airborne_uninterrupted_fire_folgore_passive_ak",
+    "italian_airborne_hold_to_the_last_folgore_passive_ak",
+    "italian_airborne_dual_decker_passive_ak",
+    "grenade_red_devil_folgore_ak",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "folgore_paratroopers_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_folgore_ak"
+    ]
+   }
+  }
+ }
+}

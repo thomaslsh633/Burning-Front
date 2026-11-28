@@ -1,0 +1,42 @@
+{
+ "emplacements": {
+  "at_gun_88mm_no_sandbags_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/sp/at_gun_88mm_no_sandbags_ger",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "anti_tank_88mm_gun_no_sandbags_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 65
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "emplacement",
+    "wehrmacht_advanced_unit",
+    "anti_tank",
+    "teamweapon_anti_tank"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "barrage_88mm_at_gun_emplacement_ger",
+    "force_attack_target"
+   ],
+   "veterancy": {
+    "set": "at_gun_88mm_no_sandbags_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

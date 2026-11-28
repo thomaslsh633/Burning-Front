@@ -1,0 +1,48 @@
+{
+ "emplacements": {
+  "pantherturm_emplacement_ger": {
+   "coh3_ref": "ebps/races/german/emplacements/pantherturm_emplacement_ger",
+   "tags": [
+    "cover_object",
+    "emplacement",
+    "building",
+    "emplacement_atg"
+   ],
+   "hp": 1080,
+   "target_size": 20,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200,
+    "fuel": 25
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_pantherturm_ger",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

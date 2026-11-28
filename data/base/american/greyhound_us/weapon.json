@@ -1,0 +1,193 @@
+{
+ "tank_gun": {
+  "37mm_greyhound_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/tank_gun/37mm_greyhound_us",
+   "class": "cannon",
+   "fire_rule": "single_shot",
+   "damage": 80,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 55,
+    "mid": 45,
+    "far": 40
+   },
+   "traits": [
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.08,
+     "mid": 0.05,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 111,
+     "mid": 111,
+     "far": 111
+    },
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.75,
+     "mid": 0.4,
+     "far": 0.4
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 0.5,
+     "far": 2
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 5,
+    "distance_ratio": 1,
+    "distance_max_m": 3
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.75
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  }
+ },
+ "light_machine_gun": {
+  "30cal_coaxial_greyhound_us": {
+   "coh3_ref": "weapon/american/small_arms/machine_gun/light_machine_gun/30cal_coaxial_greyhound_us",
+   "class": "hmg",
+   "fire_rule": "volley",
+   "damage": 4,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "traits": [
+    "targets_garrison",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.59,
+     "mid": 0.46,
+     "far": 0.24
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 19,
+     "mid": 18,
+     "far": 26
+    },
+    "damage_per_shot": {
+     "near": 4,
+     "mid": 4,
+     "far": 4
+    },
+    "arc_deg": 30,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.55,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

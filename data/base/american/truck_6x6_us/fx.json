@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_6x6_us": {
+   "name": "entity.truck_6x6_us.name",
+   "model": {
+    "id": "truck_6x6_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "truck_6x6_us": {
+   "name": "unit.truck_6x6_us.name",
+   "short_name": "unit.truck_6x6_us.short",
+   "desc": "unit.truck_6x6_us.desc",
+   "icon": "truck_6x6_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

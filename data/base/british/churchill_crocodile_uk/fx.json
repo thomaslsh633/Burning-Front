@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "churchill_crocodile_uk": {
+   "name": "entity.churchill_crocodile_uk.name",
+   "model": {
+    "id": "churchill_crocodile_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "churchill_crocodile_uk": {
+   "name": "unit.churchill_crocodile_uk.name",
+   "short_name": "unit.churchill_crocodile_uk.short",
+   "desc": "unit.churchill_crocodile_uk.desc",
+   "icon": "churchill_crocodile_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

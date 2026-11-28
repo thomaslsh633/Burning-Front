@@ -1,0 +1,83 @@
+{
+ "light_machine_gun": {
+  "mg34_armored_car_8_rad_command_ak": {
+   "coh3_ref": "weapon/afrika_korps/small_arms/machine_gun/light_machine_gun/mg34_armored_car_8_rad_command_ak",
+   "class": "hmg",
+   "fire_rule": "volley",
+   "damage": 3,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "traits": [
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.64,
+     "mid": 0.58,
+     "far": 0.47
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 38,
+     "mid": 33,
+     "far": 30
+    },
+    "damage_per_shot": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "arc_deg": 20,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.55,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

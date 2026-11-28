@@ -88,15 +88,16 @@ test('mod text: the new squad has Korean and English text; a mod can add a langu
   assert.equal(i18n.ko['unit.riflemen_veteran_us.name'], '역전의 소총수 분대');
   assert.equal(i18n.en['unit.riflemen_us.name'], 'Riflemen Squad', 'base text stays');
   assert.equal(i18n.fr['unit.riflemen_us.name'], 'Fusiliers');
-  assert.ok(!warnings.some(w => w.startsWith('i18n ko') || w.startsWith('i18n en')), warnings.join('\n'));
+  for (const lang of ['ko', 'en']) for (const f of ['name', 'short', 'desc']) assert.ok(i18n[lang][`unit.riflemen_veteran_us.${f}`], `${lang} ${f}`);
   assert.ok(warnings.some(w => w.startsWith('i18n fr: ')), 'a partial language is reported, not rejected');
 });
 
 test('without its text the new squad is reported as missing text', () => {
+  const missing = warnings => Number(warnings.find(w => w.startsWith('i18n ko: '))?.match(/^i18n ko: (\d+) of/)?.[1] ?? 0);
   const root = withMods([EXAMPLE]);
+  const before = missing(buildData(root).warnings);
   fs.rmSync(path.join(root, 'mods', EXAMPLE, 'i18n'), { recursive: true });
-  const { warnings } = buildData(root);
-  assert.ok(warnings.some(w => w.startsWith('i18n ko: 3 of') && w.includes('unit.riflemen_veteran_us.desc')), warnings.join('\n'));
+  assert.equal(missing(buildData(root).warnings), before + 3, 'name, short and desc of the new squad');
 });
 
 test('a text file must be named by a language code and hold strings', () => {

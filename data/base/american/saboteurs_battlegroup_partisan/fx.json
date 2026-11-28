@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "saboteurs_battlegroup_partisan": {
+   "name": "entity.saboteurs_battlegroup_partisan.name",
+   "model": {
+    "id": "saboteurs_battlegroup_partisan",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "saboteurs_battlegroup_partisan": {
+   "name": "unit.saboteurs_battlegroup_partisan.name",
+   "short_name": "unit.saboteurs_battlegroup_partisan.short",
+   "desc": "unit.saboteurs_battlegroup_partisan.desc",
+   "icon": "saboteurs_battlegroup_partisan",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

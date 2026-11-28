@@ -1,0 +1,24 @@
+{
+ "polish_lancer_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/polish_lancer",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.8
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.85
+   },
+   {
+    "weapon_penetration": 1.33,
+    "hp_add": 20,
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "archer_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/archer_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "archer_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360,
+     "fuel": 95
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "vehicle_casemate_anti_tank",
+    "medium_armor",
+    "shock_round_capable"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "first_strike_archer_uk",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "archer_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

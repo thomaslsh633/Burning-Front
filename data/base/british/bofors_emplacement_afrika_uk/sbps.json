@@ -1,0 +1,42 @@
+{
+ "emplacements": {
+  "bofors_emplacement_afrika_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/bofors_emplacement_afrika_uk",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "tw_bofors_emplacement_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "emplacement",
+    "building",
+    "invisible_to_scar",
+    "teamweapon_autocannon",
+    "anti_air"
+   ],
+   "source": "built",
+   "abilities": [
+    "force_attack_target",
+    "salvage_emplacement_common"
+   ],
+   "veterancy": {
+    "set": "bofors_emplacement_afrika_uk"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

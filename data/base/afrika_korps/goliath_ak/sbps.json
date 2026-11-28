@@ -1,0 +1,37 @@
+{
+ "vehicles": {
+  "goliath_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/goliath_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "goliath_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 75,
+     "munition": 75
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 3,
+   "tags": [
+    "goliath",
+    "vehicle"
+   ],
+   "source": "coh3stats",
+   "abilities": [
+    "goliath_detonate_ak",
+    "goliath_camo_in_cover_ak",
+    "goliath_auto_detonate_ak"
+   ],
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

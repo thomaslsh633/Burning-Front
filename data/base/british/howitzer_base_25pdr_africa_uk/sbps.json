@@ -1,0 +1,39 @@
+{
+ "emplacements": {
+  "howitzer_base_25pdr_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/howitzer_base_25pdr_africa_uk",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_base_howitzer_25pdr_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 40
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "artillery",
+    "base_defense"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_howitzer_creeping_smoke_uk",
+    "barrage_howitzer_25pdr_airburst_uk",
+    "barrage_howitzer_25pdr_ap_uk",
+    "barrage_observation_base_howitzer_25pdr_uk",
+    "barrage_howitzer_creeping_uk"
+   ],
+   "supply": {
+    "ammo": 8
+   }
+  }
+ }
+}

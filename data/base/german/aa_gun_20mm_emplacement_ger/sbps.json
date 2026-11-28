@@ -1,0 +1,42 @@
+{
+ "emplacements": {
+  "aa_gun_20mm_emplacement_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/aa_gun_20mm_emplacement_ger",
+   "kind": "structure",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "tw_20mm_emplacement_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "emplacement",
+    "invisible_to_scar",
+    "anti_air",
+    "teamweapon_autocannon",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "built",
+   "abilities": [
+    "salvage_emplacement_common",
+    "force_attack_target"
+   ],
+   "veterancy": {
+    "set": "aa_gun_20mm_emplacement_ger"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

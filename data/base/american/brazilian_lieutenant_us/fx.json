@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "springfield_rifle_us": {
+   "name": "weapon.springfield_rifle_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "brazilian_lieutenant_us": {
+   "name": "entity.brazilian_lieutenant_us.name",
+   "model": {
+    "id": "brazilian_lieutenant_us",
+    "anim_class": "infantry"
+   }
+  },
+  "brazilian_rifleman_lieutenant_us": {
+   "name": "entity.brazilian_rifleman_lieutenant_us.name",
+   "model": {
+    "id": "brazilian_rifleman_lieutenant_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "brazilian_lieutenant_us": {
+   "name": "unit.brazilian_lieutenant_us.name",
+   "short_name": "unit.brazilian_lieutenant_us.short",
+   "desc": "unit.brazilian_lieutenant_us.desc",
+   "icon": "brazilian_lieutenant_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

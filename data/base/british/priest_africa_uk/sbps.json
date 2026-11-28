@@ -1,0 +1,41 @@
+{
+ "vehicles": {
+  "priest_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/priest_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "priest_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 14,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "artillery",
+    "light_armor",
+    "vehicle_artillery"
+   ],
+   "source": "restored",
+   "abilities": [
+    "barrage_priest_uk",
+    "repair_critical_engine_damage_uk"
+   ],
+   "veterancy": {
+    "set": "priest_africa_uk"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

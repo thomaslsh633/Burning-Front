@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_howitzer_scott_us": {
+   "name": "weapon.75mm_howitzer_scott_us.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
+  }
+ },
+ "ebps": {
+  "scott_us": {
+   "name": "entity.scott_us.name",
+   "model": {
+    "id": "scott_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "scott_us": {
+   "name": "unit.scott_us.name",
+   "short_name": "unit.scott_us.short",
+   "desc": "unit.scott_us.desc",
+   "icon": "scott_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

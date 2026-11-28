@@ -1,0 +1,48 @@
+{
+ "vehicles": {
+  "recovery_vehicle_us": {
+   "coh3_ref": "sbps/races/american/vehicles/recovery_vehicle_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "recovery_vehicle_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "healer",
+    "recovery_vehicle",
+    "light_armor",
+    "vehicle_repair_recovery"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_vehicle_us",
+    "salvage_recovery_vehicle_us",
+    "m_restore_wreck_vehicle_us",
+    "restore_wreck_vehicle_us",
+    "repair_critical_engine_damage_us",
+    "self_repair_passive_recovery_vehicle_us",
+    "common_shared_veterancy_dummy_parent",
+    "self_repair_passive_ui_34_ak"
+   ],
+   "veterancy": {
+    "set": "recovery_vehicle_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

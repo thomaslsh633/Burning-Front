@@ -1,13 +1,173 @@
 {
  "weapon": {
+  "88mm_emplacement_at_gun_ger": {
+   "name": "weapon.88mm_emplacement_at_gun_ger.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "mg42_bunker_ger": {
+   "name": "weapon.mg42_bunker_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
   "mp40_crew_ger": {
    "name": "weapon.mp40_crew_ger.name",
    "sound": {
     "fire": "smg"
    }
+  },
+  "81mm_mortar_bunker_ger": {
+   "name": "weapon.81mm_mortar_bunker_ger.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "kar98k_grenadier_ger": {
+   "name": "weapon.kar98k_grenadier_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "mp40_grenadier_ger": {
+   "name": "weapon.mp40_grenadier_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_panzerpioneer_ak": {
+   "name": "weapon.flamethrower_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "carcano_reserve_ger": {
+   "name": "weapon.carcano_reserve_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "grb_39_grenade_launcher_he_ger": {
+   "name": "weapon.grb_39_grenade_launcher_he_ger.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  },
+  "panzerschreck_stormtrooper_ger": {
+   "name": "weapon.panzerschreck_stormtrooper_ger.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  },
+  "mp44_panzergrenadier_ger": {
+   "name": "weapon.mp44_panzergrenadier_ger.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_pioneer_us": {
+   "name": "weapon.flamethrower_pioneer_us.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  },
+  "mg34_armored_car_ger": {
+   "name": "weapon.mg34_armored_car_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "25mm_tank_mortar_smoke_ger": {
+   "name": "weapon.25mm_tank_mortar_smoke_ger.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "grenade_vehicle_crew_ger": {
+   "name": "weapon.grenade_vehicle_crew_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "mg42_panzer_iv_ger": {
+   "name": "weapon.mg42_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_coaxial_panzer_iv_ger": {
+   "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_panzer_iv_ger": {
+   "name": "weapon.mg34_hull_panzer_iv_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "88mm_tiger_ger": {
+   "name": "weapon.88mm_tiger_ger.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  },
+  "mg34_coaxial_tiger_i_ger": {
+   "name": "weapon.mg34_coaxial_tiger_i_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_tiger_i_ger": {
+   "name": "weapon.mg34_hull_tiger_i_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "20mm_flakvierling_wirbelwind_ger": {
+   "name": "weapon.20mm_flakvierling_wirbelwind_ger.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
   }
  },
  "ebps": {
+  "grenadier_ger": {
+   "name": "entity.grenadier_ger.name",
+   "model": {
+    "id": "grenadier_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "armored_car_ger": {
+   "name": "entity.armored_car_ger.name",
+   "model": {
+    "id": "armored_car_ger",
+    "anim_class": "tank_medium"
+   }
+  },
+  "tiger_ger": {
+   "name": "entity.tiger_ger.name",
+   "model": {
+    "id": "tiger_ger",
+    "anim_class": "tank_medium"
+   }
+  },
+  "wirbelwind_ger": {
+   "name": "entity.wirbelwind_ger.name",
+   "model": {
+    "id": "wirbelwind_ger",
+    "anim_class": "tank_medium"
+   }
+  },
   "sandbag_wall_ger": {
    "name": "entity.sandbag_wall_ger.name",
    "model": {
@@ -28,6 +188,16 @@
     "id": "tank_trap_ger",
     "anim_class": "static"
    }
+  }
+ },
+ "upgrade": {
+  "assault_package_grenadiers_ger": {
+   "name": "upgrade.assault_package_grenadiers_ger.name",
+   "icon": "assault_package_grenadiers_ger"
+  },
+  "flamethrower_grenadier_ger": {
+   "name": "upgrade.flamethrower_grenadier_ger.name",
+   "icon": "flamethrower_grenadier_ger"
   }
  }
 }

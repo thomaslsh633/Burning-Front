@@ -1,0 +1,20 @@
+{
+ "sapper_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/sapper",
+  "xp": [
+   650,
+   1950,
+   3900
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "received_accuracy": 0.8,
+    "build_speed": 1.35
+   },
+   {}
+  ]
+ }
+}

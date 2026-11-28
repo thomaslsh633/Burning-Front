@@ -1,0 +1,48 @@
+{
+ "vehicles": {
+  "churchill_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/churchill_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "churchill_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 460,
+     "fuel": 120
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "weapon_75mm_churchill_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "infantry_support_smoke_churchill_uk",
+    "hold_fire",
+    "emergency_repairs_matilda_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

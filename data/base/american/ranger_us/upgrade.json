@@ -1,0 +1,88 @@
+{
+ "infantry": {
+  "bazooka_ranger_us": {
+   "coh3_ref": "upgrade/american/infantry/bazooka_ranger_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 180
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bazooka_paratroopers_us"
+    }
+   ]
+  },
+  "m1919a6_ranger_us": {
+   "coh3_ref": "upgrade/american/infantry/m1919a6_ranger_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 180
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "m1919a6_riflemen_us"
+    }
+   ]
+  },
+  "bar_ranger_us": {
+   "coh3_ref": "upgrade/american/infantry/bar_ranger_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 180
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bar_riflemen_us"
+    }
+   ]
+  },
+  "flamethrower_ranger_us": {
+   "coh3_ref": "upgrade/american/infantry/flamethrower_ranger_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 180
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_engineer_us"
+    }
+   ]
+  }
+ }
+}

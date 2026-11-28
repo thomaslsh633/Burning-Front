@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "2pdr_cwt_lrdg_uk": {
+   "name": "weapon.2pdr_cwt_lrdg_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "cwt_lrdg_truck_2pdr_africa_uk": {
+   "name": "entity.cwt_lrdg_truck_2pdr_africa_uk.name",
+   "model": {
+    "id": "cwt_lrdg_truck_2pdr_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "cwt_lrdg_truck_2pdr_africa_uk": {
+   "name": "unit.cwt_lrdg_truck_2pdr_africa_uk.name",
+   "short_name": "unit.cwt_lrdg_truck_2pdr_africa_uk.short",
+   "desc": "unit.cwt_lrdg_truck_2pdr_africa_uk.desc",
+   "icon": "cwt_lrdg_truck_2pdr_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

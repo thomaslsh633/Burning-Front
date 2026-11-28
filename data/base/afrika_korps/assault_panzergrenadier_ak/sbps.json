@@ -1,0 +1,73 @@
+{
+ "infantry": {
+  "assault_panzergrenadier_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/assault_panzergrenadier_ak",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "assault_panzergrenadier_ak",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier2",
+    "infantry_burst_weapon",
+    "infantry_assault",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "grenade_smoke_panzergrenadier_ak",
+    "breach_panzerpioneers_ak",
+    "double_time_ak",
+    "assault_grenades_assault_grenadier_ak",
+    "infantry_combined_arms_ak",
+    "rudimentary_repair_ak",
+    "italian_combined_arms_secured_flanks_ak",
+    "secured_flanks_ak",
+    "force_recon_ak",
+    "salvage_plunder_ak",
+    "assault_disembark_ak",
+    "infantry_combined_arms_entrenchment_ak",
+    "elite_forces_infantry_medical_supplements_casualties_ak"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.46
+   },
+   "veterancy": {
+    "set": "assault_panzergrenadier_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "barbed_wire_reinforced_ak",
+     "mine_panzergrenadier_ak"
+    ]
+   }
+  }
+ }
+}

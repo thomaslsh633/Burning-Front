@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "panzergrenadier_tank_hunter_ger": {
+   "name": "entity.panzergrenadier_tank_hunter_ger.name",
+   "model": {
+    "id": "panzergrenadier_tank_hunter_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "panzergrenadier_tankhunter_specialist_ger": {
+   "name": "unit.panzergrenadier_tankhunter_specialist_ger.name",
+   "short_name": "unit.panzergrenadier_tankhunter_specialist_ger.short",
+   "desc": "unit.panzergrenadier_tankhunter_specialist_ger.desc",
+   "icon": "panzergrenadier_tankhunter_specialist_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

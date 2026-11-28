@@ -1,0 +1,25 @@
+{
+ "scout_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/scout",
+  "xp": [
+   600,
+   1800,
+   3600
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "capture_rate": 1.5,
+    "sight": 10,
+    "detection": 10
+   },
+   {
+    "hp_add": 20,
+    "ability_range": 10,
+    "ability_cooldown": 0.34
+   }
+  ]
+ }
+}

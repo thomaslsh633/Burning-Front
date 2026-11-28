@@ -1,0 +1,38 @@
+{
+ "emplacements": {
+  "mortar_bunker_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/mortar_bunker_ger",
+   "kind": "structure",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "bunker_mortar_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "invisible_to_scar",
+    "emplacement",
+    "mortar"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_81mm_mortar_bunker_ger",
+    "barrage_smoke_81mm_mortar_bunker_ger"
+   ],
+   "veterancy": {
+    "set": "mortar_bunker_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_tourelle_us": {
+   "name": "weapon.75mm_tourelle_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "tourelle_emplacement_us": {
+   "name": "entity.tourelle_emplacement_us.name",
+   "model": {
+    "id": "tourelle_emplacement_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "tourelle_emplacement_us": {
+   "name": "unit.tourelle_emplacement_us.name",
+   "short_name": "unit.tourelle_emplacement_us.short",
+   "desc": "unit.tourelle_emplacement_us.desc",
+   "icon": "tourelle_emplacement_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "cwt_15_quad_mount_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/cwt_quad_mount_truck_uk",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "weapon_damage": 1.25,
+    "hp_add": 80
+   }
+  ]
+ }
+}

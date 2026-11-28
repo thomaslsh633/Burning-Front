@@ -1,0 +1,22 @@
+{
+ "armored_car_8_rad_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/armored_car_8_rad_ak",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "hp_add": 40
+   },
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.65
+   }
+  ]
+ }
+}

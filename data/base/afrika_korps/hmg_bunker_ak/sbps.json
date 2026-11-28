@@ -1,0 +1,36 @@
+{
+ "emplacements": {
+  "hmg_bunker_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/emplacements/hmg_bunker_ak",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "bunker_hmg_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 2,
+   "tags": [
+    "suppression",
+    "building",
+    "base_defense",
+    "teamweapon"
+   ],
+   "source": "built",
+   "abilities": [
+    "italian_infantry_dummy_defense_of_the_motherland_ak"
+   ],
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

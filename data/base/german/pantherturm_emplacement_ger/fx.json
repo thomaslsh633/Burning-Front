@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_pantherturm_ger": {
+   "name": "weapon.75mm_pantherturm_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "pantherturm_emplacement_ger": {
+   "name": "entity.pantherturm_emplacement_ger.name",
+   "model": {
+    "id": "pantherturm_emplacement_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "pantherturm_emplacement_ger": {
+   "name": "unit.pantherturm_emplacement_ger.name",
+   "short_name": "unit.pantherturm_emplacement_ger.short",
+   "desc": "unit.pantherturm_emplacement_ger.desc",
+   "icon": "pantherturm_emplacement_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

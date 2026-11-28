@@ -1,0 +1,73 @@
+{
+ "vehicles": {
+  "char_b1_us": {
+   "coh3_ref": "ebps/races/american/vehicles/char_b1_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up",
+    "heavy_armor",
+    "french"
+   ],
+   "hp": 1080,
+   "target_size": 24,
+   "armor": {
+    "front": 300,
+    "side": 225,
+    "rear": 100
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 400,
+    "fuel": 110
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_char_b1_howitzer_us",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "47mm_char_b1_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mac_1931_coaxial_char_b1_us",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "char_b1_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

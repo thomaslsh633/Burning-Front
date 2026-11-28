@@ -1,0 +1,45 @@
+{
+ "emplacements": {
+  "goon_gun_pit_us": {
+   "coh3_ref": "sbps/races/american/emplacements/goon_gun_pit_us",
+   "kind": "structure",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "goon_gun_pit_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "coh3stats"
+   },
+   "pop": 2,
+   "build_turns": 2,
+   "tags": [
+    "emplacement",
+    "mortar",
+    "invisible_to_scar"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_goon_gun_pit_us",
+    "smoke_goon_gun_pit_us",
+    "veterancy_1_unlock_a_goon_gun_us",
+    "veterancy_1_unlock_b_goon_gun_us",
+    "veterancy_1a_air_burst_goon_gun_pit_us",
+    "veterancy_1a_delayed_fuze_goon_gun_pit_us",
+    "squad_building_retreat_held_squads",
+    "brazilian_squad_counterbattery_us"
+   ],
+   "veterancy": {
+    "set": "goon_gun_pit_us"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

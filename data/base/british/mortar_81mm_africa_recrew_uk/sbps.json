@@ -1,0 +1,60 @@
+{
+ "team_weapons": {
+  "mortar_81mm_africa_recrew_uk": {
+   "coh3_ref": "sbps/races/british_africa/team_weapons/mortar_81mm_africa_recrew_uk",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "crew_mortar_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "infantry_anti_infantry",
+    "tier1"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "barrage_81mm_mortar_uk",
+    "barrage_81mm_mortar_smoke_uk",
+    "mobile_entrenchment_activate_veteran_uk",
+    "mobile_entrenchment_deactivate_veteran_uk",
+    "hold_fire",
+    "siegebreakers_siege_specialists_range_in_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "mortar_81mm_africa_recrew_uk"
+   },
+   "team_weapon": {
+    "weapon": "81mm_mortar_uk",
+    "crew_entity": "crew_mortar_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

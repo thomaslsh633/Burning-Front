@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_hmg_bunker_ak": {
+   "name": "weapon.mg34_hmg_bunker_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "bunker_hmg_ak": {
+   "name": "entity.bunker_hmg_ak.name",
+   "model": {
+    "id": "bunker_hmg_ak",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_bunker_ak": {
+   "name": "unit.hmg_bunker_ak.name",
+   "short_name": "unit.hmg_bunker_ak.short",
+   "desc": "unit.hmg_bunker_ak.desc",
+   "icon": "hmg_bunker_ak",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

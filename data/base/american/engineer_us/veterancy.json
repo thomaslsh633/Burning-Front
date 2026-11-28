@@ -1,0 +1,21 @@
+{
+ "engineer_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/engineer",
+  "xp": [
+   600,
+   1800,
+   3600
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "build_speed": 1.35
+   },
+   {
+    "hp_add": 20
+   }
+  ]
+ }
+}

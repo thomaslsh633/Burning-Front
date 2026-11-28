@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "hummel_ger": {
+   "name": "entity.hummel_ger.name",
+   "model": {
+    "id": "hummel_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "hummel_ger": {
+   "name": "unit.hummel_ger.name",
+   "short_name": "unit.hummel_ger.short",
+   "desc": "unit.hummel_ger.desc",
+   "icon": "hummel_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

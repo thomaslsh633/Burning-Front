@@ -1,0 +1,61 @@
+{
+ "team_weapons": {
+  "hmg_mg34_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/team_weapons/hmg_mg34_ak",
+   "kind": "team_weapon",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "crew_hmg_mg34_ak",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "teamweapon_burst",
+    "infantry_anti_infantry",
+    "tier2"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "reload_mg34_ak",
+    "camouflage_in_cover_hmg_ger",
+    "team_weapons_combined_arms_ak",
+    "team_weapons_combined_arms_entrenchment_ak",
+    "controlled_fire_hmg_ak",
+    "italian_infantry_dummy_defense_of_the_motherland_ak"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "hmg_mg34_ak"
+   },
+   "team_weapon": {
+    "weapon": "mg34_hmg_ak",
+    "crew_entity": "crew_hmg_mg34_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "armored_car_ger": {
+   "name": "unit.armored_car_ger.name",
+   "short_name": "unit.armored_car_ger.short",
+   "desc": "unit.armored_car_ger.desc",
+   "icon": "armored_car_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

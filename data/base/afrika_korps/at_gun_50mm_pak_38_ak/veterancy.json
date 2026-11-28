@@ -1,0 +1,24 @@
+{
+ "at_gun_50mm_pak_38_ak": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+  "xp": [
+   1100,
+   3300,
+   6600
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.85
+   },
+   {
+    "received_damage": 0.8,
+    "attack_speed": 0.75,
+    "move": 1.33
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "greyhound_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/greyhound_us",
+  "xp": [
+   1100,
+   3300,
+   6600
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80,
+    "weapon_range": 5,
+    "attack_speed": 0.65
+   }
+  ]
+ }
+}

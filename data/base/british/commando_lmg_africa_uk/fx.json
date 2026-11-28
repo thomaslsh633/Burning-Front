@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "lee_enfield_commando_africa_uk": {
+   "name": "weapon.lee_enfield_commando_africa_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "commando_lmg_africa_uk": {
+   "name": "entity.commando_lmg_africa_uk.name",
+   "model": {
+    "id": "commando_lmg_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "commando_lmg_africa_uk": {
+   "name": "unit.commando_lmg_africa_uk.name",
+   "short_name": "unit.commando_lmg_africa_uk.short",
+   "desc": "unit.commando_lmg_africa_uk.desc",
+   "icon": "commando_lmg_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

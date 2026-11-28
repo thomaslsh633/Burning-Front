@@ -1,0 +1,85 @@
+{
+ "rifle": {
+  "carbine_paratrooper_us": {
+   "coh3_ref": "weapon/american/small_arms/single_fire/rifle/carbine_paratrooper_us",
+   "class": "rifle",
+   "fire_rule": "volley",
+   "damage": 10,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 2,
+    "mid": 1,
+    "far": 1
+   },
+   "traits": [
+    "replaceable",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.83,
+     "mid": 0.55,
+     "far": 0.48
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 10,
+     "mid": 8,
+     "far": 7
+    },
+    "damage_per_shot": {
+     "near": 4,
+     "mid": 4,
+     "far": 4
+    },
+    "shot_multiplier": 2.5,
+    "arc_deg": 90,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.55,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.75
+   }
+  }
+ }
+}

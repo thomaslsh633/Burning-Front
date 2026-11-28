@@ -1,0 +1,86 @@
+{
+ "infantry_anti_tank_weapon": {
+  "boys_at_rifle_scoped_africa_uk": {
+   "coh3_ref": "weapon/british_africa/ballistic_weapon/infantry_anti_tank_weapon/boys_at_rifle_scoped_africa_uk",
+   "class": "sniper_gib",
+   "fire_rule": "single_shot",
+   "damage": 80,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 84,
+    "mid": 72,
+    "far": 60
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.5
+    },
+    "emplacement": {
+     "damage": 0.5
+    }
+   },
+   "traits": [
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 8
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 63,
+     "mid": 63,
+     "far": 63
+    },
+    "arc_deg": 90,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "suppression": 0.1
+     },
+     "garrison": {
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "scatter": {
+    "angle_deg": 10,
+    "distance_ratio": 0.8,
+    "distance_max_m": 15
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "30cal_fighting_position_base_defense_us": {
+   "name": "weapon.30cal_fighting_position_base_defense_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "base_defense_us": {
+   "name": "entity.base_defense_us.name",
+   "model": {
+    "id": "base_defense_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "base_defense_us": {
+   "name": "unit.base_defense_us.name",
+   "short_name": "unit.base_defense_us.short",
+   "desc": "unit.base_defense_us.desc",
+   "icon": "base_defense_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

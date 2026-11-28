@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "wespe_ger": {
+   "name": "entity.wespe_ger.name",
+   "model": {
+    "id": "wespe_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "wespe_ger": {
+   "name": "unit.wespe_ger.name",
+   "short_name": "unit.wespe_ger.short",
+   "desc": "unit.wespe_ger.desc",
+   "icon": "wespe_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "wirbelwind_ger": {
+   "name": "unit.wirbelwind_ger.name",
+   "short_name": "unit.wirbelwind_ger.short",
+   "desc": "unit.wirbelwind_ger.desc",
+   "icon": "wirbelwind_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

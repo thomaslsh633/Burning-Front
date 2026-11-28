@@ -1,0 +1,17 @@
+{
+ "halftrack_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/halftrack_ger",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "hp_add": 80
+   }
+  ]
+ }
+}

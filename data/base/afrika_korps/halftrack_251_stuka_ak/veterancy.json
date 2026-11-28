@@ -1,0 +1,25 @@
+{
+ "halftrack_251_stuka_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/halftrack_251_stuka_ak",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "ability_range": 1.2,
+    "weapon_range": 1.2
+   },
+   {
+    "attack_speed": -0.2,
+    "ability_cooldown": 0.9
+   },
+   {
+    "ability_cooldown": 0.85,
+    "attack_speed": -0.4,
+    "scatter": 0.8
+   }
+  ]
+ }
+}

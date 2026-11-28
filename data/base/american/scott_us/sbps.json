@@ -1,0 +1,47 @@
+{
+ "vehicles": {
+  "scott_us": {
+   "coh3_ref": "sbps/races/american/vehicles/scott_us",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "scott_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 55
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_direct_fire_barrage"
+   ],
+   "source": "produced",
+   "abilities": [
+    "barrage_scott_us",
+    "barrage_scott_smoke_us",
+    "barrage_scott_bunker_buster_us",
+    "veterancy_1_unlock_a_scott_us",
+    "veterancy_1_unlock_b_scott_us",
+    "repair_critical_engine_damage_us",
+    "heat_rounds_scott_us",
+    "hold_fire",
+    "barrage_scott_white_phosphorus_us"
+   ],
+   "veterancy": {
+    "set": "scott_us"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

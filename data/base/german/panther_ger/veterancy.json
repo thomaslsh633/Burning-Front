@@ -1,0 +1,20 @@
+{
+ "panther_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/panther_ger",
+  "xp": [
+   2000,
+   6000,
+   12000
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

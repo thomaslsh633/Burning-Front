@@ -1,0 +1,52 @@
+{
+ "vehicles": {
+  "stug_iii_d_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/stug_iii_d_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stug_iii_d_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 55
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_casemate",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger",
+     "mg42_stug_ger"
+    ]
+   },
+   "abilities": [
+    "hold_fire",
+    "critical_repair_mechanized_ger",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "support_advance_stug_iii_d_ak"
+   ],
+   "veterancy": {
+    "set": "stug_iii_d_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

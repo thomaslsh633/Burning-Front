@@ -1,0 +1,71 @@
+{
+ "infantry": {
+  "kriegsmarine_infantry_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/kriegsmarine_infantry_ak",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "kriegsmarine_infantry_ak",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 4,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "infantry_support",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "lmg_kriegsmarine_ak",
+     "mp44_kriegsmarine_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_kriegsmarine_ak",
+    "grenade_m24_stick_kriegsmarine_ak",
+    "kriegsmarine_build_passive_ak",
+    "grenade_assault_kriegsmarine_ak",
+    "rifle_grenade_kriegsmarine_ak",
+    "grenade_red_phosphorus_kriegsmarine_ak",
+    "grenade_incendiary_kriegsmarine_ak",
+    "kriegsmarine_grenade_crate_passive_ak",
+    "elite_forces_infantry_medical_supplements_casualties_ak"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "kriegsmarine_infantry_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ak",
+     "tank_trap_ak",
+     "mine_panzerpioneer_ak",
+     "observation_post_ak",
+     "point_fortification_cache_ak"
+    ]
+   }
+  }
+ }
+}

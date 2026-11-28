@@ -1,0 +1,54 @@
+{
+ "vehicles": {
+  "greyhound_us": {
+   "coh3_ref": "sbps/races/american/vehicles/greyhound_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "greyhound_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "light_armor",
+    "tier3"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_greyhound_us",
+     "greyhound_side_skirt_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "veterancy_1_unlock_a_greyhound_us",
+    "veterancy_1_unlock_b_greyhound_us",
+    "canister_shot_greyhound_us",
+    "vehicle_decapture_greyhound_us",
+    "scan_greyhound_us",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "greyhound_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

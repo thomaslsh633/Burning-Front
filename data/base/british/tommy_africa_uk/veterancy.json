@@ -1,0 +1,24 @@
+{
+ "tommy_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/tommy",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.9
+   },
+   {
+    "received_accuracy": 0.85,
+    "hp_add": 15,
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

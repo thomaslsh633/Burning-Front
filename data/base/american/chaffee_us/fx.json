@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "75mm_chaffee_us": {
+   "name": "weapon.75mm_chaffee_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_chaffee_us": {
+   "name": "weapon.30cal_coaxial_chaffee_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_chaffee_us": {
+   "name": "weapon.30cal_hull_chaffee_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "chaffee_us": {
+   "name": "entity.chaffee_us.name",
+   "model": {
+    "id": "chaffee_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "chaffee_us": {
+   "name": "unit.chaffee_us.name",
+   "short_name": "unit.chaffee_us.short",
+   "desc": "unit.chaffee_us.desc",
+   "icon": "chaffee_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

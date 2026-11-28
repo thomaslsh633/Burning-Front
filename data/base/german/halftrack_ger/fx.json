@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg42_halftrack_ger": {
+   "name": "weapon.mg42_halftrack_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_ger": {
+   "name": "entity.halftrack_ger.name",
+   "model": {
+    "id": "halftrack_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_ger": {
+   "name": "unit.halftrack_ger.name",
+   "short_name": "unit.halftrack_ger.short",
+   "desc": "unit.halftrack_ger.desc",
+   "icon": "halftrack_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

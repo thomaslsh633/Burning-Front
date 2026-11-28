@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "kettenkrad_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/kettenkrad_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "kettenkrad_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 160
+    },
+    "from": "coh3stats"
+   },
+   "pop": 2,
+   "build_turns": 2,
+   "tags": [
+    "vehicle",
+    "infanterie_kompanie",
+    "vehicle_support",
+    "ultra_light",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "communication_cables_kettenkrad_ger"
+    ]
+   },
+   "abilities": [
+    "toggle_recon_kettenkrad_ger",
+    "towing_pickup_ultra_light",
+    "towing_drop",
+    "barrage_kettenkrad_ger",
+    "camouflage_kettenkrad_vet_ger",
+    "common_shared_veterancy_dummy_parent",
+    "vehicle_capture_dummy_common",
+    "siegebreakers_grinding_advance_light_ger",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "kettenkrad_ger"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "tripwire_flare_ger",
+     "mine_pioneer_ger"
+    ]
+   }
+  }
+ }
+}

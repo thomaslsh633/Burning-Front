@@ -10,7 +10,7 @@ import { EXT, last, refsIn } from '../lib/coh3.js';
 
 export const FACTIONS = RACES.filter(r => r !== 'common');
 const EXCLUDED_CATEGORIES = { aircraft: 'off-map aircraft', squad_size_variants: 'size variant' };
-const NOT_A_UNIT = /dummy|tutorial|_test|campaign|map_object|prewrecked|jettisoned|_ai_/;
+const NOT_A_UNIT = /dummy|tutorial|_test|campaign|map_object|prewrecked|jettisoned|_ai_|recrewable/;   // recrewable: vehicles are never abandoned (2026-11-26)
 
 /** Weapon paths an entity carries: hardpoints → weapon entity → weapon_ext.weapon (or the entity itself is a weapon item). */
 export function weaponsOf(ebpsRec, ebps) {

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "mortar_81mm_uk": {
+   "name": "unit.mortar_81mm_uk.name",
+   "short_name": "unit.mortar_81mm_uk.short",
+   "desc": "unit.mortar_81mm_uk.desc",
+   "icon": "mortar_81mm_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "vehicles": {
+  "panzer_iv_command_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/panzer_iv_command_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "panzer_iv_command_stubby_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 80
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_anti_tank"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "blitz_upgrade_ak",
+    "tungsten_rounds_ak",
+    "self_repair_passive_ak",
+    "command_piv_aura_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "supervised_advance_piv_command_ak",
+    "hold_fire",
+    "toggle_he_ap_rounds_panzer_iv_ger",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "command_piv_aura_veteran_display_ak"
+   ],
+   "veterancy": {
+    "set": "panzer_iv_command_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

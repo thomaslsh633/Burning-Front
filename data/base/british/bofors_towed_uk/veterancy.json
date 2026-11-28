@@ -1,0 +1,21 @@
+{
+ "bofors_towed_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

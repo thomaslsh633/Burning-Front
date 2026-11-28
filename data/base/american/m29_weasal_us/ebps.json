@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "m29_weasal_us": {
+   "coh3_ref": "ebps/races/american/vehicles/m29_weasal_us",
+   "tags": [
+    "vehicle",
+    "weasal",
+    "ultra_light",
+    "light_vehicle",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "rideable_vehicle"
+   ],
+   "hp": 200,
+   "target_size": 10.6,
+   "armor": {
+    "front": 5,
+    "side": 4.5,
+    "rear": 2.5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 220
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 9,
+    "pass": "vehicle_ultra_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 5
+   },
+   "wreck": {
+    "entity": "m29_weasal_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

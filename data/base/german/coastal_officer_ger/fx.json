@@ -1,0 +1,44 @@
+{
+ "weapon": {
+  "beretta_m38_officer_ak": {
+   "name": "weapon.beretta_m38_officer_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "carcano_carbine_bersaglieri_ak": {
+   "name": "weapon.carcano_carbine_bersaglieri_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "coastal_officer_ger": {
+   "name": "entity.coastal_officer_ger.name",
+   "model": {
+    "id": "coastal_officer_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "coastal_bodyguard_ger": {
+   "name": "entity.coastal_bodyguard_ger.name",
+   "model": {
+    "id": "coastal_bodyguard_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "coastal_officer_ger": {
+   "name": "unit.coastal_officer_ger.name",
+   "short_name": "unit.coastal_officer_ger.short",
+   "desc": "unit.coastal_officer_ger.desc",
+   "icon": "coastal_officer_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

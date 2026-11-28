@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "armored_tractor_254_ak": {
+   "name": "entity.armored_tractor_254_ak.name",
+   "model": {
+    "id": "armored_tractor_254_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "armored_tractor_254_ak": {
+   "name": "unit.armored_tractor_254_ak.name",
+   "short_name": "unit.armored_tractor_254_ak.short",
+   "desc": "unit.armored_tractor_254_ak.desc",
+   "icon": "armored_tractor_254_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

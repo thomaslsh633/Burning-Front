@@ -1,0 +1,82 @@
+{
+ "infantry": {
+  "guastatori_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/guastatori_ak",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "guastatori_ak",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 420
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 5,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "italian",
+    "infantry_support",
+    "infantry_assault",
+    "combat_engineer",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "flamethrower_guastatori_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_advanced_guastatori_ak",
+    "cut_wire_guastatori_ak",
+    "defuse_mine_pioneer_ak",
+    "grenade_smoke_guastatori_ak",
+    "italian_combined_arms_secured_flanks_ak",
+    "secured_flanks_ak",
+    "force_recon_ak",
+    "booby_trap_territory_guastatori_ak",
+    "gas_mask_guastatori_ak",
+    "gas_mask_guastatori_triggered_ak",
+    "salvage_plunder_ak",
+    "damage_reduction_25_percent_parent",
+    "elite_forces_infantry_medical_supplements_casualties_ak"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "guastatori_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_reinforced_ak",
+     "tank_trap_ak",
+     "bunker_hmg_ak",
+     "mine_teller_ak",
+     "demo_charge_improvised_ak",
+     "medical_station_ak",
+     "repair_station_ak",
+     "barbed_wire_fence_ak",
+     "mine_panzerpioneer_ak",
+     "observation_post_ak"
+    ]
+   }
+  }
+ }
+}

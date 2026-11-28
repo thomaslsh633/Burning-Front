@@ -1,0 +1,23 @@
+{
+ "fallschirmjagers_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/fallschirmjager",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "attack_speed": 0.75
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.25
+   }
+  ]
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "churchill_crocodile_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/churchill_crocodile_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "churchill_crocodile_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 600,
+     "fuel": 160
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "vehicle_burst_weapon",
+    "apex_armor",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "weapon_75mm_churchill_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "infantry_support_smoke_churchill_uk",
+    "hold_fire",
+    "hull_mounted_flamethrower_churchill_crocodile_africa_uk",
+    "canadian_shock_vehicle_pyrotechnics_churchill_crocodile_africa_uk",
+    "tip_of_spear_churchill_crocodile_uk",
+    "tip_of_spear_churchill_crocodile_triggered_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_crocodile_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "assault_grenadier_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/assault_grenadier_ger",
+  "xp": [
+   750,
+   2250,
+   4500
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "received_accuracy": 0.75
+   },
+   {
+    "weapon_damage": 1.25,
+    "hp_add": 20
+   }
+  ]
+ }
+}

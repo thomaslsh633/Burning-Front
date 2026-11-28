@@ -1,0 +1,63 @@
+{
+ "vehicles": {
+  "kradschutzen_motorcycle_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/kradschutzen_motorcycle_ak",
+   "tags": [
+    "vehicle",
+    "light_vehicle",
+    "ultra_light",
+    "vehicle_wheeled",
+    "motorcycle"
+   ],
+   "hp": 185,
+   "target_size": 6,
+   "armor": {
+    "front": 3,
+    "side": 3,
+    "rear": 3
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 180
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 14,
+    "pass": "vehicle_ultra_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "mg34_kradschutzen_motorcycle_ak",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "kradschutzen_motorcycle_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

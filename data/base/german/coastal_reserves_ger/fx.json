@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "coastal_reserve_ger": {
+   "name": "entity.coastal_reserve_ger.name",
+   "model": {
+    "id": "coastal_reserve_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "coastal_reserves_ger": {
+   "name": "unit.coastal_reserves_ger.name",
+   "short_name": "unit.coastal_reserves_ger.short",
+   "desc": "unit.coastal_reserves_ger.desc",
+   "icon": "coastal_reserves_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

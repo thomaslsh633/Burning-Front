@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_howitzer_25pdr_africa_uk": {
+   "name": "entity.tw_howitzer_25pdr_africa_uk.name",
+   "model": {
+    "id": "tw_howitzer_25pdr_africa_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "howitzer_25pdr_africa_uk": {
+   "name": "unit.howitzer_25pdr_africa_uk.name",
+   "short_name": "unit.howitzer_25pdr_africa_uk.short",
+   "desc": "unit.howitzer_25pdr_africa_uk.desc",
+   "icon": "howitzer_25pdr_africa_uk",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

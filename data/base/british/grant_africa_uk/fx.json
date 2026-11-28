@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "75mm_grant_uk": {
+   "name": "weapon.75mm_grant_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "37mm_grant_uk": {
+   "name": "weapon.37mm_grant_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_grant_uk": {
+   "name": "weapon.30cal_coaxial_grant_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "grant_africa_uk": {
+   "name": "entity.grant_africa_uk.name",
+   "model": {
+    "id": "grant_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "grant_africa_uk": {
+   "name": "unit.grant_africa_uk.name",
+   "short_name": "unit.grant_africa_uk.short",
+   "desc": "unit.grant_africa_uk.desc",
+   "icon": "grant_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

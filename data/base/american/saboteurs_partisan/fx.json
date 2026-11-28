@@ -1,0 +1,41 @@
+{
+ "weapon": {
+  "mp44_saboteurs_partisan": {
+   "name": "weapon.mp44_saboteurs_partisan.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "saboteurs_partisan": {
+   "name": "entity.saboteurs_partisan.name",
+   "model": {
+    "id": "saboteurs_partisan",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "saboteurs_partisan": {
+   "name": "unit.saboteurs_partisan.name",
+   "short_name": "unit.saboteurs_partisan.short",
+   "desc": "unit.saboteurs_partisan.desc",
+   "icon": "saboteurs_partisan",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "mp44_saboteurs_partisan": {
+   "name": "upgrade.mp44_saboteurs_partisan.name",
+   "icon": "mp44_saboteurs_partisan"
+  },
+  "grb39_grenade_launcher_saboteurs_partisan": {
+   "name": "upgrade.grb39_grenade_launcher_saboteurs_partisan.name",
+   "icon": "grb39_grenade_launcher_saboteurs_partisan"
+  }
+ }
+}

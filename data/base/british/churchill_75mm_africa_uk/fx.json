@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_churchill_uk": {
+   "name": "weapon.75mm_churchill_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "churchill_75mm_africa_uk": {
+   "name": "entity.churchill_75mm_africa_uk.name",
+   "model": {
+    "id": "churchill_75mm_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "churchill_75mm_africa_uk": {
+   "name": "unit.churchill_75mm_africa_uk.name",
+   "short_name": "unit.churchill_75mm_africa_uk.short",
+   "desc": "unit.churchill_75mm_africa_uk.desc",
+   "icon": "churchill_75mm_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

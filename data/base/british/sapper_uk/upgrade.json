@@ -1,0 +1,39 @@
+{
+ "infantry": {
+  "flamethrower_sapper_uk": {
+   "coh3_ref": "upgrade/british/infantry/flamethrower_sapper_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 2,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_sapper_uk"
+    }
+   ]
+  },
+  "piat_sapper_uk": {
+   "coh3_ref": "upgrade/british/infantry/piat_sapper_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "british_canadian_vanguard_right_1_piats_uk"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "sapper_piat_uk"
+    }
+   ]
+  }
+ }
+}

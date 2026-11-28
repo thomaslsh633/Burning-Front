@@ -1,0 +1,45 @@
+{
+ "vehicles": {
+  "crusader_aa_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/crusader_aa_africa_uk",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "crusader_aa_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 70
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_burst_weapon",
+    "anti_air"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "c_armored_crusader_aa_suppression_uk",
+    "rapid_fire_crusader_uk",
+    "toggle_aa_mode",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "crusader_aa_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "vehicles": {
+  "halftrack_medical_us": {
+   "coh3_ref": "ebps/races/american/vehicles/halftrack_medical_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "rapid_response",
+    "american",
+    "vehicle_wheeled",
+    "reinforce_vehicle",
+    "allow_track_damage_when_immobilized",
+    "halftrack",
+    "support_vehicle",
+    "medical_vehicle"
+   ],
+   "hp": 300,
+   "target_size": 16,
+   "armor": {
+    "front": 7.5,
+    "side": 7,
+    "rear": 5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 270,
+    "fuel": 35
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "halftrack_medical_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

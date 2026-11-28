@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "81mm_mortar_pit_us": {
+   "name": "weapon.81mm_mortar_pit_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  }
+ },
+ "ebps": {
+  "mortar_pit_us": {
+   "name": "entity.mortar_pit_us.name",
+   "model": {
+    "id": "mortar_pit_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "mortar_pit_81mm_us": {
+   "name": "unit.mortar_pit_81mm_us.name",
+   "short_name": "unit.mortar_pit_81mm_us.short",
+   "desc": "unit.mortar_pit_81mm_us.desc",
+   "icon": "mortar_pit_81mm_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

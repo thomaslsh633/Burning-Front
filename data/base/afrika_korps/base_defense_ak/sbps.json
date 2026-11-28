@@ -1,0 +1,32 @@
+{
+ "emplacements": {
+  "base_defense_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/emplacements/base_defense_ak",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "base_defense_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "suppression",
+    "building",
+    "base_defense",
+    "teamweapon"
+   ],
+   "source": "built",
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

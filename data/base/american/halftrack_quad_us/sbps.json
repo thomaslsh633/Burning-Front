@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "halftrack_quad_us": {
+   "coh3_ref": "sbps/races/american/vehicles/halftrack_quad_us",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "halftrack_quad_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "anti_air",
+    "vehicle_burst_weapon"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_quadmount_halftrack_exchangeable_parts_us",
+     "medical_halftrack_exchangeable_parts_us",
+     "75mm_halftrack_exchangeable_parts_us",
+     "assault_halftrack_exchangeable_parts_us"
+    ]
+   },
+   "abilities": [
+    "self_repair_passive_halftrack_us",
+    "veterancy_1_unlock_a_halftrack_quad_us",
+    "veterancy_1_unlock_b_halftrack_quad_us",
+    "veterancy_1a_shoot_and_scoot_halftrack_us",
+    "veterancy_1b_button_quad_halftrack_us",
+    "toggle_aa_mode",
+    "repair_critical_engine_damage_us",
+    "prioritize_vehicles",
+    "hold_fire",
+    "exchangeable_parts_us",
+    "exchangeable_parts_triggered_us",
+    "halftrack_quad_suppressing_fire"
+   ],
+   "veterancy": {
+    "set": "halftrack_quad_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

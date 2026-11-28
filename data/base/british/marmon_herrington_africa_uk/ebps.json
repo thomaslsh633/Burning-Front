@@ -1,0 +1,62 @@
+{
+ "vehicles": {
+  "marmon_herrington_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/marmon_herrington_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle"
+   ],
+   "hp": 240,
+   "target_size": 16,
+   "armor": {
+    "front": 12.5,
+    "side": 9.375,
+    "rear": 6.5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 280,
+    "fuel": 30
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 7,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "30cal_coaxial_matilda_uk",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "humber_wreck_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

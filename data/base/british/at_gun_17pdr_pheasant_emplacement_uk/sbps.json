@@ -1,0 +1,41 @@
+{
+ "emplacements": {
+  "at_gun_17pdr_pheasant_emplacement_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/at_gun_17pdr_pheasant_emplacement_uk",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_17pdr_pheasant_emplacement_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 45
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 4,
+   "tags": [
+    "emplacement",
+    "anti_tank",
+    "teamweapon_anti_tank"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "force_attack_target"
+   ],
+   "veterancy": {
+    "set": "at_gun_17pdr_pheasant_emplacement_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

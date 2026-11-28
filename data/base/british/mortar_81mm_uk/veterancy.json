@@ -1,0 +1,25 @@
+{
+ "mortar_81mm_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/mortar",
+  "xp": [
+   400,
+   1200,
+   2400
+  ],
+  "ranks": [
+   {
+    "attack_speed": -0.1
+   },
+   {
+    "weapon_damage": 1.15,
+    "ability_cooldown": 0.65
+   },
+   {
+    "attack_speed": -0.25,
+    "received_damage": 0.8,
+    "ability_range": 15,
+    "weapon_range": 15
+   }
+  ]
+ }
+}

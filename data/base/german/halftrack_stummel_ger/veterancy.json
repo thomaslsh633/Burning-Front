@@ -1,0 +1,22 @@
+{
+ "halftrack_stummel_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/halftrack_stummel_ger",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {},
+   {
+    "ability_cooldown": 0.65,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.8,
+    "ability_range": 10
+   }
+  ]
+ }
+}

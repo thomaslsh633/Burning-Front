@@ -1,0 +1,21 @@
+{
+ "pershing_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/pershing_us",
+  "xp": [
+   4470,
+   13410,
+   26820
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.8
+   },
+   {
+    "attack_speed": 0.8,
+    "move": 1.2
+   }
+  ]
+ }
+}

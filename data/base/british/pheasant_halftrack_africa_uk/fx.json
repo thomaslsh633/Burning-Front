@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "pheasant_halftrack_africa_uk": {
+   "name": "entity.pheasant_halftrack_africa_uk.name",
+   "model": {
+    "id": "pheasant_halftrack_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "pheasant_halftrack_africa_uk": {
+   "name": "unit.pheasant_halftrack_africa_uk.name",
+   "short_name": "unit.pheasant_halftrack_africa_uk.short",
+   "desc": "unit.pheasant_halftrack_africa_uk.desc",
+   "icon": "pheasant_halftrack_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

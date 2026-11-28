@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_hmg_bunker_base_defense_ak": {
+   "name": "weapon.mg34_hmg_bunker_base_defense_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "base_defense_ak": {
+   "name": "entity.base_defense_ak.name",
+   "model": {
+    "id": "base_defense_ak",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "base_defense_ak": {
+   "name": "unit.base_defense_ak.name",
+   "short_name": "unit.base_defense_ak.short",
+   "desc": "unit.base_defense_ak.desc",
+   "icon": "base_defense_ak",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "infantry": {
+  "coastal_officer_ger": {
+   "coh3_ref": "sbps/races/german/infantry/coastal_officer_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "coastal_officer_ger",
+     "count": 1
+    },
+    {
+     "entity": "coastal_bodyguard_ger",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "infantry_support",
+    "infantry_anti_infantry",
+    "infanterie_kompanie"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "coastal_officer_sector_supervise_ger",
+    "common_shared_veterancy_dummy_parent",
+    "coastal_officer_artillery_overwatch_ger",
+    "coastal_officer_inspire_ger",
+    "coastal_officer_supervise_targeted_ger",
+    "coastal_officer_artillery_overwatch_veteran_ger",
+    "coastal_officer_sector_supervise_vet2_ger",
+    "coastal_officer_sector_supervise_vet3_ger",
+    "coastal_officer_garrisoned_artillery_overwatch_ger",
+    "coastal_officer_garrisoned_artillery_overwatch_veteran_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.43
+   },
+   "veterancy": {
+    "set": "coastal_officer_ger"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

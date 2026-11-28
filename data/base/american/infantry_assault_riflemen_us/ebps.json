@@ -1,0 +1,88 @@
+{
+ "infantry": {
+  "infantry_assault_rifleman_squad_leader_us": {
+   "coh3_ref": "ebps/races/american/infantry/infantry_assault/infantry_assault_rifleman_squad_leader_us",
+   "tags": [
+    "infantry",
+    "rapid_response",
+    "rifleman"
+   ],
+   "hp": 100,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 35
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "thompson_riflemen_leader_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  },
+  "infantry_assault_rifleman_us": {
+   "coh3_ref": "ebps/races/american/infantry/infantry_assault/infantry_assault_rifleman_us",
+   "tags": [
+    "infantry",
+    "rapid_response",
+    "rifleman"
+   ],
+   "hp": 100,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 35
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "garand_rifleman_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "vehicles": {
+  "bishop_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/bishop_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "bishop_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "artillery",
+    "tier3",
+    "vehicle_artillery",
+    "light_armor"
+   ],
+   "source": "produced",
+   "abilities": [
+    "barrage_bishop_uk",
+    "direct_fire_bishop_uk",
+    "repair_critical_engine_damage_uk"
+   ],
+   "veterancy": {
+    "set": "bishop_uk"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

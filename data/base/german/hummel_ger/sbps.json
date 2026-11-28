@@ -1,0 +1,50 @@
+{
+ "vehicles": {
+  "hummel_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/hummel_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "hummel_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 14,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_artillery",
+    "panzer_kompanie",
+    "artillery"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "barrage_hummel_ger",
+    "passive_charge_counter_hummel_ger",
+    "barrage_smoke_hummel_ger"
+   ],
+   "veterancy": {
+    "set": "hummel_ger"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

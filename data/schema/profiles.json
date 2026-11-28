@@ -1,5 +1,5 @@
 {
-  "about": "Category profiles: modules a record must / may have; every other module is not allowed (docs/data-form-roadmap.md, census in data/source/coh3/CENSUS.md).",
+  "about": "Category profiles: modules a record must / may have; every other module is not allowed (docs/data-form-roadmap.md, census in data/source/coh3/CENSUS.md). Veterancy is optional for squads: CoH3 gives some (trucks, Goliath, battlegroup partisans) none (2026-11-28).",
   "weapon": {
     "modules": [
       "attack",
@@ -582,11 +582,11 @@
         "must": [
           "capture",
           "reinforce",
-          "veterancy",
           "supply"
         ],
         "may": [
-          "build"
+          "build",
+          "veterancy"
         ],
         "must_not": [
           "team_weapon"
@@ -594,11 +594,11 @@
       },
       "vehicles": {
         "must": [
-          "veterancy",
           "supply"
         ],
         "may": [
-          "build"
+          "build",
+          "veterancy"
         ],
         "must_not": [
           "capture",
@@ -610,11 +610,12 @@
         "must": [
           "capture",
           "reinforce",
-          "veterancy",
           "team_weapon",
           "supply"
         ],
-        "may": [],
+        "may": [
+          "veterancy"
+        ],
         "must_not": [
           "build"
         ]

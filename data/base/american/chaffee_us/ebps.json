@@ -1,0 +1,77 @@
+{
+ "vehicles": {
+  "chaffee_us": {
+   "coh3_ref": "ebps/races/american/vehicles/chaffee_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "chaffee",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off",
+    "light_tank"
+   ],
+   "hp": 480,
+   "target_size": 18,
+   "armor": {
+    "front": 50,
+    "side": 37.5,
+    "rear": 25
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 270,
+    "fuel": 60
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_chaffee_us",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_chaffee_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_chaffee_us",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_sherman_us",
+     "mount": "turret",
+     "slot": "accessory"
+    }
+   ],
+   "wreck": {
+    "entity": "chaffee_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

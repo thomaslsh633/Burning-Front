@@ -1,0 +1,22 @@
+{
+ "centaur_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/centaur_uk",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8,
+    "scatter": 0.75
+   },
+   {
+    "hp_add": 80,
+    "move": 1.2,
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

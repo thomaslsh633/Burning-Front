@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_at_gun_bunker_ger": {
+   "name": "weapon.75mm_at_gun_bunker_ger.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "bunker_ger_antitank": {
+   "name": "entity.bunker_ger_antitank.name",
+   "model": {
+    "id": "bunker_ger_antitank",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "anti_tank_bunker_ger": {
+   "name": "unit.anti_tank_bunker_ger.name",
+   "short_name": "unit.anti_tank_bunker_ger.short",
+   "desc": "unit.anti_tank_bunker_ger.desc",
+   "icon": "anti_tank_bunker_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

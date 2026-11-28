@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "150mm_brummbar_ger": {
+   "name": "weapon.150mm_brummbar_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "brummbar_ger": {
+   "name": "entity.brummbar_ger.name",
+   "model": {
+    "id": "brummbar_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "brummbar_ger": {
+   "name": "unit.brummbar_ger.name",
+   "short_name": "unit.brummbar_ger.short",
+   "desc": "unit.brummbar_ger.desc",
+   "icon": "brummbar_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

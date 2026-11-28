@@ -1,0 +1,58 @@
+{
+ "vehicles": {
+  "truck_6x6_us": {
+   "coh3_ref": "ebps/races/american/vehicles/truck_6x6_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "american",
+    "vehicle_wheeled",
+    "rideable_vehicle"
+   ],
+   "hp": 240,
+   "target_size": 16,
+   "armor": {
+    "front": 6,
+    "side": 4.5,
+    "rear": 3
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 260,
+    "fuel": 25
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "truck_6x6_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

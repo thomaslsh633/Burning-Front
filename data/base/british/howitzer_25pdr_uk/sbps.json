@@ -1,0 +1,42 @@
+{
+ "emplacements": {
+  "howitzer_25pdr_uk": {
+   "coh3_ref": "sbps/races/british/emplacements/howitzer_25pdr_uk",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_howitzer_25pdr_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250,
+     "fuel": 40
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "emplacement",
+    "artillery",
+    "invisible_to_scar"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_howitzer_25pdr_uk",
+    "barrage_howitzer_25pdr_airburst_uk",
+    "barrage_howitzer_25pdr_ap_uk",
+    "barrage_howitzer_25pdr_airburst_vet_uk",
+    "barrage_howitzer_creeping_uk"
+   ],
+   "veterancy": {
+    "set": "howitzer_25pdr_uk"
+   },
+   "supply": {
+    "ammo": 8
+   }
+  }
+ }
+}

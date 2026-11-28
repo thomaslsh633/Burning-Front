@@ -13,7 +13,9 @@ test('flat maps by id with category and faction; the real generated data indexes
   assert.ok(units.veterancy.riflemen_us);
 });
 
-test('an id defined by two factions is an error', () => {
-  const g = { factions: { a: { sbps: { infantry: { x: {} } } }, b: { sbps: { infantry: { x: {} } } } } };
-  assert.deepEqual(indexUnits(g).errors, ['sbps id "x" is defined by two factions']);
+test('an id two factions define differently is an error; the same shared record is fine', () => {
+  const g = { factions: { a: { sbps: { infantry: { x: { hp: 1 } } } }, b: { sbps: { infantry: { x: { hp: 2 } } } } } };
+  assert.deepEqual(indexUnits(g).errors, ['sbps id "x" is defined differently by two factions']);
+  const same = { factions: { a: { weapon: { rifle: { w: { hp: 1 } } } }, b: { weapon: { rifle: { w: { hp: 1 } } } } } };
+  assert.deepEqual(indexUnits(same).errors, []);
 });

@@ -1,0 +1,23 @@
+{
+ "howitzer_25pdr_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/emplacement/emplacement_artillery",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.85
+   },
+   {
+    "ability_cooldown": 0.8,
+    "ability_range": 1.2
+   },
+   {
+    "received_damage": 0.67,
+    "attack_speed": 0.7
+   }
+  ]
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "buildings": {
+  "bunker_hmg_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/buildings/defensive/bunker_hmg_ak",
+   "tags": [
+    "building",
+    "emplacement"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "mg34_hmg_bunker_ak",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 2,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

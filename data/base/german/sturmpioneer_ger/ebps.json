@@ -1,0 +1,48 @@
+{
+ "infantry": {
+  "sturmpioneer_ger": {
+   "coh3_ref": "ebps/races/german/infantry/sturmpioneer_ger",
+   "tags": [
+    "infantry",
+    "pioneer",
+    "german_infantry",
+    "engineer",
+    "sturmpioneer"
+   ],
+   "hp": 110,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 67
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "g43_sturmpioneer_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

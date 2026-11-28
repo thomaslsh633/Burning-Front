@@ -1,0 +1,57 @@
+{
+ "vehicles": {
+  "chaffee_us": {
+   "coh3_ref": "sbps/races/american/vehicles/chaffee_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "chaffee_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_turret_anti_tank",
+    "tier3",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "chaffee_recon_upgrade_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "veterancy_1_unlock_a_chaffee_us",
+    "veterancy_1_unlock_b_chaffee_us",
+    "veterancy_1b_seek_and_destroy_chaffee_us",
+    "veteracny_1a_flanking_speed_chaffee_us",
+    "radio_net_passive_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire",
+    "smoke_shot_chaffee_us",
+    "toggle_chaffee_recon_us"
+   ],
+   "veterancy": {
+    "set": "chaffee_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

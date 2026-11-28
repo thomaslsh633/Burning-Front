@@ -1,0 +1,54 @@
+{
+ "vehicles": {
+  "royal_engineers_tiger_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/royal_engineers_tiger_ger",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tiger_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 720,
+     "fuel": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 24,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor",
+    "apex_armor",
+    "panzer_kompanie",
+    "shock_round_capable",
+    "tier4"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg42_tiger_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "mechanized_smoke_canisters_ger",
+    "s_mine_launcher_tiger_ak",
+    "hold_fire",
+    "tiger_range_bonus_ger"
+   ],
+   "veterancy": {
+    "set": "royal_engineers_tiger_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

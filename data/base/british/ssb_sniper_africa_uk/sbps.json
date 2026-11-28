@@ -1,0 +1,60 @@
+{
+ "infantry": {
+  "ssb_sniper_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/ssb_sniper_africa_uk",
+   "kind": "squad",
+   "role": "recon",
+   "members": [
+    {
+     "entity": "ssb_sniper_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "sniper",
+    "infantry_anti_tank",
+    "elite_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "special_services_sniper_spotter_bolster_uk"
+    ]
+   },
+   "abilities": [
+    "hold_fire",
+    "camouflage_in_cover_snipers",
+    "camouflage_in_cover_snipers_veteran",
+    "vault_movement",
+    "special_services_sniper_scorched_earth_africa_uk",
+    "special_services_coordinated_fire_uk",
+    "special_services_improved_coordinated_fire_uk",
+    "special_services_target_gunner_infantry_uk",
+    "special_services_force_multiplier_retreat_smoke_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.1
+   },
+   "veterancy": {
+    "set": "ssb_sniper_africa_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

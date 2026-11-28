@@ -1,0 +1,48 @@
+{
+ "vehicles": {
+  "sturmtiger_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/sturmtiger_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "sturmtiger_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 600,
+     "fuel": 180
+    },
+    "from": "coh3stats"
+   },
+   "pop": 20,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "apex_armor",
+    "panzer_kompanie",
+    "tier4",
+    "vehicle_artillery"
+   ],
+   "source": "produced",
+   "abilities": [
+    "sturmtiger_siegebreaker_passive_ger",
+    "siegebreakers_sturmtiger_reload_ger",
+    "siegebreakers_sturmtiger_shot_ger",
+    "siegebreakers_grinding_advance_heavy_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "sturmtiger_siegebreaker_passive_triggered_ger",
+    "siegebreakers_siege_specialists_range_in_ger"
+   ],
+   "veterancy": {
+    "set": "sturmtiger_ger"
+   },
+   "supply": {
+    "ammo": 6
+   }
+  }
+ }
+}

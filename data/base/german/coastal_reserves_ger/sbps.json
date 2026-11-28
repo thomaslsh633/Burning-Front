@@ -1,0 +1,65 @@
+{
+ "infantry": {
+  "coastal_reserves_ger": {
+   "coh3_ref": "sbps/races/german/infantry/coastal_reserves_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "coastal_reserve_ger",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry",
+    "infanterie_kompanie"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "coastal_reserves_replenishment_ger",
+    "grenade_anti_tank_coastal_ger",
+    "coastal_reserves_cover_combat_ger",
+    "vault_movement",
+    "repair_coastal_reserves_building_ger",
+    "coastal_stronghold_defenders_ger"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "coastal_reserves_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_coastal_ger",
+     "barbed_wire_fence_ger",
+     "fighting_nest_ger",
+     "bunker_ger",
+     "mine_pioneer_ger",
+     "barbed_wire_reinforced_ger",
+     "tank_trap_ger",
+     "bunker_command_ger",
+     "bunker_ger_antitank",
+     "tw_howitzer_obice_210_ger",
+     "observation_post_ger"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "vehicles": {
+  "king_tiger_sdkfz_182_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/king_tiger_sdkfz_182_ger",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "king_tiger_sdkfz_182_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 720,
+     "fuel": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 24,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor",
+    "apex_armor",
+    "panzer_kompanie",
+    "shock_round_capable",
+    "tier4",
+    "vehicle_anti_tank"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg42_king_tiger_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "mechanized_smoke_canisters_ger",
+    "hold_fire",
+    "king_tiger_resource_drain_ger",
+    "king_tiger_spearhead_ger",
+    "terror_vehicle_heavy_gunnery_ger",
+    "king_tiger_resource_drain_ger"
+   ],
+   "veterancy": {
+    "set": "king_tiger_sdkfz_182_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

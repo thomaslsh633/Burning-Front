@@ -1,0 +1,20 @@
+{
+ "sherman_whizbang_jettisoned_us": {
+  "coh3_ref": "custom_property_container/veterancy/common/vehicle/generic_medium",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "weapon_penetration": 1.2
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.75
+   }
+  ]
+ }
+}

@@ -1,0 +1,182 @@
+{
+ "infantry_anti_tank_weapon": {
+  "boys_at_rifle_africa_uk": {
+   "coh3_ref": "weapon/british_africa/ballistic_weapon/infantry_anti_tank_weapon/boys_at_rifle_africa_uk",
+   "class": "panzerbuchse",
+   "fire_rule": "single_shot",
+   "damage": 50,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 84,
+    "mid": 72,
+    "far": 60
+   },
+   "vs_target": {
+    "infantry": {
+     "damage": 0.5
+    },
+    "building": {
+     "damage": 0.5
+    }
+   },
+   "traits": [
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.39,
+     "mid": 0.33,
+     "far": 0.25
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 61,
+     "mid": 61,
+     "far": 61
+    },
+    "arc_deg": 180,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "scatter": {
+    "angle_deg": 4,
+    "distance_ratio": 1,
+    "distance_max_m": 5
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.35
+   }
+  }
+ },
+ "light_machine_gun": {
+  "bren_lmg_africa_uk": {
+   "coh3_ref": "weapon/british_africa/small_arms/machine_gun/light_machine_gun/bren_lmg_africa_uk",
+   "class": "lmg",
+   "fire_rule": "volley",
+   "damage": 4,
+   "damage_type": "True Damage",
+   "penetration": {
+    "near": 3,
+    "mid": 2,
+    "far": 2
+   },
+   "traits": [
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.67,
+     "mid": 0.6,
+     "far": 0.55
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 6
+    },
+    "shots_per_turn": {
+     "near": 22,
+     "mid": 25,
+     "far": 30
+    },
+    "damage_per_shot": {
+     "near": 4,
+     "mid": 4,
+     "far": 4
+    },
+    "shot_multiplier": 0.88,
+    "arc_deg": 180,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.55,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   }
+  }
+ }
+}

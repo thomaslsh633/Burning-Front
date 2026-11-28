@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "20mm_aa_gun_emplacement_ger": {
+   "name": "weapon.20mm_aa_gun_emplacement_ger.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "tw_20mm_emplacement_ger": {
+   "name": "entity.tw_20mm_emplacement_ger.name",
+   "model": {
+    "id": "tw_20mm_emplacement_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "aa_gun_20mm_emplacement_ger": {
+   "name": "unit.aa_gun_20mm_emplacement_ger.name",
+   "short_name": "unit.aa_gun_20mm_emplacement_ger.short",
+   "desc": "unit.aa_gun_20mm_emplacement_ger.desc",
+   "icon": "aa_gun_20mm_emplacement_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

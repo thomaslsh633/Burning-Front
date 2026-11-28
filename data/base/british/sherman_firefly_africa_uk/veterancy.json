@@ -1,0 +1,21 @@
+{
+ "sherman_firefly_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/sherman_firefly_uk",
+  "xp": [
+   2000,
+   6000,
+   12000
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "weapon_range": 5,
+    "weapon_penetration": 1.5
+   }
+  ]
+ }
+}

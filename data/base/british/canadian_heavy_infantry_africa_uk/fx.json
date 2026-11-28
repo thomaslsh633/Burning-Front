@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "lee_enfield_canadian_shock_uk": {
+   "name": "weapon.lee_enfield_canadian_shock_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "piat_grenade_launcher_canadian_heavy_infantry_africa_uk": {
+   "name": "weapon.piat_grenade_launcher_canadian_heavy_infantry_africa_uk.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  }
+ },
+ "ebps": {
+  "canadian_heavy_infantry_africa_uk": {
+   "name": "entity.canadian_heavy_infantry_africa_uk.name",
+   "model": {
+    "id": "canadian_heavy_infantry_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "canadian_heavy_infantry_africa_uk": {
+   "name": "unit.canadian_heavy_infantry_africa_uk.name",
+   "short_name": "unit.canadian_heavy_infantry_africa_uk.short",
+   "desc": "unit.canadian_heavy_infantry_africa_uk.desc",
+   "icon": "canadian_heavy_infantry_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "piat_package_canadian_heavy_infantry_africa_uk": {
+   "name": "upgrade.piat_package_canadian_heavy_infantry_africa_uk.name",
+   "icon": "piat_package_canadian_heavy_infantry_africa_uk"
+  }
+ }
+}

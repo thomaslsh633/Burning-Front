@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_armored_car_8_rad_command_ak": {
+   "name": "weapon.mg34_armored_car_8_rad_command_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "armored_car_8_rad_command_ak": {
+   "name": "entity.armored_car_8_rad_command_ak.name",
+   "model": {
+    "id": "armored_car_8_rad_command_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "armored_car_8_rad_command_ak": {
+   "name": "unit.armored_car_8_rad_command_ak.name",
+   "short_name": "unit.armored_car_8_rad_command_ak.short",
+   "desc": "unit.armored_car_8_rad_command_ak.desc",
+   "icon": "armored_car_8_rad_command_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

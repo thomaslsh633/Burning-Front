@@ -1,0 +1,21 @@
+{
+ "panzer_ii_command_ak": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   1200,
+   3600,
+   8400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

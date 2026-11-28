@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "panzergrenadier_ger": {
+   "name": "entity.panzergrenadier_ger.name",
+   "model": {
+    "id": "panzergrenadier_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "panzergrenadier_ger": {
+   "name": "unit.panzergrenadier_ger.name",
+   "short_name": "unit.panzergrenadier_ger.short",
+   "desc": "unit.panzergrenadier_ger.desc",
+   "icon": "panzergrenadier_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "gurkhas_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/gurkhas",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "weapon_accuracy": 1.15,
+    "attack_speed": 0.75
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "hp_add": 20,
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

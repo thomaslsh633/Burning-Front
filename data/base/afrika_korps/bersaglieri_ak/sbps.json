@@ -1,0 +1,65 @@
+{
+ "infantry": {
+  "bersaglieri_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/bersaglieri_ak",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "bersaglieri_ak",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "bersaglieri",
+    "italian",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "lmg_breda_m30_bersaglieri_ak"
+    ]
+   },
+   "abilities": [
+    "vault_movement",
+    "grenade_bersaglieri_ak",
+    "double_time_ak",
+    "sprint_passive_ak",
+    "sprint_passive_veteran_ak",
+    "urra_bersaglieri_ak",
+    "italian_combined_arms_secured_flanks_ak",
+    "secured_flanks_ak",
+    "force_recon_ak",
+    "salvage_plunder_ak",
+    "elite_forces_infantry_medical_supplements_casualties_ak"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "bersaglieri_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

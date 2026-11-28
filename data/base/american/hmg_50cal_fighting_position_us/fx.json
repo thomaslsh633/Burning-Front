@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "hmg_50cal_fighting_position_us": {
+   "name": "entity.hmg_50cal_fighting_position_us.name",
+   "model": {
+    "id": "hmg_50cal_fighting_position_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_50cal_fighting_position_us": {
+   "name": "unit.hmg_50cal_fighting_position_us.name",
+   "short_name": "unit.hmg_50cal_fighting_position_us.short",
+   "desc": "unit.hmg_50cal_fighting_position_us.desc",
+   "icon": "hmg_50cal_fighting_position_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

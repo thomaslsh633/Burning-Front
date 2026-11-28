@@ -1,0 +1,44 @@
+{
+ "weapon": {
+  "105mm_howitzer_cannone_auto_ak": {
+   "name": "weapon.105mm_howitzer_cannone_auto_ak.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "carcano_bersaglieri_ak": {
+   "name": "weapon.carcano_bersaglieri_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "tw_howitzer_cannone_da_105_ak": {
+   "name": "entity.tw_howitzer_cannone_da_105_ak.name",
+   "model": {
+    "id": "tw_howitzer_cannone_da_105_ak",
+    "anim_class": "crew"
+   }
+  },
+  "crew_bersaglieri_ak": {
+   "name": "entity.crew_bersaglieri_ak.name",
+   "model": {
+    "id": "crew_bersaglieri_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "howitzer_cannone_da_105_ak": {
+   "name": "unit.howitzer_cannone_da_105_ak.name",
+   "short_name": "unit.howitzer_cannone_da_105_ak.short",
+   "desc": "unit.howitzer_cannone_da_105_ak.desc",
+   "icon": "howitzer_cannone_da_105_ak",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

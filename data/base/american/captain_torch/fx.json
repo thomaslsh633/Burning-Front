@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "captain_torch": {
+   "name": "unit.captain_torch.name",
+   "short_name": "unit.captain_torch.short",
+   "desc": "unit.captain_torch.desc",
+   "icon": "captain_torch",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

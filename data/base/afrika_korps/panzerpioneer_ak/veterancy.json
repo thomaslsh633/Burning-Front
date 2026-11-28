@@ -1,0 +1,23 @@
+{
+ "panzerpioneer_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/infantry/panzerpioneer",
+  "xp": [
+   650,
+   1950,
+   3900
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "attack_speed": 0.75,
+    "build_speed": 1.35
+   },
+   {
+    "hp_add": 25,
+    "attack_speed": 0.7
+   }
+  ]
+ }
+}

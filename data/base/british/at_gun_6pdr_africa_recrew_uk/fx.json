@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "at_gun_6pdr_africa_recrew_uk": {
+   "name": "unit.at_gun_6pdr_africa_recrew_uk.name",
+   "short_name": "unit.at_gun_6pdr_africa_recrew_uk.short",
+   "desc": "unit.at_gun_6pdr_africa_recrew_uk.desc",
+   "icon": "at_gun_6pdr_africa_recrew_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

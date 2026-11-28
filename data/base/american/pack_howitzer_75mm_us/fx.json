@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "75mm_pack_howitzer_us": {
+   "name": "weapon.75mm_pack_howitzer_us.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  }
+ },
+ "ebps": {
+  "tw_pack_howitzer_75mm_us": {
+   "name": "entity.tw_pack_howitzer_75mm_us.name",
+   "model": {
+    "id": "tw_pack_howitzer_75mm_us",
+    "anim_class": "crew"
+   }
+  },
+  "crew_howitzer_us": {
+   "name": "entity.crew_howitzer_us.name",
+   "model": {
+    "id": "crew_howitzer_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "pack_howitzer_75mm_us": {
+   "name": "unit.pack_howitzer_75mm_us.name",
+   "short_name": "unit.pack_howitzer_75mm_us.short",
+   "desc": "unit.pack_howitzer_75mm_us.desc",
+   "icon": "pack_howitzer_75mm_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "emplacements": {
+  "base_defense_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/base_defense_africa_uk",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "base_defense_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "suppression",
+    "building",
+    "base_defense",
+    "teamweapon"
+   ],
+   "source": "built",
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

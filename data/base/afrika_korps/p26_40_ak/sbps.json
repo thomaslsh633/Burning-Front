@@ -1,0 +1,50 @@
+{
+ "vehicles": {
+  "p26_40_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/p26_40_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "p26_40_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 85
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "shock_round_capable",
+    "italian",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "vehicle_territory_capture_dummy_ak",
+    "smoke_discharge_8rad_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak",
+    "italian_airborne_p26_40_airland_battle_passive_ak",
+    "self_repair_passive_ak",
+    "smoke_discharge_8rad_ak"
+   ],
+   "veterancy": {
+    "set": "p26_40_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

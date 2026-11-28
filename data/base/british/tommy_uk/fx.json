@@ -1,0 +1,70 @@
+{
+ "weapon": {
+  "lee_enfield_tommy_uk": {
+   "name": "weapon.lee_enfield_tommy_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "boys_at_rifle_uk": {
+   "name": "weapon.boys_at_rifle_uk.name",
+   "sound": {
+    "fire": "panzerbuchse"
+   }
+  },
+  "bren_lmg_uk": {
+   "name": "weapon.bren_lmg_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "scoped_lee_enfield_tommy_uk": {
+   "name": "weapon.scoped_lee_enfield_tommy_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "officer_tommy_uk": {
+   "name": "entity.officer_tommy_uk.name",
+   "model": {
+    "id": "officer_tommy_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "tommy_uk": {
+   "name": "entity.tommy_uk.name",
+   "model": {
+    "id": "tommy_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "tommy_uk": {
+   "name": "unit.tommy_uk.name",
+   "short_name": "unit.tommy_uk.short",
+   "desc": "unit.tommy_uk.desc",
+   "icon": "tommy_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "boys_anti_tank_rifles_tommy_uk": {
+   "name": "upgrade.boys_anti_tank_rifles_tommy_uk.name",
+   "icon": "boys_anti_tank_rifles_tommy_uk"
+  },
+  "lmg_bren_tommy_uk": {
+   "name": "upgrade.lmg_bren_tommy_uk.name",
+   "icon": "lmg_bren_tommy_uk"
+  },
+  "recon_package_tommy_uk": {
+   "name": "upgrade.recon_package_tommy_uk.name",
+   "icon": "recon_package_tommy_uk"
+  }
+ }
+}

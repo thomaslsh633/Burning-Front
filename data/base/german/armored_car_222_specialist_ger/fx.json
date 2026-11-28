@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "20mm_kwk38_armored_car_ak": {
+   "name": "weapon.20mm_kwk38_armored_car_ak.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "armored_car_222_specialist_ger": {
+   "name": "entity.armored_car_222_specialist_ger.name",
+   "model": {
+    "id": "armored_car_222_specialist_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "armored_car_222_specialist_ger": {
+   "name": "unit.armored_car_222_specialist_ger.name",
+   "short_name": "unit.armored_car_222_specialist_ger.short",
+   "desc": "unit.armored_car_222_specialist_ger.desc",
+   "icon": "armored_car_222_specialist_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

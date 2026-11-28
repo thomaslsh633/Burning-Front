@@ -1,0 +1,66 @@
+{
+ "team_weapons": {
+  "at_gun_lg40_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/at_gun_lg40_ger",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_75mm_lg40_ger",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_fallschirmpioneers_ger",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 4,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "tier2",
+    "wehrmacht_advanced_unit",
+    "fallschirmjager"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "camo_first_strike_team_weapon_ger",
+    "toggle_ambush_camouflage_lg40_ger",
+    "hold_fire",
+    "towing_attach"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_lg40_ger"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_75mm_lg40_ger",
+    "crew_entity": "crew_at_gun_fallschirmpioneers_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

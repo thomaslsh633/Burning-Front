@@ -1,0 +1,69 @@
+{
+ "infantry": {
+  "brazilian_lieutenant_us": {
+   "coh3_ref": "sbps/races/american/infantry/brazilian_lieutenant_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "brazilian_lieutenant_us",
+     "count": 1
+    },
+    {
+     "entity": "brazilian_rifleman_lieutenant_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "captain",
+    "infantry_burst_weapon",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "follow_captain_us",
+    "leadership_aura_brazilian_lieutenant_us",
+    "vault_movement",
+    "merge_brazilian_lieutentant_us",
+    "brazilian_lieutenant_weapon_requisition_bazooka_us",
+    "brazilian_lieutenant_weapon_requisition_flamethrower_us",
+    "brazilian_lieutenant_weapon_requisition_m1919_us",
+    "brazilian_victor_target_squad_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "brazilian_lieutenant_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_french_infantry_us",
+     "belgian_gate_french_us",
+     "concrete_bastion_infantry_us",
+     "barbed_wire_fence_french_engineering_upgrade_us",
+     "fighting_position_french_engineering_upgrade_us",
+     "tourelle_emplacement_us",
+     "observation_post_french_us",
+     "tank_trap_french_us"
+    ]
+   }
+  }
+ }
+}

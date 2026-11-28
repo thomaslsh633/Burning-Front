@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "springfield_sniper_us": {
+   "name": "weapon.springfield_sniper_us.name",
+   "sound": {
+    "fire": "sniper"
+   }
+  }
+ },
+ "ebps": {
+  "sniper_us": {
+   "name": "entity.sniper_us.name",
+   "model": {
+    "id": "sniper_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sniper_us": {
+   "name": "unit.sniper_us.name",
+   "short_name": "unit.sniper_us.short",
+   "desc": "unit.sniper_us.desc",
+   "icon": "sniper_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

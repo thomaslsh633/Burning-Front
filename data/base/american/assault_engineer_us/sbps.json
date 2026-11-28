@@ -1,0 +1,92 @@
+{
+ "infantry": {
+  "assault_engineer_us": {
+   "coh3_ref": "sbps/races/american/infantry/assault_engineer_us",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "assault_engineer_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "standard_infantry",
+    "infantry_support",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "flamethrower_engineer_us",
+     "m1941_lmg_special_operations_us"
+    ],
+    "pending": [
+     "utility_engineer_us",
+     "thompson_assault_engineers_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "cut_wire_engineer_us",
+    "veterancy_1_unlock_a_engineer_us",
+    "veterancy_1_unlock_b_engineer_us",
+    "veterancy_1a_light_it_up_engineer_us",
+    "veterancy_1b_field_craft_engineer_us",
+    "vault_movement",
+    "toggle_detect_mines_us",
+    "defuse_mine_engineer_us",
+    "satchel_charge_engineers_us",
+    "c_airborne_infantry_medkits_us",
+    "veterancy_1a_light_it_up_no_flamer_engineer_us",
+    "salvage_engineer_us",
+    "passive_instant_withdraw_retreat_in_hold_global_us",
+    "french_old_guard_retreat_buff_us",
+    "repair_assault_engineer_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.52
+   },
+   "veterancy": {
+    "set": "assault_engineer_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_us",
+     "barbed_wire_fence_us",
+     "fighting_position_us",
+     "tank_trap_us",
+     "tw_howitzer_105mm_us",
+     "mine_engineer_us",
+     "mine_heavy_engineer_us",
+     "demo_charge_standard_us",
+     "observation_post_us",
+     "ammo_storage_us",
+     "partisan_tunnel_constructed_us",
+     "tourelle_emplacement_us",
+     "belgian_gate_us",
+     "concrete_bastion_us",
+     "goon_gun_pit_us",
+     "hmg_50cal_fighting_position_us"
+    ]
+   }
+  }
+ }
+}

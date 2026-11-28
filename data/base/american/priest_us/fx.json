@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "priest_us": {
+   "name": "entity.priest_us.name",
+   "model": {
+    "id": "priest_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "priest_us": {
+   "name": "unit.priest_us.name",
+   "short_name": "unit.priest_us.short",
+   "desc": "unit.priest_us.desc",
+   "icon": "priest_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

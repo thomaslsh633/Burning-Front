@@ -1,0 +1,77 @@
+{
+ "vehicles": {
+  "sherman_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/sherman_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "sherman",
+    "rideable_tank",
+    "tank",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 195,
+    "side": 110,
+    "rear": 80
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 380,
+    "fuel": 90
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_sherman_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_sherman_us",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "sherman_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

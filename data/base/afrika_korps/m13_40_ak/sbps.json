@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "m13_40_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/m13_40_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "m13_40_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_turret",
+    "italian"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "m13_40_hull_mg_ak",
+     "m13_40_he_rounds_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "m13_40_desperate_struggle_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "m13_40_toggle_he_rounds_ak"
+   ],
+   "veterancy": {
+    "set": "m13_40_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "canadian_heavy_infantry_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/canadian_heavy_infantry",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "received_damage": 0.8,
+    "attack_speed": 0.85
+   },
+   {
+    "weapon_accuracy": 1.3,
+    "hp_add": 15
+   }
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "armored_tractor_254_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/armored_tractor_254_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "armored_tractor_254_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "dak_light_vehicle",
+    "tier3",
+    "vehicle_support",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "off_map_mortar_barrage_254_ak",
+    "off_map_mortar_smoke_barrage_254_ak",
+    "recon_254_ak",
+    "common_shared_veterancy_dummy_parent",
+    "self_repair_passive_ak",
+    "smoke_discharge_ui_position_23_ak",
+    "recon_254_veteran_2_ak",
+    "recon_254_veteran_3_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_2_1_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_2_1_ak",
+    "reveal_area_254",
+    "vehicle_capture_dummy_254_ak"
+   ],
+   "veterancy": {
+    "set": "armored_tractor_254_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

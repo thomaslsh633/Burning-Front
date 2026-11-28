@@ -1,0 +1,20 @@
+{
+ "leig_75mm_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/light_indirect",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "attack_speed": 0.85,
+    "ability_cooldown": 0.65
+   },
+   {}
+  ]
+ }
+}

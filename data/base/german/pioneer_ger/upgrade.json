@@ -1,0 +1,39 @@
+{
+ "infantry": {
+  "flamethrower_pioneer_ger": {
+   "coh3_ref": "upgrade/german/infantry/flamethrower_pioneer_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_pioneer_us"
+    }
+   ]
+  },
+  "panzerjager_package_ger": {
+   "coh3_ref": "upgrade/german/infantry/panzerjager_package_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 120
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "defense_left_1_fortress_pioneers_ger"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerschreck_stormtrooper_ger"
+    }
+   ]
+  }
+ }
+}

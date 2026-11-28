@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_howitzer_obice_210_ger": {
+   "name": "entity.tw_howitzer_obice_210_ger.name",
+   "model": {
+    "id": "tw_howitzer_obice_210_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "howitzer_obice_210_ger": {
+   "name": "unit.howitzer_obice_210_ger.name",
+   "short_name": "unit.howitzer_obice_210_ger.short",
+   "desc": "unit.howitzer_obice_210_ger.desc",
+   "icon": "howitzer_obice_210_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,12 +1,4 @@
 {
- "weapon": {
-  "mg42_bunker_ger": {
-   "name": "weapon.mg42_bunker_ger.name",
-   "sound": {
-    "fire": "hmg"
-   }
-  }
- },
  "ebps": {
   "hmg_bunker_ger": {
    "name": "entity.hmg_bunker_ger.name",

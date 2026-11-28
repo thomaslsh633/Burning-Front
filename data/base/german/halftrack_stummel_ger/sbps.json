@@ -1,0 +1,58 @@
+{
+ "vehicles": {
+  "halftrack_stummel_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/halftrack_stummel_ger",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "halftrack_stummel_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_direct_fire_barrage",
+    "panzergrenadier_kompanie"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "barrage_halftrack_stummel_ger",
+    "smoke_barrage_halftrack_stummel_ger",
+    "mechanized_self_repair_half_track_ger",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_left_1b_raid_ger",
+    "vet_white_phosphorous_stummel_ger",
+    "hold_fire",
+    "mechanized_repair_aura_ger",
+    "siegebreakers_grinding_advance_medium_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger"
+   ],
+   "veterancy": {
+    "set": "halftrack_stummel_ger"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

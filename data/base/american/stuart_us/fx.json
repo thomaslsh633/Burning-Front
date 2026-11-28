@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "stuart_us": {
+   "name": "entity.stuart_us.name",
+   "model": {
+    "id": "stuart_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "stuart_us": {
+   "name": "unit.stuart_us.name",
+   "short_name": "unit.stuart_us.short",
+   "desc": "unit.stuart_us.desc",
+   "icon": "stuart_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

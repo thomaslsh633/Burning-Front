@@ -1,0 +1,47 @@
+{
+ "emplacements": {
+  "tourelle_emplacement_us": {
+   "coh3_ref": "ebps/races/american/emplacements/tourelle_emplacement_us",
+   "tags": [
+    "cover_object",
+    "emplacement",
+    "building"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 240,
+    "fuel": 20
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_tourelle_us",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

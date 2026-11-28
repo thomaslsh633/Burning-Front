@@ -1,0 +1,19 @@
+{
+ "infantry": {
+  "piat_package_canadian_heavy_infantry_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/piat_package_canadian_heavy_infantry_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 90
+   },
+   "build_turns": 5,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "piat_grenade_launcher_canadian_heavy_infantry_africa_uk"
+    }
+   ]
+  }
+ }
+}

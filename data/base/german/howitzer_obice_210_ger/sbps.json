@@ -1,0 +1,41 @@
+{
+ "emplacements": {
+  "howitzer_obice_210_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/howitzer_obice_210_ger",
+   "kind": "structure",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_howitzer_obice_210_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 5,
+   "tags": [
+    "emplacement",
+    "artillery",
+    "panzer_kompanie"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_howitzer_obice_210_ger",
+    "obice_rapid_resupply_ger",
+    "artillery_resistant_passive"
+   ],
+   "veterancy": {
+    "set": "howitzer_obice_210_ger"
+   },
+   "supply": {
+    "ammo": 8
+   }
+  }
+ }
+}

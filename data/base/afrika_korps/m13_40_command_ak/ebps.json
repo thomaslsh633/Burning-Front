@@ -1,0 +1,81 @@
+{
+ "vehicles": {
+  "m13_40_command_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/m13_40_command_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "panzer_iii",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off"
+   ],
+   "hp": 480,
+   "target_size": 18,
+   "armor": {
+    "front": 50,
+    "side": 37.5,
+    "rear": 25
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 45
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "47mm_cannone_da_47_32_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "breda_38_hull_m13_40_ak",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mg34_coaxial_panzer_iii_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "m13_40_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

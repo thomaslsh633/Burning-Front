@@ -1,0 +1,44 @@
+{
+ "emplacements": {
+  "mortar_bunker_autobuild_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/mortar_bunker_autobuild_ger",
+   "kind": "structure",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "bunker_mortar_autobuild_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 3,
+   "build_turns": 4,
+   "tags": [
+    "building",
+    "invisible_to_scar",
+    "emplacement",
+    "wehrmacht_advanced_unit",
+    "mortar"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_81mm_mortar_bunker_ger",
+    "barrage_smoke_81mm_mortar_bunker_ger",
+    "salvage_siege_camp_ger",
+    "siege_camp_buff_aura_ger"
+   ],
+   "veterancy": {
+    "set": "mortar_bunker_autobuild_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

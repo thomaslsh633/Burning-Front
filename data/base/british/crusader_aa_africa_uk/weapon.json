@@ -1,0 +1,122 @@
+{
+ "tank_gun": {
+  "40mm_crusader_aa_uk": {
+   "coh3_ref": "weapon/british/ballistic_weapon/tank_gun/40mm_crusader_aa_uk",
+   "class": "cannon_burst",
+   "fire_rule": "single_shot",
+   "damage": 30,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 40,
+    "mid": 35,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.5,
+     "penetration": 0.5
+    },
+    "aircraft": {
+     "damage": 7
+    }
+   },
+   "traits": [
+    "anti_air",
+    "anti_air_through_cover",
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.5,
+     "mid": 0.45,
+     "far": 0.38
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 288,
+     "mid": 288,
+     "far": 288
+    },
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25,
+      "suppression": 0.05
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.66,
+     "mid": 0.5,
+     "far": 0.33
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 2
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 2,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 6.5,
+    "distance_ratio": 0.125,
+    "distance_max_m": 6
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.5
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  }
+ }
+}

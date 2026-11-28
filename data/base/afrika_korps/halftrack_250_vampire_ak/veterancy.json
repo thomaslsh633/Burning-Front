@@ -1,0 +1,19 @@
+{
+ "halftrack_250_vampire_ak": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   700,
+   2100,
+   4200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {},
+   {
+    "hp_add": 80
+   }
+  ]
+ }
+}

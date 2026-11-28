@@ -1,0 +1,75 @@
+{
+ "vehicles": {
+  "valentine_uk": {
+   "coh3_ref": "ebps/races/british/vehicles/valentine_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 120,
+    "side": 90,
+    "rear": 60
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 300,
+    "fuel": 65
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 7,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "40mm_valentine_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_valentine_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "valentine_wreck_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

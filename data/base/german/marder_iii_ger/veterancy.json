@@ -1,0 +1,22 @@
+{
+ "marder_iii_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/marder_iii_ger",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {
+    "weapon_accuracy": 1.15
+   },
+   {
+    "attack_speed": 0.75,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80
+   }
+  ]
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "priest_kangaroo_us": {
+   "name": "entity.priest_kangaroo_us.name",
+   "model": {
+    "id": "priest_kangaroo_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "priest_kangaroo_us": {
+   "name": "unit.priest_kangaroo_us.name",
+   "short_name": "unit.priest_kangaroo_us.short",
+   "desc": "unit.priest_kangaroo_us.desc",
+   "icon": "priest_kangaroo_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

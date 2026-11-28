@@ -1,0 +1,71 @@
+{
+ "team_weapons": {
+  "at_gun_88mm_mobile_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/team_weapons/at_gun_88mm_mobile_ak",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_88mm_flak_36_mobile_ak",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_88mm_mobile_ak",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 40
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "anti_air",
+    "stationary_anti_tank_weapon"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "target_weak_point_flak_88_ak",
+    "hold_fire",
+    "set_facing",
+    "toggle_aa_mode",
+    "team_weapons_combined_arms_ak",
+    "team_weapons_combined_arms_entrenchment_ak",
+    "italian_infantry_dummy_defense_of_the_motherland_ak",
+    "auto_deploy_ak",
+    "force_attack_target"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_88mm_mobile_ak"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_88mm_flak_36_mobile_ak",
+    "crew_entity": "crew_at_gun_88mm_mobile_ak"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

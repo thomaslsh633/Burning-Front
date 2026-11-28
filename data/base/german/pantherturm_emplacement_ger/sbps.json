@@ -1,0 +1,43 @@
+{
+ "emplacements": {
+  "pantherturm_emplacement_ger": {
+   "coh3_ref": "sbps/races/german/emplacements/pantherturm_emplacement_ger",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "pantherturm_emplacement_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "building",
+    "invisible_to_scar",
+    "emplacement",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "set_facing_emplacement",
+    "force_attack_target"
+   ],
+   "veterancy": {
+    "set": "pantherturm_emplacement_ger"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

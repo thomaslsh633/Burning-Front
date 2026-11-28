@@ -1,0 +1,113 @@
+{
+ "infantry": {
+  "crew_bersaglieri_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/infantry/crew_bersaglieri_ak",
+   "tags": [
+    "infantry"
+   ],
+   "hp": 90,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 45
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "carcano_bersaglieri_ak",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ },
+ "team_weapons": {
+  "tw_howitzer_cannone_da_105_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/team_weapons/tw_howitzer_cannone_da_105_ak",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "artillery"
+   ],
+   "hp": 350,
+   "target_size": 20,
+   "armor": {
+    "front": 70,
+    "side": 70,
+    "rear": 70
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 70
+   },
+   "traits": [
+    "repairable",
+    "recrewable",
+    "towable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "105mm_howitzer_cannone_auto_ak",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "crew": {
+    "min": 2,
+    "roles": [
+     "gunner",
+     "loader"
+    ]
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "howitzer_cannone_da_105_ak",
+     "german": "howitzer_cannone_da_105_ak",
+     "british": "howitzer_cannone_da_105_ak",
+     "afrika_korps": "howitzer_cannone_da_105_ak"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "tow": {
+    "by": []
+   }
+  }
+ }
+}

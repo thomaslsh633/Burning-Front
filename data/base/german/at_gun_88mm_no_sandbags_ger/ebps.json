@@ -1,0 +1,50 @@
+{
+ "buildings": {
+  "anti_tank_88mm_gun_no_sandbags_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/sp/anti_tank_88mm_gun_no_sandbags_ger",
+   "tags": [
+    "building",
+    "cover_object",
+    "emplacement",
+    "team_weapon",
+    "emplacement_atg"
+   ],
+   "hp": 1180,
+   "target_size": 20,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 65
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "88mm_emplacement_at_gun_ger",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

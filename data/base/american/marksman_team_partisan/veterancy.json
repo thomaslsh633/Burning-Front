@@ -1,0 +1,21 @@
+{
+ "marksman_team_partisan": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   720,
+   1440,
+   2880
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

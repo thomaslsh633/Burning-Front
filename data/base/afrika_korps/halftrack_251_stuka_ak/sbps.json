@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "halftrack_251_stuka_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_251_stuka_ak",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "halftrack_251_stuka_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 85
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "tier4",
+    "light_armor",
+    "dak_light_vehicle",
+    "vehicle_artillery"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "barrage_150mm_stuka_ak",
+    "creeping_barrage_stuka_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "smoke_discharge_ui_position_23_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_251_stuka_ak"
+   },
+   "supply": {
+    "ammo": 6
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

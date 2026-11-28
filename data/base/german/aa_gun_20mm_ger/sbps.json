@@ -1,0 +1,68 @@
+{
+ "team_weapons": {
+  "aa_gun_20mm_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/aa_gun_20mm_ger",
+   "kind": "team_weapon",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "tw_aa_gun_20mm_ger",
+     "count": 1
+    },
+    {
+     "entity": "crew_aa_gun_20mm_ger",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 4,
+   "tags": [
+    "teamweapon",
+    "anti_air",
+    "tier2",
+    "luftwaffe_kompanie",
+    "teamweapon_autocannon",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak",
+     "blocking_force_team_weapons_marking_fire_ger"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "button_20mm_aa_flak_ger",
+    "suppressing_fire_aa_gun_20mm_ger",
+    "toggle_aa_mode_22",
+    "blocking_force_marking_fire_team_weapon_dummy_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "aa_gun_20mm_ger"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_aa_gun_20mm_ger",
+    "crew_entity": "crew_aa_gun_20mm_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

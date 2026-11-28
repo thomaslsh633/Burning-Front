@@ -1,0 +1,24 @@
+{
+ "australian_light_infantry_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/australian_light",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.15,
+    "received_accuracy": 0.85
+   },
+   {
+    "weapon_accuracy": 1.15,
+    "hp_add": 20,
+    "move": 1.25
+   }
+  ]
+ }
+}

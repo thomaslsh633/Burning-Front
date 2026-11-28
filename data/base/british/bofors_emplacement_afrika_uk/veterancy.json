@@ -1,0 +1,23 @@
+{
+ "bofors_emplacement_afrika_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/emplacement/emplacement_direct_fire",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "hp_add": 120
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "attack_speed": 0.65
+   },
+   {
+    "received_damage": 0.8,
+    "weapon_damage": 1.5
+   }
+  ]
+ }
+}

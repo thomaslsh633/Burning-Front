@@ -1,0 +1,21 @@
+{
+ "chaffee_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/chaffee_us",
+  "xp": [
+   1100,
+   3300,
+   6600
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.75,
+    "weapon_accuracy": 1.2
+   },
+   {
+    "hp_add": 80,
+    "move": 1.33
+   }
+  ]
+ }
+}

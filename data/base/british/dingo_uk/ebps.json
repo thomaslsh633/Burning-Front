@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "dingo_uk": {
+   "coh3_ref": "ebps/races/british/vehicles/dingo_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "ultra_light",
+    "light_vehicle",
+    "dingo",
+    "vehicle_wheeled"
+   ],
+   "hp": 235,
+   "target_size": 10.6,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 2.5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 250
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 9,
+    "pass": "vehicle_ultra_light"
+   },
+   "sight": {
+    "hex": 8,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "30cal_dingo_uk",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "dingo_wreck_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

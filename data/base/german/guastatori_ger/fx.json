@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "beretta_m38_guastatori_ak": {
+   "name": "weapon.beretta_m38_guastatori_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_guastatori_ak": {
+   "name": "weapon.flamethrower_guastatori_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "guastatori_ger": {
+   "name": "entity.guastatori_ger.name",
+   "model": {
+    "id": "guastatori_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "guastatori_ger": {
+   "name": "unit.guastatori_ger.name",
+   "short_name": "unit.guastatori_ger.short",
+   "desc": "unit.guastatori_ger.desc",
+   "icon": "guastatori_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "grb_39_grenade_launcher_pioneer_ger": {
+   "name": "upgrade.grb_39_grenade_launcher_pioneer_ger.name",
+   "icon": "grb_39_grenade_launcher_pioneer_ger"
+  },
+  "flamethrower_guastatori_ger": {
+   "name": "upgrade.flamethrower_guastatori_ger.name",
+   "icon": "flamethrower_guastatori_ger"
+  }
+ }
+}

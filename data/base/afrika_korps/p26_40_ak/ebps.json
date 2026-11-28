@@ -1,0 +1,77 @@
+{
+ "vehicles": {
+  "p26_40_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/p26_40_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up",
+    "italian"
+   ],
+   "hp": 720,
+   "target_size": 19,
+   "armor": {
+    "front": 160,
+    "side": 110,
+    "rear": 60
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 85
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_p26_40_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "breda_38_coaxial_m13_40_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "25mm_tank_mortar_smoke_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "p26_40_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

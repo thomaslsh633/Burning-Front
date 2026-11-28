@@ -1,0 +1,15 @@
+{
+ "stug_iii_d_ger": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/stug_iii_d_ak",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {},
+   {},
+   {}
+  ]
+ }
+}

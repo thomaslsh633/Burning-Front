@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "partisan_tunnel_main_us": {
+   "name": "entity.partisan_tunnel_main_us.name",
+   "model": {
+    "id": "partisan_tunnel_main_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "partisan_tunnel_main_us": {
+   "name": "unit.partisan_tunnel_main_us.name",
+   "short_name": "unit.partisan_tunnel_main_us.short",
+   "desc": "unit.partisan_tunnel_main_us.desc",
+   "icon": "partisan_tunnel_main_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

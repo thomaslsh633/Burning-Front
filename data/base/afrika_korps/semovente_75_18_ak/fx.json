@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_semovente_at_ger": {
+   "name": "weapon.75mm_semovente_at_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "semovente_75_18_ak": {
+   "name": "entity.semovente_75_18_ak.name",
+   "model": {
+    "id": "semovente_75_18_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "semovente_75_18_ak": {
+   "name": "unit.semovente_75_18_ak.name",
+   "short_name": "unit.semovente_75_18_ak.short",
+   "desc": "unit.semovente_75_18_ak.desc",
+   "icon": "semovente_75_18_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

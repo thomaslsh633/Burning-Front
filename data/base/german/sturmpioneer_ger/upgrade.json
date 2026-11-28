@@ -1,0 +1,39 @@
+{
+ "infantry": {
+  "sturmpioneer_leader_ir_mp44_ger": {
+   "coh3_ref": "upgrade/german/infantry/sturmpioneer_leader_ir_mp44_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "infanterie_kompanie_vet_ger"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_pioneer_us"
+    }
+   ]
+  },
+  "sturmpioneer_leader_urban_assault_ger": {
+   "coh3_ref": "upgrade/german/infantry/sturmpioneer_leader_urban_assault_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_pioneer_us"
+    }
+   ]
+  }
+ }
+}

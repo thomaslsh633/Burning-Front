@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_halftrack_stummel_ger": {
+   "name": "weapon.75mm_halftrack_stummel_ger.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_stummel_ger": {
+   "name": "entity.halftrack_stummel_ger.name",
+   "model": {
+    "id": "halftrack_stummel_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_stummel_ger": {
+   "name": "unit.halftrack_stummel_ger.name",
+   "short_name": "unit.halftrack_stummel_ger.short",
+   "desc": "unit.halftrack_stummel_ger.desc",
+   "icon": "halftrack_stummel_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

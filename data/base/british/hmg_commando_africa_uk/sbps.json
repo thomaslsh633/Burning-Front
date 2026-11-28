@@ -1,0 +1,57 @@
+{
+ "team_weapons": {
+  "hmg_commando_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/team_weapons/hmg_commando_africa_uk",
+   "kind": "team_weapon",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "crew_hmg_commando_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220
+    },
+    "from": "entities"
+   },
+   "pop": 3,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "teamweapon_burst",
+    "infantry_anti_infantry",
+    "tier2"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "rapid_displace_hmg_uk",
+    "reload_vickers_uk"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "hmg_commando_africa_uk"
+   },
+   "team_weapon": {
+    "weapon": "30cal_hmg_uk",
+    "crew_entity": "crew_hmg_commando_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

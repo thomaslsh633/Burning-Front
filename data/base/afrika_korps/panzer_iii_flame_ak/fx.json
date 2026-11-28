@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "flamethrower_panzer_iii_ak": {
+   "name": "weapon.flamethrower_panzer_iii_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "panzer_iii_flame_ak": {
+   "name": "entity.panzer_iii_flame_ak.name",
+   "model": {
+    "id": "panzer_iii_flame_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "panzer_iii_flame_ak": {
+   "name": "unit.panzer_iii_flame_ak.name",
+   "short_name": "unit.panzer_iii_flame_ak.short",
+   "desc": "unit.panzer_iii_flame_ak.desc",
+   "icon": "panzer_iii_flame_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

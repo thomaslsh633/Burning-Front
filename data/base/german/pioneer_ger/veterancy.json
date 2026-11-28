@@ -1,0 +1,21 @@
+{
+ "pioneer_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/pioneer_ger",
+  "xp": [
+   500,
+   1500,
+   3000
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "build_speed": 1.35
+   },
+   {
+    "hp_add": 20
+   }
+  ]
+ }
+}

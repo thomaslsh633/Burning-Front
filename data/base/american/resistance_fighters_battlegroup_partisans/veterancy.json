@@ -1,0 +1,24 @@
+{
+ "resistance_fighters_battlegroup_partisans": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/resistance_fighter_battlegroup",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "ability_cooldown": 0.25
+   },
+   {
+    "hp_add": 20,
+    "move": 1.33,
+    "attack_speed": 0.7
+   }
+  ]
+ }
+}

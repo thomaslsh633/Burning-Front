@@ -1,0 +1,50 @@
+{
+ "emplacements": {
+  "tourelle_emplacement_us": {
+   "coh3_ref": "sbps/races/american/emplacements/tourelle_emplacement_us",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "tourelle_emplacement_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 20
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "building",
+    "invisible_to_scar",
+    "emplacement",
+    "teamweapon",
+    "suppression"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "tourelle_healing_aura_building",
+    "french_forward_medical_aide_us",
+    "tourelle_dummy_medic_collection_passive",
+    "french_add_tourelle_upgrade_point_us",
+    "french_defensive_artillery_us",
+    "french_advanced_tourelles_bonus_us",
+    "set_facing_emplacement",
+    "force_attack_target"
+   ],
+   "veterancy": {
+    "set": "tourelle_emplacement_us"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "australian_supplytruck_africa_uk": {
+   "name": "entity.australian_supplytruck_africa_uk.name",
+   "model": {
+    "id": "australian_supplytruck_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "australian_supplytruck_africa_uk": {
+   "name": "unit.australian_supplytruck_africa_uk.name",
+   "short_name": "unit.australian_supplytruck_africa_uk.short",
+   "desc": "unit.australian_supplytruck_africa_uk.desc",
+   "icon": "australian_supplytruck_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

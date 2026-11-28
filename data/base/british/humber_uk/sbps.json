@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "humber_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/humber_uk",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "humber_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 30
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier3",
+    "vehicle_burst_weapon"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_barrage_humber_uk",
+    "mark_area_humber_uk",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "humber_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

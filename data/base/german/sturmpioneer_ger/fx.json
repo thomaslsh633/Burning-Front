@@ -1,0 +1,41 @@
+{
+ "weapon": {
+  "g43_sturmpioneer_ger": {
+   "name": "weapon.g43_sturmpioneer_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "sturmpioneer_ger": {
+   "name": "entity.sturmpioneer_ger.name",
+   "model": {
+    "id": "sturmpioneer_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sturmpioneer_ger": {
+   "name": "unit.sturmpioneer_ger.name",
+   "short_name": "unit.sturmpioneer_ger.short",
+   "desc": "unit.sturmpioneer_ger.desc",
+   "icon": "sturmpioneer_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "sturmpioneer_leader_ir_mp44_ger": {
+   "name": "upgrade.sturmpioneer_leader_ir_mp44_ger.name",
+   "icon": "sturmpioneer_leader_ir_mp44_ger"
+  },
+  "sturmpioneer_leader_urban_assault_ger": {
+   "name": "upgrade.sturmpioneer_leader_urban_assault_ger.name",
+   "icon": "sturmpioneer_leader_urban_assault_ger"
+  }
+ }
+}

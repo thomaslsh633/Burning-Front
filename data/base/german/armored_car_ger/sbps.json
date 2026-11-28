@@ -1,0 +1,63 @@
+{
+ "vehicles": {
+  "armored_car_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/armored_car_ger",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "armored_car_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "luftwaffe_kompanie",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "radio_armored_car_ger",
+     "20mm_panzerbuchse_armored_car_ger",
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "critical_shot_armored_car_ger",
+    "critical_repair_mechanized_ger",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_left_1b_raid_ger",
+    "barrage_kettenkrad_ger",
+    "scout_awareness_vet_ger",
+    "hold_fire",
+    "mechanized_repair_aura_ger",
+    "terror_vehicle_heavy_gunnery_ger",
+    "siegebreakers_grinding_advance_medium_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger"
+   ],
+   "veterancy": {
+    "set": "armored_car_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

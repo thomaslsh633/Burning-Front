@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "20mm_aa_gun_ger": {
+   "name": "weapon.20mm_aa_gun_ger.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "tw_aa_gun_20mm_ger": {
+   "name": "entity.tw_aa_gun_20mm_ger.name",
+   "model": {
+    "id": "tw_aa_gun_20mm_ger",
+    "anim_class": "crew"
+   }
+  },
+  "crew_aa_gun_20mm_ger": {
+   "name": "entity.crew_aa_gun_20mm_ger.name",
+   "model": {
+    "id": "crew_aa_gun_20mm_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "aa_gun_20mm_ger": {
+   "name": "unit.aa_gun_20mm_ger.name",
+   "short_name": "unit.aa_gun_20mm_ger.short",
+   "desc": "unit.aa_gun_20mm_ger.desc",
+   "icon": "aa_gun_20mm_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

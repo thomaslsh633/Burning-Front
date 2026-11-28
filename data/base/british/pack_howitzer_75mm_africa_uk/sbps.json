@@ -1,0 +1,65 @@
+{
+ "team_weapons": {
+  "pack_howitzer_75mm_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/team_weapons/pack_howitzer_75mm_africa_uk",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_pack_howitzer_75mm_africa_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_hmg_commando_africa_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 315
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "artillery",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "barrage_75mm_pack_howitzer_uk",
+    "barrage_75mm_pack_howitzer_smoke_uk",
+    "barrage_75mm_pack_howitzer_incendiary_uk",
+    "barrage_75mm_pack_howitzer_white_phosphorus_uk",
+    "hold_fire",
+    "siegebreakers_siege_specialists_range_in_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "pack_howitzer_75mm_africa_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_pack_howitzer_75mm_africa_uk",
+    "crew_entity": "crew_hmg_commando_africa_uk"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

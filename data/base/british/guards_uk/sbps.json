@@ -1,0 +1,56 @@
+{
+ "infantry": {
+  "guards_uk": {
+   "coh3_ref": "sbps/races/british/infantry/guards_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "guards_uk",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400
+    },
+    "from": "entities"
+   },
+   "pop": 4,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "tier4",
+    "infantry_anti_tank",
+    "infantry_assault",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "gammon_bomb_guards_uk",
+    "valour_squad_uk",
+    "victoria_cross_squad_uk",
+    "prioritize_vehicles_infantry",
+    "hold_fire",
+    "staggered_shot_guards_uk",
+    "breach_guards"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.48
+   },
+   "veterancy": {
+    "set": "guards_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

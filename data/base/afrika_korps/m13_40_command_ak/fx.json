@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "breda_38_hull_m13_40_ak": {
+   "name": "weapon.breda_38_hull_m13_40_ak.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "m13_40_command_ak": {
+   "name": "entity.m13_40_command_ak.name",
+   "model": {
+    "id": "m13_40_command_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "m13_40_command_ak": {
+   "name": "unit.m13_40_command_ak.name",
+   "short_name": "unit.m13_40_command_ak.short",
+   "desc": "unit.m13_40_command_ak.desc",
+   "icon": "m13_40_command_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

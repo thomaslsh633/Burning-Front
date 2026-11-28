@@ -1,0 +1,56 @@
+{
+ "infantry": {
+  "commando_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/commando_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "commando_africa_uk",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_burst_weapon",
+    "infantry_anti_infantry"
+   ],
+   "source": "restored",
+   "abilities": [
+    "grenade_commando_uk",
+    "sticky_bomb_guards_uk",
+    "concealing_smoke_commando_uk",
+    "hold_fire",
+    "camouflage_in_cover_commando",
+    "camouflage_in_cover_commando_veteran",
+    "commando_passive_healing_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.53
+   },
+   "veterancy": {
+    "set": "commando_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "demo_charge_commando_uk"
+    ]
+   }
+  }
+ }
+}

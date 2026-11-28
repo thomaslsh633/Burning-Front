@@ -1,0 +1,20 @@
+{
+ "tiger_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/tiger_ger",
+  "xp": [
+   4470,
+   13410,
+   26820
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

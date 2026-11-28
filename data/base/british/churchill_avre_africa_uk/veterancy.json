@@ -1,0 +1,21 @@
+{
+ "churchill_avre_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   2000,
+   6000,
+   12000
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "churchill_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/churchill_uk",
+  "xp": [
+   2000,
+   6000,
+   12000
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "received_damage": 0.85,
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

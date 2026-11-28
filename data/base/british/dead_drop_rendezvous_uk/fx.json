@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "dead_drop_rendezvous_uk": {
+   "name": "entity.dead_drop_rendezvous_uk.name",
+   "model": {
+    "id": "dead_drop_rendezvous_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "dead_drop_rendezvous_uk": {
+   "name": "unit.dead_drop_rendezvous_uk.name",
+   "short_name": "unit.dead_drop_rendezvous_uk.short",
+   "desc": "unit.dead_drop_rendezvous_uk.desc",
+   "icon": "dead_drop_rendezvous_uk",
+   "menu": {
+    "tab": "buildings",
+    "order": 0
+   }
+  }
+ }
+}

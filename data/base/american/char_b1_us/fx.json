@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "75mm_char_b1_howitzer_us": {
+   "name": "weapon.75mm_char_b1_howitzer_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "47mm_char_b1_us": {
+   "name": "weapon.47mm_char_b1_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "mac_1931_coaxial_char_b1_us": {
+   "name": "weapon.mac_1931_coaxial_char_b1_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "char_b1_us": {
+   "name": "entity.char_b1_us.name",
+   "model": {
+    "id": "char_b1_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "char_b1_us": {
+   "name": "unit.char_b1_us.name",
+   "short_name": "unit.char_b1_us.short",
+   "desc": "unit.char_b1_us.desc",
+   "icon": "char_b1_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

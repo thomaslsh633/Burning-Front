@@ -1,0 +1,22 @@
+{
+ "char_b1_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/char_b1_us",
+  "xp": [
+   2000,
+   6000,
+   12000
+  ],
+  "ranks": [
+   {},
+   {
+    "armor_add": 50,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 160,
+    "weapon_accuracy": 1.2,
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

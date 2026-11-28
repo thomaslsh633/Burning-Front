@@ -1,0 +1,73 @@
+{
+ "vehicles": {
+  "churchill_crocodile_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/churchill_crocodile_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "churchill",
+    "rideable_tank",
+    "tank",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off",
+    "offmap_and_artillery_resistance"
+   ],
+   "hp": 1200,
+   "target_size": 24,
+   "armor": {
+    "front": 440,
+    "side": 240,
+    "rear": 150
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 600,
+    "fuel": 160
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "40mm_churchill_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_churchill_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "flamethrower_crocodile_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "churchill_crocodile_wreck_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

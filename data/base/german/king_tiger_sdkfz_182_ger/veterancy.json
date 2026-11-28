@@ -1,0 +1,20 @@
+{
+ "king_tiger_sdkfz_182_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/king_tiger_ger",
+  "xp": [
+   3960,
+   11870,
+   23740
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

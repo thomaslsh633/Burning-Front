@@ -1,0 +1,55 @@
+{
+ "vehicles": {
+  "stuart_us": {
+   "coh3_ref": "sbps/races/american/vehicles/stuart_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stuart_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 35
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "light_armor"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_kit_stuart_uk",
+     "commander_stuart_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_stuart_uk",
+    "aura_commander_stuart_uk",
+    "toggle_recon_stuart_uk",
+    "self_repair_stuart_uk",
+    "mark_target_stuart_uk",
+    "tread_shot_stuart_uk",
+    "repair_critical_engine_damage_us",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "stuart_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

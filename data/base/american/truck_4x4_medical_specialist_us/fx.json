@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_4x4_medical_us": {
+   "name": "entity.truck_4x4_medical_us.name",
+   "model": {
+    "id": "truck_4x4_medical_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "truck_4x4_medical_specialist_us": {
+   "name": "unit.truck_4x4_medical_specialist_us.name",
+   "short_name": "unit.truck_4x4_medical_specialist_us.short",
+   "desc": "unit.truck_4x4_medical_specialist_us.desc",
+   "icon": "truck_4x4_medical_specialist_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

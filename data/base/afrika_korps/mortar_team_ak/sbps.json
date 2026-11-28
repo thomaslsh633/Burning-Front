@@ -1,0 +1,58 @@
+{
+ "team_weapons": {
+  "mortar_team_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/team_weapons/mortar_team_ak",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "crew_mortar_ak",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "barrage_81mm_mortar_ger",
+    "smoke_81mm_mortar_ger",
+    "flare_81mm_mortar_vet_ger",
+    "hold_fire",
+    "italian_infantry_dummy_defense_of_the_motherland_ak"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "mortar_team_ak"
+   },
+   "team_weapon": {
+    "weapon": "81mm_mortar_ger",
+    "crew_entity": "crew_mortar_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

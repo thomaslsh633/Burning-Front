@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "nashorn_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/nashorn_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "nashorn_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400,
+     "fuel": 100
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_casemate_anti_tank",
+    "medium_armor",
+    "shock_round_capable",
+    "panzer_kompanie",
+    "tier4"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "mechanized_smoke_canisters_ger",
+    "hold_fire",
+    "blocking_force_panzergranate_ammo_nashorn_ger"
+   ],
+   "veterancy": {
+    "set": "nashorn_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "40mm_valentine_uk": {
+   "name": "weapon.40mm_valentine_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_valentine_uk": {
+   "name": "weapon.30cal_coaxial_valentine_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "valentine_uk": {
+   "name": "entity.valentine_uk.name",
+   "model": {
+    "id": "valentine_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "valentine_uk": {
+   "name": "unit.valentine_uk.name",
+   "short_name": "unit.valentine_uk.short",
+   "desc": "unit.valentine_uk.desc",
+   "icon": "valentine_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

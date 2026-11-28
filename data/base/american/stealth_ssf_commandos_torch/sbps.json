@@ -1,0 +1,72 @@
+{
+ "infantry": {
+  "stealth_ssf_commandos_torch": {
+   "coh3_ref": "sbps/races/american/infantry/stealth_ssf_commandos_torch",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "ssf_commandos_us",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 4,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "SSF",
+    "infantry_anti_infantry"
+   ],
+   "source": "coh3stats",
+   "unique": true,
+   "traits": [
+    "unique",
+    "hero"
+   ],
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "torch_7a_crosstrained_dummy",
+     "torch_7b_fastactiondrills_dummy"
+    ]
+   },
+   "abilities": [
+    "vault_movement",
+    "hold_fire",
+    "camouflage_in_cover_ssf_commandos_extended",
+    "camouflage_in_cover_ssf_commandos_extended_improved",
+    "knife_throw_devils_brigade_ui_left_us",
+    "veterancy_1_unlock_a_devils_brigade_us",
+    "veterancy_1_unlock_b_devils_brigade_us",
+    "toggle_lmg_bazooka_ssf_us",
+    "no_man_left_behind_3_2_torch",
+    "grenade_white_phosphorus_torch"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.55
+   },
+   "veterancy": {
+    "set": "stealth_ssf_commandos_torch"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "demo_charge_ssf_commando_us"
+    ]
+   }
+  }
+ }
+}

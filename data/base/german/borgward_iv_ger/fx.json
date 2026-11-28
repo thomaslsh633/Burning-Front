@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "borgward_iv_ger": {
+   "name": "entity.borgward_iv_ger.name",
+   "model": {
+    "id": "borgward_iv_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "borgward_iv_ger": {
+   "name": "unit.borgward_iv_ger.name",
+   "short_name": "unit.borgward_iv_ger.short",
+   "desc": "unit.borgward_iv_ger.desc",
+   "icon": "borgward_iv_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

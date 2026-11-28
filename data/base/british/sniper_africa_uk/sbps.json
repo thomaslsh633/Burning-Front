@@ -1,0 +1,44 @@
+{
+ "infantry": {
+  "sniper_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/sniper_africa_uk",
+   "kind": "squad",
+   "role": "recon",
+   "members": [
+    {
+     "entity": "sniper_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "infantry",
+    "sniper",
+    "infantry_anti_infantry"
+   ],
+   "source": "restored",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "sniper_africa_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "priest_africa_uk": {
+   "name": "entity.priest_africa_uk.name",
+   "model": {
+    "id": "priest_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "priest_africa_uk": {
+   "name": "unit.priest_africa_uk.name",
+   "short_name": "unit.priest_africa_uk.short",
+   "desc": "unit.priest_africa_uk.desc",
+   "icon": "priest_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

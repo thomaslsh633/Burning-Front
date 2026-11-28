@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "bishop_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/bishop_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "bishop_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "artillery",
+    "tier3",
+    "light_armor",
+    "vehicle_artillery"
+   ],
+   "source": "produced",
+   "abilities": [
+    "barrage_bishop_uk",
+    "repair_critical_engine_damage_uk",
+    "direct_fire_bishop_uk"
+   ],
+   "veterancy": {
+    "set": "bishop_africa_uk"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

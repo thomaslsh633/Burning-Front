@@ -1,0 +1,88 @@
+{
+ "vehicles": {
+  "tiger_boss_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/tiger_boss_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "vehicle_treaded",
+    "rideable_tank",
+    "tiger_tank",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off",
+    "offmap_and_artillery_resistance"
+   ],
+   "hp": 1200,
+   "target_size": 26,
+   "armor": {
+    "front": 380,
+    "side": 210,
+    "rear": 80
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 720,
+    "fuel": 200
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "88mm_tiger_ger",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "mg34_coaxial_tiger_i_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mg34_hull_tiger_i_ger",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "accessory"
+    },
+    {
+     "weapon": "mg42_panzer_iv_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "tiger_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

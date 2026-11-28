@@ -1,0 +1,30 @@
+{
+ "buildings": {
+  "dead_drop_rendezvous_uk": {
+   "coh3_ref": "sbps/races/british_africa/buildings/dead_drop_rendezvous_uk",
+   "kind": "structure",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "dead_drop_rendezvous_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 50
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "building"
+   ],
+   "source": "built",
+   "abilities": [
+    "passive_charge_counter_dead_drop_uk",
+    "cooldown_charge_counter_dead_drop_uk"
+   ]
+  }
+ }
+}

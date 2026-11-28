@@ -1,0 +1,65 @@
+{
+ "vehicles": {
+  "armored_car_8_rad_command_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/armored_car_8_rad_command_ak",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "armored_car_8_rad_command_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "dak_light_vehicle",
+    "light_armor",
+    "veterancy_on_capture"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "smoke_discharge_ui_position_23_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "off_map_light_artillery_barrage_8rad_command_ak",
+    "mark_target_vehicle_ak",
+    "coordinate_and_control_8rad_command_ak",
+    "promote_unit_8rad_command_ak",
+    "passive_charge_counter_8rad_command_ak",
+    "coordinate_and_control_8rad_command_veteran_ak",
+    "off_map_light_artillery_barrage_8rad_command_veteran_ak",
+    "promote_unit_8rad_command_veteran_ak",
+    "mark_target_vehicle_veteran_ak",
+    "cooldown_charge_counter_8rad_command_uk"
+   ],
+   "veterancy": {
+    "set": "armored_car_8_rad_command_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

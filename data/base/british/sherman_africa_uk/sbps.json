@@ -1,0 +1,49 @@
+{
+ "vehicles": {
+  "sherman_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/sherman_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_turret"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_sherman_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "white_phosphorus_sherman_uk",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "sherman_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

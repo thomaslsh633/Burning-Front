@@ -1,0 +1,24 @@
+{
+ "guards_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/guards",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.8
+   },
+   {
+    "attack_speed": 0.7,
+    "received_accuracy": 0.8
+   },
+   {
+    "weapon_damage": 1.33,
+    "hp_add": 15,
+    "attack_speed": 0.65
+   }
+  ]
+ }
+}

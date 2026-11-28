@@ -1,0 +1,23 @@
+{
+ "bazooka_team_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/bazooka_team",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "weapon_penetration": 1.3
+   },
+   {
+    "hp_add": 15,
+    "attack_speed": 0.7
+   }
+  ]
+ }
+}

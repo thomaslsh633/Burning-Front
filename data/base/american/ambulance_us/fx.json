@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "ambulance_us": {
+   "name": "entity.ambulance_us.name",
+   "model": {
+    "id": "ambulance_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "ambulance_us": {
+   "name": "unit.ambulance_us.name",
+   "short_name": "unit.ambulance_us.short",
+   "desc": "unit.ambulance_us.desc",
+   "icon": "ambulance_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

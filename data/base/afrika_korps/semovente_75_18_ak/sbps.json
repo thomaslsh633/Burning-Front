@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "semovente_75_18_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/semovente_75_18_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "semovente_75_18_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 45
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_casemate_anti_tank",
+    "italian",
+    "shock_round_capable"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "semovente_improved_barrages_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "semovente_heat_round_ger",
+    "barrage_semovente_ger",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "semovente_75_18_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

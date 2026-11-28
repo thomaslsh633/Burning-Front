@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "ssf_commandos_us": {
+   "name": "unit.ssf_commandos_us.name",
+   "short_name": "unit.ssf_commandos_us.short",
+   "desc": "unit.ssf_commandos_us.desc",
+   "icon": "ssf_commandos_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

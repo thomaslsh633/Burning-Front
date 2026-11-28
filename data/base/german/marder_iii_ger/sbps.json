@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "marder_iii_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/marder_iii_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "marder_iii_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 45
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_casemate_anti_tank",
+    "tier3",
+    "luftwaffe_kompanie",
+    "shock_round_capable"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "camouflage_special_ops_ger",
+     "hulldown_ger",
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "critical_repair_mechanized_ger",
+    "camouflage_special_ops_ger",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "ap_round_marder_iii_ger",
+    "first_strike_vehicle_vet_ger",
+    "hold_fire",
+    "sight_in_marder_ger",
+    "siegebreakers_grinding_advance_heavy_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger",
+    "blocking_force_panzergranate_ammo_marder_ger"
+   ],
+   "veterancy": {
+    "set": "marder_iii_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

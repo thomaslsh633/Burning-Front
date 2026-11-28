@@ -1,0 +1,52 @@
+{
+ "vehicles": {
+  "l6_40_flame_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/l6_40_flame_ak",
+   "kind": "vehicle",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "l6_40_flame_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_burst_weapon",
+    "italian",
+    "dak_light_vehicle"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "vehicle_territory_capture_dummy_ak",
+    "emergency_speed_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "l6_40_flame_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

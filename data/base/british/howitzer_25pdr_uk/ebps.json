@@ -1,0 +1,59 @@
+{
+ "emplacements": {
+  "tw_howitzer_25pdr_uk": {
+   "coh3_ref": "ebps/races/british/emplacements/tw_howitzer_25pdr_uk",
+   "tags": [
+    "building",
+    "artillery",
+    "cover_object",
+    "emplacement"
+   ],
+   "hp": 800,
+   "target_size": 26,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 250,
+    "fuel": 40
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 2
+   },
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "howitzer_25pdr_uk",
+     "german": "howitzer_25pdr_uk",
+     "british": "howitzer_25pdr_uk",
+     "afrika_korps": "howitzer_25pdr_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

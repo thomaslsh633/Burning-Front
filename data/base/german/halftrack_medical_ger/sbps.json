@@ -1,0 +1,70 @@
+{
+ "vehicles": {
+  "halftrack_medical_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/halftrack_medical_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "halftrack_medical_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "healer",
+    "vehicle_support",
+    "reinforce_healing_platform",
+    "panzergrenadier_kompanie"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "healing_aura_halftrack_ger",
+    "auto_reinforce_halftrack",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_self_repair_ger",
+    "common_shared_veterancy_dummy_parent",
+    "towing_pickup",
+    "towing_drop",
+    "recrew_team_weapon_halftrack_us",
+    "mechanized_repair_aura_ger",
+    "healing_aura_halftrack_mechanized_smoke_ger",
+    "vehicle_handbrake",
+    "siegebreakers_grinding_advance_medium_ger",
+    "s_mine_launcher_grinding_advance_32_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_medical_ger"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_riegel_43_ger",
+     "mine_riegel_43_halftrack_veteran_ger"
+    ]
+   }
+  }
+ }
+}

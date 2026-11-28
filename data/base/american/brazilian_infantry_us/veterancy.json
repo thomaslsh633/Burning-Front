@@ -1,0 +1,21 @@
+{
+ "brazilian_infantry_us": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   850,
+   2550,
+   5100
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "tw_at_gun_17pdr_africa_uk": {
+   "name": "entity.tw_at_gun_17pdr_africa_uk.name",
+   "model": {
+    "id": "tw_at_gun_17pdr_africa_uk",
+    "anim_class": "crew"
+   }
+  },
+  "crew_pheasant_at_gun_africa_uk": {
+   "name": "entity.crew_pheasant_at_gun_africa_uk.name",
+   "model": {
+    "id": "crew_pheasant_at_gun_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_17pdr_mobile_africa_uk": {
+   "name": "unit.at_gun_17pdr_mobile_africa_uk.name",
+   "short_name": "unit.at_gun_17pdr_mobile_africa_uk.short",
+   "desc": "unit.at_gun_17pdr_mobile_africa_uk.desc",
+   "icon": "at_gun_17pdr_mobile_africa_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

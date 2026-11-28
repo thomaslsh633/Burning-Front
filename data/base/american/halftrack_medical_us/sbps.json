@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "halftrack_medical_us": {
+   "coh3_ref": "sbps/races/american/vehicles/halftrack_medical_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "halftrack_medical_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "healer",
+    "reinforce_healing_platform"
+   ],
+   "source": "upgrade",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_quadmount_halftrack_exchangeable_parts_us",
+     "medical_halftrack_exchangeable_parts_us",
+     "75mm_halftrack_exchangeable_parts_us",
+     "assault_halftrack_exchangeable_parts_us"
+    ]
+   },
+   "abilities": [
+    "self_repair_passive_halftrack_us",
+    "advanced_reinforce_passive_halftrack_us",
+    "healing_aura_halftrack_us",
+    "veterancy_1_unlock_a_halftrack_us",
+    "veterancy_1_unlock_b_halftrack_medical_us",
+    "spawn_salvage_crew_halftrack_us",
+    "auto_reinforce_halftrack",
+    "repair_critical_engine_damage_us",
+    "common_shared_veterancy_dummy_parent",
+    "towing_drop",
+    "towing_pickup",
+    "vehicle_handbrake",
+    "recrew_team_weapon_halftrack_us",
+    "exchangeable_parts_us",
+    "exchangeable_parts_triggered_us",
+    "veterancy_healing_aura_halftrack_us",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_medical_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

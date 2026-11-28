@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "95mm_he_round_centaur_uk": {
+   "name": "weapon.95mm_he_round_centaur_uk.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
+  }
+ },
+ "ebps": {
+  "centaur_africa_uk": {
+   "name": "entity.centaur_africa_uk.name",
+   "model": {
+    "id": "centaur_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "centaur_africa_uk": {
+   "name": "unit.centaur_africa_uk.name",
+   "short_name": "unit.centaur_africa_uk.short",
+   "desc": "unit.centaur_africa_uk.desc",
+   "icon": "centaur_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "vehicles": {
+  "panzer_iii_50mm_long_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/panzer_iii_50mm_long_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "panzer_iii",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off"
+   ],
+   "hp": 640,
+   "target_size": 19,
+   "armor": {
+    "front": 150,
+    "side": 90,
+    "rear": 60
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 80
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 7,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "50mm_long_barrel_panzer_iii_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "mg34_coaxial_panzer_iii_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mg34_hull_panzer_iii_ak",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "25mm_tank_mortar_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mg42_panzer_iv_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "panzer_iii_50mm_long_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "fallschirmpioneers_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/fallschirmpioneer",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.35
+   }
+  ]
+ }
+}

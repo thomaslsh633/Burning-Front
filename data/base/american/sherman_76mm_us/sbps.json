@@ -1,0 +1,55 @@
+{
+ "vehicles": {
+  "sherman_76mm_us": {
+   "coh3_ref": "sbps/races/american/vehicles/sherman_76mm_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_76mm_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_sherman_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "veterancy_1_unlock_b_sherman_us",
+    "white_phosphorous_sherman_us",
+    "smoke_infantry_support_us",
+    "radio_net_passive_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire",
+    "veterancy_1a_suppressing_fire_sherman_us",
+    "veterancy_1_unlock_a_sherman_suppressing_fire_us"
+   ],
+   "veterancy": {
+    "set": "sherman_76mm_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "infantry": {
+  "panzerjaeger_inf_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/panzerjaeger_inf_ak",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "panzerjaeger_inf_ak",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "anti_tank",
+    "infantry_anti_tank",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "tank_buster_package_panzerjager_ak",
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "infantry_combined_arms_ak",
+    "rudimentary_repair_ak",
+    "panzerbuchse_tear_gas_shot_ak",
+    "double_time_ak",
+    "repair_panzergrenadier_ak",
+    "italian_combined_arms_secured_flanks_ak",
+    "secured_flanks_ak",
+    "force_recon_ak",
+    "hold_fire",
+    "prioritize_vehicles_infantry",
+    "salvage_plunder_ak",
+    "assault_anti_tank_grenades_assault_panzerjager_ak",
+    "camouflage_in_cover_panzerjaeger_dak",
+    "infantry_combined_arms_entrenchment_ak",
+    "camouflage_in_cover_panzerjaeger_ambush_tactics_dak",
+    "elite_forces_infantry_medical_supplements_casualties_ak",
+    "italian_airborne_conceal_and_strike_toggle_ak",
+    "italian_airborne_passaglia_at_explosive_ak"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "panzerjaeger_inf_ak"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

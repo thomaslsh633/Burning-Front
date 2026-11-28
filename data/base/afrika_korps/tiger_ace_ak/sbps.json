@@ -1,0 +1,69 @@
+{
+ "vehicles": {
+  "tiger_ace_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/tiger_ace_ak",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tiger_ace_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 720,
+     "fuel": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 28,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "tier4",
+    "vehicle_turret",
+    "heavy_armor",
+    "apex_armor",
+    "vehicle_anti_tank",
+    "shock_round_capable"
+   ],
+   "source": "upgrade",
+   "unique": true,
+   "traits": [
+    "unique",
+    "hero"
+   ],
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg42_tiger_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "s_mine_launcher_tiger_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak",
+    "elite_forces_tiger_ace_ace_instincts_toggle_ak",
+    "elite_forces_tiger_ace_ace_instincts_passive_off_ak"
+   ],
+   "veterancy": {
+    "set": "tiger_ace_ak"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "humber_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/humber_uk",
+  "xp": [
+   800,
+   1600,
+   3200
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 80,
+    "detection": 10,
+    "sight": 10,
+    "weapon_range": 5
+   }
+  ]
+ }
+}

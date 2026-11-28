@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "halftrack_us": {
+   "name": "entity.halftrack_us.name",
+   "model": {
+    "id": "halftrack_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_us": {
+   "name": "unit.halftrack_us.name",
+   "short_name": "unit.halftrack_us.short",
+   "desc": "unit.halftrack_us.desc",
+   "icon": "halftrack_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

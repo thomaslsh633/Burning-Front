@@ -1,0 +1,23 @@
+{
+ "sherman_whizbang_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/sherman_whizbang",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "ability_range": 1.2
+   },
+   {
+    "ability_cooldown": 0.9,
+    "attack_speed": -0.2
+   },
+   {
+    "attack_speed": -0.3,
+    "ability_cooldown": 0.85
+   }
+  ]
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "command_churchill_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/command_churchill_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "churchill_command_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 520,
+     "fuel": 130
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_anti_tank",
+    "heavy_armor"
+   ],
+   "source": "restored",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "aura_command_tank_churchill_uk",
+    "aura_radio_net_churchill_uk",
+    "critical_repair_churchill_ak",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "command_churchill_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

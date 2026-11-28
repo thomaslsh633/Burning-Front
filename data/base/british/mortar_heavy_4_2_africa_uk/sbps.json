@@ -1,0 +1,67 @@
+{
+ "team_weapons": {
+  "mortar_heavy_4_2_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/team_weapons/mortar_heavy_4_2_africa_uk",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_4_2_heavy_mortar_africa_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_mortar_indian_africa_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 315
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "tier2",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "barrage_4_2_heavy_mortar_airburst_uk",
+    "barrage_4_2_heavy_mortar_smoke_uk",
+    "barrage_4_2_heavy_mortar_uk",
+    "barrage_4_2_heavy_mortar_incendiary_uk",
+    "barrage_4_2_heavy_mortar_flare_uk",
+    "hold_fire",
+    "siegebreakers_siege_specialists_range_in_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "mortar_heavy_4_2_africa_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_4_2_heavy_mortar_africa_uk",
+    "crew_entity": "crew_mortar_indian_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

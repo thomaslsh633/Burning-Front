@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "centaur_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/centaur_africa_uk",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "centaur_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 80
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_shot_centaur_uk",
+    "hold_fire",
+    "hesh_shell_centaur_uk"
+   ],
+   "veterancy": {
+    "set": "centaur_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "thompson_guards_africa_uk": {
+   "name": "weapon.thompson_guards_africa_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "guards_africa_uk": {
+   "name": "entity.guards_africa_uk.name",
+   "model": {
+    "id": "guards_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "guards_africa_uk": {
+   "name": "unit.guards_africa_uk.name",
+   "short_name": "unit.guards_africa_uk.short",
+   "desc": "unit.guards_africa_uk.desc",
+   "icon": "guards_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "team_weapons": {
+  "at_gun_88mm_pak43_ger": {
+   "coh3_ref": "sbps/races/german/team_weapons/at_gun_88mm_pak43_ger",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_88mm_pak43_ger",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_ger",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "mortar",
+    "elite_teamweapon"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_88mm_pak43_ger"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_88mm_pak43_ger",
+    "crew_entity": "crew_at_gun_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

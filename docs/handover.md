@@ -9,9 +9,9 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (287 tests) |
+| Checks | `npm run check` passes; `npm test` passes (288 tests) |
 | Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
-| Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
+| Data imported | all four factions (G-1, 2026-11-28): 287 squads (US 72, Wehrmacht 66, DAK 52, British 97) with `node tools/import-coh3/import.js <faction> --all`; 9 squads left out (see `reports/import/`) |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
 
 The user writes in Korean (lately asking for English replies to save tokens). Code, comments and identifiers are in English.
@@ -94,11 +94,14 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   - Mod maps (`mods/<id>/maps/` not merged yet).
 - **CoH3 weapon modifiers vs `sandbag`, `barbed_wire`, `ambient_building`:** the importer drops them (not in vocab; see
   `reports/import/american.md`). Add them to the vocab and use them in `terrain.damage*`.
-- **Not imported yet:**
-  - Squads: engineers (`engineer_us`, `pioneer_ger`), `bazooka_team_us`, `panzergrenadier_ger`. Their placements were left
-    out of the converted maps (`reports/maps/legacy-import.md`).
-  - Abilities: the 86 ids in the link warnings (`reports/data-links.md`).
-  - Global and doctrine upgrades: the `requires.*` warnings.
+- **Left out of the import (G-1):** squads whose CoH3 records do not fit a profile — 105 mm howitzers (US, German),
+  Nebelwerfer 42, Land Mattress, Anzio Annie, Obice 210 (no sandbags), torch Obice (campaign entity), the British medic
+  (no weapon / sight), plus the goon gun pit weapon. They fire through abilities in CoH3 (placeholder weapons).
+- **Imported but cannot fire yet (48):** unarmed by design (trucks, ambulances, medical / recovery vehicles, tunnels)
+  and ability-only artillery / demolition (Priest, Bishop, Wespe, Hummel, 25-pdr, 5.5-inch, Obice 210, Walking Stuka,
+  20 mm AA fortification, Goliath, Wanze): needs barrages / abilities.
+- **Korean text:** 1409 of 1528 text keys in use have no Korean text (English: 782 missing after `node tools/i18n/seed.js`).
+- **Not imported yet:** abilities (link warnings in `reports/data-links.md`), global and doctrine upgrades.
 - **Barrages / blind fire / counter-battery:** rules in SPEC §10 and `data/balance/indirect.json`; not wired into combat
   commands yet (only normal indirect fire).
 - **Veterancy `hp_add`:** in the data but not applied (there is no max-HP field on members yet).

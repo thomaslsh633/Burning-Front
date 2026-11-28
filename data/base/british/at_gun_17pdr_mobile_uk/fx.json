@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_at_gun_17pdr_uk": {
+   "name": "entity.tw_at_gun_17pdr_uk.name",
+   "model": {
+    "id": "tw_at_gun_17pdr_uk",
+    "anim_class": "crew"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_17pdr_mobile_uk": {
+   "name": "unit.at_gun_17pdr_mobile_uk.name",
+   "short_name": "unit.at_gun_17pdr_mobile_uk.short",
+   "desc": "unit.at_gun_17pdr_mobile_uk.desc",
+   "icon": "at_gun_17pdr_mobile_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

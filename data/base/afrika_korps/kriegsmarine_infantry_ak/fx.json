@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "kar98k_kriegsmarine_ak": {
+   "name": "weapon.kar98k_kriegsmarine_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "mp44_kriegsmarine_ak": {
+   "name": "weapon.mp44_kriegsmarine_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "kriegsmarine_infantry_ak": {
+   "name": "entity.kriegsmarine_infantry_ak.name",
+   "model": {
+    "id": "kriegsmarine_infantry_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "kriegsmarine_infantry_ak": {
+   "name": "unit.kriegsmarine_infantry_ak.name",
+   "short_name": "unit.kriegsmarine_infantry_ak.short",
+   "desc": "unit.kriegsmarine_infantry_ak.desc",
+   "icon": "kriegsmarine_infantry_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "lmg_kriegsmarine_ak": {
+   "name": "upgrade.lmg_kriegsmarine_ak.name",
+   "icon": "lmg_kriegsmarine_ak"
+  },
+  "mp44_kriegsmarine_ak": {
+   "name": "upgrade.mp44_kriegsmarine_ak.name",
+   "icon": "mp44_kriegsmarine_ak"
+  }
+ }
+}

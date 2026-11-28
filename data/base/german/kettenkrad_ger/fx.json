@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "kettenkrad_ger": {
+   "name": "entity.kettenkrad_ger.name",
+   "model": {
+    "id": "kettenkrad_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "kettenkrad_ger": {
+   "name": "unit.kettenkrad_ger.name",
+   "short_name": "unit.kettenkrad_ger.short",
+   "desc": "unit.kettenkrad_ger.desc",
+   "icon": "kettenkrad_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

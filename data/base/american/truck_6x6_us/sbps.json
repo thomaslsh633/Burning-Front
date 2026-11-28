@@ -1,0 +1,39 @@
+{
+ "vehicles": {
+  "truck_6x6_us": {
+   "coh3_ref": "sbps/races/american/vehicles/truck_6x6_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "truck_6x6_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 25
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_support",
+    "light_armor"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_critical_engine_damage_us",
+    "common_shared_veterancy_dummy_parent"
+   ],
+   "veterancy": {
+    "set": "truck_6x6_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

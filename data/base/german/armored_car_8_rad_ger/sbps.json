@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "armored_car_8_rad_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/armored_car_8_rad_ger",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "armored_car_8_rad_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "tier3",
+    "light_armor",
+    "vehicle_burst_weapon",
+    "8_rad",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "mechanized_left_1b_raid_ger",
+    "mechanized_smoke_canisters_ger",
+    "prioritize_vehicles",
+    "commander_mode_8_rad_ak",
+    "hold_fire",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger"
+   ],
+   "veterancy": {
+    "set": "armored_car_8_rad_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

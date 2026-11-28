@@ -1,0 +1,24 @@
+{
+ "infantry": {
+  "panzerbuchse_marksmen_team_partisan": {
+   "coh3_ref": "upgrade/american/infantry/panzerbuchse_marksmen_team_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "stolen_weapons_partisan"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerbuchse39_at_rifle_marksmen_team_partisan"
+    }
+   ]
+  }
+ }
+}

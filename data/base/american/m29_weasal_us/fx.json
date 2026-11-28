@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "m29_weasal_us": {
+   "name": "entity.m29_weasal_us.name",
+   "model": {
+    "id": "m29_weasal_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "m29_weasal_us": {
+   "name": "unit.m29_weasal_us.name",
+   "short_name": "unit.m29_weasal_us.short",
+   "desc": "unit.m29_weasal_us.desc",
+   "icon": "m29_weasal_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

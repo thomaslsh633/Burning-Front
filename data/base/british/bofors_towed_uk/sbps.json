@@ -1,0 +1,60 @@
+{
+ "team_weapons": {
+  "bofors_towed_uk": {
+   "coh3_ref": "sbps/races/british/team_weapons/bofors_towed_uk",
+   "kind": "team_weapon",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "tw_bofors_towed_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 290
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "anti_air",
+    "teamweapon_burst",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "bofors_towed_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_bofors_towed_uk",
+    "crew_entity": "crew_at_gun_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

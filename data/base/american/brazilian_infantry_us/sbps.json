@@ -1,0 +1,64 @@
+{
+ "infantry": {
+  "brazilian_infantry_us": {
+   "coh3_ref": "sbps/races/american/infantry/brazilian_infantry_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "brazilian_infantry_us",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier1",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "brazilian_m1_grenade_launchers_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "brazilian_rear_echelon_us",
+    "brazilian_rifle_grenadiers_us",
+    "brazilian_grenade_launchers_us",
+    "brazilian_stalwart_defenses_squad_us",
+    "brazilian_victor_target_squad_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.45
+   },
+   "veterancy": {
+    "set": "brazilian_infantry_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_us",
+     "fighting_position_us"
+    ]
+   }
+  }
+ }
+}

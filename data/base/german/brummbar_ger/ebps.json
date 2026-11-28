@@ -1,0 +1,71 @@
+{
+ "vehicles": {
+  "brummbar_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/brummbar_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "side_armor_tank",
+    "fixed_turret"
+   ],
+   "hp": 840,
+   "target_size": 24,
+   "armor": {
+    "front": 300,
+    "side": 150,
+    "rear": 75
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 400,
+    "fuel": 120
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 5,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "150mm_brummbar_ger",
+     "mount": "fixed",
+     "slot": "main"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "fixed",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "brummbar_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

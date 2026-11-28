@@ -1,0 +1,42 @@
+{
+ "weapon": {
+  "boys_at_rifle_africa_uk": {
+   "name": "weapon.boys_at_rifle_africa_uk.name",
+   "sound": {
+    "fire": "panzerbuchse"
+   }
+  },
+  "bren_lmg_africa_uk": {
+   "name": "weapon.bren_lmg_africa_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "sbps": {
+  "tommy_africa_uk": {
+   "name": "unit.tommy_africa_uk.name",
+   "short_name": "unit.tommy_africa_uk.short",
+   "desc": "unit.tommy_africa_uk.desc",
+   "icon": "tommy_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "boys_anti_tank_rifles_tommy_africa_uk": {
+   "name": "upgrade.boys_anti_tank_rifles_tommy_africa_uk.name",
+   "icon": "boys_anti_tank_rifles_tommy_africa_uk"
+  },
+  "lmg_bren_tommy_africa_uk": {
+   "name": "upgrade.lmg_bren_tommy_africa_uk.name",
+   "icon": "lmg_bren_tommy_africa_uk"
+  },
+  "recon_package_tommy_africa_uk": {
+   "name": "upgrade.recon_package_tommy_africa_uk.name",
+   "icon": "recon_package_tommy_africa_uk"
+  }
+ }
+}

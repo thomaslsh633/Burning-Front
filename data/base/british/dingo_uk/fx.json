@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "dingo_uk": {
+   "name": "entity.dingo_uk.name",
+   "model": {
+    "id": "dingo_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "dingo_uk": {
+   "name": "unit.dingo_uk.name",
+   "short_name": "unit.dingo_uk.short",
+   "desc": "unit.dingo_uk.desc",
+   "icon": "dingo_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

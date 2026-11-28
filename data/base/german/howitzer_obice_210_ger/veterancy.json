@@ -1,0 +1,24 @@
+{
+ "howitzer_obice_210_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common/emplacement/emplacement_artillery",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.85
+   },
+   {
+    "ability_cooldown": 0.8,
+    "attack_speed": 0.85
+   },
+   {
+    "received_damage": 0.67,
+    "scatter": 0.8,
+    "attack_speed": 0.85
+   }
+  ]
+ }
+}

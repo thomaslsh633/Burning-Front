@@ -1,0 +1,67 @@
+{
+ "emplacements": {
+  "tw_17pdr_pheasant_emplacement_uk": {
+   "coh3_ref": "ebps/races/british_africa/emplacements/tw_17pdr_pheasant_emplacement_uk",
+   "tags": [
+    "building",
+    "cover_object",
+    "emplacement",
+    "team_weapon",
+    "emplacement_atg",
+    "anti_tank_weapon"
+   ],
+   "hp": 1040,
+   "target_size": 20,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 45
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "17pdr_at_gun_ph_emplacement_uk",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "at_gun_17pdr_pheasant_emplacement_uk",
+     "british": "at_gun_17pdr_pheasant_emplacement_uk",
+     "afrika_korps": "at_gun_17pdr_pheasant_emplacement_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 2,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

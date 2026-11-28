@@ -1,0 +1,40 @@
+{
+ "infantry": {
+  "lmg_kriegsmarine_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/lmg_kriegsmarine_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 90
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "sp_generic_tech_unlock",
+     "t1_unit_unlock_ak"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "lmg_panzergrenadier_ak"
+    }
+   ]
+  },
+  "mp44_kriegsmarine_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/mp44_kriegsmarine_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 2,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "mp44_kriegsmarine_ak"
+    }
+   ]
+  }
+ }
+}

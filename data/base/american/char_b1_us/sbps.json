@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "char_b1_us": {
+   "coh3_ref": "sbps/races/american/vehicles/char_b1_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "char_b1_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400,
+     "fuel": 110
+    },
+    "from": "coh3stats"
+   },
+   "pop": 14,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "tier4",
+    "vehicle_turret",
+    "french"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "french_char_b1_rupture_round_vet_us"
+   ],
+   "veterancy": {
+    "set": "char_b1_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

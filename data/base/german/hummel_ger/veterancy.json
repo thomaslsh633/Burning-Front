@@ -1,0 +1,21 @@
+{
+ "hummel_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

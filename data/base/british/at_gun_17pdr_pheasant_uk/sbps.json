@@ -1,0 +1,62 @@
+{
+ "team_weapons": {
+  "at_gun_17pdr_pheasant_uk": {
+   "coh3_ref": "sbps/races/british/team_weapons/at_gun_17pdr_pheasant_uk",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_17pdr_pheasant_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_uk",
+     "count": 2
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 190
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "invisible_to_scar",
+    "stationary_anti_tank_weapon"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "he_shells_phaesant_uk"
+   ],
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_17pdr_pheasant_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_17pdr_pheasant_uk",
+    "crew_entity": "crew_at_gun_uk"
+   },
+   "supply": {
+    "ammo": 16
+   },
+   "capture": {
+    "rate": 1
+   }
+  }
+ }
+}

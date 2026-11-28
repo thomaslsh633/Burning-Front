@@ -1,0 +1,24 @@
+{
+ "truck_4x4_x2_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/truck_4x4_us",
+  "xp": [
+   600,
+   1800,
+   3600
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 60,
+    "detection": 10,
+    "sight": 10,
+    "received_accuracy": 0.4
+   }
+  ]
+ }
+}

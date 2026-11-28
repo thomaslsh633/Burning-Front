@@ -1,0 +1,22 @@
+{
+ "assault_engineer_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/assault_engineer",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.3
+   }
+  ]
+ }
+}

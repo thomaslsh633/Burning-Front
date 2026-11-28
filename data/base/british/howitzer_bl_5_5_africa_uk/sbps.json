@@ -1,0 +1,43 @@
+{
+ "emplacements": {
+  "howitzer_bl_5_5_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/howitzer_bl_5_5_africa_uk",
+   "kind": "structure",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_howitzer_bl_5_5_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 4,
+   "tags": [
+    "emplacement",
+    "artillery"
+   ],
+   "source": "built",
+   "abilities": [
+    "c_artillery_bl_5_5_quick_fire_ui_uk",
+    "barrage_howitzer_bl_5_5_uk",
+    "c_unit_artillery_bl_5_5_auto_fire_uk",
+    "barrage_observation_airburst_bl_5_5_uk",
+    "bl_5_5_forward_observer_barrage_passive_uk",
+    "artillery_resistant_passive"
+   ],
+   "veterancy": {
+    "set": "howitzer_bl_5_5_africa_uk"
+   },
+   "supply": {
+    "ammo": 8
+   }
+  }
+ }
+}

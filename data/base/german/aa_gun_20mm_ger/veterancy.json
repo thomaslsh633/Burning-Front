@@ -1,0 +1,22 @@
+{
+ "aa_gun_20mm_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/team_weapon/aa_gun_20mm",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {
+    "hp_add": 10
+   },
+   {
+    "hp_add": 15,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "received_damage": 0.8
+   }
+  ]
+ }
+}

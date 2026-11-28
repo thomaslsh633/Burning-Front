@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "infantry_assault_rifleman_squad_leader_us": {
+   "name": "entity.infantry_assault_rifleman_squad_leader_us.name",
+   "model": {
+    "id": "infantry_assault_rifleman_squad_leader_us",
+    "anim_class": "infantry"
+   }
+  },
+  "infantry_assault_rifleman_us": {
+   "name": "entity.infantry_assault_rifleman_us.name",
+   "model": {
+    "id": "infantry_assault_rifleman_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "infantry_assault_riflemen_us": {
+   "name": "unit.infantry_assault_riflemen_us.name",
+   "short_name": "unit.infantry_assault_riflemen_us.short",
+   "desc": "unit.infantry_assault_riflemen_us.desc",
+   "icon": "infantry_assault_riflemen_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

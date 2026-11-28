@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "20mm_250_ak": {
+   "name": "weapon.20mm_250_ak.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  },
+  "mg34_coaxial_250_222_ak": {
+   "name": "weapon.mg34_coaxial_250_222_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_250_20mm_ak": {
+   "name": "entity.halftrack_250_20mm_ak.name",
+   "model": {
+    "id": "halftrack_250_20mm_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_250_20mm_ak": {
+   "name": "unit.halftrack_250_20mm_ak.name",
+   "short_name": "unit.halftrack_250_20mm_ak.short",
+   "desc": "unit.halftrack_250_20mm_ak.desc",
+   "icon": "halftrack_250_20mm_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

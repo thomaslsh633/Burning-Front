@@ -1,0 +1,49 @@
+{
+ "infantry": {
+  "panzerschrek_jaeger_ger": {
+   "coh3_ref": "upgrade/german/infantry/panzerschrek_jaeger_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 80
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerschreck_stormtrooper_ger"
+    }
+   ]
+  },
+  "g43_jaeger_ger": {
+   "coh3_ref": "upgrade/german/infantry/g43_jaeger_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 65
+   },
+   "build_turns": 2,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "g43_scoped_jaeger_ger"
+    }
+   ]
+  },
+  "panzerschrek_jaeger_second_ger": {
+   "coh3_ref": "upgrade/german/infantry/panzerschrek_jaeger_second_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 80
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerschreck_stormtrooper_ger"
+    }
+   ]
+  }
+ }
+}

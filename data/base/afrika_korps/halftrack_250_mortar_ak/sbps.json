@@ -1,0 +1,62 @@
+{
+ "vehicles": {
+  "halftrack_250_mortar_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_mortar_ak",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "halftrack_250_mortar_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_artillery",
+    "dak_light_vehicle"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "barrage_mortar_halftrack_250_ak",
+    "barrage_smoke_mortar_halftrack_250_ak",
+    "incendiary_barrage_250_ak",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "smoke_discharge_ui_position_23_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_250_mortar_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

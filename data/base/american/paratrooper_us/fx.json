@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "carbine_paratrooper_us": {
+   "name": "weapon.carbine_paratrooper_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "paratrooper_us": {
+   "name": "entity.paratrooper_us.name",
+   "model": {
+    "id": "paratrooper_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "paratrooper_us": {
+   "name": "unit.paratrooper_us.name",
+   "short_name": "unit.paratrooper_us.short",
+   "desc": "unit.paratrooper_us.desc",
+   "icon": "paratrooper_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "m1919a6_paratrooper_us": {
+   "name": "upgrade.m1919a6_paratrooper_us.name",
+   "icon": "m1919a6_paratrooper_us"
+  }
+ }
+}

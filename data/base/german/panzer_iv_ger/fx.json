@@ -5,24 +5,6 @@
    "sound": {
     "fire": "cannon"
    }
-  },
-  "mg34_coaxial_panzer_iv_ger": {
-   "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
-   "sound": {
-    "fire": "hmg"
-   }
-  },
-  "mg34_hull_panzer_iv_ger": {
-   "name": "weapon.mg34_hull_panzer_iv_ger.name",
-   "sound": {
-    "fire": "lmg"
-   }
-  },
-  "tank_smoke_ak": {
-   "name": "weapon.tank_smoke_ak.name",
-   "sound": {
-    "fire": "smoke"
-   }
   }
  },
  "ebps": {

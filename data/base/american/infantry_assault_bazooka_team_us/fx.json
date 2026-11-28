@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "bazooka_bazooka_team_us": {
+   "name": "weapon.bazooka_bazooka_team_us.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  }
+ },
+ "ebps": {
+  "infantry_assault_bazooka_team_us": {
+   "name": "entity.infantry_assault_bazooka_team_us.name",
+   "model": {
+    "id": "infantry_assault_bazooka_team_us",
+    "anim_class": "infantry"
+   }
+  },
+  "infantry_assault_bazooka_no_bazooka_team_us": {
+   "name": "entity.infantry_assault_bazooka_no_bazooka_team_us.name",
+   "model": {
+    "id": "infantry_assault_bazooka_no_bazooka_team_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "infantry_assault_bazooka_team_us": {
+   "name": "unit.infantry_assault_bazooka_team_us.name",
+   "short_name": "unit.infantry_assault_bazooka_team_us.short",
+   "desc": "unit.infantry_assault_bazooka_team_us.desc",
+   "icon": "infantry_assault_bazooka_team_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

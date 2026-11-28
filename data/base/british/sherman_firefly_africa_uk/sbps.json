@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "sherman_firefly_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/sherman_firefly_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_firefly_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 440,
+     "fuel": 120
+    },
+    "from": "coh3stats"
+   },
+   "pop": 15,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "vehicle_tulips_firefly_africa_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "hold_fire",
+    "sabot_sherman_firefly_africa_uk",
+    "headhunter_sherman_firefly_africa_uk",
+    "polish_cavalry_tulip_rocket_strike_sherman_firefly_africa_uk",
+    "sabot_sherman_firefly_africa_uk"
+   ],
+   "veterancy": {
+    "set": "sherman_firefly_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

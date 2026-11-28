@@ -1,0 +1,45 @@
+{
+ "infantry": {
+  "paratrooper_us": {
+   "coh3_ref": "ebps/races/american/infantry/paratrooper_us",
+   "tags": [
+    "infantry",
+    "paratroopers"
+   ],
+   "hp": 110,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 63
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "carbine_paratrooper_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

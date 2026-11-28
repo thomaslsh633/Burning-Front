@@ -1,0 +1,100 @@
+{
+ "infantry": {
+  "panzerpioneer_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/infantry/panzerpioneer_ak",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "panzerpioneer_support_ak",
+     "count": 1
+    },
+    {
+     "entity": "panzerpioneer_ak",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "panzerpioneer_ak",
+    "tier1",
+    "infantry_support",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "flamethrower_panzerpioneer_ak",
+     "grb39_grenade_launcher_panzerpioneer_ak"
+    ],
+    "pending": [
+     "fieldcraft_panzerpioneer_ak",
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_panzerpioneer_ak",
+    "repair_advanced_panzerpioneer_ak",
+    "toggle_detect_mines_ak",
+    "defuse_mine_pioneer_ak",
+    "cut_wire_panzerpioneer_ak",
+    "infantry_combined_arms_ak",
+    "double_time_ak",
+    "salvage_panzerpioneer_ak",
+    "grenade_stun_panzerpioneer_ak",
+    "secured_flanks_ak",
+    "force_recon_ak",
+    "booby_trap_territory_panzerpioneer_ak",
+    "salvage_plunder_ak",
+    "infantry_combined_arms_entrenchment_ak",
+    "elite_forces_infantry_medical_supplements_casualties_ak",
+    "grenade_smoke_panzerpioneer_elite_forces_ak",
+    "grenade_smoke_demo_panzerpioneer_ak"
+   ],
+   "capture": {
+    "rate": 1.15
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "panzerpioneer_ak"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ak",
+     "barbed_wire_reinforced_ak",
+     "tank_trap_ak",
+     "bunker_hmg_ak",
+     "mine_panzerpioneer_ak",
+     "mine_teller_ak",
+     "medical_station_ak",
+     "repair_station_ak",
+     "observation_post_ak",
+     "black_market_ak",
+     "intel_radio_beacon_ak",
+     "siphon_radio_beacon_ak",
+     "road_block_ak",
+     "minefield_schu_42_panzerpioneer_ak",
+     "mine_riegel_43_panzerpioneer_ak",
+     "point_fortification_cache_ak"
+    ]
+   }
+  }
+ }
+}

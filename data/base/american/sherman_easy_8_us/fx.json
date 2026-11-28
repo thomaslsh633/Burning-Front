@@ -1,0 +1,43 @@
+{
+ "weapon": {
+  "76mm_sherman_easy_8_us": {
+   "name": "weapon.76mm_sherman_easy_8_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_sherman_e8_us": {
+   "name": "weapon.30cal_coaxial_sherman_e8_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_sherman_e8_us": {
+   "name": "weapon.30cal_hull_sherman_e8_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "sherman_easy_8_us": {
+   "name": "entity.sherman_easy_8_us.name",
+   "model": {
+    "id": "sherman_easy_8_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_easy_8_us": {
+   "name": "unit.sherman_easy_8_us.name",
+   "short_name": "unit.sherman_easy_8_us.short",
+   "desc": "unit.sherman_easy_8_us.desc",
+   "icon": "sherman_easy_8_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "tiger_ace_ak": {
+   "name": "unit.tiger_ace_ak.name",
+   "short_name": "unit.tiger_ace_ak.short",
+   "desc": "unit.tiger_ace_ak.desc",
+   "icon": "tiger_ace_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

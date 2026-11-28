@@ -1,0 +1,71 @@
+{
+ "infantry": {
+  "australian_light_infantry_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/australian_light_infantry_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "australian_light_infantry_africa_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "elite_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "scoped_rifles_australian_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "sharpshooter_australian_light_infantry_uk",
+    "body_shot_australian_light_infantry_uk",
+    "body_shot_australian_light_infantry_vet1_uk",
+    "body_shot_australian_light_infantry_vet2_uk",
+    "australian_light_infantry_veterancy_passive",
+    "repair_australian_building_africa_uk"
+   ],
+   "capture": {
+    "rate": 1.5
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "australian_light_infantry_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_us",
+     "barbed_wire_fence_us",
+     "tank_trap_uk",
+     "sangar_defensive_wall_uk",
+     "observation_post_uk",
+     "hmg_bunker_africa_uk",
+     "tripwire_flare_mine_variant_africa_uk",
+     "tw_17pdr_pheasant_emplacement_uk",
+     "tw_bofors_emplacement_africa_uk",
+     "observation_post_reinforced_uk"
+    ]
+   }
+  }
+ }
+}

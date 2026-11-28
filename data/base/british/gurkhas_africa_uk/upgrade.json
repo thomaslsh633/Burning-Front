@@ -1,0 +1,19 @@
+{
+ "infantry": {
+  "smg_thompson_gurkhas_uk": {
+   "coh3_ref": "upgrade/british/infantry/smg_thompson_gurkhas_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "thompson_gurkhas_uk"
+    }
+   ]
+  }
+ }
+}

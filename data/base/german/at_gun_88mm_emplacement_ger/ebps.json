@@ -1,0 +1,66 @@
+{
+ "emplacements": {
+  "tw_88mm_emplacement_ger": {
+   "coh3_ref": "ebps/races/german/emplacements/tw_88mm_emplacement_ger",
+   "tags": [
+    "building",
+    "cover_object",
+    "emplacement",
+    "team_weapon",
+    "emplacement_atg"
+   ],
+   "hp": 1180,
+   "target_size": 20,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 65
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "weapons": [
+    {
+     "weapon": "88mm_emplacement_at_gun_ger",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "at_gun_88mm_emplacement_ger",
+     "british": "at_gun_88mm_emplacement_ger",
+     "afrika_korps": "at_gun_88mm_emplacement_ger"
+    },
+    "min_crew": 2,
+    "max_squad": 2,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

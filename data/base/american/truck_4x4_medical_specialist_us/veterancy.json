@@ -1,0 +1,21 @@
+{
+ "truck_4x4_medical_specialist_us": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   300,
+   900,
+   2100
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

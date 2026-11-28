@@ -1,0 +1,68 @@
+{
+ "vehicles": {
+  "halftrack_250_vampire_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_vampire_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "halftrack_250_vampire_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "dak_light_vehicle",
+    "tier2",
+    "vehicle_support",
+    "veterancy_on_capture"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "vampire_ht_ambush_operations_ak",
+    "vampire_ht_spawn_goliath_ak",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "common_shared_veterancy_dummy_3_2",
+    "smoke_discharge_8rad_ak",
+    "vampire_resource_generation_ak",
+    "vampire_resource_generation_vet_2_ak",
+    "vampire_resource_generation_vet_3_ak",
+    "vehicle_capture_dummy_254_ak",
+    "towing_pickup",
+    "towing_drop",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_250_vampire_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_panzerpioneer_ak",
+     "mine_teller_subturfuge_ak",
+     "intel_radio_beacon_ak",
+     "siphon_radio_beacon_ak"
+    ]
+   }
+  }
+ }
+}

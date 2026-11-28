@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "tw_pack_howitzer_75mm_uk": {
+   "name": "entity.tw_pack_howitzer_75mm_uk.name",
+   "model": {
+    "id": "tw_pack_howitzer_75mm_uk",
+    "anim_class": "crew"
+   }
+  },
+  "crew_howitzer_commando_uk": {
+   "name": "entity.crew_howitzer_commando_uk.name",
+   "model": {
+    "id": "crew_howitzer_commando_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "pack_howitzer_75mm_uk": {
+   "name": "unit.pack_howitzer_75mm_uk.name",
+   "short_name": "unit.pack_howitzer_75mm_uk.short",
+   "desc": "unit.pack_howitzer_75mm_uk.desc",
+   "icon": "pack_howitzer_75mm_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

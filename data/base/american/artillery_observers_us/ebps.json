@@ -1,0 +1,88 @@
+{
+ "infantry": {
+  "artillery_observer_leader_radio_us": {
+   "coh3_ref": "ebps/races/american/infantry/artillery_observer_leader_radio_us",
+   "tags": [
+    "infantry",
+    "rapid_response",
+    "scout"
+   ],
+   "hp": 90,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "garand_pathfinder_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  },
+  "artillery_observer_us": {
+   "coh3_ref": "ebps/races/american/infantry/artillery_observer_us",
+   "tags": [
+    "infantry",
+    "rapid_response",
+    "scout"
+   ],
+   "hp": 90,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "garand_pathfinder_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

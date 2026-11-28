@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_hmg_ak": {
+   "name": "weapon.mg34_hmg_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "crew_hmg_mg34_ak": {
+   "name": "entity.crew_hmg_mg34_ak.name",
+   "model": {
+    "id": "crew_hmg_mg34_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_mg34_ak": {
+   "name": "unit.hmg_mg34_ak.name",
+   "short_name": "unit.hmg_mg34_ak.short",
+   "desc": "unit.hmg_mg34_ak.desc",
+   "icon": "hmg_mg34_ak",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

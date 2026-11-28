@@ -1,0 +1,21 @@
+{
+ "panzer_iii_75mm_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/panzer_iii_75mm_ak",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "scatter": 0.75,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.7
+   }
+  ]
+ }
+}

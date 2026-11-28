@@ -1,0 +1,23 @@
+{
+ "cwt_lrdg_truck_2pdr_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/cwt_lrdg_truck_uk",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {
+    "move": 1.1
+   },
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 80,
+    "weapon_range": 5,
+    "attack_speed": 0.75
+   }
+  ]
+ }
+}

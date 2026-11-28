@@ -1,0 +1,17 @@
+{
+ "halftrack_medical_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/halftrack_us",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "hp_add": 80
+   }
+  ]
+ }
+}

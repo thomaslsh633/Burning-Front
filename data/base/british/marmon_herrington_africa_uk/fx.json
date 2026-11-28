@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "marmon_herrington_africa_uk": {
+   "name": "entity.marmon_herrington_africa_uk.name",
+   "model": {
+    "id": "marmon_herrington_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "marmon_herrington_africa_uk": {
+   "name": "unit.marmon_herrington_africa_uk.name",
+   "short_name": "unit.marmon_herrington_africa_uk.short",
+   "desc": "unit.marmon_herrington_africa_uk.desc",
+   "icon": "marmon_herrington_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "goliath_ak": {
+   "name": "entity.goliath_ak.name",
+   "model": {
+    "id": "goliath_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "goliath_ak": {
+   "name": "unit.goliath_ak.name",
+   "short_name": "unit.goliath_ak.short",
+   "desc": "unit.goliath_ak.desc",
+   "icon": "goliath_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

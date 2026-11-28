@@ -1,0 +1,79 @@
+{
+ "infantry": {
+  "fallschirmpioneers_ger": {
+   "coh3_ref": "sbps/races/german/infantry/fallschirmpioneers_ger",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "fallschirmpioneers_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "combat_engineer",
+    "infantry_support",
+    "infantry_anti_infantry",
+    "infanterie_kompanie",
+    "fallschirmjager"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "mg15_jaeger_ger",
+     "grb_39_grenade_launcher_fallschirmpioneer_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "satchel_charge_paratrooper_us",
+    "repair_fallschirmpioneer_ger",
+    "cut_wire_fallschirmpioneer_ger",
+    "toggle_detect_mines_fallschirmpioneer_ger",
+    "defuse_mine_fallschirmpioneer_ger",
+    "medkits_fallschirm_ger",
+    "airborne_spirit_vet_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.51
+   },
+   "veterancy": {
+    "set": "fallschirmpioneers_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ger",
+     "tank_trap_ger",
+     "mine_pioneer_ger",
+     "bunker_ger",
+     "luftwaffe_relay_point_ger",
+     "barbed_wire_reinforced_ger",
+     "bunker_weapon_supply_ger",
+     "tw_20mm_emplacement_ger",
+     "tw_88mm_emplacement_ger",
+     "fighting_nest_ger",
+     "observation_post_ger"
+    ]
+   }
+  }
+ }
+}

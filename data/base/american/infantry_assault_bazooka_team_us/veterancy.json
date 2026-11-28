@@ -1,0 +1,21 @@
+{
+ "infantry_assault_bazooka_team_us": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

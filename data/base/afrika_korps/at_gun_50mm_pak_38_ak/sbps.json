@@ -1,0 +1,66 @@
+{
+ "team_weapons": {
+  "at_gun_50mm_pak_38_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/team_weapons/at_gun_50mm_pak_38_ak",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_pak_38_ak",
+     "count": 1
+    },
+    {
+     "entity": "crew_pak_38_ak",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "tier2"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "armor_shred_pak_38_ak",
+    "hold_fire",
+    "team_weapons_combined_arms_ak",
+    "team_weapons_combined_arms_entrenchment_ak",
+    "italian_infantry_dummy_defense_of_the_motherland_ak"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_50mm_pak_38_ak"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_pak_38_ak",
+    "crew_entity": "crew_pak_38_ak"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

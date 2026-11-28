@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "lee_enfield_gurkhas_uk": {
+   "name": "weapon.lee_enfield_gurkhas_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "gurkhas_africa_uk": {
+   "name": "entity.gurkhas_africa_uk.name",
+   "model": {
+    "id": "gurkhas_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "gurkhas_africa_uk": {
+   "name": "unit.gurkhas_africa_uk.name",
+   "short_name": "unit.gurkhas_africa_uk.short",
+   "desc": "unit.gurkhas_africa_uk.desc",
+   "icon": "gurkhas_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "smg_thompson_gurkhas_uk": {
+   "name": "upgrade.smg_thompson_gurkhas_uk.name",
+   "icon": "smg_thompson_gurkhas_uk"
+  }
+ }
+}

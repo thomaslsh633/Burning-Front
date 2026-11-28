@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "bazooka_team_us": {
+   "name": "entity.bazooka_team_us.name",
+   "model": {
+    "id": "bazooka_team_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "bazooka_team_us": {
+   "name": "unit.bazooka_team_us.name",
+   "short_name": "unit.bazooka_team_us.short",
+   "desc": "unit.bazooka_team_us.desc",
+   "icon": "bazooka_team_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "artillery_observer_leader_radio_us": {
+   "name": "entity.artillery_observer_leader_radio_us.name",
+   "model": {
+    "id": "artillery_observer_leader_radio_us",
+    "anim_class": "infantry"
+   }
+  },
+  "artillery_observer_us": {
+   "name": "entity.artillery_observer_us.name",
+   "model": {
+    "id": "artillery_observer_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "artillery_observers_us": {
+   "name": "unit.artillery_observers_us.name",
+   "short_name": "unit.artillery_observers_us.short",
+   "desc": "unit.artillery_observers_us.desc",
+   "icon": "artillery_observers_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

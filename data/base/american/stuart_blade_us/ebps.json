@@ -1,0 +1,82 @@
+{
+ "vehicles": {
+  "stuart_blade_us": {
+   "coh3_ref": "ebps/races/american/vehicles/stuart_blade_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "tank",
+    "vehicle_treaded",
+    "light_tank",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off"
+   ],
+   "hp": 480,
+   "target_size": 17,
+   "armor": {
+    "front": 70,
+    "side": 50,
+    "rear": 35
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 260,
+    "fuel": 50
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "37mm_stuart_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_stuart_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_stuart_uk",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "stuart_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

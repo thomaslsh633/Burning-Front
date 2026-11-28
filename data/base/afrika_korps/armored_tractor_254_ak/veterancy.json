@@ -1,0 +1,22 @@
+{
+ "armored_tractor_254_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/armored_tractor_254_ak",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.85
+   },
+   {
+    "sight": 10,
+    "detection": 10
+   },
+   {
+    "ability_cooldown": 0.65
+   }
+  ]
+ }
+}

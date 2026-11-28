@@ -1,0 +1,71 @@
+{
+ "vehicles": {
+  "armored_car_222_specialist_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/specialist/armored_car_222_specialist_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "armored_car",
+    "dak_upgradeable_light",
+    "vehicle_wheeled",
+    "allow_brew_up"
+   ],
+   "hp": 240,
+   "target_size": 16,
+   "armor": {
+    "front": 11,
+    "side": 11,
+    "rear": 5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 240,
+    "fuel": 30
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "20mm_kwk38_armored_car_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "armored_car_222_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

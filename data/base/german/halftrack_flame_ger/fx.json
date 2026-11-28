@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "flamethrower_halftrack_ger": {
+   "name": "weapon.flamethrower_halftrack_ger.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "flamethrower_halftrack_right_ger": {
+   "name": "weapon.flamethrower_halftrack_right_ger.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_flame_ger": {
+   "name": "entity.halftrack_flame_ger.name",
+   "model": {
+    "id": "halftrack_flame_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_flame_ger": {
+   "name": "unit.halftrack_flame_ger.name",
+   "short_name": "unit.halftrack_flame_ger.short",
+   "desc": "unit.halftrack_flame_ger.desc",
+   "icon": "halftrack_flame_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

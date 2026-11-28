@@ -1,0 +1,23 @@
+{
+ "coastal_reserves_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/coastal_reserves",
+  "xp": [
+   800,
+   2400,
+   4800
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.2
+   },
+   {
+    "weapon_accuracy": 1.15,
+    "received_accuracy": 0.85,
+    "hp_add": 10
+   }
+  ]
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "stuart_uk": {
+   "name": "entity.stuart_uk.name",
+   "model": {
+    "id": "stuart_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "stuart_uk": {
+   "name": "unit.stuart_uk.name",
+   "short_name": "unit.stuart_uk.short",
+   "desc": "unit.stuart_uk.desc",
+   "icon": "stuart_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

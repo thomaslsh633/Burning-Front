@@ -1,0 +1,42 @@
+{
+ "vehicles": {
+  "churchill_avre_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/churchill_avre_uk",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "churchill_avre_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 690,
+     "fuel": 180
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "apex_armor",
+    "vehicle_direct_fire_barrage"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "infantry_support_smoke_churchill_uk",
+    "hold_fire",
+    "emergency_repairs_matilda_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_avre_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "buildings": {
+  "partisan_tunnel_main_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/partisan_tunnel_main_us",
+   "tags": [
+    "building",
+    "cover_object",
+    "emplacement",
+    "shared_hold",
+    "unbreachable",
+    "shared_hold_main"
+   ],
+   "hp": 480,
+   "target_size": 26,
+   "armor": {
+    "front": 4,
+    "side": 4,
+    "rear": 4
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "construction": {
+    "build_turns": 2,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

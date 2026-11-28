@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "kar98k_panzergrenadier_ak": {
+   "name": "weapon.kar98k_panzergrenadier_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "panzergrenadier_ak": {
+   "name": "entity.panzergrenadier_ak.name",
+   "model": {
+    "id": "panzergrenadier_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "panzergrenadier_ak": {
+   "name": "unit.panzergrenadier_ak.name",
+   "short_name": "unit.panzergrenadier_ak.short",
+   "desc": "unit.panzergrenadier_ak.desc",
+   "icon": "panzergrenadier_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "lmg_panzergrenadier_ak": {
+   "name": "upgrade.lmg_panzergrenadier_ak.name",
+   "icon": "lmg_panzergrenadier_ak"
+  }
+ }
+}

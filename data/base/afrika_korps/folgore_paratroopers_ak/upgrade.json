@@ -1,0 +1,49 @@
+{
+ "infantry": {
+  "folgore_carbinegrenade_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/folgore_carbinegrenade_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "carbine_grenade_launcher_ak"
+    }
+   ]
+  },
+  "folgore_lmg_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/folgore_lmg_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 70
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "lmg_breda_m30_folgore_ak"
+    }
+   ]
+  },
+  "folgore_smg_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/folgore_smg_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "beretta_m38_folgore_ak"
+    }
+   ]
+  }
+ }
+}

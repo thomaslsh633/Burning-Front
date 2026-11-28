@@ -1,0 +1,25 @@
+{
+ "artillery_observers_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/artillery_pathfinders",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "capture_rate": 1.5,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 20,
+    "sight": 5,
+    "detection": 5,
+    "attack_speed": 0.6
+   }
+  ]
+ }
+}

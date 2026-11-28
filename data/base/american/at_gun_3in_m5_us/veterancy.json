@@ -1,0 +1,24 @@
+{
+ "at_gun_3in_m5_us": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/at_gun",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {
+    "hp_add": 15
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "received_damage": 0.8,
+    "weapon_damage": 1.1667,
+    "weapon_range": 10,
+    "ability_range": 10
+   }
+  ]
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "76mm_hellcat_us": {
+   "name": "weapon.76mm_hellcat_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "hellcat_us": {
+   "name": "entity.hellcat_us.name",
+   "model": {
+    "id": "hellcat_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "hellcat_us": {
+   "name": "unit.hellcat_us.name",
+   "short_name": "unit.hellcat_us.short",
+   "desc": "unit.hellcat_us.desc",
+   "icon": "hellcat_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

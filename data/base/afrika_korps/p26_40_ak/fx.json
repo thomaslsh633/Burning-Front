@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_p26_40_ak": {
+   "name": "weapon.75mm_p26_40_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "p26_40_ak": {
+   "name": "entity.p26_40_ak.name",
+   "model": {
+    "id": "p26_40_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "p26_40_ak": {
+   "name": "unit.p26_40_ak.name",
+   "short_name": "unit.p26_40_ak.short",
+   "desc": "unit.p26_40_ak.desc",
+   "icon": "p26_40_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

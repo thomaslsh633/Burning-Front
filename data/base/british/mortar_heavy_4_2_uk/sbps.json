@@ -1,0 +1,64 @@
+{
+ "team_weapons": {
+  "mortar_heavy_4_2_uk": {
+   "coh3_ref": "sbps/races/british/team_weapons/mortar_heavy_4_2_uk",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_4_2_heavy_mortar_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_mortar_indian_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "mortar",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "barrage_4_2_heavy_mortar_airburst_uk",
+    "barrage_4_2_heavy_mortar_smoke_uk",
+    "barrage_4_2_heavy_mortar_uk",
+    "barrage_4_2_heavy_mortar_incendiary_uk",
+    "barrage_4_2_heavy_mortar_flare_uk",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "mortar_heavy_4_2_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_4_2_heavy_mortar_uk",
+    "crew_entity": "crew_mortar_indian_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

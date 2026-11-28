@@ -1,0 +1,39 @@
+{
+ "emplacements": {
+  "partisan_tunnel_constructed_us": {
+   "coh3_ref": "sbps/races/american/emplacements/partisan_tunnel_constructed_us",
+   "kind": "structure",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "partisan_tunnel_constructed_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 1,
+   "tags": [
+    "suppression",
+    "building",
+    "invisible_to_scar",
+    "squad_shared_hold"
+   ],
+   "source": "coh3stats",
+   "abilities": [
+    "partisan_tunnel_healing_aura_us",
+    "retreat_point_tunnel_network_us",
+    "squad_building_retreat_held_squads",
+    "partisan_tunnel_smuggling_route_us"
+   ],
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

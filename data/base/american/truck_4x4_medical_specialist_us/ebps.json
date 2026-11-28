@@ -1,0 +1,54 @@
+{
+ "vehicles": {
+  "truck_4x4_medical_us": {
+   "coh3_ref": "ebps/races/american/vehicles/truck_4x4_medical_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "truck_4x4",
+    "rapid_response",
+    "ultra_light",
+    "light_vehicle",
+    "vehicle_wheeled",
+    "support_vehicle"
+   ],
+   "hp": 180,
+   "target_size": 10.6,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 2.5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": -1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 180
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 8,
+    "detect_hex": 1
+   },
+   "wreck": {
+    "entity": "truck_4x4_medical_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

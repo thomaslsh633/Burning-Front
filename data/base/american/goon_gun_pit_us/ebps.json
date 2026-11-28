@@ -1,0 +1,39 @@
+{
+ "buildings": {
+  "goon_gun_pit_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/goon_gun_pit_us",
+   "tags": [
+    "building",
+    "emplacement",
+    "cover_object"
+   ],
+   "hp": 480,
+   "target_size": 20,
+   "armor": {
+    "front": 3,
+    "side": 3,
+    "rear": 3
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 150
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "construction": {
+    "build_turns": 2,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "howitzer_cannone_da_105_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/team_weapon/cannone_da_105_ak",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {
+    "scatter": 0.85
+   },
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "ability_cooldown": 0.8,
+    "received_damage": 0.8,
+    "weapon_range": 1.15,
+    "ability_range": 1.15
+   }
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "infantry": {
+  "panzergrenadier_tankhunter_specialist_ger": {
+   "coh3_ref": "sbps/races/german/infantry/specialist/panzergrenadier_tankhunter_specialist_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "panzergrenadier_tank_hunter_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 288
+    },
+    "from": "entities"
+   },
+   "pop": 3,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "tier2",
+    "panzergrenadier_kompanie",
+    "infantry_burst_weapon",
+    "panzergrenadier_ger"
+   ],
+   "source": "produced",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "sprint_panzergrenadiers_ger",
+    "mountain_zeal_squad_ger",
+    "prioritize_vehicles_handheld_at_ger",
+    "vehicle_awareness_tank_hunter_ger"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.39
+   },
+   "veterancy": {
+    "set": "panzergrenadier_tankhunter_specialist_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

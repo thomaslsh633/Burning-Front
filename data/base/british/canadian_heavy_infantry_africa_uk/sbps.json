@@ -1,0 +1,66 @@
+{
+ "infantry": {
+  "canadian_heavy_infantry_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/canadian_heavy_infantry_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "canadian_heavy_infantry_africa_uk",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "elite_infantry",
+    "infantry_anti_infantry",
+    "tier2"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "piat_package_canadian_heavy_infantry_africa_uk"
+    ],
+    "pending": [
+     "mortar_package_canadian_heavy_infantry_africa_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "hand_mortar_he_canadian_uk",
+    "canadian_shock_infantry_incendiary_munitions_africa_uk",
+    "gammon_bomb_guards_africa_uk",
+    "canadian_shock_infantry_pyrotechnics_canadian_africa_uk",
+    "riflemen_grenade_assault_buff_us",
+    "canadian_destructive_rush_uk",
+    "piat_critical_shot_uk",
+    "prioritize_vehicles_canadian_heavy_infantry_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.57
+   },
+   "veterancy": {
+    "set": "canadian_heavy_infantry_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

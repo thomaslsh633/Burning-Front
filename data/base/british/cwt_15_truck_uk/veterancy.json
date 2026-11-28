@@ -1,0 +1,17 @@
+{
+ "cwt_15_truck_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/cwt_15_truck_uk",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "hp_add": 160
+   }
+  ]
+ }
+}

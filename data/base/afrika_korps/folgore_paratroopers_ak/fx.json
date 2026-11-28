@@ -1,0 +1,63 @@
+{
+ "weapon": {
+  "carcano_carbine_folgore_ak": {
+   "name": "weapon.carcano_carbine_folgore_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "carbine_grenade_launcher_ak": {
+   "name": "weapon.carbine_grenade_launcher_ak.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  },
+  "lmg_breda_m30_folgore_ak": {
+   "name": "weapon.lmg_breda_m30_folgore_ak.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "beretta_m38_folgore_ak": {
+   "name": "weapon.beretta_m38_folgore_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "folgore_paratroopers_ak": {
+   "name": "entity.folgore_paratroopers_ak.name",
+   "model": {
+    "id": "folgore_paratroopers_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "folgore_paratroopers_ak": {
+   "name": "unit.folgore_paratroopers_ak.name",
+   "short_name": "unit.folgore_paratroopers_ak.short",
+   "desc": "unit.folgore_paratroopers_ak.desc",
+   "icon": "folgore_paratroopers_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "folgore_carbinegrenade_ak": {
+   "name": "upgrade.folgore_carbinegrenade_ak.name",
+   "icon": "folgore_carbinegrenade_ak"
+  },
+  "folgore_lmg_ak": {
+   "name": "upgrade.folgore_lmg_ak.name",
+   "icon": "folgore_lmg_ak"
+  },
+  "folgore_smg_ak": {
+   "name": "upgrade.folgore_smg_ak.name",
+   "icon": "folgore_smg_ak"
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "m29_weasal_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/m29_weasal_us",
+  "xp": [
+   700,
+   2100,
+   4200
+  ],
+  "ranks": [
+   {
+    "sight": 7
+   },
+   {
+    "capture_rate": 1.5
+   },
+   {
+    "hp_add": 80,
+    "detection": 10,
+    "sight": 10
+   }
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "l6_40_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/l6_40_ak",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "l6_40_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "dak_light_vehicle",
+    "vehicle_burst_weapon",
+    "italian"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scope_l6_40_ger",
+     "flamethrower_l640_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_left_1b_raid_ger",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "emergency_speed_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "l6_40_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

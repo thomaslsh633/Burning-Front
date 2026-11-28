@@ -1,0 +1,45 @@
+{
+ "vehicles": {
+  "churchill_na75_75mm_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/churchill_na75_75mm_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "churchill_na75_75mm_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 440,
+     "fuel": 120
+    },
+    "from": "coh3stats"
+   },
+   "pop": 16,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "emergency_repairs_matilda_uk",
+    "royal_engineers_smoke_curtain_uk",
+    "royal_engineers_unwavering_churchill_aura_uk",
+    "royal_engineers_churchill_mine_plough_uk",
+    "royal_engineers_churchill_na75_ammo_toggle_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_na75_75mm_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

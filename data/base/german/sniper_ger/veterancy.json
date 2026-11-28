@@ -1,0 +1,21 @@
+{
+ "sniper_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/sniper_ger",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "sight": 10
+   }
+  ]
+ }
+}

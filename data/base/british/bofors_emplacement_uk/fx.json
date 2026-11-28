@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_bofors_emplacement_uk": {
+   "name": "entity.tw_bofors_emplacement_uk.name",
+   "model": {
+    "id": "tw_bofors_emplacement_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "bofors_emplacement_uk": {
+   "name": "unit.bofors_emplacement_uk.name",
+   "short_name": "unit.bofors_emplacement_uk.short",
+   "desc": "unit.bofors_emplacement_uk.desc",
+   "icon": "bofors_emplacement_uk",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

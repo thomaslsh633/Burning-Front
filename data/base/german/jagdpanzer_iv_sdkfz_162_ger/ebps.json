@@ -1,0 +1,78 @@
+{
+ "vehicles": {
+  "jagdpanzer_iv_sdkfz_162_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/jagdpanzer_iv_sdkfz_162_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "stug_iii",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "side_armor_tank",
+    "fixed_turret"
+   ],
+   "hp": 600,
+   "target_size": 20,
+   "armor": {
+    "front": 250,
+    "side": 150,
+    "rear": 90
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 300,
+    "fuel": 70
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_pak_jagdpanzer_iv_skdfz_162_ger",
+     "mount": "fixed",
+     "slot": "main"
+    },
+    {
+     "weapon": "grenade_vehicle_crew_ger",
+     "mount": "fixed",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "fixed",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "jagdpanzer_iv_sdkfz_162_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

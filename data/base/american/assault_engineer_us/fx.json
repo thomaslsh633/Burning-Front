@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "assault_engineer_us": {
+   "name": "entity.assault_engineer_us.name",
+   "model": {
+    "id": "assault_engineer_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "assault_engineer_us": {
+   "name": "unit.assault_engineer_us.name",
+   "short_name": "unit.assault_engineer_us.short",
+   "desc": "unit.assault_engineer_us.desc",
+   "icon": "assault_engineer_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

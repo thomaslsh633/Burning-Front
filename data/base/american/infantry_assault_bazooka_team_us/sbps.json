@@ -1,0 +1,68 @@
+{
+ "infantry": {
+  "infantry_assault_bazooka_team_us": {
+   "coh3_ref": "sbps/races/american/infantry/infantry_assault/infantry_assault_bazooka_team_us",
+   "kind": "squad",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "infantry_assault_bazooka_team_us",
+     "count": 2
+    },
+    {
+     "entity": "infantry_assault_bazooka_no_bazooka_team_us",
+     "count": 2
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 140
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "infantry",
+    "anti_tank",
+    "standard_infantry",
+    "infantry_anti_tank"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "panzerschrek_special_operations_bazooka_team_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "veterancy_1_unlock_a_bazooka_team_us",
+    "veterancy_1_unlock_b_bazooka_team_us",
+    "veterancy_1a_sprint_bazooka_team_us",
+    "veterancy_1b_white_phosphorus_rocket_bazooka_team_us",
+    "satchel_anti_tank_bazook_team_us",
+    "precision_shot_bazooka_team_us",
+    "prioritize_vehicles_infantry",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "veterancy": {
+    "set": "infantry_assault_bazooka_team_us"
+   },
+   "supply": {
+    "ammo": 16
+   },
+   "build": {
+    "menu": [
+     "mine_heavy_engineer_us",
+     "demo_charge_timed_us"
+    ]
+   },
+   "reinforce": {
+    "cost_ratio": 1
+   }
+  }
+ }
+}

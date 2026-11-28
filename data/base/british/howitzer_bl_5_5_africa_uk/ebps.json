@@ -1,0 +1,61 @@
+{
+ "emplacements": {
+  "tw_howitzer_bl_5_5_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/emplacements/tw_howitzer_bl_5_5_africa_uk",
+   "tags": [
+    "team_weapon",
+    "artillery",
+    "building",
+    "cover_object",
+    "emplacement",
+    "artillery_emplacement"
+   ],
+   "hp": 600,
+   "target_size": 20,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 60
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "howitzer_bl_5_5_africa_uk",
+     "german": "howitzer_bl_5_5_africa_uk",
+     "british": "howitzer_bl_5_5_africa_uk",
+     "afrika_korps": "howitzer_bl_5_5_africa_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "weapon": {
+  "thompson_ranger_us": {
+   "name": "weapon.thompson_ranger_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "bazooka_paratroopers_us": {
+   "name": "weapon.bazooka_paratroopers_us.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  },
+  "m1919a6_riflemen_us": {
+   "name": "weapon.m1919a6_riflemen_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  }
+ },
+ "ebps": {
+  "ranger_us": {
+   "name": "entity.ranger_us.name",
+   "model": {
+    "id": "ranger_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "ranger_us": {
+   "name": "unit.ranger_us.name",
+   "short_name": "unit.ranger_us.short",
+   "desc": "unit.ranger_us.desc",
+   "icon": "ranger_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "bazooka_ranger_us": {
+   "name": "upgrade.bazooka_ranger_us.name",
+   "icon": "bazooka_ranger_us"
+  },
+  "m1919a6_ranger_us": {
+   "name": "upgrade.m1919a6_ranger_us.name",
+   "icon": "m1919a6_ranger_us"
+  },
+  "bar_ranger_us": {
+   "name": "upgrade.bar_ranger_us.name",
+   "icon": "bar_ranger_us"
+  },
+  "flamethrower_ranger_us": {
+   "name": "upgrade.flamethrower_ranger_us.name",
+   "icon": "flamethrower_ranger_us"
+  }
+ }
+}

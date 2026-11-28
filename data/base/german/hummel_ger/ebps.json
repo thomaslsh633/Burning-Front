@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "hummel_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/hummel_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "self_propelled_artillery",
+    "allow_track_damage_when_immobilized",
+    "support_vehicle",
+    "fixed_turret",
+    "vehicle_treaded"
+   ],
+   "hp": 400,
+   "target_size": 20,
+   "armor": {
+    "front": 70,
+    "side": 50,
+    "rear": 20
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 400,
+    "fuel": 90
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "fixed",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "hummel_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

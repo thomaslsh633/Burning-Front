@@ -1,0 +1,90 @@
+{
+ "infantry": {
+  "jaeger_support_ger": {
+   "coh3_ref": "ebps/races/german/infantry/jaeger_support_ger",
+   "tags": [
+    "infantry",
+    "jaeger_light_infantry",
+    "german_infantry",
+    "squad_entity_max_5"
+   ],
+   "hp": 110,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 68
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "g43_jaeger_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  },
+  "jaeger_ger": {
+   "coh3_ref": "ebps/races/german/infantry/jaeger_ger",
+   "tags": [
+    "infantry",
+    "jaeger_light_infantry",
+    "german_infantry",
+    "squad_entity_max_5"
+   ],
+   "hp": 110,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 68
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "g43_jaeger_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

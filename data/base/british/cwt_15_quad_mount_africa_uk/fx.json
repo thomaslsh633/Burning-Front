@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "20mm_oerlikon_mount_cwt_uk": {
+   "name": "weapon.20mm_oerlikon_mount_cwt_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "cwt_15_quad_mount_africa_uk": {
+   "name": "entity.cwt_15_quad_mount_africa_uk.name",
+   "model": {
+    "id": "cwt_15_quad_mount_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "cwt_15_quad_mount_africa_uk": {
+   "name": "unit.cwt_15_quad_mount_africa_uk.name",
+   "short_name": "unit.cwt_15_quad_mount_africa_uk.short",
+   "desc": "unit.cwt_15_quad_mount_africa_uk.desc",
+   "icon": "cwt_15_quad_mount_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

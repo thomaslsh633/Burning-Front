@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "matilda_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/matilda_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "matilda_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 13,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "tier4",
+    "vehicle_turret",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "matilda_smoke_uk",
+    "hold_fire",
+    "emergency_repairs_matilda_uk"
+   ],
+   "veterancy": {
+    "set": "matilda_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

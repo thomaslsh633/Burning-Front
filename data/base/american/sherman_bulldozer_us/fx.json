@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "sherman_bulldozer_us": {
+   "name": "unit.sherman_bulldozer_us.name",
+   "short_name": "unit.sherman_bulldozer_us.short",
+   "desc": "unit.sherman_bulldozer_us.desc",
+   "icon": "sherman_bulldozer_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "halftrack_medical_us": {
+   "name": "entity.halftrack_medical_us.name",
+   "model": {
+    "id": "halftrack_medical_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_medical_us": {
+   "name": "unit.halftrack_medical_us.name",
+   "short_name": "unit.halftrack_medical_us.short",
+   "desc": "unit.halftrack_medical_us.desc",
+   "icon": "halftrack_medical_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "emplacements": {
+  "mortar_pit_81mm_us": {
+   "coh3_ref": "sbps/races/american/emplacements/mortar_pit_81mm_us",
+   "kind": "structure",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "mortar_pit_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "coh3stats"
+   },
+   "pop": 2,
+   "build_turns": 2,
+   "tags": [
+    "invisible_to_scar",
+    "emplacement",
+    "mortar"
+   ],
+   "source": "built",
+   "abilities": [
+    "barrage_81mm_mortar_pit_us",
+    "smoke_81mm_mortar_pit_us",
+    "veterancy_1_unlock_a_81mm_us",
+    "veterancy_1_unlock_b_81mm_us",
+    "veterancy_1a_air_burst_mortar_pit_us",
+    "veterancy_1a_delayed_fuze_mortar_pit_us",
+    "squad_building_retreat_held_squads",
+    "brazilian_squad_counterbattery_us",
+    "veterancy_1a_suppression_air_burst_mortar_pit_us"
+   ],
+   "veterancy": {
+    "set": "mortar_pit_81mm_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "hmg_vickers_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common/team_weapon/hmg",
+  "xp": [
+   700,
+   2100,
+   4200
+  ],
+  "ranks": [
+   {
+    "hp_add": 10
+   },
+   {
+    "hp_add": 15,
+    "weapon_suppression": 1.4
+   },
+   {
+    "received_damage": 0.8
+   }
+  ]
+ }
+}

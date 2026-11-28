@@ -1,0 +1,69 @@
+{
+ "team_weapons": {
+  "tw_4_2_heavy_mortar_uk": {
+   "coh3_ref": "ebps/races/british/team_weapons/tw_4_2_heavy_mortar_uk",
+   "tags": [
+    "team_weapon",
+    "artillery"
+   ],
+   "hp": 350,
+   "target_size": 20,
+   "armor": {
+    "front": 70,
+    "side": 70,
+    "rear": 70
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 90
+   },
+   "traits": [
+    "repairable",
+    "recrewable",
+    "towable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "4_2_inch_heavy_mortar_uk",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "crew": {
+    "min": 2,
+    "roles": [
+     "gunner",
+     "loader"
+    ]
+   },
+   "recrew": {
+    "by_faction": {
+     "british": "mortar_heavy_4_2_africa_uk",
+     "american": "mortar_heavy_4_2_uk",
+     "german": "mortar_heavy_4_2_uk",
+     "afrika_korps": "mortar_heavy_4_2_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "tow": {
+    "by": []
+   }
+  }
+ }
+}

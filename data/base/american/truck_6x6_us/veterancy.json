@@ -1,0 +1,21 @@
+{
+ "truck_6x6_us": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   300,
+   600,
+   1200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

@@ -1,47 +1,4 @@
 {
- "infantry": {
-  "crew_at_gun_75mm_ger": {
-   "coh3_ref": "ebps/races/german/infantry/crew_at_gun_75mm_ger",
-   "tags": [
-    "infantry",
-    "german_infantry"
-   ],
-   "hp": 90,
-   "target_size": 1.33,
-   "armor": {
-    "front": 1,
-    "side": 1,
-    "rear": 1
-   },
-   "resist": {
-    "ballistic": 1,
-    "explosive": 1,
-    "flame": 1,
-    "true": 1
-   },
-   "cost": {
-    "manpower": 50
-   },
-   "traits": [
-    "receives_cover"
-   ],
-   "move": {
-    "hex": 4,
-    "pass": "infantry"
-   },
-   "sight": {
-    "hex": 6,
-    "detect_hex": 1
-   },
-   "weapons": [
-    {
-     "weapon": "mp40_crew_ger",
-     "mount": "hull",
-     "slot": "main"
-    }
-   ]
-  }
- },
  "team_weapons": {
   "tw_at_gun_75mm_ger": {
    "coh3_ref": "ebps/races/german/team_weapons/tw_at_gun_75mm_ger",
@@ -108,6 +65,49 @@
    "tow": {
     "by": []
    }
+  }
+ },
+ "infantry": {
+  "crew_at_gun_75mm_ger": {
+   "coh3_ref": "ebps/races/german/infantry/crew_at_gun_75mm_ger",
+   "tags": [
+    "infantry",
+    "german_infantry"
+   ],
+   "hp": 90,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "mp40_crew_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
   }
  }
 }

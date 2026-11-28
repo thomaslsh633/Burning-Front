@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "priest_kangaroo_us": {
+   "coh3_ref": "sbps/races/american/vehicles/priest_kangaroo_us",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "priest_kangaroo_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 8,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_support"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "veterancy_1_unlock_a_priest_kangaroo_us",
+    "veterancy_1_unlock_b_priest_kangaroo_us",
+    "brazilian_kangaroo_munitions_platform_aura_us",
+    "brazilian_kangaroo_hulldown_activate_us",
+    "brazilian_kangaroo_hulldown_deactivate_us"
+   ],
+   "veterancy": {
+    "set": "priest_kangaroo_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

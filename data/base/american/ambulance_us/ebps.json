@@ -1,0 +1,50 @@
+{
+ "vehicles": {
+  "ambulance_us": {
+   "coh3_ref": "ebps/races/american/vehicles/ambulance_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle"
+   ],
+   "hp": 120,
+   "target_size": 10.6,
+   "armor": {
+    "front": 6,
+    "side": 4.5,
+    "rear": 3
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 240,
+    "fuel": 10
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "wreck": {
+    "entity": "ambulance_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

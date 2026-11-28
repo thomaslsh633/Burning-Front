@@ -1,0 +1,53 @@
+{
+ "infantry": {
+  "commando_lmg_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/commando_lmg_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "commando_lmg_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 4,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_burst_weapon",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "camouflage_in_cover_parent",
+    "hold_fire",
+    "commando_passive_healing_uk",
+    "commando_support_strafing_run_uk",
+    "commando_reinforcement_beacon_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "commando_lmg_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

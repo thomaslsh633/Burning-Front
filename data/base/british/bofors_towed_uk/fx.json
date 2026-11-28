@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_bofors_towed_uk": {
+   "name": "entity.tw_bofors_towed_uk.name",
+   "model": {
+    "id": "tw_bofors_towed_uk",
+    "anim_class": "crew"
+   }
+  }
+ },
+ "sbps": {
+  "bofors_towed_uk": {
+   "name": "unit.bofors_towed_uk.name",
+   "short_name": "unit.bofors_towed_uk.short",
+   "desc": "unit.bofors_towed_uk.desc",
+   "icon": "bofors_towed_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

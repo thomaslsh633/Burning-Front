@@ -1,0 +1,25 @@
+{
+ "bishop_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/bishop_uk",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "ability_range": 1.2,
+    "weapon_range": 1.2,
+    "scatter": 0.8
+   },
+   {
+    "hp_add": 60,
+    "ability_cooldown": 0.8,
+    "ability_cost": 0
+   }
+  ]
+ }
+}

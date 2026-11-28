@@ -1,0 +1,81 @@
+{
+ "vehicles": {
+  "l6_40_flame_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/l6_40_flame_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_tank",
+    "dak_upgradeable_light",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "l6_40"
+   ],
+   "hp": 280,
+   "target_size": 18,
+   "armor": {
+    "front": 50,
+    "side": 40,
+    "rear": 25
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 220,
+    "fuel": 35
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "flamethrower_l6_40_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "8mm_coaxial_l6_40_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "25mm_tank_mortar_smoke_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "l6_40_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

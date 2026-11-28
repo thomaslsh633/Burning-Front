@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "recovery_vehicle_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/recovery_vehicle_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "recovery_vehicle_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 45
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "healer",
+    "recovery_vehicle",
+    "light_armor",
+    "vehicle_repair_recovery"
+   ],
+   "source": "restored",
+   "abilities": [
+    "restore_wreck_vehicle_us",
+    "repair_vehicle_ger",
+    "salvage_recovery_vehicle_us",
+    "common_shared_veterancy_dummy_parent"
+   ],
+   "veterancy": {
+    "set": "recovery_vehicle_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

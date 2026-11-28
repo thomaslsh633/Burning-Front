@@ -1,0 +1,109 @@
+{
+ "team_weapons": {
+  "tw_at_gun_3in_m5_us": {
+   "coh3_ref": "ebps/races/american/team_weapons/tw_at_gun_3in_m5_us",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "anti_tank_weapon"
+   ],
+   "hp": 600,
+   "target_size": 20,
+   "armor": {
+    "front": 100,
+    "side": 100,
+    "rear": 100
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 80,
+    "fuel": 40
+   },
+   "traits": [
+    "repairable",
+    "recrewable",
+    "towable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "3in_at_gun_us",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "crew": {
+    "min": 2,
+    "roles": [
+     "gunner",
+     "loader"
+    ]
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "at_gun_3in_m5_us",
+     "german": "at_gun_3in_m5_us",
+     "british": "at_gun_3in_m5_us",
+     "afrika_korps": "at_gun_3in_m5_us"
+    },
+    "min_crew": 2,
+    "max_squad": 6,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "tow": {
+    "by": []
+   }
+  }
+ },
+ "infantry": {
+  "crew_at_gun_heavy_us": {
+   "coh3_ref": "ebps/races/american/infantry/crew_at_gun_heavy_us",
+   "tags": [
+    "infantry"
+   ],
+   "hp": 105,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 50
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "carbine_crew_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

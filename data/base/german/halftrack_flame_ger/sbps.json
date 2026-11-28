@@ -1,0 +1,55 @@
+{
+ "vehicles": {
+  "halftrack_flame_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/halftrack_flame_ger",
+   "kind": "vehicle",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "halftrack_flame_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 35
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 8,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "siegebreakers_grinding_advance_medium_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger",
+    "siegebreakers_buff_halftrack_flamethrower_range_ger"
+   ],
+   "veterancy": {
+    "set": "halftrack_flame_ger"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_riegel_43_flame_halftrack_ger"
+    ]
+   }
+  }
+ }
+}

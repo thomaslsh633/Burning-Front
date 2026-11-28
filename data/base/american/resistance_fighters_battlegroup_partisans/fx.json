@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "carcano_resistance_fighter_us": {
+   "name": "weapon.carcano_resistance_fighter_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "panzerbuchse39_at_rifle_partisan_us": {
+   "name": "weapon.panzerbuchse39_at_rifle_partisan_us.name",
+   "sound": {
+    "fire": "panzerbuchse"
+   }
+  }
+ },
+ "ebps": {
+  "resistance_fighters_battlegroup_partisans": {
+   "name": "entity.resistance_fighters_battlegroup_partisans.name",
+   "model": {
+    "id": "resistance_fighters_battlegroup_partisans",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "resistance_fighters_battlegroup_partisans": {
+   "name": "unit.resistance_fighters_battlegroup_partisans.name",
+   "short_name": "unit.resistance_fighters_battlegroup_partisans.short",
+   "desc": "unit.resistance_fighters_battlegroup_partisans.desc",
+   "icon": "resistance_fighters_battlegroup_partisans",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "panzerbuchse39_at_rifle_resistance_fighter_partisan": {
+   "name": "upgrade.panzerbuchse39_at_rifle_resistance_fighter_partisan.name",
+   "icon": "panzerbuchse39_at_rifle_resistance_fighter_partisan"
+  },
+  "grb39_grenade_launcher_resistance_fighter_partisan": {
+   "name": "upgrade.grb39_grenade_launcher_resistance_fighter_partisan.name",
+   "icon": "grb39_grenade_launcher_resistance_fighter_partisan"
+  }
+ }
+}

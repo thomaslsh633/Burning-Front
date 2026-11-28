@@ -1,0 +1,57 @@
+{
+ "vehicles": {
+  "stuart_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/stuart_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stuart_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "light_armor",
+    "tier3"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_kit_stuart_uk",
+     "commander_stuart_uk",
+     "vehicle_tulips_africa_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_stuart_uk",
+    "self_repair_stuart_uk",
+    "mark_target_stuart_uk",
+    "tread_shot_stuart_uk",
+    "hold_fire",
+    "toggle_recon_stuart_uk",
+    "polish_cavalry_tulip_rocket_strike_stuart_africa_uk"
+   ],
+   "veterancy": {
+    "set": "stuart_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

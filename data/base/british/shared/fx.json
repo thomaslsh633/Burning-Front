@@ -1,0 +1,331 @@
+{
+ "weapon": {
+  "30cal_vickers_bunker_uk": {
+   "name": "weapon.30cal_vickers_bunker_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "40mm_bofors_uk_emplacement": {
+   "name": "weapon.40mm_bofors_uk_emplacement.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "scoped_lee_enfield_tommy_africa_uk": {
+   "name": "weapon.scoped_lee_enfield_tommy_africa_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "bren_lmg_gurkhas_uk": {
+   "name": "weapon.bren_lmg_gurkhas_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "thompson_gurkhas_uk": {
+   "name": "weapon.thompson_gurkhas_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "lee_enfield_crew_uk": {
+   "name": "weapon.lee_enfield_crew_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "webley_revolver_uk": {
+   "name": "weapon.webley_revolver_uk.name",
+   "sound": {
+    "fire": "pistol"
+   }
+  },
+  "lee_enfield_tommy_africa_uk": {
+   "name": "weapon.lee_enfield_tommy_africa_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "sapper_piat_uk": {
+   "name": "weapon.sapper_piat_uk.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  },
+  "17pdr_at_gun_uk": {
+   "name": "weapon.17pdr_at_gun_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "2pdr_at_gun_360_uk": {
+   "name": "weapon.2pdr_at_gun_360_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "6pdr_at_gun_uk": {
+   "name": "weapon.6pdr_at_gun_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "40mm_bofors_uk": {
+   "name": "weapon.40mm_bofors_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hmg_uk": {
+   "name": "weapon.30cal_hmg_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hmg_africa_uk": {
+   "name": "weapon.30cal_hmg_africa_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "81mm_mortar_uk": {
+   "name": "weapon.81mm_mortar_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "4_2_inch_heavy_mortar_uk": {
+   "name": "weapon.4_2_inch_heavy_mortar_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "75mm_pack_howitzer_uk": {
+   "name": "weapon.75mm_pack_howitzer_uk.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  },
+  "archer_17pdr_uk": {
+   "name": "weapon.archer_17pdr_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_sherman_us": {
+   "name": "weapon.30cal_coaxial_sherman_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_sherman_us": {
+   "name": "weapon.30cal_hull_sherman_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "2inch_mortar_smoke_sherman_us": {
+   "name": "weapon.2inch_mortar_smoke_sherman_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "30cal_coaxial_matilda_uk": {
+   "name": "weapon.30cal_coaxial_matilda_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_churchill_uk": {
+   "name": "weapon.30cal_hull_churchill_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "40mm_churchill_uk": {
+   "name": "weapon.40mm_churchill_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_churchill_uk": {
+   "name": "weapon.30cal_coaxial_churchill_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "76mm_churchill_black_prince_uk": {
+   "name": "weapon.76mm_churchill_black_prince_uk.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  },
+  "flamethrower_crocodile_uk": {
+   "name": "weapon.flamethrower_crocodile_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "vickers_twin_cwt_lrdg_uk": {
+   "name": "weapon.vickers_twin_cwt_lrdg_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_dingo_uk": {
+   "name": "weapon.30cal_dingo_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "besa_hmg_humber_uk": {
+   "name": "weapon.besa_hmg_humber_uk.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  },
+  "30cal_coaxial_humber_uk": {
+   "name": "weapon.30cal_coaxial_humber_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "2inch_mortar_smoke_humber_uk": {
+   "name": "weapon.2inch_mortar_smoke_humber_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "75mm_sherman_uk": {
+   "name": "weapon.75mm_sherman_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_stuart_uk": {
+   "name": "weapon.30cal_coaxial_stuart_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "37mm_stuart_uk": {
+   "name": "weapon.37mm_stuart_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_hull_stuart_uk": {
+   "name": "weapon.30cal_hull_stuart_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  }
+ },
+ "ebps": {
+  "officer_tommy_africa_uk": {
+   "name": "entity.officer_tommy_africa_uk.name",
+   "model": {
+    "id": "officer_tommy_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "tommy_africa_uk": {
+   "name": "entity.tommy_africa_uk.name",
+   "model": {
+    "id": "tommy_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "tw_at_gun_6pdr_africa_uk": {
+   "name": "entity.tw_at_gun_6pdr_africa_uk.name",
+   "model": {
+    "id": "tw_at_gun_6pdr_africa_uk",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_6pdr_africa_uk": {
+   "name": "entity.crew_at_gun_6pdr_africa_uk.name",
+   "model": {
+    "id": "crew_at_gun_6pdr_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_commando_africa_uk": {
+   "name": "entity.crew_hmg_commando_africa_uk.name",
+   "model": {
+    "id": "crew_hmg_commando_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_africa_uk": {
+   "name": "entity.crew_hmg_africa_uk.name",
+   "model": {
+    "id": "crew_hmg_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_mortar_africa_uk": {
+   "name": "entity.crew_mortar_africa_uk.name",
+   "model": {
+    "id": "crew_mortar_africa_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_at_gun_uk": {
+   "name": "entity.crew_at_gun_uk.name",
+   "model": {
+    "id": "crew_at_gun_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_uk": {
+   "name": "entity.crew_hmg_uk.name",
+   "model": {
+    "id": "crew_hmg_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_mortar_indian_uk": {
+   "name": "entity.crew_mortar_indian_uk.name",
+   "model": {
+    "id": "crew_mortar_indian_uk",
+    "anim_class": "infantry"
+   }
+  },
+  "sandbag_wall_uk": {
+   "name": "entity.sandbag_wall_uk.name",
+   "model": {
+    "id": "sandbag_wall_uk",
+    "anim_class": "static"
+   }
+  },
+  "barbed_wire_fence_uk": {
+   "name": "entity.barbed_wire_fence_uk.name",
+   "model": {
+    "id": "barbed_wire_fence_uk",
+    "anim_class": "static"
+   }
+  },
+  "tank_trap_uk": {
+   "name": "entity.tank_trap_uk.name",
+   "model": {
+    "id": "tank_trap_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "upgrade": {
+  "lmg_bren_gurkhas_uk": {
+   "name": "upgrade.lmg_bren_gurkhas_uk.name",
+   "icon": "lmg_bren_gurkhas_uk"
+  }
+ }
+}

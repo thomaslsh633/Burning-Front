@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "kar98k_panzerjaeger_ak": {
+   "name": "weapon.kar98k_panzerjaeger_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "panzerjaeger_inf_ak": {
+   "name": "entity.panzerjaeger_inf_ak.name",
+   "model": {
+    "id": "panzerjaeger_inf_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "panzerjaeger_inf_ak": {
+   "name": "unit.panzerjaeger_inf_ak.name",
+   "short_name": "unit.panzerjaeger_inf_ak.short",
+   "desc": "unit.panzerjaeger_inf_ak.desc",
+   "icon": "panzerjaeger_inf_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

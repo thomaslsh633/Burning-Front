@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tiger_boss_ger": {
+   "name": "entity.tiger_boss_ger.name",
+   "model": {
+    "id": "tiger_boss_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "tiger_boss_ger": {
+   "name": "unit.tiger_boss_ger.name",
+   "short_name": "unit.tiger_boss_ger.short",
+   "desc": "unit.tiger_boss_ger.desc",
+   "icon": "tiger_boss_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

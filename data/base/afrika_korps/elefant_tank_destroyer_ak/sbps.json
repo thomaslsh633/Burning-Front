@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "elefant_tank_destroyer_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/elefant_tank_destroyer_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "elefant_tank_destroyer_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 600,
+     "fuel": 160
+    },
+    "from": "coh3stats"
+   },
+   "pop": 18,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "vehicle_anti_tank",
+    "vehicle_casemate_anti_tank",
+    "apex_armor",
+    "tier4"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "engine_burnout_elefant_ak"
+   ],
+   "veterancy": {
+    "set": "elefant_tank_destroyer_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

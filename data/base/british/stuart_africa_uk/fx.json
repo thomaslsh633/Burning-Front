@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "stuart_africa_uk": {
+   "name": "entity.stuart_africa_uk.name",
+   "model": {
+    "id": "stuart_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "stuart_africa_uk": {
+   "name": "unit.stuart_africa_uk.name",
+   "short_name": "unit.stuart_africa_uk.short",
+   "desc": "unit.stuart_africa_uk.desc",
+   "icon": "stuart_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

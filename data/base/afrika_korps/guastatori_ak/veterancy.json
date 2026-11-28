@@ -1,0 +1,22 @@
+{
+ "guastatori_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/infantry/guastatori",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "received_accuracy": 0.8,
+    "attack_speed": 0.7
+   },
+   {
+    "hp_add": 25
+   }
+  ]
+ }
+}

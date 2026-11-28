@@ -1,0 +1,24 @@
+{
+ "infantry": {
+  "lmg_breda_m30_bersaglieri_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/lmg_breda_m30_bersaglieri_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "t1_unit_unlock_ak"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "lmg_breda_m30_bersaglieri_ak"
+    }
+   ]
+  }
+ }
+}

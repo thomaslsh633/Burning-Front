@@ -1,0 +1,46 @@
+{
+ "infantry": {
+  "sniper_us": {
+   "coh3_ref": "ebps/races/american/infantry/sniper_us",
+   "tags": [
+    "infantry",
+    "sniper",
+    "rapid_response"
+   ],
+   "hp": 100,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "springfield_sniper_us",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

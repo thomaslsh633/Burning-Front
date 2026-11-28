@@ -1,0 +1,25 @@
+{
+ "scott_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/scott_us",
+  "xp": [
+   1500,
+   4500,
+   9000
+  ],
+  "ranks": [
+   {
+    "ability_cooldown": 0.9
+   },
+   {
+    "ability_cooldown": 0.75,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 80,
+    "attack_speed": 0.8,
+    "weapon_range": 5,
+    "ability_range": 5
+   }
+  ]
+ }
+}

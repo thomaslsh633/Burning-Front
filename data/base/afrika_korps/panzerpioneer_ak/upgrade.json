@@ -1,0 +1,34 @@
+{
+ "infantry": {
+  "flamethrower_panzerpioneer_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/flamethrower_panzerpioneer_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_panzerpioneer_ak"
+    }
+   ]
+  },
+  "grb39_grenade_launcher_panzerpioneer_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/grb39_grenade_launcher_panzerpioneer_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "grb_39_grenade_launcher_he_ak"
+    }
+   ]
+  }
+ }
+}

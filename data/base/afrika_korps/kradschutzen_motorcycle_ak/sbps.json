@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "kradschutzen_motorcycle_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/kradschutzen_motorcycle_ak",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "kradschutzen_motorcycle_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 180
+    },
+    "from": "coh3stats"
+   },
+   "pop": 3,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "ultra_light",
+    "dak_light_vehicle",
+    "tier1",
+    "vehicle_support",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "recon_kradschutzen_ak",
+    "self_repair_sdkfz_254_ak",
+    "infantry_support_motorcycle_ak",
+    "common_shared_veterancy_dummy_parent",
+    "self_repair_passive_ak",
+    "vehicle_capture_dummy_254_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "hold_fire",
+    "recon_kradschutzen_veteran_ak"
+   ],
+   "veterancy": {
+    "set": "kradschutzen_motorcycle_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

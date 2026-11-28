@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "panther_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/panther_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "panther_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 450,
+     "fuel": 125
+    },
+    "from": "coh3stats"
+   },
+   "pop": 16,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "tier4",
+    "vehicle_turret",
+    "heavy_armor",
+    "panzer_kompanie",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_self_repair_ger",
+    "panther_tank_hunter_ger",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "panther_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

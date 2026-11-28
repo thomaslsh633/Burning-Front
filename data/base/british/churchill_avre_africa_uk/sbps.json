@@ -1,0 +1,46 @@
+{
+ "vehicles": {
+  "churchill_avre_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/churchill_avre_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "churchill_avre_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 690,
+     "fuel": 180
+    },
+    "from": "coh3stats"
+   },
+   "pop": 20,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "apex_armor",
+    "vehicle_artillery"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "emergency_repairs_matilda_uk",
+    "royal_engineers_smoke_curtain_uk",
+    "royal_engineers_unwavering_churchill_aura_uk",
+    "royal_engineers_avre_fire_weapon_uk",
+    "royal_engineers_churchill_avre_discombobulate_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_avre_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

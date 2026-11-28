@@ -1,0 +1,54 @@
+{
+ "infantry": {
+  "sniper_us": {
+   "coh3_ref": "sbps/races/american/infantry/sniper_us",
+   "kind": "squad",
+   "role": "recon",
+   "members": [
+    {
+     "entity": "sniper_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "sniper",
+    "tier2",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "abilities": [
+    "veterancy_1_unlock_a_sniper_us",
+    "veterancy_1_unlock_b_sniper_us",
+    "veterancy_1b_medkit_sniper_us",
+    "stealth_recon_sniper_us",
+    "camouflage_in_cover_snipers",
+    "vault_movement",
+    "c_airborne_infantry_medkits_us",
+    "hold_fire",
+    "camouflage_in_cover_snipers_veteran",
+    "passive_instant_withdraw_retreat_in_hold_global_us"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "sniper_us"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

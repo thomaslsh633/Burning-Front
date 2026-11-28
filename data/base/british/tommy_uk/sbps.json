@@ -1,0 +1,67 @@
+{
+ "infantry": {
+  "tommy_uk": {
+   "coh3_ref": "sbps/races/british/infantry/tommy_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "officer_tommy_uk",
+     "count": 1
+    },
+    {
+     "entity": "tommy_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260
+    },
+    "from": "entities"
+   },
+   "pop": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "tier1",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "boys_anti_tank_rifles_tommy_uk",
+     "lmg_bren_tommy_uk",
+     "recon_package_tommy_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "rifle_grenade_tommy_uk",
+    "flare_tommy_uk",
+    "forward_observer_tommy_uk",
+    "smoke_rifle_greande_tommy_uk",
+    "valour_squad_uk",
+    "victoria_cross_squad_uk",
+    "at_grenade_sapper_africa_uk",
+    "c_artillery_forward_observer_smoke_unit_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.54
+   },
+   "veterancy": {
+    "set": "tommy_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

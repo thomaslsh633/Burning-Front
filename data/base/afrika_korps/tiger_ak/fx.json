@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tiger_ak": {
+   "name": "entity.tiger_ak.name",
+   "model": {
+    "id": "tiger_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "tiger_ak": {
+   "name": "unit.tiger_ak.name",
+   "short_name": "unit.tiger_ak.short",
+   "desc": "unit.tiger_ak.desc",
+   "icon": "tiger_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

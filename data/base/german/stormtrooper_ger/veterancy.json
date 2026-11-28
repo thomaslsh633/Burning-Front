@@ -1,0 +1,23 @@
+{
+ "stormtrooper_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/stormtrooper",
+  "xp": [
+   1200,
+   3600,
+   7200
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "received_accuracy": 0.8
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.25
+   }
+  ]
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_2_5_towed_88_ak": {
+   "name": "entity.truck_2_5_towed_88_ak.name",
+   "model": {
+    "id": "truck_2_5_towed_88_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_towed_88mm_ak": {
+   "name": "unit.halftrack_towed_88mm_ak.name",
+   "short_name": "unit.halftrack_towed_88mm_ak.short",
+   "desc": "unit.halftrack_towed_88mm_ak.desc",
+   "icon": "halftrack_towed_88mm_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

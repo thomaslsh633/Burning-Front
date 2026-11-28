@@ -1,0 +1,24 @@
+{
+ "semovente_75_18_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/semovente_75_18_ak",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.9
+   },
+   {
+    "attack_speed": 0.8,
+    "ability_cooldown": 0.65
+   },
+   {
+    "hp_add": 80,
+    "weapon_range": 5,
+    "ability_range": 5
+   }
+  ]
+ }
+}

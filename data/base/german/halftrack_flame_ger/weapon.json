@@ -1,0 +1,178 @@
+{
+ "flame_throwers": {
+  "flamethrower_halftrack_ger": {
+   "coh3_ref": "weapon/german/flame_throwers/flamethrower_halftrack_ger",
+   "class": "flame",
+   "fire_rule": "volley",
+   "damage": 2,
+   "damage_type": "flame",
+   "penetration": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "vs_target": {
+    "building": {
+     "damage": 2,
+     "penetration": 25
+    },
+    "bunker": {
+     "damage": 1.5,
+     "penetration": 20
+    },
+    "emplacement": {
+     "damage": 1.5,
+     "penetration": 20
+    }
+   },
+   "traits": [
+    "needs_sight",
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 42,
+     "mid": 42,
+     "far": 42
+    },
+    "damage_per_shot": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "shot_multiplier": 0.88,
+    "arc_deg": 184,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 1.25,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "suppression": 0
+     },
+     "negative": {
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 1
+   }
+  },
+  "flamethrower_halftrack_right_ger": {
+   "coh3_ref": "weapon/german/flame_throwers/flamethrower_halftrack_right_ger",
+   "class": "flame",
+   "fire_rule": "volley",
+   "damage": 2,
+   "damage_type": "flame",
+   "penetration": {
+    "near": 3,
+    "mid": 3,
+    "far": 3
+   },
+   "vs_target": {
+    "building": {
+     "damage": 2,
+     "penetration": 25
+    },
+    "bunker": {
+     "damage": 1.5,
+     "penetration": 20
+    },
+    "emplacement": {
+     "damage": 1.5,
+     "penetration": 20
+    }
+   },
+   "traits": [
+    "needs_sight",
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 42,
+     "mid": 42,
+     "far": 42
+    },
+    "damage_per_shot": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "shot_multiplier": 0.88,
+    "arc_deg": 184,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 1.25,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "suppression": 0
+     },
+     "negative": {
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 1
+   }
+  }
+ }
+}

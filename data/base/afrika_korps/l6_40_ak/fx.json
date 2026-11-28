@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "20mm_l6_40_ak": {
+   "name": "weapon.20mm_l6_40_ak.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "l6_40_ak": {
+   "name": "entity.l6_40_ak.name",
+   "model": {
+    "id": "l6_40_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "l6_40_ak": {
+   "name": "unit.l6_40_ak.name",
+   "short_name": "unit.l6_40_ak.short",
+   "desc": "unit.l6_40_ak.desc",
+   "icon": "l6_40_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

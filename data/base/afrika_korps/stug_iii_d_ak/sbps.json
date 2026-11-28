@@ -1,0 +1,60 @@
+{
+ "vehicles": {
+  "stug_iii_d_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/stug_iii_d_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stug_iii_d_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 55
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier3",
+    "vehicle_casemate",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg42_stug_ak",
+     "elite_forces_field_modifications_side_skirts_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "smoke_discharge_8rad_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "support_advance_stug_iii_d_ak",
+    "hold_fire",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "elite_forces_gun_swapping_stug_short_to_long_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "stug_iii_d_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

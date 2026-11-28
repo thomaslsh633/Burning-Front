@@ -1,0 +1,79 @@
+{
+ "vehicles": {
+  "pershing_us": {
+   "coh3_ref": "ebps/races/american/vehicles/pershing_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up",
+    "tank",
+    "heavy_armor",
+    "offmap_and_artillery_resistance"
+   ],
+   "hp": 1200,
+   "target_size": 26,
+   "armor": {
+    "front": 300,
+    "side": 180,
+    "rear": 90
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 720,
+    "fuel": 200
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "90mm_pershing_us",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_sherman_us",
+     "mount": "hull",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "m26_pershing_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

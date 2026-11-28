@@ -1,0 +1,29 @@
+{
+ "ebps": {
+  "indian_africa_uk": {
+   "name": "entity.indian_africa_uk.name",
+   "model": {
+    "id": "indian_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "indian_africa_uk": {
+   "name": "unit.indian_africa_uk.name",
+   "short_name": "unit.indian_africa_uk.short",
+   "desc": "unit.indian_africa_uk.desc",
+   "icon": "indian_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "smg_thompson_indian_uk": {
+   "name": "upgrade.smg_thompson_indian_uk.name",
+   "icon": "smg_thompson_indian_uk"
+  }
+ }
+}

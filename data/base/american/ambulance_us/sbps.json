@@ -1,0 +1,41 @@
+{
+ "vehicles": {
+  "ambulance_us": {
+   "coh3_ref": "sbps/races/american/vehicles/ambulance_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "ambulance_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 10
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "healer",
+    "reinforce_healing_platform",
+    "light_armor"
+   ],
+   "source": "restored",
+   "abilities": [
+    "healing_aura_ambulance_us",
+    "repair_critical_engine_damage_us",
+    "common_shared_veterancy_dummy_parent"
+   ],
+   "veterancy": {
+    "set": "ambulance_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

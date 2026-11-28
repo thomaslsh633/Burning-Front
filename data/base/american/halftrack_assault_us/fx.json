@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "halftrack_assault_us": {
+   "name": "entity.halftrack_assault_us.name",
+   "model": {
+    "id": "halftrack_assault_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_assault_us": {
+   "name": "unit.halftrack_assault_us.name",
+   "short_name": "unit.halftrack_assault_us.short",
+   "desc": "unit.halftrack_assault_us.desc",
+   "icon": "halftrack_assault_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

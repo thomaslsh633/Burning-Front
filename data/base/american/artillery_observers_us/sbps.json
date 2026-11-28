@@ -1,0 +1,72 @@
+{
+ "infantry": {
+  "artillery_observers_us": {
+   "coh3_ref": "sbps/races/american/infantry/artillery_observers_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "artillery_observer_leader_radio_us",
+     "count": 1
+    },
+    {
+     "entity": "artillery_observer_us",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_scout_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "flare_scout_us",
+    "smoke_rifle_grenade_scout_us",
+    "veterancy_1_unlock_a_scout_us",
+    "veterancy_1_unlock_b_scout_us",
+    "veterancy_1b_passive_healing_scout_us",
+    "stealth_recon_sniper_us",
+    "vault_movement",
+    "forward_observer_scout_us",
+    "rifle_grenade_pathfinder_us",
+    "c_airborne_infantry_medkits_us",
+    "operate_beacon_artillery_observer_us"
+   ],
+   "capture": {
+    "rate": 1.5
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "artillery_observers_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "artillery_radio_beacon_us"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "sherman_bulldozer_us": {
+   "coh3_ref": "sbps/races/american/vehicles/sherman_bulldozer_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "sherman_bulldozer_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 100
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "tier4",
+    "vehicle_turret",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_sherman_us"
+    ]
+   },
+   "abilities": [
+    "veterancy_1_unlock_a_sherman_bulldozer_us",
+    "veterancy_1_unlock_b_sherman_bulldozer_us",
+    "veterancy_1a_bunker_buster_sherman_bulldozer_us",
+    "veterancy_1b_incendiary_barrage_sherman_bulldozer_us",
+    "heavy_crush_sherman_bulldozer_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "sherman_bulldozer_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

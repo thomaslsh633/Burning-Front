@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "scoped_lee_enfield_sniper_uk": {
+   "name": "weapon.scoped_lee_enfield_sniper_uk.name",
+   "sound": {
+    "fire": "sniper"
+   }
+  }
+ },
+ "ebps": {
+  "sniper_africa_uk": {
+   "name": "entity.sniper_africa_uk.name",
+   "model": {
+    "id": "sniper_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sniper_africa_uk": {
+   "name": "unit.sniper_africa_uk.name",
+   "short_name": "unit.sniper_africa_uk.short",
+   "desc": "unit.sniper_africa_uk.desc",
+   "icon": "sniper_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

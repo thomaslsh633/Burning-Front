@@ -1,0 +1,51 @@
+{
+ "vehicles": {
+  "churchill_arv_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/churchill_arv_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "churchill_arv_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 400,
+     "fuel": 55
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "healer",
+    "recovery_vehicle",
+    "vehicle_repair_recovery",
+    "heavy_armor"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "repair_vehicle_us",
+    "salvage_recovery_vehicle_us",
+    "m_restore_wreck_vehicle_us",
+    "restore_wreck_vehicle_us",
+    "repair_critical_engine_damage_us",
+    "self_repair_passive_recovery_vehicle_us",
+    "common_shared_veterancy_dummy_parent",
+    "self_repair_passive_ui_34_ak",
+    "royal_engineers_smoke_curtain_arv_uk",
+    "royal_engineers_unwavering_churchill_aura_uk",
+    "royal_engineers_churchill_operation_cuckoo_uk"
+   ],
+   "veterancy": {
+    "set": "churchill_arv_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

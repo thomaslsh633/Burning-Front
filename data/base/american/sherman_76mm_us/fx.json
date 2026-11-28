@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "sherman_76mm_us": {
+   "name": "entity.sherman_76mm_us.name",
+   "model": {
+    "id": "sherman_76mm_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_76mm_us": {
+   "name": "unit.sherman_76mm_us.name",
+   "short_name": "unit.sherman_76mm_us.short",
+   "desc": "unit.sherman_76mm_us.desc",
+   "icon": "sherman_76mm_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

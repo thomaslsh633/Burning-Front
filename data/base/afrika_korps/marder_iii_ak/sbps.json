@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "marder_iii_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/marder_iii_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "marder_iii_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 40
+    },
+    "from": "coh3stats"
+   },
+   "pop": 7,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_casemate_anti_tank",
+    "tier3",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "blitz_upgrade_ak",
+    "tungsten_rounds_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "marder_travel_speed_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "marder_iii_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

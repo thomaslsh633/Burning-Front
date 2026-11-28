@@ -1,0 +1,56 @@
+{
+ "infantry": {
+  "sniper_ger": {
+   "coh3_ref": "sbps/races/german/infantry/sniper_ger",
+   "kind": "squad",
+   "role": "recon",
+   "members": [
+    {
+     "entity": "sniper_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "sniper",
+    "tier2",
+    "infanterie_kompanie",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "camouflage_in_cover_snipers",
+    "vault_movement",
+    "mountain_zeal_squad_ger",
+    "sniper_pinning_shot_ger",
+    "hold_fire",
+    "camouflage_in_cover_snipers_wehr_veteran",
+    "camouflage_in_cover_snipers_wehr_vet_3",
+    "terror_infantry_no_quarter_sniper_ger",
+    "terror_infantry_interrogate_ger",
+    "last_stand_panzerfaust_global_ger"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "sniper_ger"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

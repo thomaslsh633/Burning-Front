@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "halftrack_251_stuka_ak": {
+   "name": "entity.halftrack_251_stuka_ak.name",
+   "model": {
+    "id": "halftrack_251_stuka_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_251_stuka_ak": {
+   "name": "unit.halftrack_251_stuka_ak.name",
+   "short_name": "unit.halftrack_251_stuka_ak.short",
+   "desc": "unit.halftrack_251_stuka_ak.desc",
+   "icon": "halftrack_251_stuka_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

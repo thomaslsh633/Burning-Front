@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "stealth_ssf_commandos_torch": {
+   "name": "unit.stealth_ssf_commandos_torch.name",
+   "short_name": "unit.stealth_ssf_commandos_torch.short",
+   "desc": "unit.stealth_ssf_commandos_torch.desc",
+   "icon": "stealth_ssf_commandos_torch",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

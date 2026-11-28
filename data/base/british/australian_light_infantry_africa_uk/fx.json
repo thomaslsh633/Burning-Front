@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "lee_enfield_australian_uk": {
+   "name": "weapon.lee_enfield_australian_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "australian_light_infantry_africa_uk": {
+   "name": "entity.australian_light_infantry_africa_uk.name",
+   "model": {
+    "id": "australian_light_infantry_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "australian_light_infantry_africa_uk": {
+   "name": "unit.australian_light_infantry_africa_uk.name",
+   "short_name": "unit.australian_light_infantry_africa_uk.short",
+   "desc": "unit.australian_light_infantry_africa_uk.desc",
+   "icon": "australian_light_infantry_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "scoped_rifles_australian_uk": {
+   "name": "upgrade.scoped_rifles_australian_uk.name",
+   "icon": "scoped_rifles_australian_uk"
+  }
+ }
+}

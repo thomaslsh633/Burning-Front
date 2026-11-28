@@ -1,0 +1,73 @@
+{
+ "vehicles": {
+  "halftrack_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/halftrack_ger",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "halftrack_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "panzergrenadier_kompanie",
+    "vehicle_burst_weapon",
+    "reinforce_healing_platform"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "stummel_halftrack_ger",
+     "medical_halftrack_ger",
+     "spotting_scopes_ger",
+     "flame_halftrack_ger"
+    ]
+   },
+   "abilities": [
+    "critical_repair_mechanized_ger",
+    "mechanized_self_repair_ger",
+    "mechanized_smoke_canisters_ger",
+    "mechanized_left_1b_raid_ger",
+    "towing_pickup",
+    "towing_drop",
+    "recrew_team_weapon_halftrack_us",
+    "healing_aura_halftrack_upgrade_ger",
+    "auto_reinforce_halftrack",
+    "common_shared_veterancy_dummy_parent",
+    "mechanized_repair_aura_ger",
+    "terror_vehicle_heavy_gunnery_ger",
+    "siegebreakers_grinding_advance_medium_ger",
+    "siege_leader_siegebreaker_passive_ger",
+    "s_mine_launcher_grinding_advance_32_ger",
+    "siege_leader_siegebreaker_passive_triggered_ger",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_ger"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_riegel_43_ger",
+     "mine_riegel_43_halftrack_veteran_ger"
+    ]
+   }
+  }
+ }
+}

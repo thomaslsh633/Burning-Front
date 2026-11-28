@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_2_5_fuel_ger": {
+   "name": "entity.truck_2_5_fuel_ger.name",
+   "model": {
+    "id": "truck_2_5_fuel_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "truck_2_5_fuel_ger": {
+   "name": "unit.truck_2_5_fuel_ger.name",
+   "short_name": "unit.truck_2_5_fuel_ger.short",
+   "desc": "unit.truck_2_5_fuel_ger.desc",
+   "icon": "truck_2_5_fuel_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

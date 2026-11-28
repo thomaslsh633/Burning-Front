@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "88mm_nashorn_ger": {
+   "name": "weapon.88mm_nashorn_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "nashorn_ger": {
+   "name": "entity.nashorn_ger.name",
+   "model": {
+    "id": "nashorn_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "nashorn_ger": {
+   "name": "unit.nashorn_ger.name",
+   "short_name": "unit.nashorn_ger.short",
+   "desc": "unit.nashorn_ger.desc",
+   "icon": "nashorn_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

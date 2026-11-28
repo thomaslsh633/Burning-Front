@@ -1,0 +1,41 @@
+{
+ "buildings": {
+  "point_fortification_cache_20mm_aa_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/buildings/defensive/point_fortification_cache_20mm_aa_ak",
+   "tags": [
+    "building",
+    "observation_post",
+    "cover_object",
+    "emplacement_no_teardown",
+    "team_weapon"
+   ],
+   "hp": 600,
+   "target_size": 22,
+   "armor": {
+    "front": 4,
+    "side": 4,
+    "rear": 4
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "munition": 50
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "construction": {
+    "build_turns": 2,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

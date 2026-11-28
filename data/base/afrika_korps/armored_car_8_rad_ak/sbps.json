@@ -1,0 +1,64 @@
+{
+ "vehicles": {
+  "armored_car_8_rad_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/armored_car_8_rad_ak",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "armored_car_8_rad_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "dak_light_vehicle",
+    "tier3",
+    "light_armor",
+    "vehicle_burst_weapon",
+    "8_rad"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "smoke_discharge_8rad_ak",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "commander_mode_8_rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "armored_car_8_rad_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "17pdr_at_gun_ph_uk": {
+   "name": "weapon.17pdr_at_gun_ph_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "tw_at_gun_17pdr_pheasant_uk": {
+   "name": "entity.tw_at_gun_17pdr_pheasant_uk.name",
+   "model": {
+    "id": "tw_at_gun_17pdr_pheasant_uk",
+    "anim_class": "crew"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_17pdr_pheasant_uk": {
+   "name": "unit.at_gun_17pdr_pheasant_uk.name",
+   "short_name": "unit.at_gun_17pdr_pheasant_uk.short",
+   "desc": "unit.at_gun_17pdr_pheasant_uk.desc",
+   "icon": "at_gun_17pdr_pheasant_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

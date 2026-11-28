@@ -1,0 +1,63 @@
+{
+ "vehicles": {
+  "dingo_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/dingo_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "ultra_light",
+    "vehicle_wheeled"
+   ],
+   "hp": 235,
+   "target_size": 10.6,
+   "armor": {
+    "front": 4.5,
+    "side": 4.25,
+    "rear": 2.5
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 265
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 9,
+    "pass": "vehicle_ultra_light"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "30cal_dingo_uk",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "dingo_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "grant_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/grant_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "grant_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360,
+     "fuel": 100
+    },
+    "from": "coh3stats"
+   },
+   "pop": 13,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret_anti_tank"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles_grant",
+    "repair_critical_engine_damage_uk",
+    "hold_fire",
+    "fire_all_the_guns_grant_uk"
+   ],
+   "veterancy": {
+    "set": "grant_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

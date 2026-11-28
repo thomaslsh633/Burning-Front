@@ -1,0 +1,66 @@
+{
+ "team_weapons": {
+  "at_gun_57mm_paradrop_us": {
+   "coh3_ref": "sbps/races/american/team_weapons/at_gun_57mm_paradrop_us",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_57mm_us",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_57mm_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 270
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 5,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "tier3"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "hold_fire",
+    "veterancy_1_unlock_a_at_gun_57mm_us",
+    "veterancy_1_unlock_b_at_gun_57mm_us",
+    "at_gun_57mm_fast_move_us",
+    "veterancy_1a_focused_sight_at_gun_57mm_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_57mm_paradrop_us"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_57mm_us",
+    "crew_entity": "crew_at_gun_57mm_us"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

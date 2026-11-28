@@ -1,0 +1,81 @@
+{
+ "infantry": {
+  "captain_us": {
+   "coh3_ref": "sbps/races/american/infantry/captain_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "captain_us",
+     "count": 1
+    },
+    {
+     "entity": "rifleman_captain_us",
+     "count": 2
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "captain",
+    "infantry_burst_weapon",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "m1941_lmg_special_operations_us",
+     "bar_captain_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "follow_captain_us",
+    "veterancy_1_unlock_a_captain_us",
+    "veterancy_1_unlock_b_captain_us",
+    "off_map_mortar_barrage_captain_us",
+    "veterancy_1b_mark_target_captain_us",
+    "leadership_aura_captain_us",
+    "order_flanking_maneuver_us",
+    "passive_instant_withdraw_retreat_in_hold_global_us",
+    "vault_movement",
+    "c_airborne_infantry_medkits_us",
+    "common_shared_veterancy_dummy_3_2",
+    "leadership_aura_captain_veteran_us",
+    "french_old_guard_retreat_buff_us"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "captain_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_french_infantry_us",
+     "belgian_gate_french_us",
+     "concrete_bastion_infantry_us",
+     "barbed_wire_fence_french_engineering_upgrade_us",
+     "fighting_position_french_engineering_upgrade_us",
+     "tourelle_emplacement_us",
+     "observation_post_french_us",
+     "tank_trap_french_us"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_4_2_heavy_mortar_uk": {
+   "name": "entity.tw_4_2_heavy_mortar_uk.name",
+   "model": {
+    "id": "tw_4_2_heavy_mortar_uk",
+    "anim_class": "crew"
+   }
+  }
+ },
+ "sbps": {
+  "mortar_heavy_4_2_uk": {
+   "name": "unit.mortar_heavy_4_2_uk.name",
+   "short_name": "unit.mortar_heavy_4_2_uk.short",
+   "desc": "unit.mortar_heavy_4_2_uk.desc",
+   "icon": "mortar_heavy_4_2_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

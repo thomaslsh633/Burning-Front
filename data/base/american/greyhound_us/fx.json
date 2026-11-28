@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "37mm_greyhound_us": {
+   "name": "weapon.37mm_greyhound_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_greyhound_us": {
+   "name": "weapon.30cal_coaxial_greyhound_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "greyhound_us": {
+   "name": "entity.greyhound_us.name",
+   "model": {
+    "id": "greyhound_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "greyhound_us": {
+   "name": "unit.greyhound_us.name",
+   "short_name": "unit.greyhound_us.short",
+   "desc": "unit.greyhound_us.desc",
+   "icon": "greyhound_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

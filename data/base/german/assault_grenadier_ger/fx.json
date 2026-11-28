@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "assault_grenadier_ger": {
+   "name": "unit.assault_grenadier_ger.name",
+   "short_name": "unit.assault_grenadier_ger.short",
+   "desc": "unit.assault_grenadier_ger.desc",
+   "icon": "assault_grenadier_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

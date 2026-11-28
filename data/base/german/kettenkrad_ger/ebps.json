@@ -1,0 +1,50 @@
+{
+ "vehicles": {
+  "kettenkrad_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/kettenkrad_ger",
+   "tags": [
+    "vehicle",
+    "kettenkrad",
+    "ultra_light",
+    "light_vehicle"
+   ],
+   "hp": 180,
+   "target_size": 9,
+   "armor": {
+    "front": 4,
+    "side": 3,
+    "rear": 3
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 160
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 13,
+    "pass": "vehicle_ultra_light"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 5
+   },
+   "wreck": {
+    "entity": "kettenkrad_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

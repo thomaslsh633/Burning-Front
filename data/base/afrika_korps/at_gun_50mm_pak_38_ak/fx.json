@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "pak_38_50mm_at_gun_ak": {
+   "name": "weapon.pak_38_50mm_at_gun_ak.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "tw_pak_38_ak": {
+   "name": "entity.tw_pak_38_ak.name",
+   "model": {
+    "id": "tw_pak_38_ak",
+    "anim_class": "crew"
+   }
+  },
+  "crew_pak_38_ak": {
+   "name": "entity.crew_pak_38_ak.name",
+   "model": {
+    "id": "crew_pak_38_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_50mm_pak_38_ak": {
+   "name": "unit.at_gun_50mm_pak_38_ak.name",
+   "short_name": "unit.at_gun_50mm_pak_38_ak.short",
+   "desc": "unit.at_gun_50mm_pak_38_ak.desc",
+   "icon": "at_gun_50mm_pak_38_ak",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

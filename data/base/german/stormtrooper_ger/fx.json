@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "g43_stormtrooper_ger": {
+   "name": "weapon.g43_stormtrooper_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "stormtrooper_ger": {
+   "name": "entity.stormtrooper_ger.name",
+   "model": {
+    "id": "stormtrooper_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "stormtrooper_ger": {
+   "name": "unit.stormtrooper_ger.name",
+   "short_name": "unit.stormtrooper_ger.short",
+   "desc": "unit.stormtrooper_ger.desc",
+   "icon": "stormtrooper_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

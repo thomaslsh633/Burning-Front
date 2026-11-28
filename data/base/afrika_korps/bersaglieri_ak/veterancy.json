@@ -1,0 +1,23 @@
+{
+ "bersaglieri_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/infantry/bersaglieri",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.2,
+    "attack_speed": 0.85
+   },
+   {
+    "hp_add": 20,
+    "weapon_accuracy": 1.2
+   }
+  ]
+ }
+}

@@ -1,0 +1,172 @@
+{
+ "buildings": {
+  "sandbag_wall_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/buildings/defensive/sandbag_wall_ak",
+   "tags": [
+    "building",
+    "cover_object"
+   ],
+   "hp": 300,
+   "target_size": 25,
+   "armor": {
+    "front": 25,
+    "side": 25,
+    "rear": 25
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  },
+  "barbed_wire_fence_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/buildings/defensive/barbed_wire_fence_ak",
+   "tags": [
+    "building"
+   ],
+   "hp": 150,
+   "target_size": 25,
+   "armor": {
+    "front": 20,
+    "side": 20,
+    "rear": 20
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  },
+  "tank_trap_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/buildings/defensive/tank_trap_ak",
+   "tags": [
+    "cover_object",
+    "building"
+   ],
+   "hp": 400,
+   "target_size": 25,
+   "armor": {
+    "front": 50,
+    "side": 50,
+    "rear": 50
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {},
+   "traits": [
+    "repairable"
+   ],
+   "construction": {
+    "build_turns": 1,
+    "footprint_hex": 1
+   }
+  }
+ },
+ "vehicles": {
+  "tiger_ace_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/tiger_ace_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off",
+    "rideable_tank",
+    "offmap_and_artillery_resistance"
+   ],
+   "hp": 1200,
+   "target_size": 26,
+   "armor": {
+    "front": 380,
+    "side": 210,
+    "rear": 80
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 720,
+    "fuel": 200
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "88mm_tiger_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "mg34_coaxial_tiger_i_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "mg34_hull_panzer_iv_ger",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "25mm_tank_mortar_smoke_ak",
+     "mount": "turret",
+     "slot": "accessory"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "tiger_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

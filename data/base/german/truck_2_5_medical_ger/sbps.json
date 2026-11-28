@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "truck_2_5_medical_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/truck_2_5_medical_ger",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "truck_2_5_medical_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 15
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier1",
+    "healer",
+    "reinforce_healing_platform"
+   ],
+   "source": "restored",
+   "abilities": [
+    "healing_aura_halftrack_us",
+    "recrew_team_weapon_halftrack_us",
+    "auto_reinforce_halftrack",
+    "common_shared_veterancy_dummy_parent",
+    "vehicle_handbrake"
+   ],
+   "veterancy": {
+    "set": "truck_2_5_medical_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

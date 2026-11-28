@@ -1,0 +1,75 @@
+{
+ "vehicles": {
+  "humber_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/humber_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "vehicle_wheeled",
+    "allow_brew_up",
+    "allow_turret_off"
+   ],
+   "hp": 240,
+   "target_size": 16,
+   "armor": {
+    "front": 25,
+    "side": 25,
+    "rear": 10
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 260,
+    "fuel": 35
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 9,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 5
+   },
+   "weapons": [
+    {
+     "weapon": "besa_hmg_humber_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_humber_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_humber_uk",
+     "mount": "turret",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "humber_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "infantry": {
+  "infantry_assault_riflemen_us": {
+   "coh3_ref": "sbps/races/american/infantry/infantry_assault/infantry_assault_riflemen_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "infantry_assault_rifleman_squad_leader_us",
+     "count": 1
+    },
+    {
+     "entity": "infantry_assault_rifleman_us",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 210
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "infantry",
+    "standard_infantry"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "bar_rifleman_squad_us",
+     "m1941_lmg_rifleman_us",
+     "m1919a6_rifleman_squad_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "grenade_riflemen_us",
+    "veterancy_1_unlock_a_riflemen_us",
+    "veterancy_1_unlock_b_riflemen_us",
+    "veterancy_1a_fire_superiority_riflemen_us",
+    "veterancy_1b_tactical_movement_riflemen_us",
+    "sticky_bomb_riflemen_us",
+    "breach",
+    "fighting_position_auto_grenade_us",
+    "vault_movement",
+    "c_airborne_infantry_medkits_us"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "veterancy": {
+    "set": "infantry_assault_riflemen_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_rifleman_us",
+     "barbed_wire_fence_rifleman_us",
+     "tank_trap_rifleman_us",
+     "mine_rifleman_us",
+     "fighting_position_rifleman_us",
+     "mine_heavy_engineer_us",
+     "demo_charge_timed_us"
+    ]
+   },
+   "reinforce": {
+    "cost_ratio": 1
+   }
+  }
+ }
+}

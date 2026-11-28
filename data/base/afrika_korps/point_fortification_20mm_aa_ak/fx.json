@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "point_fortification_cache_20mm_aa_ak": {
+   "name": "entity.point_fortification_cache_20mm_aa_ak.name",
+   "model": {
+    "id": "point_fortification_cache_20mm_aa_ak",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "point_fortification_20mm_aa_ak": {
+   "name": "unit.point_fortification_20mm_aa_ak.name",
+   "short_name": "unit.point_fortification_20mm_aa_ak.short",
+   "desc": "unit.point_fortification_20mm_aa_ak.desc",
+   "icon": "point_fortification_20mm_aa_ak",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

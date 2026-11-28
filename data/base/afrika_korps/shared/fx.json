@@ -1,0 +1,130 @@
+{
+ "weapon": {
+  "lmg_panzergrenadier_ak": {
+   "name": "weapon.lmg_panzergrenadier_ak.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "mp40_crew_ak": {
+   "name": "weapon.mp40_crew_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  },
+  "mg34_hull_panzer_iii_ak": {
+   "name": "weapon.mg34_hull_panzer_iii_ak.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "25mm_tank_mortar_smoke_ak": {
+   "name": "weapon.25mm_tank_mortar_smoke_ak.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "mg42_panzer_iv_ger": {
+   "name": "weapon.mg42_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "8mm_coaxial_l6_40_ger": {
+   "name": "weapon.8mm_coaxial_l6_40_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "25mm_tank_mortar_smoke_ger": {
+   "name": "weapon.25mm_tank_mortar_smoke_ger.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "47mm_cannone_da_47_32_ak": {
+   "name": "weapon.47mm_cannone_da_47_32_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "breda_38_coaxial_m13_40_ak": {
+   "name": "weapon.breda_38_coaxial_m13_40_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_coaxial_panzer_iii_ak": {
+   "name": "weapon.mg34_coaxial_panzer_iii_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_coaxial_panzer_iv_ger": {
+   "name": "weapon.mg34_coaxial_panzer_iv_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "mg34_hull_panzer_iv_ger": {
+   "name": "weapon.mg34_hull_panzer_iv_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "grenade_vehicle_crew_ger": {
+   "name": "weapon.grenade_vehicle_crew_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "88mm_tiger_ak": {
+   "name": "weapon.88mm_tiger_ak.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  },
+  "mg34_coaxial_tiger_i_ger": {
+   "name": "weapon.mg34_coaxial_tiger_i_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "tiger_ace_ak": {
+   "name": "entity.tiger_ace_ak.name",
+   "model": {
+    "id": "tiger_ace_ak",
+    "anim_class": "tank_medium"
+   }
+  },
+  "sandbag_wall_ak": {
+   "name": "entity.sandbag_wall_ak.name",
+   "model": {
+    "id": "sandbag_wall_ak",
+    "anim_class": "static"
+   }
+  },
+  "barbed_wire_fence_ak": {
+   "name": "entity.barbed_wire_fence_ak.name",
+   "model": {
+    "id": "barbed_wire_fence_ak",
+    "anim_class": "static"
+   }
+  },
+  "tank_trap_ak": {
+   "name": "entity.tank_trap_ak.name",
+   "model": {
+    "id": "tank_trap_ak",
+    "anim_class": "static"
+   }
+  }
+ }
+}

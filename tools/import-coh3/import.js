@@ -3,11 +3,12 @@
 // edited by hand: designer changes go in data/units/<faction>/ as overrides) and
 // reports/import/<faction>.md (every guessed / defaulted / dropped value, and v214 differences for reference).
 //
-// usage: node tools/import-coh3/import.js <faction> [squad id …]   (no ids: the D1-5 pilot set for that faction)
+// usage: node tools/import-coh3/import.js <faction> [--all | squad id …]   (no ids: the D1-5 pilot set; --all: every roster squad)
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadSource, byId, EXT, last } from '../lib/coh3.js';
+import { checkProfile } from '../profiles.js';
 import { buildRoster } from '../coh3/roster.js';
 import { classOf } from './indirect.js';
 import { loadConfig } from '../lib/config.js';
@@ -59,6 +60,7 @@ export function importFaction(faction, squadIds) {
     if (Object.values(files.weapon).some(c => id in c)) return;
     const w = weapons.get(id);
     if (!w) { report.push({ id, kind: 'weapon', notes: ['weapon not found'] }); return; }
+    if (/dummy/.test(id)) { report.push({ id, kind: 'weapon', notes: ['CoH3 placeholder weapon; skipped'] }); return; }
     let category = w.path[w.path.length - 2] ?? w.path[0];
     if (!((w.rec.weapon_bag.damage?.max ?? 0) > 0) && !['mine'].includes(category)) category = 'smoke';   // smoke launchers: no damage, fired by abilities
     if (!profiles.weapon.categories[category]) { report.push({ id, kind: 'weapon', notes: [`category ${category} has no profile; skipped`] }); return; }
@@ -125,6 +127,7 @@ export function importFaction(faction, squadIds) {
       if (pending.length) record.upgrades.pending = pending;
     }
   }
+  dropBroken(files, profiles, report);
   // defensive structures the faction builds (sandbags, wire, tank traps): HP and armour for map lines and objects
   const terrainRules = read('data/rules/terrain.json');
   for (const def of [...Object.values(terrainRules.lines), ...Object.values(terrainRules.objects)]) {
@@ -132,6 +135,44 @@ export function importFaction(faction, squadIds) {
     if (id) addEntity(id);
   }
   return { files, report };
+}
+
+/**
+ * Clean-up after a full import: weapons that fail their category profile are left out; entity weapon links to weapons that
+ * were not imported (placeholders, recovery cranes) are dropped; a squad whose own records fail their category profile, or that names a member entity that was not imported,
+ * is left out (reported), so one odd CoH3 record never breaks the build.
+ */
+function dropBroken(files, profiles, report) {
+  for (const [cat, recs] of Object.entries(files.weapon)) {
+    for (const [id, w] of Object.entries(recs)) {
+      const why = checkProfile(profiles, 'weapon', cat, w);
+      if (why.length) { delete recs[id]; delete files.fx.weapon[id]; report.push({ id, kind: 'weapon left out', notes: why }); }
+    }
+  }
+  const has = (kind, id) => Object.values(files[kind]).some(c => id in c);
+  for (const c of Object.values(files.ebps)) {
+    for (const e of Object.values(c)) {
+      if (!e.weapons) continue;
+      e.weapons = e.weapons.filter(w => has('weapon', w.weapon));
+      if (!e.weapons.length) delete e.weapons;   // e.g. artillery whose CoH3 weapon is a placeholder: fired by abilities (not built)
+    }
+  }
+  const bad = [];
+  for (const [cat, recs] of Object.entries(files.sbps)) {
+    for (const [id, sq] of Object.entries(recs)) {
+      const why = [...checkProfile(profiles, 'sbps', cat, sq), ...sq.members.flatMap(m => {
+        const ecat = Object.keys(files.ebps).find(k => m.entity in files.ebps[k]);
+        return ecat ? checkProfile(profiles, 'ebps', ecat, files.ebps[ecat][m.entity]).map(x => `${m.entity}: ${x}`) : [`member ${m.entity} not imported`];
+      })];
+      const w = sq.team_weapon?.weapon;
+      if (w) { const wcat = Object.keys(files.weapon).find(k => w in files.weapon[k]); why.push(...(wcat ? checkProfile(profiles, 'weapon', wcat, files.weapon[wcat][w]).map(x => `${w}: ${x}`) : [`weapon ${w} not imported`])); }
+      if (why.length) { bad.push({ cat, id }); report.push({ id, kind: 'squad left out', notes: why }); }
+    }
+  }
+  for (const { cat, id } of bad) { delete files.sbps[cat][id]; delete files.veterancy[id]; delete files.fx.sbps[id]; }
+  // entities only a left-out squad used go too (defensive structures are added after this)
+  const used = new Set(Object.values(files.sbps).flatMap(c => Object.values(c).flatMap(sq => sq.members.map(m => m.entity))));
+  for (const c of Object.values(files.ebps)) for (const id of Object.keys(c)) if (!used.has(id)) { delete c[id]; delete files.fx.ebps[id]; }
 }
 
 function legacyDiff(faction, files) {
@@ -152,8 +193,11 @@ function legacyDiff(faction, files) {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const faction = process.argv[2];
-  if (!faction) { console.log('usage: node tools/import-coh3/import.js <faction> [squad id …]'); process.exit(1); }
-  const ids = process.argv.slice(3).length ? process.argv.slice(3) : PILOT[faction];
+  if (!faction) { console.log('usage: node tools/import-coh3/import.js <faction> [--all | squad id …]'); process.exit(1); }
+  const all = process.argv[3] === '--all';
+  const races = Object.values(loadConfig(root).roster.factions[faction].sources);
+  const ids = all ? [...new Set(Object.values(buildRoster(loadSource(root), loadConfig(root).roster, races)).flatMap(r => r.units.map(u => u.id)))]
+    : process.argv.slice(3).length ? process.argv.slice(3) : PILOT[faction];
   const { files, report } = importFaction(faction, ids);
   // data/base/<faction>/ is generated: rewritten whole, one folder per squad plus shared/ (tools/import-coh3/layout.js)
   const outDir = path.join(root, 'data/base', faction);
@@ -162,7 +206,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     fs.mkdirSync(path.join(outDir, folder), { recursive: true });
     for (const [k, v] of Object.entries(kinds)) fs.writeFileSync(path.join(outDir, folder, `${k}.json`), JSON.stringify(v, null, 1) + '\n');
   }
-  const L = [`# Import report: ${faction}`, '', `Generated by \`node tools/import-coh3/import.js ${faction}${process.argv.slice(3).length ? ' …' : ''}\`. Squads: ${ids.join(', ')}.`, '',
+  const L = [`# Import report: ${faction}`, '', `Generated by \`node tools/import-coh3/import.js ${faction}${all ? ' --all' : process.argv.slice(3).length ? ' …' : ''}\`. Squads (${ids.length}): ${ids.join(', ')}.`, '',
     'Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-labels.md.', '', '| Record | kind | notes |', '| --- | --- | --- |'];
   for (const r of report) L.push(`| ${r.id} | ${r.kind} | ${r.notes.join('; ') || '—'} |`);
   const diff = legacyDiff(faction, files);

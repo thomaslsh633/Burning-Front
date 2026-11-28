@@ -1,0 +1,70 @@
+{
+ "vehicles": {
+  "cwt_lrdg_truck_2pdr_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/cwt_lrdg_truck_2pdr_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "british_africa",
+    "vehicle_wheeled",
+    "support_vehicle"
+   ],
+   "hp": 320,
+   "target_size": 16,
+   "armor": {
+    "front": 8,
+    "side": 6,
+    "rear": 4
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 250,
+    "fuel": 35
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "2pdr_cwt_lrdg_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "vickers_twin_cwt_lrdg_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "cwt_lrdg_truck_2pdr_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

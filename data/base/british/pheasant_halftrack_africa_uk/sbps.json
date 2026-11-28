@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "pheasant_halftrack_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/pheasant_halftrack_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "pheasant_halftrack_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 360,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 16,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "reinforce_healing_platform",
+    "tier4",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "weapon_flak_mount_cwt_truck_uk",
+     "medical_truck_uk"
+    ]
+   },
+   "abilities": [
+    "towing_pickup",
+    "repair_critical_engine_damage_uk",
+    "recrew_team_weapon_halftrack_us",
+    "towing_drop",
+    "auto_reinforce_halftrack",
+    "improved_logistics_cwt_uk",
+    "common_shared_veterancy_dummy_parent",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "pheasant_halftrack_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

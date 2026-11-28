@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "base_defense_uk": {
+   "name": "entity.base_defense_uk.name",
+   "model": {
+    "id": "base_defense_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "base_defense_uk": {
+   "name": "unit.base_defense_uk.name",
+   "short_name": "unit.base_defense_uk.short",
+   "desc": "unit.base_defense_uk.desc",
+   "icon": "base_defense_uk",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "infantry": {
+  "mg15_jaeger_ger": {
+   "coh3_ref": "upgrade/german/infantry/mg15_jaeger_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 80
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "mg15_jaeger_ger"
+    }
+   ]
+  },
+  "grb_39_grenade_launcher_fallschirmpioneer_ger": {
+   "coh3_ref": "upgrade/german/infantry/grb_39_grenade_launcher_fallschirmpioneer_ger",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "grb_39_grenade_launcher_he_ger"
+    }
+   ]
+  }
+ }
+}

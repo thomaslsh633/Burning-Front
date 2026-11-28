@@ -1,0 +1,45 @@
+{
+ "vehicles": {
+  "dingo_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/dingo_uk",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "dingo_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "ultra_light",
+    "tier1",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "abilities": [
+    "medical_supplies_dingo_uk",
+    "repair_critical_engine_damage_uk",
+    "towing_pickup",
+    "towing_drop",
+    "british_fake_flares_uk",
+    "barrage_humber_uk",
+    "common_shared_veterancy_dummy_3_2",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "dingo_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,13 +1,267 @@
 {
  "weapon": {
+  "30cal_hmg_us": {
+   "name": "weapon.30cal_hmg_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "105mm_howitzer_normal_us": {
+   "name": "weapon.105mm_howitzer_normal_us.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "garand_pathfinder_us": {
+   "name": "weapon.garand_pathfinder_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "grease_gun_assault_engineer_us": {
+   "name": "weapon.grease_gun_assault_engineer_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_engineer_us": {
+   "name": "weapon.flamethrower_engineer_us.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "m1941_lmg_devils_brigade_us": {
+   "name": "weapon.m1941_lmg_devils_brigade_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "carbine_bazooka_team_us": {
+   "name": "weapon.carbine_bazooka_team_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "panzerschreck_stormtrooper_ger": {
+   "name": "weapon.panzerschreck_stormtrooper_ger.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  },
+  "thompson_captain_us": {
+   "name": "weapon.thompson_captain_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "garand_rifleman_us": {
+   "name": "weapon.garand_rifleman_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "m1919a6_paratrooper_us": {
+   "name": "weapon.m1919a6_paratrooper_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "lmg_m24_29_chatellerault_us": {
+   "name": "weapon.lmg_m24_29_chatellerault_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "m1919a6_old_guard_us": {
+   "name": "weapon.m1919a6_old_guard_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "thompson_riflemen_leader_us": {
+   "name": "weapon.thompson_riflemen_leader_us.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "bar_riflemen_us": {
+   "name": "weapon.bar_riflemen_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "carcano_resistance_fighter_partisan": {
+   "name": "weapon.carcano_resistance_fighter_partisan.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "beretta_model_38_resistance_fighters_partisan": {
+   "name": "weapon.beretta_model_38_resistance_fighters_partisan.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "grb_39_grenade_launcher_he_ak": {
+   "name": "weapon.grb_39_grenade_launcher_he_ak.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  },
+  "luger_pistol_partisan_us": {
+   "name": "weapon.luger_pistol_partisan_us.name",
+   "sound": {
+    "fire": "pistol"
+   }
+  },
+  "garand_devils_brigade_us": {
+   "name": "weapon.garand_devils_brigade_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
   "carbine_crew_us": {
    "name": "weapon.carbine_crew_us.name",
    "sound": {
     "fire": "rifle"
    }
+  },
+  "57mm_at_gun_us": {
+   "name": "weapon.57mm_at_gun_us.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "2inch_mortar_smoke_sherman_us": {
+   "name": "weapon.2inch_mortar_smoke_sherman_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "50cal_halftrack_us": {
+   "name": "weapon.50cal_halftrack_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_coaxial_sherman_us": {
+   "name": "weapon.30cal_coaxial_sherman_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_sherman_us": {
+   "name": "weapon.30cal_hull_sherman_us.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "76mm_sherman_us": {
+   "name": "weapon.76mm_sherman_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "105mm_sherman_bulldozer_us": {
+   "name": "weapon.105mm_sherman_bulldozer_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "75mm_sherman_us": {
+   "name": "weapon.75mm_sherman_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "37mm_stuart_uk": {
+   "name": "weapon.37mm_stuart_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "30cal_coaxial_stuart_uk": {
+   "name": "weapon.30cal_coaxial_stuart_uk.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  },
+  "30cal_hull_stuart_uk": {
+   "name": "weapon.30cal_hull_stuart_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "tank_smoke_ak": {
+   "name": "weapon.tank_smoke_ak.name",
+   "sound": {
+    "fire": "smoke"
+   }
+  },
+  "30cal_truck_4x4_us": {
+   "name": "weapon.30cal_truck_4x4_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
   }
  },
  "ebps": {
+  "captain_us": {
+   "name": "entity.captain_us.name",
+   "model": {
+    "id": "captain_us",
+    "anim_class": "infantry"
+   }
+  },
+  "rifleman_captain_us": {
+   "name": "entity.rifleman_captain_us.name",
+   "model": {
+    "id": "rifleman_captain_us",
+    "anim_class": "infantry"
+   }
+  },
+  "ssf_commandos_us": {
+   "name": "entity.ssf_commandos_us.name",
+   "model": {
+    "id": "ssf_commandos_us",
+    "anim_class": "infantry"
+   }
+  },
+  "tw_at_gun_57mm_us": {
+   "name": "entity.tw_at_gun_57mm_us.name",
+   "model": {
+    "id": "tw_at_gun_57mm_us",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_57mm_us": {
+   "name": "entity.crew_at_gun_57mm_us.name",
+   "model": {
+    "id": "crew_at_gun_57mm_us",
+    "anim_class": "infantry"
+   }
+  },
+  "crew_hmg_us": {
+   "name": "entity.crew_hmg_us.name",
+   "model": {
+    "id": "crew_hmg_us",
+    "anim_class": "infantry"
+   }
+  },
+  "sherman_bulldozer_us": {
+   "name": "entity.sherman_bulldozer_us.name",
+   "model": {
+    "id": "sherman_bulldozer_us",
+    "anim_class": "tank_medium"
+   }
+  },
+  "truck_4x4_us": {
+   "name": "entity.truck_4x4_us.name",
+   "model": {
+    "id": "truck_4x4_us",
+    "anim_class": "tank_medium"
+   }
+  },
   "sandbag_wall_us": {
    "name": "entity.sandbag_wall_us.name",
    "model": {
@@ -28,6 +282,36 @@
     "id": "tank_trap_us",
     "anim_class": "static"
    }
+  }
+ },
+ "upgrade": {
+  "flamethrower_engineer_us": {
+   "name": "upgrade.flamethrower_engineer_us.name",
+   "icon": "flamethrower_engineer_us"
+  },
+  "m1941_lmg_special_operations_us": {
+   "name": "upgrade.m1941_lmg_special_operations_us.name",
+   "icon": "m1941_lmg_special_operations_us"
+  },
+  "panzerschrek_special_operations_bazooka_team_us": {
+   "name": "upgrade.panzerschrek_special_operations_bazooka_team_us.name",
+   "icon": "panzerschrek_special_operations_bazooka_team_us"
+  },
+  "bar_rifleman_squad_us": {
+   "name": "upgrade.bar_rifleman_squad_us.name",
+   "icon": "bar_rifleman_squad_us"
+  },
+  "m1941_lmg_rifleman_us": {
+   "name": "upgrade.m1941_lmg_rifleman_us.name",
+   "icon": "m1941_lmg_rifleman_us"
+  },
+  "m1919a6_rifleman_squad_us": {
+   "name": "upgrade.m1919a6_rifleman_squad_us.name",
+   "icon": "m1919a6_rifleman_squad_us"
+  },
+  "beretta_model_38_resistance_fighters_partisan": {
+   "name": "upgrade.beretta_model_38_resistance_fighters_partisan.name",
+   "icon": "beretta_model_38_resistance_fighters_partisan"
   }
  }
 }

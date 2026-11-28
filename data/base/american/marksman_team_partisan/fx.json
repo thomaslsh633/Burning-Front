@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "panzerbuchse39_at_rifle_marksmen_team_partisan": {
+   "name": "weapon.panzerbuchse39_at_rifle_marksmen_team_partisan.name",
+   "sound": {
+    "fire": "panzerbuchse"
+   }
+  }
+ },
+ "ebps": {
+  "marksman_team_partisan": {
+   "name": "entity.marksman_team_partisan.name",
+   "model": {
+    "id": "marksman_team_partisan",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "marksman_team_partisan": {
+   "name": "unit.marksman_team_partisan.name",
+   "short_name": "unit.marksman_team_partisan.short",
+   "desc": "unit.marksman_team_partisan.desc",
+   "icon": "marksman_team_partisan",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "panzerbuchse_marksmen_team_partisan": {
+   "name": "upgrade.panzerbuchse_marksmen_team_partisan.name",
+   "icon": "panzerbuchse_marksmen_team_partisan"
+  }
+ }
+}

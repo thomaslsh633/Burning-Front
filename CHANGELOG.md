@@ -3,6 +3,9 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — G-1 all factions (2026-11-28)
+- US Forces, Wehrmacht, Afrikakorps and British Forces imported from CoH3: 287 squads.
+
 ## rewrite — unit unlocks (2026-11-28)
 - Each faction's tier buildings list their units as base, doctrine-unlocked or research-unlocked.
 - Mid-game engineers (Guastatori, Fallschirmpioneers, Assault Engineers) come from tier buildings, not the HQ.

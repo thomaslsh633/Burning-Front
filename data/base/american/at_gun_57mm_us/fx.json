@@ -1,28 +1,4 @@
 {
- "weapon": {
-  "57mm_at_gun_us": {
-   "name": "weapon.57mm_at_gun_us.name",
-   "sound": {
-    "fire": "at_gun"
-   }
-  }
- },
- "ebps": {
-  "tw_at_gun_57mm_us": {
-   "name": "entity.tw_at_gun_57mm_us.name",
-   "model": {
-    "id": "tw_at_gun_57mm_us",
-    "anim_class": "crew"
-   }
-  },
-  "crew_at_gun_57mm_us": {
-   "name": "entity.crew_at_gun_57mm_us.name",
-   "model": {
-    "id": "crew_at_gun_57mm_us",
-    "anim_class": "infantry"
-   }
-  }
- },
  "sbps": {
   "at_gun_57mm_us": {
    "name": "unit.at_gun_57mm_us.name",

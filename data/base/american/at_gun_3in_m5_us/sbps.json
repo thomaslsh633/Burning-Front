@@ -1,0 +1,69 @@
+{
+ "team_weapons": {
+  "at_gun_3in_m5_us": {
+   "coh3_ref": "sbps/races/american/team_weapons/at_gun_3in_m5_us",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_3in_m5_us",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_heavy_us",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 40
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank",
+    "invisible_to_scar",
+    "stationary_anti_tank_weapon"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "barrage_at_gun_3in_m5_us",
+    "veterancy_1_unlock_a_at_gun_3in_m5_us",
+    "veterancy_1_unlock_b_at_gun_3in_m5_us",
+    "veterancy_brace_at_gun_3_inch_m5_atg_us",
+    "veterancy_1b_fast_recovery_at_gun_3in_5m_us",
+    "force_attack_target"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.56
+   },
+   "veterancy": {
+    "set": "at_gun_3in_m5_us"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_3in_m5_us",
+    "crew_entity": "crew_at_gun_heavy_us"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "priest_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   1950,
+   5850,
+   13650
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

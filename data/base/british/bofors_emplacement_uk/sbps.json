@@ -1,0 +1,37 @@
+{
+ "emplacements": {
+  "bofors_emplacement_uk": {
+   "coh3_ref": "sbps/races/british/emplacements/bofors_emplacement_uk",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "tw_bofors_emplacement_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 180,
+     "fuel": 20
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "emplacement",
+    "building",
+    "invisible_to_scar",
+    "anti_air",
+    "teamweapon_autocannon"
+   ],
+   "source": "built",
+   "veterancy": {
+    "set": "bofors_emplacement_uk"
+   },
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

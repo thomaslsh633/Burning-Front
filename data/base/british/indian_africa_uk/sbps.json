@@ -1,0 +1,56 @@
+{
+ "infantry": {
+  "indian_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/indian_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "indian_africa_uk",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "restored",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "lmg_bren_gurkhas_uk",
+     "smg_thompson_indian_uk"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "gammon_bomb_guards_uk",
+    "c_artillery_gurkhas_fearless_assault_uk"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "indian_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

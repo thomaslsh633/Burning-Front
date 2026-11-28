@@ -1,0 +1,23 @@
+{
+ "sturmpioneer_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/infantry/sturmpioneer",
+  "xp": [
+   850,
+   2550,
+   5100
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "weapon_accuracy": 1.15,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 20,
+    "weapon_damage": 1.25
+   }
+  ]
+ }
+}

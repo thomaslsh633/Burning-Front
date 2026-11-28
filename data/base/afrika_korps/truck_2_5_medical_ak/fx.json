@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "truck_2_5_medical_ak": {
+   "name": "entity.truck_2_5_medical_ak.name",
+   "model": {
+    "id": "truck_2_5_medical_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "truck_2_5_medical_ak": {
+   "name": "unit.truck_2_5_medical_ak.name",
+   "short_name": "unit.truck_2_5_medical_ak.short",
+   "desc": "unit.truck_2_5_medical_ak.desc",
+   "icon": "truck_2_5_medical_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

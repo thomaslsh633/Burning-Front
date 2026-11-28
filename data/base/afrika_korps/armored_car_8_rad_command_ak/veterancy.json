@@ -1,0 +1,18 @@
+{
+ "armored_car_8_rad_command_ak": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "capture_rate": 1.5,
+    "hp_add": 80
+   }
+  ]
+ }
+}

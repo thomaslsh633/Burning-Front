@@ -1,0 +1,33 @@
+{
+ "emplacements": {
+  "hmg_nest_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/emplacements/hmg_nest_africa_uk",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "hmg_bunker_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 4,
+   "tags": [
+    "suppression",
+    "building",
+    "teamweapon",
+    "emplacement"
+   ],
+   "source": "built",
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "dingo_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/dingo_uk",
+  "xp": [
+   600,
+   1800,
+   3600
+  ],
+  "ranks": [
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "sight": 5
+   },
+   {
+    "hp_add": 80,
+    "detection": 10,
+    "sight": 10,
+    "weapon_damage": 1.25
+   }
+  ]
+ }
+}

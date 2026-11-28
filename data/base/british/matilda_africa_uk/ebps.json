@@ -1,0 +1,71 @@
+{
+ "vehicles": {
+  "matilda_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/matilda_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "tank",
+    "allow_track_damage_when_immobilized",
+    "allow_brew_up",
+    "allow_turret_off"
+   ],
+   "hp": 960,
+   "target_size": 24,
+   "armor": {
+    "front": 310,
+    "side": 180,
+    "rear": 100
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 360,
+    "fuel": 90
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_heavy"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "40mm_matilda_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_matilda_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "matilda_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

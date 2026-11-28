@@ -1,0 +1,21 @@
+{
+ "panzergrenadier_tankhunter_specialist_ger": {
+  "coh3_ref": "custom_property_container/veterancy/common",
+  "xp": [
+   1000,
+   3000,
+   6000
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "received_accuracy": 0.9
+   }
+  ]
+ }
+}

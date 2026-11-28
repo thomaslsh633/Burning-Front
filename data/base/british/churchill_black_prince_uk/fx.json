@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "churchill_black_prince_uk": {
+   "name": "entity.churchill_black_prince_uk.name",
+   "model": {
+    "id": "churchill_black_prince_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "churchill_black_prince_uk": {
+   "name": "unit.churchill_black_prince_uk.name",
+   "short_name": "unit.churchill_black_prince_uk.short",
+   "desc": "unit.churchill_black_prince_uk.desc",
+   "icon": "churchill_black_prince_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

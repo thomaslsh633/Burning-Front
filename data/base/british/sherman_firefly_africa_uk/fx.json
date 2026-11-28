@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "17pdr_firefly_uk": {
+   "name": "weapon.17pdr_firefly_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "sherman_firefly_africa_uk": {
+   "name": "entity.sherman_firefly_africa_uk.name",
+   "model": {
+    "id": "sherman_firefly_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_firefly_africa_uk": {
+   "name": "unit.sherman_firefly_africa_uk.name",
+   "short_name": "unit.sherman_firefly_africa_uk.short",
+   "desc": "unit.sherman_firefly_africa_uk.desc",
+   "icon": "sherman_firefly_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

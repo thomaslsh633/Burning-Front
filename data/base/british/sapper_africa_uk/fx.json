@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "9mm_sten_sapper_africa_uk": {
+   "name": "weapon.9mm_sten_sapper_africa_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
+  "flamethrower_sapper_africa_uk": {
+   "name": "weapon.flamethrower_sapper_africa_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  }
+ },
+ "ebps": {
+  "sapper_africa_uk": {
+   "name": "entity.sapper_africa_uk.name",
+   "model": {
+    "id": "sapper_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sapper_africa_uk": {
+   "name": "unit.sapper_africa_uk.name",
+   "short_name": "unit.sapper_africa_uk.short",
+   "desc": "unit.sapper_africa_uk.desc",
+   "icon": "sapper_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "flamethrower_sapper_africa_uk": {
+   "name": "upgrade.flamethrower_sapper_africa_uk.name",
+   "icon": "flamethrower_sapper_africa_uk"
+  },
+  "piat_sapper_africa_uk": {
+   "name": "upgrade.piat_sapper_africa_uk.name",
+   "icon": "piat_sapper_africa_uk"
+  }
+ }
+}

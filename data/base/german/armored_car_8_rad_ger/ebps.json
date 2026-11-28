@@ -1,0 +1,75 @@
+{
+ "vehicles": {
+  "armored_car_8_rad_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/armored_car_8_rad_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "vehicle_wheeled",
+    "allow_brew_up",
+    "allow_turret_off",
+    "light_vehicle"
+   ],
+   "hp": 420,
+   "target_size": 18,
+   "armor": {
+    "front": 30,
+    "side": 25,
+    "rear": 15
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 240,
+    "fuel": 50
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "20mm_8_rad_ger",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "mg34_coaxial_8_rad_ger",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "accessory"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "armored_car_8_rad_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

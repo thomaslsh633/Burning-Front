@@ -1,0 +1,51 @@
+{
+ "vehicles": {
+  "crusader_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/crusader_africa_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "crusader_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 70
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "weapon_57mm_crusader_africa_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "heroic_charge_crusader_uk",
+    "hold_fire",
+    "heroic_charge_crusader_triggered_uk"
+   ],
+   "veterancy": {
+    "set": "crusader_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "panzer_iv_cmd_ger": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/panzer_iv_command_ak",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {},
+   {}
+  ]
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "truck_2_5_medical_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/truck_2_5_medical_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "medical_vehicle",
+    "support_vehicle",
+    "vehicle_wheeled",
+    "rideable_vehicle"
+   ],
+   "hp": 200,
+   "target_size": 16,
+   "armor": {
+    "front": 8,
+    "side": 6,
+    "rear": 4
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200,
+    "fuel": 20
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "truck_2_5_medical_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

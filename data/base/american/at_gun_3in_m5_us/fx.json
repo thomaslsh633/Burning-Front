@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "3in_at_gun_us": {
+   "name": "weapon.3in_at_gun_us.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "tw_at_gun_3in_m5_us": {
+   "name": "entity.tw_at_gun_3in_m5_us.name",
+   "model": {
+    "id": "tw_at_gun_3in_m5_us",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_heavy_us": {
+   "name": "entity.crew_at_gun_heavy_us.name",
+   "model": {
+    "id": "crew_at_gun_heavy_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_3in_m5_us": {
+   "name": "unit.at_gun_3in_m5_us.name",
+   "short_name": "unit.at_gun_3in_m5_us.short",
+   "desc": "unit.at_gun_3in_m5_us.desc",
+   "icon": "at_gun_3in_m5_us",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "hmg_commando_africa_uk": {
+   "name": "unit.hmg_commando_africa_uk.name",
+   "short_name": "unit.hmg_commando_africa_uk.short",
+   "desc": "unit.hmg_commando_africa_uk.desc",
+   "icon": "hmg_commando_africa_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

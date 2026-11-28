@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "truck_4x4_x2_us": {
+   "name": "unit.truck_4x4_x2_us.name",
+   "short_name": "unit.truck_4x4_x2_us.short",
+   "desc": "unit.truck_4x4_x2_us.desc",
+   "icon": "truck_4x4_x2_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "truck_4x4_us": {
+   "coh3_ref": "sbps/races/american/vehicles/truck_4x4_us",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "truck_4x4_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "ultra_light",
+    "vehicle_support",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "truck_4x4_side_skirts_us",
+     "command_truck_4x4_us"
+    ]
+   },
+   "abilities": [
+    "veterancy_1_unlock_a_truck_4x4_us",
+    "veterancy_1_unlock_b_truck_4x4_us",
+    "veterancy_1a_capture_truck_4x4_us",
+    "self_repair_truck_4x4_us",
+    "veterancy_1b_drop_hmg_truck_4x4_us",
+    "veterancy_1b_drop_mortar_truck_4x4_us",
+    "towing_pickup",
+    "towing_drop",
+    "forward_observer_barrage_truck_4x4_us",
+    "repair_critical_engine_damage_us",
+    "common_shared_veterancy_dummy_parent",
+    "veterancy_1b_self_repair_advanced_truck_4x4_us",
+    "hold_fire",
+    "recon_truck_4x4_locked_dummy_us",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "truck_4x4_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

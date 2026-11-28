@@ -1,0 +1,49 @@
+{
+ "infantry": {
+  "boys_anti_tank_rifles_tommy_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/boys_anti_tank_rifles_tommy_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "boys_at_rifle_africa_uk"
+    }
+   ]
+  },
+  "lmg_bren_tommy_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/lmg_bren_tommy_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 90
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bren_lmg_africa_uk"
+    }
+   ]
+  },
+  "recon_package_tommy_africa_uk": {
+   "coh3_ref": "upgrade/british_africa/infantry/recon_package_tommy_africa_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 45
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "scoped_lee_enfield_tommy_africa_uk"
+    }
+   ]
+  }
+ }
+}

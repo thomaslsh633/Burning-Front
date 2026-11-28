@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "churchill_command_africa_uk": {
+   "name": "entity.churchill_command_africa_uk.name",
+   "model": {
+    "id": "churchill_command_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "command_churchill_africa_uk": {
+   "name": "unit.command_churchill_africa_uk.name",
+   "short_name": "unit.command_churchill_africa_uk.short",
+   "desc": "unit.command_churchill_africa_uk.desc",
+   "icon": "command_churchill_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

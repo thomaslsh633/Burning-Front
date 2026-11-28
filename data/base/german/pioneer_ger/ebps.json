@@ -1,0 +1,48 @@
+{
+ "infantry": {
+  "pioneer_ger": {
+   "coh3_ref": "ebps/races/german/infantry/pioneer_ger",
+   "tags": [
+    "infantry",
+    "pioneer",
+    "german_infantry",
+    "squad_entity_max_3",
+    "engineer"
+   ],
+   "hp": 95,
+   "target_size": 1,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 42
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "mp40_pioneer_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

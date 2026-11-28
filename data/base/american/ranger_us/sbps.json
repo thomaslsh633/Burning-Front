@@ -1,0 +1,67 @@
+{
+ "infantry": {
+  "ranger_us": {
+   "coh3_ref": "sbps/races/american/infantry/ranger_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "ranger_us",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 425
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 5,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_burst_weapon",
+    "infantry_assault",
+    "ranger",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "bazooka_ranger_us",
+     "m1919a6_ranger_us",
+     "bar_ranger_us",
+     "flamethrower_ranger_us"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "veterancy_1_unlock_a_ranger_us",
+    "veterancy_1_unlock_b_ranger_us",
+    "vault_movement",
+    "cover_to_cover_ranger_us",
+    "cover_to_cover_sprint_dummy_ranger_us",
+    "lead_the_way_ranger_us",
+    "lead_the_way_ranger_dummy_buff_us",
+    "grenade_ranger_us",
+    "ranger_fire_when_moving_passive_dummy_us",
+    "breach_rangers_us",
+    "ranger_weapon_check"
+   ],
+   "capture": {
+    "rate": 1.5
+   },
+   "reinforce": {
+    "cost_ratio": 0.54
+   },
+   "veterancy": {
+    "set": "ranger_us"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

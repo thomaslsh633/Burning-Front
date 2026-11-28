@@ -1,0 +1,111 @@
+{
+ "tank_gun": {
+  "75mm_stug_iii_ak": {
+   "coh3_ref": "weapon/afrika_korps/ballistic_weapon/tank_gun/75mm_stug_iii_ak",
+   "class": "cannon",
+   "fire_rule": "single_shot",
+   "damage": 120,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 250,
+    "mid": 200,
+    "far": 180
+   },
+   "traits": [
+    "friendly_fire",
+    "attack_ground",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.1,
+     "mid": 0.05,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 169,
+     "mid": 169,
+     "far": 169
+    },
+    "arc_deg": 20,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.1,
+     "mid": 0.09,
+     "far": 0.05
+    },
+    "distance_m": {
+     "near": 2,
+     "mid": 3,
+     "far": 4
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 2,
+    "friendly_fire": false
+   },
+   "scatter": {
+    "angle_deg": 5,
+    "distance_ratio": 1,
+    "distance_max_m": 7
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 0.75
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  }
+ }
+}

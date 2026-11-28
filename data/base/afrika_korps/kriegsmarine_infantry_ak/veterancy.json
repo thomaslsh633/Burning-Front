@@ -1,0 +1,23 @@
+{
+ "kriegsmarine_infantry_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/infantry/kriegsmarine",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "received_accuracy": 0.75,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 25,
+    "weapon_accuracy": 1.25
+   }
+  ]
+ }
+}

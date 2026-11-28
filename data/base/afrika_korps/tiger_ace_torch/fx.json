@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "tiger_ace_torch": {
+   "name": "unit.tiger_ace_torch.name",
+   "short_name": "unit.tiger_ace_torch.short",
+   "desc": "unit.tiger_ace_torch.desc",
+   "icon": "tiger_ace_torch",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

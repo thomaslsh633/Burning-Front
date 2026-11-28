@@ -1,0 +1,55 @@
+{
+ "vehicles": {
+  "stuart_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/stuart_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "stuart_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 40
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_turret",
+    "light_armor",
+    "tier3"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_kit_stuart_uk",
+     "commander_stuart_uk"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_stuart_uk",
+    "aura_commander_stuart_uk",
+    "toggle_recon_stuart_uk",
+    "self_repair_stuart_uk",
+    "mark_target_stuart_uk",
+    "tread_shot_stuart_uk",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "stuart_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

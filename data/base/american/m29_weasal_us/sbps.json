@@ -1,0 +1,59 @@
+{
+ "vehicles": {
+  "m29_weasal_us": {
+   "coh3_ref": "sbps/races/american/vehicles/m29_weasal_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "m29_weasal_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 220
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "ultra_light",
+    "vehicle_support",
+    "veterancy_on_capture"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "30cal_weasal_us"
+    ]
+   },
+   "abilities": [
+    "drop_hmg_weasal_us",
+    "drop_mortar_weasal_us",
+    "veterancy_1_unlock_a_weasal_us",
+    "veterancy_1_unlock_b_weasal_us",
+    "veterancy_1b_passive_healing_us",
+    "veterancy_1a_signal_layer_us",
+    "towing_pickup",
+    "towing_drop",
+    "self_repair_weasal_us",
+    "repair_critical_engine_damage_us",
+    "common_shared_veterancy_dummy_parent",
+    "vehicle_capture_dummy_common",
+    "vehicle_handbrake",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "m29_weasal_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

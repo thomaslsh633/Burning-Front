@@ -1,0 +1,48 @@
+{
+ "vehicles": {
+  "sherman_whizbang_us": {
+   "coh3_ref": "sbps/races/american/vehicles/sherman_whizbang_us",
+   "kind": "vehicle",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "sherman_whizbang_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 390,
+     "fuel": 110
+    },
+    "from": "coh3stats"
+   },
+   "pop": 13,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "artillery",
+    "vehicle_artillery"
+   ],
+   "source": "produced",
+   "abilities": [
+    "veterancy_1_unlock_a_sherman_whizbang_us",
+    "veterancy_1_unlock_b_sherman_whizbang_us",
+    "veterancy_1a_precision_sweep_sherman_us",
+    "veterancy_1b_jettison_launcher_sherman_whizbang_us",
+    "barrage_180mm_rockets_whizbang_us",
+    "c_special_operations_whizbang_flares_active_us",
+    "c_special_operations_whizbang_smoke_canisters_active_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "sherman_whizbang_us"
+   },
+   "supply": {
+    "ammo": 6
+   }
+  }
+ }
+}

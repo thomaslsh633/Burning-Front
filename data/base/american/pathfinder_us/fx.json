@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "pathfinder_leader_radio_us": {
+   "name": "entity.pathfinder_leader_radio_us.name",
+   "model": {
+    "id": "pathfinder_leader_radio_us",
+    "anim_class": "infantry"
+   }
+  },
+  "pathfinder_us": {
+   "name": "entity.pathfinder_us.name",
+   "model": {
+    "id": "pathfinder_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "pathfinder_us": {
+   "name": "unit.pathfinder_us.name",
+   "short_name": "unit.pathfinder_us.short",
+   "desc": "unit.pathfinder_us.desc",
+   "icon": "pathfinder_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

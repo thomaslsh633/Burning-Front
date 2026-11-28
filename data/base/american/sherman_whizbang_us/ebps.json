@@ -1,0 +1,72 @@
+{
+ "vehicles": {
+  "sherman_whizbang_us": {
+   "coh3_ref": "ebps/races/american/vehicles/sherman_whizbang_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "sherman",
+    "rideable_tank",
+    "whizbang",
+    "vehicle_treaded",
+    "self_propelled_artillery",
+    "allow_track_damage_when_immobilized"
+   ],
+   "hp": 600,
+   "target_size": 22,
+   "armor": {
+    "front": 195,
+    "side": 110,
+    "rear": 80
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": -1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 390,
+    "fuel": 110
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 5,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "30cal_coaxial_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_sherman_us",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "wreck": {
+    "entity": "sherman_whizbang_wreck_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

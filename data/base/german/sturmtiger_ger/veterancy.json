@@ -1,0 +1,20 @@
+{
+ "sturmtiger_ger": {
+  "coh3_ref": "custom_property_container/veterancy/german/vehicles/sturmtiger_ger",
+  "xp": [
+   3440,
+   10320,
+   20640
+  ],
+  "ranks": [
+   {},
+   {
+    "armor_add": 50
+   },
+   {
+    "hp_add": 120,
+    "ability_range": 5
+   }
+  ]
+ }
+}

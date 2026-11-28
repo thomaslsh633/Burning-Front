@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "40mm_crusader_aa_uk": {
+   "name": "weapon.40mm_crusader_aa_uk.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "crusader_aa_africa_uk": {
+   "name": "entity.crusader_aa_africa_uk.name",
+   "model": {
+    "id": "crusader_aa_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "crusader_aa_africa_uk": {
+   "name": "unit.crusader_aa_africa_uk.name",
+   "short_name": "unit.crusader_aa_africa_uk.short",
+   "desc": "unit.crusader_aa_africa_uk.desc",
+   "icon": "crusader_aa_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

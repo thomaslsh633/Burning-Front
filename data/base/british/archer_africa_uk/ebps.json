@@ -1,0 +1,61 @@
+{
+ "vehicles": {
+  "archer_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/archer_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "fixed_turret"
+   ],
+   "hp": 480,
+   "target_size": 20,
+   "armor": {
+    "front": 40,
+    "side": 40,
+    "rear": 50
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 360,
+    "fuel": 95
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "archer_17pdr_uk",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "wreck": {
+    "entity": "archer_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

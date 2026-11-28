@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "75mm_lg40_at_gun_ger": {
+   "name": "weapon.75mm_lg40_at_gun_ger.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "tw_at_gun_75mm_lg40_ger": {
+   "name": "entity.tw_at_gun_75mm_lg40_ger.name",
+   "model": {
+    "id": "tw_at_gun_75mm_lg40_ger",
+    "anim_class": "crew"
+   }
+  },
+  "crew_at_gun_fallschirmpioneers_ger": {
+   "name": "entity.crew_at_gun_fallschirmpioneers_ger.name",
+   "model": {
+    "id": "crew_at_gun_fallschirmpioneers_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_lg40_ger": {
+   "name": "unit.at_gun_lg40_ger.name",
+   "short_name": "unit.at_gun_lg40_ger.short",
+   "desc": "unit.at_gun_lg40_ger.desc",
+   "icon": "at_gun_lg40_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

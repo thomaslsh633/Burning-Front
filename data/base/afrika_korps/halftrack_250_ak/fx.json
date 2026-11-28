@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mg34_halftrack_250_ak": {
+   "name": "weapon.mg34_halftrack_250_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_250_ak": {
+   "name": "entity.halftrack_250_ak.name",
+   "model": {
+    "id": "halftrack_250_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_250_ak": {
+   "name": "unit.halftrack_250_ak.name",
+   "short_name": "unit.halftrack_250_ak.short",
+   "desc": "unit.halftrack_250_ak.desc",
+   "icon": "halftrack_250_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

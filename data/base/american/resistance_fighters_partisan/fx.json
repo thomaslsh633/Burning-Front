@@ -1,0 +1,47 @@
+{
+ "weapon": {
+  "breda_m1930_lmg_resistance_fighters_partisan": {
+   "name": "weapon.breda_m1930_lmg_resistance_fighters_partisan.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "panzerschrek_resistance_fighters_partisan": {
+   "name": "weapon.panzerschrek_resistance_fighters_partisan.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  }
+ },
+ "ebps": {
+  "resistance_fighters_partisan": {
+   "name": "entity.resistance_fighters_partisan.name",
+   "model": {
+    "id": "resistance_fighters_partisan",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "resistance_fighters_partisan": {
+   "name": "unit.resistance_fighters_partisan.name",
+   "short_name": "unit.resistance_fighters_partisan.short",
+   "desc": "unit.resistance_fighters_partisan.desc",
+   "icon": "resistance_fighters_partisan",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "breda_m1930_lmg_resistance_fighters_partisan": {
+   "name": "upgrade.breda_m1930_lmg_resistance_fighters_partisan.name",
+   "icon": "breda_m1930_lmg_resistance_fighters_partisan"
+  },
+  "panzerschrek_resistance_fighters_partisan": {
+   "name": "upgrade.panzerschrek_resistance_fighters_partisan.name",
+   "icon": "panzerschrek_resistance_fighters_partisan"
+  }
+ }
+}

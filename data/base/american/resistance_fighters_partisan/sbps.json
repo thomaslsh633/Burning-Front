@@ -1,0 +1,63 @@
+{
+ "infantry": {
+  "resistance_fighters_partisan": {
+   "coh3_ref": "sbps/races/american/infantry/resistance_fighters_partisan",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "resistance_fighters_partisan",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 285
+    },
+    "from": "entities"
+   },
+   "pop": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "breda_m1930_lmg_resistance_fighters_partisan",
+     "beretta_model_38_resistance_fighters_partisan",
+     "panzerschrek_resistance_fighters_partisan"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "molotov_resistance_fighter_partisan",
+    "grenade_type_l_resistance_fighters_partisan",
+    "toggle_camouflage_partisan",
+    "vault_movement",
+    "passive_healing_resistance_fighters_partisan",
+    "hold_fire",
+    "partisans_first_strike_passive"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "resistance_fighters_partisan"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "mine_rifleman_us"
+    ]
+   }
+  }
+ }
+}

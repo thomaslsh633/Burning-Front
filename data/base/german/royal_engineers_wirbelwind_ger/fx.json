@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "royal_engineers_wirbelwind_ger": {
+   "name": "unit.royal_engineers_wirbelwind_ger.name",
+   "short_name": "unit.royal_engineers_wirbelwind_ger.short",
+   "desc": "unit.royal_engineers_wirbelwind_ger.desc",
+   "icon": "royal_engineers_wirbelwind_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

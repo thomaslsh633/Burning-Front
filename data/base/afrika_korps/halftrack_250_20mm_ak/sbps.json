@@ -1,0 +1,68 @@
+{
+ "vehicles": {
+  "halftrack_250_20mm_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_20mm_ak",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "halftrack_250_20mm_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 230,
+     "fuel": 15
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "smoke_discharge_8rad_ak",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "prioritize_vehicles",
+    "vehicle_awareness_ak",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "250_9_combat_overdrive_ak",
+    "hold_fire",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "250_9_garrison_hold_ak",
+    "distribute_medical_supplies_ak",
+    "towing_pickup",
+    "towing_drop",
+    "250_9_combat_overdrive_dummy_ak",
+    "towing_unload_abandoned",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_250_20mm_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "vehicles": {
+  "panzer_iii_50mm_long_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/panzer_iii_50mm_long_ak",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "panzer_iii_50mm_long_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 80
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "mg34_panzer_ak",
+     "elite_forces_field_modifications_side_skirts_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "blitz_upgrade_ak",
+    "tungsten_rounds_ak",
+    "self_repair_passive_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "tactical_advance_p3_ak",
+    "hold_fire",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "elite_forces_gun_swapping_panzer_normal_to_75mm_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "panzer_iii_50mm_long_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

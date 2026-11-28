@@ -1,0 +1,77 @@
+{
+ "vehicles": {
+  "sherman_76mm_us": {
+   "coh3_ref": "ebps/races/american/vehicles/sherman_76mm_us",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "sherman",
+    "rideable_tank",
+    "vehicle_treaded",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 195,
+    "side": 100,
+    "rear": 80
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": -1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 340,
+    "fuel": 90
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "76mm_sherman_us",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "30cal_coaxial_sherman_us",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_hull_sherman_us",
+     "mount": "hull",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "2inch_mortar_smoke_sherman_us",
+     "mount": "turret",
+     "slot": "accessory"
+    }
+   ],
+   "wreck": {
+    "entity": "sherman_wreck_76mm_us",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

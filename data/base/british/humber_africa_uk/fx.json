@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "humber_africa_uk": {
+   "name": "entity.humber_africa_uk.name",
+   "model": {
+    "id": "humber_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "humber_africa_uk": {
+   "name": "unit.humber_africa_uk.name",
+   "short_name": "unit.humber_africa_uk.short",
+   "desc": "unit.humber_africa_uk.desc",
+   "icon": "humber_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

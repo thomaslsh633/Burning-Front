@@ -1,0 +1,45 @@
+{
+ "weapon": {
+  "mas_36_rifle_us": {
+   "name": "weapon.mas_36_rifle_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "french_infantry_us": {
+   "name": "entity.french_infantry_us.name",
+   "model": {
+    "id": "french_infantry_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "french_infantry_us": {
+   "name": "unit.french_infantry_us.name",
+   "short_name": "unit.french_infantry_us.short",
+   "desc": "unit.french_infantry_us.desc",
+   "icon": "french_infantry_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "lmg_m24_29_chatellerault_new_guard_us": {
+   "name": "upgrade.lmg_m24_29_chatellerault_new_guard_us.name",
+   "icon": "lmg_m24_29_chatellerault_new_guard_us"
+  },
+  "french_old_guard_lmg_m1919a6s_us": {
+   "name": "upgrade.french_old_guard_lmg_m1919a6s_us.name",
+   "icon": "french_old_guard_lmg_m1919a6s_us"
+  },
+  "lmg_m24_29_chatellerault_french_infantry_us": {
+   "name": "upgrade.lmg_m24_29_chatellerault_french_infantry_us.name",
+   "icon": "lmg_m24_29_chatellerault_french_infantry_us"
+  }
+ }
+}

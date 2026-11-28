@@ -1,0 +1,32 @@
+{
+ "emplacements": {
+  "base_defense_uk": {
+   "coh3_ref": "sbps/races/british/emplacements/base_defense_uk",
+   "kind": "structure",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "base_defense_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "building",
+    "base_defense"
+   ],
+   "source": "built",
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

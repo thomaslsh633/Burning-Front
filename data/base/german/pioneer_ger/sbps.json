@@ -1,0 +1,92 @@
+{
+ "infantry": {
+  "pioneer_ger": {
+   "coh3_ref": "sbps/races/german/infantry/pioneer_ger",
+   "kind": "squad",
+   "role": "engineer",
+   "members": [
+    {
+     "entity": "pioneer_ger",
+     "count": 3
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 125
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "standard_infantry",
+    "infanterie_kompanie",
+    "infantry_burst_weapon",
+    "infantry_support",
+    "infantry_anti_infantry"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "flamethrower_pioneer_ger",
+     "panzerjager_package_ger"
+    ],
+    "pending": [
+     "utility_pioneer_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_pioneer_ger",
+    "cut_wire_engineer_us",
+    "vault_movement",
+    "toggle_detect_mines_ger",
+    "defuse_mine_pioneer_ger",
+    "fast_capture_grenadiers_vet_ger",
+    "prioritize_vehicles_handheld_at_ger",
+    "terror_infantry_interrogate_ger",
+    "terror_infantry_no_quarter_pioneer_ger",
+    "permanent_hulldown_target_pioneer_ger",
+    "last_stand_panzerfaust_global_ger",
+    "satchel_charge_pioneer_ger",
+    "blocking_force_infantry_setup_incursion_response_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.53
+   },
+   "veterancy": {
+    "set": "pioneer_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ger",
+     "fighting_nest_ger",
+     "tank_trap_ger",
+     "mine_pioneer_ger",
+     "bunker_ger",
+     "tw_88mm_emplacement_ger",
+     "barbed_wire_reinforced_ger",
+     "mine_teller_ger",
+     "tw_howitzer_obice_210_ger",
+     "observation_post_ger",
+     "bunker_ger_antitank",
+     "bunker_command_ger",
+     "tw_20mm_emplacement_ger",
+     "pantherturm_emplacement_ger",
+     "luftwaffe_relay_point_ger",
+     "propaganda_tower_ger"
+    ]
+   }
+  }
+ }
+}

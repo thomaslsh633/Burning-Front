@@ -1,0 +1,43 @@
+{
+ "vehicles": {
+  "valentine_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/valentine_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "valentine_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 65
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_turret"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_cover_valentine_uk",
+    "heroic_charge_crusader_uk",
+    "hold_fire",
+    "heroic_charge_crusader_triggered_uk"
+   ],
+   "veterancy": {
+    "set": "valentine_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

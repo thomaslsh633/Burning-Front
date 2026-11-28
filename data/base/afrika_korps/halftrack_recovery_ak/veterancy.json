@@ -1,0 +1,17 @@
+{
+ "halftrack_recovery_ak": {
+  "coh3_ref": "custom_property_container/veterancy/common/vehicle/recovery_vehicle",
+  "xp": [
+   500,
+   1000,
+   1500
+  ],
+  "ranks": [
+   {},
+   {},
+   {
+    "hp_add": 160
+   }
+  ]
+ }
+}

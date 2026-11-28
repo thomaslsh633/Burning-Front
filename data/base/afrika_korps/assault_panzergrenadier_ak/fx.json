@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "mp40_assault_panzergrenadier_ak": {
+   "name": "weapon.mp40_assault_panzergrenadier_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "assault_panzergrenadier_ak": {
+   "name": "entity.assault_panzergrenadier_ak.name",
+   "model": {
+    "id": "assault_panzergrenadier_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "assault_panzergrenadier_ak": {
+   "name": "unit.assault_panzergrenadier_ak.name",
+   "short_name": "unit.assault_panzergrenadier_ak.short",
+   "desc": "unit.assault_panzergrenadier_ak.desc",
+   "icon": "assault_panzergrenadier_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "cwt_15_uk": {
+   "name": "entity.cwt_15_uk.name",
+   "model": {
+    "id": "cwt_15_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "cwt_15_truck_uk": {
+   "name": "unit.cwt_15_truck_uk.name",
+   "short_name": "unit.cwt_15_truck_uk.short",
+   "desc": "unit.cwt_15_truck_uk.desc",
+   "icon": "cwt_15_truck_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

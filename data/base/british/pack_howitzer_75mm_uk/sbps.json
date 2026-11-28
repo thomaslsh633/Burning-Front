@@ -1,0 +1,63 @@
+{
+ "team_weapons": {
+  "pack_howitzer_75mm_uk": {
+   "coh3_ref": "sbps/races/british/team_weapons/pack_howitzer_75mm_uk",
+   "kind": "team_weapon",
+   "role": "indirect",
+   "members": [
+    {
+     "entity": "tw_pack_howitzer_75mm_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_howitzer_commando_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 340
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "teamweapon",
+    "artillery",
+    "infantry_anti_infantry"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "barrage_75mm_pack_howitzer_incendiary_uk",
+    "barrage_75mm_pack_howitzer_smoke_uk",
+    "barrage_75mm_pack_howitzer_uk",
+    "hold_fire",
+    "barrage_75mm_pack_howitzer_white_phosphorus_uk"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.63
+   },
+   "veterancy": {
+    "set": "pack_howitzer_75mm_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_pack_howitzer_75mm_uk",
+    "crew_entity": "crew_howitzer_commando_uk"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

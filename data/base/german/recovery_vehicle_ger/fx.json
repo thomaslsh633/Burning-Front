@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "recovery_vehicle_ger": {
+   "name": "entity.recovery_vehicle_ger.name",
+   "model": {
+    "id": "recovery_vehicle_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "recovery_vehicle_ger": {
+   "name": "unit.recovery_vehicle_ger.name",
+   "short_name": "unit.recovery_vehicle_ger.short",
+   "desc": "unit.recovery_vehicle_ger.desc",
+   "icon": "recovery_vehicle_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

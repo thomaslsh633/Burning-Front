@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "20mm_8_rad_ger": {
+   "name": "weapon.20mm_8_rad_ger.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  },
+  "mg34_coaxial_8_rad_ger": {
+   "name": "weapon.mg34_coaxial_8_rad_ger.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "armored_car_8_rad_ger": {
+   "name": "entity.armored_car_8_rad_ger.name",
+   "model": {
+    "id": "armored_car_8_rad_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "armored_car_8_rad_ger": {
+   "name": "unit.armored_car_8_rad_ger.name",
+   "short_name": "unit.armored_car_8_rad_ger.short",
+   "desc": "unit.armored_car_8_rad_ger.desc",
+   "icon": "armored_car_8_rad_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

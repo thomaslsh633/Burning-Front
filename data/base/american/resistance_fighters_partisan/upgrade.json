@@ -1,0 +1,48 @@
+{
+ "infantry": {
+  "breda_m1930_lmg_resistance_fighters_partisan": {
+   "coh3_ref": "upgrade/american/infantry/breda_m1930_lmg_resistance_fighters_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "breda_m1930_lmg_resistance_fighters_partisan"
+    }
+   ]
+  },
+  "panzerschrek_resistance_fighters_partisan": {
+   "coh3_ref": "upgrade/american/infantry/panzerschrek_resistance_fighters_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 100
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerschrek_resistance_fighters_partisan"
+    }
+   ]
+  }
+ }
+}

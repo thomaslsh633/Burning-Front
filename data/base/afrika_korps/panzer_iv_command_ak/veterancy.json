@@ -1,0 +1,18 @@
+{
+ "panzer_iv_command_ak": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/vehicles/panzer_iv_command_ak",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.2
+   },
+   {}
+  ]
+ }
+}

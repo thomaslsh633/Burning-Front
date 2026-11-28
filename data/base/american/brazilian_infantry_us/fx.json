@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "carbine_brazilian_us": {
+   "name": "weapon.carbine_brazilian_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "brazilian_infantry_us": {
+   "name": "entity.brazilian_infantry_us.name",
+   "model": {
+    "id": "brazilian_infantry_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "brazilian_infantry_us": {
+   "name": "unit.brazilian_infantry_us.name",
+   "short_name": "unit.brazilian_infantry_us.short",
+   "desc": "unit.brazilian_infantry_us.desc",
+   "icon": "brazilian_infantry_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

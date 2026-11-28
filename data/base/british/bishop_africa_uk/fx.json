@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "bishop_africa_uk": {
+   "name": "entity.bishop_africa_uk.name",
+   "model": {
+    "id": "bishop_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "bishop_africa_uk": {
+   "name": "unit.bishop_africa_uk.name",
+   "short_name": "unit.bishop_africa_uk.short",
+   "desc": "unit.bishop_africa_uk.desc",
+   "icon": "bishop_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

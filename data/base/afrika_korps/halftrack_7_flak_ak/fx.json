@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "20mm_halftrack_flak_ak": {
+   "name": "weapon.20mm_halftrack_flak_ak.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_7_flak_ak": {
+   "name": "entity.halftrack_7_flak_ak.name",
+   "model": {
+    "id": "halftrack_7_flak_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_7_flak_ak": {
+   "name": "unit.halftrack_7_flak_ak.name",
+   "short_name": "unit.halftrack_7_flak_ak.short",
+   "desc": "unit.halftrack_7_flak_ak.desc",
+   "icon": "halftrack_7_flak_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

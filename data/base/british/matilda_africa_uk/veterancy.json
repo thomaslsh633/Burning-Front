@@ -1,0 +1,21 @@
+{
+ "matilda_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/matilda_uk",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "hp_add": 160,
+    "armor_add": 70
+   }
+  ]
+ }
+}

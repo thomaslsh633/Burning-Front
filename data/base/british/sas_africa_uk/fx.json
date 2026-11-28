@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "garand_rifleman_us": {
+   "name": "weapon.garand_rifleman_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "grenade_rifleman_us": {
+   "name": "weapon.grenade_rifleman_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  }
+ },
+ "ebps": {
+  "sas_africa_uk": {
+   "name": "entity.sas_africa_uk.name",
+   "model": {
+    "id": "sas_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "sas_africa_uk": {
+   "name": "unit.sas_africa_uk.name",
+   "short_name": "unit.sas_africa_uk.short",
+   "desc": "unit.sas_africa_uk.desc",
+   "icon": "sas_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

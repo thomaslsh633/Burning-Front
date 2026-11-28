@@ -1,0 +1,23 @@
+{
+ "captain_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/captain",
+  "xp": [
+   750,
+   2250,
+   4500
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.8
+   },
+   {
+    "ability_range": 10,
+    "ability_cooldown": 0.65
+   },
+   {
+    "hp_add": 20,
+    "ability_cooldown": 0.7
+   }
+  ]
+ }
+}

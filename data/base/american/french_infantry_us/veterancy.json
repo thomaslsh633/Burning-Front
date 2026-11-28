@@ -1,0 +1,24 @@
+{
+ "french_infantry_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/infantry/french_riflemen",
+  "xp": [
+   850,
+   2550,
+   5100
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.9
+   },
+   {
+    "weapon_accuracy": 1.25,
+    "attack_speed": 0.8
+   },
+   {
+    "hp_add": 15,
+    "attack_speed": 0.8,
+    "received_accuracy": 0.85
+   }
+  ]
+ }
+}

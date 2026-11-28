@@ -1,0 +1,30 @@
+{
+ "ebps": {
+  "tw_4_2_heavy_mortar_africa_uk": {
+   "name": "entity.tw_4_2_heavy_mortar_africa_uk.name",
+   "model": {
+    "id": "tw_4_2_heavy_mortar_africa_uk",
+    "anim_class": "crew"
+   }
+  },
+  "crew_mortar_indian_africa_uk": {
+   "name": "entity.crew_mortar_indian_africa_uk.name",
+   "model": {
+    "id": "crew_mortar_indian_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "mortar_heavy_4_2_africa_uk": {
+   "name": "unit.mortar_heavy_4_2_africa_uk.name",
+   "short_name": "unit.mortar_heavy_4_2_africa_uk.short",
+   "desc": "unit.mortar_heavy_4_2_africa_uk.desc",
+   "icon": "mortar_heavy_4_2_africa_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

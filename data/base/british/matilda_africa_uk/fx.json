@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "40mm_matilda_uk": {
+   "name": "weapon.40mm_matilda_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "matilda_africa_uk": {
+   "name": "entity.matilda_africa_uk.name",
+   "model": {
+    "id": "matilda_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "matilda_africa_uk": {
+   "name": "unit.matilda_africa_uk.name",
+   "short_name": "unit.matilda_africa_uk.short",
+   "desc": "unit.matilda_africa_uk.desc",
+   "icon": "matilda_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

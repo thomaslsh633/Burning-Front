@@ -2,6 +2,15 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (G-1: all four factions imported)
+- **Done:** `import.js <faction> --all` imports every roster squad: 287 squads (US 72, Wehrmacht 66, DAK 52, British 97).
+  The importer skips CoH3 placeholder weapons, drops weapon links nothing imported, leaves out squads whose records fail
+  their profile (9, reported) and their orphan entities; veterancy is optional for squads; recrewable vehicle variants are
+  out of the roster; identical records shared by two factions are fine. English names seeded (+627). New gate test
+  `tests/integration/all-units.test.js`: every squad is created, moves, fires and dies. 288 tests.
+- **Next:** G-4 TTK report (`tools/greybox/report.js`, `data/balance/greybox.json`), then the greybox view (G-2, G-3).
+- **Blocked:** 48 squads cannot fire until barrages / abilities exist; Korean text for 1409 keys.
+
 ## 2026-11-28 (production per faction, three unlock kinds)
 - **Done:** `production.json` per faction; each building's units are base / doctrine / research (doctrine = CoH3 call-ins
   and coh3stats-only battlegroup units, doctrine conversions; research = heroes, heavy armour, pricier variants, research

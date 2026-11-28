@@ -1,0 +1,52 @@
+{
+ "vehicles": {
+  "pershing_us": {
+   "coh3_ref": "sbps/races/american/vehicles/pershing_us",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "pershing_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 720,
+     "fuel": 200
+    },
+    "from": "coh3stats"
+   },
+   "pop": 24,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "heavy_armor",
+    "vehicle_turret",
+    "apex_armor",
+    "shock_round_capable",
+    "tier4",
+    "vehicle_anti_tank"
+   ],
+   "source": "built",
+   "abilities": [
+    "prioritize_vehicles",
+    "radio_net_passive_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire",
+    "hvap_shot_pershing_us",
+    "veterancy_1_unlock_a_pershing_us",
+    "veterancy_1_unlock_b_pershing_us",
+    "veterancy_1a_weapon_superiority_pershing_us",
+    "veterancy_1b_veteran_gunner_pershing_us",
+    "hvap_shot_pershing_veteran_gunner_us"
+   ],
+   "veterancy": {
+    "set": "pershing_us"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}

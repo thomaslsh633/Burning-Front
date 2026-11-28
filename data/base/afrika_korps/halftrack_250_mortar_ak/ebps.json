@@ -1,0 +1,69 @@
+{
+ "vehicles": {
+  "halftrack_250_mortar_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/halftrack_250_mortar_ak",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "light_vehicle",
+    "dak_upgradeable_light",
+    "vehicle_wheeled",
+    "allow_track_damage_when_immobilized"
+   ],
+   "hp": 160,
+   "target_size": 16,
+   "armor": {
+    "front": 6.5,
+    "side": 4,
+    "rear": 2
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 260
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 8,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "81mm_mortar_halftrack_ak",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "tank_smoke_ak",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "halftrack_250_mortar_wreck_ak",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

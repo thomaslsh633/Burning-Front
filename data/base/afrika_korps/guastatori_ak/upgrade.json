@@ -1,0 +1,19 @@
+{
+ "infantry": {
+  "flamethrower_guastatori_ak": {
+   "coh3_ref": "upgrade/afrika_korps/infantry/flamethrower_guastatori_ak",
+   "scope": "unit",
+   "cost": {
+    "munition": 80
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "flamethrower_guastatori_ak"
+    }
+   ]
+  }
+ }
+}

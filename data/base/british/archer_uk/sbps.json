@@ -1,0 +1,41 @@
+{
+ "vehicles": {
+  "archer_uk": {
+   "coh3_ref": "sbps/races/british/vehicles/archer_uk",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "archer_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 125
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "vehicle_casemate_anti_tank",
+    "heavy_armor"
+   ],
+   "source": "produced",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "first_strike_archer_uk",
+    "hold_fire"
+   ],
+   "veterancy": {
+    "set": "archer_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "vehicles": {
+  "grant_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/grant_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "rideable_tank",
+    "tank",
+    "allow_track_damage_when_immobilized",
+    "allow_turret_off",
+    "allow_brew_up",
+    "vehicle_treaded"
+   ],
+   "hp": 840,
+   "target_size": 20,
+   "armor": {
+    "front": 170,
+    "side": 105,
+    "rear": 60
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1.33334
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 360,
+    "fuel": 100
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "75mm_grant_uk",
+     "mount": "turret",
+     "slot": "main"
+    },
+    {
+     "weapon": "37mm_grant_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    },
+    {
+     "weapon": "30cal_coaxial_grant_uk",
+     "mount": "turret",
+     "slot": "secondary"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "grant_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "humber_uk": {
+   "name": "entity.humber_uk.name",
+   "model": {
+    "id": "humber_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "humber_uk": {
+   "name": "unit.humber_uk.name",
+   "short_name": "unit.humber_uk.short",
+   "desc": "unit.humber_uk.desc",
+   "icon": "humber_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

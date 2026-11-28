@@ -1,0 +1,62 @@
+{
+ "emplacements": {
+  "tw_20mm_emplacement_ger": {
+   "coh3_ref": "ebps/races/german/emplacements/tw_20mm_emplacement_ger",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "emplacement",
+    "emplacement_aa",
+    "building"
+   ],
+   "hp": 720,
+   "target_size": 20,
+   "armor": {
+    "front": 15,
+    "side": 15,
+    "rear": 15
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 200,
+    "fuel": 25
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "20mm_aa_gun_emplacement_ger",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "recrew": {
+    "by_faction": {
+     "german": "aa_gun_20mm_emplacement_ger",
+     "american": "aa_gun_20mm_emplacement_ger",
+     "british": "aa_gun_20mm_emplacement_ger",
+     "afrika_korps": "aa_gun_20mm_emplacement_ger"
+    },
+    "min_crew": 2,
+    "max_squad": 2,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "recovery_vehicle_ger": {
+   "coh3_ref": "ebps/races/german/vehicles/recovery_vehicle_ger",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "support_vehicle",
+    "recovery_vehicle"
+   ],
+   "hp": 320,
+   "target_size": 16,
+   "armor": {
+    "front": 60,
+    "side": 45,
+    "rear": 30
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 300,
+    "fuel": 45
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 6,
+    "pass": "vehicle_light"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 2,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "wreck": {
+    "entity": "recovery_halftrack_wreck_ger",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

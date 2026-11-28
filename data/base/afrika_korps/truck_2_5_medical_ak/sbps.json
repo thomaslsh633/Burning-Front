@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "truck_2_5_medical_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/truck_2_5_medical_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "truck_2_5_medical_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 20
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "healer",
+    "reinforce_healing_platform",
+    "dak_light_vehicle",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "healing_aura_halftrack_us",
+    "auto_reinforce_halftrack",
+    "vehicle_handbrake",
+    "combat_readiness_medical_truck_ak",
+    "common_shared_veterancy_dummy_parent",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "towing_pickup",
+    "towing_drop",
+    "recrew_team_weapon_halftrack_us",
+    "combat_readiness_medical_truck_veteran_ak",
+    "self_repair_passive_ak",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "truck_2_5_medical_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

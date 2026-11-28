@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "polish_lancer_africa_uk": {
+   "name": "entity.polish_lancer_africa_uk.name",
+   "model": {
+    "id": "polish_lancer_africa_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "polish_lancer_africa_uk": {
+   "name": "unit.polish_lancer_africa_uk.name",
+   "short_name": "unit.polish_lancer_africa_uk.short",
+   "desc": "unit.polish_lancer_africa_uk.desc",
+   "icon": "polish_lancer_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

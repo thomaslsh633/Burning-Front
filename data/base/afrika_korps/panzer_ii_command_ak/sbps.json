@@ -1,0 +1,51 @@
+{
+ "vehicles": {
+  "panzer_ii_command_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/panzer_ii_command_ak",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "panzer_ii_command_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320,
+     "fuel": 60
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "scan_panzer_ii_ak",
+    "command_aura_panzer_ii_ak",
+    "mark_target_vehicle_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "hold_fire",
+    "infiltration_right_1_silent_running_toggle_ak"
+   ],
+   "veterancy": {
+    "set": "panzer_ii_command_ak"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

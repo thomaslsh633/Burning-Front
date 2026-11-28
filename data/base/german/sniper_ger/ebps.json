@@ -1,0 +1,47 @@
+{
+ "infantry": {
+  "sniper_ger": {
+   "coh3_ref": "ebps/races/german/infantry/sniper_ger",
+   "tags": [
+    "infantry",
+    "sniper",
+    "german_infantry",
+    "squad_entity_max_1"
+   ],
+   "hp": 100,
+   "target_size": 1.33,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320
+   },
+   "traits": [
+    "receives_cover"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "vaulting_infantry"
+   },
+   "sight": {
+    "hex": 7,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "g43_sniper_ger",
+     "mount": "hull",
+     "slot": "main"
+    }
+   ]
+  }
+ }
+}

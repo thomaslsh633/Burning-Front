@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "garand_scout_us": {
+   "name": "weapon.garand_scout_us.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "scout_leader_radio_us": {
+   "name": "entity.scout_leader_radio_us.name",
+   "model": {
+    "id": "scout_leader_radio_us",
+    "anim_class": "infantry"
+   }
+  },
+  "scout_us": {
+   "name": "entity.scout_us.name",
+   "model": {
+    "id": "scout_us",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "scout_us": {
+   "name": "unit.scout_us.name",
+   "short_name": "unit.scout_us.short",
+   "desc": "unit.scout_us.desc",
+   "icon": "scout_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

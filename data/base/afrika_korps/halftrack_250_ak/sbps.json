@@ -1,0 +1,69 @@
+{
+ "vehicles": {
+  "halftrack_250_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_ak",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "halftrack_250_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 230
+    },
+    "from": "coh3stats"
+   },
+   "pop": 5,
+   "build_turns": 4,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "dak_light_vehicle",
+    "tier2",
+    "vehicle_support"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "20mm_halftrack_250_ak",
+     "81mm_mortar_halftrack_250_ak",
+     "vampire_halftrack_250_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_pickup",
+    "towing_drop",
+    "distribute_medical_supplies_ak",
+    "vehicle_awareness_ak",
+    "self_repair_passive_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "frontline_transport_250_ak",
+    "common_shared_veterancy_dummy_2_2",
+    "smoke_discharge_8rad_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "panzerjager_kommand_grb_requisition_250_ak",
+    "assault_transport_disable_sniper",
+    "towing_unload_abandoned",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_250_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

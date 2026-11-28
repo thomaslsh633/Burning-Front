@@ -1,0 +1,81 @@
+{
+ "infantry": {
+  "scout_us": {
+   "coh3_ref": "sbps/races/american/infantry/scout_us",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "scout_leader_radio_us",
+     "count": 1
+    },
+    {
+     "entity": "scout_us",
+     "count": 2
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 160
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry",
+    "veterancy_on_capture"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "utility_scout_us"
+    ]
+   },
+   "abilities": [
+    "flare_scout_us",
+    "smoke_rifle_grenade_scout_us",
+    "veterancy_1_unlock_a_scout_us",
+    "veterancy_1_unlock_b_scout_smoke_drop_us",
+    "stealth_recon_sniper_us",
+    "vault_movement",
+    "forward_observer_scout_us",
+    "rifle_grenade_pathfinder_us",
+    "c_airborne_infantry_medkits_us",
+    "veterancy_scout_smoke_drop_dummy_us",
+    "veterancy_scout_smoke_drop_us",
+    "passive_instant_withdraw_retreat_in_hold_global_us",
+    "french_old_guard_retreat_buff_us"
+   ],
+   "capture": {
+    "rate": 1.5
+   },
+   "reinforce": {
+    "cost_ratio": 0.53
+   },
+   "veterancy": {
+    "set": "scout_us"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "partisan_tunnel_constructed_us",
+     "belgian_gate_french_us",
+     "concrete_bastion_infantry_us",
+     "fighting_position_french_old_guard_us",
+     "tourelle_emplacement_us",
+     "tank_trap_french_us",
+     "observation_post_french_us",
+     "barbed_wire_fence_french_engineering_upgrade_us",
+     "sandbag_wall_french_infantry_us"
+    ]
+   }
+  }
+ }
+}

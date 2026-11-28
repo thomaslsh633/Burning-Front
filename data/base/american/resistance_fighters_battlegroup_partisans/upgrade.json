@@ -1,0 +1,34 @@
+{
+ "infantry": {
+  "panzerbuchse39_at_rifle_resistance_fighter_partisan": {
+   "coh3_ref": "upgrade/american/infantry/panzerbuchse39_at_rifle_resistance_fighter_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "panzerbuchse39_at_rifle_partisan_us"
+    }
+   ]
+  },
+  "grb39_grenade_launcher_resistance_fighter_partisan": {
+   "coh3_ref": "upgrade/american/infantry/grb39_grenade_launcher_resistance_fighter_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 75
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "grb_39_grenade_launcher_he_ak"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "vehicles": {
+  "priest_africa_uk": {
+   "coh3_ref": "ebps/races/british_africa/vehicles/priest_africa_uk",
+   "tags": [
+    "vehicle",
+    "cover_object",
+    "self_propelled_artillery",
+    "vehicle_treaded",
+    "tank",
+    "allow_track_damage_when_immobilized",
+    "support_vehicle"
+   ],
+   "hp": 320,
+   "target_size": 18,
+   "armor": {
+    "front": 60,
+    "side": 45,
+    "rear": 30
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 60
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 5,
+    "pass": "trench_crossing_vehicle_medium"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 2
+   },
+   "wreck": {
+    "entity": "priest_wreck_africa_uk",
+    "cover": "heavy",
+    "blocks_vehicles": true
+   }
+  }
+ }
+}

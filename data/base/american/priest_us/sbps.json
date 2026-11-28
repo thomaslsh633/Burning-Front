@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "priest_us": {
+   "coh3_ref": "sbps/races/american/vehicles/priest_us",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "priest_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 420,
+     "fuel": 90
+    },
+    "from": "coh3stats"
+   },
+   "pop": 14,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "artillery",
+    "vehicle_artillery"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "barrage_priest_us",
+    "barrage_priest_smoke_us",
+    "barrage_priest_heat_us",
+    "brazilian_squad_counterbattery_us",
+    "barrage_priest_suppressing_airburst_us"
+   ],
+   "veterancy": {
+    "set": "priest_us"
+   },
+   "supply": {
+    "ammo": 10
+   }
+  }
+ }
+}

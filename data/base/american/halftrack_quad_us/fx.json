@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "50cal_quadmount_halftrack_us": {
+   "name": "weapon.50cal_quadmount_halftrack_us.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "halftrack_quad_us": {
+   "name": "entity.halftrack_quad_us.name",
+   "model": {
+    "id": "halftrack_quad_us",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_quad_us": {
+   "name": "unit.halftrack_quad_us.name",
+   "short_name": "unit.halftrack_quad_us.short",
+   "desc": "unit.halftrack_quad_us.desc",
+   "icon": "halftrack_quad_us",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

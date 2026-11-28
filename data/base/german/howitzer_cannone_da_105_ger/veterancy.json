@@ -1,0 +1,15 @@
+{
+ "howitzer_cannone_da_105_ger": {
+  "coh3_ref": "custom_property_container/veterancy/afrika_korps/team_weapon/cannone_da_105_ak",
+  "xp": [
+   1300,
+   3900,
+   7800
+  ],
+  "ranks": [
+   {},
+   {},
+   {}
+  ]
+ }
+}

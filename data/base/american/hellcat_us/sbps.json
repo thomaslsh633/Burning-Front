@@ -1,0 +1,56 @@
+{
+ "vehicles": {
+  "hellcat_us": {
+   "coh3_ref": "sbps/races/american/vehicles/hellcat_us",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "hellcat_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 300,
+     "fuel": 80
+    },
+    "from": "coh3stats"
+   },
+   "pop": 10,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "tier4",
+    "vehicle_turret_anti_tank",
+    "vehicle_anti_tank"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "hmg_hellcat_us"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "veterancy_1_unlock_a_hellcat_us",
+    "veterancy_1_unlock_b_hellcat_us",
+    "hvap_hellcat_us",
+    "radio_net_passive_us",
+    "repair_critical_engine_damage_us",
+    "hold_fire",
+    "hellcat_open_topped_us",
+    "veterancy_hellcat_shoot_and_scoot_us"
+   ],
+   "veterancy": {
+    "set": "hellcat_us"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

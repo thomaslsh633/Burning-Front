@@ -1,0 +1,60 @@
+{
+ "weapon": {
+  "kar98k_panzerpioneer_ak": {
+   "name": "weapon.kar98k_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "flamethrower_panzerpioneer_ak": {
+   "name": "weapon.flamethrower_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "grb_39_grenade_launcher_he_ak": {
+   "name": "weapon.grb_39_grenade_launcher_he_ak.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
+  }
+ },
+ "ebps": {
+  "panzerpioneer_support_ak": {
+   "name": "entity.panzerpioneer_support_ak.name",
+   "model": {
+    "id": "panzerpioneer_support_ak",
+    "anim_class": "infantry"
+   }
+  },
+  "panzerpioneer_ak": {
+   "name": "entity.panzerpioneer_ak.name",
+   "model": {
+    "id": "panzerpioneer_ak",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "panzerpioneer_ak": {
+   "name": "unit.panzerpioneer_ak.name",
+   "short_name": "unit.panzerpioneer_ak.short",
+   "desc": "unit.panzerpioneer_ak.desc",
+   "icon": "panzerpioneer_ak",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "flamethrower_panzerpioneer_ak": {
+   "name": "upgrade.flamethrower_panzerpioneer_ak.name",
+   "icon": "flamethrower_panzerpioneer_ak"
+  },
+  "grb39_grenade_launcher_panzerpioneer_ak": {
+   "name": "upgrade.grb39_grenade_launcher_panzerpioneer_ak.name",
+   "icon": "grb39_grenade_launcher_panzerpioneer_ak"
+  }
+ }
+}

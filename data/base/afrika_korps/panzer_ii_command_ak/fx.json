@@ -1,0 +1,37 @@
+{
+ "weapon": {
+  "20mm_panzer_ii_ak": {
+   "name": "weapon.20mm_panzer_ii_ak.name",
+   "sound": {
+    "fire": "cannon_burst"
+   }
+  },
+  "mg34_coaxial_panzer_ii_ak": {
+   "name": "weapon.mg34_coaxial_panzer_ii_ak.name",
+   "sound": {
+    "fire": "hmg"
+   }
+  }
+ },
+ "ebps": {
+  "panzer_ii_command_ak": {
+   "name": "entity.panzer_ii_command_ak.name",
+   "model": {
+    "id": "panzer_ii_command_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "panzer_ii_command_ak": {
+   "name": "unit.panzer_ii_command_ak.name",
+   "short_name": "unit.panzer_ii_command_ak.short",
+   "desc": "unit.panzer_ii_command_ak.desc",
+   "icon": "panzer_ii_command_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

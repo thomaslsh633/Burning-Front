@@ -1,0 +1,36 @@
+{
+ "vehicles": {
+  "australian_supplytruck_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/australian_supplytruck_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "australian_supplytruck_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {},
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "tier2"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_critical_engine_damage_uk",
+    "towing_unload_abandoned",
+    "australian_supplytruck_automation",
+    "australian_supplytruck_loadcargo",
+    "australian_supplytruck_unloadcargo"
+   ],
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

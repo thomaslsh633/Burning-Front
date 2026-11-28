@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "sherman_africa_uk": {
+   "name": "entity.sherman_africa_uk.name",
+   "model": {
+    "id": "sherman_africa_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "sherman_africa_uk": {
+   "name": "unit.sherman_africa_uk.name",
+   "short_name": "unit.sherman_africa_uk.short",
+   "desc": "unit.sherman_africa_uk.desc",
+   "icon": "sherman_africa_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

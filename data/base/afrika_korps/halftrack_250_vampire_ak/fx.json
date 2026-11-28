@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "halftrack_250_vampire_ak": {
+   "name": "entity.halftrack_250_vampire_ak.name",
+   "model": {
+    "id": "halftrack_250_vampire_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "halftrack_250_vampire_ak": {
+   "name": "unit.halftrack_250_vampire_ak.name",
+   "short_name": "unit.halftrack_250_vampire_ak.short",
+   "desc": "unit.halftrack_250_vampire_ak.desc",
+   "icon": "halftrack_250_vampire_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

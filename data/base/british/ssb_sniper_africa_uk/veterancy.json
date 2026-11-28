@@ -1,0 +1,23 @@
+{
+ "ssb_sniper_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/ssb_sniper",
+  "xp": [
+   900,
+   2700,
+   5400
+  ],
+  "ranks": [
+   {
+    "received_accuracy": 0.85
+   },
+   {
+    "attack_speed": 0.75
+   },
+   {
+    "hp_add": 50,
+    "weapon_damage": 1.5,
+    "ability_cost": 0.67
+   }
+  ]
+ }
+}

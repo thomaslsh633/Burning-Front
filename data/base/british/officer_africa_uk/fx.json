@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "officer_africa_uk": {
+   "name": "unit.officer_africa_uk.name",
+   "short_name": "unit.officer_africa_uk.short",
+   "desc": "unit.officer_africa_uk.desc",
+   "icon": "officer_africa_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

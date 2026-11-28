@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_panzer_iv_ap_ger": {
+   "name": "weapon.75mm_panzer_iv_ap_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "panzer_iv_cmd_ger": {
+   "name": "entity.panzer_iv_cmd_ger.name",
+   "model": {
+    "id": "panzer_iv_cmd_ger",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "panzer_iv_cmd_ger": {
+   "name": "unit.panzer_iv_cmd_ger.name",
+   "short_name": "unit.panzer_iv_cmd_ger.short",
+   "desc": "unit.panzer_iv_cmd_ger.desc",
+   "icon": "panzer_iv_cmd_ger",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

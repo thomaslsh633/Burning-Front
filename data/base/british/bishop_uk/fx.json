@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "bishop_uk": {
+   "name": "entity.bishop_uk.name",
+   "model": {
+    "id": "bishop_uk",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "bishop_uk": {
+   "name": "unit.bishop_uk.name",
+   "short_name": "unit.bishop_uk.short",
+   "desc": "unit.bishop_uk.desc",
+   "icon": "bishop_uk",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

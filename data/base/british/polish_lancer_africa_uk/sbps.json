@@ -1,0 +1,50 @@
+{
+ "infantry": {
+  "polish_lancer_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/infantry/polish_lancer_africa_uk",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "polish_lancer_africa_uk",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "standard_infantry",
+    "infantry_anti_infantry"
+   ],
+   "source": "called_in",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "headhunter_polish_lancer_africa_uk",
+    "sight_in_toggle_polish_lancer_africa_uk",
+    "polish_cavalry_infantry_no_man_left_behind_3_3_africa_uk"
+   ],
+   "capture": {
+    "rate": 1.33
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "polish_lancer_africa_uk"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": []
+   }
+  }
+ }
+}

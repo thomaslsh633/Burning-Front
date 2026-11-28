@@ -1,0 +1,38 @@
+{
+ "weapon": {
+  "88mm_pak43_at_gun_ger": {
+   "name": "weapon.88mm_pak43_at_gun_ger.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
+ "ebps": {
+  "crew_at_gun_ger": {
+   "name": "entity.crew_at_gun_ger.name",
+   "model": {
+    "id": "crew_at_gun_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "tw_at_gun_88mm_pak43_ger": {
+   "name": "entity.tw_at_gun_88mm_pak43_ger.name",
+   "model": {
+    "id": "tw_at_gun_88mm_pak43_ger",
+    "anim_class": "crew"
+   }
+  }
+ },
+ "sbps": {
+  "at_gun_88mm_pak43_ger": {
+   "name": "unit.at_gun_88mm_pak43_ger.name",
+   "short_name": "unit.at_gun_88mm_pak43_ger.short",
+   "desc": "unit.at_gun_88mm_pak43_ger.desc",
+   "icon": "at_gun_88mm_pak43_ger",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

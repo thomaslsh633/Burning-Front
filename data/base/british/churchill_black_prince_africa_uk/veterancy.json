@@ -1,0 +1,20 @@
+{
+ "churchill_black_prince_africa_uk": {
+  "coh3_ref": "custom_property_container/veterancy/british/vehicles/churchill_black_prince_uk",
+  "xp": [
+   3960,
+   11870,
+   23740
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.85,
+    "weapon_accuracy": 1.25
+   },
+   {
+    "attack_speed": 0.8
+   }
+  ]
+ }
+}

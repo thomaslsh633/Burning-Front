@@ -1,0 +1,68 @@
+{
+ "infantry": {
+  "lmg_m24_29_chatellerault_new_guard_us": {
+   "coh3_ref": "upgrade/american/infantry/lmg_m24_29_chatellerault_new_guard_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "french_us",
+     "french_new_blood_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "lmg_m24_29_chatellerault_us"
+    }
+   ]
+  },
+  "french_old_guard_lmg_m1919a6s_us": {
+   "coh3_ref": "upgrade/american/infantry/french_old_guard_lmg_m1919a6s_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 45
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "french_us",
+     "french_old_guard_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "m1919a6_old_guard_us"
+    }
+   ]
+  },
+  "lmg_m24_29_chatellerault_french_infantry_us": {
+   "coh3_ref": "upgrade/american/infantry/lmg_m24_29_chatellerault_french_infantry_us",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "requires": {
+    "any_upgrades": [
+     "mechanized_support_center_us",
+     "infantry_support_center_us",
+     "air_support_center_us"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "lmg_m24_29_chatellerault_us"
+    }
+   ]
+  }
+ }
+}

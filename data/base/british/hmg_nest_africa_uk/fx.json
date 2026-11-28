@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "hmg_bunker_africa_uk": {
+   "name": "entity.hmg_bunker_africa_uk.name",
+   "model": {
+    "id": "hmg_bunker_africa_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "hmg_nest_africa_uk": {
+   "name": "unit.hmg_nest_africa_uk.name",
+   "short_name": "unit.hmg_nest_africa_uk.short",
+   "desc": "unit.hmg_nest_africa_uk.desc",
+   "icon": "hmg_nest_africa_uk",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "infantry": {
+  "guastatori_ger": {
+   "coh3_ref": "sbps/races/german/infantry/guastatori_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "guastatori_ger",
+     "count": 6
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380
+    },
+    "from": "coh3stats"
+   },
+   "pop": 8,
+   "build_turns": 2,
+   "tags": [
+    "infantry",
+    "combat_engineer",
+    "standard_infantry",
+    "elite_infantry",
+    "infantry_burst_weapon",
+    "infantry_assault",
+    "infantry_anti_infantry"
+   ],
+   "source": "coh3stats",
+   "upgrades": {
+    "slots": -1,
+    "list": [
+     "grb_39_grenade_launcher_pioneer_ger",
+     "flamethrower_guastatori_ger"
+    ],
+    "pending": [
+     "guastatori_fieldcraft_ger"
+    ]
+   },
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "repair_pioneer_ger",
+    "cut_wire_engineer_us",
+    "vault_movement",
+    "toggle_detect_mines_ger",
+    "defuse_mine_pioneer_ger",
+    "grenade_smoke_guastatori_ger",
+    "grenade_guastatori_ger",
+    "breach_flamethrower_guastatori_ger"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "guastatori_ger"
+   },
+   "supply": {
+    "ammo": 20
+   },
+   "build": {
+    "menu": [
+     "sandbag_wall_ger",
+     "barbed_wire_fence_ger",
+     "fighting_nest_ger",
+     "tank_trap_ger",
+     "mine_pioneer_ger",
+     "bunker_ger",
+     "tw_88mm_emplacement_ger",
+     "barbed_wire_reinforced_ger",
+     "bunker_weapon_supply_ger",
+     "mine_teller_ger",
+     "tw_20mm_emplacement_ger",
+     "tw_howitzer_obice_210_ger"
+    ]
+   }
+  }
+ }
+}

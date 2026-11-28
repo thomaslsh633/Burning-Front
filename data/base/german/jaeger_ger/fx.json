@@ -1,0 +1,58 @@
+{
+ "weapon": {
+  "g43_jaeger_ger": {
+   "name": "weapon.g43_jaeger_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "g43_scoped_jaeger_ger": {
+   "name": "weapon.g43_scoped_jaeger_ger.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  }
+ },
+ "ebps": {
+  "jaeger_support_ger": {
+   "name": "entity.jaeger_support_ger.name",
+   "model": {
+    "id": "jaeger_support_ger",
+    "anim_class": "infantry"
+   }
+  },
+  "jaeger_ger": {
+   "name": "entity.jaeger_ger.name",
+   "model": {
+    "id": "jaeger_ger",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "jaeger_ger": {
+   "name": "unit.jaeger_ger.name",
+   "short_name": "unit.jaeger_ger.short",
+   "desc": "unit.jaeger_ger.desc",
+   "icon": "jaeger_ger",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "panzerschrek_jaeger_ger": {
+   "name": "upgrade.panzerschrek_jaeger_ger.name",
+   "icon": "panzerschrek_jaeger_ger"
+  },
+  "g43_jaeger_ger": {
+   "name": "upgrade.g43_jaeger_ger.name",
+   "icon": "g43_jaeger_ger"
+  },
+  "panzerschrek_jaeger_second_ger": {
+   "name": "upgrade.panzerschrek_jaeger_second_ger.name",
+   "icon": "panzerschrek_jaeger_second_ger"
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "emplacements": {
+  "point_fortification_20mm_aa_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/emplacements/point_fortification_20mm_aa_ak",
+   "kind": "structure",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "point_fortification_cache_20mm_aa_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "munition": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 0,
+   "build_turns": 2,
+   "tags": [
+    "teamweapon",
+    "suppression",
+    "building",
+    "invisible_to_scar",
+    "emplacement",
+    "anti_air"
+   ],
+   "source": "coh3stats",
+   "abilities": [
+    "prioritize_vehicles",
+    "hold_fire",
+    "toggle_aa_mode"
+   ],
+   "supply": {
+    "ammo": 30
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sbps": {
+  "hmg_vickers_africa_recrew_uk": {
+   "name": "unit.hmg_vickers_africa_recrew_uk.name",
+   "short_name": "unit.hmg_vickers_africa_recrew_uk.short",
+   "desc": "unit.hmg_vickers_africa_recrew_uk.desc",
+   "icon": "hmg_vickers_africa_recrew_uk",
+   "menu": {
+    "tab": "team_weapons",
+    "order": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "vehicles": {
+  "panzer_iv_cmd_ger": {
+   "coh3_ref": "sbps/races/german/vehicles/panzer_iv_cmd_ger",
+   "kind": "vehicle",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "panzer_iv_cmd_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 380,
+     "fuel": 80
+    },
+    "from": "coh3stats"
+   },
+   "pop": 12,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "medium_armor",
+    "vehicle_turret",
+    "wehrmacht_advanced_unit"
+   ],
+   "source": "called_in",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "spotting_scopes_ger"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "toggle_he_ap_rounds_panzer_iv_ger",
+    "mechanized_smoke_canisters_ger",
+    "hold_fire",
+    "supervised_advance_piv_command_ak",
+    "command_piv_aura_ak",
+    "command_piv_aura_veteran_display_ak"
+   ],
+   "veterancy": {
+    "set": "panzer_iv_cmd_ger"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

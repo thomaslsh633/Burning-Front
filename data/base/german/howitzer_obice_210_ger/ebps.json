@@ -1,0 +1,60 @@
+{
+ "emplacements": {
+  "tw_howitzer_obice_210_ger": {
+   "coh3_ref": "ebps/races/german/emplacements/tw_howitzer_obice_210_ger",
+   "tags": [
+    "team_weapon",
+    "artillery",
+    "building",
+    "cover_object",
+    "emplacement",
+    "artillery_emplacement"
+   ],
+   "hp": 600,
+   "target_size": 20,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 320,
+    "fuel": 60
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "howitzer_obice_210_ger",
+     "british": "howitzer_obice_210_ger",
+     "afrika_korps": "howitzer_obice_210_ger"
+    },
+    "min_crew": 2,
+    "max_squad": 2,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 5,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

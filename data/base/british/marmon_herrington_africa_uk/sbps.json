@@ -1,0 +1,41 @@
+{
+ "vehicles": {
+  "marmon_herrington_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/marmon_herrington_africa_uk",
+   "kind": "vehicle",
+   "role": "suppression",
+   "members": [
+    {
+     "entity": "marmon_herrington_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 280,
+     "fuel": 30
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "vehicle_burst_weapon"
+   ],
+   "source": "restored",
+   "abilities": [
+    "prioritize_vehicles",
+    "repair_critical_engine_damage_uk",
+    "smoke_barrage_humber_uk"
+   ],
+   "veterancy": {
+    "set": "marmon_herrington_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

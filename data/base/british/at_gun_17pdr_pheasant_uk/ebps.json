@@ -1,0 +1,71 @@
+{
+ "team_weapons": {
+  "tw_at_gun_17pdr_pheasant_uk": {
+   "coh3_ref": "ebps/races/british/team_weapons/tw_at_gun_17pdr_pheasant_uk",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "anti_tank_weapon"
+   ],
+   "hp": 350,
+   "target_size": 20,
+   "armor": {
+    "front": 70,
+    "side": 70,
+    "rear": 70
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 90
+   },
+   "traits": [
+    "repairable",
+    "recrewable",
+    "towable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "17pdr_at_gun_ph_uk",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "crew": {
+    "min": 2,
+    "roles": [
+     "gunner",
+     "loader"
+    ]
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "at_gun_17pdr_mobile_uk",
+     "german": "at_gun_17pdr_mobile_uk",
+     "british": "at_gun_17pdr_mobile_uk",
+     "afrika_korps": "at_gun_17pdr_mobile_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "tow": {
+    "by": []
+   }
+  }
+ }
+}

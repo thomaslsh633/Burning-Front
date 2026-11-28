@@ -1,0 +1,66 @@
+{
+ "emplacements": {
+  "tw_bofors_emplacement_uk": {
+   "coh3_ref": "ebps/races/british/emplacements/tw_bofors_emplacement_uk",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "building",
+    "emplacement"
+   ],
+   "hp": 600,
+   "target_size": 26,
+   "armor": {
+    "front": 5,
+    "side": 5,
+    "rear": 5
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 180,
+    "fuel": 20
+   },
+   "traits": [
+    "repairable",
+    "recrewable"
+   ],
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "40mm_bofors_uk_emplacement",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "bofors_emplacement_uk",
+     "german": "bofors_emplacement_uk",
+     "british": "bofors_emplacement_uk",
+     "afrika_korps": "bofors_emplacement_uk"
+    },
+    "min_crew": 3,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "construction": {
+    "build_turns": 2,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

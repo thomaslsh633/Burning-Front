@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "halftrack_towed_88mm_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_towed_88mm_ak",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "truck_2_5_towed_88_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 240,
+     "fuel": 15
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 5,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "dak_light_vehicle",
+    "reinforce_healing_platform",
+    "tier4"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "medical_truck_ak",
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "auto_reinforce_halftrack",
+    "towing_pickup",
+    "towing_drop",
+    "recrew_team_weapon_halftrack_us",
+    "vehicle_territory_capture_dummy_ak",
+    "common_shared_veterancy_dummy_parent",
+    "combat_readiness_medical_truck_ak",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "combat_readiness_medical_truck_veteran_ak",
+    "self_repair_passive_ak",
+    "towing_unload_abandoned",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "halftrack_towed_88mm_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

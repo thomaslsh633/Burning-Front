@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "base_defense_ger": {
+   "name": "entity.base_defense_ger.name",
+   "model": {
+    "id": "base_defense_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "base_defense_ger": {
+   "name": "unit.base_defense_ger.name",
+   "short_name": "unit.base_defense_ger.short",
+   "desc": "unit.base_defense_ger.desc",
+   "icon": "base_defense_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

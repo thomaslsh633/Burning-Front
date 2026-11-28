@@ -1,0 +1,76 @@
+{
+ "team_weapons": {
+  "tw_bofors_towed_uk": {
+   "coh3_ref": "ebps/races/british/team_weapons/tw_bofors_towed_uk",
+   "tags": [
+    "team_weapon",
+    "cover_object",
+    "burst_weapon"
+   ],
+   "hp": 350,
+   "target_size": 20,
+   "armor": {
+    "front": 70,
+    "side": 70,
+    "rear": 70
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 90
+   },
+   "traits": [
+    "repairable",
+    "recrewable",
+    "towable"
+   ],
+   "move": {
+    "hex": 4,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 6,
+    "detect_hex": 1
+   },
+   "weapons": [
+    {
+     "weapon": "40mm_bofors_uk",
+     "mount": "fixed",
+     "slot": "main"
+    }
+   ],
+   "stealth": {
+    "detected_hex": 1,
+    "first_strike_shots": 1,
+    "recloak_turns": 1
+   },
+   "crew": {
+    "min": 3,
+    "roles": [
+     "gunner",
+     "loader",
+     "gunner2"
+    ]
+   },
+   "recrew": {
+    "by_faction": {
+     "american": "bofors_towed_uk",
+     "german": "bofors_towed_uk",
+     "british": "bofors_towed_uk",
+     "afrika_korps": "bofors_towed_uk"
+    },
+    "min_crew": 2,
+    "max_squad": 4,
+    "manual_abandon": false,
+    "abandoned_on_spawn": false
+   },
+   "tow": {
+    "by": []
+   }
+  }
+ }
+}

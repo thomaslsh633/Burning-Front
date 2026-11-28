@@ -1,0 +1,20 @@
+{
+ "hellcat_us": {
+  "coh3_ref": "custom_property_container/veterancy/american/vehicles/hellcat_us",
+  "xp": [
+   1800,
+   5400,
+   10800
+  ],
+  "ranks": [
+   {},
+   {
+    "attack_speed": 0.8
+   },
+   {
+    "attack_speed": 0.8,
+    "weapon_penetration": 1.5
+   }
+  ]
+ }
+}

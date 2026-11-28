@@ -1,0 +1,44 @@
+{
+ "vehicles": {
+  "goliath_ak": {
+   "coh3_ref": "ebps/races/afrika_korps/vehicles/goliath_ak",
+   "tags": [
+    "goliath",
+    "vehicle"
+   ],
+   "hp": 120,
+   "target_size": 3,
+   "armor": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "directional_damage": {
+    "front": 1,
+    "side": 1,
+    "rear": 1
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 75,
+    "munition": 75
+   },
+   "traits": [
+    "repairable"
+   ],
+   "move": {
+    "hex": 5,
+    "pass": "infantry"
+   },
+   "sight": {
+    "hex": 3,
+    "detect_hex": 1
+   }
+  }
+ }
+}

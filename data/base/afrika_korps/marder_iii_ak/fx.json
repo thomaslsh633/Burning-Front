@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_marder_iii_ak": {
+   "name": "weapon.75mm_marder_iii_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "marder_iii_ak": {
+   "name": "entity.marder_iii_ak.name",
+   "model": {
+    "id": "marder_iii_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "marder_iii_ak": {
+   "name": "unit.marder_iii_ak.name",
+   "short_name": "unit.marder_iii_ak.short",
+   "desc": "unit.marder_iii_ak.desc",
+   "icon": "marder_iii_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

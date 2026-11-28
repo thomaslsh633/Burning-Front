@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "thompson_guards_uk": {
+   "name": "weapon.thompson_guards_uk.name",
+   "sound": {
+    "fire": "smg"
+   }
+  }
+ },
+ "ebps": {
+  "guards_uk": {
+   "name": "entity.guards_uk.name",
+   "model": {
+    "id": "guards_uk",
+    "anim_class": "infantry"
+   }
+  }
+ },
+ "sbps": {
+  "guards_uk": {
+   "name": "unit.guards_uk.name",
+   "short_name": "unit.guards_uk.short",
+   "desc": "unit.guards_uk.desc",
+   "icon": "guards_uk",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ }
+}

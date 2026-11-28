@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "75mm_stug_iii_short_ak": {
+   "name": "weapon.75mm_stug_iii_short_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "stug_iii_d_ak": {
+   "name": "entity.stug_iii_d_ak.name",
+   "model": {
+    "id": "stug_iii_d_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "stug_iii_d_ak": {
+   "name": "unit.stug_iii_d_ak.name",
+   "short_name": "unit.stug_iii_d_ak.short",
+   "desc": "unit.stug_iii_d_ak.desc",
+   "icon": "stug_iii_d_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

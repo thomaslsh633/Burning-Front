@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "88mm_elefant_ak": {
+   "name": "weapon.88mm_elefant_ak.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
+ "ebps": {
+  "elefant_tank_destroyer_ak": {
+   "name": "entity.elefant_tank_destroyer_ak.name",
+   "model": {
+    "id": "elefant_tank_destroyer_ak",
+    "anim_class": "tank_medium"
+   }
+  }
+ },
+ "sbps": {
+  "elefant_tank_destroyer_ak": {
+   "name": "unit.elefant_tank_destroyer_ak.name",
+   "short_name": "unit.elefant_tank_destroyer_ak.short",
+   "desc": "unit.elefant_tank_destroyer_ak.desc",
+   "icon": "elefant_tank_destroyer_ak",
+   "menu": {
+    "tab": "vehicles",
+    "order": 0
+   }
+  }
+ }
+}

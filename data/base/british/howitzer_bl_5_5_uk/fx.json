@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "tw_howitzer_bl_5_5_uk": {
+   "name": "entity.tw_howitzer_bl_5_5_uk.name",
+   "model": {
+    "id": "tw_howitzer_bl_5_5_uk",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "howitzer_bl_5_5_uk": {
+   "name": "unit.howitzer_bl_5_5_uk.name",
+   "short_name": "unit.howitzer_bl_5_5_uk.short",
+   "desc": "unit.howitzer_bl_5_5_uk.desc",
+   "icon": "howitzer_bl_5_5_uk",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

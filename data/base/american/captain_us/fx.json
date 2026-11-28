@@ -1,0 +1,20 @@
+{
+ "sbps": {
+  "captain_us": {
+   "name": "unit.captain_us.name",
+   "short_name": "unit.captain_us.short",
+   "desc": "unit.captain_us.desc",
+   "icon": "captain_us",
+   "menu": {
+    "tab": "infantry",
+    "order": 0
+   }
+  }
+ },
+ "upgrade": {
+  "bar_captain_us": {
+   "name": "upgrade.bar_captain_us.name",
+   "icon": "bar_captain_us"
+  }
+ }
+}

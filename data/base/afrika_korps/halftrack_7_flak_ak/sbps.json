@@ -1,0 +1,66 @@
+{
+ "vehicles": {
+  "halftrack_7_flak_ak": {
+   "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_7_flak_ak",
+   "kind": "vehicle",
+   "role": "anti_light_vehicle",
+   "members": [
+    {
+     "entity": "halftrack_7_flak_ak",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 260,
+     "fuel": 50
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 6,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "dak_light_vehicle",
+    "tier2",
+    "anti_air",
+    "vehicle_burst_weapon"
+   ],
+   "source": "produced",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_long_war_veterans_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "prioritize_vehicles",
+    "smoke_discharge_8rad_ak",
+    "blitz_upgrade_ak",
+    "self_repair_passive_ak",
+    "ap_rounds_flak_7_ak",
+    "vehicle_awareness_ak",
+    "vehicle_territory_capture_dummy_ak",
+    "toggle_aa_mode",
+    "hold_fire",
+    "infiltration_right_1_silent_running_toggle_ak",
+    "flak_moving_suppression_ak",
+    "italian_airborne_sleeping_lions_hulldown_activate_ak",
+    "italian_airborne_sleeping_lions_hulldown_deactivate_ak"
+   ],
+   "veterancy": {
+    "set": "halftrack_7_flak_ak"
+   },
+   "supply": {
+    "ammo": 12
+   },
+   "build": {
+    "menu": [
+     "mine_light_vehicles_elite_forces_ak"
+    ]
+   }
+  }
+ }
+}

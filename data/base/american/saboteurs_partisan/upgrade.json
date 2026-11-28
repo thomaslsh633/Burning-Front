@@ -1,0 +1,44 @@
+{
+ "infantry": {
+  "mp44_saboteurs_partisan": {
+   "coh3_ref": "upgrade/american/infantry/mp44_saboteurs_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "stolen_weapons_partisan"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "mp44_saboteurs_partisan"
+    }
+   ]
+  },
+  "grb39_grenade_launcher_saboteurs_partisan": {
+   "coh3_ref": "upgrade/american/infantry/grb39_grenade_launcher_saboteurs_partisan",
+   "scope": "unit",
+   "cost": {
+    "munition": 60
+   },
+   "build_turns": 3,
+   "requires": {
+    "upgrades": [
+     "stolen_weapons_partisan"
+    ]
+   },
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "grb_39_grenade_launcher_he_ak"
+    }
+   ]
+  }
+ }
+}

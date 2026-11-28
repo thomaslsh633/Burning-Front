@@ -1,0 +1,56 @@
+{
+ "infantry": {
+  "fallschirmjagers_ger": {
+   "coh3_ref": "sbps/races/german/infantry/fallschirmjagers_ger",
+   "kind": "squad",
+   "role": "anti_infantry",
+   "members": [
+    {
+     "entity": "fallschirmjagers_ger",
+     "count": 4
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 320
+    },
+    "from": "coh3stats"
+   },
+   "pop": 9,
+   "build_turns": 4,
+   "tags": [
+    "infantry",
+    "elite_infantry",
+    "infantry_burst_weapon",
+    "infantry_anti_infantry",
+    "wehrmacht_advanced_unit",
+    "fallschirmjager"
+   ],
+   "source": "restored",
+   "abilities": [
+    "italian_airborne_weapon_canister_interact_ak",
+    "vault_movement",
+    "grenade_fallschirmjager_ger",
+    "medkits_fallschirm_ger",
+    "panzerfaust_fallschirmjager_ger",
+    "breach_fallschirmjager",
+    "airborne_spirit_vet_ger",
+    "hold_fire",
+    "camouflage_in_cover_fallschirmjager_ger",
+    "camouflage_in_cover_fallschirmjager_veteran_ger"
+   ],
+   "capture": {
+    "rate": 1.25
+   },
+   "reinforce": {
+    "cost_ratio": 0.5
+   },
+   "veterancy": {
+    "set": "fallschirmjagers_ger"
+   },
+   "supply": {
+    "ammo": 20
+   }
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "infantry": {
+  "boys_anti_tank_rifles_tommy_uk": {
+   "coh3_ref": "upgrade/british/infantry/boys_anti_tank_rifles_tommy_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 50
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "boys_at_rifle_uk"
+    }
+   ]
+  },
+  "lmg_bren_tommy_uk": {
+   "coh3_ref": "upgrade/british/infantry/lmg_bren_tommy_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 90
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "bren_lmg_uk"
+    }
+   ]
+  },
+  "recon_package_tommy_uk": {
+   "coh3_ref": "upgrade/british/infantry/recon_package_tommy_uk",
+   "scope": "unit",
+   "cost": {
+    "munition": 45
+   },
+   "build_turns": 3,
+   "limit": 1,
+   "effects": [
+    {
+     "type": "add_weapon",
+     "weapon": "scoped_lee_enfield_tommy_uk"
+    }
+   ]
+  }
+ }
+}

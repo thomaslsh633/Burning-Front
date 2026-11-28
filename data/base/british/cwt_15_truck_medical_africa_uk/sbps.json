@@ -1,0 +1,49 @@
+{
+ "vehicles": {
+  "cwt_15_truck_medical_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/vehicles/cwt_15_truck_medical_africa_uk",
+   "kind": "vehicle",
+   "role": "logistics",
+   "members": [
+    {
+     "entity": "cwt_15_medical_africa_uk",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 200,
+     "fuel": 25
+    },
+    "from": "coh3stats"
+   },
+   "pop": 4,
+   "build_turns": 3,
+   "tags": [
+    "vehicle",
+    "light_armor",
+    "healer",
+    "reinforce_healing_platform"
+   ],
+   "source": "restored",
+   "abilities": [
+    "repair_critical_engine_damage_uk",
+    "aura_medical_cwt_uk",
+    "auto_reinforce_halftrack",
+    "improved_logistics_cwt_uk",
+    "common_shared_veterancy_dummy_parent",
+    "towing_pickup",
+    "towing_drop",
+    "vehicle_handbrake",
+    "recrew_team_weapon_halftrack_us",
+    "towing_unload_abandoned"
+   ],
+   "veterancy": {
+    "set": "cwt_15_truck_medical_africa_uk"
+   },
+   "supply": {
+    "ammo": 12
+   }
+  }
+ }
+}

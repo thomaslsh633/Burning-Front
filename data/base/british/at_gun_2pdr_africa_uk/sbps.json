@@ -1,0 +1,62 @@
+{
+ "team_weapons": {
+  "at_gun_2pdr_africa_uk": {
+   "coh3_ref": "sbps/races/british_africa/team_weapons/at_gun_2pdr_africa_uk",
+   "kind": "team_weapon",
+   "role": "anti_tank",
+   "members": [
+    {
+     "entity": "tw_at_gun_2pdr_africa_uk",
+     "count": 1
+    },
+    {
+     "entity": "crew_at_gun_aussie_africa_uk",
+     "count": 5
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 290
+    },
+    "from": "coh3stats"
+   },
+   "pop": 6,
+   "build_turns": 3,
+   "tags": [
+    "teamweapon",
+    "anti_tank",
+    "teamweapon_anti_tank"
+   ],
+   "source": "built",
+   "upgrades": {
+    "slots": -1,
+    "list": [],
+    "pending": [
+     "elite_forces_medical_supplements_squad_upgrade_ak"
+    ]
+   },
+   "abilities": [
+    "towing_attach",
+    "prioritize_vehicles",
+    "target_weak_point_2pdr_uk",
+    "hold_fire"
+   ],
+   "capture": {
+    "rate": 1
+   },
+   "reinforce": {
+    "cost_ratio": 0.58
+   },
+   "veterancy": {
+    "set": "at_gun_2pdr_africa_uk"
+   },
+   "team_weapon": {
+    "weapon_entity": "tw_at_gun_2pdr_africa_uk",
+    "crew_entity": "crew_at_gun_aussie_africa_uk"
+   },
+   "supply": {
+    "ammo": 16
+   }
+  }
+ }
+}
