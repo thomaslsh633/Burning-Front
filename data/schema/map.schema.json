@@ -68,7 +68,7 @@
       "items": {
         "type": "object",
         "properties": { "id": { "$ref": "types.schema.json#/$defs/Id" }, "type": { "type": "string" }, "team": { "$ref": "#/$defs/Team" }, "hexes": { "type": "array", "items": { "$ref": "#/$defs/HexKey" } },
-          "kind": { "enum": ["production", "production_heavy", "doctrine"] } },
+          "kind": { "enum": ["production", "production_heavy"] } },
         "additionalProperties": false,
         "required": ["id", "type", "team", "hexes"]
       }

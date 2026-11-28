@@ -1,5 +1,5 @@
 {
-  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint, by class: hq, tier (production: tier 1\u20132, production_heavy: tier 3\u20134), doctrine, neutral (houses, church). Every building can be destroyed. Tier / doctrine / HQ armour is CoH3's 35; their HP keeps CoH3's ratio 1500 : 2000 : 3000 scaled so a Sherman 75 mm needs at least 8 hits for a tier 1\u20132 building (1000 HP = 8, 1375 = 11, HQ 2000 = 16); neutral buildings use the same scale (small house 625 = 5 hits, house 1000 = 8, large house 1375 = 11, church 2000 = 16) and armour 35; damage types in armor_ignored_by (explosive) hit every feature at full damage, other damage scales by penetration \u00f7 armour; HQ rebuild cost is CoH3's HQ price; wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0\u20133. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
+  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint, by class: hq, tier (production: T1\u2013T2, production_heavy: T3), neutral (houses, church); no doctrine buildings. Every building can be destroyed. Tier and HQ armour is CoH3's 35; their HP keeps CoH3's ratio 1500 : 2000 : 3000 scaled so a Sherman 75 mm needs at least 8 hits for a tier 1\u20132 building (T1\u2013T2 1000 HP = 8, T3 1375 = 11, HQ 2000 = 16); neutral buildings use the same scale (small house 625 = 5 hits, house 1000 = 8, large house 1375 = 11, church 2000 = 16) and armour 35; damage types in armor_ignored_by (explosive) hit every feature at full damage, other damage scales by penetration \u00f7 armour; HQ rebuild cost is CoH3's HQ price; wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0\u20133. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
   "pass_classes": {
     "infantry": "infantry",
     "vaulting_infantry": "infantry",
@@ -432,13 +432,6 @@
       "garrison": 0,
       "height": 3,
       "class": "tier"
-    },
-    "doctrine": {
-      "hp": 1000,
-      "armor": 35,
-      "garrison": 0,
-      "height": 3,
-      "class": "doctrine"
     }
   },
   "structure_terrain": {

@@ -9,7 +9,7 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (286 tests) |
+| Checks | `npm run check` passes; `npm test` passes (288 tests) |
 | Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
@@ -54,6 +54,7 @@ Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, Pix
 | after D2-9 | annihilation: HQ destroyed or all units gone (HQ destructible in annihilation only); `Convert` command with `data/rules/conversions.json` (CoH3 field conversions, research-locked ones refused) |
 | after D2-9 | every building destructible in every mode (HQ 3000, production 1500 / 2000 HP from CoH3; production buildings compiled as structures); destroyed HQ: no base income, no production, no supply link; `Rebuild` command (`logic/build`) |
 | 2026-11-28 | decisions: pinned units no counter; retreat arrival keeps the action; recrew any squad size; capture = sum of squad capture rates; building classes (hq / tier / doctrine / neutral); tier buildings 1000 / 1375 HP, HQ 2000, armour 35 (Sherman 8 / 11 / 16 hits) |
+| 2026-11-28 | production by tier slot (`hq`, `t1`–`t3`, branches `t2a` …), no doctrine buildings, HQ only engineers and recon, CoH3 tier tags place non-production units, research-locked conversion targets locked in production; `reports/production.md` |
 
 D2 readiness fixes 1–7:
 1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
@@ -120,8 +121,8 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   in the Tier 2 building (`tier2` in `data/rules/production.json`); `place` / `research` overrides by hand. The research
   command itself (cost, turns) is not built: it needs numbers.
 - The converted v214 maps are reference only; new maps will be made from scratch.
-- **Not confirmed yet:** map-type mapping (German `support_center` → Support Armory, `motor_pool` → Mechanized Kompanie;
-  British factions have no `support_center`; v214 doctrine buildings produce nothing); produced units face east.
+- **Tier slots (decided 2026-11-28):** see SPEC §3 Production. The converted v214 maps still use the old building types
+  (barracks …), so their buildings produce nothing; new maps use `t1`–`t3`. Produced units still face east.
 - **Decided 2026-11-26 and done:** vehicles are never abandoned or captured (ABANDONED state removed); crewless guns are
   ownerless targets any side may destroy (CoH3); reloading units do not counter fire (`timers.reload`).
 - **Not built:** dropped weapon pickups (decided: upgrade / slot weapons only), `Captured` vs `Recrewed` (the previous

@@ -314,7 +314,7 @@
             "$ref": "types.schema.json#/$defs/Id"
           },
           "class": {
-            "enum": ["hq", "tier", "doctrine", "neutral"]
+            "enum": ["hq", "tier", "neutral"]
           },
           "rebuild": {
             "type": "object",

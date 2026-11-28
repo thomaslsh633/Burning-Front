@@ -7,7 +7,7 @@ import { gameData } from '../../helpers/game-data.js';
 const H = (c, r) => ({ c, r });
 const MAP = {
   points: [{ id: 'f', kind: 'fuel', hex: '5,5', radius: 0 }, { id: 'm', kind: 'munition', hex: '7,5', radius: 0 }, { id: 'v', kind: 'vp', hex: '9,5', radius: 0 }],
-  production: [{ id: 'bx', type: 'barracks', team: 'blue', hexes: ['2,2'] }, { id: 'tx', type: 'tank_depot', team: 'red', hexes: ['9,8'] }],
+  production: [{ id: 'bx', type: 't1', team: 'blue', hexes: ['2,2'] }, { id: 'tx', type: 't3', team: 'red', hexes: ['9,8'] }],
 };
 const owned = (state, ids) => ({ ...state, points: state.points.map(p => (ids.includes(p.id) ? { ...p, owner: 'blue' } : p)) });
 

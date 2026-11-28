@@ -110,7 +110,7 @@ test('buildings: HP by size, block movement and sight; collapse leaves rubble an
 
 test('every building can be destroyed, the HQ too, in either mode; production buildings are structures', () => {
   const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['2,2'] }],
-    production: [{ id: 'bx', type: 'barracks', team: 'blue', hexes: ['5,5'] }] });
+    production: [{ id: 'bx', type: 't1', team: 'blue', hexes: ['5,5'] }] });
   const r = terrain.damageStructure(state, data, 'hq', { amount: 99999, weapon: weapon('81mm_mortar_us') });
   assert.equal(r.collapsed, true);
   assert.equal(terrain.hqDestroyed(r.state, data, 'blue'), true);
@@ -171,7 +171,7 @@ test('clearWreck: one turn of work at a time; a vehicle wreck goes after its cle
 
 test('a Sherman 75 mm needs at least 8 hits for a tier building (11 for tier 3–4, 16 for an HQ)', () => {
   const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['2,2'] }],
-    production: [{ id: 't1', type: 'barracks', team: 'blue', hexes: ['5,5'] }, { id: 't4', type: 'tank_depot', team: 'blue', hexes: ['8,5'], kind: 'production_heavy' }] });
+    production: [{ id: 't1', type: 't1', team: 'blue', hexes: ['5,5'] }, { id: 't4', type: 't3', team: 'blue', hexes: ['8,5'], kind: 'production_heavy' }] });
   const w = data.units.weapon['75mm_sherman_us'];
   const hits = id => {
     let s = state, n = 0;
@@ -182,7 +182,7 @@ test('a Sherman 75 mm needs at least 8 hits for a tier building (11 for tier 3�
     }
   };
   assert.deepEqual([hits('t1'), hits('t4'), hits('hq')], [8, 11, 16]);
-  for (const k of ['production', 'production_heavy', 'hq', 'doctrine']) assert.ok(data.rules.terrain.structures[k].armor < w.penetration.far, k);
+  for (const k of ['production', 'production_heavy', 'hq']) assert.ok(data.rules.terrain.structures[k].armor < w.penetration.far, k);
 });
 
 test('explosives hit buildings at full damage; other damage scales by penetration ÷ armour', () => {

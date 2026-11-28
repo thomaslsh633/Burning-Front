@@ -47,3 +47,20 @@ test('the report lists every unit with its building, availability, and conversio
   assert.match(md, /\| `support_center` \(Tier 2\) \| `wsc` \| — \| `truck_4x4_us` \| Start \|/);
   assert.match(md, /175 MP \| Research \|/);
 });
+
+test('the HQ makes only engineers and recon; tier tags pick the tier; research-locked conversion targets stay locked', () => {
+  const r = { american: { units: [
+    unit('engineer_us', 'infantry', ['hq'], ['infantry', 'combat_engineer']),
+    unit('scout_us', 'infantry', ['hq'], ['infantry']),
+    unit('captain_us', 'infantry', ['hq'], ['infantry', 'captain']),
+    unit('rifles_us', 'infantry', ['bar'], ['infantry']),
+    unit('lt_us', 'vehicles', [], ['vehicle', 'tier3'], { source: 'called_in' }),
+    unit('tank_us', 'vehicles', ['depot'], ['vehicle', 'medium_armor']),
+    unit('ranger_us', 'infantry', ['hq'], ['infantry', 'elite']),
+  ] } };
+  const p = { types: { hq: { american: 'hq' }, t1: { american: 'bar' }, t2: { american: 'mp' }, t3: { american: 'depot' } } };
+  const out = buildProduction(r, p, new Set(['ranger_us']), new Set(['ranger_us']));
+  assert.deepEqual(out.hq, { squads: ['engineer_us', 'scout_us'], research: [] });
+  assert.deepEqual(out.bar, { squads: ['captain_us', 'rifles_us'], research: ['ranger_us'] });
+  assert.deepEqual(out.depot.squads, ['lt_us', 'tank_us'], 'tier3 tag → T3, not the empty T2');
+});

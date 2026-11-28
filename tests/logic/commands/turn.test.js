@@ -244,7 +244,7 @@ test('reload: a weapon firing every 2 turns skips the next own turn and cannot c
 });
 
 test('Produce: paid, placed beside the building, acts from the next own turn', () => {
-  const map = { production: [{ id: 'bx', type: 'barracks', team: 'blue', hexes: ['2,2'] }] };
+  const map = { production: [{ id: 'bx', type: 't1', team: 'blue', hexes: ['2,2'] }] };
   const { state, data } = testMatch([], map);
   const r = run(state, data, { type: 'Produce', side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(3, 2) });
   const id = r.events[0].unit, u = r.state.units[id];

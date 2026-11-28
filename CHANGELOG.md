@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — production by tier (2026-11-28)
+- Buildings are tier slots T1–T3 per faction (a tier may branch: T2A / T2B); no doctrine buildings.
+- The HQ builds only engineers and recon units; doctrine units come from the tier buildings.
+
 ## rewrite — rule decisions (2026-11-28)
 - Pinned units no longer counter fire; a retreating unit reaching its rally point at its turn start can still act.
 - Any squad can recrew a gun; capture speed adds up the squads' capture rates.

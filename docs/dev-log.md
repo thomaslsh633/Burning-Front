@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (production by tier)
+- **Done:** map production types are tier slots (`hq`, `t1`–`t3`, branches `t2a` …) per faction; no doctrine buildings;
+  the HQ makes only engineers and recon; non-production units placed by CoH3 tier tag, then resemblance; research-locked
+  conversion targets locked in production too (Sturmpioneer, 251/16). `reports/production.md` regenerated. 288 tests.
+- **Next:** stage G.
+- **Blocked:** nothing.
+
 ## 2026-11-28 (decisions on the status report)
 - **Done:** pinned units no counter fire; retreat arrival at turn start keeps the action; recrew any squad size; capture
   = sum of squads' CoH3 capture rates (steps separate); building classes; tier buildings 1000 / 1375, HQ 2000 HP, armour 35
