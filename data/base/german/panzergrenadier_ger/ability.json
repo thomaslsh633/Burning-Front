@@ -21,5 +21,24 @@
    },
    "fog": true
   }
+ },
+ "smoke": {
+  "grenade_smoke_panzergrenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_smoke_panzergrenadier_ger",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "cooldown_turns": 18,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "siegebreakers_ger",
+     "siegebreakers_clearing_gear_ger"
+    ]
+   }
+  }
  }
 }

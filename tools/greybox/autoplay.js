@@ -51,14 +51,15 @@ function playTurn(store, data, pick, stats) {
     const s = store.getState(), u = s.units[id];
     if (!u || u.team !== side || u.fsm.life !== 'ACTIVE' || u.fsm.action === 'EXHAUSTED') continue;
     const enemies = Object.values(s.units).filter(e => e.team && e.team !== side && e.fsm.life === 'ACTIVE');
+    const nearEnemy = enemies.some(e => distance(e.pos, u.pos) <= 6);
     const act = (type, x) => { const ok = try_({ type, side, unit: id, ...x }); if (ok) stats.used[type] = (stats.used[type] ?? 0) + 1; return ok; };
     const can = (type, x) => !validate(s, { type, side, unit: id, ...x }, data);
     // an ability that can hit an enemy now (half the time, so plain fire is played too)
-    const skill = pick.int(2) ? abilitiesOf(u, data).flatMap(a => enemies.map(e => ({ ability: a, ...(data.units.ability[a].target === 'unit' ? { target: e.id } : { hex: e.pos }) }))).find(x => can('UseSkill', x)) : null;
+    const aims = a => (data.units.ability[a].target === 'self' ? (nearEnemy ? [{}] : []) : enemies.map(e => (data.units.ability[a].target === 'unit' ? { target: e.id } : { hex: e.pos })));
+    const skill = pick.int(2) ? abilitiesOf(u, data).flatMap(a => aims(a).map(x => ({ ability: a, ...x }))).find(x => can('UseSkill', x)) : null;
     if (skill && act('UseSkill', skill)) continue;
     const target = enemies.find(e => !validate(s, { type: 'Attack', side, unit: id, target: e.id }, data));
     if (target) { try_({ type: 'Attack', side, unit: id, target: target.id }); continue; }
-    const nearEnemy = enemies.some(e => distance(e.pos, u.pos) <= 6);
     if (u.container) { if (u.fsm.location === 'LOADED' && nearEnemy) act('Exit'); continue; }   // garrisoned: stays and fires
     if (nearEnemy && passengers(s, id).length && act('Unload')) continue;
     const ruin = Object.keys(mapOf(s, data).structures).find(st => can('Rebuild', { structure: st }));   // an own destroyed building: rebuild it

@@ -18,5 +18,18 @@
    "cooldown_turns": 1,
    "fog": true
   }
+ },
+ "smoke": {
+  "smoke_81mm_mortar_us": {
+   "coh3_ref": "abilities/american/team_weapons/smoke_81mm_mortar_us",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
  }
 }

@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "smoke_goon_gun_pit_us": {
+   "coh3_ref": "abilities/american/team_weapons/smoke_goon_gun_pit_us",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 4,
+    "max": 16
+   },
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ }
+}

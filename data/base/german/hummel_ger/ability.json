@@ -18,5 +18,18 @@
    "cooldown_turns": 1,
    "fog": true
   }
+ },
+ "smoke": {
+  "barrage_smoke_hummel_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_smoke_hummel_ger",
+   "target": "hex",
+   "radius_hex": 2,
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
  }
 }

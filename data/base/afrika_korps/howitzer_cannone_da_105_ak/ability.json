@@ -1,4 +1,17 @@
 {
+ "smoke": {
+  "smoke_howitzer_cannone_105_ak": {
+   "coh3_ref": "abilities/afrika_korps/team_weapons/smoke_howitzer_cannone_105_ak",
+   "target": "hex",
+   "radius_hex": 2,
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ },
  "weapon": {
   "barrage_howitzer_cannone_105_ak": {
    "coh3_ref": "abilities/afrika_korps/team_weapons/barrage_howitzer_cannone_105_ak",

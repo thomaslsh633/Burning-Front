@@ -1,5 +1,5 @@
 {
-  "about": "Sight and cover (v214 v144–v159 rules, SPEC §4, §5, §10). Heights in object-height units; one elevation step = elevation_height.",
+  "about": "Sight and cover (v214 v144–v159 rules, SPEC §4, §5, §10). Heights in object-height units; one elevation step = elevation_height. smoke_turns: how long smoke laid by an ability lasts (turns; it clears when that many turns have begun), 2026-11-28 recommended.",
   "elevation_height": 2,
   "eye_height": {
     "squad": 1.5,
@@ -21,5 +21,6 @@
   },
   "emplaced_concealment_hex": 2,
   "revealed_after_firing_turns": 2,
-  "garrison_concealment_hex": 1
+  "garrison_concealment_hex": 1,
+  "smoke_turns": 2
 }

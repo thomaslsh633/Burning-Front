@@ -1,0 +1,20 @@
+{
+ "smoke": {
+  "smoke_barrage_panzer_iii_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/smoke_barrage_panzer_iii_ak",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "cooldown_turns": 12,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "armory_smoke_survivability_ak"
+    ]
+   }
+  }
+ }
+}

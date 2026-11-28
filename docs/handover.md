@@ -88,7 +88,7 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   built 2026-11-28. Not built: walls / wire / mines from the build menu, multi-hex footprints, towing guns.
 - **Map follow-ups:**
   - Mines (in map files, not simulated).
-  - Smoke; craters from heavy shells.
+  - Craters from heavy shells (smoke: built 2026-11-28).
   - Forest burning.
   - Production buildings are compiled as structures (kind `production` / `production_heavy`).
   - Mod maps (`mods/<id>/maps/` not merged yet).

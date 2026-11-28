@@ -179,13 +179,14 @@ export const ROUTES = {
       x => turn.spend(x, c.unit, { action: 1 }),
     ]),
   },
-  /** { unit, ability, hex | target }: an ability that fires its weapon; paid, spends the action, then cools down. A unit target fires back. */
+  /** { unit, ability, hex | target }: an ability fires its weapon (a unit target fires back) or lays smoke; paid, spends the action, then cools down. */
   UseSkill: {
     unit: true,
     validate: (s, c, d) => skills.validateUseSkill(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'UseSkill'),
     apply: (s, c, d, rng) => chain(s, [
       x => economy.pay(x, x.units[c.unit].team, d.units.ability[c.ability].cost ?? {}),
-      x => fire(x, d, rng, c.unit, c.target ?? null, skills.useOf(x, c, d)),
+      x => (skills.isSmoke(d, c.ability) ? terrain.placeSmoke(x, skills.smokeHexes(x, c, d), d.balance.vision.smoke_turns)
+        : fire(x, d, rng, c.unit, c.target ?? null, skills.useOf(x, c, d))),
       ifUnit(c.unit, x => skills.startCooldown(x, c.unit, c.ability, d)),
       ifUnit(c.unit, x => turn.spend(x, c.unit, { action: 1, fired: true })),
       x => (c.target ? counterFire(x, d, rng, c.target, c.unit) : { state: x, events: [] }),

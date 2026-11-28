@@ -1,4 +1,17 @@
 {
+ "smoke": {
+  "barrage_smoke_75mm_leig_ak": {
+   "coh3_ref": "abilities/afrika_korps/team_weapons/barrage_smoke_75mm_leig_ak",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 2,
+    "max": 14
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ },
  "weapon": {
   "barrage_howitzer_75mm_leig_ak": {
    "coh3_ref": "abilities/afrika_korps/team_weapons/barrage_howitzer_75mm_leig_ak",

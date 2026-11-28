@@ -1,4 +1,17 @@
 {
+ "smoke": {
+  "gurkha_smoke_grenade_uk": {
+   "coh3_ref": "abilities/british/infantry/gurkha_smoke_grenade_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "cooldown_turns": 18,
+   "fog": true
+  }
+ },
  "weapon": {
   "gurkha_grenade_assault_uk": {
    "coh3_ref": "abilities/british/infantry/gurkha_grenade_assault_uk",

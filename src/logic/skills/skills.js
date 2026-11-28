@@ -1,8 +1,9 @@
 // Abilities (SPEC §10, 2026-11-28): an ability fires its own weapon `shells` times at a hex (each shell lands there or within
 // the spread and hits whatever stands where it lands) or at a unit, paid in resources, once per cooldown. Owns cooldowns.
-// Data: data.units.ability (CoH3 abilities that fire a weapon; buffs, toggles, smoke and off-map strikes are not built).
+// Smoke abilities lay smoke on the target hex (or the unit's own) and the hexes within radius_hex (logic/terrain, vision).
+// Data: data.units.ability (groups weapon, smoke; buffs, toggles and off-map strikes are not built).
 import { putUnit } from '../state/index.js';
-import { inside, key } from '../hex/index.js';
+import { inside, key, disk, distance } from '../hex/index.js';
 import { canAttack, weaponReach } from '../combat/index.js';
 import { visibleHexes } from '../vision/index.js';
 import { canAfford, requirementsMet } from '../economy/index.js';
@@ -20,6 +21,14 @@ export function abilityWeapon(unit, abilityId, data) {
     indirect: { ...(w.indirect || {}), spread_hex: ab.spread_hex } } };
 }
 
+export const isSmoke = (data, abilityId) => data.units.ability[abilityId]?.category === 'smoke';
+
+/** Hexes a smoke ability covers: the target hex (its own hex for target self) and those within radius_hex, on the map. */
+export function smokeHexes(state, cmd, data) {
+  const ab = data.units.ability[cmd.ability], centre = ab.target === 'self' ? state.units[cmd.unit].pos : cmd.hex;
+  return disk(centre, ab.radius_hex).filter(h => inside(h, state.map.cols, state.map.rows));
+}
+
 /** What combat needs for this use: { weapons, hex? }. */
 export const useOf = (state, cmd, data) => ({ weapons: [abilityWeapon(state.units[cmd.unit], cmd.ability, data)], ...(cmd.hex ? { hex: cmd.hex } : {}) });
 
@@ -33,6 +42,13 @@ export function validateUseSkill(state, cmd, data) {
   const u = state.units[cmd.unit], ab = data.units.ability[cmd.ability];
   const notReady = skillReady(state, u, cmd.ability, data);
   if (notReady) return notReady;
+  if (isSmoke(data, cmd.ability)) {
+    if (ab.target === 'self') return null;
+    if (!cmd.hex || !inside(cmd.hex, state.map.cols, state.map.rows)) return 'bad_hex';
+    if (!ab.fog && !visibleHexes(state, data, u.team).has(key(cmd.hex))) return 'hex_not_seen';
+    const d = distance(u.pos, cmd.hex);
+    return d > ab.range_hex.max ? 'out_of_range' : d < ab.range_hex.min ? 'too_close' : null;
+  }
   const use = useOf(state, cmd, data);
   if (ab.target === 'unit') return cmd.target ? canAttack(state, data, cmd.unit, cmd.target, use) : 'no_target';
   if (!cmd.hex || !inside(cmd.hex, state.map.cols, state.map.rows)) return 'bad_hex';

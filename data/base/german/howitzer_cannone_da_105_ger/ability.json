@@ -18,5 +18,18 @@
    "cooldown_turns": 2,
    "fog": true
   }
+ },
+ "smoke": {
+  "smoke_howitzer_cannone_105_ger": {
+   "coh3_ref": "abilities/german/team_weapons/smoke_howitzer_cannone_105_ger",
+   "target": "hex",
+   "radius_hex": 2,
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "cooldown_turns": 2,
+   "fog": true
+  }
  }
 }

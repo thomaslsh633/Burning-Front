@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "grenade_smoke_guastatori_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_guastatori_ak",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "cooldown_turns": 18,
+   "fog": true
+  }
+ }
+}

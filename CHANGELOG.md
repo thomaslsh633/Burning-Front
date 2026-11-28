@@ -3,6 +3,9 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — smoke (2026-11-28)
+- Smoke grenades, mortar smoke and vehicle smoke dischargers block sight for 2 turns.
+
 ## rewrite — production rebuild (2026-11-28)
 - Engineers rebuild destroyed tier buildings; their research then carries on.
 

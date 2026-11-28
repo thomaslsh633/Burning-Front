@@ -1,4 +1,42 @@
 {
+ "smoke": {
+  "smoke_discharge_8rad_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/smoke_discharge_8rad_ak",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 12,
+   "cost": {
+    "munition": 25
+   },
+   "requires": {
+    "upgrades": [
+     "armory_smoke_survivability_ak"
+    ]
+   }
+  },
+  "smoke_discharge_ui_position_23_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/smoke_discharge_ui_position_23_ak",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 12,
+   "cost": {
+    "munition": 25
+   },
+   "requires": {
+    "upgrades": [
+     "armory_smoke_survivability_ak"
+    ]
+   }
+  }
+ },
  "weapon": {
   "italian_airborne_passaglia_at_explosive_ak": {
    "coh3_ref": "abilities/afrika_korps/infantry/italian_airborne_passaglia_at_explosive_ak",

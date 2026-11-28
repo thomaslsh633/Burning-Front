@@ -1,4 +1,33 @@
 {
+ "smoke": {
+  "grenade_smoke_panzerpioneer_elite_forces_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_panzerpioneer_elite_forces_ak",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "cooldown_turns": 18,
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "elite_forces_skirmisher_g43_panzerpioneer_ak"
+    ]
+   }
+  },
+  "grenade_smoke_demo_panzerpioneer_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_demo_panzerpioneer_ak",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 2,
+    "max": 6
+   },
+   "cooldown_turns": 18,
+   "fog": true
+  }
+ },
  "weapon": {
   "grenade_stun_panzerpioneer_ak": {
    "coh3_ref": "abilities/afrika_korps/infantry/grenade_stun_panzerpioneer_ak",

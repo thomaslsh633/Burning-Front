@@ -2,6 +2,12 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (production rebuild, smoke)
+- **Done:** tier buildings rebuild (terrain.json rebuild rules: 200 MP / 20 fuel, 2 turns; T3 300 / 60, 3 turns), greybox
+  and autoplay rebuild. Smoke: 48 CoH3 smoke abilities (`ability.json` group smoke), `terrain` smoke overlay, sight blocked
+  through / into / out of smoke, greybox draws it. 324 tests.
+- **Next:** buffs / toggles (CoH3 state trees: need a readable source), off-map strikes, craters; real-phone check (G-6), D3.
+
 ## 2026-11-28 (doctrines)
 - **Done:** `tools/coh3/doctrines.js` → `data/rules/doctrines.json` (43 battlegroups; doctrine units placed by the CoH3 ids
   the battlegroup names, 4 by hand; all battlegroup upgrades); `ChooseDoctrine` (economy); greybox; autoplay. 322 tests.

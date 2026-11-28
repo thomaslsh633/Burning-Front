@@ -1,4 +1,17 @@
 {
+ "smoke": {
+  "smoke_rifle_greande_tommy_uk": {
+   "coh3_ref": "abilities/british/infantry/smoke_rifle_greande_tommy_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 2,
+    "max": 5
+   },
+   "cooldown_turns": 18,
+   "fog": true
+  }
+ },
  "weapon": {
   "rifle_grenade_tommy_uk": {
    "coh3_ref": "abilities/british/infantry/rifle_grenade_tommy_uk",

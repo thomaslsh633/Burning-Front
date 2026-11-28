@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "smoke_shot_chaffee_us": {
+   "coh3_ref": "abilities/american/vehicles/smoke_shot_chaffee_us",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "cooldown_turns": 12,
+   "fog": true
+  }
+ }
+}

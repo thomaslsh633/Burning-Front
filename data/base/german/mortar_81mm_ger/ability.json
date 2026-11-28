@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "smoke_81mm_mortar_ger": {
+   "coh3_ref": "abilities/german/team_weapons/smoke_81mm_mortar_ger",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

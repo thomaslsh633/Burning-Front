@@ -1,0 +1,18 @@
+{
+ "smoke": {
+  "smoke_shot_centaur_uk": {
+   "coh3_ref": "abilities/british/vehicles/smoke_shot_centaur_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "cooldown_turns": 18,
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

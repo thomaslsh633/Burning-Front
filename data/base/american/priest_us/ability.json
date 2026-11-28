@@ -69,5 +69,18 @@
     ]
    }
   }
+ },
+ "smoke": {
+  "barrage_priest_smoke_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_priest_smoke_us",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 3,
+    "max": 13
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
  }
 }

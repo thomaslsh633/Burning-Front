@@ -21,5 +21,21 @@
    },
    "fog": true
   }
+ },
+ "smoke": {
+  "grenade_smoke_guastatori_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_smoke_guastatori_ger",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "cooldown_turns": 18,
+   "cost": {
+    "munition": 20
+   },
+   "fog": true
+  }
  }
 }

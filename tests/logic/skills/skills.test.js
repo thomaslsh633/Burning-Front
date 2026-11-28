@@ -65,3 +65,23 @@ test('requirements: the Riflemen grenade needs its CoH3 research; a barrage need
   assert.equal(r.events.filter(e => e.type === 'Fired').length, 1);
   assert.equal(r.events.find(e => e.type === 'Fired').shots, 3, 'CoH3 shells over the turn cadence');
 });
+
+test('smoke: a rifle smoke grenade blocks sight through its hex for 2 turns; a tank smokes its own hex', async () => {
+  const { sightLine } = await import('../../../src/logic/vision/index.js');
+  const { isSmoked } = await import('../../../src/logic/terrain/index.js');
+  const { state, data } = testMatch([blue('scout_us', H(2, 5), { facing: 0 }), red('grenadier_ger', H(8, 5)), blue('matilda_africa_uk', H(2, 8), { facing: 0 })]);
+  const cmd = { type: 'UseSkill', side: 'blue', unit: 'u1', ability: 'smoke_rifle_grenade_scout_us', hex: H(5, 5) };
+  assert.equal(skills.validateUseSkill(state, { ...cmd, hex: H(3, 5) }, data), 'too_close');
+  assert.equal(sightLine(state, data, H(2, 5), H(8, 5), 1.5).block, false);
+  const r = run(state, data, cmd);
+  assert.ok(isSmoked(r.state, H(5, 5)) && !isSmoked(r.state, H(5, 6)), 'radius 0: the hex alone (CoH3 6 m ÷ 7)');
+  assert.equal(sightLine(r.state, data, H(2, 5), H(8, 5), 1.5).block, true);
+  assert.equal(r.state.units.u1.cooldowns.smoke_rifle_grenade_scout_us, 18, 'CoH3 180 s recharge');
+  let s = nextOwnTurn(r.state, data);
+  assert.ok(isSmoked(s, H(5, 5)), 'still there next turn');
+  s = nextOwnTurn(s, data);
+  assert.equal(isSmoked(s, H(5, 5)), false, 'gone after 2 turns');
+  const t = run(rich(state), data, { type: 'UseSkill', side: 'blue', unit: 'u3', ability: 'matilda_smoke_uk' });
+  assert.ok(isSmoked(t.state, H(2, 8)));
+  assert.equal(t.state.teams.blue.resources.munition, 175);
+});

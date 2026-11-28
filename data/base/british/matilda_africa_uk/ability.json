@@ -1,0 +1,17 @@
+{
+ "smoke": {
+  "matilda_smoke_uk": {
+   "coh3_ref": "abilities/british/vehicles/matilda_smoke_uk",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 25
+   }
+  }
+ }
+}

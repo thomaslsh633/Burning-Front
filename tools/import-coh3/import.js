@@ -150,13 +150,14 @@ export function importFaction(faction, squadIds) {
   for (const id of new Set(Object.values(files.sbps).flatMap(c => Object.values(c).flatMap(sq => sq.abilities || [])))) {
     const a = abilities.get(id);
     if (!a) continue;
-    const item = (JSON.stringify(a.rec).match(/ebps\/races\/[a-z_]+\/weapons\/[a-z0-9_/]+/g) || []).map(weaponOfItem).find(w => (weapons.get(w)?.rec.weapon_bag.damage?.max ?? 0) > 0);
+    const items = (JSON.stringify(a.rec).match(/ebps\/races\/[a-z_]+\/weapons\/[a-z0-9_/]+/g) || []).map(weaponOfItem).filter(w => weapons.get(w));
+    const item = items.find(w => (weapons.get(w).rec.weapon_bag.damage?.max ?? 0) > 0) ?? items[0];   // smoke: its (harmless) shell
     const wr = item && weapons.get(item);
-    const { record, notes } = convertAbility(a.rec.ability_bag, { id, ref: a.ref, props: numericProps(a.rec), indirect: cfg.indirect, scale,
+    const { record, notes, group } = convertAbility(a.rec.ability_bag, { id, ref: a.ref, props: numericProps(a.rec), indirect: cfg.indirect, scale,
       weapon: wr ? { id: item, bag: wr.rec.weapon_bag, category: wr.path[wr.path.length - 2] ?? wr.path[0] } : null });
-    if (!record) continue;   // not an attack ability (yet): the id stays on the squad
-    addWeapon(item);
-    put('ability', 'weapon', id, record);
+    if (!record) continue;   // not played (yet): the id stays on the squad
+    if (record.weapon) addWeapon(item);
+    put('ability', group, id, record);
     report.push({ id, kind: 'ability', notes });
   }
   // fortified positions the squads build that CoH3 has no squad for (fighting positions, bunkers): a one-entity structure
@@ -196,7 +197,7 @@ function dropBroken(files, profiles, report) {
   }
   const has = (kind, id) => Object.values(files[kind]).some(c => id in c);
   for (const recs of Object.values(files.ability || {})) {
-    for (const [id, a] of Object.entries(recs)) if (!has('weapon', a.weapon)) { delete recs[id]; report.push({ id, kind: 'ability left out', notes: [`weapon ${a.weapon} not imported`] }); }
+    for (const [id, a] of Object.entries(recs)) if (a.weapon && !has('weapon', a.weapon)) { delete recs[id]; report.push({ id, kind: 'ability left out', notes: [`weapon ${a.weapon} not imported`] }); }
   }
   for (const c of Object.values(files.ebps)) {
     for (const e of Object.values(c)) {

@@ -467,6 +467,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | valentine_uk | entity · vehicles | — |
 | valentine_uk | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | valentine_uk | veterancy | — |
+| barrage_howitzer_creeping_smoke_uk | ability | requirement required_any_in_list not modelled (treated as met); requirement required_constructionstate not modelled (treated as met) |
 | 25pdr_base_howitzer_uk | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
 | barrage_observation_base_howitzer_25pdr_uk | ability | barrage (heavy): 8 CoH3 shells → 8 every 2 turns |
 | bl_5_5_howitzer_uk | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
@@ -485,8 +486,10 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | grenade_commando_uk | ability | — |
 | sticky_bomb_rifleman_us | weapon · grenade | dropped module moving (not allowed for grenade) |
 | sticky_bomb_guards_uk | ability | — |
+| concealing_smoke_commando_uk | ability | — |
 | grenade_bangalore_africa_uk | weapon · grenade | vs_target bridge dropped (not in vocab); dropped module moving (not allowed for grenade); missing module aoe |
 | grenade_bangalore_africa_uk | ability | — |
+| gurkha_smoke_grenade_uk | ability | — |
 | gurkha_grenade_assault_uk | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
 | gurkha_grenade_assault_uk | ability | — |
 | gammon_bomb_guards_uk | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
@@ -495,6 +498,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | grenade_no69_africa_uk | ability | — |
 | satchel_charge_lewes_bomb_uk | weapon · grenade | vs_target bridge dropped (not in vocab); dropped module moving (not allowed for grenade) |
 | lewes_bomb_special_services_uk | ability | requirement required_player_upgrade not modelled (treated as met); requirement required_ability_state not modelled (treated as met) |
+| special_services_force_multiplier_retreat_smoke_uk | ability | — |
 | lewes_bomb_special_services_upgraded_uk | ability | requirement required_ability_state not modelled (treated as met) |
 | boys_at_rifle_scoped_target_gunner_africa_uk | weapon · infantry_anti_tank_weapon | — |
 | special_services_target_gunner_infantry_uk | ability | — |
@@ -510,20 +514,24 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | satchel_charge_sappers_uk | ability | — |
 | rifle_grenade_tommy_uk | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
 | rifle_grenade_tommy_uk | ability | — |
+| smoke_rifle_greande_tommy_uk | ability | — |
 | rocket_land_mattress_africa_uk | weapon · light_artillery | — |
 | barrage_land_mattress_rocket_africa_uk | ability | barrage (rocket): 20 CoH3 shells → 5 every 2 turns |
 | rocket_land_mattress_africa_suppression_barrage_uk | weapon · light_artillery | — |
 | barrage_land_mattress_suppression_rocket_africa_uk | ability | barrage (rocket): 6 CoH3 shells → 3 every 2 turns |
 | 81mm_mortar_barrage_uk | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
 | barrage_81mm_mortar_uk | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns |
+| barrage_81mm_mortar_smoke_uk | ability | — |
 | 4_2_inch_heavy_mortar_airburst_uk | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
 | barrage_4_2_heavy_mortar_airburst_uk | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns; requirement required_all_in_list not modelled (treated as met) |
+| barrage_4_2_heavy_mortar_smoke_uk | ability | requirement required_all_in_list not modelled (treated as met) |
 | 4_2_inch_heavy_mortar_barrage_uk | weapon · mortar | accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
 | barrage_4_2_heavy_mortar_uk | ability | barrage (mortar): 5 CoH3 shells → 3 every 1 turns; requirement required_all_in_list not modelled (treated as met) |
 | 4_2_inch_heavy_mortar_incendiary_uk | weapon · mortar | accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
 | barrage_4_2_heavy_mortar_incendiary_uk | ability | barrage (mortar): 5 CoH3 shells → 3 every 1 turns; requirement required_all_in_list not modelled (treated as met) |
 | 75mm_pack_howitzer_barrage_us | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
 | barrage_75mm_pack_howitzer_uk | ability | barrage (light): 8 CoH3 shells → 4 every 1 turns |
+| barrage_75mm_pack_howitzer_smoke_uk | ability | — |
 | 75mm_pack_howitzer_incendiary_uk | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
 | barrage_75mm_pack_howitzer_incendiary_uk | ability | barrage (light): 8 CoH3 shells → 4 every 1 turns |
 | 75mm_pack_howitzer_white_phosphorus_uk | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
@@ -532,14 +540,22 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | barrage_bishop_uk | ability | barrage (spg): 6 CoH3 shells → 2 every 1 turns |
 | 25pdr_bishop_direct_round_uk | weapon · tank_gun | accuracy derived from scatter (chance to land on the hex) |
 | direct_fire_bishop_uk | ability | barrage (spg): 3 CoH3 shells → 1 every 1 turns |
+| smoke_shot_centaur_uk | ability | — |
+| infantry_support_smoke_churchill_uk | ability | — |
+| royal_engineers_smoke_curtain_uk | ability | — |
+| royal_engineers_smoke_curtain_arv_uk | ability | — |
 | royal_engineers_avre_fire_weapon_uk | ability | — |
 | 290mm_avre_discombobulate_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | royal_engineers_churchill_avre_discombobulate_uk | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| smoke_barrage_humber_uk | ability | — |
 | tulip_rocket_coaxial_uk | weapon · light_artillery | scatter defaulted to 0 |
 | polish_cavalry_tulip_rocket_strike_humber_africa_uk | ability | — |
+| matilda_smoke_uk | ability | — |
 | 17pdr_firefly_sabot_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | sabot_sherman_firefly_africa_uk | ability | — |
+| smoke_stuart_uk | ability | — |
 | polish_cavalry_tulip_rocket_strike_stuart_africa_uk | ability | — |
+| smoke_cover_valentine_uk | ability | — |
 | grenade_bangalore_africa_uk | weapon left out | missing module "aoe" (must for grenade) |
 | grenade_bangalore_africa_uk | ability left out | weapon grenade_bangalore_africa_uk not imported |
 | grenade_bangalore_africa_2_2_uk | ability left out | weapon grenade_bangalore_africa_uk not imported |

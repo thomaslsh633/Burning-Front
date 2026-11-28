@@ -68,5 +68,18 @@
     "rank": 1
    }
   }
+ },
+ "smoke": {
+  "barrage_scott_smoke_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_scott_smoke_us",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 2,
+    "max": 13
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
  }
 }

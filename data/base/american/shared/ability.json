@@ -164,5 +164,29 @@
     ]
    }
   }
+ },
+ "smoke": {
+  "smoke_rifle_grenade_scout_us": {
+   "coh3_ref": "abilities/american/infantry/smoke_rifle_grenade_scout_us",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 2,
+    "max": 5
+   },
+   "cooldown_turns": 18,
+   "fog": true
+  },
+  "smoke_infantry_support_us": {
+   "coh3_ref": "abilities/american/vehicles/smoke_infantry_support_us",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 1,
+    "max": 6
+   },
+   "cooldown_turns": 12,
+   "fog": true
+  }
  }
 }

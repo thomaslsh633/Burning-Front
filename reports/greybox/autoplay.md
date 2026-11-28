@@ -9,10 +9,10 @@ unload, build positions, paradrop, abilities, research, doctrine).
 | american | german | 1 | red | tickets | 21 | 0 / 119 | 7 / 10 | 9 / 1 | 132 | Doctrine 1, Research 6, Paradrop 1, UseSkill 8 |  | 0 |  |
 | american | german | 2 | blue | tickets | 19 | 120 / 0 | 8 / 10 | 4 / 10 | 196 | Doctrine 1, Research 4, Garrison 1, UseSkill 6 |  | 0 |  |
 | german | british_africa | 1 | red | tickets | 26 | 0 / 92 | 12 / 10 | 12 / 2 | 201 | Doctrine 1, UseSkill 4, Research 2, Garrison 1, Build 2 |  | 0 |  |
-| german | british_africa | 2 | blue | tickets | 24 | 105 / 0 | 10 / 11 | 7 / 11 | 194 | Doctrine 1, Paradrop 1, Research 2, UseSkill 2, Garrison 1, Build 1 |  | 0 |  |
+| german | british_africa | 2 | blue | tickets | 30 | 51 / 0 | 13 / 14 | 6 / 15 | 244 | Doctrine 1, Paradrop 1, UseSkill 15, Research 2, Garrison 1, Build 4, Board 1, Unload 1 |  | 0 |  |
 | afrika_korps | american | 1 | red | tickets | 29 | 0 / 77 | 10 / 8 | 10 / 2 | 247 | Doctrine 1, Research 7, UseSkill 13, Build 5, Board 2, Unload 2, Garrison 2 |  | 0 |  |
 | afrika_korps | american | 2 | red | tickets | 24 | 0 / 104 | 9 / 8 | 9 / 0 | 195 | Doctrine 1, Research 5, UseSkill 9, Garrison 1, Build 2 |  | 0 |  |
-| british | afrika_korps | 1 | blue | tickets | 19 | 120 / 0 | 6 / 7 | 1 / 8 | 130 | Doctrine 1, Build 4, Research 2, UseSkill 11 |  | 0 |  |
+| british | afrika_korps | 1 | blue | tickets | 19 | 120 / 0 | 6 / 6 | 0 / 8 | 142 | Doctrine 1, Build 5, UseSkill 18, Research 2, Board 3, Unload 3 |  | 0 |  |
 | british | afrika_korps | 2 | blue | tickets | 21 | 120 / 0 | 7 / 8 | 1 / 7 | 133 | Doctrine 1, Research 2, UseSkill 5 |  | 0 |  |
 | british_africa | german | 1 | blue | tickets | 23 | 120 / 0 | 10 / 10 | 4 / 7 | 252 | Doctrine 1, Build 7, UseSkill 5, Research 2, Board 10, Exit 1, Unload 8 |  | 0 |  |
 | british_africa | german | 2 | red | tickets | 25 | 0 / 119 | 10 / 13 | 12 / 3 | 214 | Doctrine 1, Paradrop 1, Build 2, UseSkill 4, Research 2 |  | 0 |  |

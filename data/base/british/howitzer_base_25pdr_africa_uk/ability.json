@@ -1,4 +1,20 @@
 {
+ "smoke": {
+  "barrage_howitzer_creeping_smoke_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_howitzer_creeping_smoke_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 5,
+    "max": 71
+   },
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 50
+   },
+   "fog": true
+  }
+ },
  "weapon": {
   "barrage_observation_base_howitzer_25pdr_uk": {
    "coh3_ref": "abilities/british/team_weapons/barrage_observation_base_howitzer_25pdr_uk",

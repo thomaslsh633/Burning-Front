@@ -1,7 +1,7 @@
 // Greybox view (dev plan G-2, G-3): Canvas 2D, no art, quarter view (45° turn, camera 35° above the ground). Hexes in grey steps by terrain, units as team-coloured discs with a
 // kind letter and their HP, points as rings in the owner's colour; the selected unit's reachable hexes and the preview.
 // debugText: the selected unit's state axes, budget, weapons and the attack preview. Reads state; never changes it.
-import { hexAt, mapOf, isCollapsed } from '../../logic/terrain/index.js';
+import { hexAt, mapOf, isCollapsed, isSmoked } from '../../logic/terrain/index.js';
 import { reachable } from '../../logic/movement/index.js';
 import { firingWeapons } from '../../logic/combat/index.js';
 import { fromKey } from '../../logic/hex/index.js';
@@ -69,6 +69,7 @@ export function createView(size = 22, { yaw = 45, pitch = 35, elevPx = size * 0.
           }
         }
         hexPath(ctx, { c, r }); ctx.fillStyle = `rgb(${g},${g},${g + 4})`; ctx.fill();
+        if (isSmoked(state, { c, r })) { ctx.fillStyle = 'rgba(225,225,225,0.55)'; ctx.fill(); }   // smoke
         ctx.strokeStyle = '#2b2e31'; ctx.lineWidth = 1; ctx.stroke();
         if (reach.get(`${c},${r}`)?.stop && (c !== sel.pos.c || r !== sel.pos.r)) { hexPath(ctx, { c, r }, size * 0.8); ctx.strokeStyle = '#7fd07f'; ctx.stroke(); }
       }

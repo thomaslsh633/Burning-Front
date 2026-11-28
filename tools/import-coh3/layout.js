@@ -17,7 +17,7 @@ export function reachOf(files, squadId) {
   for (const e of ebps) for (const w of find(files, 'ebps', e)?.weapons || []) weapon.add(w.weapon);
   for (const u of upgrade) for (const fx of find(files, 'upgrade', u)?.effects || []) if (fx.weapon) weapon.add(fx.weapon);
   const ability = (squad.abilities || []).filter(a => find(files, 'ability', a));
-  for (const a of ability) weapon.add(find(files, 'ability', a).weapon);
+  for (const a of ability) if (find(files, 'ability', a).weapon) weapon.add(find(files, 'ability', a).weapon);
   return { sbps: [squadId], ebps, weapon: [...weapon], upgrade, ability, veterancy: squad.veterancy?.set ? [squad.veterancy.set] : [] };
 }
 

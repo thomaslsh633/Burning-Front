@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "smoke_cover_valentine_uk": {
+   "coh3_ref": "abilities/british/vehicles/smoke_cover_valentine_uk",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 2,
+    "max": 6
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

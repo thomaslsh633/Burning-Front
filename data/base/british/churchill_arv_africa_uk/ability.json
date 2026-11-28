@@ -1,0 +1,20 @@
+{
+ "smoke": {
+  "royal_engineers_smoke_curtain_arv_uk": {
+   "coh3_ref": "abilities/british_africa/vehicles/royal_engineers_smoke_curtain_arv_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 4
+   },
+   "cooldown_turns": 12,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "royal_engineers_vehicle_retrofits_uk"
+    ]
+   }
+  }
+ }
+}

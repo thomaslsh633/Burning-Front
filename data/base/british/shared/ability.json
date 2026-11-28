@@ -1,4 +1,109 @@
 {
+ "smoke": {
+  "special_services_force_multiplier_retreat_smoke_uk": {
+   "coh3_ref": "abilities/british/battlegroups/special_services/special_services_force_multiplier_retreat_smoke_uk",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 1,
+   "requires": {
+    "upgrades": [
+     "special_services_buff_player_force_multiplier_uk"
+    ]
+   }
+  },
+  "barrage_81mm_mortar_smoke_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_81mm_mortar_smoke_uk",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_4_2_heavy_mortar_smoke_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_4_2_heavy_mortar_smoke_uk",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 2,
+    "max": 12
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_75mm_pack_howitzer_smoke_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_75mm_pack_howitzer_smoke_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 2,
+    "max": 14
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "infantry_support_smoke_churchill_uk": {
+   "coh3_ref": "abilities/british/vehicles/infantry_support_smoke_churchill_uk",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 18,
+   "cost": {
+    "munition": 25
+   }
+  },
+  "royal_engineers_smoke_curtain_uk": {
+   "coh3_ref": "abilities/british_africa/vehicles/royal_engineers_smoke_curtain_uk",
+   "target": "hex",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 4
+   },
+   "cooldown_turns": 12,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "royal_engineers_vehicle_retrofits_uk"
+    ]
+   }
+  },
+  "smoke_barrage_humber_uk": {
+   "coh3_ref": "abilities/british/vehicles/smoke_barrage_humber_uk",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "cooldown_turns": 6,
+   "fog": true
+  },
+  "smoke_stuart_uk": {
+   "coh3_ref": "abilities/british/vehicles/smoke_stuart_uk",
+   "target": "self",
+   "radius_hex": 0,
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "cooldown_turns": 12,
+   "requires": {
+    "squad_upgrades": [
+     "utility_kit_stuart_uk"
+    ]
+   }
+  }
+ },
  "weapon": {
   "barrage_howitzer_bl_5_5_uk": {
    "coh3_ref": "abilities/british/team_weapons/barrage_howitzer_bl_5_5_uk",

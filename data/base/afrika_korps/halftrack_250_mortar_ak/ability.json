@@ -1,0 +1,15 @@
+{
+ "smoke": {
+  "barrage_smoke_mortar_halftrack_250_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/barrage_smoke_mortar_halftrack_250_ak",
+   "target": "hex",
+   "radius_hex": 1,
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

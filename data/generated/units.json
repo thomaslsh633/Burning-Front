@@ -14273,6 +14273,153 @@
     }
    },
    "ability": {
+    "smoke": {
+     "off_map_mortar_smoke_barrage_254_ak": {
+      "coh3_ref": "abilities/afrika_korps/vehicles/off_map_mortar_smoke_barrage_254_ak",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 11
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "grenade_smoke_panzergrenadier_ak": {
+      "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_panzergrenadier_ak",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "grenade_smoke_guastatori_ak": {
+      "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_guastatori_ak",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "barrage_smoke_mortar_halftrack_250_ak": {
+      "coh3_ref": "abilities/afrika_korps/vehicles/barrage_smoke_mortar_halftrack_250_ak",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_howitzer_cannone_105_ak": {
+      "coh3_ref": "abilities/afrika_korps/team_weapons/smoke_howitzer_cannone_105_ak",
+      "target": "hex",
+      "radius_hex": 2,
+      "range_hex": {
+       "min": 3,
+       "max": 18
+      },
+      "cooldown_turns": 2,
+      "fog": true
+     },
+     "barrage_smoke_75mm_leig_ak": {
+      "coh3_ref": "abilities/afrika_korps/team_weapons/barrage_smoke_75mm_leig_ak",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 14
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_barrage_panzer_iii_ak": {
+      "coh3_ref": "abilities/afrika_korps/vehicles/smoke_barrage_panzer_iii_ak",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 6
+      },
+      "cooldown_turns": 12,
+      "fog": true,
+      "requires": {
+       "upgrades": [
+        "armory_smoke_survivability_ak"
+       ]
+      }
+     },
+     "grenade_smoke_panzerpioneer_elite_forces_ak": {
+      "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_panzerpioneer_elite_forces_ak",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "fog": true,
+      "requires": {
+       "squad_upgrades": [
+        "elite_forces_skirmisher_g43_panzerpioneer_ak"
+       ]
+      }
+     },
+     "grenade_smoke_demo_panzerpioneer_ak": {
+      "coh3_ref": "abilities/afrika_korps/infantry/grenade_smoke_demo_panzerpioneer_ak",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 6
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "smoke_discharge_8rad_ak": {
+      "coh3_ref": "abilities/afrika_korps/vehicles/smoke_discharge_8rad_ak",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 12,
+      "cost": {
+       "munition": 25
+      },
+      "requires": {
+       "upgrades": [
+        "armory_smoke_survivability_ak"
+       ]
+      }
+     },
+     "smoke_discharge_ui_position_23_ak": {
+      "coh3_ref": "abilities/afrika_korps/vehicles/smoke_discharge_ui_position_23_ak",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 12,
+      "cost": {
+       "munition": 25
+      },
+      "requires": {
+       "upgrades": [
+        "armory_smoke_survivability_ak"
+       ]
+      }
+     }
+    },
     "weapon": {
      "assault_grenades_assault_grenadier_ak": {
       "coh3_ref": "abilities/afrika_korps/infantry/assault_grenades_assault_grenadier_ak",
@@ -36757,6 +36904,139 @@
       "cost": {
        "munition": 25
       },
+      "fog": true
+     }
+    },
+    "smoke": {
+     "smoke_shot_chaffee_us": {
+      "coh3_ref": "abilities/american/vehicles/smoke_shot_chaffee_us",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 6
+      },
+      "cooldown_turns": 12,
+      "fog": true
+     },
+     "smoke_goon_gun_pit_us": {
+      "coh3_ref": "abilities/american/team_weapons/smoke_goon_gun_pit_us",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 4,
+       "max": 16
+      },
+      "cooldown_turns": 2,
+      "fog": true
+     },
+     "smoke_81mm_mortar_us": {
+      "coh3_ref": "abilities/american/team_weapons/smoke_81mm_mortar_us",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_81mm_mortar_pit_us": {
+      "coh3_ref": "abilities/american/team_weapons/smoke_81mm_mortar_pit_us",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "barrage_priest_smoke_us": {
+      "coh3_ref": "abilities/american/vehicles/barrage_priest_smoke_us",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 13
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "barrage_scott_smoke_us": {
+      "coh3_ref": "abilities/american/vehicles/barrage_scott_smoke_us",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 13
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "veterancy_1_unlock_b_scout_smoke_drop_us": {
+      "coh3_ref": "abilities/american/veterancy/infantry/scout/veterancy_1_unlock_b_scout_smoke_drop_us",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 1,
+      "requires": {
+       "rank": 1
+      }
+     },
+     "veterancy_scout_smoke_drop_dummy_us": {
+      "coh3_ref": "abilities/american/veterancy/infantry/scout/veterancy_scout_smoke_drop_dummy_us",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 6,
+      "requires": {
+       "squad_upgrades": [
+        "veterancy_1_unlock_b"
+       ]
+      }
+     },
+     "veterancy_scout_smoke_drop_us": {
+      "coh3_ref": "abilities/american/veterancy/infantry/scout/veterancy_scout_smoke_drop_us",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 1,
+      "requires": {
+       "squad_upgrades": [
+        "veterancy_1_unlock_b"
+       ]
+      }
+     },
+     "smoke_rifle_grenade_scout_us": {
+      "coh3_ref": "abilities/american/infantry/smoke_rifle_grenade_scout_us",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 5
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "smoke_infantry_support_us": {
+      "coh3_ref": "abilities/american/vehicles/smoke_infantry_support_us",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 1,
+       "max": 6
+      },
+      "cooldown_turns": 12,
       "fog": true
      }
     }
@@ -62907,6 +63187,214 @@
       },
       "fog": true
      }
+    },
+    "smoke": {
+     "smoke_shot_centaur_uk": {
+      "coh3_ref": "abilities/british/vehicles/smoke_shot_centaur_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 6
+      },
+      "cooldown_turns": 18,
+      "fog": true,
+      "requires": {
+       "rank": 1
+      }
+     },
+     "royal_engineers_smoke_curtain_arv_uk": {
+      "coh3_ref": "abilities/british_africa/vehicles/royal_engineers_smoke_curtain_arv_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 4
+      },
+      "cooldown_turns": 12,
+      "fog": true,
+      "requires": {
+       "upgrades": [
+        "royal_engineers_vehicle_retrofits_uk"
+       ]
+      }
+     },
+     "concealing_smoke_commando_uk": {
+      "coh3_ref": "abilities/british/infantry/concealing_smoke_commando_uk",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 18,
+      "requires": {
+       "rank": 1
+      }
+     },
+     "gurkha_smoke_grenade_uk": {
+      "coh3_ref": "abilities/british/infantry/gurkha_smoke_grenade_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "barrage_howitzer_creeping_smoke_uk": {
+      "coh3_ref": "abilities/british/team_weapons/barrage_howitzer_creeping_smoke_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 5,
+       "max": 71
+      },
+      "cooldown_turns": 6,
+      "cost": {
+       "munition": 50
+      },
+      "fog": true
+     },
+     "matilda_smoke_uk": {
+      "coh3_ref": "abilities/british/vehicles/matilda_smoke_uk",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 6,
+      "cost": {
+       "munition": 25
+      }
+     },
+     "special_services_force_multiplier_retreat_smoke_uk": {
+      "coh3_ref": "abilities/british/battlegroups/special_services/special_services_force_multiplier_retreat_smoke_uk",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 1,
+      "requires": {
+       "upgrades": [
+        "special_services_buff_player_force_multiplier_uk"
+       ]
+      }
+     },
+     "barrage_81mm_mortar_smoke_uk": {
+      "coh3_ref": "abilities/british/team_weapons/barrage_81mm_mortar_smoke_uk",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "barrage_4_2_heavy_mortar_smoke_uk": {
+      "coh3_ref": "abilities/british/team_weapons/barrage_4_2_heavy_mortar_smoke_uk",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "barrage_75mm_pack_howitzer_smoke_uk": {
+      "coh3_ref": "abilities/british/team_weapons/barrage_75mm_pack_howitzer_smoke_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 14
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "infantry_support_smoke_churchill_uk": {
+      "coh3_ref": "abilities/british/vehicles/infantry_support_smoke_churchill_uk",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 18,
+      "cost": {
+       "munition": 25
+      }
+     },
+     "royal_engineers_smoke_curtain_uk": {
+      "coh3_ref": "abilities/british_africa/vehicles/royal_engineers_smoke_curtain_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 4
+      },
+      "cooldown_turns": 12,
+      "fog": true,
+      "requires": {
+       "upgrades": [
+        "royal_engineers_vehicle_retrofits_uk"
+       ]
+      }
+     },
+     "smoke_barrage_humber_uk": {
+      "coh3_ref": "abilities/british/vehicles/smoke_barrage_humber_uk",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 0,
+       "max": 6
+      },
+      "cooldown_turns": 6,
+      "fog": true
+     },
+     "smoke_stuart_uk": {
+      "coh3_ref": "abilities/british/vehicles/smoke_stuart_uk",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 12,
+      "requires": {
+       "squad_upgrades": [
+        "utility_kit_stuart_uk"
+       ]
+      }
+     },
+     "smoke_rifle_greande_tommy_uk": {
+      "coh3_ref": "abilities/british/infantry/smoke_rifle_greande_tommy_uk",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 5
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "smoke_cover_valentine_uk": {
+      "coh3_ref": "abilities/british/vehicles/smoke_cover_valentine_uk",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 6
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     }
     }
    },
    "veterancy": {
@@ -84684,6 +85172,134 @@
       "fog": true,
       "requires": {
        "rank": 3
+      }
+     }
+    },
+    "smoke": {
+     "grenade_smoke_guastatori_ger": {
+      "coh3_ref": "abilities/german/infantry/grenade_smoke_guastatori_ger",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "cost": {
+       "munition": 20
+      },
+      "fog": true
+     },
+     "smoke_barrage_halftrack_stummel_ger": {
+      "coh3_ref": "abilities/german/vehicles/smoke_barrage_halftrack_stummel_ger",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 2,
+       "max": 7
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_howitzer_cannone_105_ger": {
+      "coh3_ref": "abilities/german/team_weapons/smoke_howitzer_cannone_105_ger",
+      "target": "hex",
+      "radius_hex": 2,
+      "range_hex": {
+       "min": 3,
+       "max": 18
+      },
+      "cooldown_turns": 2,
+      "fog": true
+     },
+     "barrage_smoke_hummel_ger": {
+      "coh3_ref": "abilities/german/vehicles/barrage_smoke_hummel_ger",
+      "target": "hex",
+      "radius_hex": 2,
+      "range_hex": {
+       "min": 3,
+       "max": 16
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_rifle_jaeger_ger": {
+      "coh3_ref": "abilities/german/infantry/smoke_rifle_jaeger_ger",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 5
+      },
+      "cooldown_turns": 18,
+      "fog": true
+     },
+     "barrage_smoke_75mm_leig_ger": {
+      "coh3_ref": "abilities/german/team_weapons/barrage_smoke_75mm_leig_ger",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 2,
+       "max": 14
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "smoke_81mm_mortar_ger": {
+      "coh3_ref": "abilities/german/team_weapons/smoke_81mm_mortar_ger",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "grenade_smoke_panzergrenadier_ger": {
+      "coh3_ref": "abilities/german/infantry/grenade_smoke_panzergrenadier_ger",
+      "target": "hex",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 3
+      },
+      "cooldown_turns": 18,
+      "fog": true,
+      "requires": {
+       "upgrades": [
+        "siegebreakers_ger",
+        "siegebreakers_clearing_gear_ger"
+       ]
+      }
+     },
+     "barrage_smoke_81mm_mortar_bunker_ger": {
+      "coh3_ref": "abilities/german/team_weapons/barrage_smoke_81mm_mortar_bunker_ger",
+      "target": "hex",
+      "radius_hex": 1,
+      "range_hex": {
+       "min": 3,
+       "max": 12
+      },
+      "cooldown_turns": 1,
+      "fog": true
+     },
+     "mechanized_smoke_canisters_ger": {
+      "coh3_ref": "abilities/german/vehicles/mechanized_smoke_canisters_ger",
+      "target": "self",
+      "radius_hex": 0,
+      "range_hex": {
+       "min": 0,
+       "max": 1
+      },
+      "cooldown_turns": 12,
+      "cost": {
+       "munition": 25
+      },
+      "requires": {
+       "upgrades": [
+        "mechanized_left_1a_raid_package"
+       ]
       }
      }
     }

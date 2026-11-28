@@ -56,6 +56,10 @@
     "garrison_concealment_hex": {
       "type": "integer",
       "minimum": 0
+    },
+    "smoke_turns": {
+      "type": "integer",
+      "minimum": 1
     }
   },
   "additionalProperties": false,
@@ -69,6 +73,7 @@
     "terrain_concealment",
     "emplaced_concealment_hex",
     "revealed_after_firing_turns",
-    "garrison_concealment_hex"
+    "garrison_concealment_hex",
+    "smoke_turns"
   ]
 }

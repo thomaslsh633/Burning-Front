@@ -297,34 +297,8 @@ export function convertUpgrade(bag, { ref, weaponOfItem, scale }) {
 
 const TARGET = { tp_position: 'hex' };   // every other CoH3 target type (entity, squad, any) aims at a unit
 
-/**
- * CoH3 ability → ability record, for abilities that fire a weapon with a known number of shells (grenades, satchels, special
- * shots, barrages with NUM_SHOTS); null otherwise (buffs, toggles, smoke, mines, off-map strikes, shells not published).
- * ctx: { ref, weapon: { id, bag, category }, props (numeric custom properties), indirect (balance), scale }.
- * Barrages of an indirect class use the turn cadence (SPEC §10): one use every usage_turns, CoH3 shells scaled to it.
- */
-export function convertAbility(bag, ctx) {
-  const notes = [], { weapon: w, props, scale } = ctx;
-  if (!w || !((w.bag.damage?.max ?? 0) > 0)) return { record: null, notes: ['no damaging weapon'] };
-  if (w.category === 'mine' || w.category === 'smoke') return { record: null, notes: [`${w.category}: not an attack`] };
-  const coh3Shells = props.NUM_SHOTS ?? props.SHOTS_TO_FIRE_AT_TARGET ?? (w.category === 'grenade' ? 1 : null);
-  if (coh3Shells == null) return { record: null, notes: ['shell count not published (state tree)'] };
-  const target = TARGET[bag.target] ?? 'unit';
-  const maxM = bag.range || w.bag.range?.max || 0, minM = bag.min_range || 0;
-  const cls = classOf(ctx.id, ctx.indirect) ?? classOf(w.id, ctx.indirect);
-  let shells = coh3Shells, accScale = 1, cooldown = Math.max(1, turnsOf(bag.recharge_time, scale)), spread = 0;
-  let range = { min: Math.round(minM / scale.metres_per_hex), max: Math.max(1, Math.round(maxM / scale.metres_per_hex)) };
-  if (cls && target === 'hex') {
-    const g = barrageUse({ shells: coh3Shells, recharge_s: bag.recharge_time ?? 0 }, cls);
-    shells = g.shells; accScale = g.accuracy_scale; cooldown = g.usage_turns; spread = g.spread_hex;
-    range = { min: minRangeHex(minM, maxM, cls), max: rangeHex(maxM, cls) };
-    notes.push(`barrage (${cls.id}): ${coh3Shells} CoH3 shells → ${shells} every ${cooldown} turns`);
-  }
-  // accuracy: CoH3 accuracy at the band distances, or (none published: shells and thrown charges) the chance to land on the hex
-  const dist = { near: w.bag.range?.distance?.near ?? 0, mid: w.bag.range?.distance?.mid ?? 0, far: maxM };
-  const byScatter = !((w.bag.accuracy?.near ?? 0) > 0) && !((w.bag.accuracy?.far ?? 0) > 0);
-  const raw = byScatter ? Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, w.bag.scatter ? hexHitChance(w.bag.scatter, d, scale.metres_per_hex) : 1])) : w.bag.accuracy;
-  const accuracy = band(Object.fromEntries(['near', 'mid', 'far'].map(k => [k, Math.min(1, raw[k] ?? 1) * accScale])));   // CoH3 grenades list accuracy above 1
+/** What using an ability takes: cost, fog, requirements (CoH3 player upgrade, squad upgrade, veterancy rank). */
+function usage(bag, notes) {
   const requires = {};
   for (const r of bag.requirements || []) {
     const q = r.required || {}, t = last(q.template_reference?.value?.replace(/\\/g, '/') ?? '');
@@ -334,6 +308,51 @@ export function convertAbility(bag, ctx) {
     else if (t && !['required_not'].includes(t)) notes.push(`requirement ${t} not modelled (treated as met)`);
   }
   const cost = Object.fromEntries(['manpower', 'munition', 'fuel'].filter(k => (bag.cost_to_player?.[k] ?? 0) > 0).map(k => [k, Math.round(bag.cost_to_player[k])]));
-  return { notes, record: { coh3_ref: ctx.ref, target, weapon: w.id, shells, accuracy, range_hex: range, spread_hex: spread, cooldown_turns: cooldown,
-    ...(Object.keys(cost).length ? { cost } : {}), ...(isTrue(bag.can_target_in_fow) ? { fog: true } : {}), ...(Object.keys(requires).length ? { requires } : {}) } };
+  return { ...(Object.keys(cost).length ? { cost } : {}), ...(isTrue(bag.can_target_in_fow) ? { fog: true } : {}), ...(Object.keys(requires).length ? { requires } : {}) };
+}
+
+/** Range in hexes: CoH3 metres ÷ metres_per_hex; indirect classes capped (SPEC §10). */
+function rangeOf(bag, maxM, cls, scale) {
+  const minM = bag.min_range || 0;
+  return cls ? { min: minRangeHex(minM, maxM, cls), max: rangeHex(maxM, cls) } : { min: Math.round(minM / scale.metres_per_hex), max: Math.max(1, Math.round(maxM / scale.metres_per_hex)) };
+}
+
+/**
+ * CoH3 ability → { group, record } for abilities the rules play; record null otherwise (buffs, toggles, mines, off-map
+ * strikes, shells not published).
+ *   weapon  fires a weapon with a known number of shells (grenades, satchels, special shots, barrages with NUM_SHOTS);
+ *           barrages of an indirect class use the turn cadence (SPEC §10): one use every usage_turns, CoH3 shells scaled to it.
+ *   smoke   an ability named smoke: lays smoke on the target hex (or its own hex) and the hexes within its CoH3 reticule
+ *           radius ÷ metres_per_hex, rounded down (2026-11-28 recommended).
+ * ctx: { id, ref, weapon: { id, bag, category } | null, props (numeric custom properties), indirect (balance), scale }.
+ */
+export function convertAbility(bag, ctx) {
+  const notes = [], { weapon: w, props, scale } = ctx;
+  if (/smoke/.test(ctx.id) && !/heal|aura/.test(ctx.id)) {
+    const target = bag.target === 'tp_position' ? 'hex' : 'self', cls = target === 'hex' ? classOf(ctx.id, ctx.indirect) ?? (w ? classOf(w.id, ctx.indirect) : null) : null;
+    const maxM = bag.range || w?.bag.range?.max || 0;
+    return { group: 'smoke', notes, record: { coh3_ref: ctx.ref, target, radius_hex: Math.floor((bag.ui_reticule_radius_max ?? 0) / scale.metres_per_hex),
+      range_hex: target === 'hex' ? rangeOf(bag, maxM, cls, scale) : { min: 0, max: 1 }, cooldown_turns: cls ? cls.usage_turns : Math.max(1, turnsOf(bag.recharge_time, scale)), ...usage(bag, notes) } };
+  }
+  if (!w || !((w.bag.damage?.max ?? 0) > 0)) return { record: null, notes: ['no damaging weapon'] };
+  if (w.category === 'mine' || w.category === 'smoke') return { record: null, notes: [`${w.category}: not an attack`] };
+  const coh3Shells = props.NUM_SHOTS ?? props.SHOTS_TO_FIRE_AT_TARGET ?? (w.category === 'grenade' ? 1 : null);
+  if (coh3Shells == null) return { record: null, notes: ['shell count not published (state tree)'] };
+  const target = TARGET[bag.target] ?? 'unit';
+  const maxM = bag.range || w.bag.range?.max || 0;
+  const cls = classOf(ctx.id, ctx.indirect) ?? classOf(w.id, ctx.indirect);
+  let shells = coh3Shells, accScale = 1, cooldown = Math.max(1, turnsOf(bag.recharge_time, scale)), spread = 0;
+  let range = rangeOf(bag, maxM, null, scale);
+  if (cls && target === 'hex') {
+    const g = barrageUse({ shells: coh3Shells, recharge_s: bag.recharge_time ?? 0 }, cls);
+    shells = g.shells; accScale = g.accuracy_scale; cooldown = g.usage_turns; spread = g.spread_hex;
+    range = rangeOf(bag, maxM, cls, scale);
+    notes.push(`barrage (${cls.id}): ${coh3Shells} CoH3 shells → ${shells} every ${cooldown} turns`);
+  }
+  // accuracy: CoH3 accuracy at the band distances, or (none published: shells and thrown charges) the chance to land on the hex
+  const dist = { near: w.bag.range?.distance?.near ?? 0, mid: w.bag.range?.distance?.mid ?? 0, far: maxM };
+  const byScatter = !((w.bag.accuracy?.near ?? 0) > 0) && !((w.bag.accuracy?.far ?? 0) > 0);
+  const raw = byScatter ? Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, w.bag.scatter ? hexHitChance(w.bag.scatter, d, scale.metres_per_hex) : 1])) : w.bag.accuracy;
+  const accuracy = band(Object.fromEntries(['near', 'mid', 'far'].map(k => [k, Math.min(1, raw[k] ?? 1) * accScale])));   // CoH3 grenades list accuracy above 1
+  return { group: 'weapon', notes, record: { coh3_ref: ctx.ref, target, weapon: w.id, shells, accuracy, range_hex: range, spread_hex: spread, cooldown_turns: cooldown, ...usage(bag, notes) } };
 }

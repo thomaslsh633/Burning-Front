@@ -273,7 +273,10 @@ Squads keep every CoH3 ability id (`sbps.abilities`). Abilities that fire a weap
 | `fog` | bool | `can_target_in_fow` | |
 | `requires` | upgrades / squad_upgrades / rank | `requirements`: player upgrade, squad upgrade, squad veterancy | other requirement types treated as met (report) |
 
-Not imported: buffs, toggles and passives (CoH3 state trees), smoke, mines, off-map strikes, and barrages whose shell
+Group `smoke` (abilities named smoke): `target` hex / self, `radius_hex` = `ui_reticule_radius_max` ÷ 7 rounded down,
+`range_hex`, `cooldown_turns`, `cost`, `fog`, `requires` as above.
+
+Not imported: buffs, toggles and passives (CoH3 state trees), mines, off-map strikes, and barrages whose shell
 count is not published (e.g. the Wehrmacht 81 mm mortar barrage).
 
 ---

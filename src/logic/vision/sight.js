@@ -1,7 +1,7 @@
 // Sight lines, sight range and what a side sees (v214 v144 rules; tuning in data/balance/vision.json).
 // Heights: a hex's elevation × elevation_height, plus object / edge heights from data/rules/terrain.json.
 import { key, line, distance, disk, inside, equals } from '../hex/index.js';
-import { hexAt, edgeAt, elevation } from '../terrain/index.js';
+import { hexAt, edgeAt, elevation, isSmoked } from '../terrain/index.js';
 import { allUnits } from '../state/index.js';
 
 const elevOf = (state, h, data) => elevation(state, data, h);
@@ -14,6 +14,7 @@ export function sightLine(state, data, a, b, eye) {
   const v = data.balance.vision, E = v.elevation_height;
   const path = line(a, b), n = path.length - 1;
   if (n <= 1) return { block: false, obscured: false };
+  if (path.some(h => isSmoked(state, h))) return { block: true, obscured: false };   // smoke: no sight through, into or out of it
   const z0 = elevOf(state, a, data) * E + eye, z1 = elevOf(state, b, data) * E + v.target_height;
   let obscured = false;
   for (let i = 1; i < n; i++) {

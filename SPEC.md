@@ -243,7 +243,11 @@ Confirmed 2026-11-25 (rewrite):
   back as after an attack). Paid in resources (no ammo), spends the action, then cools down for its CoH3 recharge in turns
   (barrages: their class cadence). Needs its CoH3 requirements: research (`teams[t].unlocks`), the squad's upgrades,
   veterancy rank. Hex targets must be seen unless CoH3 lets the ability fire into the fog. Built: grenades, satchels,
-  Panzerfausts, special shots and barrages with published shells (125); buffs, toggles, smoke and off-map strikes are not.
+  Panzerfausts, special shots and barrages with published shells (125); buffs, toggles and off-map strikes are not.
+- Smoke (2026-11-28, recommended): a smoke ability (48: smoke grenades, rifle and mortar smoke, smoke shots, vehicle
+  dischargers) covers the target hex (its own hex for dischargers) and the hexes within CoH3 reticule radius ÷ 7 m rounded
+  down (grenades 1 hex, mortars 7, heavy guns 19) for 2 turns (`data/balance/vision.json` smoke_turns). No sight line passes
+  through, into or out of a smoked hex (neighbours still see each other); indirect fire at a hex is unaffected.
 - Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,
   penetration, scatter) × NUM_SHOTS shells; recharge ÷ 10 s → turns (e.g. 81 mm barrage 6 × 100, 2 turns; 105 mm howitzer
   6 × 160, 6 turns; Hummel 6 × 200, 5 turns). Off-map strikes: CoH3 does not publish their shells; set in doctrine design.
