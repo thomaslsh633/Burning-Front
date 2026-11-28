@@ -14,14 +14,17 @@ import { unitsOf, enemyOf } from '../state/index.js';
 import { chain, ifUnit, overwatchStep } from './steps.js';
 
 /**
- * A retreating unit walks on toward its rally point (×1.6 move, SPEC §4) and its turn is spent; enemy overwatch may fire.
+ * A retreating unit walks on toward its rally point (×1.6 move, SPEC §4); enemy overwatch may fire. Its turn is spent,
+ * unless the walk at its turn start brings it within reach of the rally point: then it keeps its action (2026-11-28).
  * Shared by the Retreat command and the turn start.
  */
-export const retreatWalk = (s, d, rng, id) => chain(s, [
+export const retreatWalk = (s, d, rng, id, atTurnStart = false) => chain(s, [
   x => movement.moveToward(x, d, id, x.units[id].retreatTo, movement.movePoints(x.units[id], d), overwatchStep(d, rng)),
   ifUnit(id, x => vision.revealOnMove(x, id)),
   ifUnit(id, x => status.arriveIfNear(x, id, d, distance(x.units[id].pos, x.units[id].retreatTo ?? x.units[id].pos))),
-  ifUnit(id, x => turn.exhaust(x, id)),
+  ifUnit(id, x => (atTurnStart && x.units[id].fsm.morale !== 'RETREATING'
+    ? chain(x, [y => turn.refreshUnit(y, id, d), y => turn.spend(y, id, { move: y.units[id].budget.move })])
+    : turn.exhaust(x, id))),
 ]);
 
 /** Per-unit hooks at the own turn start, in axis order (docs/unit-state.md §3). null: the axis has nothing to do yet. */
@@ -30,7 +33,7 @@ export const UNIT_TURN_START = Object.freeze([
   { axis: 'location', run: null },
   { axis: 'stance', run: (s, d, rng, id) => crew.crewTurnStart(s, id) },
   { axis: 'morale', run: (s, d, rng, id) => status.decaySuppression(s, id, d) },
-  { axis: 'action', run: (s, d, rng, id) => (s.units[id].fsm.morale === 'RETREATING' ? retreatWalk(s, d, rng, id) : turn.refreshUnit(s, id, d)) },
+  { axis: 'action', run: (s, d, rng, id) => (s.units[id].fsm.morale === 'RETREATING' ? retreatWalk(s, d, rng, id, true) : turn.refreshUnit(s, id, d)) },
   { axis: 'visibility', run: null },
 ]);
 

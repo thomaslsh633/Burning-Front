@@ -35,10 +35,14 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Annihilation mode (2026-11-26): win by destroying the enemy HQ or by eliminating every enemy unit (passengers included);
   no HQ capture, no "cannot deploy" clause; optional round cap (v202). Checked at each side's turn start; both sides out at
   once: the side whose turn starts wins; after the round cap the higher surviving unit value wins, equal is a draw.
-- Every building can be destroyed, in every mode (2026-11-26): HQ 3000 HP, production buildings 1500 (tier 1–2) / 2000
-  (tier 3–4) HP (CoH3 values, `data/rules/terrain.json`). Capture mode is still won by VP tickets only. A destroyed HQ pays
+- Buildings by class (2026-11-28): HQ, tier buildings (production), doctrine buildings (produce nothing yet), neutral buildings
+  (houses, church). Every building can be destroyed, in every mode (2026-11-26). Tier, doctrine and HQ buildings: CoH3 armour
+  35 (below every tank gun's penetration) and HP in CoH3's ratio 1500 : 2000 : 3000 scaled so a Sherman 75 mm needs at least
+  8 hits: tier 1–2 1000 HP (8 hits), tier 3–4 1375 (11), HQ 2000 (16) (`data/rules/terrain.json`). Capture mode is still
+  won by VP tickets only. A destroyed HQ pays
   no base income, produces nothing and links no sector; the side's engineers may rebuild it on its own footprint (one HQ
-  per side at a time): 500 MP (CoH3 HQ cost) when work starts, 2 turns of work within 2 hexes, it stands again at 50 % HP.
+  per side at a time): 500 MP (CoH3 HQ cost) when work starts, 2 turns of work within 2 hexes, it stands again at 50 % HP
+  (design values, confirmed 2026-11-28).
   A destroyed production building produces nothing (not rebuildable yet).
 - Start resources, standard: 600 MP / 10 munitions / 20 fuel; the side moving second gets +40 MP / +10 munitions once (editable in setup) (v206).
   Larger test presets: fuel = 7 % of funds, munitions 60 (v206).
@@ -46,9 +50,10 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 
 ## 3. Points, economy, production
 - A point is captured by holding its zone (VP radius 2, resource points radius 1) through turn-start ticks, never by stepping on a hex (v59).
-- Capture by squad (D2-8, `data/balance/economy.json`): at each of the side's own turn starts every capturing squad (not each
-  man) adds 1 point; 2 points neutralise an enemy point or capture a neutral one, at most one step per tick: one squad takes a
-  neutral point in 2 turns, two squads in 1; enemy → neutral → own takes twice as long.
+- Capture by squad (2026-11-28, `data/balance/economy.json`): at each of the side's own turn starts the capturing squads'
+  CoH3 capture rates add up (riflemen / grenadiers 1.25; per squad, not per man); 2 points neutralise an enemy point or
+  capture a neutral one; the steps enemy → neutral → own are separate (at most one step per tick, the rest is not carried
+  over): one rifle squad takes a neutral point in 2 turns, two squads in 1; enemy → neutral → own takes twice as long.
   Both sides armed in the zone = contested, progress frozen; leaving the zone loses the progress (v59).
 - Who counts: armed, un-pinned infantry / crews capture; pinned infantry and armed vehicles only contest; unarmed vehicles and passengers are ignored (v59).
 - Sectors: a captured point takes its sector; resources pay only while the sector links to the HQ sector through own sectors; VPs always count (v131).
@@ -83,7 +88,8 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Range view (long press) paints only hexes the unit can really hit: direct fire needs a clear line; mortars, howitzers and rockets fire over cover (v206).
 - Engaged mark: set by attacking (or an attack ability), not by taking damage; cleared at the end of an own turn without an attack and by retreat (retreat flag instead) (v158).
 - Retreat: ×1.6 movement toward the rally point (HQ or a designated outpost), received accuracy ×0.5, no return fire; not after attacking this turn;
-  walks on by itself each turn start until within 3 hexes of the rally point (v140).
+  walks on by itself each turn start until within 3 hexes of the rally point (v140); reaching it at its turn start, it may
+  still act that turn (its move is spent) (2026-11-28).
 
 ## 5. Crew weapons (MG, mortar, AT / AA / field guns, rockets)
 - Packed: can move and turn the arc, cannot fire. Emplaced: cannot move or turn, fires from the turn after emplacing (v159).
@@ -269,18 +275,21 @@ Confirmed 2026-11-25 (rewrite):
   turn-end hooks (concealment, unused move / action lapse, engaged cleared without an attack, packed crews auto-emplace,
   served crew shock cleared, unengaged turrets swing back), then the next side's turn start (strikes → status → capture →
   victory → income; status = setup / teardown timers, suppression decay, retreat walk or a fresh budget, and the other
-  side's counter fire armed). Retreating units walk on by themselves at their turn start and spend that turn.
+  side's counter fire armed). Retreating units walk on by themselves at their turn start and spend that turn, unless they arrive.
 - Counter fire (D2-7, `data/balance/turn.json`): one per enemy turn; the attacked unit fires back at the attacker with every
   weapon that can reach it from where it stands (sight, range, arc, ammo), so an attack from outside its arc draws none.
-  Retreating units, reloading units and crews setting up or packing up do not counter; overwatch and counter fire draw no
+  Pinned, retreating and reloading units and crews setting up or packing up do not counter; suppressed units do
+  (2026-11-28); overwatch and counter fire draw no
   counter fire. Reload: a weapon that fires one volley every N turns (`indirect.usage_turns`) cannot fire or counter fire
   for the N − 1 own turns after the turn it fired in (`timers.reload`).
   Counter fire, overwatch fire and ground attacks set engaged.
-- Overwatch reaction (D2-7): a move that steps into an overwatching MG's arc, range and sight draws one burst; the move stops
-  there when the mover dies or is pinned (only the steps taken are paid) and cannot be undone.
+- Overwatch reaction (D2-7, confirmed 2026-11-28): a move that steps into an overwatching MG's arc, range and sight draws one
+  burst, an ordinary attack with its suppression; no separate stop rule: the mover stops only because it died or the added
+  suppression pinned it (only the steps taken are paid). Such a move cannot be undone.
 - Abandon and crews without guns (D2-7): a towed-gun crew may abandon its gun (CoH3 `can_manual_abandon`): the crew steps
   onto a free neighbouring hex as its own unit, the gun stays decrewed. A crew whose gun is gone fights with its small arms
-  and may recrew. Recrew takes a squad of `min_crew`–`max_squad` living men (57 mm / Pak 40: 2–5).
+  and may recrew. Recrew takes any squad on foot, whatever its size (2026-11-28: capacity counts squads, not men).
+- Capacity (2026-11-28, for transports and garrisons, not built): counted in squads; a heavy weapon team takes 2 slots.
 - Wreck clearing (D2-7, `data/rules/terrain.json`): engineers (squad role `engineer`) spend their action on or next to a
   wreck; vehicle wrecks go after 2 turns of work, emplacement wrecks after 1.
 

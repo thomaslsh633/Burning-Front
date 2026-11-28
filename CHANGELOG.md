@@ -3,6 +3,11 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — rule decisions (2026-11-28)
+- Pinned units no longer counter fire; a retreating unit reaching its rally point at its turn start can still act.
+- Any squad can recrew a gun; capture speed adds up the squads' capture rates.
+- Tier buildings take 8 Sherman hits (tier 3–4: 11, HQ: 16).
+
 ## rewrite — every building destructible, HQ rebuild (2026-11-26)
 - HQs and production buildings can be destroyed in every mode; capture mode is still won by tickets.
 - A destroyed HQ gives no income and produces nothing until engineers rebuild it on its footprint.

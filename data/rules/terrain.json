@@ -1,5 +1,5 @@
 {
-  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint (every building can be destroyed; map production buildings are structures of kind production, CoH3 HP 1500, or production_heavy, 2000; HQ HP and rebuild cost from CoH3); wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0–3. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
+  "about": "Terrain and map features: movement, cover, sight and durability (docs/map-design.md). A hex has one ground and at most one hex object; lines (walls, hedges, fences, sandbags, wire) are polylines compiled to hex edges; structures are buildings with a footprint, by class: hq, tier (production: tier 1\u20132, production_heavy: tier 3\u20134), doctrine, neutral (houses, church). Every building can be destroyed. Tier / doctrine / HQ armour is CoH3's 35; their HP keeps CoH3's ratio 1500 : 2000 : 3000 scaled so a Sherman 75 mm needs at least 8 hits for a tier 1\u20132 building (1000 HP = 8, 1375 = 11, HQ 2000 = 16); HQ rebuild cost is CoH3's HQ price; wrecks are placed when vehicles and emplacements die; units of a wreck_clearing role clear one by spending their action on clear_turns turns (design values). cost: move points to enter (per move class), cross: extra points to cross an edge; null = impassable. sight: none | partial | block. height 0\u20133. Movement and sight values from v214; durability values are Burning Front design values except defensive features, which take HP and armour from the faction's CoH3 entity (faction_ebps; neutral = placed by the map).",
   "pass_classes": {
     "infantry": "infantry",
     "vaulting_infantry": "infantry",
@@ -375,47 +375,70 @@
       "armor": 30,
       "garrison": 1,
       "height": 3,
-      "leaves": "rubble"
+      "leaves": "rubble",
+      "class": "neutral"
     },
     "house": {
       "hp": 1200,
       "armor": 40,
       "garrison": 1,
       "height": 3,
-      "leaves": "rubble"
+      "leaves": "rubble",
+      "class": "neutral"
     },
     "house_large": {
       "hp": 2000,
       "armor": 50,
       "garrison": 2,
       "height": 3,
-      "leaves": "rubble"
+      "leaves": "rubble",
+      "class": "neutral"
     },
     "church": {
       "hp": 3000,
       "armor": 60,
       "garrison": 3,
       "height": 3,
-      "leaves": "rubble"
+      "leaves": "rubble",
+      "class": "neutral"
     },
     "hq": {
-      "hp": 3000,
-      "armor": 40,
+      "hp": 2000,
+      "armor": 35,
       "garrison": 0,
       "height": 3,
-      "rebuild": { "roles": ["engineer"], "cost": { "manpower": 500 }, "turns": 2, "hp_share": 0.5 }
+      "rebuild": {
+        "roles": [
+          "engineer"
+        ],
+        "cost": {
+          "manpower": 500
+        },
+        "turns": 2,
+        "hp_share": 0.5
+      },
+      "class": "hq"
     },
     "production": {
-      "hp": 1500,
-      "armor": 40,
+      "hp": 1000,
+      "armor": 35,
       "garrison": 0,
-      "height": 3
+      "height": 3,
+      "class": "tier"
     },
     "production_heavy": {
-      "hp": 2000,
-      "armor": 40,
+      "hp": 1375,
+      "armor": 35,
       "garrison": 0,
-      "height": 3
+      "height": 3,
+      "class": "tier"
+    },
+    "doctrine": {
+      "hp": 1000,
+      "armor": 35,
+      "garrison": 0,
+      "height": 3,
+      "class": "doctrine"
     }
   },
   "structure_terrain": {
@@ -455,6 +478,8 @@
     }
   },
   "wreck_clearing": {
-    "roles": ["engineer"]
+    "roles": [
+      "engineer"
+    ]
   }
 }

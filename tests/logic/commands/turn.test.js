@@ -2,6 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { apply } from '../../../src/logic/commands/index.js';
 import { UNIT_TURN_START, UNIT_TURN_END, SIDE_TURN_START } from '../../../src/logic/commands/phases.js';
+import { MACHINES } from '../../../src/logic/commands/steps.js';
+import { permits } from '../../../src/logic/fsm/index.js';
 import { AXES, checkUnit } from '../../../src/logic/state/index.js';
 import { createRng } from '../../../src/services/rng/index.js';
 import { testMatch, tweak } from '../../helpers/match.js';
@@ -112,6 +114,23 @@ test('an overwatch burst that pins the mover stops it on that hex', () => {
   assert.deepEqual([u.fsm.morale, u.pos], ['PINNED', H(6, 5)], 'the first hex inside range');
   assert.deepEqual(types(r.events).filter(t => /Move|Overwatch/.test(t)), ['Moved', 'OverwatchFired', 'MoveInterrupted']);
   assert.equal(u.budget.move, 3, 'only the step taken is paid');
+});
+
+test('pinned units do not counter fire; suppressed units do', () => {
+  const { state: s0, data } = testMatch([blue('riflemen_us', H(2, 5)), red('grenadier_ger', H(5, 5), { facing: 3 })]);
+  const state = endTurn(endTurn(s0, data).state, data).state;
+  const pinned = tweak(state, 'u2', { suppression: 85, fsm: { ...state.units.u2.fsm, morale: 'PINNED' } });
+  assert.ok(!types(run(pinned, data, { type: 'Attack', side: 'blue', unit: 'u1', target: 'u2' }, 4).events).includes('CounterFired'));
+  const supp = { ...state.units.u2, fsm: { ...state.units.u2.fsm, morale: 'SUPPRESSED' } };
+  assert.deepEqual(permits(MACHINES, supp, 'Counter'), { ok: true });
+  assert.equal(permits(MACHINES, pinned.units.u2, 'Counter').reason, 'pinned');
+});
+
+test('a retreating unit that reaches its rally point at its turn start may still act (its move is spent)', () => {
+  const { state: s0, data } = testMatch([blue('riflemen_us', H(1, 1)), red('grenadier_ger', H(10, 6))]);
+  const state = tweak(s0, 'u2', { fsm: { ...s0.units.u2.fsm, morale: 'RETREATING' }, retreatTo: H(11, 9) });
+  const u = endTurn(state, data).state.units.u2;
+  assert.deepEqual([u.fsm.morale, u.fsm.action, u.budget.action, u.budget.move], ['NORMAL', 'IDLE', 1, 0]);
 });
 
 test('retreating units walk on by themselves at their turn start and spend that turn', () => {
@@ -278,5 +297,5 @@ test('Rebuild: an engineer rebuilds its destroyed HQ on the footprint (paid once
   const two = run(own, data, { type: 'Rebuild', side: 'blue', unit: 'u1', structure: 'hq' });
   assert.equal(two.state.teams.blue.resources.manpower, own.teams.blue.resources.manpower, 'paid only when work starts');
   assert.ok(types(two.events).includes('StructureRebuilt'));
-  assert.equal(two.state.map.changes.structures.hq.hp, 1500);
+  assert.equal(two.state.map.changes.structures.hq.hp, 1000);
 });

@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (decisions on the status report)
+- **Done:** pinned units no counter fire; retreat arrival at turn start keeps the action; recrew any squad size; capture
+  = sum of squads' CoH3 capture rates (steps separate); building classes; tier buildings 1000 / 1375, HQ 2000 HP, armour 35
+  (a Sherman needs 8 / 11 / 16 hits, tested). 285 tests.
+- **Next:** remaining open items in `docs/reviews/status-2026-11-26.md` §3; stage G.
+- **Blocked:** nothing.
+
 ## 2026-11-26 (buildings destructible, HQ rebuild, status report)
 - **Done:** every building destructible in every mode (HQ 3000, production buildings 1500 / 2000 HP, CoH3); map production
   buildings compiled as structures; a destroyed HQ stops base income, HQ production and its supply link; `Rebuild` of the

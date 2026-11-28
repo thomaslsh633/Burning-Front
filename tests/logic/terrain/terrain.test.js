@@ -115,7 +115,7 @@ test('every building can be destroyed, the HQ too, in either mode; production bu
   assert.equal(r.collapsed, true);
   assert.equal(terrain.hqDestroyed(r.state, data, 'blue'), true);
   assert.equal(terrain.hqDestroyed(state, data, 'red'), false, 'no HQ on the map: never lost');
-  assert.equal(terrain.structureAt(state, data, H(5, 5)).hp, 1500);
+  assert.equal(terrain.structureAt(state, data, H(5, 5)).hp, 1000);
   assert.equal(terrain.damageStructure(state, data, 'bx', { amount: 99999, weapon: weapon('81mm_mortar_us') }).collapsed, true);
 });
 
@@ -125,7 +125,7 @@ test('rebuildStructure: the HQ stands again after its rebuild turns at half HP',
   const one = terrain.rebuildStructure(down, data, 'hq');
   assert.deepEqual([one.done, terrain.isCollapsed(one.state, 'hq'), one.events[0].type], [false, true, 'StructureRebuilding']);
   const two = terrain.rebuildStructure(one.state, data, 'hq');
-  assert.deepEqual([two.done, terrain.structureAt(two.state, data, H(2, 2)).hp], [true, 1500]);
+  assert.deepEqual([two.done, terrain.structureAt(two.state, data, H(2, 2)).hp], [true, 1000]);
 });
 
 test('AttackFeature with explosives brings a house down and kills the garrison', () => {
@@ -167,4 +167,20 @@ test('clearWreck: one turn of work at a time; a vehicle wreck goes after its cle
   assert.equal(terrain.hexAt(two.state, data, H(4, 4)).featureKind, null);
   assert.deepEqual(two.events, [{ type: 'WreckCleared', hex: H(4, 4), kind: 'vehicle' }]);
   assert.equal(terrain.clearWreck(state, data, H(4, 4)).state, state, 'no wreck: nothing');
+});
+
+test('a Sherman 75 mm needs at least 8 hits for a tier building (11 for tier 3–4, 16 for an HQ)', () => {
+  const { state, data } = testMatch([], { structures: [{ id: 'hq', kind: 'hq', team: 'blue', hexes: ['2,2'] }],
+    production: [{ id: 't1', type: 'barracks', team: 'blue', hexes: ['5,5'] }, { id: 't4', type: 'tank_depot', team: 'blue', hexes: ['8,5'], kind: 'production_heavy' }] });
+  const w = data.units.weapon['75mm_sherman_us'];
+  const hits = id => {
+    let s = state, n = 0;
+    for (const band of ['far', 'mid', 'near']) {   // the weakest band first: every band must hold
+      s = state; n = 0;
+      while (!terrain.isCollapsed(s, id) && n < 50) { s = terrain.damageStructure(s, data, id, { amount: w.attack.damage_per_shot[band], pen: w.penetration[band], weapon: w }).state; n++; }
+      if (band === 'near') return n;
+    }
+  };
+  assert.deepEqual([hits('t1'), hits('t4'), hits('hq')], [8, 11, 16]);
+  for (const k of ['production', 'production_heavy', 'hq', 'doctrine']) assert.ok(data.rules.terrain.structures[k].armor < w.penetration.far, k);
 });

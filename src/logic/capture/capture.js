@@ -1,6 +1,6 @@
 // Points and sectors (SPEC §3, §10). Owns GameState.points: [{ id, owner, progress, by }].
-// A point is taken by holding its zone through the side's own turn-start ticks: each capturing squad adds points_per_squad
-// (capture is per squad, not per man); points_per_step (data/balance/economy.json) neutralises an enemy point or captures a neutral one, at most one step
+// A point is taken by holding its zone through the side's own turn-start ticks: each capturing squad adds its CoH3 capture
+// rate (2026-11-28: the sum over squads, not men); points_per_step (data/balance/economy.json) neutralises an enemy point or captures a neutral one, at most one step
 // per tick. Armed enemies in the zone contest it (frozen); a side that left the zone loses its progress.
 import { key, fromKey, neighbours } from '../hex/index.js';
 import { ev } from '../events/index.js';
@@ -10,10 +10,10 @@ import { firingWeapons } from '../combat/index.js';
 
 const onMap = u => u.fsm.life === 'ACTIVE' && u.fsm.location === 'ON_MAP';
 
-/** Capture strength of a unit: points_per_squad for an armed squad or crew that can capture (CoH3 capture block), not pinned or retreating. */
+/** Capture strength of a unit: its squad's CoH3 capture rate (riflemen 1.25) if armed, able to capture, not pinned or retreating. */
 export function capturePower(unit, data) {
   if (!data.units.sbps[unit.sbps].capture || !onMap(unit) || ['PINNED', 'RETREATING'].includes(unit.fsm.morale) || !firingWeapons(unit, data).length) return 0;
-  return data.balance.economy.capture.points_per_squad;
+  return data.units.sbps[unit.sbps].capture.rate;
 }
 
 /** Contests a zone: any armed unit on the map that is not retreating (pinned infantry and armed vehicles too). */

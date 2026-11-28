@@ -9,7 +9,7 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (282 tests) |
+| Checks | `npm run check` passes; `npm test` passes (285 tests) |
 | Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
@@ -53,6 +53,7 @@ Turn-based hex tactics game for mobile (landscape) as a web PWA (JavaScript, Pix
 | D2-9 (branch head) | `logic/victory` (Victory Meter bleed with momentum and parity, annihilation with cannot-deploy and round cap), `data/balance/victory.json`, the D2 exit gate `tests/integration/match.test.js` (both modes played to the end through `store.dispatch`) |
 | after D2-9 | annihilation: HQ destroyed or all units gone (HQ destructible in annihilation only); `Convert` command with `data/rules/conversions.json` (CoH3 field conversions, research-locked ones refused) |
 | after D2-9 | every building destructible in every mode (HQ 3000, production 1500 / 2000 HP from CoH3; production buildings compiled as structures); destroyed HQ: no base income, no production, no supply link; `Rebuild` command (`logic/build`) |
+| 2026-11-28 | decisions: pinned units no counter; retreat arrival keeps the action; recrew any squad size; capture = sum of squad capture rates; building classes (hq / tier / doctrine / neutral); tier buildings 1000 / 1375 HP, HQ 2000, armour 35 (Sherman 8 / 11 / 16 hits) |
 
 D2 readiness fixes 1–7:
 1. **Data layers:** `data/base` → `data/units` → mods, merged by id (`src/services/data/merge.js`).
@@ -107,15 +108,10 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   needs a gun HP for carried weapons.
 - **Suppression thresholds and combat tuning** are design values (CoH3 does not publish them):
   `data/balance/status.json`, `combat.json` (including `criticals`, `feature_target_size`).
-- **D2-7 choices the user has not confirmed:**
-  - suppressed and pinned units still counter fire (at ×0.5 / ×0.25 accuracy); v214 let neither counter. Retreating and
-    reloading units and crews setting up / packing up do not (reloading confirmed 2026-11-26);
-  - counter fire needs the attacker inside the counter-firing weapon's arc (v214 flank rule kept);
-  - an overwatch burst stops the mover only if it dies or is pinned;
-  - a retreating unit that reaches its rally point at its turn start is spent for that turn;
-  - recrew takes `min_crew`–`max_squad` living men, so a full 6-man rifle or grenadier squad cannot recrew a 57 mm / Pak 40
-    (CoH3 max 5) until it loses a man;
-  - wreck clearing turns: vehicle 2, emplacement 1; the abandoning crew gets a fresh ammo load.
+- **D2-7 choices, decided 2026-11-28:** suppressed units counter, pinned do not; overwatch stops a mover only by pinning
+  it; a retreating unit arriving at its turn start keeps its action; recrew takes any squad (capacity counts squads; heavy
+  weapon teams take 2 slots in transports / garrisons). Still design values: counter fire needs the attacker inside the
+  arc (v214 flank rule); wreck clearing 2 / 1 turns; the abandoning crew gets a fresh ammo load.
 - **D2-8 follow-ups (decided 2026-11-26, done):** capture is per squad (1 point each); HQ 60 MP / 5 fuel / 10 munitions,
   manpower points 70 (a map point may override its yield); production generated from CoH3 spawner data
   (`tools/coh3/production.js`, map type → building in `data/rules/production.json` `types`); population cap 300.

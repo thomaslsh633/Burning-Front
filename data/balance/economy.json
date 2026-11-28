@@ -1,6 +1,6 @@
 {
-  "about": "Points, income, upkeep (SPEC §3, §10). Capture: each capturing squad adds points_per_squad per own turn-start tick; a step (neutralise, or capture a neutral point) needs points_per_step, at most one step per tick. Income per own turn start: base (the HQ) plus the yields of owned points whose sector links to the HQ (VPs pay nothing); a map point may set its own yield. Upkeep per own active unit: share_of_price × its manpower price, at most max_manpower; the excess ÷ excess_fuel_divisor is paid in fuel; net manpower never falls below min_net_share of gross. population_cap: the most population a side may field (sum of squad pop).",
-  "capture": { "points_per_squad": 1, "points_per_step": 2 },
+  "about": "Points, income, upkeep (SPEC §3, §10). Capture: the capturing squads' CoH3 capture rates add up per own turn-start tick; a step (neutralise, or capture a neutral point) needs points_per_step, at most one step per tick. Income per own turn start: base (the HQ) plus the yields of owned points whose sector links to the HQ (VPs pay nothing); a map point may set its own yield. Upkeep per own active unit: share_of_price × its manpower price, at most max_manpower; the excess ÷ excess_fuel_divisor is paid in fuel; net manpower never falls below min_net_share of gross. population_cap: the most population a side may field (sum of squad pop).",
+  "capture": { "points_per_step": 2 },
   "population_cap": 300,
   "income": {
     "base": { "manpower": 60, "fuel": 5, "munition": 10 },

@@ -17,13 +17,12 @@ function decrewed(squad = {}) {
   return { state: s, data };
 }
 
-test('Recrew check: a decrewed gun next to a squad of the right size; captured as the squad\'s faction blueprint', () => {
+test('Recrew check: a decrewed gun next to any squad, whatever its size; captured as the squad\'s faction blueprint', () => {
   const { state, data } = decrewed();
-  assert.equal(life.validateRecrew(state, { unit: 'u1', target: 'u2' }, data), 'wrong_squad_size', 'six riflemen: above max_squad 5');
+  assert.equal(life.validateRecrew(state, { unit: 'u1', target: 'u2' }, data), null, 'six riflemen');
   const five = fiveMen(state, 'u1');
-  assert.equal(life.validateRecrew(five, { unit: 'u1', target: 'u2' }, data), null);
   const one = tweak(five, 'u1', { members: five.units.u1.members.map((m, i) => (i > 1 ? { ...m, hp: 0 } : m)) });
-  assert.equal(life.validateRecrew(one, { unit: 'u1', target: 'u2' }, data), 'wrong_squad_size', 'one man: below min_crew 2');
+  assert.equal(life.validateRecrew(one, { unit: 'u1', target: 'u2' }, data), null, 'one man');
   const far = tweak(five, 'u1', { pos: H(1, 4) });
   assert.equal(life.validateRecrew(far, { unit: 'u1', target: 'u2' }, data), 'too_far');
   const { state: active, data: d2 } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 4) }, { team: 'red', sbps: 'at_gun_75mm_ger', pos: H(4, 4) }]);

@@ -313,6 +313,9 @@
           "leaves": {
             "$ref": "types.schema.json#/$defs/Id"
           },
+          "class": {
+            "enum": ["hq", "tier", "doctrine", "neutral"]
+          },
           "rebuild": {
             "type": "object",
             "properties": {

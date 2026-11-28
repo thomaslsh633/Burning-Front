@@ -27,8 +27,8 @@ function onFoot(u, data) {
 }
 
 /**
- * Recrew / capture: { unit (squad), target (DECREWED gun) }. On or next to the hex, with between min_crew and max_squad men;
- * own or enemy equipment alike. → reason or null
+ * Recrew / capture: { unit (squad), target (DECREWED gun) }. Any squad on foot on or next to the hex, whatever its size
+ * (capacity counts squads, not men: 2026-11-28); own or enemy equipment alike. → reason or null
  */
 export function validateRecrew(state, cmd, data) {
   const squad = state.units[cmd.unit], gun = state.units[cmd.target];
@@ -36,9 +36,7 @@ export function validateRecrew(state, cmd, data) {
   const r = recrewable(gun, data), faction = state.teams[squad.team].faction;
   if (!r || !r.recrew.by_faction[faction] || !teamWeapon({ sbps: r.recrew.by_faction[faction] }, data)) return 'not_recrewable';
   if (!onFoot(squad, data)) return 'cannot_recrew';
-  if (distance(squad.pos, gun.pos) > 1) return 'too_far';
-  const men = squad.members.filter(alive).length;
-  return men >= r.recrew.min_crew && men <= r.recrew.max_squad ? null : 'wrong_squad_size';
+  return distance(squad.pos, gun.pos) > 1 ? 'too_far' : null;
 }
 
 /** The gun's members after a recrew: the gun, then every man of the squad as a crewman of the new blueprint (HP kept, capped). */

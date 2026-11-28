@@ -105,7 +105,7 @@ Transitions: IDLE →(Move)→ MOVING →(path done / interrupted)→ IDLE if bu
 IDLE →(Attack)→ ATTACKING →(resolved)→ IDLE / EXHAUSTED · IDLE →(Hold)→ OVERWATCH · IDLE →(EndTurn)→ EXHAUSTED ·
 OVERWATCH →(triggered)→ EXHAUSTED · any →(own turn start)→ IDLE (unless morale = RETREATING, which runs the retreat move first).
 Counter fire is a reaction during the enemy turn; it uses `budget.counter`, not the action state. It is checked like a
-command named `Counter`: EXHAUSTED and OVERWATCH permit it; a reloading unit (`timers.reload`) never counters; RETREATING, SETTING_UP / PACKING_UP and every state but
+command named `Counter`: EXHAUSTED and OVERWATCH permit it; a reloading unit (`timers.reload`) never counters; PINNED, RETREATING, SETTING_UP / PACKING_UP and every state but
 ACTIVE veto it; the unit must be able to attack the attacker from where it stands (sight, range, arc, ammo), so a flank
 attack outside the weapon arc draws none. Overwatch fire and counter fire draw no counter fire.
 A move that triggers overwatch stops on that hex when the mover dies or ends in a morale state listed in
@@ -156,8 +156,8 @@ Stance and location exclude each other: a team weapon must be `MOBILE` to board;
 | --- | --- | --- |
 | `NORMAL` | none | suppression ≥ `suppressed_at` → `SUPPRESSED` |
 | `SUPPRESSED` | move ×0.5, accuracy ×0.5, no sprint-type abilities | ≥ `pinned_at` → `PINNED`; decays below `recover_at` at own turn start → `NORMAL` |
-| `PINNED` | no move except Retreat; accuracy ×0.25; cannot capture; abilities with `requires_unpinned` blocked | decays below `suppressed_at` → `SUPPRESSED`; Retreat → `RETREATING` |
-| `RETREATING` | auto-moves ×1.6 toward `retreatTo` at own turn start; no attack, no counter fire; received accuracy ×0.5 (SPEC §4) | within 3 hexes of the rally point → `NORMAL` (suppression cleared) |
+| `PINNED` | no move except Retreat; accuracy ×0.25; cannot capture; no counter fire; abilities with `requires_unpinned` blocked | decays below `suppressed_at` → `SUPPRESSED`; Retreat → `RETREATING` |
+| `RETREATING` | auto-moves ×1.6 toward `retreatTo` at own turn start; no attack, no counter fire; received accuracy ×0.5 (SPEC §4) | within 3 hexes of the rally point → `NORMAL` (suppression cleared); arriving at its turn start it keeps that turn's action |
 
 Thresholds, decay per turn (faster in cover) and the accuracy multipliers are data (`data/rules`). Vehicles and
 team weapons in `EMPLACED` use their own thresholds or are immune, as the data says.
@@ -199,7 +199,7 @@ per capturing faction, the squad blueprint it becomes, `min_capture_crew_size` (
 | --- | --- |
 | Decrew (team weapon) | when the crew's last member dies, the gun stays on its hex as `DECREWED`, owner none, HP / ammo / stance kept. If the gun itself is destroyed first, surviving crew become a small infantry squad |
 | Manual abandon | a crew may abandon its gun (action) where the data allows it (`can_manual_abandon`): the gun becomes `DECREWED`, the crew a small infantry squad |
-| Recrew / capture | an infantry squad, `IDLE` with its action left, not PINNED or RETREATING, on or next to the hex, with members between `min_capture_crew_size` and `recrew_max_squad_size`, spends its action. Own or enemy equipment alike: capturing is recrewing |
+| Recrew / capture | an infantry squad, `IDLE` with its action left, not PINNED or RETREATING, on or next to the hex, spends its action; any squad size (2026-11-28: capacity counts squads, not men; CoH3 `min_capture_crew_size` / `recrew_max_squad_size` are not used). Own or enemy equipment alike: capturing is recrewing |
 | Result: team weapon | the squad becomes the crew (all its members); the gun turns `ACTIVE` under the squad's side as that faction's capture blueprint; stance `MOBILE` (must set up again); veterancy reset; ammo kept |
 | Wrecks | `WRECKED` vehicles become terrain: heavy cover (green) for infantry, as a wreck object in the map change overlay (2026-11-26), block vehicle movement, infantry may pass; engineers clear them (action, `clear_turns` from data); a recovery vehicle may tow them |
 | Denial | as in CoH3, a `DECREWED` gun is an ownerless target: any side (its old owner too) may attack it; at 0 HP it is removed and leaves a wreck |
