@@ -2,6 +2,16 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (G-4: time-to-kill report)
+- **Done:** `tools/greybox/report.js` duels every armed squad (217) against 8 reference targets with the rules engine
+  (200 seeds, 20 turns, mid-band range, open ground) → `reports/greybox/ttk.md`; criteria `data/balance/greybox.json`
+  (TTK per role, time to pin for suppression). Shared loader `tools/lib/game-data.js`. 33 squads flagged. 290 tests.
+- **Found:** ammo runs out in 140 of 217 squads' 20-turn duels (`data/balance/ammo.json` looks small); many flags are
+  importer role guesses (transports / recon vehicles as suppression, assault guns as all-round, bazooka team, officers,
+  scouts, snipers as anti-infantry); 105 mm guns and the Stummel do not kill infantry within 20 turns.
+- **Next:** decide roles / ammo (G-5); greybox view (G-2, G-3).
+- **Blocked:** nothing.
+
 ## 2026-11-28 (G-1: all four factions imported)
 - **Done:** `import.js <faction> --all` imports every roster squad: 287 squads (US 72, Wehrmacht 66, DAK 52, British 97).
   The importer skips CoH3 placeholder weapons, drops weapon links nothing imported, leaves out squads whose records fail

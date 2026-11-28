@@ -9,8 +9,8 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (288 tests) |
-| Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
+| Checks | `npm run check` passes; `npm test` passes (290 tests) |
+| Phase | **Stage G**: G-1 (all factions imported) and G-4 (TTK report) done; next G-5 decisions, then the greybox view (G-2, G-3) |
 | Data imported | all four factions (G-1, 2026-11-28): 287 squads (US 72, Wehrmacht 66, DAK 52, British 97) with `node tools/import-coh3/import.js <faction> --all`; 9 squads left out (see `reports/import/`) |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
 

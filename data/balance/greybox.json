@@ -1,0 +1,57 @@
+{
+  "about": "Greybox TTK check (dev plan G-4, tools/greybox/report.js). targets: reference squads every armed squad duels; max_turns: duel length. ranges: the best median TTK (or, with measure pin, the best median time until the target is pinned) a squad of this role should reach against targets of this kind, in own turns (design values); squads outside are flagged \u2014 fix the data or record why.",
+  "targets": [
+    "riflemen_us",
+    "grenadier_ger",
+    "tommy_africa_uk",
+    "panzergrenadier_ak",
+    "stuart_us",
+    "sherman_us",
+    "panzer_iv_ger",
+    "hmg_mg42_ger"
+  ],
+  "max_turns": 20,
+  "ranges": [
+    {
+      "role": "anti_infantry",
+      "target_kind": "squad",
+      "turns": [
+        2,
+        6
+      ]
+    },
+    {
+      "role": "suppression",
+      "target_kind": "squad",
+      "measure": "pin",
+      "turns": [
+        1,
+        4
+      ]
+    },
+    {
+      "role": "anti_tank",
+      "target_kind": "vehicle",
+      "turns": [
+        2,
+        6
+      ]
+    },
+    {
+      "role": "all_round",
+      "target_kind": "vehicle",
+      "turns": [
+        2,
+        8
+      ]
+    },
+    {
+      "role": "indirect",
+      "target_kind": "squad",
+      "turns": [
+        2,
+        10
+      ]
+    }
+  ]
+}

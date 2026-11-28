@@ -10,6 +10,7 @@ Turn-based tuning, read by the tools through `tools/lib/config.js` (`loadConfig`
 - `movement.json`, `vision.json`, `combat.json`, `status.json`, `crew.json` — rule tuning read by `src/logic` (D2).
 - `economy.json` — capture points per step, income (base and per point kind), upkeep.
 - `victory.json` — Victory Meter tickets and bleed, annihilation rules.
+- `greybox.json` — TTK check criteria (reference targets, duel length, TTK / pin ranges per role).
 - `turn.json` — turn reactions: counter fire per enemy turn, which units overwatch and what stops a mover.
 
 - Format: JSON

@@ -1,0 +1,25 @@
+{
+  "about": "data/balance/greybox.json",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "targets": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" }, "minItems": 1 },
+    "max_turns": { "type": "integer", "minimum": 1 },
+    "ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": { "type": "string", "vocab": "role" },
+          "target_kind": { "type": "string", "vocab": "kind" },
+          "measure": { "enum": ["kill", "pin"] },
+          "turns": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 }
+        },
+        "additionalProperties": false,
+        "required": ["role", "target_kind", "turns"]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["targets", "max_turns", "ranges"]
+}
