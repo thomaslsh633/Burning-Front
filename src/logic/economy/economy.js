@@ -62,6 +62,29 @@ export function validateConvert(state, cmd, data) {
   return population(state, data, u.team) + extra > data.balance.economy.population_cap ? 'population_cap' : null;
 }
 
+/** Are an upgrade's CoH3 requirements met? `upgrades`: every one unlocked; `any_upgrades`: one unlocked or one of the
+ * team's standing buildings (CoH3 building ids). A team holding 'all' has everything (testing). */
+export function requirementsMet(state, data, team, req = {}) {
+  const has = state.teams[team].unlocks ?? [];
+  if (has.includes('all')) return true;
+  const f = data.rules.production.factions[state.teams[team].faction];
+  const built = new Set(producers(state, data).filter(b => b.team === team).map(b => f?.slots[b.type]).filter(Boolean));
+  return (req.upgrades || []).every(id => has.includes(id)) && (!req.any_upgrades?.length || req.any_upgrades.some(id => has.includes(id) || built.has(id)));
+}
+
+/**
+ * Upgrade command: { unit, upgrade } — a weapon kit from the squad's CoH3 upgrade list: requirements met, under its limit,
+ * out of combat, paid. shortcut: fitted at once (CoH3 build time `build_turns` not modelled), add it when kits take time.
+ */
+export function validateUpgrade(state, cmd, data) {
+  const u = state.units[cmd.unit], up = data.units.upgrade[cmd.upgrade];
+  if (!up || !(data.units.sbps[u.sbps].upgrades?.list || []).includes(cmd.upgrade)) return 'cannot_upgrade';
+  if (u.upgrades.filter(x => x === cmd.upgrade).length >= (up.limit ?? 1)) return 'already_upgraded';
+  if (!requirementsMet(state, data, u.team, up.requires)) return 'needs_unlock';
+  if (u.engaged) return 'engaged';
+  return canAfford(state, u.team, up.cost ?? {}) ? null : 'cannot_afford';
+}
+
 /** Population a side fields: the pop of its active units. */
 export const population = (state, data, team) => Object.values(state.units)
   .filter(u => u.team === team && u.fsm.life === 'ACTIVE').reduce((s, u) => s + (data.units.sbps[u.sbps].pop ?? 0), 0);

@@ -90,3 +90,12 @@ test('conversions: listed for the selected unit; a doctrine one is shown locked'
   assert.deepEqual(ctl.actions().map(a => [a.id, a.disabled]), [['convert:hmg_50cal_us', true]]);
   assert.match(ctl.actions()[0].label, /needs_doctrine/);
 });
+
+test('upgrades: listed for the selected unit, locked without the unlock', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(6, 6) }]);
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(6, 6) });
+  const bar = ctl.actions().find(a => a.id === 'upgrade:bar_rifleman_squad_us');
+  assert.equal(bar.disabled, true);
+  assert.match(bar.label, /needs_unlock/);
+});

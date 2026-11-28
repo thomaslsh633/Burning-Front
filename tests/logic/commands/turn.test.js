@@ -4,6 +4,7 @@ import { apply } from '../../../src/logic/commands/index.js';
 import { UNIT_TURN_START, UNIT_TURN_END, SIDE_TURN_START } from '../../../src/logic/commands/phases.js';
 import { MACHINES } from '../../../src/logic/commands/steps.js';
 import { permits } from '../../../src/logic/fsm/index.js';
+import * as combat from '../../../src/logic/combat/index.js';
 import { AXES, checkUnit } from '../../../src/logic/state/index.js';
 import { createRng } from '../../../src/services/rng/index.js';
 import { testMatch, tweak } from '../../helpers/match.js';
@@ -298,4 +299,18 @@ test('Rebuild: an engineer rebuilds its destroyed HQ on the footprint (paid once
   assert.equal(two.state.teams.blue.resources.manpower, own.teams.blue.resources.manpower, 'paid only when work starts');
   assert.ok(types(two.events).includes('StructureRebuilt'));
   assert.equal(two.state.map.changes.structures.hq.hp, 1000);
+});
+
+test('Upgrade: a weapon kit swaps one model\'s main weapon; requirements, limit and cost are checked', () => {
+  const { state: s0, data } = testMatch([blue('riflemen_us', H(3, 3)), red('grenadier_ger', H(10, 9))]);
+  const cmd = { type: 'Upgrade', side: 'blue', unit: 'u1', upgrade: 'bar_rifleman_squad_us' };
+  assert.equal(apply(s0, cmd, data, createRng(1)).error, 'needs_unlock', 'BAR needs its research and a support center');
+  const rich = { ...s0, teams: { ...s0.teams, blue: { ...s0.teams.blue, unlocks: ['all'], resources: { ...s0.teams.blue.resources, munition: 100 } } } };
+  const r = run(rich, data, cmd);
+  const u = r.state.units.u1, fired = combat.firingWeapons(u, data).map(w => w.id);
+  assert.deepEqual([u.upgrades, r.state.teams.blue.resources.munition, u.budget.action], [['bar_rifleman_squad_us'], 40, 0]);
+  assert.equal(fired.filter(w => w === 'bar_riflemen_us').length, 1);
+  assert.equal(fired.length, 6, 'still six weapons: one Garand became a BAR');
+  const next = endTurn(endTurn(r.state, data).state, data).state;
+  assert.equal(apply(next, cmd, data, createRng(1)).error, 'already_upgraded');
 });

@@ -1,5 +1,6 @@
 // Greybox boot (dev plan G-2): fetches the game data, starts a 1v1 on a map and wires input → controller → store → view.
-// Wiring only, no rules. URL options: ?map=skirmish&blue=american&red=german&mode=capture&seed=1
+// Wiring only, no rules. URL options: ?map=greybox&blue=american&red=german&mode=capture&seed=1&unlock=all (testing: every
+// research / doctrine unlock held)
 import { gameFiles, assembleGameData } from '../services/data/index.js';
 import { createRng } from '../services/rng/index.js';
 import { createStore } from '../logic/store/index.js';
@@ -14,9 +15,9 @@ export async function bootGreybox(doc, root = '.') {
   const get = p => fetch(`${root}/${p}`).then(r => { if (!r.ok) throw new Error(`${p}: ${r.status}`); return r.json(); });
   const files = Object.fromEntries(await Promise.all(gameFiles().map(async f => [f, await get(f)])));
   const data = assembleGameData(files, { [map]: await get(`data/generated/maps/${map}.json`) });
-  const resources = { manpower: 600, munition: 10, fuel: 20 };
+  const resources = { manpower: 600, munition: 10, fuel: 20 }, unlocks = opt('unlock') === 'all' ? ['all'] : [];
   const state = createMatch({ map: { id: map }, mode: opt('mode') ?? 'capture', order: ['blue', 'red'], rng: Number(opt('seed') ?? 1),
-    teams: { blue: { faction: opt('blue') ?? 'american', resources }, red: { faction: opt('red') ?? 'german', resources } } }, data);
+    teams: { blue: { faction: opt('blue') ?? 'american', resources, unlocks }, red: { faction: opt('red') ?? 'german', resources, unlocks } } }, data);
   const store = createStore(state, data, { rngFrom: s => createRng({ state: s }), freeze: true });
 
   const canvas = doc.getElementById('map'), ctx = canvas.getContext('2d');

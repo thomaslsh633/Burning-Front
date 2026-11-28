@@ -153,6 +153,10 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   is research-unlocked; neither is built yet, so those are refused. Weapon upgrades on the
   same blueprint (221 Panzerbüchse 41 and radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.
   Squads reached only by conversion are not produced by buildings.
+- Weapon kits (2026-11-28): a squad buys an upgrade from its CoH3 upgrade list (cost, limit per squad, out of combat, its
+  action); each kit's weapon replaces one model's main weapon (e.g. riflemen BAR: one Garand becomes a BAR). Requirements
+  are CoH3's (research / battlegroup unlocks, or a building of a type): held in `teams[t].unlocks`, which research and
+  doctrines will fill (not built; `?unlock=all` in the greybox for testing). Build time not modelled yet.
 
 ## 8. UI conventions
 - Tile colours: green = move (selected path a little darker, blinking), red = attack range (smoke and grenades too), yellow = buff / heal only,

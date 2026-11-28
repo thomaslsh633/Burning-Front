@@ -6,7 +6,7 @@ import { ev } from '../events/index.js';
 import { exhaust } from '../turn/index.js';
 import { placeWreck } from '../terrain/index.js';
 
-const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Rebuild', 'Retreat', 'Counter'].map(c => [c, reason])) });
+const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Rebuild', 'Upgrade', 'Retreat', 'Counter'].map(c => [c, reason])) });
 
 export const LIFE = defineMachine('life', 'ACTIVE', {
   ACTIVE: {},

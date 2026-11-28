@@ -143,6 +143,16 @@ export const ROUTES = {
       x => turn.spend(x, c.unit, { action: 1 }),
     ]),
   },
+  /** { unit, upgrade }: buy a weapon kit (CoH3 squad upgrade); spends the action. */
+  Upgrade: {
+    unit: true,
+    validate: (s, c, d) => economy.validateUpgrade(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'Upgrade'),
+    apply: (s, c, d) => chain(s, [
+      x => economy.pay(x, x.units[c.unit].team, d.units.upgrade[c.upgrade].cost ?? {}),
+      x => combat.addUpgrade(x, c.unit, c.upgrade),
+      x => turn.spend(x, c.unit, { action: 1 }),
+    ]),
+  },
   EndTurn: {
     apply: (s, c, d, rng) => chain(s, [x => endTurn(x, d, rng), x => startTurn(x, d, rng)]),
   },

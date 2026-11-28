@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — weapon kits, autoplay (2026-11-28)
+- Squads can buy weapon kits (e.g. a BAR for riflemen): one man switches to the new weapon.
+- Automatic 1v1s between all faction pairs run to the end without errors; a free supply truck was found and priced.
+
 ## rewrite — greybox production (2026-11-28)
 - New test map with every tier building per side; tap a building to produce, tap a unit to see its conversions.
 - Brummbär fires every turn at what it sees; Guards (Italy) carry their bazookas.

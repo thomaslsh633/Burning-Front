@@ -114,7 +114,7 @@ export function debugText(state, ui, data) {
       `axes: ${Object.entries(u.fsm).map(([k, v]) => `${k} ${v}`).join(' · ')}`,
       `budget: move ${u.budget.move} action ${u.budget.action} counter ${u.budget.counter}${u.budget.fired ? ' fired' : ''}${u.budget.moved ? ' moved' : ''}`,
       `suppression ${u.suppression} · ammo ${u.ammo} · reload ${u.timers.reload} · xp ${u.xp} rank ${u.rank}${u.engaged ? ' · engaged' : ''}${u.criticals.length ? ` · ${u.criticals.join(', ')}` : ''}`,
-      `members: ${u.members.map(m => m.hp).join(' ')}`);
+      `members: ${u.members.map(m => m.hp).join(' ')}${u.upgrades.length ? ` · upgrades: ${u.upgrades.join(', ')}` : ''}`);
     for (const w of firingWeapons(u, data)) {
       const a = w.weapon.attack;
       L.push(`  ${w.id}: range ${a.range_hex.min ?? 0}–${a.range_hex.max} · shots ${a.shots_per_turn.near}/${a.shots_per_turn.mid}/${a.shots_per_turn.far} · acc ${a.accuracy.near}/${a.accuracy.mid}/${a.accuracy.far} · dmg ${a.damage_per_shot.near} · pen ${w.weapon.penetration.near}/${w.weapon.penetration.far}${w.weapon.indirect ? ` · spread ${w.weapon.indirect.spread_hex ?? 0}` : ''}`);

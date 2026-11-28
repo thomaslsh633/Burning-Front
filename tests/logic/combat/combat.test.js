@@ -138,3 +138,11 @@ test('loadout weapons: a bazooka team\'s first two models fire bazookas, the res
   const one = tweak(state, 'u1', { members: state.units.u1.members.map((m, i) => (i < 3 ? { ...m, hp: 0 } : m)) });
   assert.deepEqual(combat.firingWeapons(one.units.u1, data).map(w => w.id), ['bazooka_bazooka_team_us'], 'the last man picks up the bazooka');
 });
+
+test('addUpgrade writes only the unit\'s upgrades', () => {
+  const { state } = testMatch([blue('riflemen_us', H(2, 2))]);
+  const r = combat.addUpgrade(state, 'u1', 'bar_rifleman_squad_us');
+  assert.deepEqual(r.state.units.u1.upgrades, ['bar_rifleman_squad_us']);
+  assert.equal(r.events[0].type, 'UpgradeFitted');
+  assertOwnsOnly('combat', state, r.state);
+});

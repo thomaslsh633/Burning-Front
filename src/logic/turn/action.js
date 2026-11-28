@@ -10,7 +10,7 @@ import { firingWeapons } from '../combat/index.js';
 export const MOVE_COMMANDS = Object.freeze(['Move', 'Turn']);
 
 /** 'Counter' is the reaction in the enemy turn: every axis may veto it like a command. */
-const SPENT = ['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Rebuild'];
+const SPENT = ['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Hold', 'UseSkill', 'Build', 'Repair', 'Board', 'Recrew', 'Abandon', 'ClearWreck', 'Convert', 'Rebuild', 'Upgrade'];
 
 export const ACTION = defineMachine('action', 'EXHAUSTED', {
   IDLE: {},

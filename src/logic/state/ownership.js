@@ -11,7 +11,7 @@ export const UNIT_FIELD_OWNERS = {
   'fsm.life': 'lifecycle', criticals: 'lifecycle', crew: 'lifecycle', team: 'lifecycle', sbps: 'lifecycle',
   'fsm.visibility': 'vision', 'timers.revealedUntil': 'vision',
   pos: 'movement', facing: 'movement', turretFacing: 'movement',
-  members: 'combat', ammo: 'combat',
+  members: 'combat', ammo: 'combat', upgrades: 'combat',
 };
 
 const isObject = v => v !== null && typeof v === 'object' && !Array.isArray(v);

@@ -76,6 +76,7 @@ export function permits(machines, unit, commandType) { /* → { ok: true } | { o
                                                           // turn's action was lost to crew_shocked
   suppression: 0,                                         // points; morale FSM thresholds come from data
   engaged: false,                                         // attacked in its last own turn (or by counter / overwatch since)
+  upgrades: [],                                           // weapon kits bought (CoH3 squad upgrades): each gives one model its weapon
   criticals: [],                                          // vehicle conditions: engine_damaged, immobilised, main_gun_damaged, crew_shocked
   timers: { stance: 0, smoke: 0, revealedUntil: 0, reload: 0 },   // turns left for timed states (reload: turn)
   overwatch: null,                                        // { weapon, facing, arc_deg } while in OVERWATCH
@@ -233,7 +234,7 @@ Built in D2-7 (`logic/lifecycle/crewing.js`, routes `Recrew`, `Abandon`, `ClearW
 | Visibility FSM | `logic/vision` | `fsm.visibility`, `timers.revealedUntil` | stealth data, sight |
 | Position and facing | `logic/movement` | `pos`, `facing`, `turretFacing` | move points, pass types, terrain costs |
 | Cover (derived) | `logic/vision` | — | terrain, edges, cover tables |
-| Damage, hits, crit rolls | `logic/combat` | `members[].hp`, `ammo` (via events) | weapons, armour, cover |
+| Damage, hits, crit rolls, weapon kits | `logic/combat` | `members[].hp`, `ammo` (via events), `upgrades` | weapons, armour, cover, upgrade kits |
 | Generic machine helper | `logic/fsm` | — | — |
 
 The "Stored in unit" column is also code: `src/logic/state/ownership.js` (`UNIT_FIELD_OWNERS`). Change both together.

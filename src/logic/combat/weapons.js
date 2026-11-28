@@ -32,7 +32,8 @@ export function firingWeapons(unit, data) {
   // their entity's main weapon, keeping their secondary
   const living = unit.members.filter(alive), out = [];
   let i = 0;
-  for (const lw of sq.loadout_weapons || []) {
+  const kits = (unit.upgrades || []).flatMap(id => (data.units.upgrade[id]?.effects || []).filter(e => e.type === 'add_weapon').map(e => ({ weapon: e.weapon, num: 1 })));
+  for (const lw of [...kits, ...(sq.loadout_weapons || [])]) {   // a kit's weapon goes to one model, instead of its main weapon
     for (let k = 0; k < lw.num && i < living.length; k++, i++) {
       const x = usable(lw.weapon);
       if (x) out.push({ ...x, mount: 'hull' });

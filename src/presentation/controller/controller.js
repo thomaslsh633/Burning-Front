@@ -47,6 +47,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
     if (BUTTONS[id] && ui.selected) return send({ type: BUTTONS[id], side, unit: ui.selected });
     if (id.startsWith('produce:') && ui.building) return set({ placing: id.slice(8), message: `${id.slice(8)}: tap a free hex beside the building` });
     if (id.startsWith('convert:') && ui.selected) return send({ type: 'Convert', side, unit: ui.selected, to: id.slice(8) });
+    if (id.startsWith('upgrade:') && ui.selected) return send({ type: 'Upgrade', side, unit: ui.selected, upgrade: id.slice(8) });
     return undefined;
   }
 
@@ -56,10 +57,15 @@ export function createController({ store, data, onUiChange = () => {} }) {
     if (ui.building) return offers(s, data, ui.building).map(id => ({ id: `produce:${id}`, label: `${id} (${cost(priceOf(id, data))})` }));
     const u = s.units[ui.selected];
     if (!u) return [];
-    return data.rules.conversions.conversions.filter(c => c.from === u.sbps).map(c => {
+    const conversions = data.rules.conversions.conversions.filter(c => c.from === u.sbps).map(c => {
       const error = validate(s, { type: 'Convert', side: s.match.side, unit: u.id, to: c.to }, data);
       return { id: `convert:${c.to}`, label: `→ ${c.to} (${cost(conversionOf(data, c.from, c.to).cost)})${error ? ` [${error}]` : ''}`, disabled: !!error };
     });
+    const upgrades = (data.units.sbps[u.sbps].upgrades?.list || []).map(id => {
+      const error = validate(s, { type: 'Upgrade', side: s.match.side, unit: u.id, upgrade: id }, data);
+      return { id: `upgrade:${id}`, label: `+ ${id} (${cost(data.units.upgrade[id]?.cost ?? {})})${error ? ` [${error}]` : ''}`, disabled: !!error };
+    });
+    return [...upgrades, ...conversions];
   }
 
   function zoom(factor) {

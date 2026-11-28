@@ -2,4 +2,4 @@
 export { band, armorFace, penChance, splashFactor, targetMods, hitChance, wholeDamage } from './formulas.js';
 export { firingWeapons, weaponReach } from './weapons.js';
 export { canAttack, volleyModel, previewAttack, resolveAttack, canAttackFeature, resolveFeatureAttack } from './attack.js';
-export { setMembers } from './members.js';
+export { setMembers, addUpgrade } from './members.js';
