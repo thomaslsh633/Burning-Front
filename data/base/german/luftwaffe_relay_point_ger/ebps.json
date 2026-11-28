@@ -1,0 +1,44 @@
+{
+ "buildings": {
+  "luftwaffe_relay_point_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/luftwaffe_relay_point_ger",
+   "tags": [
+    "building",
+    "emplacement_no_teardown",
+    "bunker"
+   ],
+   "hp": 720,
+   "target_size": 26,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 150
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 0.5
+   },
+   "construction": {
+    "build_turns": 3,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

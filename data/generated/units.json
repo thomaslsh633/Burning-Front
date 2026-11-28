@@ -12127,7 +12127,10 @@
        "menu": [
         "sandbag_wall_folgore_ak"
        ]
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "guastatori_ak": {
       "coh3_ref": "sbps/races/afrika_korps/infantry/guastatori_ak",
@@ -26094,6 +26097,166 @@
        "footprint_hex": 1
       }
      },
+     "fighting_position_french_engineering_upgrade_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_french_engineering_upgrade_us",
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 2,
+       "footprint_hex": 1
+      }
+     },
+     "fighting_position_french_old_guard_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_french_old_guard_us",
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 3,
+       "footprint_hex": 1
+      }
+     },
+     "fighting_position_rifleman_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_rifleman_us",
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 3,
+       "footprint_hex": 1
+      }
+     },
+     "fighting_position_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_us",
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 100
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 2,
+       "footprint_hex": 1
+      }
+     },
      "goon_gun_pit_us": {
       "coh3_ref": "ebps/races/american/buildings/defensive/goon_gun_pit_us",
       "tags": [
@@ -28954,7 +29117,10 @@
       },
       "build": {
        "menu": []
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "pathfinder_us": {
       "coh3_ref": "sbps/races/american/infantry/pathfinder_us",
@@ -29845,7 +30011,10 @@
       },
       "supply": {
        "ammo": 24
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "at_gun_57mm_us": {
       "coh3_ref": "sbps/races/american/team_weapons/at_gun_57mm_us",
@@ -29967,7 +30136,10 @@
       },
       "supply": {
        "ammo": 18
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "hmg_30cal_us": {
       "coh3_ref": "sbps/races/american/team_weapons/hmg_30cal_us",
@@ -30241,6 +30413,106 @@
       "supply": {
        "ammo": 45
       }
+     },
+     "fighting_position_french_engineering_upgrade_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_french_engineering_upgrade_us",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "fighting_position_french_engineering_upgrade_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 100
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 2,
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "source": "built"
+     },
+     "fighting_position_french_old_guard_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_french_old_guard_us",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "fighting_position_french_old_guard_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 100
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 3,
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "source": "built"
+     },
+     "fighting_position_rifleman_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_rifleman_us",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "fighting_position_rifleman_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 100
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 3,
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "source": "built"
+     },
+     "fighting_position_us": {
+      "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_us",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "fighting_position_us",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 100
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 2,
+      "tags": [
+       "building",
+       "fighting_position",
+       "emplacement"
+      ],
+      "source": "built"
      },
      "goon_gun_pit_us": {
       "coh3_ref": "sbps/races/american/emplacements/goon_gun_pit_us",
@@ -32425,6 +32697,34 @@
        "anim_class": "infantry"
       }
      },
+     "fighting_position_french_engineering_upgrade_us": {
+      "name": "entity.fighting_position_french_engineering_upgrade_us.name",
+      "model": {
+       "id": "fighting_position_french_engineering_upgrade_us",
+       "anim_class": "static"
+      }
+     },
+     "fighting_position_french_old_guard_us": {
+      "name": "entity.fighting_position_french_old_guard_us.name",
+      "model": {
+       "id": "fighting_position_french_old_guard_us",
+       "anim_class": "static"
+      }
+     },
+     "fighting_position_rifleman_us": {
+      "name": "entity.fighting_position_rifleman_us.name",
+      "model": {
+       "id": "fighting_position_rifleman_us",
+       "anim_class": "static"
+      }
+     },
+     "fighting_position_us": {
+      "name": "entity.fighting_position_us.name",
+      "model": {
+       "id": "fighting_position_us",
+       "anim_class": "static"
+      }
+     },
      "french_infantry_us": {
       "name": "entity.french_infantry_us.name",
       "model": {
@@ -33029,6 +33329,46 @@
       "icon": "engineer_us",
       "menu": {
        "tab": "infantry",
+       "order": 0
+      }
+     },
+     "fighting_position_french_engineering_upgrade_us": {
+      "name": "unit.fighting_position_french_engineering_upgrade_us.name",
+      "short_name": "unit.fighting_position_french_engineering_upgrade_us.short",
+      "desc": "unit.fighting_position_french_engineering_upgrade_us.desc",
+      "icon": "fighting_position_french_engineering_upgrade_us",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "fighting_position_french_old_guard_us": {
+      "name": "unit.fighting_position_french_old_guard_us.name",
+      "short_name": "unit.fighting_position_french_old_guard_us.short",
+      "desc": "unit.fighting_position_french_old_guard_us.desc",
+      "icon": "fighting_position_french_old_guard_us",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "fighting_position_rifleman_us": {
+      "name": "unit.fighting_position_rifleman_us.name",
+      "short_name": "unit.fighting_position_rifleman_us.short",
+      "desc": "unit.fighting_position_rifleman_us.desc",
+      "icon": "fighting_position_rifleman_us",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "fighting_position_us": {
+      "name": "unit.fighting_position_us.name",
+      "short_name": "unit.fighting_position_us.short",
+      "desc": "unit.fighting_position_us.desc",
+      "icon": "fighting_position_us",
+      "menu": {
+       "tab": "emplacements",
        "order": 0
       }
      },
@@ -51213,7 +51553,10 @@
       },
       "supply": {
        "ammo": 15
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "pack_howitzer_75mm_uk": {
       "coh3_ref": "sbps/races/british/team_weapons/pack_howitzer_75mm_uk",
@@ -51272,7 +51615,10 @@
       },
       "supply": {
        "ammo": 15
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      }
     },
     "emplacements": {
@@ -51835,7 +52181,10 @@
        "menu": [
         "demo_charge_commando_uk"
        ]
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "commando_lmg_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/infantry/commando_lmg_africa_uk",
@@ -51885,6 +52234,9 @@
       "build": {
        "menu": []
       },
+      "traits": [
+       "paradrop"
+      ],
       "loadout_weapons": [
        {
         "weapon": "vickers_k_lmg_uk",
@@ -65220,6 +65572,128 @@
        "footprint_hex": 1
       }
      },
+     "bunker_command_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/bunker_command_ger",
+      "tags": [
+       "building",
+       "bunker",
+       "emplacement_no_teardown"
+      ],
+      "hp": 840,
+      "target_size": 20,
+      "armor": {
+       "front": 35,
+       "side": 35,
+       "rear": 35
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 250,
+       "fuel": 25
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 4,
+       "footprint_hex": 1
+      }
+     },
+     "bunker_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/bunker_ger",
+      "tags": [
+       "building",
+       "bunker",
+       "emplacement_no_teardown"
+      ],
+      "hp": 720,
+      "target_size": 20,
+      "armor": {
+       "front": 35,
+       "side": 35,
+       "rear": 35
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 175
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 4,
+       "footprint_hex": 1
+      }
+     },
+     "fighting_nest_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/fighting_nest_ger",
+      "tags": [
+       "building",
+       "cover_object",
+       "emplacement",
+       "unbreachable"
+      ],
+      "hp": 640,
+      "target_size": 20,
+      "armor": {
+       "front": 15,
+       "side": 15,
+       "rear": 15
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 50
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
+      "construction": {
+       "build_turns": 2,
+       "footprint_hex": 1
+      }
+     },
      "hmg_bunker_ger": {
       "coh3_ref": "ebps/races/german/buildings/defensive/hmg_bunker_ger",
       "tags": [
@@ -65264,6 +65738,46 @@
       },
       "construction": {
        "build_turns": 4,
+       "footprint_hex": 1
+      }
+     },
+     "luftwaffe_relay_point_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/luftwaffe_relay_point_ger",
+      "tags": [
+       "building",
+       "emplacement_no_teardown",
+       "bunker"
+      ],
+      "hp": 720,
+      "target_size": 26,
+      "armor": {
+       "front": 35,
+       "side": 35,
+       "rear": 35
+      },
+      "resist": {
+       "ballistic": 1,
+       "explosive": 1,
+       "flame": 1,
+       "true": 1
+      },
+      "cost": {
+       "manpower": 150
+      },
+      "traits": [
+       "repairable"
+      ],
+      "sight": {
+       "hex": 1,
+       "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
+      },
+      "construction": {
+       "build_turns": 3,
        "footprint_hex": 1
       }
      },
@@ -67708,6 +68222,83 @@
        "ammo": 45
       }
      },
+     "bunker_command_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/bunker_command_ger",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "bunker_command_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 250,
+        "fuel": 25
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 4,
+      "tags": [
+       "building",
+       "bunker",
+       "emplacement_no_teardown"
+      ],
+      "source": "built"
+     },
+     "bunker_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/bunker_ger",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "bunker_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 175
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 4,
+      "tags": [
+       "building",
+       "bunker",
+       "emplacement_no_teardown"
+      ],
+      "source": "built"
+     },
+     "fighting_nest_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/fighting_nest_ger",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "fighting_nest_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 50
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 2,
+      "tags": [
+       "building",
+       "cover_object",
+       "emplacement",
+       "unbreachable"
+      ],
+      "source": "built"
+     },
      "hmg_mg42_bunker_ger": {
       "coh3_ref": "sbps/races/german/emplacements/hmg_mg42_bunker_ger",
       "kind": "structure",
@@ -67776,6 +68367,31 @@
       "supply": {
        "ammo": 12
       }
+     },
+     "luftwaffe_relay_point_ger": {
+      "coh3_ref": "ebps/races/german/buildings/defensive/luftwaffe_relay_point_ger",
+      "kind": "structure",
+      "role": "all_round",
+      "members": [
+       {
+        "entity": "luftwaffe_relay_point_ger",
+        "count": 1
+       }
+      ],
+      "price": {
+       "cost": {
+        "manpower": 150
+       },
+       "from": "entities"
+      },
+      "pop": 0,
+      "build_turns": 3,
+      "tags": [
+       "building",
+       "emplacement_no_teardown",
+       "bunker"
+      ],
+      "source": "built"
      },
      "mortar_bunker_autobuild_ger": {
       "coh3_ref": "sbps/races/german/emplacements/mortar_bunker_autobuild_ger",
@@ -70354,7 +70970,10 @@
       },
       "supply": {
        "ammo": 30
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "fallschirmpioneers_ger": {
       "coh3_ref": "sbps/races/german/infantry/fallschirmpioneers_ger",
@@ -70429,7 +71048,10 @@
         "fighting_nest_ger",
         "observation_post_ger"
        ]
-      }
+      },
+      "traits": [
+       "paradrop"
+      ]
      },
      "grenadier_ger": {
       "coh3_ref": "sbps/races/german/infantry/grenadier_ger",
@@ -72950,6 +73572,20 @@
        "anim_class": "tank_medium"
       }
      },
+     "bunker_command_ger": {
+      "name": "entity.bunker_command_ger.name",
+      "model": {
+       "id": "bunker_command_ger",
+       "anim_class": "static"
+      }
+     },
+     "bunker_ger": {
+      "name": "entity.bunker_ger.name",
+      "model": {
+       "id": "bunker_ger",
+       "anim_class": "static"
+      }
+     },
      "coastal_officer_ger": {
       "name": "entity.coastal_officer_ger.name",
       "model": {
@@ -72983,6 +73619,13 @@
       "model": {
        "id": "fallschirmpioneers_ger",
        "anim_class": "infantry"
+      }
+     },
+     "fighting_nest_ger": {
+      "name": "entity.fighting_nest_ger.name",
+      "model": {
+       "id": "fighting_nest_ger",
+       "anim_class": "static"
       }
      },
      "guastatori_ger": {
@@ -73109,6 +73752,13 @@
       "model": {
        "id": "crew_leig_ger",
        "anim_class": "infantry"
+      }
+     },
+     "luftwaffe_relay_point_ger": {
+      "name": "entity.luftwaffe_relay_point_ger.name",
+      "model": {
+       "id": "luftwaffe_relay_point_ger",
+       "anim_class": "static"
       }
      },
      "marder_iii_ger": {
@@ -73494,6 +74144,26 @@
        "order": 0
       }
      },
+     "bunker_command_ger": {
+      "name": "unit.bunker_command_ger.name",
+      "short_name": "unit.bunker_command_ger.short",
+      "desc": "unit.bunker_command_ger.desc",
+      "icon": "bunker_command_ger",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
+     "bunker_ger": {
+      "name": "unit.bunker_ger.name",
+      "short_name": "unit.bunker_ger.short",
+      "desc": "unit.bunker_ger.desc",
+      "icon": "bunker_ger",
+      "menu": {
+       "tab": "emplacements",
+       "order": 0
+      }
+     },
      "coastal_officer_ger": {
       "name": "unit.coastal_officer_ger.name",
       "short_name": "unit.coastal_officer_ger.short",
@@ -73531,6 +74201,16 @@
       "icon": "fallschirmpioneers_ger",
       "menu": {
        "tab": "infantry",
+       "order": 0
+      }
+     },
+     "fighting_nest_ger": {
+      "name": "unit.fighting_nest_ger.name",
+      "short_name": "unit.fighting_nest_ger.short",
+      "desc": "unit.fighting_nest_ger.desc",
+      "icon": "fighting_nest_ger",
+      "menu": {
+       "tab": "emplacements",
        "order": 0
       }
      },
@@ -73691,6 +74371,16 @@
       "icon": "leig_75mm_ger",
       "menu": {
        "tab": "team_weapons",
+       "order": 0
+      }
+     },
+     "luftwaffe_relay_point_ger": {
+      "name": "unit.luftwaffe_relay_point_ger.name",
+      "short_name": "unit.luftwaffe_relay_point_ger.short",
+      "desc": "unit.luftwaffe_relay_point_ger.desc",
+      "icon": "luftwaffe_relay_point_ger",
+      "menu": {
+       "tab": "emplacements",
        "order": 0
       }
      },

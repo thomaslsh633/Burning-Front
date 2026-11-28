@@ -1,6 +1,6 @@
 // Location axis (docs/unit-state.md §5.3): ON_MAP, GARRISONED (inside a building), LOADED (inside a transport or a fortified
 // position). Owns fsm.location and container. Capacity counts squads: an infantry squad takes 1 slot, a carried heavy weapon
-// team (HMG, mortar) 2 (2026-11-28); towed guns and vehicles never go inside. Buildings hold their `garrison` slots
+// team (HMG, mortar) 1 as well (2026-11-28); towed guns and vehicles never go inside. Buildings hold their `garrison` slots
 // (data/rules/terrain.json) and take squads and MG teams (SPEC §5); a unit with a `hold` (CoH3 hold_ext: transports,
 // bunkers, fighting positions) holds its `slots` and takes heavy weapon teams only when `heavy_weapons`.
 import { defineMachine, transition } from '../fsm/index.js';
@@ -10,7 +10,7 @@ import { distance, fromKey, neighbours, inside } from '../hex/index.js';
 import { mapOf, structureAt, isCollapsed } from '../terrain/index.js';
 import { stepCost, moveClass } from '../movement/index.js';
 
-const INSIDE = ['Move', 'Turn', 'Emplace', 'Pack', 'Hold', 'Board', 'Garrison', 'Retreat', 'Recrew', 'Abandon', 'ClearWreck', 'Rebuild', 'Convert', 'Upgrade'];
+const INSIDE = ['Move', 'Turn', 'Emplace', 'Pack', 'Hold', 'Board', 'Garrison', 'Retreat', 'Recrew', 'Abandon', 'ClearWreck', 'Rebuild', 'Build', 'Convert', 'Upgrade'];
 export const LOCATION = defineMachine('location', 'ON_MAP', {
   ON_MAP: { denies: { Exit: 'not_inside' } },
   GARRISONED: { denies: Object.fromEntries([...INSIDE.filter(c => !['Emplace', 'Pack'].includes(c)), 'Unload'].map(c => [c, 'garrisoned'])) },   // fires out, MGs set up, exits
@@ -24,7 +24,7 @@ const holdOf = (unit, data) => data.units.ebps[unit.members[0]?.ebps]?.hold ?? n
 export function slotsOf(unit, data) {
   if (unit.kind === 'squad') return 1;
   const tw = data.units.sbps[unit.sbps].team_weapon;
-  return unit.kind === 'team_weapon' && tw?.weapon && !tw.weapon_entity ? 2 : null;
+  return unit.kind === 'team_weapon' && tw?.weapon && !tw.weapon_entity ? 1 : null;   // a carried (small) team weapon: one slot
 }
 const isMgTeam = (unit, data) => data.units.weapon[data.units.sbps[unit.sbps].team_weapon?.weapon]?.class === 'hmg';
 

@@ -50,6 +50,12 @@ export function importFaction(faction, squadIds) {
     if (direct && !out.some(x => x.id === direct)) out.push({ id: direct, type: 'default' });
     return out;
   };
+  // squads a CoH3 paradrop call-in drops: the call-in's icon names the squad; roster.paradrop lists those whose icon does not
+  const paradrops = new Set(roster.paradrop || []);
+  for (const race of races) {
+    const walk = o => { if (!o || typeof o !== 'object') return; if (o.ability_bag) { if (o.ability_bag.global_tree === 'flight_system_paradrop') paradrops.add(last(o.ability_bag.ui_info?.icon_name ?? '')); return; } Object.values(o).forEach(walk); };
+    walk(JSON.parse(fs.readFileSync(path.join(dir, 'abilities', `${race}.json`), 'utf8')));
+  }
   const rosterUnits = buildRoster(src, roster, races);
   const catUnits = Object.fromEntries(races.flatMap(r => rosterUnits[r].units.map(u => [u.id, u])));
 
@@ -106,6 +112,7 @@ export function importFaction(faction, squadIds) {
     const loadout = listed.filter(w => !onEntities.has(w.id) && w.id !== mainWeapon && !/dummy/.test(w.id) && weapons.get(w.id));
     for (const w of loadout) addWeapon(w.id);
     const granted = loadout.filter(w => Object.values(files.weapon).some(c => w.id in c)).map(w => ({ weapon: w.id, num: w.num ?? 1 }));
+    if (paradrops.has(id)) record.traits = [...new Set([...(record.traits || []), 'paradrop'])];
     if (granted.length) { record.loadout_weapons = granted; notes.push(`loadout weapons from coh3stats: ${granted.map(w => `${w.weapon} ×${w.num}`).join(', ')}`); }
     put('sbps', category, id, record);
     files.fx.sbps[id] = { name: `unit.${id}.name`, short_name: `unit.${id}.short`, desc: `unit.${id}.desc`, icon: id, menu: { tab: category, order: 0 } };
@@ -133,6 +140,19 @@ export function importFaction(faction, squadIds) {
       record.upgrades.list = imported;
       if (pending.length) record.upgrades.pending = pending;
     }
+  }
+  // fortified positions the squads build that CoH3 has no squad for (fighting positions, bunkers): a one-entity structure
+  const isMember = id => Object.values(files.sbps).some(c => Object.values(c).some(sq => sq.members.some(m => m.entity === id)));
+  for (const id of new Set(Object.values(files.sbps).flatMap(c => Object.values(c).flatMap(sq => sq.build?.menu || [])))) {
+    const hold = EXT(ebps.get(id)?.rec, 'hold_ext');
+    if (!((hold?.num_slots ?? 0) >= 1000 && hold.num_squad_slots > 0) || isMember(id)) continue;
+    addEntity(id);
+    const ent = Object.values(files.ebps).map(c => c[id]).find(Boolean);
+    if (!ent) continue;
+    put('sbps', 'emplacements', id, { coh3_ref: ebps.get(id).ref, kind: 'structure', role: 'all_round', members: [{ entity: id, count: 1 }],
+      price: { cost: ent.cost ?? {}, from: 'entities' }, pop: 0, build_turns: ent.construction?.build_turns ?? 1, ...(ent.tags ? { tags: ent.tags } : {}), source: 'built' });
+    files.fx.sbps[id] = { name: `unit.${id}.name`, short_name: `unit.${id}.short`, desc: `unit.${id}.desc`, icon: id, menu: { tab: 'emplacements', order: 0 } };
+    report.push({ id, kind: 'squad · emplacements', notes: ['fortified position: no CoH3 squad; made from its entity (cost, build time, hold)'] });
   }
   dropBroken(files, profiles, report);
   // defensive structures the faction builds (sandbags, wire, tank traps): HP and armour for map lines and objects

@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "luftwaffe_relay_point_ger": {
+   "name": "entity.luftwaffe_relay_point_ger.name",
+   "model": {
+    "id": "luftwaffe_relay_point_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "luftwaffe_relay_point_ger": {
+   "name": "unit.luftwaffe_relay_point_ger.name",
+   "short_name": "unit.luftwaffe_relay_point_ger.short",
+   "desc": "unit.luftwaffe_relay_point_ger.desc",
+   "icon": "luftwaffe_relay_point_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

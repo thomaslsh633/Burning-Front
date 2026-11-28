@@ -5,14 +5,14 @@
 ## Owns
 - who may build what, where, at what price (the map change itself is `logic/terrain`'s)
 - rebuilding a destroyed HQ on its footprint (one HQ per side at a time) — done
-- footprints and overlap, build range, site HP and build progress of new structures — later
+- building the unit-structures on a squad's build menu (fighting positions, bunkers, emplacements): where, price, site HP,
+  `timers.build` (work turns left) — done; walls, wire, mines and multi-hex footprints — later
 
-Engineer construction of new structures waits for the build-menu entities (stage G import) and runtime-placed lines /
-structures in `logic/terrain`.
+Walls, wire and mines wait for runtime-placed lines / objects in `logic/terrain`.
 
 ## Public API (exported from `index.js`)
 - `rebuildOf`, `validateRebuild`, `rebuildCost` (route `Rebuild`: pay, `terrain.rebuildStructure`, the action) — done
-- `canBuild`, `placeStructure`, `buildProgress` — planned
+- `buildable`, `validateBuild`, `startSite`, `work`, `isBuilt`, `siteMembers` (route `Build`) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

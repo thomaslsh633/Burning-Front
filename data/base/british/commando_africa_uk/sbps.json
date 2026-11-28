@@ -50,7 +50,10 @@
     "menu": [
      "demo_charge_commando_uk"
     ]
-   }
+   },
+   "traits": [
+    "paradrop"
+   ]
   }
  }
 }

@@ -168,6 +168,27 @@ export const ROUTES = {
       x => turn.spend(x, c.unit, { action: 1 }),
     ]),
   },
+  /** { unit, sbps, hex }: place a structure site (paid); { unit, site }: one more turn of work. Built → ACTIVE at full HP. */
+  Build: {
+    unit: true,
+    validate: (s, c, d) => build.validateBuild(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'Build'),
+    apply(s, c, d) {
+      const u = s.units[c.unit];
+      let site = c.site, events = [];
+      if (!site) {
+        const born = spawnUnit(economy.pay(s, u.team, economy.priceOf(c.sbps, d)).state, { team: u.team, sbps: c.sbps, pos: c.hex, facing: u.facing }, d);
+        site = born.id;
+        const placed = chain(born.state, [x => lifecycle.startConstruction(x, site), x => combat.setMembers(x, site, build.siteMembers(x.units[site], d, false)),
+          x => build.startSite(x, site, d)]);
+        s = placed.state; events = [ev('UnitCreated', { unit: site, from: c.unit }), ...placed.events];
+      } else s = build.work(s, site).state;
+      const out = chain(s, [
+        x => (build.isBuilt(x, site) ? chain(x, [y => combat.setMembers(y, site, build.siteMembers(y.units[site], d, true)), y => lifecycle.finishConstruction(y, site)]) : { state: x, events: [] }),
+        x => turn.spend(x, c.unit, { action: 1 }),
+      ]);
+      return { state: out.state, events: [...events, ...out.events] };
+    },
+  },
   /** { unit, building } / { unit, vehicle }: go inside a building or an own transport / position; ends the move. */
   Garrison: enterRoute('building'),
   Board: enterRoute('vehicle'),

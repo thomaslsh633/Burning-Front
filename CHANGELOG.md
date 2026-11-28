@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — fortified positions, paradrop (2026-11-28)
+- Engineers build fighting positions, bunkers and emplacements from their CoH3 build menu; sites take turns and can be shot.
+- Paratroopers, Fallschirmjäger, Folgore and commandos drop anywhere on the map; an HMG or mortar team takes one slot.
+
 ## rewrite — garrisons and transports (2026-11-28)
 - Squads and MG teams garrison houses; squads and heavy weapon teams ride half-tracks, trucks and other CoH3 transports.
 - Passengers move with the vehicle and get out beside it; a destroyed transport loses half of each squad inside.

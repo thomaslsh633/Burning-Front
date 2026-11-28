@@ -11,6 +11,7 @@ const NOTHING = reason => ({ allows: [], denies: Object.fromEntries(['Move', 'Tu
 export const LIFE = defineMachine('life', 'ACTIVE', {
   ACTIVE: {},
   DECREWED: NOTHING('decrewed'),   // team weapons only: vehicles are never abandoned or captured (2026-11-26)
+  CONSTRUCTING: NOTHING('under_construction'),   // a structure site: can be shot, does nothing until built (logic/build)
 });
 
 const alive = m => m.hp > 0;
@@ -41,6 +42,7 @@ export function checkDeaths(state, unitId, data) {
   const u = state.units[unitId];
   if (!u) return { state, events: [] };
   if (u.fsm.life === 'DECREWED') return u.members.some(alive) ? { state, events: [] } : remove(state, data, unitId, wreckKind(u));   // a crewless gun shot to pieces (CoH3)
+  if (u.fsm.life === 'CONSTRUCTING') return u.members.some(alive) ? { state, events: [] } : remove(state, data, unitId, null);   // an unfinished site leaves nothing
   if (u.fsm.life !== 'ACTIVE') return { state, events: [] };
   const tw = data.units.sbps[u.sbps].team_weapon;
   const living = u.members.filter(alive);
@@ -64,6 +66,18 @@ export function killGarrison(state, data, unitIds) {
     s = r.state; events.push(...r.events);
   }
   return { state: s, events };
+}
+
+/** A structure placed by a builder becomes a site (it keeps its team). */
+export function startConstruction(state, unitId) {
+  const t = transition(LIFE, state.units[unitId], 'CONSTRUCTING');
+  return { state: putUnit(state, t.unit), events: [ev('ConstructionStarted', { unit: unitId }), ...t.events] };
+}
+
+/** The site's work is done: the structure is ACTIVE from its side's next turn. */
+export function finishConstruction(state, unitId) {
+  const t = transition(LIFE, state.units[unitId], 'ACTIVE');
+  return { state: putUnit(state, t.unit), events: [ev('ConstructionFinished', { unit: unitId }), ...t.events] };
 }
 
 /** Own turn end: a crew shock that cost this turn's action is over (docs/unit-state.md §5.5). */

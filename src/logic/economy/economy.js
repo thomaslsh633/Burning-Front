@@ -1,9 +1,9 @@
 // Resources, income, upkeep and unit production (SPEC §3, §10). Owns GameState.teams[team].resources.
 // Tuning: data/balance/economy.json; what each production building offers: data/rules/production.json.
 import { ev } from '../events/index.js';
-import { distance, fromKey } from '../hex/index.js';
+import { distance, fromKey, inside } from '../hex/index.js';
 import { unitAt } from '../state/index.js';
-import { mapOf, isCollapsed, hqDestroyed } from '../terrain/index.js';
+import { mapOf, isCollapsed, hqDestroyed, hexAt, structureAt } from '../terrain/index.js';
 import { stepCost, moveClass } from '../movement/index.js';
 import { suppliedPoints } from '../capture/index.js';
 
@@ -115,8 +115,18 @@ export function offers(state, data, buildingId) {
 }
 
 /**
+ * Paradrop (CoH3 call-ins that fly the squad in, `can_target_in_fow`): anywhere on the map, on a free hex the unit can stand on
+ * (no building, no impassable ground). → reason or null
+ */
+function dropHex(state, data, hex, cls) {
+  const t = hex && inside(hex, state.map.cols, state.map.rows) && hexAt(state, data, hex);
+  if (!t || t.oob || structureAt(state, data, hex) || (t.feature?.cost?.[cls] ?? t.ground.cost[cls]) == null) return 'bad_hex';
+  return unitAt(state, hex) ? 'hex_occupied' : null;
+}
+
+/**
  * Produce command: { side, building, sbps, hex }. An own production building that offers the squad, its price in hand, and
- * a free hex next to the building that the unit can enter (v214: deploy beside the building). → reason or null
+ * a free hex next to the building that the unit can enter (v214: deploy beside the building); a paradrop squad anywhere. → reason or null
  */
 export function validateProduce(state, cmd, data) {
   const b = producers(state, data).find(x => x.id === cmd.building);
@@ -125,6 +135,7 @@ export function validateProduce(state, cmd, data) {
   if (!canAfford(state, cmd.side, priceOf(cmd.sbps, data))) return 'cannot_afford';
   if (population(state, data, cmd.side) + (data.units.sbps[cmd.sbps].pop ?? 0) > data.balance.economy.population_cap) return 'population_cap';
   const cls = moveClass({ members: data.units.sbps[cmd.sbps].members.map(m => ({ ebps: m.entity })) }, data);
+  if ((data.units.sbps[cmd.sbps].traits || []).includes('paradrop')) return dropHex(state, data, cmd.hex, cls ?? 'infantry');
   const beside = b.hexes.map(fromKey).find(h => cmd.hex && distance(h, cmd.hex) === 1 && stepCost(state, data, h, cmd.hex, cls ?? 'infantry') != null);
   if (!beside || b.hexes.includes(`${cmd.hex.c},${cmd.hex.r}`)) return 'bad_hex';
   return unitAt(state, cmd.hex) ? 'hex_occupied' : null;

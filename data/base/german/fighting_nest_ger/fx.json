@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "fighting_nest_ger": {
+   "name": "entity.fighting_nest_ger.name",
+   "model": {
+    "id": "fighting_nest_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "fighting_nest_ger": {
+   "name": "unit.fighting_nest_ger.name",
+   "short_name": "unit.fighting_nest_ger.short",
+   "desc": "unit.fighting_nest_ger.desc",
+   "icon": "fighting_nest_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

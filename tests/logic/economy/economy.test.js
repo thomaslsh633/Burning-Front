@@ -86,3 +86,15 @@ test('a destroyed HQ pays no base income and produces nothing; a destroyed produ
   assert.deepEqual(economy.producers(down, data).filter(b => b.team === 'blue'), []);
   assert.equal(economy.validateProduce(down, { side: 'blue', building: 'bx', sbps: 'riflemen_us', hex: H(1, 2) }, data), 'no_such_building');
 });
+
+test('paradrop: a squad CoH3 flies in lands on any free hex the unit can stand on', () => {
+  const map = { ...MAP, production: [...MAP.production, { id: 'rt1', type: 't1', team: 'red', hexes: ['9,1'] }] };
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(3, 2) }], map);
+  const s = { ...state, match: { ...state.match, side: 'red' } };
+  assert.ok(economy.offers(s, data, 'rt1').includes('fallschirmjagers_ger'));
+  const cmd = hex => ({ side: 'red', building: 'rt1', sbps: 'fallschirmjagers_ger', hex });
+  assert.equal(economy.validateProduce(s, cmd(H(2, 7)), data), null, 'far from the building');
+  assert.equal(economy.validateProduce(s, cmd(H(3, 2)), data), 'hex_occupied');
+  assert.equal(economy.validateProduce(s, cmd(H(20, 2)), data), 'bad_hex', 'off the map');
+  assert.equal(economy.validateProduce(s, { ...cmd(H(5, 1)), sbps: 'grenadier_ger' }, data), 'bad_hex', 'a squad that walks deploys beside the building');
+});

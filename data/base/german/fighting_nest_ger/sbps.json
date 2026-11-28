@@ -1,0 +1,30 @@
+{
+ "emplacements": {
+  "fighting_nest_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/fighting_nest_ger",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "fighting_nest_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 50
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "build_turns": 2,
+   "tags": [
+    "building",
+    "cover_object",
+    "emplacement",
+    "unbreachable"
+   ],
+   "source": "built"
+  }
+ }
+}

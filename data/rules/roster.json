@@ -85,6 +85,7 @@
       "torch_artillery_obice_210_ger"
     ]
   },
+  "paradrop": ["folgore_paratroopers_ak", "commando_africa_uk", "commando_lmg_africa_uk", "pack_howitzer_75mm_uk"],
   "loadout": {
     "guards_uk": [
       {

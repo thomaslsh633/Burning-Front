@@ -60,7 +60,10 @@
     "menu": [
      "sandbag_wall_folgore_ak"
     ]
-   }
+   },
+   "traits": [
+    "paradrop"
+   ]
   }
  }
 }

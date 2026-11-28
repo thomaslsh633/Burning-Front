@@ -225,7 +225,8 @@
     "state_life": [
       "ACTIVE",
       "DECREWED",
-      "WRECKED"
+      "WRECKED",
+      "CONSTRUCTING"
     ],
     "state_visibility": [
       "REVEALED",

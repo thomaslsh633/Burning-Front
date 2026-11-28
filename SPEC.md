@@ -77,10 +77,18 @@ move a line up when it ships. Section 11 lists places where the code differs fro
   Kompanie, T3 Panzer Armory · DAK T1 Infanterie Support, T2 Mechanized Kompanie, T3A Heavy Weapon Kompanie, T3B Panzer
   Kompanie · British T1 Barracks, T2 Motor Platoon, T3 Armoured Platoon. The unit is paid at once, stands on a free hex
   beside the building and acts from the next own turn. Population cap 300 per side (sum of squad pop).
+- Paradrop (2026-11-28): squads a CoH3 paradrop call-in flies in (paratroopers, Fallschirmjäger, Folgore, commandos, the
+  airborne HMG / 57 mm / pack howitzer; trait `paradrop`) are produced like the rest but land on any free hex of the map
+  they can stand on (CoH3 `can_target_in_fow`), not beside the building.
 - No reinforcing while engaged (v158).
 - Buildings at CoH3 prices; T1 builds in 1 turn, T2 / T3 in 2 with an engineer-type unit within 2 hexes; a site starts at 50 % HP and produces nothing (v140, v212).
 - Build range: engineers build everything (trench, sandbag, mine, bunker, building, emplacement) 1–2 hexes away, never on their own hex;
   a footprint may not include the engineer's hex; no overlap with buildings, units, emplacements, bunkers or points (v151, v212).
+- Fortified positions (2026-11-28, `logic/build`): a squad builds the unit-structures on its CoH3 build menu (fighting
+  positions, bunkers, gun pits, emplacements) with Build: paid at once, 1–2 hexes away on open ground (no unit, building or
+  point), its action. The site starts at 50 % HP, can be shot and does nothing; each later Build on it by a squad that
+  could build it is one more turn of work; after the CoH3 build turns it is finished at full HP (damage kept) and a hold
+  for garrisons (a squad or a small team weapon). A site shot to nothing leaves no wreck. Walls, wire and mines: not built yet.
 - CP milestones: CP2 field fortification (build −15 %), CP5 heavy tanks. The CP3 "2 counters" research is gone; every unit counters once per turn (v212).
 - Prices: 105 mm howitzer 320 MP / 60 fuel, 150 mm sFH 18 340 / 60 (v212).
 
@@ -315,7 +323,7 @@ Confirmed 2026-11-25 (rewrite):
   onto a free neighbouring hex as its own unit, the gun stays decrewed. A crew whose gun is gone fights with its small arms
   and may recrew. Recrew takes any squad on foot, whatever its size (2026-11-28: capacity counts squads, not men).
 - Garrisons and transports (2026-11-28, `logic/transport`): capacity counts squads, an infantry squad takes 1 slot, a carried
-  heavy weapon team (HMG, mortar) 2; towed guns and vehicles never go inside. Garrison / Board: from a hex next to the
+  (small) team weapon (HMG, mortar) 1 as well; towed guns and vehicles never go inside. Garrison / Board: from a hex next to the
   building or own transport, ends the unit's move. A building holds its `garrison` slots (data/rules/terrain.json), takes
   squads and MG teams (an MG may set up inside), never units of both sides; garrisoned units fire all round with garrison
   cover and can be shot. A transport holds its CoH3 hold slots (heavy weapon teams only if CoH3 accepts them); passengers

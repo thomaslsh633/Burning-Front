@@ -7,6 +7,7 @@ import { previewAttack } from '../../logic/combat/index.js';
 import { unitAt } from '../../logic/state/index.js';
 import { producers, offers, priceOf, conversionOf } from '../../logic/economy/index.js';
 import { passengers } from '../../logic/transport/index.js';
+import { buildable } from '../../logic/build/index.js';
 import { mapOf } from '../../logic/terrain/index.js';
 
 const BUTTONS = { emplace: 'Emplace', pack: 'Pack', hold: 'Hold', retreat: 'Retreat', exit: 'Exit', unload: 'Unload' };
@@ -26,7 +27,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
 
   function tapHex({ c, r }) {
     const s = store.getState(), side = s.match.side, hex = { c, r }, here = occupant(s, hex), sel = s.units[ui.selected];
-    if (ui.placing) return send({ type: 'Produce', side, building: ui.building, sbps: ui.placing, hex });
+    if (ui.placing) return send(ui.building ? { type: 'Produce', side, building: ui.building, sbps: ui.placing, hex } : { type: 'Build', side, unit: ui.selected, sbps: ui.placing, hex });
     const building = producers(s, data).find(b => b.team === side && b.hexes.includes(`${c},${r}`));
     if (building) return set({ selected: null, building: building.id, preview: null, message: null });
     if (here && here.team === side) return set({ selected: here.id, building: null, preview: null, message: null });
@@ -50,7 +51,12 @@ export function createController({ store, data, onUiChange = () => {} }) {
     if (id === 'zoomIn' || id === 'zoomOut') return zoom(id === 'zoomIn' ? 1.25 : 0.8);
     if (id === 'end') { set({ selected: null, building: null }); return send(s.match.side == null ? { type: 'StartMatch', side: null } : { type: 'EndTurn', side }); }
     if (BUTTONS[id] && ui.selected) return send({ type: BUTTONS[id], side, unit: ui.selected });
-    if (id.startsWith('produce:') && ui.building) return set({ placing: id.slice(8), message: `${id.slice(8)}: tap a free hex beside the building` });
+    if (id.startsWith('produce:') && ui.building) {
+      const drop = (data.units.sbps[id.slice(8)].traits || []).includes('paradrop');
+      return set({ placing: id.slice(8), message: `${id.slice(8)}: tap ${drop ? 'any free hex (paradrop)' : 'a free hex beside the building'}` });
+    }
+    if (id.startsWith('build:') && ui.selected) return set({ placing: id.slice(6), message: `${id.slice(6)}: tap a free hex 1–2 away` });
+    if (id.startsWith('work:') && ui.selected) return send({ type: 'Build', side, unit: ui.selected, site: id.slice(5) });
     if (id.startsWith('convert:') && ui.selected) return send({ type: 'Convert', side, unit: ui.selected, to: id.slice(8) });
     if (id.startsWith('upgrade:') && ui.selected) return send({ type: 'Upgrade', side, unit: ui.selected, upgrade: id.slice(8) });
     if (id.startsWith('garrison:') && ui.selected) return send({ type: 'Garrison', side, unit: ui.selected, building: id.slice(9) });
@@ -78,7 +84,10 @@ export function createController({ store, data, onUiChange = () => {} }) {
       .map(([type, , id]) => ({ id: `${type.toLowerCase()}:${id}`, label: `${type} ${id}` }));
     const inside = u.container ? [{ id: 'exit', label: `Exit ${u.container} (or tap a hex beside it)` }] : [];
     const carried = passengers(s, u.id).length ? [{ id: 'unload', label: `Unload (${passengers(s, u.id).map(p => p.id).join(', ')})` }] : [];
-    return [...enter, ...inside, ...carried, ...upgrades, ...conversions];
+    const builds = buildable(u, data).map(id => ({ id: `build:${id}`, label: `Build ${id} (${cost(priceOf(id, data))}, ${data.units.sbps[id].build_turns ?? 1} turns)` }));
+    const sites = Object.values(s.units).filter(x => x.fsm.life === 'CONSTRUCTING' && !validate(s, { type: 'Build', side: s.match.side, unit: u.id, site: x.id }, data))
+      .map(x => ({ id: `work:${x.id}`, label: `Work on ${x.id} ${x.sbps} (${x.timers.build} left)` }));
+    return [...enter, ...inside, ...carried, ...sites, ...builds, ...upgrades, ...conversions];
   }
 
   function zoom(factor) {

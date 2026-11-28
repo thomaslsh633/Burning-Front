@@ -1,0 +1,45 @@
+{
+ "buildings": {
+  "bunker_command_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/bunker_command_ger",
+   "tags": [
+    "building",
+    "bunker",
+    "emplacement_no_teardown"
+   ],
+   "hp": 840,
+   "target_size": 20,
+   "armor": {
+    "front": 35,
+    "side": 35,
+    "rear": 35
+   },
+   "resist": {
+    "ballistic": 1,
+    "explosive": 1,
+    "flame": 1,
+    "true": 1
+   },
+   "cost": {
+    "manpower": 250,
+    "fuel": 25
+   },
+   "traits": [
+    "repairable"
+   ],
+   "sight": {
+    "hex": 1,
+    "detect_hex": 0
+   },
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 1
+   },
+   "construction": {
+    "build_turns": 4,
+    "footprint_hex": 1
+   }
+  }
+ }
+}

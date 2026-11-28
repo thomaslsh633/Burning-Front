@@ -19,7 +19,7 @@ export function canAttack(state, data, attackerId, targetId) {
   if (!tgt) return 'no_such_target';
   if (tgt.team === att.team) return 'friendly_target';
   // a DECREWED gun (no team) is a target for every side (CoH3)
-  if (!['ACTIVE', 'DECREWED'].includes(tgt.fsm.life) || (!isOnMap(tgt) && tgt.fsm.location !== 'GARRISONED')) return 'not_a_target';
+  if (!['ACTIVE', 'DECREWED', 'CONSTRUCTING'].includes(tgt.fsm.life) || (!isOnMap(tgt) && tgt.fsm.location !== 'GARRISONED')) return 'not_a_target';
   if (att.ammo <= 0) return 'out_of_ammo';
   if (!canSee(state, data, att.team, tgt)) return 'target_not_seen';
   const ws = firingWeapons(att, data);

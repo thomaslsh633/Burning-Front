@@ -1,0 +1,30 @@
+{
+ "emplacements": {
+  "bunker_command_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/bunker_command_ger",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "bunker_command_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 250,
+     "fuel": 25
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "build_turns": 4,
+   "tags": [
+    "building",
+    "bunker",
+    "emplacement_no_teardown"
+   ],
+   "source": "built"
+  }
+ }
+}

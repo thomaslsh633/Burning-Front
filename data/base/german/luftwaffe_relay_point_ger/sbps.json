@@ -1,0 +1,29 @@
+{
+ "emplacements": {
+  "luftwaffe_relay_point_ger": {
+   "coh3_ref": "ebps/races/german/buildings/defensive/luftwaffe_relay_point_ger",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "luftwaffe_relay_point_ger",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 150
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "build_turns": 3,
+   "tags": [
+    "building",
+    "emplacement_no_teardown",
+    "bunker"
+   ],
+   "source": "built"
+  }
+ }
+}

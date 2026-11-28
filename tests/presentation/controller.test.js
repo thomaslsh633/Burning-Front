@@ -112,3 +112,14 @@ test('transport: Board is offered next to an own half-track; inside, a tap on a 
   ctl.onIntent({ type: 'tapButton', id: 'unload' });
   assert.equal(store.getState().units.u1.fsm.location, 'ON_MAP');
 });
+
+test('build: an engineer picks a position from its build menu and taps a hex; then works on the site', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'engineer_us', pos: H(3, 3) }]);
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(3, 3) });
+  assert.ok(ctl.actions().some(a => a.id === 'build:fighting_position_us'));
+  ctl.onIntent({ type: 'tapButton', id: 'build:fighting_position_us' });
+  ctl.onIntent({ type: 'tapHex', ...H(4, 3) });
+  assert.equal(store.getState().units.u2.fsm.life, 'CONSTRUCTING');
+  assert.match(debugText(store.getState(), { ...ctl.ui(), selected: 'u2' }, data), /site: 1 turns of work left/);
+});

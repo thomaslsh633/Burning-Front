@@ -387,6 +387,14 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | camouflage_special_ops_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | hulldown_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
+| fighting_nest_ger | entity · buildings | — |
+| fighting_nest_ger | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| bunker_ger | entity · buildings | — |
+| bunker_ger | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| bunker_command_ger | entity · buildings | — |
+| bunker_command_ger | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| luftwaffe_relay_point_ger | entity · buildings | dropped module stealth (not allowed for buildings) |
+| luftwaffe_relay_point_ger | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
 | howitzer_105mm_ger | squad left out | tw_howitzer_105mm_ger: missing module "weapons" (must for team_weapons) |
 | torch_artillery_obice_210_ger | squad left out | member hoff_events_artillery_obice_210_ger not imported |
 | anzioannie_ger | squad left out | tw_anzioannie_283mm_ger: missing module "weapons" (must for team_weapons) |

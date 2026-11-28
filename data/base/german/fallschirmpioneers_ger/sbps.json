@@ -73,7 +73,10 @@
      "fighting_nest_ger",
      "observation_post_ger"
     ]
-   }
+   },
+   "traits": [
+    "paradrop"
+   ]
   }
  }
 }

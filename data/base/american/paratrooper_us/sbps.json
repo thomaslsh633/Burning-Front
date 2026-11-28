@@ -62,7 +62,10 @@
    },
    "build": {
     "menu": []
-   }
+   },
+   "traits": [
+    "paradrop"
+   ]
   }
  }
 }

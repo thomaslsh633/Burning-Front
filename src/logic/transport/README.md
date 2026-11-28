@@ -4,7 +4,7 @@
 
 ## Owns
 - location FSM (ON_MAP, GARRISONED, LOADED) (`docs/unit-state.md` §5.3), `container`
-- capacity (squad slots: squad 1, carried heavy weapon team 2), what a container accepts
+- capacity (squad slots: squad 1, carried team weapon 1), what a container accepts
 - exit hexes, passengers of a destroyed transport (`stranded`, `survivors`)
 
 ## Public API (`index.js`)
@@ -14,7 +14,7 @@
 
 ## Must not
 - set positions (movement `place`, the route calls it) or kill units (lifecycle).
-- Airborne deploy: not built.
+- deploy units (paradrop is production's: `logic/economy`).
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

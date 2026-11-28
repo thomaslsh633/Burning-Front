@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "bunker_command_ger": {
+   "name": "entity.bunker_command_ger.name",
+   "model": {
+    "id": "bunker_command_ger",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "bunker_command_ger": {
+   "name": "unit.bunker_command_ger.name",
+   "short_name": "unit.bunker_command_ger.short",
+   "desc": "unit.bunker_command_ger.desc",
+   "icon": "bunker_command_ger",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

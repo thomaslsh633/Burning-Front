@@ -1,0 +1,29 @@
+{
+ "emplacements": {
+  "fighting_position_french_old_guard_us": {
+   "coh3_ref": "ebps/races/american/buildings/defensive/fighting_position_french_old_guard_us",
+   "kind": "structure",
+   "role": "all_round",
+   "members": [
+    {
+     "entity": "fighting_position_french_old_guard_us",
+     "count": 1
+    }
+   ],
+   "price": {
+    "cost": {
+     "manpower": 100
+    },
+    "from": "entities"
+   },
+   "pop": 0,
+   "build_turns": 3,
+   "tags": [
+    "building",
+    "fighting_position",
+    "emplacement"
+   ],
+   "source": "built"
+  }
+ }
+}

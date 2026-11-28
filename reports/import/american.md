@@ -406,6 +406,14 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | truck_6x6_us | entity · vehicles | — |
 | truck_6x6_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_6x6_us | veterancy | — |
+| fighting_position_us | entity · buildings | dropped module stealth (not allowed for buildings) |
+| fighting_position_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| fighting_position_french_old_guard_us | entity · buildings | dropped module stealth (not allowed for buildings) |
+| fighting_position_french_old_guard_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| fighting_position_french_engineering_upgrade_us | entity · buildings | dropped module stealth (not allowed for buildings) |
+| fighting_position_french_engineering_upgrade_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
+| fighting_position_rifleman_us | entity · buildings | dropped module stealth (not allowed for buildings) |
+| fighting_position_rifleman_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
 | goon_gun_pit_us | weapon left out | missing module "indirect" (must for mortar) |
 | howitzer_105mm_us | squad left out | tw_howitzer_105mm_us: missing module "crew" (must for team_weapons) |
 | sandbag_wall_us | entity · buildings | — |

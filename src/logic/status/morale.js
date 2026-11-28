@@ -17,7 +17,7 @@ export const MORALE = defineMachine('morale', 'NORMAL', {
       SuppressionChanged: (u, ctx) => level(u, ctx) === 'PINNED' ? 'PINNED' : u.suppression < ctx.data.balance.status.suppression.recover_below ? 'NORMAL' : null },
   },
   PINNED: {
-    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned', Hold: 'pinned', ClearWreck: 'pinned', Rebuild: 'pinned', Counter: 'pinned', Garrison: 'pinned' },
+    denies: { Move: 'pinned', Emplace: 'pinned', Recrew: 'pinned', Board: 'pinned', Hold: 'pinned', ClearWreck: 'pinned', Rebuild: 'pinned', Build: 'pinned', Counter: 'pinned', Garrison: 'pinned' },
     on: { Retreat: 'RETREATING',
       SuppressionChanged: (u, ctx) => (level(u, ctx) === 'PINNED' ? null : level(u, ctx) ?? 'NORMAL') },
   },

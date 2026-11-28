@@ -134,6 +134,11 @@
         }
       }
     },
+    "paradrop": {
+      "description": "Squads a CoH3 paradrop call-in drops whose call-in icon names another unit (the importer finds the rest).",
+      "type": "array",
+      "items": { "$ref": "types.schema.json#/$defs/Id" }
+    },
     "loadout": {
       "description": "Hand loadouts: weapons CoH3 gives `num` models at spawn, for squads coh3stats does not list (else coh3stats wins).",
       "type": "object",

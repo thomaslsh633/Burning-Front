@@ -15,9 +15,9 @@ const red = (sbps, pos, x = {}) => ({ team: 'red', sbps, pos, ...x });
 const HOUSE = { structures: [{ id: 'h', kind: 'house', hexes: ['5,5'] }] };
 const run = (s, d, cmd) => { const r = apply(s, cmd, d, createRng(1)); if (r.error) throw new Error(`${cmd.type}: ${r.error}`); for (const u of Object.values(r.state.units)) assert.deepEqual(checkUnit(u), [], u.id); return r; };
 
-test('slots: a squad 1, a carried heavy weapon team 2, towed guns and vehicles none', () => {
+test('slots: a squad 1, a carried (small) team weapon 1, towed guns and vehicles none', () => {
   const { state, data } = testMatch([blue('riflemen_us', H(1, 1)), blue('hmg_30cal_us', H(2, 1)), blue('at_gun_57mm_us', H(3, 1)), blue('sherman_us', H(4, 1))]);
-  assert.deepEqual(['u1', 'u2', 'u3', 'u4'].map(id => transport.slotsOf(state.units[id], data)), [1, 2, null, null]);
+  assert.deepEqual(['u1', 'u2', 'u3', 'u4'].map(id => transport.slotsOf(state.units[id], data)), [1, 1, null, null]);
 });
 
 test('Garrison: next to a house, room for one squad; inside: garrison cover, fires all round, cannot be entered by the enemy', () => {
@@ -35,19 +35,18 @@ test('Garrison: next to a house, room for one squad; inside: garrison cover, fir
 
 test('buildings take squads and MG teams, not mortars; an MG sets up inside', () => {
   const { state, data } = testMatch([blue('hmg_30cal_us', H(4, 5)), blue('mortar_81mm_us', H(6, 5))], HOUSE);
-  const house2 = { ...HOUSE, structures: [{ id: 'h', kind: 'house_large', hexes: ['5,5'] }] };
-  const { state: s2, data: d2 } = testMatch([blue('hmg_30cal_us', H(4, 5)), blue('mortar_81mm_us', H(6, 5))], house2);
-  assert.equal(transport.validateEnter(s2, { unit: 'u2', into: 'h' }, d2), 'cannot_go_inside');
-  assert.equal(transport.validateEnter(state, { unit: 'u1', into: 'h' }, data), 'full', 'an MG team takes 2 slots; a house has 1');
-  const r = run(s2, d2, { type: 'Garrison', side: 'blue', unit: 'u1', building: 'h' });
-  assert.equal(apply(r.state, { type: 'Emplace', side: 'blue', unit: 'u1' }, d2, createRng(1)).error, undefined);
+  assert.equal(transport.validateEnter(state, { unit: 'u2', into: 'h' }, data), 'cannot_go_inside');
+  const r = run(state, data, { type: 'Garrison', side: 'blue', unit: 'u1', building: 'h' });
+  assert.equal(r.state.units.u1.container, 'h', 'an MG team takes one slot: a house holds it');
+  assert.equal(apply(r.state, { type: 'Emplace', side: 'blue', unit: 'u1' }, data, createRng(1)).error, undefined);
 });
 
 test('Board, ride, Exit, Unload: passengers move with the transport, cannot fire and cannot be shot', () => {
-  const { state, data } = testMatch([blue('halftrack_us', H(4, 4)), blue('riflemen_us', H(3, 4)), blue('hmg_30cal_us', H(5, 4)), red('grenadier_ger', H(6, 7))]);
+  const { state, data } = testMatch([blue('halftrack_us', H(4, 4)), blue('riflemen_us', H(3, 4)), blue('hmg_30cal_us', H(5, 4)), red('grenadier_ger', H(6, 7)), blue('riflemen_us', H(4, 3))]);
   const a = run(state, data, { type: 'Board', side: 'blue', unit: 'u2', vehicle: 'u1' });
   assert.deepEqual([a.state.units.u2.fsm.location, a.state.units.u2.container], ['LOADED', 'u1']);
-  assert.equal(apply(a.state, { type: 'Board', side: 'blue', unit: 'u3', vehicle: 'u1' }, data, createRng(1)).error, 'full', '1 + 2 slots > 2');
+  const full = run(a.state, data, { type: 'Board', side: 'blue', unit: 'u3', vehicle: 'u1' }).state;
+  assert.equal(apply(full, { type: 'Board', side: 'blue', unit: 'u5', vehicle: 'u1' }, data, createRng(1)).error, 'full', 'a squad and an MG team fill 2 slots');
   assert.equal(canAttack({ ...a.state, match: { ...a.state.match, side: 'red' } }, data, 'u4', 'u2'), 'not_a_target');
   assert.equal(apply(a.state, { type: 'Attack', side: 'blue', unit: 'u2', target: 'u4' }, data, createRng(1)).error, 'loaded');
   const b = run(a.state, data, { type: 'Move', side: 'blue', unit: 'u1', to: H(4, 6) });
@@ -56,7 +55,7 @@ test('Board, ride, Exit, Unload: passengers move with the transport, cannot fire
   const c = run(own, data, { type: 'Exit', side: 'blue', unit: 'u2', hex: H(3, 6) });
   assert.deepEqual([c.state.units.u2.fsm.location, c.state.units.u2.pos, c.state.units.u2.budget.move], ['ON_MAP', H(3, 6), 3]);
   const d = run(run(state, data, { type: 'Board', side: 'blue', unit: 'u3', vehicle: 'u1' }).state, data, { type: 'Unload', side: 'blue', unit: 'u1' });
-  assert.equal(d.state.units.u3.fsm.location, 'ON_MAP', 'an MG team rides in a half-track (2 slots)');
+  assert.equal(d.state.units.u3.fsm.location, 'ON_MAP', 'an MG team rides in a half-track');
   assert.equal(apply(d.state, { type: 'Unload', side: 'blue', unit: 'u1' }, data, createRng(1)).error, 'empty');
 });
 

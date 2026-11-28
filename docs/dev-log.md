@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (fortified positions, paradrop, slots)
+- **Done:** carried team weapons take 1 slot. Importer: build-menu positions with a CoH3 hold but no squad (fighting
+  positions, bunker_ger, fighting_nest_ger …) become one-entity structure squads; trait `paradrop` from CoH3 paradrop call-ins
+  (icon names the squad; `roster.paradrop` for the rest). `Build` command (`logic/build`, lifecycle `CONSTRUCTING`,
+  `timers.build`); paradrop squads land anywhere. Autoplay garrisons, rides, unloads, builds and paradrops: 12 matches, no
+  error. 313 tests.
+- **Next:** ability import + `logic/skills`.
+
 ## 2026-11-28 (garrisons and transports)
 - **Done:** importer reads CoH3 `hold_ext` into ebps `hold` (slots, heavy_weapons, survive_share) for transports and
   positions (num_slots ≥ 1000 rule leaves out tanks' tiny holds); `logic/transport` (location FSM, capacity, enter, exit,

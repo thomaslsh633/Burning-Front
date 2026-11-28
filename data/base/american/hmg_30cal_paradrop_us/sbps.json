@@ -58,7 +58,10 @@
    },
    "supply": {
     "ammo": 18
-   }
+   },
+   "traits": [
+    "paradrop"
+   ]
   }
  }
 }

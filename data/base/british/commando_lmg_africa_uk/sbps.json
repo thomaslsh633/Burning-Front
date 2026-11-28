@@ -48,6 +48,9 @@
    "build": {
     "menu": []
    },
+   "traits": [
+    "paradrop"
+   ],
    "loadout_weapons": [
     {
      "weapon": "vickers_k_lmg_uk",

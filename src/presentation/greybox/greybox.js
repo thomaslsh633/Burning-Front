@@ -89,7 +89,7 @@ export function createView(size = 22, { yaw = 45, pitch = 35, elevPx = size * 0.
         const ground = centre(u.pos, elevAt(u.pos)), x = ground.x, y = ground.y - size * 0.45;   // upright token standing on its hex
         ctx.beginPath(); ctx.ellipse(ground.x, ground.y, size * 0.5, size * 0.5 * squash, 0, 0, 2 * Math.PI); ctx.fillStyle = 'rgba(0,0,0,0.35)'; ctx.fill();
         ctx.beginPath(); ctx.arc(x, y, size * 0.55, 0, 2 * Math.PI);
-        ctx.fillStyle = u.team ? TEAM[u.team] : '#888'; ctx.globalAlpha = u.fsm.action === 'EXHAUSTED' ? 0.55 : 1; ctx.fill(); ctx.globalAlpha = 1;
+        ctx.fillStyle = u.team ? TEAM[u.team] : '#888'; ctx.globalAlpha = u.fsm.life === 'CONSTRUCTING' ? 0.3 : u.fsm.action === 'EXHAUSTED' ? 0.55 : 1; ctx.fill(); ctx.globalAlpha = 1;
         if (u.id === ui.selected) { ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.stroke(); }
         if (ui.preview?.cmd?.target === u.id) { ctx.lineWidth = 3; ctx.strokeStyle = '#ffcc33'; ctx.stroke(); }
         const a = (Math.PI / 3) * u.facing, w = world(u.pos), tip = project(w.x + size * 0.9 * Math.cos(a), w.y + size * 0.9 * Math.sin(a), elevAt(u.pos));
@@ -114,7 +114,7 @@ export function debugText(state, ui, data) {
     L.push('', `${u.id} ${u.sbps} (${u.kind}) at ${u.pos.c},${u.pos.r} facing ${u.facing}${u.container ? ` · inside ${u.container}` : ''}`,
       `axes: ${Object.entries(u.fsm).map(([k, v]) => `${k} ${v}`).join(' · ')}`,
       `budget: move ${u.budget.move} action ${u.budget.action} counter ${u.budget.counter}${u.budget.fired ? ' fired' : ''}${u.budget.moved ? ' moved' : ''}`,
-      `suppression ${u.suppression} · ammo ${u.ammo} · reload ${u.timers.reload} · xp ${u.xp} rank ${u.rank}${u.engaged ? ' · engaged' : ''}${u.criticals.length ? ` · ${u.criticals.join(', ')}` : ''}`,
+      `${u.fsm.life === 'CONSTRUCTING' ? `site: ${u.timers.build} turns of work left · ` : ''}suppression ${u.suppression} · ammo ${u.ammo} · reload ${u.timers.reload} · xp ${u.xp} rank ${u.rank}${u.engaged ? ' · engaged' : ''}${u.criticals.length ? ` · ${u.criticals.join(', ')}` : ''}`,
       `members: ${u.members.map(m => m.hp).join(' ')}${u.upgrades.length ? ` · upgrades: ${u.upgrades.join(', ')}` : ''}`);
     for (const w of firingWeapons(u, data)) {
       const a = w.weapon.attack;

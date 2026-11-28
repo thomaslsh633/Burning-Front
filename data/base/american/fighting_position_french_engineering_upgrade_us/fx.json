@@ -1,0 +1,23 @@
+{
+ "ebps": {
+  "fighting_position_french_engineering_upgrade_us": {
+   "name": "entity.fighting_position_french_engineering_upgrade_us.name",
+   "model": {
+    "id": "fighting_position_french_engineering_upgrade_us",
+    "anim_class": "static"
+   }
+  }
+ },
+ "sbps": {
+  "fighting_position_french_engineering_upgrade_us": {
+   "name": "unit.fighting_position_french_engineering_upgrade_us.name",
+   "short_name": "unit.fighting_position_french_engineering_upgrade_us.short",
+   "desc": "unit.fighting_position_french_engineering_upgrade_us.desc",
+   "icon": "fighting_position_french_engineering_upgrade_us",
+   "menu": {
+    "tab": "emplacements",
+    "order": 0
+   }
+  }
+ }
+}

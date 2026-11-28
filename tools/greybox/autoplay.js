@@ -1,6 +1,7 @@
 // Greybox autoplay (stage G): whole 1v1 matches between faction pairs, played through commands only by a simple scripted
-// player — produce what it can afford, attack what it can, otherwise walk to the nearest point it does not own or to the
-// nearest enemy, emplace team weapons. Checks every unit's invariants after every turn and records what happened.
+// player — produce what it can afford (paradrop squads land near the nearest point it does not own), attack what it can,
+// garrison / dig in / build positions near the enemy, ride own transports to far goals and unload near the enemy, otherwise
+// walk to the nearest point it does not own or to the nearest enemy, emplace team weapons. Checks every unit's invariants after every turn and records what happened.
 //
 // usage: node tools/greybox/autoplay.js [seeds] [map] → reports/greybox/autoplay.md
 import fs from 'node:fs';
@@ -13,6 +14,8 @@ import { createMatch, checkUnit } from '../../src/logic/state/index.js';
 import { reachable } from '../../src/logic/movement/index.js';
 import { producers, offers, priceOf, canAfford } from '../../src/logic/economy/index.js';
 import { mapOf } from '../../src/logic/terrain/index.js';
+import { passengers } from '../../src/logic/transport/index.js';
+import { buildable } from '../../src/logic/build/index.js';
 import { distance, fromKey, neighbours } from '../../src/logic/hex/index.js';
 import { createRng } from '../../src/services/rng/index.js';
 
@@ -26,9 +29,15 @@ function playTurn(store, data, pick, stats) {
   for (const b of producers(s0, data).filter(x => x.team === side)) {
     const s = store.getState(), list = offers(s, data, b.id).filter(id => canAfford(s, side, priceOf(id, data)));
     if (!list.length) continue;
-    const sbps = list[pick.int(list.length)];
-    const spot = b.hexes.flatMap(k => neighbours(fromKey(k))).find(hex => !validate(store.getState(), { type: 'Produce', side, building: b.id, sbps, hex }, data));
-    if (spot && try_({ type: 'Produce', side, building: b.id, sbps, hex: spot })) stats.produced[side] = (stats.produced[side] ?? 0) + 1;
+    const drops = list.filter(x => (data.units.sbps[x].traits || []).includes('paradrop'));   // tried often, to exercise the drop
+    const sbps = drops.length && pick.int(2) ? drops[pick.int(drops.length)] : list[pick.int(list.length)], drop = drops.includes(sbps);
+    const owned = new Set(s.points.filter(p => p.owner === side).map(p => p.id));
+    const near = drop ? mapOf(s, data).points.filter(p => !owned.has(p.id)).flatMap(p => neighbours(fromKey(p.hex))) : [];
+    const spot = [...near, ...b.hexes.flatMap(k => neighbours(fromKey(k)))].find(hex => !validate(store.getState(), { type: 'Produce', side, building: b.id, sbps, hex }, data));
+    if (spot && try_({ type: 'Produce', side, building: b.id, sbps, hex: spot })) {
+      stats.produced[side] = (stats.produced[side] ?? 0) + 1;
+      if (drop && distance(spot, fromKey(b.hexes[0])) > 2) stats.used.Paradrop = (stats.used.Paradrop ?? 0) + 1;
+    }
   }
   const points = mapOf(store.getState(), data).points;
   for (const id of Object.keys(store.getState().units)) {
@@ -38,12 +47,27 @@ function playTurn(store, data, pick, stats) {
     const target = enemies.find(e => !validate(s, { type: 'Attack', side, unit: id, target: e.id }, data));
     if (target) { try_({ type: 'Attack', side, unit: id, target: target.id }); continue; }
     const nearEnemy = enemies.some(e => distance(e.pos, u.pos) <= 6);
+    const act = (type, x) => { const ok = try_({ type, side, unit: id, ...x }); if (ok) stats.used[type] = (stats.used[type] ?? 0) + 1; return ok; };
+    const can = (type, x) => !validate(s, { type, side, unit: id, ...x }, data);
+    if (u.container) { if (u.fsm.location === 'LOADED' && nearEnemy) act('Exit'); continue; }   // garrisoned: stays and fires
+    if (nearEnemy && passengers(s, id).length && act('Unload')) continue;
+    const site = Object.values(s.units).find(x => x.team === side && x.fsm.life === 'CONSTRUCTING' && can('Build', { site: x.id }));
+    if (site && act('Build', { site: site.id })) continue;
+    if (nearEnemy && pick.int(4) === 0) {   // dig in: a position with a hold on the build menu, 1–2 hexes away
+      const kinds = buildable(u, data).filter(b => data.units.ebps[data.units.sbps[b].members[0].entity]?.hold);
+      const hexes = neighbours(u.pos).flatMap(h => [h, ...neighbours(h)]);
+      const spot = kinds.flatMap(sbps => hexes.map(hex => ({ sbps, hex }))).find(x => can('Build', x));
+      if (spot && act('Build', spot)) continue;
+    }
+    const inside = [...Object.keys(mapOf(s, data).structures).map(c => ['Garrison', { building: c }]), ...Object.keys(s.units).map(c => ['Board', { vehicle: c }])];
+    if (nearEnemy) { const g = inside.find(([t, x]) => (t === 'Garrison' || s.units[x.vehicle].kind === 'structure') && can(t, x)); if (g && act(...g)) continue; }
     if (u.fsm.stance !== 'MOBILE') continue;   // set up (or setting up): stays and fires
     if (u.kind === 'team_weapon' && nearEnemy && !validate(s, { type: 'Emplace', side, unit: id }, data)) { try_({ type: 'Emplace', side, unit: id }); continue; }
     const owned = new Set(s.points.filter(p => p.owner === side).map(p => p.id));
     const goals = [...points.filter(p => !owned.has(p.id)).map(p => fromKey(p.hex)), ...enemies.map(e => e.pos)];
     const goal = goals.sort((a, b) => distance(u.pos, a) - distance(u.pos, b))[0];
     if (!goal) continue;
+    if (!nearEnemy && distance(u.pos, goal) > 6) { const ride = inside.find(([t, x]) => t === 'Board' && s.units[x.vehicle].kind === 'vehicle' && can(t, x)); if (ride && act(...ride)) continue; }
     const best = [...reachable(s, data, id)].filter(([, v]) => v.stop).map(([k]) => fromKey(k)).sort((a, b) => distance(a, goal) - distance(b, goal))[0];
     if (best && distance(best, goal) < distance(u.pos, goal)) try_({ type: 'Move', side, unit: id, to: best });
   }
@@ -57,7 +81,7 @@ export function playMatch(data, [blue, red], { seed = 1, map = 'greybox', ticket
   const state = createMatch({ map: { id: map }, mode: 'capture', order: ['blue', 'red'], rng: seed,
     teams: { blue: { faction: blue, resources, tickets }, red: { faction: red, resources, tickets } } }, data);
   const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) });
-  const stats = { blue, red, produced: {}, destroyed: {}, commands: 0, refused: {}, invariants: [], error: null };
+  const stats = { blue, red, produced: {}, destroyed: {}, commands: 0, refused: {}, used: {}, invariants: [], error: null };
   store.subscribe((s, events) => { for (const e of events) if (e.type === 'UnitDestroyed' && e.team) stats.destroyed[e.team] = (stats.destroyed[e.team] ?? 0) + 1; });
   const pick = createRng(seed * 7919);
   try {
@@ -71,12 +95,13 @@ export function playMatch(data, [blue, red], { seed = 1, map = 'greybox', ticket
 
 export function markdown(results, seeds, map) {
   const L = ['# Greybox: autoplay 1v1s', '', `Generated by \`node tools/greybox/autoplay.js ${seeds} ${map}\`: capture mode, 120 tickets, at most 60 turns,`,
-    'both sides played by the same scripted player through commands only (produce, attack, capture, emplace).', '',
-    '| Blue | Red | Seed | Winner | Reason | Turns | Tickets b / r | Produced b / r | Lost b / r | Commands | Refused (top) | Invariant breaks | Error |',
-    '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |'];
+    'both sides played by the same scripted player through commands only (produce, attack, capture, emplace, garrison, ride,',
+    'unload, build positions, paradrop).', '',
+    '| Blue | Red | Seed | Winner | Reason | Turns | Tickets b / r | Produced b / r | Lost b / r | Commands | Used | Refused (top) | Invariant breaks | Error |',
+    '| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |'];
   for (const r of results) {
     const refused = Object.entries(r.refused).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, v]) => `${k} ${v}`).join(', ');
-    L.push(`| ${r.blue} | ${r.red} | ${r.seed} | ${r.winner ?? '—'} | ${r.reason} | ${r.turns} | ${r.tickets.blue} / ${r.tickets.red} | ${r.produced.blue ?? 0} / ${r.produced.red ?? 0} | ${r.destroyed.blue ?? 0} / ${r.destroyed.red ?? 0} | ${r.commands} | ${refused} | ${r.invariants.length} | ${r.error ?? ''} |`);
+    L.push(`| ${r.blue} | ${r.red} | ${r.seed} | ${r.winner ?? '—'} | ${r.reason} | ${r.turns} | ${r.tickets.blue} / ${r.tickets.red} | ${r.produced.blue ?? 0} / ${r.produced.red ?? 0} | ${r.destroyed.blue ?? 0} / ${r.destroyed.red ?? 0} | ${r.commands} | ${Object.entries(r.used).map(([k, v]) => `${k} ${v}`).join(', ')} | ${refused} | ${r.invariants.length} | ${r.error ?? ''} |`);
   }
   const breaks = results.flatMap(r => r.invariants.slice(0, 5));
   if (breaks.length) L.push('', '## Invariant breaks (first few)', '', ...breaks.map(b => `- ${b}`));

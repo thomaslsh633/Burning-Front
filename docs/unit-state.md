@@ -170,6 +170,7 @@ Top level of the hierarchy: the other axes only run while `ACTIVE`.
 | State | Applies to | Meaning | Transitions |
 | --- | --- | --- | --- |
 | `ACTIVE` | all | normal; may carry **critical conditions** (below) | last crew member dies or the crew abandons it (towed gun) → `DECREWED`; HP 0 → `WRECKED` (vehicles, guns, structures) or removed (infantry) |
+| `CONSTRUCTING` | built structures | a site placed by a builder: keeps its team, can be shot, does nothing; `timers.build` turns of work left (owner `logic/build`) | work done → `ACTIVE` at full HP; HP 0 → removed, no wreck |
 | `DECREWED` | towed team weapons | gun left on its hex without a crew, owner `null`; keeps HP, ammo, facing, stance; any side may attack it (CoH3) | an infantry squad recrews → `ACTIVE` under the squad's side; destroyed → `WRECKED` |
 
 Vehicles are always standalone units: they are never abandoned, bailed out or captured (decided 2026-11-26).
@@ -231,6 +232,7 @@ Built in D2-7 (`logic/lifecycle/crewing.js`, routes `Recrew`, `Abandon`, `ClearW
 | Location FSM | `logic/transport` | `fsm.location`, `container` | capacities, garrison rules |
 | Morale FSM, suppression points, veterancy, engaged | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank`, `engaged` | thresholds, decay, multipliers, veterancy sets |
 | Lifecycle FSM, criticals, recrew, wrecks | `logic/lifecycle` | `fsm.life`, `criticals`, `crew`, `team`, `sbps` (a captured gun takes its new blueprint) | recrewable data, crit chances, wreck rules |
+| Construction work | `logic/build` | `timers.build` | `build_turns`, build menus |
 | Visibility FSM | `logic/vision` | `fsm.visibility`, `timers.revealedUntil` | stealth data, sight |
 | Position and facing | `logic/movement` | `pos`, `facing`, `turretFacing` | move points, pass types, terrain costs |
 | Cover (derived) | `logic/vision` | — | terrain, edges, cover tables |
