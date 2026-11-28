@@ -147,6 +147,13 @@ export function convertEntity(rec, { ref, category, vocab, profiles, weaponIdsOf
   if (wreck) out.wreck = { entity: wreck, ...scale.wreck };
   const tow = EXT(rec, 'towing_trailer_ext');
   if (tow) out.tow = { by: [] };
+  // transports: CoH3 hold_ext with unlimited models (num_slots 1000); tanks have small holds that are not transport
+  const hold = EXT(rec, 'hold_ext');
+  if (hold && (hold.num_slots ?? 0) >= 1000 && (hold.num_squad_slots ?? 0) > 0) {
+    const types = (hold.acceptable_types || []).map(t => t.acceptable_type);
+    out.hold = { slots: hold.num_squad_slots, heavy_weapons: types.some(t => ['hold_heavy_machine_gun', 'hold_mortar'].includes(t)),
+      survive_share: hold.percent_unload_on_death ?? 0.5 };
+  }
   const con = EXT(rec, 'construction_ext');
   if (con || category === 'emplacements' || category === 'buildings') out.construction = { build_turns: Math.max(1, turnsOf(EXT(rec, 'cost_ext')?.time_cost?.time_seconds, scale)), footprint_hex: 1 };
   if ((h.regeneration ?? 0) > 0) out.regen = { per_turn: r2(h.regeneration * 10) };

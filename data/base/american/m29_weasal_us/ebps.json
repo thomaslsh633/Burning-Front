@@ -47,6 +47,11 @@
     "entity": "m29_weasal_wreck_us",
     "cover": "heavy",
     "blocks_vehicles": true
+   },
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 0.5
    }
   }
  }

@@ -6768,6 +6768,11 @@
        "entity": "halftrack_250_wreck_20mm_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_250_ak": {
@@ -6835,6 +6840,11 @@
        "entity": "halftrack_250_wreck_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_250_mortar_ak": {
@@ -6962,6 +6972,11 @@
        "entity": "halftrack_250_vampire_wreck_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_251_stuka_ak": {
@@ -7206,6 +7221,11 @@
        "entity": "truck_2_5_wreck_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "kradschutzen_motorcycle_ak": {
@@ -8753,6 +8773,11 @@
        "entity": "truck_2_5_wreck_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "truck_2_5_medical_ak": {
@@ -8815,6 +8840,11 @@
        "entity": "truck_2_5_medical_wreck_ak",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      }
     },
@@ -22872,6 +22902,11 @@
        "entity": "halftrack_assault_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_medical_us": {
@@ -22931,6 +22966,11 @@
        "entity": "halftrack_medical_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_quad_us": {
@@ -23059,6 +23099,11 @@
        "entity": "halftrack_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "hellcat_us": {
@@ -23165,6 +23210,11 @@
        "entity": "m29_weasal_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "pershing_us": {
@@ -23296,6 +23346,11 @@
        "entity": "priest_kangaroo_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "priest_us": {
@@ -24285,6 +24340,11 @@
        "entity": "truck_6x6_wreck_us",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": false,
+       "survive_share": 0.5
       }
      }
     },
@@ -26064,6 +26124,11 @@
        "hex": 1,
        "detect_hex": 0
       },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 2,
        "footprint_hex": 1
@@ -26106,6 +26171,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 2,
        "footprint_hex": 1
@@ -26148,6 +26218,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 2,
        "footprint_hex": 1
@@ -26190,6 +26265,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 2,
        "footprint_hex": 1
@@ -26226,6 +26306,11 @@
       "sight": {
        "hex": 1,
        "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.75
       },
       "construction": {
        "build_turns": 1,
@@ -26265,6 +26350,11 @@
        "hex": 1,
        "detect_hex": 0
       },
+      "hold": {
+       "slots": 3,
+       "heavy_weapons": true,
+       "survive_share": 0.75
+      },
       "construction": {
        "build_turns": 2,
        "footprint_hex": 1
@@ -26301,6 +26391,11 @@
       "sight": {
        "hex": 1,
        "detect_hex": 0
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.75
       },
       "construction": {
        "build_turns": 3,
@@ -43685,6 +43780,11 @@
        "entity": "cwt_15_wreck_africa_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "cwt_15_quad_mount_africa_uk": {
@@ -43802,6 +43902,11 @@
        "entity": "cwt_15_wreck_africa_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "cwt_15_medical_africa_uk": {
@@ -43859,6 +43964,11 @@
        "entity": "cwt_15_medical_wreck_africa_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "cwt_15_resupply_repair_africa_uk": {
@@ -43970,6 +44080,11 @@
        "entity": "cwt_15_wreck_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "cwt_lrdg_truck_2pdr_africa_uk": {
@@ -44102,6 +44217,11 @@
        "entity": "cwt_lrdg_truck_wreck_africa_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "dingo_africa_uk": {
@@ -44617,6 +44737,11 @@
        "entity": "cwt_15_wreck_africa_uk",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "priest_africa_uk": {
@@ -64997,6 +65122,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 4,
        "footprint_hex": 1
@@ -65127,6 +65257,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 4,
        "footprint_hex": 1
@@ -65213,6 +65348,11 @@
         "slot": "main"
        }
       ],
+      "hold": {
+       "slots": 1,
+       "heavy_weapons": true,
+       "survive_share": 1
+      },
       "construction": {
        "build_turns": 4,
        "footprint_hex": 1
@@ -65704,6 +65844,11 @@
        "entity": "halftrack_wreck_ger",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_medical_ger": {
@@ -65774,6 +65919,11 @@
        "entity": "halftrack_medical_wreck_ger",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": true,
+       "survive_share": 0.5
       }
      },
      "halftrack_stummel_ger": {
@@ -67201,6 +67351,11 @@
        "entity": "truck_2_5_wreck_ger",
        "cover": "heavy",
        "blocks_vehicles": true
+      },
+      "hold": {
+       "slots": 2,
+       "heavy_weapons": false,
+       "survive_share": 0.5
       }
      },
      "truck_2_5_logistics_ger": {

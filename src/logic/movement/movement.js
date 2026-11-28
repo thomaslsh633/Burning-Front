@@ -115,6 +115,7 @@ export function applyMove(state, cmd, data, onStep, points) {
     const u = s.units[cmd.unit], from = u.pos;
     const facing = cmd.reverse || u.kind === 'structure' ? u.facing : direction(from, h);
     s = putUnit(s, { ...withFacing(u, facing), pos: { ...h } });
+    for (const p of Object.values(s.units)) if (p.container === cmd.unit) s = putUnit(s, { ...p, pos: { ...h } });   // passengers ride along
     cost = reach.get(key(h)).cost;
     events.push(ev('Moved', { unit: cmd.unit, from, to: { ...h }, facing, reverse: !!cmd.reverse }));
     const crush = crushEdge(s, data, from, h, moveClass(u, data));   // vehicles break fences, hedges, wire, sandbags
@@ -152,6 +153,11 @@ export function moveToward(state, data, unitId, goal, points, onStep) {
   }
   if (!best || equals(best.h, state.units[unitId].pos)) return { state, events: [], cost: 0 };
   return applyMove(state, { unit: unitId, to: best.h }, data, onStep, points);
+}
+
+/** Put a unit on a hex without walking (entering / leaving a building or transport). */
+export function place(state, unitId, hex) {
+  return { state: putUnit(state, { ...state.units[unitId], pos: { c: hex.c, r: hex.r } }), events: [] };
 }
 
 /** Own turn end: a turret that is not engaged swings back to the hull (SPEC §6). engaged: read from status by the caller. */

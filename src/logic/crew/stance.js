@@ -4,12 +4,12 @@ import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 
-const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Board', 'Hold', 'Counter'].map(c => [c, reason]));
+const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Board', 'Garrison', 'Exit', 'Hold', 'Counter'].map(c => [c, reason]));
 
 export const STANCE = defineMachine('stance', 'MOBILE', {
   MOBILE: { denies: { Pack: 'not_emplaced', Hold: 'not_emplaced' } },
   SETTING_UP: { denies: NOT_WHILE('setting_up') },
-  EMPLACED: { denies: { Move: 'emplaced', Turn: 'emplaced', Emplace: 'already_emplaced', Board: 'emplaced' } },
+  EMPLACED: { denies: { Move: 'emplaced', Turn: 'emplaced', Emplace: 'already_emplaced', Board: 'emplaced', Garrison: 'emplaced', Exit: 'emplaced' } },
   PACKING_UP: { denies: NOT_WHILE('packing_up') },
 });
 
@@ -75,6 +75,6 @@ export function crewTurnEnd(state, unitId, data) {
     const t = transition(STANCE, u, 'MOBILE');
     return { state: putUnit(state, t.unit), events: [ev('Packed', { unit: unitId }), ...t.events] };
   }
-  if (u.fsm.stance === 'MOBILE' && data.balance.crew.auto_emplace_at_turn_end && needsEmplace(u, data) && u.fsm.location === 'ON_MAP') return emplace(state, unitId, data);
+  if (u.fsm.stance === 'MOBILE' && data.balance.crew.auto_emplace_at_turn_end && needsEmplace(u, data) && u.fsm.location !== 'LOADED') return emplace(state, unitId, data);
   return { state, events: [] };
 }

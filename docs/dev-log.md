@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (garrisons and transports)
+- **Done:** importer reads CoH3 `hold_ext` into ebps `hold` (slots, heavy_weapons, survive_share) for transports and
+  positions (num_slots ≥ 1000 rule leaves out tanks' tiny holds); `logic/transport` (location FSM, capacity, enter, exit,
+  unload, stranded passengers); Garrison / Board / Exit / Unload commands; passengers ride with the vehicle; garrisoned units
+  fire all round; greybox buttons and counts. 309 tests.
+- **Next:** ability import + `logic/skills`.
+
 ## 2026-11-28 (autoplay 1v1s, weapon kits)
 - **Done:** `tools/greybox/autoplay.js`: 12 whole capture 1v1s over 6 faction pairs by a scripted player, commands only:
   all end by tickets in 19–34 turns, no error, no invariant break. Found: roster clone never applied (free Australian supply

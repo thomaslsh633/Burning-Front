@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — garrisons and transports (2026-11-28)
+- Squads and MG teams garrison houses; squads and heavy weapon teams ride half-tracks, trucks and other CoH3 transports.
+- Passengers move with the vehicle and get out beside it; a destroyed transport loses half of each squad inside.
+
 ## rewrite — weapon kits, autoplay (2026-11-28)
 - Squads can buy weapon kits (e.g. a BAR for riflemen): one man switches to the new weapon.
 - Automatic 1v1s between all faction pairs run to the end without errors; a free supply truck was found and priced.

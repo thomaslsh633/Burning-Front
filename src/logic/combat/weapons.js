@@ -49,7 +49,7 @@ export function weaponReach(state, data, unit, w, targetHex) {
   if (d > a.range_hex.max) return 'out_of_range';
   if (d < (a.range_hex.min ?? 0)) return 'too_close';
   const facing = w.mount === 'turret' ? unit.turretFacing : unit.facing;
-  if (!arcContains(unit.pos, facing, a.arc_deg ?? 360, targetHex)) return 'out_of_arc';
+  if (unit.fsm.location !== 'GARRISONED' && !arcContains(unit.pos, facing, a.arc_deg ?? 360, targetHex)) return 'out_of_arc';   // a building's windows face every way
   if (unit.budget.moved && w.weapon.moving && !w.weapon.moving.can_fire) return 'cannot_fire_after_moving';
   if ((w.weapon.traits || []).includes('emplace_required') && unit.kind === 'team_weapon' && unit.fsm.stance !== 'EMPLACED') return 'must_emplace';
   const indirect = a.fire_mode === 'indirect' || (w.weapon.traits || []).includes('ignores_blockers');

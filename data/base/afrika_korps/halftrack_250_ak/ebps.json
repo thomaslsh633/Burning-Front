@@ -65,6 +65,11 @@
     "entity": "halftrack_250_wreck_ak",
     "cover": "heavy",
     "blocks_vehicles": true
+   },
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 0.5
    }
   }
  }

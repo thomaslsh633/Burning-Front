@@ -33,6 +33,11 @@
     "hex": 1,
     "detect_hex": 0
    },
+   "hold": {
+    "slots": 3,
+    "heavy_weapons": true,
+    "survive_share": 0.75
+   },
    "construction": {
     "build_turns": 2,
     "footprint_hex": 1

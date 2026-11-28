@@ -99,3 +99,16 @@ test('upgrades: listed for the selected unit, locked without the unlock', () => 
   assert.equal(bar.disabled, true);
   assert.match(bar.label, /needs_unlock/);
 });
+
+test('transport: Board is offered next to an own half-track; inside, a tap on a hex beside it gets out', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(2, 5) }, { team: 'blue', sbps: 'halftrack_us', pos: H(3, 5) }]);
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(2, 5) });
+  assert.ok(ctl.actions().some(a => a.id === 'board:u2'));
+  ctl.onIntent({ type: 'tapButton', id: 'board:u2' });
+  assert.equal(store.getState().units.u1.container, 'u2');
+  ctl.onIntent({ type: 'tapHex', ...H(3, 5) });
+  assert.ok(ctl.actions().some(a => a.id === 'unload'), 'the half-track shows its passengers');
+  ctl.onIntent({ type: 'tapButton', id: 'unload' });
+  assert.equal(store.getState().units.u1.fsm.location, 'ON_MAP');
+});

@@ -84,7 +84,7 @@ export function createView(size = 22, { yaw = 45, pitch = 35, elevPx = size * 0.
         ctx.fillStyle = '#e8e8c0'; ctx.font = `${size * 0.5}px sans-serif`; ctx.textAlign = 'center';
         ctx.fillText(defs[p.id].kind === 'vp' ? '★' : defs[p.id].kind[0].toUpperCase(), x, y - size * 0.3);
       }
-      const units = Object.values(state.units).filter(u => u.fsm.location === 'ON_MAP').sort((a, b) => depth(a.pos) - depth(b.pos));
+      const units = Object.values(state.units).filter(u => u.fsm.location !== 'LOADED').sort((a, b) => depth(a.pos) - depth(b.pos));
       for (const u of units) {
         const ground = centre(u.pos, elevAt(u.pos)), x = ground.x, y = ground.y - size * 0.45;   // upright token standing on its hex
         ctx.beginPath(); ctx.ellipse(ground.x, ground.y, size * 0.5, size * 0.5 * squash, 0, 0, 2 * Math.PI); ctx.fillStyle = 'rgba(0,0,0,0.35)'; ctx.fill();
@@ -95,7 +95,8 @@ export function createView(size = 22, { yaw = 45, pitch = 35, elevPx = size * 0.
         const a = (Math.PI / 3) * u.facing, w = world(u.pos), tip = project(w.x + size * 0.9 * Math.cos(a), w.y + size * 0.9 * Math.sin(a), elevAt(u.pos));
         ctx.beginPath(); ctx.moveTo(ground.x, ground.y); ctx.lineTo(tip.x, tip.y); ctx.strokeStyle = '#111'; ctx.lineWidth = 2; ctx.stroke();
         ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.font = `bold ${size * 0.55}px sans-serif`; ctx.fillText(KIND[u.kind] ?? '?', x, y + size * 0.2);
-        ctx.font = `${size * 0.42}px sans-serif`; ctx.fillText(String(u.members.reduce((n, m) => n + m.hp, 0)), x, y - size * 0.7);
+        const aboard = Object.values(state.units).filter(p => p.container === u.id).length;   // passengers ride inside, drawn as a count
+        ctx.font = `${size * 0.42}px sans-serif`; ctx.fillText(`${u.members.reduce((n, m) => n + m.hp, 0)}${u.container ? ' ⌂' : ''}${aboard ? ` +${aboard}` : ''}`, x, y - size * 0.7);
       }
       if (ui.preview?.cmd?.type === 'Move') { hexPath(ctx, ui.preview.cmd.to, size * 0.8); ctx.lineWidth = 3; ctx.strokeStyle = '#b8ffb8'; ctx.stroke(); }
     },
@@ -110,7 +111,7 @@ export function debugText(state, ui, data) {
   if (ui.building) L.push('', `building ${ui.building}${ui.placing ? ` · placing ${ui.placing}` : ''}`);
   const u = state.units[ui.selected];
   if (u) {
-    L.push('', `${u.id} ${u.sbps} (${u.kind}) at ${u.pos.c},${u.pos.r} facing ${u.facing}`,
+    L.push('', `${u.id} ${u.sbps} (${u.kind}) at ${u.pos.c},${u.pos.r} facing ${u.facing}${u.container ? ` · inside ${u.container}` : ''}`,
       `axes: ${Object.entries(u.fsm).map(([k, v]) => `${k} ${v}`).join(' · ')}`,
       `budget: move ${u.budget.move} action ${u.budget.action} counter ${u.budget.counter}${u.budget.fired ? ' fired' : ''}${u.budget.moved ? ' moved' : ''}`,
       `suppression ${u.suppression} · ammo ${u.ammo} · reload ${u.timers.reload} · xp ${u.xp} rank ${u.rank}${u.engaged ? ' · engaged' : ''}${u.criticals.length ? ` · ${u.criticals.join(', ')}` : ''}`,

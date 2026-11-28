@@ -83,9 +83,8 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   are readable, `docs/data-labels.md`).
 - **Doctrines and research** unlock the `doctrine` / `research` lists of `data/rules/production.json` and conversions (`conversions.json` `unlock`); neither system is built.
 - **Research command** (cost, turns): not built. Production buildings are destructible but not rebuildable.
-- **Garrison command** (`logic/transport`, location axis): not built.
-  - `container` is set by hand in tests.
-  - Building collapse already kills `container === id` units.
+- **Garrisons and transports** (`logic/transport`, 2026-11-28): built. Not built: fortified positions as player-placed
+  holds (bunkers, fighting positions have a `hold` but no build), airborne deploy, autoplay using transports.
 - **Map follow-ups:**
   - Mines (in map files, not simulated).
   - Smoke; craters from heavy shells.

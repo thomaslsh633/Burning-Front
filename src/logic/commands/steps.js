@@ -7,11 +7,13 @@ import * as status from '../status/index.js';
 import * as crew from '../crew/index.js';
 import * as lifecycle from '../lifecycle/index.js';
 import * as terrain from '../terrain/index.js';
+import * as transport from '../transport/index.js';
+import * as movement from '../movement/index.js';
 import { permits } from '../fsm/index.js';
 import { ev } from '../events/index.js';
 
 /** Unit axes in hierarchy order: lifecycle first (docs/unit-state.md §3). */
-export const MACHINES = [lifecycle.LIFE, crew.STANCE, status.MORALE, turn.ACTION, vision.VISIBILITY];
+export const MACHINES = [lifecycle.LIFE, transport.LOCATION, crew.STANCE, status.MORALE, turn.ACTION, vision.VISIBILITY];
 
 const NONE = s => ({ state: s, events: [] });
 
@@ -53,11 +55,27 @@ export function fire(state, d, rng, attackerId, targetId) {
     ...featureSteps(r.featureHits, d),
     x => status.gainXp(x, attackerId, enemyLoss, d),
     ...hit.map(id => ifUnit(id, x => lifecycle.checkDeaths(x, id, d))),
+    x => strandedSteps(x, state, d),
     ifUnit(attackerId, x => vision.revealOnFire(x, attackerId, d)),
     x => status.setEngaged(x, attackerId),
     x => turn.startReload(x, attackerId, d),
   ]);
   return { state: out.state, events: [...r.events, ...out.events] };
+}
+
+/**
+ * Passengers of a transport (or position) that was just destroyed get out beside its wreck, keeping CoH3's
+ * percent_unload_on_death share of their models; with no room outside, or no one left, they are gone.
+ * before: the state before the attack (the dead transport's hold is read there).
+ */
+function strandedSteps(state, before, d) {
+  return chain(state, transport.stranded(state).map(p => x => {
+    const share = d.units.ebps[before.units[p.container]?.members[0]?.ebps]?.hold?.survive_share ?? 0.5;
+    const hex = transport.exitHex(x, d, p.id);
+    if (!hex) return lifecycle.remove(x, d, p.id, null);
+    return chain(x, [y => combat.setMembers(y, p.id, transport.survivors(y.units[p.id], share)), y => transport.leave(y, p.id),
+      y => movement.place(y, p.id, hex), y => lifecycle.checkDeaths(y, p.id, d)]);
+  }));
 }
 
 /**

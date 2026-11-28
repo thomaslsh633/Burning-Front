@@ -53,6 +53,11 @@
     "entity": "truck_2_5_wreck_ger",
     "cover": "heavy",
     "blocks_vehicles": true
+   },
+   "hold": {
+    "slots": 2,
+    "heavy_weapons": false,
+    "survive_share": 0.5
    }
   }
  }

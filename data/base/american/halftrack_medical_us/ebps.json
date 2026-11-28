@@ -57,6 +57,11 @@
     "entity": "halftrack_medical_wreck_us",
     "cover": "heavy",
     "blocks_vehicles": true
+   },
+   "hold": {
+    "slots": 2,
+    "heavy_weapons": true,
+    "survive_share": 0.5
    }
   }
  }

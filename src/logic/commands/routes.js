@@ -14,12 +14,27 @@ import * as lifecycle from '../lifecycle/index.js';
 import * as terrain from '../terrain/index.js';
 import * as economy from '../economy/index.js';
 import * as build from '../build/index.js';
+import * as transport from '../transport/index.js';
 import { spawnUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { MACHINES, chain, ifUnit, featureSteps, fire, counterFire, overwatchStep } from './steps.js';
 import { startTurn, endTurn, retreatWalk } from './phases.js';
 
 export { MACHINES };
+
+/** Garrison / Board: the same entry under two names (cmd.building or cmd.vehicle). */
+function enterRoute(field) {
+  const as = c => ({ ...c, into: c[field] });
+  return {
+    unit: true,
+    validate: (s, c, d) => transport.validateEnter(s, as(c), d),
+    apply(s, c, d) {
+      const into = transport.containerOf(s, d, c[field]);
+      return chain(s, [x => movement.place(x, c.unit, into.hexes[0]), x => transport.enter(x, c.unit, c[field], d),
+        x => turn.spend(x, c.unit, { move: x.units[c.unit].budget.move })]);
+    },
+  };
+}
 
 const moveCost = (s, c, d) => movement.reachable(s, d, c.unit, { reverse: !!c.reverse }).get(`${c.to.c},${c.to.r}`)?.cost ?? 0;
 
@@ -152,6 +167,29 @@ export const ROUTES = {
       x => combat.addUpgrade(x, c.unit, c.upgrade),
       x => turn.spend(x, c.unit, { action: 1 }),
     ]),
+  },
+  /** { unit, building } / { unit, vehicle }: go inside a building or an own transport / position; ends the move. */
+  Garrison: enterRoute('building'),
+  Board: enterRoute('vehicle'),
+  /** { unit, hex? }: step out beside the building or transport; one move point. */
+  Exit: {
+    unit: true,
+    validate: (s, c, d) => transport.validateExit(s, c, d),
+    apply(s, c, d) {
+      const hex = transport.exitHex(s, d, c.unit, c.hex);
+      return chain(s, [x => transport.leave(x, c.unit), x => movement.place(x, c.unit, hex), x => turn.spend(x, c.unit, { move: 1 })]);
+    },
+  },
+  /** { unit (the transport) }: every passenger out where there is room. */
+  Unload: {
+    unit: true,
+    validate: (s, c) => transport.validateUnload(s, c),
+    apply(s, c, d) {
+      return chain(s, transport.passengers(s, c.unit).map(p => x => {
+        const hex = transport.exitHex(x, d, p.id);
+        return hex ? chain(x, [y => transport.leave(y, p.id), y => movement.place(y, p.id, hex)]) : { state: x, events: [] };
+      }));
+    },
   },
   EndTurn: {
     apply: (s, c, d, rng) => chain(s, [x => endTurn(x, d, rng), x => startTurn(x, d, rng)]),

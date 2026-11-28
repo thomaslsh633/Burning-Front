@@ -64,6 +64,11 @@
     "entity": "cwt_lrdg_truck_wreck_africa_uk",
     "cover": "heavy",
     "blocks_vehicles": true
+   },
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 0.5
    }
   }
  }

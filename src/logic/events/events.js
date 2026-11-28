@@ -14,7 +14,7 @@ export const EVENT = Object.freeze(Object.fromEntries([
   // vision
   'Revealed', 'Concealed', 'Spotted',
   // crew and lifecycle
-  'Emplacing', 'Emplaced', 'Packing', 'Packed', 'CrewWiped', 'Abandoned', 'Recrewed', 'Captured', 'Wrecked', 'WreckClearing', 'WreckCleared', 'Converted', 'UpgradeFitted',
+  'Emplacing', 'Emplaced', 'Packing', 'Packed', 'CrewWiped', 'Abandoned', 'Recrewed', 'Captured', 'Wrecked', 'WreckClearing', 'WreckCleared', 'Converted', 'UpgradeFitted', 'Garrisoned', 'Boarded', 'Exited',
   // map features
   'FeatureDamaged', 'FeatureDestroyed', 'StructureCollapsed', 'StructureRebuilding', 'StructureRebuilt', 'WreckPlaced', 'Crushed',
   // points and economy

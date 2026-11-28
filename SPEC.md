@@ -314,7 +314,14 @@ Confirmed 2026-11-25 (rewrite):
 - Abandon and crews without guns (D2-7): a towed-gun crew may abandon its gun (CoH3 `can_manual_abandon`): the crew steps
   onto a free neighbouring hex as its own unit, the gun stays decrewed. A crew whose gun is gone fights with its small arms
   and may recrew. Recrew takes any squad on foot, whatever its size (2026-11-28: capacity counts squads, not men).
-- Capacity (2026-11-28, for transports and garrisons, not built): counted in squads; a heavy weapon team takes 2 slots.
+- Garrisons and transports (2026-11-28, `logic/transport`): capacity counts squads, an infantry squad takes 1 slot, a carried
+  heavy weapon team (HMG, mortar) 2; towed guns and vehicles never go inside. Garrison / Board: from a hex next to the
+  building or own transport, ends the unit's move. A building holds its `garrison` slots (data/rules/terrain.json), takes
+  squads and MG teams (an MG may set up inside), never units of both sides; garrisoned units fire all round with garrison
+  cover and can be shot. A transport holds its CoH3 hold slots (heavy weapon teams only if CoH3 accepts them); passengers
+  ride along, cannot fire, be shot or counter fire. Exit: onto a free hex beside the container, one move point. Unload (the
+  transport): every passenger out where there is room, costs nothing. A destroyed transport puts its passengers out beside
+  the wreck keeping CoH3 `percent_unload_on_death` (0.5) of their models; with no room outside they are lost.
 - Wreck clearing (D2-7, `data/rules/terrain.json`): engineers (squad role `engineer`) spend their action on or next to a
   wreck; vehicle wrecks go after 2 turns of work, emplacement wrecks after 1.
 

@@ -37,6 +37,11 @@
      "slot": "main"
     }
    ],
+   "hold": {
+    "slots": 1,
+    "heavy_weapons": true,
+    "survive_share": 1
+   },
    "construction": {
     "build_turns": 2,
     "footprint_hex": 1

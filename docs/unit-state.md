@@ -147,9 +147,9 @@ from terrain and the edge the shot crosses (directional edge cover, SPEC §10). 
 | --- | --- | --- | --- |
 | `ON_MAP` | on its hex | everything the other axes allow | Garrison → `GARRISONED`; Board → `LOADED` |
 | `GARRISONED` | inside a building (`container` = building id) | Attack from the building, Exit | building collapses → infantry die, team weapons destroyed (2026-11-26); Exit → `ON_MAP` |
-| `LOADED` | inside a transport (`container` = vehicle id) | Dismount | transport destroyed → `ON_MAP` (casualties from data) |
+| `LOADED` | inside a transport or fortified position (`container` = unit id) | Exit (the transport: Unload) | transport destroyed → `ON_MAP` beside it, keeping `hold.survive_share` of its models; Exit / Unload → `ON_MAP` |
 
-Stance and location exclude each other: a team weapon must be `MOBILE` to board; only MGs may garrison (SPEC §5).
+A team weapon must be `MOBILE` to board or garrison; only MG teams may garrison, and may set up inside (SPEC §10).
 
 ### 5.4 Morale and suppression FSM — owner `logic/status`
 
