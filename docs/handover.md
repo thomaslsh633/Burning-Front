@@ -9,8 +9,8 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (296 tests) |
-| Phase | **Stage G**: G-1 (all factions), G-2 / G-3 (greybox view: `node tools/greybox/serve.js` → `greybox.html`), G-4 (TTK report) done; G-5 data fixes done (3 squads still flagged), phone check in emulation done; next: real-phone check (G-6) and sign-off |
+| Checks | `npm run check` passes; `npm test` passes (298 tests) |
+| Phase | **Stage G**: G-1 (all factions), G-2 / G-3 (greybox view: `node tools/greybox/serve.js` → `greybox.html`), G-4 (TTK report) done; G-5 done (time-to-kill report: 0 flagged), greybox with production / conversion on the new `greybox` map, phone check in emulation done; next: real-phone check (G-6) and the data-review sign-off, then D3 |
 | Data imported | all four factions (G-1, 2026-11-28): 287 squads (US 72, Wehrmacht 66, DAK 52, British 97) with `node tools/import-coh3/import.js <faction> --all`; 9 squads left out (see `reports/import/`) |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
 

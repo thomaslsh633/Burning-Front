@@ -107,6 +107,7 @@ export function debugText(state, ui, data) {
   const L = [`turn ${state.match.turn} · ${state.match.side ?? 'not started'}${state.match.over ? ` · OVER: ${state.match.over.winner ?? 'draw'} (${state.match.over.reason})` : ''}`];
   for (const [t, v] of Object.entries(state.teams)) L.push(`${t}: ${v.faction} · MP ${v.resources?.manpower ?? 0} mun ${v.resources?.munition ?? 0} fuel ${v.resources?.fuel ?? 0} · tickets ${v.tickets}`);
   if (ui.message) L.push(`! ${ui.message}`);
+  if (ui.building) L.push('', `building ${ui.building}${ui.placing ? ` · placing ${ui.placing}` : ''}`);
   const u = state.units[ui.selected];
   if (u) {
     L.push('', `${u.id} ${u.sbps} (${u.kind}) at ${u.pos.c},${u.pos.r} facing ${u.facing}`,

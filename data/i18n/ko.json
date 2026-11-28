@@ -92,6 +92,7 @@
     "entity.sandbag_wall_us.name": "모래주머니 벽",
     "entity.tank_trap_ger.name": "대전차 장애물",
     "entity.tank_trap_us.name": "대전차 장애물",
+    "map.greybox.name": "그레이박스 시험장",
     "map.skirmish.name": "교전 시험장",
     "map.skirmish.point.cp_0": "중앙 교차로",
     "map.skirmish.point.cp_1": "제재소 (연합)",

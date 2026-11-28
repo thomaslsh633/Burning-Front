@@ -28,7 +28,7 @@ test('legacy conversion: rows per layer, buildings grouped into structures, text
 test('the repo maps compile through the build step with no errors', () => {
   const { maps, errors } = buildData(repo);
   assert.deepEqual(errors, []);
-  assert.deepEqual(Object.keys(maps).sort(), ['faymonville', 'skirmish']);
+  assert.deepEqual(Object.keys(maps).sort(), ['faymonville', 'greybox', 'skirmish']);
   assert.equal(maps.faymonville.cols, 48);
   assert.ok(Object.values(maps.faymonville.hexes).some(h => h.oob), 'out-of-bounds border kept');
 });

@@ -5,23 +5,27 @@ import { validate } from '../../logic/commands/index.js';
 import { reachable } from '../../logic/movement/index.js';
 import { previewAttack } from '../../logic/combat/index.js';
 import { unitAt } from '../../logic/state/index.js';
+import { producers, offers, priceOf, conversionOf } from '../../logic/economy/index.js';
 
 const BUTTONS = { emplace: 'Emplace', pack: 'Pack', hold: 'Hold', retreat: 'Retreat' };
 
 /** { store, data, onUiChange(ui) } → { ui(), onIntent(intent) } */
 export function createController({ store, data, onUiChange = () => {} }) {
   // camera: the view angle stays fixed (SPEC §9: 35° above the ground); yaw turns in 60° steps, zoom scales the hexes
-  let ui = { selected: null, preview: null, message: null, camera: { yaw: 45, zoom: 1 } };
+  let ui = { selected: null, building: null, placing: null, preview: null, message: null, camera: { yaw: 45, zoom: 1 } };
   const set = next => { ui = { ...ui, ...next }; onUiChange(ui); };
   const send = cmd => {
     const r = store.dispatch(cmd);
-    set({ preview: null, message: r.error ? `${cmd.type}: ${r.error}` : null });
+    set({ preview: null, placing: null, message: r.error ? `${cmd.type}: ${r.error}` : null });
     if (!store.getState().units[ui.selected]) set({ selected: null });
   };
 
   function tapHex({ c, r }) {
     const s = store.getState(), side = s.match.side, hex = { c, r }, here = unitAt(s, hex), sel = s.units[ui.selected];
-    if (here && here.team === side) return set({ selected: here.id, preview: null, message: null });
+    if (ui.placing) return send({ type: 'Produce', side, building: ui.building, sbps: ui.placing, hex });
+    const building = producers(s, data).find(b => b.team === side && b.hexes.includes(`${c},${r}`));
+    if (building) return set({ selected: null, building: building.id, preview: null, message: null });
+    if (here && here.team === side) return set({ selected: here.id, building: null, preview: null, message: null });
     if (!sel) return set({ preview: null });
     if (here) {
       const cmd = { type: 'Attack', side, unit: sel.id, target: here.id };
@@ -39,9 +43,23 @@ export function createController({ store, data, onUiChange = () => {} }) {
     const s = store.getState(), side = s.match.side;
     if (id === 'rotateLeft' || id === 'rotateRight') return set({ camera: { ...ui.camera, yaw: (ui.camera.yaw + (id === 'rotateLeft' ? -60 : 60) + 360) % 360 } });
     if (id === 'zoomIn' || id === 'zoomOut') return zoom(id === 'zoomIn' ? 1.25 : 0.8);
-    if (id === 'end') { set({ selected: null }); return send(s.match.side == null ? { type: 'StartMatch', side: null } : { type: 'EndTurn', side }); }
+    if (id === 'end') { set({ selected: null, building: null }); return send(s.match.side == null ? { type: 'StartMatch', side: null } : { type: 'EndTurn', side }); }
     if (BUTTONS[id] && ui.selected) return send({ type: BUTTONS[id], side, unit: ui.selected });
+    if (id.startsWith('produce:') && ui.building) return set({ placing: id.slice(8), message: `${id.slice(8)}: tap a free hex beside the building` });
+    if (id.startsWith('convert:') && ui.selected) return send({ type: 'Convert', side, unit: ui.selected, to: id.slice(8) });
     return undefined;
+  }
+
+  /** Context buttons: what the selected building produces, or the selected unit's conversions (with why one is locked). */
+  function actions() {
+    const s = store.getState(), cost = c => Object.entries(c).map(([k, v]) => `${v} ${k.slice(0, 3)}`).join(' ') || 'free';
+    if (ui.building) return offers(s, data, ui.building).map(id => ({ id: `produce:${id}`, label: `${id} (${cost(priceOf(id, data))})` }));
+    const u = s.units[ui.selected];
+    if (!u) return [];
+    return data.rules.conversions.conversions.filter(c => c.from === u.sbps).map(c => {
+      const error = validate(s, { type: 'Convert', side: s.match.side, unit: u.id, to: c.to }, data);
+      return { id: `convert:${c.to}`, label: `→ ${c.to} (${cost(conversionOf(data, c.from, c.to).cost)})${error ? ` [${error}]` : ''}`, disabled: !!error };
+    });
   }
 
   function zoom(factor) {
@@ -50,6 +68,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
 
   return {
     ui: () => ui,
+    actions,
     onIntent(intent) {
       if (intent.type === 'tapHex') return tapHex(intent);
       if (intent.type === 'zoom') return zoom(intent.factor);

@@ -2,6 +2,14 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (greybox production and conversion, greybox map)
+- **Done:** new map `data/maps/greybox` (from scratch, mirrored: HQ and every tier slot per side, VP / fuel / munition
+  points, forest, bush, a raised hill, houses); the greybox opens it by default. Controller: tap an own HQ / tier building
+  → its base units as buttons → tap a free hex beside it to produce; a selected unit lists its conversions (locked ones
+  with the reason). Checked in Chromium. 298 tests.
+- **Next:** G-6 on a real phone (pinch, Safari) and the data-review sign-off; then D3.
+- **Blocked:** a real phone.
+
 ## 2026-11-28 (G-5 data fixes, camera, phone check)
 - **Done:** ammo ×1.5; roles from CoH3 squad types (bazooka / AT squads, snipers, transports, HE support vehicles);
   spawn-granted weapons from coh3stats as squad `loadout_weapons` (bazooka team, Panzerjäger, Guards N. Africa,

@@ -1,0 +1,289 @@
+{
+ "about": "Greybox test ground (stage G): each side has an HQ and every tier slot (t1, t2, t2a, t2b, t3, t3a, t3b); a faction produces from the slots it has (data/rules/production.json). Made from scratch, mirrored.",
+ "meta": {
+  "id": "greybox",
+  "cols": 20,
+  "rows": 12,
+  "name": "map.greybox.name"
+ },
+ "hexes": {
+  "7,3": {
+   "object": "forest"
+  },
+  "7,4": {
+   "object": "forest"
+  },
+  "8,4": {
+   "object": "forest"
+  },
+  "12,7": {
+   "object": "forest"
+  },
+  "12,8": {
+   "object": "forest"
+  },
+  "11,7": {
+   "object": "forest"
+  },
+  "5,6": {
+   "object": "bush"
+  },
+  "14,5": {
+   "object": "bush"
+  },
+  "9,9": {
+   "object": "bush"
+  },
+  "10,2": {
+   "object": "bush"
+  },
+  "9,5": {
+   "elev": 1
+  },
+  "10,5": {
+   "elev": 1
+  },
+  "9,6": {
+   "elev": 1
+  },
+  "10,6": {
+   "elev": 1
+  }
+ },
+ "structures": [
+  {
+   "id": "hq_blue",
+   "kind": "hq",
+   "team": "blue",
+   "hexes": [
+    "1,5",
+    "1,6"
+   ]
+  },
+  {
+   "id": "hq_red",
+   "kind": "hq",
+   "team": "red",
+   "hexes": [
+    "18,6",
+    "18,5"
+   ]
+  },
+  {
+   "id": "house_n",
+   "kind": "house",
+   "hexes": [
+    "11,3"
+   ]
+  },
+  {
+   "id": "house_s",
+   "kind": "house",
+   "hexes": [
+    "8,8"
+   ]
+  }
+ ],
+ "production": [
+  {
+   "id": "blue_t1",
+   "type": "t1",
+   "team": "blue",
+   "hexes": [
+    "3,2"
+   ]
+  },
+  {
+   "id": "blue_t2",
+   "type": "t2",
+   "team": "blue",
+   "hexes": [
+    "0,2"
+   ]
+  },
+  {
+   "id": "blue_t2a",
+   "type": "t2a",
+   "team": "blue",
+   "hexes": [
+    "1,9"
+   ]
+  },
+  {
+   "id": "blue_t2b",
+   "type": "t2b",
+   "team": "blue",
+   "hexes": [
+    "3,9"
+   ]
+  },
+  {
+   "id": "blue_t3",
+   "type": "t3",
+   "team": "blue",
+   "hexes": [
+    "0,11"
+   ],
+   "kind": "production_heavy"
+  },
+  {
+   "id": "blue_t3a",
+   "type": "t3a",
+   "team": "blue",
+   "hexes": [
+    "2,11"
+   ],
+   "kind": "production_heavy"
+  },
+  {
+   "id": "blue_t3b",
+   "type": "t3b",
+   "team": "blue",
+   "hexes": [
+    "4,0"
+   ],
+   "kind": "production_heavy"
+  },
+  {
+   "id": "red_t1",
+   "type": "t1",
+   "team": "red",
+   "hexes": [
+    "16,9"
+   ]
+  },
+  {
+   "id": "red_t2",
+   "type": "t2",
+   "team": "red",
+   "hexes": [
+    "19,9"
+   ]
+  },
+  {
+   "id": "red_t2a",
+   "type": "t2a",
+   "team": "red",
+   "hexes": [
+    "18,2"
+   ]
+  },
+  {
+   "id": "red_t2b",
+   "type": "t2b",
+   "team": "red",
+   "hexes": [
+    "16,2"
+   ]
+  },
+  {
+   "id": "red_t3",
+   "type": "t3",
+   "team": "red",
+   "hexes": [
+    "19,0"
+   ],
+   "kind": "production_heavy"
+  },
+  {
+   "id": "red_t3a",
+   "type": "t3a",
+   "team": "red",
+   "hexes": [
+    "17,0"
+   ],
+   "kind": "production_heavy"
+  },
+  {
+   "id": "red_t3b",
+   "type": "t3b",
+   "team": "red",
+   "hexes": [
+    "15,11"
+   ],
+   "kind": "production_heavy"
+  }
+ ],
+ "points": [
+  {
+   "id": "vp",
+   "kind": "vp",
+   "hex": "9,6",
+   "radius": 1
+  },
+  {
+   "id": "fuel_n",
+   "kind": "fuel",
+   "hex": "6,1",
+   "radius": 1
+  },
+  {
+   "id": "fuel_s",
+   "kind": "fuel",
+   "hex": "13,10",
+   "radius": 1
+  },
+  {
+   "id": "mun_n",
+   "kind": "munition",
+   "hex": "14,2",
+   "radius": 1
+  },
+  {
+   "id": "mun_s",
+   "kind": "munition",
+   "hex": "5,9",
+   "radius": 1
+  }
+ ],
+ "deploy": {
+  "blue": {
+   "zone": [
+    "2,4",
+    "2,5",
+    "2,6",
+    "2,7",
+    "3,5",
+    "3,6"
+   ],
+   "rally": "2,5"
+  },
+  "red": {
+   "zone": [
+    "17,7",
+    "17,6",
+    "17,5",
+    "17,4",
+    "16,6",
+    "16,5"
+   ],
+   "rally": "17,6"
+  }
+ },
+ "placements": [
+  {
+   "team": "blue",
+   "sbps": "riflemen_us",
+   "hex": "4,5",
+   "facing": 0
+  },
+  {
+   "team": "blue",
+   "sbps": "riflemen_us",
+   "hex": "4,7",
+   "facing": 0
+  },
+  {
+   "team": "red",
+   "sbps": "grenadier_ger",
+   "hex": "15,6",
+   "facing": 3
+  },
+  {
+   "team": "red",
+   "sbps": "grenadier_ger",
+   "hex": "15,4",
+   "facing": 3
+  }
+ ]
+}

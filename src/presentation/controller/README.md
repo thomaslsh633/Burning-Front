@@ -9,7 +9,7 @@
 
 ## Public API (exported from `index.js`)
 - `createController({ store, data, onUiChange })` → `{ ui(), onIntent(intent) }` — done for the greybox: select, two-tap
-  move and attack, buttons end / emplace / pack / hold / retreat, camera (`ui.camera`: yaw in 60° steps, zoom 0.5–3, angle fixed); one file per mode follows with the real screen (D3)
+  move and attack, buttons end / emplace / pack / hold / retreat, camera (`ui.camera`: yaw in 60° steps, zoom 0.5–3, angle fixed), production (tap an own HQ / tier building → `actions()` lists its base units → tap a free hex beside it) and conversions (`actions()` for the selected unit, locked ones with the reason); one file per mode follows with the real screen (D3)
 
 ## May import
 - `presentation/*`, `logic/<system>/index.js`, `services/<system>/index.js`

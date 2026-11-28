@@ -69,3 +69,24 @@ test('view: taps map back to hexes at any yaw and zoom', () => {
     for (const h of [H(0, 0), H(5, 4), H(11, 8)]) { const p = v.centre(h); assert.deepEqual(v.toHex(p.x, p.y), h, `yaw ${yaw}`); }
   }
 });
+
+test('production: tap an own tier building, pick a unit, tap a free hex beside it', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'hmg_30cal_us', pos: H(6, 6) }], { production: [{ id: 'b1', type: 't1', team: 'blue', hexes: ['2,2'] }] });
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(2, 2) });
+  assert.equal(ctl.ui().building, 'b1');
+  assert.ok(ctl.actions().some(a => a.id === 'produce:riflemen_us'));
+  ctl.onIntent({ type: 'tapButton', id: 'produce:riflemen_us' });
+  ctl.onIntent({ type: 'tapHex', ...H(3, 2) });
+  const made = Object.values(store.getState().units).find(u => u.sbps === 'riflemen_us');
+  assert.deepEqual(made?.pos, H(3, 2));
+  assert.equal(ctl.ui().placing, null);
+});
+
+test('conversions: listed for the selected unit; a doctrine one is shown locked', () => {
+  const { state, data } = testMatch([{ team: 'blue', sbps: 'hmg_30cal_us', pos: H(6, 6) }]);
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(6, 6) });
+  assert.deepEqual(ctl.actions().map(a => [a.id, a.disabled]), [['convert:hmg_50cal_us', true]]);
+  assert.match(ctl.actions()[0].label, /needs_doctrine/);
+});

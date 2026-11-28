@@ -10,7 +10,7 @@ import { createView, debugText } from '../presentation/greybox/index.js';
 
 export async function bootGreybox(doc, root = '.') {
   const q = new URLSearchParams(doc.location.search), opt = k => q.get(k);
-  const map = opt('map') ?? 'skirmish';
+  const map = opt('map') ?? 'greybox';
   const get = p => fetch(`${root}/${p}`).then(r => { if (!r.ok) throw new Error(`${p}: ${r.status}`); return r.json(); });
   const files = Object.fromEntries(await Promise.all(gameFiles().map(async f => [f, await get(f)])));
   const data = assembleGameData(files, { [map]: await get(`data/generated/maps/${map}.json`) });
@@ -28,6 +28,9 @@ export async function bootGreybox(doc, root = '.') {
       Object.assign(canvas, (({ w, h }) => ({ width: w, height: h }))(view.fit(state.map.cols, state.map.rows)));
     }
     view.draw(ctx, store.getState(), controller.ui(), data);
+    const box = doc.getElementById('actions');
+    box.replaceChildren(...controller.actions().map(a => Object.assign(doc.createElement('button'), {
+      textContent: a.label, disabled: !!a.disabled, onclick: () => controller.onIntent({ type: 'tapButton', id: a.id }) })));
     doc.getElementById('debug').textContent = debugText(store.getState(), controller.ui(), data);
   };
   const controller = createController({ store, data, onUiChange: redraw });

@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — greybox production (2026-11-28)
+- New test map with every tier building per side; tap a building to produce, tap a unit to see its conversions.
+- Brummbär fires every turn at what it sees; Guards (Italy) carry their bazookas.
+
 ## rewrite — data fixes, camera turn and zoom (2026-11-28)
 - Ammunition ×1.5; bazooka teams, Panzerjäger and similar squads now carry their AT weapons; HE splash hits whole squads.
 - Greybox: turn the map and zoom (buttons, mouse wheel, pinch); one finger scrolls; checked on emulated phones.
