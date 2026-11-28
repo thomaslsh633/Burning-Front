@@ -138,6 +138,11 @@ export const ROUTES = {
       return { state: born.state, events: [ev('UnitProduced', { unit: born.id, team: c.side, sbps: c.sbps, building: c.building })] };
     },
   },
+  /** { side, building, research }: start research in a production building (data/rules/research.json); paid now. */
+  Research: {
+    validate: (s, c, d) => economy.validateResearch(s, c, d),
+    apply: (s, c, d) => chain(s, [x => economy.pay(x, c.side, economy.researchOf(x, d, c.building, c.research).cost), x => economy.startResearch(x, c, d)]),
+  },
   /** { unit, to }: a field conversion (data/rules/conversions.json); spends the action. */
   Convert: {
     unit: true,

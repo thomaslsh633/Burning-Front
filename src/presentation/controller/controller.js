@@ -5,7 +5,7 @@ import { validate } from '../../logic/commands/index.js';
 import { reachable } from '../../logic/movement/index.js';
 import { previewAttack } from '../../logic/combat/index.js';
 import { unitAt } from '../../logic/state/index.js';
-import { producers, offers, priceOf, conversionOf } from '../../logic/economy/index.js';
+import { producers, offers, priceOf, conversionOf, researchOffers, researchOf } from '../../logic/economy/index.js';
 import { passengers } from '../../logic/transport/index.js';
 import { buildable } from '../../logic/build/index.js';
 import { abilitiesOf, skillReady } from '../../logic/skills/index.js';
@@ -58,6 +58,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
       const drop = (data.units.sbps[id.slice(8)].traits || []).includes('paradrop');
       return set({ placing: id.slice(8), message: `${id.slice(8)}: tap ${drop ? 'any free hex (paradrop)' : 'a free hex beside the building'}` });
     }
+    if (id.startsWith('research:') && ui.building) return send({ type: 'Research', side, building: ui.building, research: id.slice(9) });
     if (id.startsWith('build:') && ui.selected) return set({ placing: id.slice(6), message: `${id.slice(6)}: tap a free hex 1–2 away` });
     if (id.startsWith('skill:') && ui.selected) return set({ aiming: id.slice(6), message: `${id.slice(6)}: tap ${data.units.ability[id.slice(6)].target === 'unit' ? 'an enemy' : 'a hex'}` });
     if (id.startsWith('work:') && ui.selected) return send({ type: 'Build', side, unit: ui.selected, site: id.slice(5) });
@@ -71,7 +72,13 @@ export function createController({ store, data, onUiChange = () => {} }) {
   /** Context buttons: what the selected building produces, or the selected unit's conversions (with why one is locked). */
   function actions() {
     const s = store.getState(), cost = c => Object.entries(c).map(([k, v]) => `${v} ${k.slice(0, 3)}`).join(' ') || 'free';
-    if (ui.building) return offers(s, data, ui.building).map(id => ({ id: `produce:${id}`, label: `${id} (${cost(priceOf(id, data))})` }));
+    if (ui.building) {
+      const research = researchOffers(s, data, ui.building).map(id => {
+        const r = researchOf(s, data, ui.building, id), error = validate(s, { type: 'Research', side: s.match.side, building: ui.building, research: id }, data);
+        return { id: `research:${id}`, label: `⚗ ${id} (${cost(r.cost)}, ${r.turns} turns)${error ? ` [${error}]` : ''}`, disabled: !!error };
+      });
+      return [...offers(s, data, ui.building).map(id => ({ id: `produce:${id}`, label: `${id} (${cost(priceOf(id, data))})` })), ...research];
+    }
     const u = s.units[ui.selected];
     if (!u) return [];
     const conversions = data.rules.conversions.conversions.filter(c => c.from === u.sbps).map(c => {

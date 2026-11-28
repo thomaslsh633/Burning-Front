@@ -82,8 +82,8 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   swap, and every CoH3 squad upgrade kit): no upgrade system yet; CoH3 upgrade effects are in state trees (only weapon kits
   are readable, `docs/data-labels.md`).
 - **Abilities** (`logic/skills`, 2026-11-28): weapon abilities built (125); many need CoH3 research, so they wait for the research system (`?unlock=all` to test).
-- **Doctrines and research** unlock the `doctrine` / `research` lists of `data/rules/production.json` and conversions (`conversions.json` `unlock`); neither system is built.
-- **Research command** (cost, turns): not built. Production buildings are destructible but not rebuildable.
+- **Research** (2026-11-28): built (`data/rules/research.json`, regenerate with `node tools/coh3/research.js` after `npm run build:data`).
+- **Doctrines** unlock the `doctrine` lists of `data/rules/production.json`, doctrine conversions and battlegroup upgrades: not built. Production buildings are destructible but not rebuildable.
 - **Garrisons and transports** (`logic/transport`), fortified positions (`logic/build` Build), paradrop (production):
   built 2026-11-28. Not built: walls / wire / mines from the build menu, multi-hex footprints, towing guns.
 - **Map follow-ups:**

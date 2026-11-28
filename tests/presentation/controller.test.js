@@ -134,3 +134,13 @@ test('abilities: listed with cost and why one is locked; pick one, tap the hex',
   ctl.onIntent({ type: 'tapHex', ...H(5, 5) });
   assert.equal(store.getState().units.u1.cooldowns.grenade_m24_stick_grenadier_ger, 3);
 });
+
+test('research: a selected building lists its research with cost and turns; a tap starts it', () => {
+  const { state: s0, data } = testMatch([], { production: [{ id: 'bx', type: 't1', team: 'blue', hexes: ['2,2'] }] });
+  const state = { ...s0, teams: { ...s0.teams, blue: { ...s0.teams.blue, resources: { manpower: 600, munition: 0, fuel: 100 } } } };
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(2, 2) });
+  assert.match(ctl.actions().find(a => a.id === 'research:grenade_riflemen_us').label, /100 man 10 fue, 3 turns/);
+  ctl.onIntent({ type: 'tapButton', id: 'research:grenade_riflemen_us' });
+  assert.match(debugText(store.getState(), ctl.ui(), data), /researching: grenade_riflemen_us \(3 turns\)/);
+});

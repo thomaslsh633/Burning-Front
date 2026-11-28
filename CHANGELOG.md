@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — research (2026-11-28)
+- Production buildings research CoH3 upgrades (e.g. Riflemen grenades) and their locked units (e.g. Sherman 76 mm).
+- Research takes turns, one item per building at a time; the greybox and automatic 1v1s use it.
+
 ## rewrite — abilities (2026-11-28)
 - Squads use their CoH3 grenades, satchels, Panzerfausts, special shots and barrages: paid in munitions, then a cooldown.
 - Greybox lists each unit's abilities (with why one is locked); automatic 1v1s use them.

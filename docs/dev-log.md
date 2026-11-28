@@ -2,6 +2,12 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (research)
+- **Done:** `tools/coh3/research.js` → `data/rules/research.json` (15 items: CoH3 research upgrades that abilities / kits
+  require, from each building's upgrade_ext; research units at recommended half price / 2 turns); economy research
+  (`Research` route, tick in the income phase, unlocks open abilities, kits, units, conversions); greybox; autoplay. 320 tests.
+- **Next:** doctrines (battlegroups) for the doctrine units / conversions and the 27 battlegroup upgrades.
+
 ## 2026-11-28 (abilities)
 - **Done:** importer `convertAbility` → `ability.json` (new unit-data kind, schema): 125 CoH3 abilities that fire a weapon
   with known shells; `logic/skills` (cooldowns, requirements, cost, the ability weapon); `UseSkill` route; combat fires an

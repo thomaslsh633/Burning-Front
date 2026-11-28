@@ -69,7 +69,7 @@ export const SIDE_TURN_START = Object.freeze([
   ]) },
   { phase: 'capture', run: (s, d) => capture.captureTick(s, d, s.match.side) },
   { phase: 'victory', run: (s, d) => victory.settle(s, d, s.match.side) },
-  { phase: 'income', run: (s, d) => economy.collectIncome(s, d, s.match.side) },
+  { phase: 'income', run: (s, d) => chain(s, [x => economy.collectIncome(x, d, x.match.side), x => economy.researchTick(x, d, x.match.side)]) },
 ]);
 
 /** The next side's turn begins: the clock moves, then the start phases. */

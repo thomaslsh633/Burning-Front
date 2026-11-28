@@ -1,0 +1,29 @@
+{
+  "about": "data/rules/research.json (written by node tools/coh3/research.js): per faction, per CoH3 building, what it researches. unlocks: unit (a squad of the building's research list becomes producible) or upgrade (a CoH3 player upgrade that abilities and weapon kits require).",
+  "type": "object",
+  "properties": {
+    "about": { "type": "string" },
+    "factions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "unlocks": { "enum": ["unit", "upgrade"] },
+              "cost": { "$ref": "types.schema.json#/$defs/Resources" },
+              "turns": { "type": "integer", "minimum": 1 },
+              "coh3_ref": { "type": "string" }
+            },
+            "additionalProperties": false,
+            "required": ["unlocks", "cost", "turns"]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["about", "factions"]
+}

@@ -1,5 +1,5 @@
 {
-  "about": "Points, income, upkeep (SPEC §3, §10). Capture: the capturing squads' CoH3 capture rates add up per own turn-start tick; a step (neutralise, or capture a neutral point) needs points_per_step, at most one step per tick. Income per own turn start: base (the HQ) plus the yields of owned points whose sector links to the HQ (VPs pay nothing); a map point may set its own yield. Upkeep per own active unit: share_of_price × its manpower price, at most max_manpower; the excess ÷ excess_fuel_divisor is paid in fuel; net manpower never falls below min_net_share of gross. population_cap: the most population a side may field (sum of squad pop).",
+  "about": "Points, income, upkeep (SPEC §3, §10). Capture: the capturing squads' CoH3 capture rates add up per own turn-start tick; a step (neutralise, or capture a neutral point) needs points_per_step, at most one step per tick. Income per own turn start: base (the HQ) plus the yields of owned points whose sector links to the HQ (VPs pay nothing); a map point may set its own yield. Upkeep per own active unit: share_of_price × its manpower price, at most max_manpower; the excess ÷ excess_fuel_divisor is paid in fuel; net manpower never falls below min_net_share of gross. population_cap: the most population a side may field (sum of squad pop). research: a unit a building researches (data/rules/research.json) costs unit_price_share of its price (each resource, rounded to 5) and takes unit_turns own turns (2026-11-28 recommended values); CoH3 research upgrades keep their CoH3 cost and time.",
   "capture": { "points_per_step": 2 },
   "population_cap": 300,
   "income": {
@@ -11,5 +11,6 @@
       "munition": { "munition": 11, "manpower": 10 }
     }
   },
+  "research": { "unit_price_share": 0.5, "unit_turns": 2 },
   "upkeep": { "share_of_price": 0.02, "max_manpower": 20, "excess_fuel_divisor": 3, "min_net_share": 0.25 }
 }

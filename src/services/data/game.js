@@ -3,7 +3,7 @@
 import { indexUnits } from './units.js';
 
 export const BALANCE_FILES = ['scale', 'fire-rate', 'indirect', 'ammo', 'movement', 'vision', 'combat', 'status', 'crew', 'turn', 'economy', 'victory'];
-export const RULE_FILES = ['vocab', 'roster', 'weapon-flags', 'status-flags', 'terrain', 'production', 'conversions'];
+export const RULE_FILES = ['vocab', 'roster', 'weapon-flags', 'status-flags', 'terrain', 'production', 'conversions', 'research'];
 
 /** Paths (relative to the repo root) of every file the game reads, besides the compiled maps. */
 export const gameFiles = () => ['data/generated/units.json', ...BALANCE_FILES.map(n => `data/balance/${n}.json`), ...RULE_FILES.map(n => `data/rules/${n}.json`)];

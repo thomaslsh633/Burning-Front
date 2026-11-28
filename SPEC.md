@@ -224,7 +224,12 @@ Confirmed 2026-11-25 (rewrite):
   coh3stats) and targets of doctrine conversions. Research-unlocked: heroes, heavy armour and pricier variants that no CoH3
   building makes, and targets of research conversions. Everything else is base.
   Non-tank support vehicles (trucks, ambulances, medical and recovery vehicles) are produced in the faction's Tier 2 building.
-  Research itself is not built yet (`data/rules/production.json` `research` lists).
+  Research (2026-11-28, `data/rules/research.json`, `node tools/coh3/research.js`): a production building researches one item
+  at a time, paid at start; it finishes after its turns (counted at the side's turn starts, paused while the building is
+  destroyed) and the side holds it from then on. Items: the CoH3 research upgrades the building lists that abilities or
+  weapon kits require (CoH3 cost and time, e.g. US Riflemen grenades 100 MP / 10 fuel, 3 turns), and the building's research
+  units (half the unit's price, 2 turns; data/balance/economy.json). A researched unit is produced there and opens the
+  conversions to it. Upgrades only a battlegroup gives (27) wait for doctrines.
 - Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
   at most one of each per side (`data/rules/roster.json` heroes).
 - Abilities (2026-11-28, `logic/skills`): UseSkill fires the ability's CoH3 weapon `shells` times at a hex (each shell lands

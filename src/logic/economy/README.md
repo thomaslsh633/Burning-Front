@@ -3,16 +3,16 @@
 **Layer 2 — Game Logic** — Game resources (manpower, munitions, fuel) and spending.
 
 ## Owns
-- `GameState.teams[team].resources`
+- `GameState.teams[team].resources`, `unlocks` (research / doctrine held), `research` (under way)
 - income (base + supplied points, `data/balance/economy.json`), upkeep (share of price, capped, excess in fuel)
 - prices and unit production at map production buildings (`data/rules/production.json`)
-- research, CP milestones, conversion and refit prices — later
+- research in production buildings (`data/rules/research.json`) — done; CP milestones, refit prices — later
 
 ## Public API (exported from `index.js`)
 - `priceOf`, `grossIncome`, `upkeep`, `collectIncome`, `canAfford`, `pay` — done (D2-8)
 - `producers` (map production buildings + HQs), `offers`, `population`, `validateProduce` (route `Produce`: pay, then `state.spawnUnit` beside the building; population cap) — done (D2-8)
 - `conversionOf`, `validateConvert` (route `Convert`, `data/rules/conversions.json`) — done
-- `research` — later
+- `hasUnlock`, `researchOffers`, `researchOf`, `validateResearch`, `startResearch`, `researchTick` (route `Research`; tick in the income phase) — done
 
 ## May import
 - `logic/*` only (other systems through their `index.js`)

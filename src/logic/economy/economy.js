@@ -1,5 +1,5 @@
-// Resources, income, upkeep and unit production (SPEC §3, §10). Owns GameState.teams[team].resources.
-// Tuning: data/balance/economy.json; what each production building offers: data/rules/production.json.
+// Resources, income, upkeep, unit production and research (SPEC §3, §10). Owns GameState.teams[team].resources, unlocks, research.
+// Tuning: data/balance/economy.json; what each production building offers: data/rules/production.json; research: data/rules/research.json.
 import { ev } from '../events/index.js';
 import { distance, fromKey, inside } from '../hex/index.js';
 import { unitAt } from '../state/index.js';
@@ -54,7 +54,7 @@ export const conversionOf = (data, from, to) => data.rules.conversions.conversio
 export function validateConvert(state, cmd, data) {
   const u = state.units[cmd.unit], c = conversionOf(data, u.sbps, cmd.to), to = data.units.sbps[cmd.to];
   if (!c) return 'cannot_convert';
-  if (c.unlock && c.unlock !== 'base') return `needs_${c.unlock}`;   // doctrines and research are not built yet
+  if (c.unlock && c.unlock !== 'base' && !hasUnlock(state, u.team, c.to)) return `needs_${c.unlock}`;   // research (or a doctrine) unlocks the target
   if (!to || to.kind !== u.kind) return 'not_available';
   if (u.engaged) return 'engaged';
   if (!canAfford(state, u.team, c.cost)) return 'cannot_afford';
@@ -66,7 +66,7 @@ export function validateConvert(state, cmd, data) {
  * team's standing buildings (CoH3 building ids). A team holding 'all' has everything (testing). */
 export function requirementsMet(state, data, team, req = {}) {
   const has = state.teams[team].unlocks ?? [];
-  if (has.includes('all')) return true;
+  if (has.includes('all')) return true;   // (hasUnlock below for single ids)
   const f = data.rules.production.factions[state.teams[team].faction];
   const built = new Set(producers(state, data).filter(b => b.team === team).map(b => f?.slots[b.type]).filter(Boolean));
   return (req.upgrades || []).every(id => has.includes(id)) && (!req.any_upgrades?.length || req.any_upgrades.some(id => has.includes(id) || built.has(id)));
@@ -105,13 +105,59 @@ export function producers(state, data) {
     .filter(b => !isCollapsed(state, b.id));
 }
 
+/** Does the side hold this research / doctrine unlock? ('all': everything, for testing) */
+export const hasUnlock = (state, team, id) => { const u = state.teams[team].unlocks ?? []; return u.includes('all') || u.includes(id); };
+
+/** The CoH3 building a production building stands for (its faction's slot), and the faction's lists. */
+function buildingOf(state, data, buildingId) {
+  const b = producers(state, data).find(x => x.id === buildingId), faction = b && state.teams[b.team]?.faction, f = faction && data.rules.production.factions[faction];
+  return f ? { b, faction, coh3: f.slots[b.type], lists: f.buildings[f.slots[b.type]] ?? {} } : null;
+}
+
 /**
  * Squad ids a building offers its team (data/rules/production.json): its faction's CoH3 building for the map tier slot, the
- * squads it produces from the start (`base`) that the unit data has. Doctrine and research lists are not offered yet.
+ * squads it produces from the start (`base`) plus the `research` and `doctrine` squads the side has unlocked, that the unit data has.
  */
 export function offers(state, data, buildingId) {
-  const b = producers(state, data).find(x => x.id === buildingId), f = b && data.rules.production.factions[state.teams[b.team]?.faction];
-  return (f?.buildings[f.slots[b.type]]?.base ?? []).filter(id => data.units.sbps[id]);   // doctrine / research lists: locked (not built yet)
+  const x = buildingOf(state, data, buildingId);
+  if (!x) return [];
+  const unlocked = [...(x.lists.research ?? []), ...(x.lists.doctrine ?? [])].filter(id => hasUnlock(state, x.b.team, id));
+  return [...(x.lists.base ?? []), ...unlocked].filter(id => data.units.sbps[id]);
+}
+
+/** Research a building offers its side now (data/rules/research.json for its CoH3 building): not held, not under way. */
+export function researchOffers(state, data, buildingId) {
+  const x = buildingOf(state, data, buildingId);
+  if (!x) return [];
+  const t = state.teams[x.b.team], busy = new Set((t.research ?? []).map(r => r.id));
+  return Object.keys(data.rules.research.factions[x.faction]?.[x.coh3] ?? {}).filter(id => !(t.unlocks ?? []).includes(id) && !busy.has(id));
+}
+
+export const researchOf = (state, data, buildingId, id) => { const x = buildingOf(state, data, buildingId); return data.rules.research.factions[x.faction][x.coh3][id]; };
+
+/** Research command: { side, building, research }. An own standing building that offers it, idle (one at a time), paid. */
+export function validateResearch(state, cmd, data) {
+  const b = producers(state, data).find(x => x.id === cmd.building);
+  if (!b || b.team !== cmd.side) return 'no_such_building';
+  if (!researchOffers(state, data, cmd.building).includes(cmd.research)) return 'not_offered';
+  if ((state.teams[cmd.side].research ?? []).some(r => r.building === cmd.building)) return 'busy';
+  return canAfford(state, cmd.side, researchOf(state, data, cmd.building, cmd.research).cost) ? null : 'cannot_afford';
+}
+
+/** Start research (paid by the route): it finishes after its turns, counted at the side's turn starts. */
+export function startResearch(state, cmd, data) {
+  const t = state.teams[cmd.side], turns = researchOf(state, data, cmd.building, cmd.research).turns;
+  const research = [...(t.research ?? []), { id: cmd.research, building: cmd.building, left: turns }];
+  return { state: { ...state, teams: { ...state.teams, [cmd.side]: { ...t, research } } }, events: [ev('ResearchStarted', { team: cmd.side, research: cmd.research, building: cmd.building, turns })] };
+}
+
+/** Own turn start: research in a standing building is one turn nearer; finished research becomes an unlock. */
+export function researchTick(state, data, team) {
+  const t = state.teams[team], standing = new Set(producers(state, data).map(b => b.id)), events = [];
+  const research = (t.research ?? []).map(r => (standing.has(r.building) ? { ...r, left: r.left - 1 } : r));   // a destroyed building's research waits
+  const done = research.filter(r => r.left <= 0);
+  for (const r of done) events.push(ev('ResearchCompleted', { team, research: r.id, building: r.building }));
+  return { state: { ...state, teams: { ...state.teams, [team]: { ...t, research: research.filter(r => r.left > 0), unlocks: [...(t.unlocks ?? []), ...done.map(r => r.id)] } } }, events };
 }
 
 /**

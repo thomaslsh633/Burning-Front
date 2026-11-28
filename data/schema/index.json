@@ -24,6 +24,7 @@
     "data/rules/production.json": "production.schema.json",
     "data/balance/victory.json": "victory.schema.json",
     "data/rules/conversions.json": "conversions.schema.json",
+    "data/rules/research.json": "research.schema.json",
     "data/balance/greybox.json": "greybox.schema.json"
   }
 }

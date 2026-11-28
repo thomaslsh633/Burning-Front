@@ -1,0 +1,171 @@
+{
+  "about": "Research per faction and CoH3 production building (written by node tools/coh3/research.js; do not edit). upgrade: a CoH3 player upgrade that an ability or weapon kit requires, at CoH3 cost and time; unit: a squad of the building's production research list, at data/balance/economy.json research settings. A building researches one item at a time; the side holds it (teams[t].unlocks) from the turn it finishes.",
+  "factions": {
+    "american": {
+      "hq_us": {
+        "infantry_support_center_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 30
+          },
+          "turns": 6,
+          "coh3_ref": "upgrade/american/research/infantry_support_center_us"
+        },
+        "mechanized_support_center_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 30
+          },
+          "turns": 6,
+          "coh3_ref": "upgrade/american/research/mechanized_support_center_us"
+        },
+        "air_support_center_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 30
+          },
+          "turns": 6,
+          "coh3_ref": "upgrade/american/research/air_support_center_us"
+        }
+      },
+      "barracks_us": {
+        "bar_riflemen_global_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 150,
+            "fuel": 40
+          },
+          "turns": 5,
+          "coh3_ref": "upgrade/american/research/barracks/bar_riflemen_global_us"
+        },
+        "grenade_riflemen_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 10
+          },
+          "turns": 3,
+          "coh3_ref": "upgrade/american/research/barracks/grenade_riflemen_us"
+        },
+        "m1941_lmg_rifleman_global_us": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 175,
+            "fuel": 40
+          },
+          "turns": 5,
+          "coh3_ref": "upgrade/american/research/barracks/m1941_lmg_rifleman_global_us"
+        },
+        "captain_torch": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 75
+          },
+          "turns": 2
+        },
+        "stealth_ssf_commandos_torch": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 180
+          },
+          "turns": 2
+        }
+      },
+      "tank_depot_us": {
+        "sherman_76mm_us": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 170,
+            "fuel": 45
+          },
+          "turns": 2
+        }
+      }
+    },
+    "german": {
+      "infanterie_kompanie_ger": {
+        "infanterie_kompanie_vet_ger": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 125,
+            "fuel": 35
+          },
+          "turns": 5,
+          "coh3_ref": "upgrade/german/research/officer_quarters/infanterie_kompanie_vet_ger"
+        }
+      },
+      "panzer_armory_ger": {
+        "tiger_boss_ger": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 360,
+            "fuel": 100
+          },
+          "turns": 2
+        }
+      }
+    },
+    "afrika_korps": {
+      "infanterie_support_ak": {
+        "t1_unit_unlock_ak": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 40
+          },
+          "turns": 3,
+          "coh3_ref": "upgrade/afrika_korps/research/t1/t1_unit_unlock_ak"
+        }
+      },
+      "heavy_weapon_kompanie_ak": {
+        "tiger_ace_torch": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 360,
+            "fuel": 100
+          },
+          "turns": 2
+        }
+      }
+    },
+    "british": {
+      "barracks_uk": {
+        "rifle_grenade_tommy_uk": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 15
+          },
+          "turns": 3,
+          "coh3_ref": "upgrade/british/research/barracks/rifle_grenade_tommy_uk"
+        }
+      }
+    },
+    "british_africa": {
+      "barracks_africa_uk": {
+        "rifle_grenade_tommy_uk": {
+          "unlocks": "upgrade",
+          "cost": {
+            "manpower": 100,
+            "fuel": 15
+          },
+          "turns": 3,
+          "coh3_ref": "upgrade/british/research/barracks/rifle_grenade_tommy_uk"
+        }
+      },
+      "armoured_platoon_africa_uk": {
+        "command_churchill_africa_uk": {
+          "unlocks": "unit",
+          "cost": {
+            "manpower": 260,
+            "fuel": 65
+          },
+          "turns": 2
+        }
+      }
+    }
+  }
+}
