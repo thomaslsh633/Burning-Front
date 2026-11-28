@@ -38,8 +38,10 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Buildings by class (2026-11-28): HQ, tier buildings (production), doctrine buildings (produce nothing yet), neutral buildings
   (houses, church). Every building can be destroyed, in every mode (2026-11-26). Tier, doctrine and HQ buildings: CoH3 armour
   35 (below every tank gun's penetration) and HP in CoH3's ratio 1500 : 2000 : 3000 scaled so a Sherman 75 mm needs at least
-  8 hits: tier 1–2 1000 HP (8 hits), tier 3–4 1375 (11), HQ 2000 (16) (`data/rules/terrain.json`). Capture mode is still
-  won by VP tickets only. A destroyed HQ pays
+  8 hits: tier 1–2 1000 HP (8 hits), tier 3–4 1375 (11), HQ 2000 (16) (`data/rules/terrain.json`). Neutral buildings on
+  the same scale, armour 35: small house 625 (5), house 1000 (8), large house 1375 (11), church 2000 (16). Explosives hit
+  every building and map feature at full damage; other damage scales by penetration ÷ armour (2026-11-28). Capture mode
+  is still won by VP tickets only. A destroyed HQ pays
   no base income, produces nothing and links no sector; the side's engineers may rebuild it on its own footprint (one HQ
   per side at a time): 500 MP (CoH3 HQ cost) when work starts, 2 turns of work within 2 hexes, it stands again at 50 % HP
   (design values, confirmed 2026-11-28).

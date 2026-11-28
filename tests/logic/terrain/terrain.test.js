@@ -100,7 +100,7 @@ test('buildings: HP by size, block movement and sight; collapse leaves rubble an
   const { state, data } = testMatch([{ team: 'blue', sbps: 'riflemen_us', pos: H(8, 8) }, { team: 'red', sbps: 'grenadier_ger', pos: H(5, 5) }],
     { structures: [{ id: 'h1', kind: 'house_small', hexes: ['5,5', '6,5'] }] });
   const inside = tweak(state, 'u2', { container: 'h1', fsm: { ...state.units.u2.fsm, location: 'GARRISONED' } });
-  assert.equal(terrain.structureAt(inside, data, H(6, 5)).hp, 600);
+  assert.equal(terrain.structureAt(inside, data, H(6, 5)).hp, 625);
   const r = terrain.damageStructure(inside, data, 'h1', { amount: 700, pen: 200, weapon: weapon('81mm_mortar_us') });
   assert.equal(r.collapsed, true);
   assert.deepEqual(r.garrison, ['u2']);
@@ -183,4 +183,12 @@ test('a Sherman 75 mm needs at least 8 hits for a tier building (11 for tier 3โ€
   };
   assert.deepEqual([hits('t1'), hits('t4'), hits('hq')], [8, 11, 16]);
   for (const k of ['production', 'production_heavy', 'hq', 'doctrine']) assert.ok(data.rules.terrain.structures[k].armor < w.penetration.far, k);
+});
+
+test('explosives hit buildings at full damage; other damage scales by penetration รท armour', () => {
+  const { state, data } = testMatch([], { structures: [{ id: 'h', kind: 'house', hexes: ['5,5'] }] });
+  const he = terrain.damageStructure(state, data, 'h', { amount: 100, pen: 20, weapon: weapon('81mm_mortar_us') });
+  assert.equal(he.state.map.changes.structures.h.hp, 1000 - 100, 'an 81 mm shell: full 100');
+  const ap = terrain.damageStructure(state, data, 'h', { amount: 100, pen: 20, weapon: { damage_type: 'ballistic', category: 'tank_gun' } });
+  assert.equal(ap.state.map.changes.structures.h.hp, 1000 - Math.round(100 * 20 / 35));
 });

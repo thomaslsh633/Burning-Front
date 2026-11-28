@@ -22,8 +22,9 @@ export function featureHp(state, data, def, team) {
   return { hp: ebps?.hp ?? def.hp ?? 0, armor: ebps?.armor?.front ?? def.armor ?? 1 };
 }
 
-/** Damage after armour: penetration below the armour scales it down (CoH3 rule, no rolls on terrain). */
-const effective = (amount, pen, armor) => (pen == null || armor <= 1 ? amount : amount * Math.min(1, pen / armor));
+/** Damage after armour: penetration below the armour scales it down (CoH3 rule, no rolls on terrain); explosives ignore it. */
+const effective = (data, hit, armor) => ((data.rules.terrain.armor_ignored_by || []).includes(hit.weapon?.damage_type) || hit.pen == null || armor <= 1
+  ? hit.amount : hit.amount * Math.min(1, hit.pen / armor));
 
 /** Damage the line on the edge between a and b. hit: { weapon, amount, pen? } → { state, events } */
 export function damageEdge(state, data, a, b, hit) {
@@ -32,7 +33,7 @@ export function damageEdge(state, data, a, b, hit) {
   const id = `${e.line}:${e.seg}`, line = mapOf(state, data).lines[e.line];
   const full = featureHp(state, data, e.def, line.team);
   const cur = state.map.changes.segments[id]?.hp ?? full.hp;
-  const hp = Math.max(0, Math.round(cur - effective(hit.amount, hit.pen, full.armor)));
+  const hp = Math.max(0, Math.round(cur - effective(data, hit, full.armor)));
   if (hp > 0) {
     return { state: withChanges(state, c => ({ ...c, segments: { ...c.segments, [id]: { kind: e.kind, hp } } })), events: [ev('FeatureDamaged', { feature: id, kind: e.kind, hp })] };
   }
@@ -62,7 +63,7 @@ export function damageStructure(state, data, id, hit) {
   const m = mapOf(state, data), s = m.structures[id], def = data.rules.terrain.structures[s.kind], ch = state.map.changes.structures[id] || {};
   const none = { state, events: [], collapsed: false, garrison: [] };
   if (ch.collapsed || !canDamage(data, { group: 'building' }, hit.weapon)) return none;
-  const hp = Math.max(0, Math.round((ch.hp ?? def.hp) - effective(hit.amount, hit.pen, def.armor)));
+  const hp = Math.max(0, Math.round((ch.hp ?? def.hp) - effective(data, hit, def.armor)));
   if (hp > 0) {
     return { ...none, state: withChanges(state, c => ({ ...c, structures: { ...c.structures, [id]: { hp } } })), events: [ev('FeatureDamaged', { feature: id, kind: s.kind, hp })] };
   }
@@ -83,7 +84,7 @@ export function damageHex(state, data, h, hit) {
   if (ch.wreck) {
     const def = rules.wrecks[ch.wreck.kind];
     if (!canDamage(data, def, hit.weapon)) return { state, events: [] };
-    const hp = Math.max(0, Math.round(ch.wreck.hp - effective(hit.amount, hit.pen, def.armor)));
+    const hp = Math.max(0, Math.round(ch.wreck.hp - effective(data, hit, def.armor)));
     const wreck = hp > 0 ? { ...ch.wreck, hp } : undefined;
     const next = withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: { ...ch, wreck } } }));
     return { state: next, events: [ev(hp > 0 ? 'FeatureDamaged' : 'FeatureDestroyed', { feature: `wreck:${k}`, kind: ch.wreck.kind, hp })] };
@@ -92,7 +93,7 @@ export function damageHex(state, data, h, hit) {
   const def = objId ? rules.objects[objId] : null;
   if (!def?.hp || !canDamage(data, def, hit.weapon)) return { state, events: [] };
   const full = featureHp(state, data, def, null);
-  const hp = Math.max(0, Math.round((ch.hp ?? full.hp) - effective(hit.amount, hit.pen, full.armor)));
+  const hp = Math.max(0, Math.round((ch.hp ?? full.hp) - effective(data, hit, full.armor)));
   const next = withChanges(state, c => ({ ...c, hexes: { ...c.hexes, [k]: hp > 0 ? { ...ch, object: objId, hp } : { ...ch, object: def.leaves ?? null, hp: undefined } } }));
   return { state: next, events: [ev(hp > 0 ? 'FeatureDamaged' : 'FeatureDestroyed', { feature: `hex:${k}`, kind: objId, hp })] };
 }

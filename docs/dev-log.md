@@ -6,7 +6,9 @@ Newest first. One entry per finished task: done / next / blocked.
 - **Done:** pinned units no counter fire; retreat arrival at turn start keeps the action; recrew any squad size; capture
   = sum of squads' CoH3 capture rates (steps separate); building classes; tier buildings 1000 / 1375, HQ 2000 HP, armour 35
   (a Sherman needs 8 / 11 / 16 hits, tested). 285 tests.
-- **Next:** remaining open items in `docs/reviews/status-2026-11-26.md` §3; stage G.
+  Then the remaining open items with my values: neutral buildings 625 / 1000 / 1375 / 2000 HP, armour 35; explosives at
+  full damage on map features; Crusader III 45 munitions; M29 Weasel in the US Tier 2 building. 286 tests.
+- **Next:** stage G; research needs numbers.
 - **Blocked:** nothing.
 
 ## 2026-11-26 (buildings destructible, HQ rebuild, status report)

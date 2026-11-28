@@ -473,6 +473,10 @@
         ]
       }
     },
+    "armor_ignored_by": {
+      "type": "array",
+      "items": { "type": "string", "vocab": "damage_type" }
+    },
     "wreck_clearing": {
       "type": "object",
       "properties": {

@@ -6,7 +6,8 @@ New entries go on top, one short block per delivered version.
 ## rewrite — rule decisions (2026-11-28)
 - Pinned units no longer counter fire; a retreating unit reaching its rally point at its turn start can still act.
 - Any squad can recrew a gun; capture speed adds up the squads' capture rates.
-- Tier buildings take 8 Sherman hits (tier 3–4: 11, HQ: 16).
+- Tier buildings take 8 Sherman hits (tier 3–4: 11, HQ: 16); houses and the church on the same scale (5 / 8 / 11 / 16).
+- Explosives do full damage to buildings and other map features.
 
 ## rewrite — every building destructible, HQ rebuild (2026-11-26)
 - HQs and production buildings can be destroyed in every mode; capture mode is still won by tickets.

@@ -9,7 +9,7 @@ Read this first in a new session, then `CLAUDE.md`, `docs/ARCHITECTURE.md` and `
 | Repository | `thomaslsh633/Burning-Front` |
 | Working branch | `claude/serene-fermat-1ih1m8` (continues `claude/focused-davinci-afa1h6`), pushed; D2-9 is the branch head |
 | Pull request | none (create one only when the user asks) |
-| Checks | `npm run check` passes; `npm test` passes (285 tests) |
+| Checks | `npm run check` passes; `npm test` passes (286 tests) |
 | Phase | **D2 rules engine done** (exit gate: `tests/integration/match.test.js`); `logic/build` left out. Next: **stage G** |
 | Data imported | pilot only: 6 US + 6 German squads (riflemen, Sherman / Panzer IV, 57 mm / Pak 40 AT gun, 81 mm mortars, HMG teams, MG emplacements) plus each faction's sandbags / wire / tank traps |
 | Maps | `skirmish` (22 × 14) and `faymonville` (48 × 48), converted from v214 |
@@ -126,10 +126,9 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
   ownerless targets any side may destroy (CoH3); reloading units do not counter fire (`timers.reload`).
 - **Not built:** dropped weapon pickups (decided: upgrade / slot weapons only), `Captured` vs `Recrewed` (the previous
   owner of a decrewed gun is not stored), reason-code text in `data/i18n`.
-- **Choices the user has not confirmed (earlier):**
-  - sandbags, wire and tank traps show an HP bar on select;
-  - fire does not damage wrecks;
-  - building HP values: small house 600, house 1,200, large house 2,000, church 3,000.
+- **Decided 2026-11-28 (my values):** defences show an HP bar on select; fire does not damage wrecks; neutral buildings
+  625 / 1000 / 1375 / 2000 HP, armour 35; explosives ignore armour on map features; Crusader III 45 munitions; M29 Weasel
+  in the US Tier 2 building.
 - **Presentation not built:** HP bars, cover tint near the selected unit, XCOM-style shield icons in move previews,
   three-tone line strokes.
 

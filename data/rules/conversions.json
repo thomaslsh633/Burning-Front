@@ -1,5 +1,5 @@
 {
-  "about": "Unit conversions (CoH3 field upgrades that change the squad blueprint): the unit pays `cost` and its action, out of combat, and becomes `to` in place (id, hex, facing, veterancy and HP ratio kept). research: needs research first (CoH3 battlegroup-tied or global upgrades; research is not built yet, so these are refused). global: CoH3 upgrades every unit of the type at once (research). Costs from the design list of 2026-11-26. Weapon upgrades on the same blueprint (221 Panzerbüchse 41, 221 radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.",
+  "about": "Unit conversions (CoH3 field upgrades that change the squad blueprint): the unit pays `cost` and its action, out of combat, and becomes `to` in place (id, hex, facing, veterancy and HP ratio kept). research: needs research first (CoH3 battlegroup-tied or global upgrades; research is not built yet, so these are refused). global: CoH3 upgrades every unit of the type at once (research). Costs from the design list of 2026-11-26, except Crusader II → III: 45 munitions as in the CoH3 data (2026-11-28). Weapon upgrades on the same blueprint (221 Panzerbüchse 41, 221 radio antenna, Demo Sappers, Panzer III / StuG gun swap) are not conversions.",
   "conversions": [
     { "from": "halftrack_ger", "to": "halftrack_stummel_ger", "cost": { "munition": 60 } },
     { "from": "halftrack_ger", "to": "halftrack_medical_ger", "cost": { "munition": 60 } },
@@ -20,7 +20,7 @@
     { "from": "halftrack_250_ak", "to": "halftrack_250_vampire_ak", "cost": {}, "research": true },
     { "from": "truck_2_5_ak", "to": "truck_2_5_medical_ak", "cost": { "munition": 50 } },
     { "from": "tiger_ak", "to": "tiger_ace_ak", "cost": {}, "research": true },
-    { "from": "crusader_africa_uk", "to": "crusader_57mm_africa_uk", "cost": { "munition": 60 } },
+    { "from": "crusader_africa_uk", "to": "crusader_57mm_africa_uk", "cost": { "munition": 45 } },
     { "from": "cwt_15_truck_africa_uk", "to": "cwt_15_quad_mount_africa_uk", "cost": { "munition": 60 } },
     { "from": "cwt_15_truck_africa_uk", "to": "cwt_15_truck_medical_africa_uk", "cost": { "munition": 60 } },
     { "from": "cwt_lrdg_truck_africa_uk_uk", "to": "cwt_lrdg_truck_2pdr_africa_uk", "cost": { "munition": 30 }, "research": true }

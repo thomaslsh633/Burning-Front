@@ -42,7 +42,9 @@
     "british": "motor_platoon_uk",
     "british_africa": "motor_platoon_africa_uk"
   },
-  "place": {},
+  "place": {
+    "m29_weasal_us": "weapon_support_center_us"
+  },
   "research": {},
   "buildings": {
     "armoured_platoon_africa_uk": {
@@ -342,7 +344,6 @@
       "squads": [
         "char_b1_us",
         "hellcat_us",
-        "m29_weasal_us",
         "priest_kangaroo_us",
         "priest_us",
         "scott_us",
@@ -366,6 +367,7 @@
         "hmg_30cal_us",
         "infantry_assault_bazooka_team_us",
         "infantry_assault_riflemen_us",
+        "m29_weasal_us",
         "recovery_vehicle_us",
         "sniper_us",
         "ssb_sniper_africa_us",
