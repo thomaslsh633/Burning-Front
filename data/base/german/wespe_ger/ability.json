@@ -1,0 +1,116 @@
+{
+ "weapon": {
+  "barrage_wespe_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_wespe_ger",
+   "target": "hex",
+   "weapon": "105mm_wespe_ger",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.67,
+    "mid": 0.67,
+    "far": 0.67
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_tight_scatter_sp_wespe_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_tight_scatter_sp_wespe_ger",
+   "target": "hex",
+   "weapon": "105mm_tight_scatter_sp_wespe_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.17,
+    "mid": 0.17,
+    "far": 0.17
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "sp_wespe_ability_unlock"
+    ]
+   }
+  },
+  "barrage_long_range_sp_wespe_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_long_range_sp_wespe_ger",
+   "target": "hex",
+   "weapon": "105mm_long_range_sp_wespe_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.83,
+    "mid": 0.83,
+    "far": 0.83
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "sp_wespe_ability_unlock"
+    ]
+   }
+  },
+  "barrage_wespe_tracking_ger": {
+   "coh3_ref": "abilities/german/veterancy/vehicles/barrage_wespe_tracking_ger",
+   "target": "unit",
+   "weapon": "105mm_wespe_tracking_barrage_ger",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 5,
+    "max": 17
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 12,
+   "cost": {
+    "munition": 50
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "barrage_wespe_tracking_veteran_ger": {
+   "coh3_ref": "abilities/german/veterancy/vehicles/barrage_wespe_tracking_veteran_ger",
+   "target": "unit",
+   "weapon": "105mm_wespe_tracking_barrage_ger",
+   "shells": 5,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 5,
+    "max": 17
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 12,
+   "cost": {
+    "munition": 50
+   },
+   "fog": true,
+   "requires": {
+    "rank": 3
+   }
+  }
+ }
+}

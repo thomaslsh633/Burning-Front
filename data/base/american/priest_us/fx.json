@@ -1,4 +1,24 @@
 {
+ "weapon": {
+  "105mm_howitzer_priest_us": {
+   "name": "weapon.105mm_howitzer_priest_us.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "105mm_howitzer_priest_heat_us": {
+   "name": "weapon.105mm_howitzer_priest_heat_us.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "105mm_howitzer_priest_suppressing_airburst_us": {
+   "name": "weapon.105mm_howitzer_priest_suppressing_airburst_us.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  }
+ },
  "ebps": {
   "priest_us": {
    "name": "entity.priest_us.name",

@@ -17,6 +17,12 @@
    "sound": {
     "fire": "hmg"
    }
+  },
+  "75mm_char_b1_rupture_round_us": {
+   "name": "weapon.75mm_char_b1_rupture_round_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
   }
  },
  "ebps": {

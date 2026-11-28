@@ -8,6 +8,7 @@ import { unitAt } from '../../logic/state/index.js';
 import { producers, offers, priceOf, conversionOf } from '../../logic/economy/index.js';
 import { passengers } from '../../logic/transport/index.js';
 import { buildable } from '../../logic/build/index.js';
+import { abilitiesOf, skillReady } from '../../logic/skills/index.js';
 import { mapOf } from '../../logic/terrain/index.js';
 
 const BUTTONS = { emplace: 'Emplace', pack: 'Pack', hold: 'Hold', retreat: 'Retreat', exit: 'Exit', unload: 'Unload' };
@@ -17,16 +18,18 @@ const occupant = (s, h) => unitAt(s, h) ?? Object.values(s.units).find(u => u.fs
 /** { store, data, onUiChange(ui) } → { ui(), onIntent(intent) } */
 export function createController({ store, data, onUiChange = () => {} }) {
   // camera: the view angle stays fixed (SPEC §9: 35° above the ground); yaw turns in 60° steps, zoom scales the hexes
-  let ui = { selected: null, building: null, placing: null, preview: null, message: null, camera: { yaw: 45, zoom: 1 } };
+  let ui = { selected: null, building: null, placing: null, aiming: null, preview: null, message: null, camera: { yaw: 45, zoom: 1 } };
   const set = next => { ui = { ...ui, ...next }; onUiChange(ui); };
   const send = cmd => {
     const r = store.dispatch(cmd);
-    set({ preview: null, placing: null, message: r.error ? `${cmd.type}: ${r.error}` : null });
+    set({ preview: null, placing: null, aiming: null, message: r.error ? `${cmd.type}: ${r.error}` : null });
     if (!store.getState().units[ui.selected]) set({ selected: null });
   };
 
   function tapHex({ c, r }) {
     const s = store.getState(), side = s.match.side, hex = { c, r }, here = occupant(s, hex), sel = s.units[ui.selected];
+    if (ui.aiming) return send(data.units.ability[ui.aiming].target === 'unit' ? { type: 'UseSkill', side, unit: ui.selected, ability: ui.aiming, target: here?.id }
+      : { type: 'UseSkill', side, unit: ui.selected, ability: ui.aiming, hex });
     if (ui.placing) return send(ui.building ? { type: 'Produce', side, building: ui.building, sbps: ui.placing, hex } : { type: 'Build', side, unit: ui.selected, sbps: ui.placing, hex });
     const building = producers(s, data).find(b => b.team === side && b.hexes.includes(`${c},${r}`));
     if (building) return set({ selected: null, building: building.id, preview: null, message: null });
@@ -56,6 +59,7 @@ export function createController({ store, data, onUiChange = () => {} }) {
       return set({ placing: id.slice(8), message: `${id.slice(8)}: tap ${drop ? 'any free hex (paradrop)' : 'a free hex beside the building'}` });
     }
     if (id.startsWith('build:') && ui.selected) return set({ placing: id.slice(6), message: `${id.slice(6)}: tap a free hex 1–2 away` });
+    if (id.startsWith('skill:') && ui.selected) return set({ aiming: id.slice(6), message: `${id.slice(6)}: tap ${data.units.ability[id.slice(6)].target === 'unit' ? 'an enemy' : 'a hex'}` });
     if (id.startsWith('work:') && ui.selected) return send({ type: 'Build', side, unit: ui.selected, site: id.slice(5) });
     if (id.startsWith('convert:') && ui.selected) return send({ type: 'Convert', side, unit: ui.selected, to: id.slice(8) });
     if (id.startsWith('upgrade:') && ui.selected) return send({ type: 'Upgrade', side, unit: ui.selected, upgrade: id.slice(8) });
@@ -87,7 +91,11 @@ export function createController({ store, data, onUiChange = () => {} }) {
     const builds = buildable(u, data).map(id => ({ id: `build:${id}`, label: `Build ${id} (${cost(priceOf(id, data))}, ${data.units.sbps[id].build_turns ?? 1} turns)` }));
     const sites = Object.values(s.units).filter(x => x.fsm.life === 'CONSTRUCTING' && !validate(s, { type: 'Build', side: s.match.side, unit: u.id, site: x.id }, data))
       .map(x => ({ id: `work:${x.id}`, label: `Work on ${x.id} ${x.sbps} (${x.timers.build} left)` }));
-    return [...enter, ...inside, ...carried, ...sites, ...builds, ...upgrades, ...conversions];
+    const skills = abilitiesOf(u, data).map(id => {
+      const ab = data.units.ability[id], why = skillReady(s, u, id, data);
+      return { id: `skill:${id}`, label: `◎ ${id} (${cost(ab.cost ?? {})}, ${ab.shells}× ${ab.weapon}, cooldown ${ab.cooldown_turns})${why ? ` [${why}]` : ''}`, disabled: !!why };
+    });
+    return [...skills, ...enter, ...inside, ...carried, ...sites, ...builds, ...upgrades, ...conversions];
   }
 
   function zoom(factor) {

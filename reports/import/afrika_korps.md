@@ -318,6 +318,41 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | truck_2_5_medical_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_medical_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
+| grenade_assault_assault_grenadier_ak | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| assault_grenades_assault_grenadier_ak | ability | — |
+| grenade_oto_m35_bersaglieri_ak | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_bersaglieri_ak | ability | requirement required_any_in_list not modelled (treated as met) |
+| passaglia_at_explosive_ak | weapon · grenade | dropped module moving (not allowed for grenade) |
+| italian_airborne_passaglia_at_explosive_ak | ability | requirement required_player_upgrade not modelled (treated as met); requirement required_in_state not modelled (treated as met) |
+| grenade_red_devil_folgore_ak | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_red_devil_folgore_ak | ability | — |
+| grenade_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_m24_stick_kriegsmarine_ak | ability | requirement required_any_in_list not modelled (treated as met) |
+| grenade_assault_kriegsmarine_ak | ability | requirement required_squad_resources not modelled (treated as met) |
+| rifle_grenade_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| rifle_grenade_kriegsmarine_ak | ability | requirement required_squad_resources not modelled (treated as met) |
+| grenade_white_phosphorus_stormtrooper_ger | weapon · grenade | vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_red_phosphorus_kriegsmarine_ak | ability | requirement required_squad_resources not modelled (treated as met) |
+| incendiary_grenade_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_incendiary_kriegsmarine_ak | ability | requirement required_squad_resources not modelled (treated as met) |
+| anti_tank_grenade_panzergrenadier_ak | weapon · grenade | dropped module moving (not allowed for grenade) |
+| anti_tank_grenade_panzergrenadier_ak | ability | requirement required_any_in_list not modelled (treated as met) |
+| grenade_panzergrenadier_ak | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_panzergrenadier_ak | ability | requirement required_any_in_list not modelled (treated as met); requirement required_squad_upgrade not modelled (treated as met) |
+| rifle_grenade_jaeger_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_rifle_panzergrenadier_ak | ability | — |
+| anti_tank_grenade_panzerjager_ak | weapon · grenade | dropped module moving (not allowed for grenade) |
+| assault_anti_tank_grenades_assault_panzerjager_ak | ability | requirement required_player_upgrade not modelled (treated as met) |
+| grenade_stun_panzerpioneer_ak | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_stun_panzerpioneer_ak | ability | — |
+| 105mm_howitzer_cannone_barrage_ak | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_howitzer_cannone_105_ak | ability | barrage (heavy): 6 CoH3 shells → 3 every 2 turns |
+| 75mm_barrage_leig_ak | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_howitzer_75mm_leig_ak | ability | barrage (light): 6 CoH3 shells → 3 every 1 turns |
+| grb_39_grenade_launcher_he_hold_250_ak | weapon · grenade | dropped module moving (not allowed for grenade) |
+| panzerjager_kommand_grb_requisition_250_ak | ability | requirement required_player_upgrade not modelled (treated as met) |
+| 280mm_stukazufuss_rocket_ak | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_150mm_stuka_ak | ability | barrage (rocket): 6 CoH3 shells → 2 every 2 turns |
 | sandbag_wall_ak | entity · buildings | — |
 | barbed_wire_fence_ak | entity · buildings | — |
 | tank_trap_ak | entity · buildings | — |

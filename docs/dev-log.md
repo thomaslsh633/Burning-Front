@@ -2,6 +2,15 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (abilities)
+- **Done:** importer `convertAbility` → `ability.json` (new unit-data kind, schema): 125 CoH3 abilities that fire a weapon
+  with known shells; `logic/skills` (cooldowns, requirements, cost, the ability weapon); `UseSkill` route; combat fires an
+  ability's weapons at a hex or a unit (`resolveAttack(…, use)`); greybox ability buttons; autoplay uses abilities.
+  317 tests.
+- **Not built:** buffs / toggles / passives (state trees), smoke, off-map strikes, barrages without published shells,
+  ability names in i18n.
+- **Next:** research (unlocks for ability requirements, doctrine / research lists) — needs the user's numbers.
+
 ## 2026-11-28 (fortified positions, paradrop, slots)
 - **Done:** carried team weapons take 1 slot. Importer: build-menu positions with a CoH3 hold but no squad (fighting
   positions, bunker_ger, fighting_nest_ger …) become one-entity structure squads; trait `paradrop` from CoH3 paradrop call-ins

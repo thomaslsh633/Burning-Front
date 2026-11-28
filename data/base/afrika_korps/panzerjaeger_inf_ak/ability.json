@@ -1,0 +1,34 @@
+{
+ "weapon": {
+  "assault_anti_tank_grenades_assault_panzerjager_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/assault_anti_tank_grenades_assault_panzerjager_ak",
+   "target": "unit",
+   "weapon": "anti_tank_grenade_panzerjager_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "tank_buster_package_panzerjager_ak"
+    ],
+    "upgrades": [
+     "panzerjager_kommand"
+    ],
+    "rank": 1
+   }
+  }
+ }
+}

@@ -5,6 +5,12 @@
    "sound": {
     "fire": "mortar"
    }
+  },
+  "81mm_mortar_barrage_us": {
+   "name": "weapon.81mm_mortar_barrage_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
   }
  },
  "ebps": {

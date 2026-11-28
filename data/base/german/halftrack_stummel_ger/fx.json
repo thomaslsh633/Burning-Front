@@ -5,6 +5,12 @@
    "sound": {
     "fire": "artillery_mobile"
    }
+  },
+  "75mm_barrage_halftrack_stummel_ger": {
+   "name": "weapon.75mm_barrage_halftrack_stummel_ger.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
   }
  },
  "ebps": {

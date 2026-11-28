@@ -13,16 +13,16 @@ const alive = m => m.hp > 0;
 const isVehicle = u => u.kind === 'vehicle';
 const takesSuppression = u => u.kind === 'squad' || u.kind === 'team_weapon';
 
-/** → reason or null. Own turn, own unit and state vetoes are checked by commands first. */
-export function canAttack(state, data, attackerId, targetId) {
+/** → reason or null. Own turn, own unit and state vetoes are checked by commands first. use: an ability's { weapons } (no ammo needed). */
+export function canAttack(state, data, attackerId, targetId, use = null) {
   const att = state.units[attackerId], tgt = state.units[targetId];
   if (!tgt) return 'no_such_target';
   if (tgt.team === att.team) return 'friendly_target';
   // a DECREWED gun (no team) is a target for every side (CoH3)
   if (!['ACTIVE', 'DECREWED', 'CONSTRUCTING'].includes(tgt.fsm.life) || (!isOnMap(tgt) && tgt.fsm.location !== 'GARRISONED')) return 'not_a_target';
-  if (att.ammo <= 0) return 'out_of_ammo';
+  if (!use && att.ammo <= 0) return 'out_of_ammo';
   if (!canSee(state, data, att.team, tgt)) return 'target_not_seen';
-  const ws = firingWeapons(att, data);
+  const ws = use?.weapons ?? firingWeapons(att, data);
   if (!ws.length) return 'no_weapon';
   const reasons = ws.map(w => weaponReach(state, data, att, w, tgt.pos));
   return reasons.some(r => r === null) ? null : reasons[0];
@@ -119,42 +119,47 @@ function splash(unit, amount, count, skip, rng, events) {
  * one member and never carries over; AoE splashes squads. Indirect shells may land off target (spread).
  * Map features take the rest (logic/terrain applies them): each indirect shell hits whatever stands on its hex, and direct
  * misses fly into the line on the target's covering edge.
+ * use (an ability, logic/skills): { weapons, hex? } — fire these weapons instead, at the hex when given (targetId null): every
+ * shell lands there or within the spread and hits whatever stands where it lands; no ammo is spent (the ability's cost is paid).
  * → { state, events, suppression: { unitId: points }, criticals: [{ unit, critical }], featureHits: [{ hex | edge, amount, pen, weapon }] }
  */
-export function resolveAttack(state, data, attackerId, targetId, rng) {
+export function resolveAttack(state, data, attackerId, targetId, rng, use = null) {
   const c = data.balance.combat;
   let s = state;
   const att = s.units[attackerId], events = [], suppression = {}, criticals = [], featureHits = [];
   let perShotAmmo = 0;
-  for (const w of firingWeapons(att, data)) {
-    const tgt0 = s.units[targetId];
-    if (weaponReach(s, data, att, w, tgt0.pos)) continue;
-    const m = volleyModel(s, data, att, w, tgt0);
+  for (const w of use?.weapons ?? firingWeapons(att, data)) {
+    const tgt0 = targetId ? s.units[targetId] : null, aim = use?.hex ?? tgt0.pos;
+    if (weaponReach(s, data, att, w, aim)) continue;
+    const m = tgt0 ? volleyModel(s, data, att, w, tgt0) : null;   // at a hex: each shell is modelled against what it hits
+    const a = w.weapon.attack, b = m?.band ?? band(distance(att.pos, aim), a.range_hex.max), indirect = m ? m.indirect : true;
+    const shots = m?.shots ?? a.shots_per_turn[b];
     let hits = 0, pens = 0, misses = 0;
-    const pen = w.weapon.penetration[m.band];
+    const pen = w.weapon.penetration[b];
     const shotEvents = [];
-    perShotAmmo = Math.max(perShotAmmo, (w.weapon.ammo?.per_shot ?? 1) * (m.indirect ? m.shots : 1));
-    for (let shot = 0; shot < m.shots; shot++) {
+    if (!use) perShotAmmo = Math.max(perShotAmmo, (w.weapon.ammo?.per_shot ?? 1) * (indirect ? shots : 1));
+    for (let shot = 0; shot < shots; shot++) {
       // indirect: the shell lands on the aimed hex or a random hex within the spread; it hits whatever stands there
-      let aimed = tgt0.pos;
-      if (m.indirect && w.weapon.indirect?.spread_hex) {
-        const spots = disk(tgt0.pos, w.weapon.indirect.spread_hex).filter(h => inside(h, s.map.cols, s.map.rows));
+      let aimed = aim;
+      if (indirect && w.weapon.indirect?.spread_hex) {
+        const spots = disk(aim, w.weapon.indirect.spread_hex).filter(h => inside(h, s.map.cols, s.map.rows));
         aimed = spots[rng.int(spots.length)];
       }
-      if (m.indirect) featureHits.push({ hex: { ...aimed }, amount: m.damage, pen, weapon: w.weapon });
-      const victim = m.indirect ? unitAt(s, aimed) : s.units[targetId];
+      if (indirect) featureHits.push({ hex: { ...aimed }, amount: m?.damage ?? a.damage_per_shot[b], pen, weapon: w.weapon });
+      const victim = indirect ? unitAt(s, aimed) : s.units[targetId];
       if (!victim) continue;
+      const mv = m ?? volleyModel(s, data, att, w, victim);
       let v = victim;
       const face = armorFace(v, att.pos, c.armor_arcs_deg);
       const i = pick(v.members, rng);
       if (i < 0) break;
       const e = data.units.ebps[v.members[i].ebps];
-      if (takesSuppression(v) && v.id === targetId) suppression[v.id] = (suppression[v.id] ?? 0) + m.suppressionPerShot;
+      if (takesSuppression(v) && (v.id === targetId || !targetId)) suppression[v.id] = (suppression[v.id] ?? 0) + mv.suppressionPerShot;
       const multi = w.weapon.aoe && v.members.length > 1 && !isVehicle(v);
       const sf = multi ? splashFactor(w.weapon.aoe, c.aoe.squad_spread_m) : 0;
-      if (rng.next() < memberHit(m, e)) {
+      if (rng.next() < memberHit(mv, e)) {
         hits++;
-        const h = hitOn(m, w, e, face);
+        const h = hitOn(mv, w, e, face);
         const penetrated = rng.next() < h.pen;
         if (penetrated) {
           pens++;
@@ -164,15 +169,15 @@ export function resolveAttack(state, data, attackerId, targetId, rng) {
           shotEvents.push(ev('PenetrationFailed', { unit: v.id, member: i, weapon: w.id }));
           if (h.deflect > 0) v = damageMember(v, i, h.deflect, shotEvents);
         }
-        if (multi && sf > 0) v = splash(v, m.damage * sf, splashCap(w.weapon.aoe) - 1, i, rng, shotEvents);
+        if (multi && sf > 0) v = splash(v, mv.damage * sf, splashCap(w.weapon.aoe) - 1, i, rng, shotEvents);
       } else {
         misses++;
-        if (multi && sf > 0) v = splash(v, m.damage * sf * c.aoe.miss_splash, splashCap(w.weapon.aoe), -1, rng, shotEvents);
+        if (multi && sf > 0) v = splash(v, mv.damage * sf * c.aoe.miss_splash, splashCap(w.weapon.aoe), -1, rng, shotEvents);
       }
       s = putUnit(s, v);
     }
-    if (!m.indirect && misses && distance(att.pos, tgt0.pos) > 1) featureHits.push({ edge: [entryHex(att.pos, tgt0.pos), { ...tgt0.pos }], amount: misses * m.damage, pen, weapon: w.weapon });
-    events.push(ev('Fired', { unit: attackerId, target: targetId, weapon: w.id, band: m.band, shots: m.shots, hits, penetrations: pens }), ...shotEvents);
+    if (!indirect && misses && distance(att.pos, tgt0.pos) > 1) featureHits.push({ edge: [entryHex(att.pos, tgt0.pos), { ...tgt0.pos }], amount: misses * m.damage, pen, weapon: w.weapon });
+    events.push(ev('Fired', { unit: attackerId, target: targetId, ...(use?.hex ? { hex: { ...aim } } : {}), weapon: w.id, band: b, shots, hits, penetrations: pens }), ...shotEvents);
   }
   const a = s.units[attackerId], spent = Math.min(a.ammo, perShotAmmo);
   s = putUnit(s, { ...a, ammo: a.ammo - spent });

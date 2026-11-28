@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_150mm_stuka_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/barrage_150mm_stuka_ak",
+   "target": "hex",
+   "weapon": "280mm_stukazufuss_rocket_ak",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.67,
+    "mid": 0.67,
+    "far": 0.05
+   },
+   "range_hex": {
+    "min": 4,
+    "max": 16
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ }
+}

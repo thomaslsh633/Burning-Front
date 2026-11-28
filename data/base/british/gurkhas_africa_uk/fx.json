@@ -5,6 +5,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "gurkha_grenade_assault_uk": {
+   "name": "weapon.gurkha_grenade_assault_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

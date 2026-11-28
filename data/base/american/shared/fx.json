@@ -203,6 +203,60 @@
    "sound": {
     "fire": "hmg"
    }
+  },
+  "105mm_howitzer_us": {
+   "name": "weapon.105mm_howitzer_us.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "rifle_grenade_pathfinder_us": {
+   "name": "weapon.rifle_grenade_pathfinder_us.name",
+   "sound": {
+    "fire": "rifle_grenade"
+   }
+  },
+  "satchel_charge_paratrooper_us": {
+   "name": "weapon.satchel_charge_paratrooper_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "satchel_anti_tank_bazooka_team_us": {
+   "name": "weapon.satchel_anti_tank_bazooka_team_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "grenade_assault_f1_french_us": {
+   "name": "weapon.grenade_assault_f1_french_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "grenade_rifleman_us": {
+   "name": "weapon.grenade_rifleman_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "sticky_bomb_rifleman_us": {
+   "name": "weapon.sticky_bomb_rifleman_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "grenade_ranger_us": {
+   "name": "weapon.grenade_ranger_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "105mm_sherman_bulldozer_bunker_buster_us": {
+   "name": "weapon.105mm_sherman_bulldozer_bunker_buster_us.name",
+   "sound": {
+    "fire": "cannon"
+   }
   }
  },
  "ebps": {

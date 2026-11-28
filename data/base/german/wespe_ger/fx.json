@@ -1,4 +1,30 @@
 {
+ "weapon": {
+  "105mm_wespe_ger": {
+   "name": "weapon.105mm_wespe_ger.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "105mm_tight_scatter_sp_wespe_ger": {
+   "name": "weapon.105mm_tight_scatter_sp_wespe_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "105mm_long_range_sp_wespe_ger": {
+   "name": "weapon.105mm_long_range_sp_wespe_ger.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  },
+  "105mm_wespe_tracking_barrage_ger": {
+   "name": "weapon.105mm_wespe_tracking_barrage_ger.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  }
+ },
  "ebps": {
   "wespe_ger": {
    "name": "entity.wespe_ger.name",

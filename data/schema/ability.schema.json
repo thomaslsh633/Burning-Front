@@ -1,0 +1,43 @@
+{
+  "about": "ability.json per faction: { <ability_type>: { <id>: ability } }. weapon: fires `weapon` `shells` times at a hex or a unit (grenades, satchels, special shots, barrages). Other CoH3 abilities (buffs, toggles, smoke, off-map strikes) keep only their id on the squad.",
+  "$defs": {
+    "ability": {
+      "type": "object",
+      "properties": {
+        "coh3_ref": { "type": ["string", "null"] },
+        "target": { "enum": ["hex", "unit"] },
+        "weapon": { "$ref": "types.schema.json#/$defs/Id" },
+        "shells": { "type": "integer", "minimum": 1 },
+        "accuracy": { "$ref": "types.schema.json#/$defs/Band3" },
+        "range_hex": {
+          "type": "object",
+          "properties": { "min": { "type": "integer", "minimum": 0 }, "max": { "type": "integer", "minimum": 1 } },
+          "additionalProperties": false,
+          "required": ["min", "max"]
+        },
+        "spread_hex": { "type": "integer", "minimum": 0 },
+        "cooldown_turns": { "$ref": "types.schema.json#/$defs/Turns" },
+        "cost": { "$ref": "types.schema.json#/$defs/Resources" },
+        "fog": { "type": "boolean", "description": "May target a hex the side does not see (CoH3 can_target_in_fow)." },
+        "requires": {
+          "type": "object",
+          "properties": {
+            "upgrades": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" }, "description": "Player upgrades (research) the side must have." },
+            "squad_upgrades": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" }, "description": "Upgrades the squad must carry." },
+            "rank": { "type": "integer", "minimum": 0, "maximum": 3, "description": "Veterancy rank at least." }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": ["coh3_ref", "target", "weapon", "shells", "accuracy", "range_hex", "spread_hex", "cooldown_turns"]
+    }
+  },
+  "type": "object",
+  "properties": { "about": { "type": "string" } },
+  "propertyNames": { "enum": ["about", "weapon"] },
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": { "$ref": "#/$defs/ability" }
+  }
+}

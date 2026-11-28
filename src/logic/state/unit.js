@@ -26,7 +26,7 @@ export function createUnit(spec, data) {
       morale: 'NORMAL', action: 'EXHAUSTED', visibility: 'REVEALED' },
     budget: { move: 0, action: 0, counter: 0, moved: false, fired: false },
     suppression: 0, engaged: false, upgrades: [], criticals: [], timers: { stance: 0, smoke: 0, revealedUntil: 0, reload: 0, build: 0 },
-    overwatch: null, container: null, crew: null, retreatTo: null, marks: {},
+    overwatch: null, container: null, crew: null, retreatTo: null, marks: {}, cooldowns: {},
   };
 }
 

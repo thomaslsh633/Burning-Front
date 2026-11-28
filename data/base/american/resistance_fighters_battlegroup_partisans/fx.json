@@ -11,6 +11,12 @@
    "sound": {
     "fire": "panzerbuchse"
    }
+  },
+  "molotov_assault_resistance_fighters_us": {
+   "name": "weapon.molotov_assault_resistance_fighters_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

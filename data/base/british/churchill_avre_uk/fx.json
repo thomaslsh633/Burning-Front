@@ -1,12 +1,4 @@
 {
- "weapon": {
-  "290mm_avre_uk": {
-   "name": "weapon.290mm_avre_uk.name",
-   "sound": {
-    "fire": "artillery_medium"
-   }
-  }
- },
  "ebps": {
   "churchill_avre_uk": {
    "name": "entity.churchill_avre_uk.name",

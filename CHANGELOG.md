@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — abilities (2026-11-28)
+- Squads use their CoH3 grenades, satchels, Panzerfausts, special shots and barrages: paid in munitions, then a cooldown.
+- Greybox lists each unit's abilities (with why one is locked); automatic 1v1s use them.
+
 ## rewrite — fortified positions, paradrop (2026-11-28)
 - Engineers build fighting positions, bunkers and emplacements from their CoH3 build menu; sites take turns and can be shot.
 - Paratroopers, Fallschirmjäger, Folgore and commandos drop anywhere on the map; an HMG or mortar team takes one slot.

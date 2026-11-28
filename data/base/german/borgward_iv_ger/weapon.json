@@ -1,0 +1,92 @@
+{
+ "tank_gun": {
+  "88mm_borgward_iv_ger": {
+   "coh3_ref": "weapon/german/ballistic_weapon/tank_gun/88mm_borgward_iv_ger",
+   "class": "bazooka",
+   "fire_rule": "single_shot",
+   "damage": 60,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 300,
+    "mid": 200,
+    "far": 150
+   },
+   "traits": [
+    "friendly_fire",
+    "hits_all_on_miss",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 11,
+     "mid": 11,
+     "far": 11
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 144
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 1329,
+     "mid": 1329,
+     "far": 1329
+    },
+    "arc_deg": 120,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "scatter": {
+    "angle_deg": 17.5,
+    "distance_ratio": 0.25,
+    "distance_max_m": 10
+   },
+   "deflection": {
+    "damage_ratio": 0
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   }
+  }
+ }
+}

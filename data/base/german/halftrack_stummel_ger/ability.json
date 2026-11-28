@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_halftrack_stummel_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_halftrack_stummel_ger",
+   "target": "hex",
+   "weapon": "75mm_barrage_halftrack_stummel_ger",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.05,
+    "mid": 0.04,
+    "far": 0.03
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 7
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

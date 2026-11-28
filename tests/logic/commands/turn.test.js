@@ -22,7 +22,7 @@ const endTurn = (state, data, seed) => run(state, data, { type: 'EndTurn', side:
 const types = events => events.map(e => e.type);
 
 test('phase order: hooks follow the axis order at turn start and its reverse at turn end; SPEC §2 side phases', () => {
-  assert.deepEqual(UNIT_TURN_START.map(h => h.axis), AXES);
+  assert.deepEqual(UNIT_TURN_START.slice(0, AXES.length).map(h => h.axis), AXES);   // then non-axis hooks (cooldowns)
   assert.deepEqual(UNIT_TURN_END.slice(0, AXES.length).map(h => h.axis), [...AXES].reverse());
   assert.deepEqual(SIDE_TURN_START.map(p => p.phase), ['strikes', 'status', 'capture', 'victory', 'income']);
 });

@@ -1,0 +1,51 @@
+{
+ "weapon": {
+  "grenade_french_us": {
+   "coh3_ref": "abilities/american/infantry/grenade_french_us",
+   "target": "hex",
+   "weapon": "grenade_f1_french_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true
+  },
+  "french_grenade_assault_us": {
+   "coh3_ref": "abilities/american/infantry/french_grenade_assault_us",
+   "target": "hex",
+   "weapon": "grenade_assault_f1_french_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "french_new_blood_us"
+    ]
+   }
+  }
+ }
+}

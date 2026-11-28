@@ -5,6 +5,24 @@
    "sound": {
     "fire": "artillery_mobile"
    }
+  },
+  "75mm_howitzer_barrage_scott_us": {
+   "name": "weapon.75mm_howitzer_barrage_scott_us.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
+  },
+  "75mm_howitzer_barrage_bunker_buster_scott_us": {
+   "name": "weapon.75mm_howitzer_barrage_bunker_buster_scott_us.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
+  },
+  "75mm_howitzer_wp_shot_scott_us": {
+   "name": "weapon.75mm_howitzer_wp_shot_scott_us.name",
+   "sound": {
+    "fire": "artillery_mobile"
+   }
   }
  },
  "ebps": {

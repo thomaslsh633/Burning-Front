@@ -1,0 +1,25 @@
+{
+ "weapon": {
+  "molotov_assault_resistance_fighter_partisan": {
+   "coh3_ref": "abilities/american/infantry/molotov_assault_resistance_fighter_partisan",
+   "target": "unit",
+   "weapon": "molotov_assault_resistance_fighters_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.01,
+    "mid": 0.01,
+    "far": 0.01
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  }
+ }
+}

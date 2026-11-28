@@ -1,38 +1,47 @@
 {
- "tank_gun": {
-  "290mm_avre_uk": {
-   "coh3_ref": "weapon/british/ballistic_weapon/tank_gun/290mm_avre_uk",
+ "heavy_artillery": {
+  "150mm_hummel_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/150mm_hummel_ger",
    "class": "artillery_medium",
-   "fire_rule": "single_shot",
-   "damage": 720,
-   "damage_type": "ballistic",
+   "fire_rule": "artillery",
+   "damage": 200,
+   "damage_type": "explosive",
    "penetration": {
     "near": 1000,
     "mid": 1000,
     "far": 1000
    },
    "vs_target": {
-    "building": {
-     "damage": 2,
-     "penetration": 2
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "artillery_emplacement": {
+     "damage": 0.66667
+    },
+    "offmap_and_artillery_resistance": {
+     "damage": 0.75
     }
    },
    "traits": [
+    "ignores_blockers",
     "friendly_fire",
     "attack_ground",
-    "fire_on_move",
+    "replaceable",
     "reveals_on_fire"
    ],
    "attack": {
-    "fire_mode": "direct",
+    "fire_mode": "indirect",
     "accuracy": {
      "near": 1,
      "mid": 1,
-     "far": 1
+     "far": 0.05
     },
     "range_hex": {
-     "min": 0,
-     "max": 7
+     "min": 3,
+     "max": 16
     },
     "shots_per_turn": {
      "near": 1,
@@ -40,31 +49,29 @@
      "far": 1
     },
     "damage_per_shot": {
-     "near": 342,
-     "mid": 342,
-     "far": 342
+     "near": 200,
+     "mid": 200,
+     "far": 200
     },
-    "arc_deg": 360,
+    "accuracy_scale": {
+     "near": 0.87,
+     "mid": 0.87,
+     "far": 0.87
+    },
+    "arc_deg": 30,
     "vs_cover": {
      "light": {
-      "accuracy": 0.5,
       "suppression": 0.5
      },
      "heavy": {
-      "accuracy": 0.5,
       "damage": 0.5,
       "suppression": 0.1
      },
      "garrison": {
-      "accuracy": 0.4,
-      "damage": 0.3,
+      "damage": 0.75,
       "suppression": 0
      },
-     "smoke": {
-      "accuracy": 0.25
-     },
      "negative": {
-      "accuracy": 1.25,
       "damage": 1.25,
       "suppression": 1.5
      }
@@ -83,29 +90,41 @@
    },
    "aoe": {
     "damage": {
-     "near": 0.8,
-     "mid": 0.5,
-     "far": 0.25
+     "near": 1,
+     "mid": 0.35,
+     "far": 0.18
     },
     "distance_m": {
-     "near": 2.5,
-     "mid": 5,
-     "far": 11
+     "near": 2,
+     "mid": 3.25,
+     "far": 8
     },
     "suppression": {
      "near": 0,
      "mid": 0,
      "far": 0
     },
-    "max_members": -1,
+    "max_members": 5,
     "friendly_fire": true
    },
+   "scatter": {
+    "angle_deg": 7.5,
+    "distance_ratio": 0.1,
+    "distance_max_m": 12
+   },
    "deflection": {
-    "damage_ratio": 1
+    "damage_ratio": 0.15
    },
    "moving": {
-    "can_fire": true,
+    "can_fire": false,
     "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "spg",
+    "usage_turns": 1,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 16
    }
   }
  }

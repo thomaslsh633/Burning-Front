@@ -1,0 +1,25 @@
+{
+ "weapon": {
+  "bundle_grenade_panzergrenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/bundle_grenade_panzergrenadier_ger",
+   "target": "hex",
+   "weapon": "grenade_bundle_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  }
+ }
+}

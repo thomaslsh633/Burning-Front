@@ -11,6 +11,12 @@
    "sound": {
     "fire": "panzerbuchse"
    }
+  },
+  "rifle_grenade_tommy_africa_uk": {
+   "name": "weapon.rifle_grenade_tommy_africa_uk.name",
+   "sound": {
+    "fire": "rifle_grenade"
+   }
   }
  },
  "sbps": {

@@ -1,0 +1,72 @@
+{
+ "weapon": {
+  "barrage_scott_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_scott_us",
+   "target": "hex",
+   "weapon": "75mm_howitzer_barrage_scott_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.67,
+    "mid": 0.67,
+    "far": 0.3
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 13
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_scott_bunker_buster_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_scott_bunker_buster_us",
+   "target": "hex",
+   "weapon": "75mm_howitzer_barrage_bunker_buster_scott_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.47,
+    "mid": 0.39,
+    "far": 0.35
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 13
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "veterancy_1_unlock_b"
+    ]
+   }
+  },
+  "barrage_scott_white_phosphorus_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_scott_white_phosphorus_us",
+   "target": "hex",
+   "weapon": "75mm_howitzer_wp_shot_scott_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.22,
+    "mid": 0.22,
+    "far": 0.22
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 6
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

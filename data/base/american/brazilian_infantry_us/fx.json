@@ -5,6 +5,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "brazilian_rifle_grenade_hold_us": {
+   "name": "weapon.brazilian_rifle_grenade_hold_us.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
   }
  },
  "ebps": {

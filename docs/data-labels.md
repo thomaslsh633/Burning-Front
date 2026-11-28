@@ -255,10 +255,26 @@ CoH3 `fx_*`, `icon_name`, `anim_table`, `ui_info` locstrings and audio paths are
 
 ---
 
-## 8. abilities (later, decision J)
+## 8. abilities (2026-11-28, `data/schema/ability.schema.json`)
 
-Only ability ids are carried in sbps for now. The ability form (cost, cooldown turns, range, target type, weapon or
-effect) is designed with `logic/skills`; CoH3 `abilities/<race>.json` is already downloaded.
+Squads keep every CoH3 ability id (`sbps.abilities`). Abilities that fire a weapon with a published shell count get an
+`ability.json` record (group `weapon`): grenades, satchels, Panzerfausts, special shots, barrages with `NUM_SHOTS`.
+
+| Label | Type | CoH3 source | Note |
+| --- | --- | --- | --- |
+| `target` | hex / unit | `ability_bag.target` (`tp_position` → hex) | |
+| `weapon` | id | weapon item → `weapon_ext.weapon` (the first that deals damage) | imported with the ability |
+| `shells` | int | `NUM_SHOTS` / `SHOTS_TO_FIRE_AT_TARGET`, grenades 1 | barrages of an indirect class: scaled to the turn cadence |
+| `accuracy` | band | weapon accuracy, or the chance to land on the hex from scatter; ≤ 1 | × the barrage rounding |
+| `range_hex` | {min, max} | `range`, `min_range` ÷ 7 (indirect classes: capped) | |
+| `spread_hex` | int | indirect class spread | |
+| `cooldown_turns` | turns | `recharge_time` ÷ 10 s, at least 1 (barrages: the class cadence) | |
+| `cost` | resources | `cost_to_player` | |
+| `fog` | bool | `can_target_in_fow` | |
+| `requires` | upgrades / squad_upgrades / rank | `requirements`: player upgrade, squad upgrade, squad veterancy | other requirement types treated as met (report) |
+
+Not imported: buffs, toggles and passives (CoH3 state trees), smoke, mines, off-map strikes, and barrages whose shell
+count is not published (e.g. the Wehrmacht 81 mm mortar barrage).
 
 ---
 

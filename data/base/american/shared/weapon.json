@@ -390,6 +390,138 @@
     "min_range_hex": 5,
     "range_hex": 16
    }
+  },
+  "105mm_howitzer_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/heavy_artillery/105mm_howitzer_us",
+   "class": "artillery_medium",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "vs_target": {
+    "artillery_emplacement": {
+     "damage": 0.5
+    },
+    "offmap_and_artillery_resistance": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "emplace_required",
+    "emplace_faces_target",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 18
+    },
+    "shots_per_turn": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.78,
+     "mid": 0.78,
+     "far": 0.78
+    },
+    "arc_deg": 26,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.2
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 2,
+     "far": 7
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 6.5,
+    "distance_ratio": 0.1,
+    "distance_max_m": 12
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "reload": {
+    "turns": 1
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   },
+   "indirect": {
+    "class": "heavy",
+    "usage_turns": 2,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 18
+   }
   }
  },
  "tank_gun": {
@@ -828,6 +960,112 @@
    "moving": {
     "can_fire": true,
     "accuracy": 0.75
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  },
+  "105mm_sherman_bulldozer_bunker_buster_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/tank_gun/105mm_sherman_bulldozer_bunker_buster_us",
+   "class": "cannon",
+   "fire_rule": "single_shot",
+   "damage": 600,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "vs_target": {
+    "vehicle": {
+     "damage": 0.25
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "fire_on_move",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 2,
+     "max": 7
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 993,
+     "mid": 993,
+     "far": 993
+    },
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "suppression": {
+    "amount": 1,
+    "nearby_mult": 1,
+    "nearby_radius_m": 10
+   },
+   "moving": {
+    "can_fire": true,
+    "accuracy": 1
    },
    "deflection": {
     "damage_ratio": 0
@@ -2602,6 +2840,346 @@
     "angle_deg": 5,
     "distance_ratio": 0.6,
     "distance_max_m": 3
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "rifle_grenade_pathfinder_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/rifle_grenade_pathfinder_us",
+   "class": "rifle_grenade",
+   "fire_rule": "per_use",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 1,
+     "far": 0.13
+    },
+    "distance_m": {
+     "near": 1.75,
+     "mid": 1.75,
+     "far": 1.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "satchel_charge_paratrooper_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/satchel_charge_paratrooper_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 600,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "satchel_anti_tank_bazooka_team_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/satchel_anti_tank_bazooka_team_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 240,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "grenade_assault_f1_french_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/grenade_assault_f1_french_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 87,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.6,
+     "far": 0.3
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 4.5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 20,
+    "distance_ratio": 1,
+    "distance_max_m": 5
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "grenade_rifleman_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/grenade_rifleman_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.64,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 0.35,
+     "mid": 1.5,
+     "far": 3
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "sticky_bomb_rifleman_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/sticky_bomb_rifleman_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 120,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "friendly_fire",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 0.5,
+     "far": 0.5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "deflection": {
+    "damage_ratio": 0.8
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "grenade_ranger_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/grenade_ranger_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.64,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 0.35,
+     "mid": 1.5,
+     "far": 3
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
    },
    "use": {
     "by_ability": true

@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_81mm_mortar_us": {
+   "coh3_ref": "abilities/american/team_weapons/barrage_81mm_mortar_us",
+   "target": "hex",
+   "weapon": "81mm_mortar_barrage_us",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.53
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

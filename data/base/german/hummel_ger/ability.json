@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_hummel_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_hummel_ger",
+   "target": "hex",
+   "weapon": "150mm_hummel_ger",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.67,
+    "mid": 0.67,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true
+  }
+ }
+}

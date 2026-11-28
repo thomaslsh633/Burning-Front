@@ -81,6 +81,7 @@ Full status (changes since D2-7, decisions pending, items to revise): `docs/revi
 - **Weapon upgrades on the same blueprint** (221 Panzerbüchse 41 and radio antenna, Demo Sappers, Panzer III / StuG gun
   swap, and every CoH3 squad upgrade kit): no upgrade system yet; CoH3 upgrade effects are in state trees (only weapon kits
   are readable, `docs/data-labels.md`).
+- **Abilities** (`logic/skills`, 2026-11-28): weapon abilities built (125); many need CoH3 research, so they wait for the research system (`?unlock=all` to test).
 - **Doctrines and research** unlock the `doctrine` / `research` lists of `data/rules/production.json` and conversions (`conversions.json` `unlock`); neither system is built.
 - **Research command** (cost, turns): not built. Production buildings are destructible but not rebuildable.
 - **Garrisons and transports** (`logic/transport`), fortified positions (`logic/build` Build), paradrop (production):

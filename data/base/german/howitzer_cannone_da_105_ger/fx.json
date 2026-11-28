@@ -5,6 +5,12 @@
    "sound": {
     "fire": "artillery_medium"
    }
+  },
+  "105mm_howitzer_cannone_barrage_ger": {
+   "name": "weapon.105mm_howitzer_cannone_barrage_ger.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
   }
  },
  "ebps": {

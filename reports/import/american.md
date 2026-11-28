@@ -406,6 +406,85 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | truck_6x6_us | entity · vehicles | — |
 | truck_6x6_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_6x6_us | veterancy | — |
+| goon_gun_pit_barrage_us | weapon · mortar | accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar); missing module indirect |
+| barrage_goon_gun_pit_us | ability | requirement required_ability_state not modelled (treated as met); requirement required_ability_state not modelled (treated as met); requirement required_ability_state not modelled (treated as met) |
+| goon_gun_pit_airburst_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar); missing module indirect |
+| veterancy_1a_air_burst_goon_gun_pit_us | ability | requirement required_any_in_list not modelled (treated as met); requirement required_player_upgrade not modelled (treated as met) |
+| goon_gun_pit_delayed_fuze_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar); missing module indirect |
+| veterancy_1a_delayed_fuze_goon_gun_pit_us | ability | requirement required_any_in_list not modelled (treated as met) |
+| 105mm_howitzer_us | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_howitzer_105mm_us | ability | barrage (heavy): 6 CoH3 shells → 2 every 2 turns; requirement required_player_upgrade not modelled (treated as met) |
+| 81mm_mortar_pit_barrage_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| barrage_81mm_mortar_pit_us | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns; requirement required_ability_state not modelled (treated as met); requirement required_ability_state not modelled (treated as met); requirement required_ability_state not modelled (treated as met) |
+| 81mm_mortar_pit_timed_fuze_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| veterancy_1a_air_burst_mortar_pit_us | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns; requirement required_any_in_list not modelled (treated as met); requirement required_player_upgrade not modelled (treated as met) |
+| 81mm_mortar_pit_delayed_fuze_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| veterancy_1a_delayed_fuze_mortar_pit_us | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns; requirement required_any_in_list not modelled (treated as met) |
+| 81mm_mortar_pit_suppressing_air_burst_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| veterancy_1a_suppression_air_burst_mortar_pit_us | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns; requirement required_any_in_list not modelled (treated as met) |
+| rifle_grenade_pathfinder_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| rifle_grenade_pathfinder_us | ability | requirement required_any_in_list not modelled (treated as met); requirement required_ability_state not modelled (treated as met); requirement required_any_in_list not modelled (treated as met); requirement required_player_upgrade not modelled (treated as met) |
+| satchel_charge_paratrooper_us | weapon · grenade | vs_target bridge dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| satchel_charge_engineers_us | ability | — |
+| satchel_anti_tank_bazooka_team_us | weapon · grenade | dropped module moving (not allowed for grenade) |
+| satchel_anti_tank_bazook_team_us | ability | requirement required_any_in_list not modelled (treated as met); requirement required_in_state not modelled (treated as met) |
+| brazilian_rifle_grenade_hold_us | weapon · grenade | dropped module moving (not allowed for grenade) |
+| brazilian_rifle_grenadiers_us | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| grenade_f1_french_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_french_us | ability | requirement required_any_in_list not modelled (treated as met); requirement required_player_upgrade not modelled (treated as met) |
+| grenade_assault_f1_french_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| french_grenade_assault_us | ability | requirement required_any_in_list not modelled (treated as met) |
+| grenade_rifleman_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_riflemen_us | ability | requirement required_player_upgrade not modelled (treated as met) |
+| sticky_bomb_rifleman_us | weapon · grenade | dropped module moving (not allowed for grenade) |
+| sticky_bomb_riflemen_us | ability | — |
+| grenade_ranger_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_paratrooper_us | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| grenade_improved_paratrooper_us | ability | — |
+| satchel_charge_paratrooper_us | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| satchel_charge_improved_paratrooper_us | ability | — |
+| grenade_ranger_us | ability | requirement required_any_in_list not modelled (treated as met) |
+| molotov_assault_resistance_fighters_us | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| molotov_assault_resistance_fighter_partisan | ability | — |
+| molotov_resistance_fighters_partisan | weapon · grenade | dropped module moving (not allowed for grenade) |
+| molotov_resistance_fighter_partisan | ability | — |
+| grenade_type_l_resistance_fighters_partisan | weapon · grenade | dropped module moving (not allowed for grenade) |
+| grenade_type_l_resistance_fighters_partisan | ability | — |
+| french_grenade_assault_riflemen_us | ability | — |
+| panzerschreck_single_shot_saboteur_us | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
+| panzerschreck_single_shot_saboteur_us | ability | — |
+| satchel_anti_tank_saboteurs_partisan | weapon · grenade | dropped module moving (not allowed for grenade) |
+| anti_tank_satchel_saboteurs_partisan | ability | — |
+| grenade_white_phosphorus_devils_brigade_us | weapon · grenade | vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_white_phosphorus_devils_brigade_us | ability | — |
+| 3in_at_gun_barrage_us | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex); missing module indirect |
+| barrage_at_gun_3in_m5_us | ability | — |
+| 81mm_mortar_barrage_us | weapon · mortar | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| barrage_81mm_mortar_us | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns |
+| 75mm_char_b1_rupture_round_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
+| french_char_b1_rupture_round_vet_us | ability | — |
+| 75mm_howitzer_halftrack_us | weapon · light_artillery | — |
+| barrage_halftrack_75mm_us | ability | barrage (light): 6 CoH3 shells → 2 every 1 turns |
+| 75mm_howitzer_halftrack_suppressing_airburst_us | weapon · light_artillery | — |
+| barrage_halftrack_75mm_suppressing_airburst_us | ability | barrage (light): 6 CoH3 shells → 2 every 1 turns; requirement required_player_upgrade not modelled (treated as met) |
+| 90mm_pershing_hvap_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
+| hvap_shot_pershing_us | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| 90mm_pershing_hvap_veteran_gunner_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
+| hvap_shot_pershing_veteran_gunner_us | ability | — |
+| 105mm_howitzer_priest_us | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_priest_us | ability | barrage (spg): 7 CoH3 shells → 2 every 1 turns |
+| 105mm_howitzer_priest_heat_us | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_priest_heat_us | ability | barrage (spg): 7 CoH3 shells → 2 every 1 turns |
+| 105mm_howitzer_priest_suppressing_airburst_us | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_priest_suppressing_airburst_us | ability | barrage (spg): 7 CoH3 shells → 2 every 1 turns; requirement required_player_upgrade not modelled (treated as met) |
+| 75mm_howitzer_barrage_scott_us | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_scott_us | ability | barrage (light): 6 CoH3 shells → 2 every 1 turns |
+| 75mm_howitzer_barrage_bunker_buster_scott_us | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_scott_bunker_buster_us | ability | barrage (light): 6 CoH3 shells → 2 every 1 turns |
+| 75mm_howitzer_wp_shot_scott_us | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex); scatter defaulted to 0 |
+| barrage_scott_white_phosphorus_us | ability | barrage (light): 1 CoH3 shells → 1 every 1 turns; requirement required_any_in_list not modelled (treated as met) |
+| 105mm_sherman_bulldozer_bunker_buster_us | weapon · tank_gun | vs_target bridge dropped (not in vocab); deflection defaulted to 0 (CoH3: no deflection damage) |
+| veterancy_1a_bunker_buster_sherman_bulldozer_us | ability | — |
 | fighting_position_us | entity · buildings | dropped module stealth (not allowed for buildings) |
 | fighting_position_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
 | fighting_position_french_old_guard_us | entity · buildings | dropped module stealth (not allowed for buildings) |
@@ -415,6 +494,14 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | fighting_position_rifleman_us | entity · buildings | dropped module stealth (not allowed for buildings) |
 | fighting_position_rifleman_us | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
 | goon_gun_pit_us | weapon left out | missing module "indirect" (must for mortar) |
+| goon_gun_pit_barrage_us | weapon left out | missing module "indirect" (must for mortar) |
+| goon_gun_pit_airburst_us | weapon left out | missing module "indirect" (must for mortar) |
+| goon_gun_pit_delayed_fuze_us | weapon left out | missing module "indirect" (must for mortar) |
+| 3in_at_gun_barrage_us | weapon left out | missing module "indirect" (must for heavy_artillery) |
+| barrage_goon_gun_pit_us | ability left out | weapon goon_gun_pit_barrage_us not imported |
+| veterancy_1a_air_burst_goon_gun_pit_us | ability left out | weapon goon_gun_pit_airburst_us not imported |
+| veterancy_1a_delayed_fuze_goon_gun_pit_us | ability left out | weapon goon_gun_pit_delayed_fuze_us not imported |
+| barrage_at_gun_3in_m5_us | ability left out | weapon 3in_at_gun_barrage_us not imported |
 | howitzer_105mm_us | squad left out | tw_howitzer_105mm_us: missing module "crew" (must for team_weapons) |
 | sandbag_wall_us | entity · buildings | — |
 | barbed_wire_fence_us | entity · buildings | — |

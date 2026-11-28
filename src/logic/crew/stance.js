@@ -4,7 +4,7 @@ import { defineMachine, transition } from '../fsm/index.js';
 import { putUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 
-const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'Emplace', 'Pack', 'Board', 'Garrison', 'Exit', 'Hold', 'Counter'].map(c => [c, reason]));
+const NOT_WHILE = reason => Object.fromEntries(['Move', 'Turn', 'Attack', 'AttackFeature', 'UseSkill', 'Emplace', 'Pack', 'Board', 'Garrison', 'Exit', 'Hold', 'Counter'].map(c => [c, reason]));
 
 export const STANCE = defineMachine('stance', 'MOBILE', {
   MOBILE: { denies: { Pack: 'not_emplaced', Hold: 'not_emplaced' } },

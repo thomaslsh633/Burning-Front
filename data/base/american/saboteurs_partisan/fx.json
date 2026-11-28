@@ -5,6 +5,12 @@
    "sound": {
     "fire": "smg"
    }
+  },
+  "satchel_anti_tank_saboteurs_partisan": {
+   "name": "weapon.satchel_anti_tank_saboteurs_partisan.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

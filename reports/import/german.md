@@ -387,6 +387,64 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | camouflage_special_ops_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | hulldown_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
+| 88mm_emplacement_at_gun_he_ger | weapon · anti_tank_gun | dropped module moving (not allowed for anti_tank_gun) |
+| barrage_88mm_at_gun_emplacement_ger | ability | requirement required_constructionstate not modelled (treated as met) |
+| obice_210_howitzer_ger | weapon · heavy_artillery | — |
+| barrage_howitzer_obice_210_ger | ability | barrage (heavy): 4 CoH3 shells → 2 every 2 turns; requirement required_constructionstate not modelled (treated as met) |
+| 81mm_mortar_bunker_barrage_ger | weapon · mortar | accuracy derived from scatter (chance to land on the hex); dropped module moving (not allowed for mortar) |
+| barrage_81mm_mortar_bunker_ger | ability | barrage (mortar): 6 CoH3 shells → 3 every 1 turns |
+| panzerfaust_grenadier_ger | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
+| panzerfaust_grenadier_ger | ability | requirement required_any_in_list not modelled (treated as met) |
+| grenade_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_m24_stick_grenadier_ger | ability | requirement required_squad_upgrade not modelled (treated as met) |
+| grenade_assault_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_assault_grenadier_ger | ability | — |
+| incendiary_grenade_grenadier_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_incendiary_grenadier_ger | ability | — |
+| grenade_anti_tank_coastal_ger | weapon · grenade | dropped module moving (not allowed for grenade) |
+| grenade_anti_tank_coastal_ger | ability | requirement required_any_in_list not modelled (treated as met) |
+| grenade_fallschirmjager_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_fallschirmjager_ger | ability | — |
+| panzerfaust_fallschirmjager_ger | ability | — |
+| grenade_guastatori_ger | weapon · grenade | dropped module moving (not allowed for grenade) |
+| grenade_guastatori_ger | ability | — |
+| last_stand_panzerfaust_global_ger | ability | — |
+| rifle_grenade_jaeger_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_rifle_jaeger_ger | ability | — |
+| grenade_bundle_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| bundle_grenade_panzergrenadier_ger | ability | — |
+| satchel_charge_paratrooper_us | weapon · grenade | vs_target bridge dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| satchel_charge_pioneer_ger | ability | — |
+| grenade_white_phosphorus_stormtrooper_ger | weapon · grenade | vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_white_phosphorus_stormtrooper_ger | ability | — |
+| grenade_stormtrooper_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| grenade_stormtrooper_ger | ability | — |
+| grenade_pioneer_m39_ger | weapon · grenade | vs_target sandbag dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module moving (not allowed for grenade) |
+| sturmpioneer_grenade_assault_ger | ability | requirement required_any_in_list not modelled (treated as met) |
+| 105mm_howitzer_cannone_barrage_ger | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_howitzer_cannone_105_ger | ability | barrage (heavy): 6 CoH3 shells → 2 every 2 turns |
+| barrage_howitzer_coordinated_obice_210_ger | ability | barrage (heavy): 4 CoH3 shells → 3 every 2 turns; requirement required_constructionstate not modelled (treated as met) |
+| 150mm_nebelwerfer_ger | weapon · heavy_artillery | — |
+| barrage_nebelwerfer_150mm_ger | ability | barrage (rocket): 6 CoH3 shells → 2 every 2 turns |
+| 150mm_nebelwerfer_he_ger | weapon · heavy_artillery | — |
+| barrage_nebelwerfer_150mm_he_ger | ability | barrage (rocket): 6 CoH3 shells → 3 every 2 turns |
+| 88mm_borgward_iv_ger | weapon · tank_gun | — |
+| barrage_borgward_iv_ger | ability | — |
+| 75mm_barrage_halftrack_stummel_ger | weapon · light_artillery | — |
+| barrage_halftrack_stummel_ger | ability | barrage (light): 6 CoH3 shells → 3 every 1 turns |
+| 150mm_hummel_ger | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
+| barrage_hummel_ger | ability | barrage (spg): 6 CoH3 shells → 2 every 1 turns |
+| 380mm_rocket_launcher_sturmtiger_ger | weapon · tank_gun | vs_target bridge dropped (not in vocab); vs_target ambient_building dropped (not in vocab); accuracy derived from scatter (chance to land on the hex) |
+| siegebreakers_sturmtiger_shot_ger | ability | barrage (rocket): 1 CoH3 shells → 1 every 2 turns; requirement required_squad_upgrade not modelled (treated as met) |
+| 105mm_wespe_ger | weapon · heavy_artillery | — |
+| barrage_wespe_ger | ability | barrage (spg): 6 CoH3 shells → 2 every 1 turns |
+| 105mm_tight_scatter_sp_wespe_ger | weapon · heavy_artillery | — |
+| barrage_tight_scatter_sp_wespe_ger | ability | barrage (spg): 1 CoH3 shells → 1 every 1 turns |
+| 105mm_long_range_sp_wespe_ger | weapon · heavy_artillery | — |
+| barrage_long_range_sp_wespe_ger | ability | barrage (spg): 5 CoH3 shells → 1 every 1 turns |
+| 105mm_wespe_tracking_barrage_ger | weapon · heavy_artillery | — |
+| barrage_wespe_tracking_ger | ability | — |
+| barrage_wespe_tracking_veteran_ger | ability | — |
 | fighting_nest_ger | entity · buildings | — |
 | fighting_nest_ger | squad · emplacements | fortified position: no CoH3 squad; made from its entity (cost, build time, hold) |
 | bunker_ger | entity · buildings | — |

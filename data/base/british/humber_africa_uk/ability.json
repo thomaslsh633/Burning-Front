@@ -1,0 +1,30 @@
+{
+ "weapon": {
+  "polish_cavalry_tulip_rocket_strike_humber_africa_uk": {
+   "coh3_ref": "abilities/british_africa/vehicles/polish_cavalry_tulip_rocket_strike_humber_africa_uk",
+   "target": "unit",
+   "weapon": "tulip_rocket_coaxial_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.1,
+    "mid": 0.07,
+    "far": 0.05
+   },
+   "range_hex": {
+    "min": 1,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 9,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "polish_cavalry_uk"
+    ],
+    "squad_upgrades": [
+     "vehicle_tulips_africa_uk"
+    ]
+   }
+  }
+ }
+}

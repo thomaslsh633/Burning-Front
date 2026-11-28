@@ -13,7 +13,8 @@ import { buildRoster } from '../coh3/roster.js';
 import { classOf } from './indirect.js';
 import { loadConfig } from '../lib/config.js';
 import { splitByUnit } from './layout.js';
-import { FLAG_TESTS, convertWeapon, convertEntity, convertSquad, convertVeterancy, convertUpgrade } from './convert.js';
+import { FLAG_TESTS, convertWeapon, convertEntity, convertSquad, convertVeterancy, convertUpgrade, convertAbility } from './convert.js';
+import { abilityRecords, numericProps } from '../coh3/barrages.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = f => JSON.parse(fs.readFileSync(path.join(root, f), 'utf8'));
@@ -59,7 +60,7 @@ export function importFaction(faction, squadIds) {
   const rosterUnits = buildRoster(src, roster, races);
   const catUnits = Object.fromEntries(races.flatMap(r => rosterUnits[r].units.map(u => [u.id, u])));
 
-  const files = { weapon: {}, ebps: {}, sbps: {}, veterancy: {}, upgrade: {}, fx: { weapon: {}, ebps: {}, sbps: {}, upgrade: {} } };
+  const files = { weapon: {}, ebps: {}, sbps: {}, veterancy: {}, upgrade: {}, ability: {}, fx: { weapon: {}, ebps: {}, sbps: {}, upgrade: {} } };
   const report = [];
   const put = (file, category, id, rec) => { (files[file][category] ??= {})[id] = rec; };
   const addWeapon = id => {
@@ -141,6 +142,23 @@ export function importFaction(faction, squadIds) {
       if (pending.length) record.upgrades.pending = pending;
     }
   }
+  // abilities that fire a weapon (grenades, satchels, special shots, barrages): the squad keeps every id, only these get a record
+  const abilities = new Map();
+  for (const race of [...new Set([...races, 'common'])]) {
+    for (const { path: p, rec } of abilityRecords(JSON.parse(fs.readFileSync(path.join(dir, 'abilities', `${race}.json`), 'utf8')))) abilities.set(p[p.length - 1], { rec, ref: `abilities/${race}/${p.join('/')}` });
+  }
+  for (const id of new Set(Object.values(files.sbps).flatMap(c => Object.values(c).flatMap(sq => sq.abilities || [])))) {
+    const a = abilities.get(id);
+    if (!a) continue;
+    const item = (JSON.stringify(a.rec).match(/ebps\/races\/[a-z_]+\/weapons\/[a-z0-9_/]+/g) || []).map(weaponOfItem).find(w => (weapons.get(w)?.rec.weapon_bag.damage?.max ?? 0) > 0);
+    const wr = item && weapons.get(item);
+    const { record, notes } = convertAbility(a.rec.ability_bag, { id, ref: a.ref, props: numericProps(a.rec), indirect: cfg.indirect, scale,
+      weapon: wr ? { id: item, bag: wr.rec.weapon_bag, category: wr.path[wr.path.length - 2] ?? wr.path[0] } : null });
+    if (!record) continue;   // not an attack ability (yet): the id stays on the squad
+    addWeapon(item);
+    put('ability', 'weapon', id, record);
+    report.push({ id, kind: 'ability', notes });
+  }
   // fortified positions the squads build that CoH3 has no squad for (fighting positions, bunkers): a one-entity structure
   const isMember = id => Object.values(files.sbps).some(c => Object.values(c).some(sq => sq.members.some(m => m.entity === id)));
   for (const id of new Set(Object.values(files.sbps).flatMap(c => Object.values(c).flatMap(sq => sq.build?.menu || [])))) {
@@ -177,6 +195,9 @@ function dropBroken(files, profiles, report) {
     }
   }
   const has = (kind, id) => Object.values(files[kind]).some(c => id in c);
+  for (const recs of Object.values(files.ability || {})) {
+    for (const [id, a] of Object.entries(recs)) if (!has('weapon', a.weapon)) { delete recs[id]; report.push({ id, kind: 'ability left out', notes: [`weapon ${a.weapon} not imported`] }); }
+  }
   for (const c of Object.values(files.ebps)) {
     for (const e of Object.values(c)) {
       if (!e.weapons) continue;

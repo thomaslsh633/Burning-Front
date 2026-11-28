@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "italian_airborne_passaglia_at_explosive_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/italian_airborne_passaglia_at_explosive_ak",
+   "target": "unit",
+   "weapon": "passaglia_at_explosive_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "italian_airborne_ak",
+     "italian_airborne_desperate_antitank_tactics_ak"
+    ]
+   }
+  }
+ }
+}

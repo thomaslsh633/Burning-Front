@@ -1,0 +1,168 @@
+{
+ "weapon": {
+  "barrage_howitzer_105mm_us": {
+   "coh3_ref": "abilities/american/team_weapons/barrage_howitzer_105mm_us",
+   "target": "hex",
+   "weapon": "105mm_howitzer_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.06
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "fog": true
+  },
+  "rifle_grenade_pathfinder_us": {
+   "coh3_ref": "abilities/american/infantry/rifle_grenade_pathfinder_us",
+   "target": "hex",
+   "weapon": "rifle_grenade_pathfinder_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "utility_scout_us"
+    ]
+   }
+  },
+  "satchel_charge_engineers_us": {
+   "coh3_ref": "abilities/american/infantry/satchel_charge_engineers_us",
+   "target": "hex",
+   "weapon": "satchel_charge_paratrooper_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true
+  },
+  "satchel_anti_tank_bazook_team_us": {
+   "coh3_ref": "abilities/american/infantry/satchel_anti_tank_bazook_team_us",
+   "target": "unit",
+   "weapon": "satchel_anti_tank_bazooka_team_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true
+  },
+  "grenade_riflemen_us": {
+   "coh3_ref": "abilities/american/infantry/grenade_riflemen_us",
+   "target": "hex",
+   "weapon": "grenade_rifleman_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "grenade_riflemen_us"
+    ]
+   }
+  },
+  "sticky_bomb_riflemen_us": {
+   "coh3_ref": "abilities/american/infantry/sticky_bomb_riflemen_us",
+   "target": "unit",
+   "weapon": "sticky_bomb_rifleman_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "grenade_riflemen_us"
+    ]
+   }
+  },
+  "veterancy_1a_bunker_buster_sherman_bulldozer_us": {
+   "coh3_ref": "abilities/american/veterancy/vehicles/sherman_bulldozer/veterancy_1a_bunker_buster_sherman_bulldozer_us",
+   "target": "hex",
+   "weapon": "105mm_sherman_bulldozer_bunker_buster_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 6
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "veterancy_1_unlock_a"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "weapon": {
+  "grenade_ranger_us": {
+   "coh3_ref": "abilities/american/infantry/grenade_ranger_us",
+   "target": "hex",
+   "weapon": "grenade_ranger_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true
+  }
+ }
+}

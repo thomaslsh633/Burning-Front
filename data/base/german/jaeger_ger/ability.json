@@ -1,0 +1,31 @@
+{
+ "weapon": {
+  "grenade_rifle_jaeger_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_rifle_jaeger_ger",
+   "target": "hex",
+   "weapon": "rifle_grenade_jaeger_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "siegebreakers_ger",
+     "siegebreakers_clearing_gear_ger"
+    ]
+   }
+  }
+ }
+}

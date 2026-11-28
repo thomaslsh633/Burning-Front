@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "siegebreakers_sturmtiger_shot_ger": {
+   "coh3_ref": "abilities/german/vehicles/siegebreakers_sturmtiger_shot_ger",
+   "target": "hex",
+   "weapon": "380mm_rocket_launcher_sturmtiger_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 5
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ }
+}

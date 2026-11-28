@@ -5,6 +5,30 @@
    "sound": {
     "fire": "mortar"
    }
+  },
+  "81mm_mortar_pit_barrage_us": {
+   "name": "weapon.81mm_mortar_pit_barrage_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "81mm_mortar_pit_timed_fuze_us": {
+   "name": "weapon.81mm_mortar_pit_timed_fuze_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "81mm_mortar_pit_delayed_fuze_us": {
+   "name": "weapon.81mm_mortar_pit_delayed_fuze_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "81mm_mortar_pit_suppressing_air_burst_us": {
+   "name": "weapon.81mm_mortar_pit_suppressing_air_burst_us.name",
+   "sound": {
+    "fire": "mortar"
+   }
   }
  },
  "ebps": {

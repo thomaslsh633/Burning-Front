@@ -11,6 +11,30 @@
    "sound": {
     "fire": "smg"
    }
+  },
+  "grenade_grenadier_ger": {
+   "name": "weapon.grenade_grenadier_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "rifle_grenade_grenadier_ger": {
+   "name": "weapon.rifle_grenade_grenadier_ger.name",
+   "sound": {
+    "fire": "rifle_grenade"
+   }
+  },
+  "grenade_white_phosphorus_stormtrooper_ger": {
+   "name": "weapon.grenade_white_phosphorus_stormtrooper_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "incendiary_grenade_grenadier_ger": {
+   "name": "weapon.incendiary_grenade_grenadier_ger.name",
+   "sound": {
+    "fire": "flame"
+   }
   }
  },
  "ebps": {

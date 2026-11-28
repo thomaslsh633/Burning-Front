@@ -1,0 +1,46 @@
+{
+ "grenade": {
+  "grenade_white_phosphorus_devils_brigade_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/grenade_white_phosphorus_devils_brigade_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 30,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 0,
+    "mid": 0,
+    "far": 0
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "distance_m": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  }
+ }
+}

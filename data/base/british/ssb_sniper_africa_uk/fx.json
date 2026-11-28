@@ -5,6 +5,12 @@
    "sound": {
     "fire": "sniper_gib"
    }
+  },
+  "boys_at_rifle_scoped_target_gunner_africa_uk": {
+   "name": "weapon.boys_at_rifle_scoped_target_gunner_africa_uk.name",
+   "sound": {
+    "fire": "sniper_gib"
+   }
   }
  },
  "ebps": {

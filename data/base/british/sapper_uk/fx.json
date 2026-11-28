@@ -11,6 +11,18 @@
    "sound": {
     "fire": "flame"
    }
+  },
+  "grenade_no69_uk": {
+   "name": "weapon.grenade_no69_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "satchel_charge_paratrooper_us": {
+   "name": "weapon.satchel_charge_paratrooper_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

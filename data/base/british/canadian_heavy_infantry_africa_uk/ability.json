@@ -1,0 +1,56 @@
+{
+ "weapon": {
+  "hand_mortar_he_canadian_uk": {
+   "coh3_ref": "abilities/british/infantry/hand_mortar_he_canadian_uk",
+   "target": "hex",
+   "weapon": "hand_mortar_he_canadian_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.42
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 8
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "mortar_package_canadian_heavy_infantry_africa_uk"
+    ]
+   }
+  },
+  "piat_critical_shot_uk": {
+   "coh3_ref": "abilities/british/infantry/piat_critical_shot_uk",
+   "target": "unit",
+   "weapon": "piat_target_weakpoint_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "piat_package_canadian_heavy_infantry_africa_uk"
+    ]
+   }
+  }
+ }
+}

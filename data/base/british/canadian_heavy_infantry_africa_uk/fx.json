@@ -11,6 +11,18 @@
    "sound": {
     "fire": "grenade_launcher"
    }
+  },
+  "hand_mortar_he_canadian_uk": {
+   "name": "weapon.hand_mortar_he_canadian_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "piat_target_weakpoint_uk": {
+   "name": "weapon.piat_target_weakpoint_uk.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
   }
  },
  "ebps": {

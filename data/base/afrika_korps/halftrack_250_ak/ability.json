@@ -1,0 +1,27 @@
+{
+ "weapon": {
+  "panzerjager_kommand_grb_requisition_250_ak": {
+   "coh3_ref": "abilities/afrika_korps/vehicles/panzerjager_kommand_grb_requisition_250_ak",
+   "target": "unit",
+   "weapon": "grb_39_grenade_launcher_he_hold_250_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.03,
+    "mid": 0.02,
+    "far": 0.05
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 5
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "requires": {
+    "upgrades": [
+     "panzerjager_kommand",
+     "panzerjager_kommand_grb_requisition_ak"
+    ]
+   }
+  }
+ }
+}

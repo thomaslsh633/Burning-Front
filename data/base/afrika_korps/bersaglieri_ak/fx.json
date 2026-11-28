@@ -11,6 +11,12 @@
    "sound": {
     "fire": "lmg"
    }
+  },
+  "grenade_oto_m35_bersaglieri_ak": {
+   "name": "weapon.grenade_oto_m35_bersaglieri_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

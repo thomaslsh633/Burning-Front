@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "88mm_borgward_iv_ger": {
+   "name": "weapon.88mm_borgward_iv_ger.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  }
+ },
  "ebps": {
   "borgward_iv_ger": {
    "name": "entity.borgward_iv_ger.name",

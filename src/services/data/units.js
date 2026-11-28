@@ -1,11 +1,11 @@
 // Unit data for the rules: data/generated/units.json ({ factions: { faction: { kind: { group: { id: record } } } } })
 // → flat maps by id per kind, the shape src/logic reads (data.units.sbps[id] …). Pure.
 
-const KINDS = ['weapon', 'ebps', 'sbps', 'upgrade'];
+const KINDS = ['weapon', 'ebps', 'sbps', 'upgrade', 'ability'];
 
-/** → { units: { weapon, ebps, sbps, upgrade, veterancy, fx: { section: { id } } , faction: { squad id: faction } }, errors } */
+/** → { units: { weapon, ebps, sbps, upgrade, ability, veterancy, fx: { section: { id } } , faction: { squad id: faction } }, errors } */
 export function indexUnits(generated) {
-  const units = { weapon: {}, ebps: {}, sbps: {}, upgrade: {}, veterancy: {}, fx: {}, faction: {} };
+  const units = { weapon: {}, ebps: {}, sbps: {}, upgrade: {}, ability: {}, veterancy: {}, fx: {}, faction: {} };
   const errors = [];
   for (const [faction, data] of Object.entries(generated.factions || {})) {
     for (const kind of KINDS) {

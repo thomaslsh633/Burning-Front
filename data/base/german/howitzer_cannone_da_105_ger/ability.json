@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_howitzer_cannone_105_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_howitzer_cannone_105_ger",
+   "target": "hex",
+   "weapon": "105mm_howitzer_cannone_barrage_ger",
+   "shells": 2,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.1
+   },
+   "range_hex": {
+    "min": 5,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ }
+}

@@ -137,6 +137,64 @@
    "use": {
     "by_ability": true
    }
+  },
+  "grenade_stun_panzerpioneer_ak": {
+   "coh3_ref": "weapon/afrika_korps/explosive_weapon/grenade/grenade_stun_panzerpioneer_ak",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 40,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "distance_m": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 2,
+    "distance_ratio": 0,
+    "distance_max_m": 2.75
+   },
+   "use": {
+    "by_ability": true
+   }
   }
  },
  "flame_throwers": {

@@ -1,0 +1,46 @@
+{
+ "weapon": {
+  "molotov_resistance_fighter_partisan": {
+   "coh3_ref": "abilities/american/infantry/molotov_resistance_fighter_partisan",
+   "target": "hex",
+   "weapon": "molotov_resistance_fighters_partisan",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 1,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "grenade_type_l_resistance_fighters_partisan": {
+   "coh3_ref": "abilities/american/infantry/grenade_type_l_resistance_fighters_partisan",
+   "target": "unit",
+   "weapon": "grenade_type_l_resistance_fighters_partisan",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true
+  }
+ }
+}

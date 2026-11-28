@@ -86,5 +86,62 @@
     "accuracy": 0.725
    }
   }
+ },
+ "grenade": {
+  "grb_39_grenade_launcher_he_hold_250_ak": {
+   "coh3_ref": "weapon/afrika_korps/explosive_weapon/grenade/grb_39_grenade_launcher_he_hold_250_ak",
+   "class": "grenade_launcher",
+   "fire_rule": "per_use",
+   "damage": 45,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "accuracy": 10
+    },
+    "emplacement": {
+     "accuracy": 10,
+     "damage": 1.5,
+     "penetration": 10
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 0.75,
+     "mid": 0.25,
+     "far": 0.1
+    },
+    "distance_m": {
+     "near": 0.15,
+     "mid": 1.25,
+     "far": 2
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 5,
+    "distance_ratio": 0.6,
+    "distance_max_m": 3
+   },
+   "use": {
+    "by_ability": true
+   }
+  }
  }
 }

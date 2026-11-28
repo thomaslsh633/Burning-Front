@@ -5,6 +5,12 @@
    "sound": {
     "fire": "artillery_small"
    }
+  },
+  "75mm_barrage_leig_ak": {
+   "name": "weapon.75mm_barrage_leig_ak.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
   }
  },
  "ebps": {

@@ -5,6 +5,12 @@
    "sound": {
     "fire": "smg"
    }
+  },
+  "grenade_commando_uk": {
+   "name": "weapon.grenade_commando_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

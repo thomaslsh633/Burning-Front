@@ -5,6 +5,12 @@
    "sound": {
     "fire": "hmg"
    }
+  },
+  "grb_39_grenade_launcher_he_hold_250_ak": {
+   "name": "weapon.grb_39_grenade_launcher_he_hold_250_ak.name",
+   "sound": {
+    "fire": "grenade_launcher"
+   }
   }
  },
  "ebps": {

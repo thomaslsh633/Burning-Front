@@ -5,6 +5,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "grenade_pioneer_m39_ger": {
+   "name": "weapon.grenade_pioneer_m39_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

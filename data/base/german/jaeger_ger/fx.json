@@ -11,6 +11,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "rifle_grenade_jaeger_ger": {
+   "name": "weapon.rifle_grenade_jaeger_ger.name",
+   "sound": {
+    "fire": "rifle_grenade"
+   }
   }
  },
  "ebps": {

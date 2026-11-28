@@ -233,6 +233,7 @@ Built in D2-7 (`logic/lifecycle/crewing.js`, routes `Recrew`, `Abandon`, `ClearW
 | Morale FSM, suppression points, veterancy, engaged | `logic/status` | `fsm.morale`, `suppression`, `retreatTo`, `xp`, `rank`, `engaged` | thresholds, decay, multipliers, veterancy sets |
 | Lifecycle FSM, criticals, recrew, wrecks | `logic/lifecycle` | `fsm.life`, `criticals`, `crew`, `team`, `sbps` (a captured gun takes its new blueprint) | recrewable data, crit chances, wreck rules |
 | Construction work | `logic/build` | `timers.build` | `build_turns`, build menus |
+| Ability cooldowns | `logic/skills` | `cooldowns` | ability records (`cooldown_turns`, cost, requirements) |
 | Visibility FSM | `logic/vision` | `fsm.visibility`, `timers.revealedUntil` | stealth data, sight |
 | Position and facing | `logic/movement` | `pos`, `facing`, `turretFacing` | move points, pass types, terrain costs |
 | Cover (derived) | `logic/vision` | — | terrain, edges, cover tables |

@@ -1,0 +1,132 @@
+{
+ "heavy_artillery": {
+  "280mm_stukazufuss_rocket_ak": {
+   "coh3_ref": "weapon/afrika_korps/explosive_weapon/heavy_artillery/280mm_stukazufuss_rocket_ak",
+   "class": "nebelwerfer",
+   "fire_rule": "artillery",
+   "damage": 200,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 80,
+    "mid": 80,
+    "far": 80
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "artillery_emplacement": {
+     "damage": 0.66667
+    },
+    "vehicle": {
+     "penetration": 4
+    },
+    "offmap_and_artillery_resistance": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 0.07
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "damage_per_shot": {
+     "near": 200,
+     "mid": 200,
+     "far": 200
+    },
+    "arc_deg": 20,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.3,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 0.25,
+     "mid": 2,
+     "far": 8
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 9.5,
+    "distance_ratio": 0.125,
+    "distance_max_m": 15
+   },
+   "deflection": {
+    "damage_ratio": 0.4
+   },
+   "reload": {
+    "turns": 1
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   },
+   "indirect": {
+    "class": "rocket",
+    "usage_turns": 2,
+    "spread_hex": 2,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  }
+ }
+}

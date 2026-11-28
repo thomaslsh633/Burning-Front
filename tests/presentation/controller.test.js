@@ -123,3 +123,14 @@ test('build: an engineer picks a position from its build menu and taps a hex; th
   assert.equal(store.getState().units.u2.fsm.life, 'CONSTRUCTING');
   assert.match(debugText(store.getState(), { ...ctl.ui(), selected: 'u2' }, data), /site: 1 turns of work left/);
 });
+
+test('abilities: listed with cost and why one is locked; pick one, tap the hex', () => {
+  const { state: s0, data } = testMatch([{ team: 'blue', sbps: 'grenadier_ger', pos: H(3, 5) }, { team: 'red', sbps: 'riflemen_us', pos: H(5, 5) }]);
+  const state = { ...s0, teams: { ...s0.teams, blue: { ...s0.teams.blue, resources: { manpower: 600, munition: 100, fuel: 0 } } } };
+  const store = createStore(state, data, { rngFrom: s => createRng({ state: s }) }), ctl = createController({ store, data });
+  ctl.onIntent({ type: 'tapHex', ...H(3, 5) });
+  assert.ok(ctl.actions().find(a => a.id === 'skill:grenade_assault_grenadier_ger').disabled, 'needs research');
+  ctl.onIntent({ type: 'tapButton', id: 'skill:grenade_m24_stick_grenadier_ger' });
+  ctl.onIntent({ type: 'tapHex', ...H(5, 5) });
+  assert.equal(store.getState().units.u1.cooldowns.grenade_m24_stick_grenadier_ger, 3);
+});

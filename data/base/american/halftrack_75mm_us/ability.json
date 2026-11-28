@@ -1,0 +1,46 @@
+{
+ "weapon": {
+  "barrage_halftrack_75mm_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_halftrack_75mm_us",
+   "target": "hex",
+   "weapon": "75mm_howitzer_halftrack_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.54,
+    "mid": 0.37,
+    "far": 0.2
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 13
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_halftrack_75mm_suppressing_airburst_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_halftrack_75mm_suppressing_airburst_us",
+   "target": "hex",
+   "weapon": "75mm_howitzer_halftrack_suppressing_airburst_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.54,
+    "mid": 0.37,
+    "far": 0.2
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 13
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "brazilian_us",
+     "brazilian_fire_support_us"
+    ]
+   }
+  }
+ }
+}

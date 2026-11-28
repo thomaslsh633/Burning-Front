@@ -18,10 +18,10 @@
     "fire": "lmg"
    }
   },
-  "scoped_lee_enfield_tommy_uk": {
-   "name": "weapon.scoped_lee_enfield_tommy_uk.name",
+  "rifle_grenade_tommy_uk": {
+   "name": "weapon.rifle_grenade_tommy_uk.name",
    "sound": {
-    "fire": "rifle"
+    "fire": "rifle_grenade"
    }
   }
  },

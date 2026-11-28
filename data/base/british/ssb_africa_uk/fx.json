@@ -5,6 +5,12 @@
    "sound": {
     "fire": "smg"
    }
+  },
+  "satchel_charge_lewes_bomb_uk": {
+   "name": "weapon.satchel_charge_lewes_bomb_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

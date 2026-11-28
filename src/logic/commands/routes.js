@@ -15,6 +15,7 @@ import * as terrain from '../terrain/index.js';
 import * as economy from '../economy/index.js';
 import * as build from '../build/index.js';
 import * as transport from '../transport/index.js';
+import * as skills from '../skills/index.js';
 import { spawnUnit } from '../state/index.js';
 import { ev } from '../events/index.js';
 import { MACHINES, chain, ifUnit, featureSteps, fire, counterFire, overwatchStep } from './steps.js';
@@ -166,6 +167,18 @@ export const ROUTES = {
       x => economy.pay(x, x.units[c.unit].team, d.units.upgrade[c.upgrade].cost ?? {}),
       x => combat.addUpgrade(x, c.unit, c.upgrade),
       x => turn.spend(x, c.unit, { action: 1 }),
+    ]),
+  },
+  /** { unit, ability, hex | target }: an ability that fires its weapon; paid, spends the action, then cools down. A unit target fires back. */
+  UseSkill: {
+    unit: true,
+    validate: (s, c, d) => skills.validateUseSkill(s, c, d) ?? turn.budgetCheck(s.units[c.unit], 'UseSkill'),
+    apply: (s, c, d, rng) => chain(s, [
+      x => economy.pay(x, x.units[c.unit].team, d.units.ability[c.ability].cost ?? {}),
+      x => fire(x, d, rng, c.unit, c.target ?? null, skills.useOf(x, c, d)),
+      ifUnit(c.unit, x => skills.startCooldown(x, c.unit, c.ability, d)),
+      ifUnit(c.unit, x => turn.spend(x, c.unit, { action: 1, fired: true })),
+      x => (c.target ? counterFire(x, d, rng, c.target, c.unit) : { state: x, events: [] }),
     ]),
   },
   /** { unit, sbps, hex }: place a structure site (paid); { unit, site }: one more turn of work. Built → ACTIVE at full HP. */

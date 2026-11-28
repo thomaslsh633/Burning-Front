@@ -5,6 +5,18 @@
    "sound": {
     "fire": "cannon_large"
    }
+  },
+  "90mm_pershing_hvap_us": {
+   "name": "weapon.90mm_pershing_hvap_us.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
+  },
+  "90mm_pershing_hvap_veteran_gunner_us": {
+   "name": "weapon.90mm_pershing_hvap_veteran_gunner_us.name",
+   "sound": {
+    "fire": "cannon_large"
+   }
   }
  },
  "ebps": {

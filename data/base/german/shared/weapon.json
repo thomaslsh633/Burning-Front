@@ -348,6 +348,118 @@
    "deflection": {
     "damage_ratio": 0
    }
+  },
+  "88mm_emplacement_at_gun_he_ger": {
+   "coh3_ref": "weapon/german/ballistic_weapon/anti_tank_gun/88mm_emplacement_at_gun_he_ger",
+   "class": "artillery_medium",
+   "fire_rule": "single_shot",
+   "damage": 120,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 75,
+    "mid": 75,
+    "far": 75
+   },
+   "traits": [
+    "anti_air",
+    "anti_air_through_cover",
+    "emplace_required",
+    "emplace_faces_target",
+    "friendly_fire",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 0.08,
+     "mid": 0.05,
+     "far": 0.04
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 144
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 167,
+     "mid": 167,
+     "far": 167
+    },
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.25,
+      "damage": 0.5,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.8,
+     "mid": 0.5,
+     "far": 0.3
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.25,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 10,
+    "distance_ratio": 0.5,
+    "distance_max_m": 8
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   }
   }
  },
  "heavy_machine_gun": {
@@ -812,6 +924,129 @@
     "usage_turns": 1,
     "spread_hex": 0,
     "min_range_hex": 3,
+    "range_hex": 12
+   }
+  },
+  "81mm_mortar_bunker_barrage_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/mortar/81mm_mortar_bunker_barrage_ger",
+   "class": "mortar",
+   "fire_rule": "artillery",
+   "damage": 100,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 20,
+    "mid": 20,
+    "far": 20
+   },
+   "vs_target": {
+    "sniper": {
+     "damage": 0.8
+    },
+    "bunker": {
+     "damage": 0.75,
+     "penetration": 2
+    },
+    "emplacement": {
+     "damage": 0.5
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "emplace_required",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 0.12
+    },
+    "range_hex": {
+     "min": 2,
+     "max": 12
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 100,
+     "mid": 100,
+     "far": 100
+    },
+    "arc_deg": 360,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.4,
+     "mid": 0.3,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 0,
+     "mid": 0.35,
+     "far": 7
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 6.5,
+    "distance_ratio": 0.05,
+    "distance_max_m": 6
+   },
+   "deflection": {
+    "damage_ratio": 0.2
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": false
+   },
+   "indirect": {
+    "class": "mortar",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 2,
     "range_hex": 12
    }
   }
@@ -1920,6 +2155,359 @@
    "deflection": {
     "damage_ratio": 0
    }
+  },
+  "panzerfaust_grenadier_ger": {
+   "coh3_ref": "weapon/german/ballistic_weapon/infantry_anti_tank_weapon/panzerfaust_grenadier_ger",
+   "class": "bazooka",
+   "fire_rule": "single_shot",
+   "damage": 120,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "friendly_fire",
+    "hits_all_on_miss",
+    "attack_ground",
+    "replacement",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 11,
+     "mid": 11,
+     "far": 11
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 384,
+     "mid": 384,
+     "far": 384
+    },
+    "arc_deg": 90,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "scatter": {
+    "angle_deg": 7.5,
+    "distance_ratio": 1,
+    "distance_max_m": 10
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.35
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  }
+ },
+ "heavy_artillery": {
+  "150mm_nebelwerfer_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/150mm_nebelwerfer_ger",
+   "class": "nebelwerfer",
+   "fire_rule": "artillery",
+   "damage": 80,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 35,
+    "mid": 35,
+    "far": 35
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "artillery_emplacement": {
+     "damage": 0.66667
+    },
+    "vehicle": {
+     "damage": 1.5,
+     "penetration": 4
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "emplace_required",
+    "emplace_faces_target",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "damage_per_shot": {
+     "near": 80,
+     "mid": 80,
+     "far": 80
+    },
+    "arc_deg": 0,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.4,
+     "mid": 0.35,
+     "far": 0.3
+    },
+    "distance_m": {
+     "near": 0,
+     "mid": 1.5,
+     "far": 5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 12,
+    "distance_ratio": 0.3,
+    "distance_max_m": 10
+   },
+   "reload": {
+    "turns": 1
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   },
+   "indirect": {
+    "class": "rocket",
+    "usage_turns": 2,
+    "spread_hex": 2,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  },
+  "150mm_nebelwerfer_he_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/150mm_nebelwerfer_he_ger",
+   "class": "nebelwerfer",
+   "fire_rule": "artillery",
+   "damage": 100,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 125,
+    "mid": 125,
+    "far": 125
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "artillery_emplacement": {
+     "damage": 0.66667
+    },
+    "vehicle": {
+     "damage": 1.5,
+     "penetration": 4
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "emplace_required",
+    "emplace_faces_target",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "damage_per_shot": {
+     "near": 100,
+     "mid": 100,
+     "far": 100
+    },
+    "arc_deg": 0,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.6,
+     "mid": 0.4,
+     "far": 0.3
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 2,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 10,
+    "distance_ratio": 0.3,
+    "distance_max_m": 10
+   },
+   "reload": {
+    "turns": 1
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   },
+   "indirect": {
+    "class": "rocket",
+    "usage_turns": 2,
+    "spread_hex": 2,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
   }
  },
  "smoke": {
@@ -2119,6 +2707,212 @@
      "far": 0
     },
     "max_members": 3,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "grenade_grenadier_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/grenade/grenade_grenadier_ger",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.53,
+     "far": 0.17
+    },
+    "distance_m": {
+     "near": 0.35,
+     "mid": 1,
+     "far": 3
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "grenade_assault_grenadier_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/grenade/grenade_assault_grenadier_ger",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 55,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 0.7,
+     "mid": 0.5,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 4.5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 15,
+    "distance_ratio": 0.5,
+    "distance_max_m": 5
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "incendiary_grenade_grenadier_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/grenade/incendiary_grenade_grenadier_ger",
+   "class": "flame",
+   "fire_rule": "per_use",
+   "damage": 30,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 2.5,
+     "far": 2.5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "satchel_charge_paratrooper_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/satchel_charge_paratrooper_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 600,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
     "friendly_fire": true
    },
    "use": {

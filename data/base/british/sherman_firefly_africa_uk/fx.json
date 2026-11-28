@@ -5,6 +5,12 @@
    "sound": {
     "fire": "cannon"
    }
+  },
+  "17pdr_firefly_sabot_uk": {
+   "name": "weapon.17pdr_firefly_sabot_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
   }
  },
  "ebps": {

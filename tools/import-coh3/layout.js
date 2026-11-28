@@ -16,7 +16,9 @@ export function reachOf(files, squadId) {
   const weapon = new Set([squad.team_weapon?.weapon].filter(Boolean));
   for (const e of ebps) for (const w of find(files, 'ebps', e)?.weapons || []) weapon.add(w.weapon);
   for (const u of upgrade) for (const fx of find(files, 'upgrade', u)?.effects || []) if (fx.weapon) weapon.add(fx.weapon);
-  return { sbps: [squadId], ebps, weapon: [...weapon], upgrade, veterancy: squad.veterancy?.set ? [squad.veterancy.set] : [] };
+  const ability = (squad.abilities || []).filter(a => find(files, 'ability', a));
+  for (const a of ability) weapon.add(find(files, 'ability', a).weapon);
+  return { sbps: [squadId], ebps, weapon: [...weapon], upgrade, ability, veterancy: squad.veterancy?.set ? [squad.veterancy.set] : [] };
 }
 
 /** files: { weapon, ebps, sbps, upgrade, veterancy, fx } → { folder: same shape, empty kinds left out } */
@@ -32,7 +34,7 @@ export function splitByUnit(files) {
     if (kind === 'veterancy') (f.veterancy ??= {})[id] = rec;
     else ((f[kind] ??= {})[group] ??= {})[id] = rec;
   };
-  for (const kind of ['weapon', 'ebps', 'sbps', 'upgrade']) {
+  for (const kind of ['weapon', 'ebps', 'sbps', 'upgrade', 'ability']) {
     for (const [group, recs] of Object.entries(files[kind] || {})) for (const [id, rec] of Object.entries(recs)) put(folderOf(kind, id), kind, group, id, rec);
   }
   for (const [id, rec] of Object.entries(files.veterancy || {})) put(folderOf('veterancy', id), 'veterancy', null, id, rec);

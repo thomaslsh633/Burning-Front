@@ -5,6 +5,18 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "grenade_white_phosphorus_stormtrooper_ger": {
+   "name": "weapon.grenade_white_phosphorus_stormtrooper_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "grenade_stormtrooper_ger": {
+   "name": "weapon.grenade_stormtrooper_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

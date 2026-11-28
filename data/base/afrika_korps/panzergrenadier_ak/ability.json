@@ -1,0 +1,72 @@
+{
+ "weapon": {
+  "anti_tank_grenade_panzergrenadier_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/anti_tank_grenade_panzergrenadier_ak",
+   "target": "unit",
+   "weapon": "anti_tank_grenade_panzergrenadier_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true
+  },
+  "grenade_panzergrenadier_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_panzergrenadier_ak",
+   "target": "hex",
+   "weapon": "grenade_panzergrenadier_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "grenade_rifle_panzergrenadier_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_rifle_panzergrenadier_ak",
+   "target": "hex",
+   "weapon": "rifle_grenade_jaeger_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "elite_forces_skirmisher_g43_panzergrenadier_ak"
+    ]
+   }
+  }
+ }
+}

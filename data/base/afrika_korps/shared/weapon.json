@@ -919,6 +919,104 @@
    "use": {
     "by_ability": true
    }
+  },
+  "grenade_assault_assault_grenadier_ak": {
+   "coh3_ref": "weapon/afrika_korps/explosive_weapon/grenade/grenade_assault_assault_grenadier_ak",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 70,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.6,
+     "far": 0.4
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 4.5
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 15,
+    "distance_ratio": 0.5,
+    "distance_max_m": 5
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "passaglia_at_explosive_ak": {
+   "coh3_ref": "weapon/afrika_korps/explosive_weapon/grenade/passaglia_at_explosive_ak",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 240,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
   }
  },
  "infantry_anti_tank_weapon": {

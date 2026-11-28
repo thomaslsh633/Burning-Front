@@ -11,6 +11,12 @@
    "sound": {
     "fire": "flame"
    }
+  },
+  "grenade_no69_africa_uk": {
+   "name": "weapon.grenade_no69_africa_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

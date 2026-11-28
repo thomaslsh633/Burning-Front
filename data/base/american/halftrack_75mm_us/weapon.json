@@ -115,5 +115,270 @@
     "damage_ratio": 0
    }
   }
+ },
+ "light_artillery": {
+  "75mm_howitzer_halftrack_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/light_artillery/75mm_howitzer_halftrack_us",
+   "class": "artillery_small",
+   "fire_rule": "artillery",
+   "damage": 120,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 30,
+    "mid": 30,
+    "far": 30
+   },
+   "vs_target": {
+    "sniper": {
+     "damage": 0.8
+    },
+    "bunker": {
+     "damage": 0.75,
+     "penetration": 2
+    },
+    "emplacement": {
+     "damage": 0.5,
+     "penetration": 2
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "friendly_fire",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 0.8,
+     "mid": 0.55,
+     "far": 0.3
+    },
+    "range_hex": {
+     "min": 2,
+     "max": 13
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 120,
+     "mid": 120,
+     "far": 120
+    },
+    "accuracy_scale": {
+     "near": 0.6,
+     "mid": 0.6,
+     "far": 0.6
+    },
+    "arc_deg": 20,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.35,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.6,
+     "mid": 0.3,
+     "far": 0.2
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 6
+    },
+    "suppression": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.5
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 6.5,
+    "distance_ratio": 0.125,
+    "distance_max_m": 5
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "light",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 2,
+    "range_hex": 13
+   }
+  },
+  "75mm_howitzer_halftrack_suppressing_airburst_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/light_artillery/75mm_howitzer_halftrack_suppressing_airburst_us",
+   "class": "artillery_small",
+   "fire_rule": "artillery",
+   "damage": 120,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 15,
+    "mid": 15,
+    "far": 15
+   },
+   "vs_target": {
+    "sniper": {
+     "damage": 0.8
+    },
+    "bunker": {
+     "damage": 0.75,
+     "penetration": 2
+    },
+    "emplacement": {
+     "damage": 0.5,
+     "penetration": 2
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "friendly_fire",
+    "attack_ground",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 0.8,
+     "mid": 0.55,
+     "far": 0.3
+    },
+    "range_hex": {
+     "min": 2,
+     "max": 13
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 120,
+     "mid": 120,
+     "far": 120
+    },
+    "accuracy_scale": {
+     "near": 0.6,
+     "mid": 0.6,
+     "far": 0.6
+    },
+    "arc_deg": 20,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.35,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 0.6,
+     "mid": 0.45,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 0.5,
+     "mid": 1.5,
+     "far": 6
+    },
+    "suppression": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 8,
+    "distance_ratio": 0.125,
+    "distance_max_m": 8
+   },
+   "suppression": {
+    "amount": 0.4,
+    "nearby_mult": 0.5,
+    "nearby_radius_m": 10
+   },
+   "deflection": {
+    "damage_ratio": 0
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "light",
+    "usage_turns": 1,
+    "spread_hex": 0,
+    "min_range_hex": 2,
+    "range_hex": 13
+   }
+  }
  }
 }

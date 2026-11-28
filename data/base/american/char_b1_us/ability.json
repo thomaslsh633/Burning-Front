@@ -1,0 +1,28 @@
+{
+ "weapon": {
+  "french_char_b1_rupture_round_vet_us": {
+   "coh3_ref": "abilities/american/veterancy/vehicles/char_b1/french_char_b1_rupture_round_vet_us",
+   "target": "unit",
+   "weapon": "75mm_char_b1_rupture_round_us",
+   "shells": 6,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

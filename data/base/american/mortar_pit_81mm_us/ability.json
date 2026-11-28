@@ -1,0 +1,97 @@
+{
+ "weapon": {
+  "barrage_81mm_mortar_pit_us": {
+   "coh3_ref": "abilities/american/team_weapons/barrage_81mm_mortar_pit_us",
+   "target": "hex",
+   "weapon": "81mm_mortar_pit_barrage_us",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.36
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "veterancy_1a_air_burst_mortar_pit_us": {
+   "coh3_ref": "abilities/american/veterancy/team_weapons/mortar_pit/veterancy_1a_air_burst_mortar_pit_us",
+   "target": "hex",
+   "weapon": "81mm_mortar_pit_timed_fuze_us",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.2
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 20
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "veterancy_1a_delayed_fuze_mortar_pit_us": {
+   "coh3_ref": "abilities/american/veterancy/team_weapons/mortar_pit/veterancy_1a_delayed_fuze_mortar_pit_us",
+   "target": "hex",
+   "weapon": "81mm_mortar_pit_delayed_fuze_us",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.48
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 20
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "veterancy_1a_suppression_air_burst_mortar_pit_us": {
+   "coh3_ref": "abilities/american/veterancy/team_weapons/mortar_pit/veterancy_1a_suppression_air_burst_mortar_pit_us",
+   "target": "hex",
+   "weapon": "81mm_mortar_pit_suppressing_air_burst_us",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.2
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 20
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1,
+    "upgrades": [
+     "brazilian_fire_support_us"
+    ]
+   }
+  }
+ }
+}

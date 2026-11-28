@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "bl_5_5_airburst_howitzer_uk": {
+   "name": "weapon.bl_5_5_airburst_howitzer_uk.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  }
+ },
  "ebps": {
   "tw_howitzer_bl_5_5_africa_uk": {
    "name": "entity.tw_howitzer_bl_5_5_africa_uk.name",

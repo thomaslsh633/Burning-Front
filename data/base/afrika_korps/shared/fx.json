@@ -107,6 +107,18 @@
    "sound": {
     "fire": "hmg"
    }
+  },
+  "grenade_assault_assault_grenadier_ak": {
+   "name": "weapon.grenade_assault_assault_grenadier_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "passaglia_at_explosive_ak": {
+   "name": "weapon.passaglia_at_explosive_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

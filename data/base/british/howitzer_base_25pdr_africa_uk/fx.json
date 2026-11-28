@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "25pdr_base_howitzer_uk": {
+   "name": "weapon.25pdr_base_howitzer_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  }
+ },
  "ebps": {
   "tw_base_howitzer_25pdr_africa_uk": {
    "name": "entity.tw_base_howitzer_25pdr_africa_uk.name",

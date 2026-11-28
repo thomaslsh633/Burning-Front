@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "290mm_avre_discombobulate_uk": {
+   "name": "weapon.290mm_avre_discombobulate_uk.name",
+   "sound": {
+    "fire": "cannon"
+   }
+  }
+ },
  "ebps": {
   "churchill_avre_africa_uk": {
    "name": "entity.churchill_avre_africa_uk.name",

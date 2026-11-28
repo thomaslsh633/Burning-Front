@@ -11,6 +11,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "105mm_howitzer_cannone_barrage_ak": {
+   "name": "weapon.105mm_howitzer_cannone_barrage_ak.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
   }
  },
  "ebps": {

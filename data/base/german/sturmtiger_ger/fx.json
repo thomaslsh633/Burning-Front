@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "380mm_rocket_launcher_sturmtiger_ger": {
+   "name": "weapon.380mm_rocket_launcher_sturmtiger_ger.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  }
+ },
  "ebps": {
   "sturmtiger_ger": {
    "name": "entity.sturmtiger_ger.name",

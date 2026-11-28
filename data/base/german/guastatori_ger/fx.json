@@ -11,6 +11,12 @@
    "sound": {
     "fire": "flame"
    }
+  },
+  "grenade_guastatori_ger": {
+   "name": "weapon.grenade_guastatori_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

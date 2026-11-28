@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "150mm_hummel_ger": {
+   "name": "weapon.150mm_hummel_ger.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  }
+ },
  "ebps": {
   "hummel_ger": {
    "name": "entity.hummel_ger.name",

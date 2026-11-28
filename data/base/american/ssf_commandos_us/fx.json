@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "grenade_white_phosphorus_devils_brigade_us": {
+   "name": "weapon.grenade_white_phosphorus_devils_brigade_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  }
+ },
  "sbps": {
   "ssf_commandos_us": {
    "name": "unit.ssf_commandos_us.name",

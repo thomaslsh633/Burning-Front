@@ -1,7 +1,7 @@
 // CoH3 records → Burning Front data forms (docs/data-labels.md). Pure functions: CoH3 record + settings in, record out,
 // plus `notes` describing every value that was guessed, defaulted or dropped. Used by tools/import-coh3/import.js.
 import { fireRate } from './fire-rate.js';
-import { classOf } from './indirect.js';
+import { classOf, rangeHex, minRangeHex, barrageUse } from './indirect.js';
 import { EXT, avg, r2, isTrue, last } from '../lib/coh3.js';
 
 const band = (o, f = r2) => (o ? { near: f(o.near ?? 0), mid: f(o.mid ?? 0), far: f(o.far ?? 0) } : null);
@@ -293,4 +293,47 @@ export function convertUpgrade(bag, { ref, weaponOfItem, scale }) {
   return { record: { coh3_ref: ref, scope: bag.owner_type === 'player' ? 'player' : 'unit', cost, build_turns: turnsOf(bag.time_cost?.time_seconds, scale),
     ...(reqs.length || anyReqs.length ? { requires: { ...(reqs.length ? { upgrades: reqs } : {}), ...(anyReqs.length ? { any_upgrades: anyReqs } : {}) } } : {}), ...(bag.local_max_limit ? { limit: Math.round(bag.local_max_limit) } : {}),
     effects: [{ type: 'add_weapon', weapon }] }, notes };
+}
+
+const TARGET = { tp_position: 'hex' };   // every other CoH3 target type (entity, squad, any) aims at a unit
+
+/**
+ * CoH3 ability → ability record, for abilities that fire a weapon with a known number of shells (grenades, satchels, special
+ * shots, barrages with NUM_SHOTS); null otherwise (buffs, toggles, smoke, mines, off-map strikes, shells not published).
+ * ctx: { ref, weapon: { id, bag, category }, props (numeric custom properties), indirect (balance), scale }.
+ * Barrages of an indirect class use the turn cadence (SPEC §10): one use every usage_turns, CoH3 shells scaled to it.
+ */
+export function convertAbility(bag, ctx) {
+  const notes = [], { weapon: w, props, scale } = ctx;
+  if (!w || !((w.bag.damage?.max ?? 0) > 0)) return { record: null, notes: ['no damaging weapon'] };
+  if (w.category === 'mine' || w.category === 'smoke') return { record: null, notes: [`${w.category}: not an attack`] };
+  const coh3Shells = props.NUM_SHOTS ?? props.SHOTS_TO_FIRE_AT_TARGET ?? (w.category === 'grenade' ? 1 : null);
+  if (coh3Shells == null) return { record: null, notes: ['shell count not published (state tree)'] };
+  const target = TARGET[bag.target] ?? 'unit';
+  const maxM = bag.range || w.bag.range?.max || 0, minM = bag.min_range || 0;
+  const cls = classOf(ctx.id, ctx.indirect) ?? classOf(w.id, ctx.indirect);
+  let shells = coh3Shells, accScale = 1, cooldown = Math.max(1, turnsOf(bag.recharge_time, scale)), spread = 0;
+  let range = { min: Math.round(minM / scale.metres_per_hex), max: Math.max(1, Math.round(maxM / scale.metres_per_hex)) };
+  if (cls && target === 'hex') {
+    const g = barrageUse({ shells: coh3Shells, recharge_s: bag.recharge_time ?? 0 }, cls);
+    shells = g.shells; accScale = g.accuracy_scale; cooldown = g.usage_turns; spread = g.spread_hex;
+    range = { min: minRangeHex(minM, maxM, cls), max: rangeHex(maxM, cls) };
+    notes.push(`barrage (${cls.id}): ${coh3Shells} CoH3 shells → ${shells} every ${cooldown} turns`);
+  }
+  // accuracy: CoH3 accuracy at the band distances, or (none published: shells and thrown charges) the chance to land on the hex
+  const dist = { near: w.bag.range?.distance?.near ?? 0, mid: w.bag.range?.distance?.mid ?? 0, far: maxM };
+  const byScatter = !((w.bag.accuracy?.near ?? 0) > 0) && !((w.bag.accuracy?.far ?? 0) > 0);
+  const raw = byScatter ? Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, w.bag.scatter ? hexHitChance(w.bag.scatter, d, scale.metres_per_hex) : 1])) : w.bag.accuracy;
+  const accuracy = band(Object.fromEntries(['near', 'mid', 'far'].map(k => [k, Math.min(1, raw[k] ?? 1) * accScale])));   // CoH3 grenades list accuracy above 1
+  const requires = {};
+  for (const r of bag.requirements || []) {
+    const q = r.required || {}, t = last(q.template_reference?.value?.replace(/\\/g, '/') ?? '');
+    if (t === 'required_player_upgrade' && isTrue(q.is_present)) (requires.upgrades ??= []).push(last(q.upgrade_name?.instance_reference));
+    else if (t === 'required_squad_upgrade' && isTrue(q.is_present)) (requires.squad_upgrades ??= []).push(last(q.upgrade_name?.instance_reference));
+    else if (t === 'required_squad_veterancy') requires.rank = q.veterancy_rank ?? 1;
+    else if (t && !['required_not'].includes(t)) notes.push(`requirement ${t} not modelled (treated as met)`);
+  }
+  const cost = Object.fromEntries(['manpower', 'munition', 'fuel'].filter(k => (bag.cost_to_player?.[k] ?? 0) > 0).map(k => [k, Math.round(bag.cost_to_player[k])]));
+  return { notes, record: { coh3_ref: ctx.ref, target, weapon: w.id, shells, accuracy, range_hex: range, spread_hex: spread, cooldown_turns: cooldown,
+    ...(Object.keys(cost).length ? { cost } : {}), ...(isTrue(bag.can_target_in_fow) ? { fog: true } : {}), ...(Object.keys(requires).length ? { requires } : {}) } };
 }

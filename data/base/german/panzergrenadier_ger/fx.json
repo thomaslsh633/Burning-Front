@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "grenade_bundle_ger": {
+   "name": "weapon.grenade_bundle_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  }
+ },
  "ebps": {
   "panzergrenadier_ger": {
    "name": "entity.panzergrenadier_ger.name",

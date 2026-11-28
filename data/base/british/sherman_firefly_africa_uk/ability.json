@@ -1,0 +1,28 @@
+{
+ "weapon": {
+  "sabot_sherman_firefly_africa_uk": {
+   "coh3_ref": "abilities/british_africa/vehicles/veterancy_abilities/sabot_sherman_firefly_africa_uk",
+   "target": "unit",
+   "weapon": "17pdr_firefly_sabot_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 8
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

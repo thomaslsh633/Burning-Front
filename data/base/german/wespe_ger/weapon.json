@@ -1,0 +1,475 @@
+{
+ "heavy_artillery": {
+  "105mm_wespe_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/105mm_wespe_ger",
+   "class": "artillery_medium",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 300,
+    "mid": 300,
+    "far": 300
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "artillery_emplacement": {
+     "damage": 0.66667
+    },
+    "offmap_and_artillery_resistance": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.77,
+     "mid": 0.77,
+     "far": 0.77
+    },
+    "arc_deg": 2,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.2
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 1.5,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 8,
+    "distance_ratio": 0.125,
+    "distance_max_m": 12
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "spg",
+    "usage_turns": 1,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  },
+  "105mm_tight_scatter_sp_wespe_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/105mm_tight_scatter_sp_wespe_ger",
+   "class": "cannon",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.84,
+     "mid": 0.84,
+     "far": 0.84
+    },
+    "arc_deg": 2,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 3,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 3,
+    "distance_ratio": 0.15,
+    "distance_max_m": 4
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "spg",
+    "usage_turns": 1,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  },
+  "105mm_long_range_sp_wespe_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/105mm_long_range_sp_wespe_ger",
+   "class": "cannon",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.84,
+     "mid": 0.84,
+     "far": 0.84
+    },
+    "arc_deg": 2,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 3,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 9,
+    "distance_ratio": 0.15,
+    "distance_max_m": 16
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "spg",
+    "usage_turns": 1,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  },
+  "105mm_wespe_tracking_barrage_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/105mm_wespe_tracking_barrage_ger",
+   "class": "artillery_medium",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 300,
+    "mid": 300,
+    "far": 300
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "offmap_and_artillery_resistance": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 16
+    },
+    "shots_per_turn": {
+     "near": 2,
+     "mid": 2,
+     "far": 2
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.63,
+     "mid": 0.63,
+     "far": 0.63
+    },
+    "arc_deg": 2,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.2
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 1.5,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 6,
+    "distance_ratio": 0.125,
+    "distance_max_m": 8
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.5
+   },
+   "indirect": {
+    "class": "spg",
+    "usage_turns": 1,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 16
+   }
+  }
+ }
+}

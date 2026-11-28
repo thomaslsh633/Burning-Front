@@ -11,6 +11,18 @@
    "sound": {
     "fire": "bazooka"
    }
+  },
+  "molotov_resistance_fighters_partisan": {
+   "name": "weapon.molotov_resistance_fighters_partisan.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "grenade_type_l_resistance_fighters_partisan": {
+   "name": "weapon.grenade_type_l_resistance_fighters_partisan.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

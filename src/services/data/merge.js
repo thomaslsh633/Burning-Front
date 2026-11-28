@@ -83,4 +83,4 @@ export function combineFiles(shape, files) {
 }
 
 /** The six unit data kinds and their shapes. */
-export const UNIT_KINDS = { weapon: 'grouped', ebps: 'grouped', sbps: 'grouped', upgrade: 'grouped', veterancy: 'flat', fx: 'sections' };
+export const UNIT_KINDS = { weapon: 'grouped', ebps: 'grouped', sbps: 'grouped', upgrade: 'grouped', ability: 'grouped', veterancy: 'flat', fx: 'sections' };

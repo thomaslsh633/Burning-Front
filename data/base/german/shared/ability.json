@@ -1,0 +1,251 @@
+{
+ "weapon": {
+  "barrage_88mm_at_gun_emplacement_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_88mm_at_gun_emplacement_ger",
+   "target": "hex",
+   "weapon": "88mm_emplacement_at_gun_he_ger",
+   "shells": 6,
+   "accuracy": {
+    "near": 0.08,
+    "mid": 0.05,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 19
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 5,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  },
+  "barrage_81mm_mortar_bunker_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_81mm_mortar_bunker_ger",
+   "target": "hex",
+   "weapon": "81mm_mortar_bunker_barrage_ger",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.33
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "panzerfaust_grenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/panzerfaust_grenadier_ger",
+   "target": "unit",
+   "weapon": "panzerfaust_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "grenade_m24_stick_grenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_m24_stick_grenadier_ger",
+   "target": "hex",
+   "weapon": "grenade_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "grenade_assault_grenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_assault_grenadier_ger",
+   "target": "hex",
+   "weapon": "grenade_assault_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "assault_package_grenadiers_ger"
+    ]
+   }
+  },
+  "grenade_incendiary_grenadier_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_incendiary_grenadier_ger",
+   "target": "hex",
+   "weapon": "incendiary_grenade_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "siegebreakers_ger",
+     "siegebreakers_clearing_gear_ger"
+    ]
+   }
+  },
+  "last_stand_panzerfaust_global_ger": {
+   "coh3_ref": "abilities/german/battlegroups/last_stand/last_stand_panzerfaust_global_ger",
+   "target": "unit",
+   "weapon": "panzerfaust_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "last_stand_volkssturm_training_completed"
+    ]
+   }
+  },
+  "satchel_charge_pioneer_ger": {
+   "coh3_ref": "abilities/german/infantry/satchel_charge_pioneer_ger",
+   "target": "hex",
+   "weapon": "satchel_charge_paratrooper_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 1
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "siegebreakers_ger",
+     "siegebreakers_clearing_gear_ger"
+    ]
+   }
+  },
+  "barrage_howitzer_coordinated_obice_210_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_howitzer_coordinated_obice_210_ger",
+   "target": "hex",
+   "weapon": "obice_210_howitzer_ger",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.89,
+    "mid": 0.89,
+    "far": 0.89
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "fog": true
+  },
+  "barrage_nebelwerfer_150mm_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_nebelwerfer_150mm_ger",
+   "target": "hex",
+   "weapon": "150mm_nebelwerfer_ger",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.86,
+    "mid": 0.86,
+    "far": 0.86
+   },
+   "range_hex": {
+    "min": 6,
+    "max": 16
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "fog": true
+  },
+  "barrage_nebelwerfer_150mm_he_ger": {
+   "coh3_ref": "abilities/german/team_weapons/barrage_nebelwerfer_150mm_he_ger",
+   "target": "hex",
+   "weapon": "150mm_nebelwerfer_he_ger",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.8,
+    "mid": 0.8,
+    "far": 0.8
+   },
+   "range_hex": {
+    "min": 6,
+    "max": 16
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "cost": {
+    "munition": 40
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

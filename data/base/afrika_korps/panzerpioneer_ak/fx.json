@@ -17,6 +17,12 @@
    "sound": {
     "fire": "grenade_launcher"
    }
+  },
+  "grenade_stun_panzerpioneer_ak": {
+   "name": "weapon.grenade_stun_panzerpioneer_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

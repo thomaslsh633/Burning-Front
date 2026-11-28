@@ -5,6 +5,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "anti_tank_grenade_panzerjager_ak": {
+   "name": "weapon.anti_tank_grenade_panzerjager_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

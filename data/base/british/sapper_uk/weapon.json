@@ -168,5 +168,102 @@
     "accuracy": 0.5
    }
   }
+ },
+ "grenade": {
+  "grenade_no69_uk": {
+   "coh3_ref": "weapon/british/explosive_weapon/grenade/grenade_no69_uk",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 25,
+    "mid": 25,
+    "far": 25
+   },
+   "vs_target": {
+    "building": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    },
+    "vehicle": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.64,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 0.35,
+     "mid": 1.5,
+     "far": 3
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 4,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  },
+  "satchel_charge_paratrooper_us": {
+   "coh3_ref": "weapon/american/explosive_weapon/grenade/satchel_charge_paratrooper_us",
+   "class": "grenade",
+   "fire_rule": "per_use",
+   "damage": 600,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "traits": [
+    "ignores_blockers",
+    "friendly_fire",
+    "attack_ground",
+    "targets_garrison",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.75,
+     "far": 0.25
+    },
+    "distance_m": {
+     "near": 1.25,
+     "mid": 2.5,
+     "far": 3.75
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": -1,
+    "friendly_fire": true
+   },
+   "use": {
+    "by_ability": true
+   }
+  }
  }
 }

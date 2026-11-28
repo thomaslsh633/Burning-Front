@@ -1,0 +1,30 @@
+{
+ "weapon": {
+  "grenade_red_devil_folgore_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_red_devil_folgore_ak",
+   "target": "hex",
+   "weapon": "grenade_red_devil_folgore_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "folgore_smg_ak"
+    ]
+   }
+  }
+ }
+}

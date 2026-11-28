@@ -1,0 +1,28 @@
+{
+ "weapon": {
+  "barrage_howitzer_bl_5_5_precision_vet_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_howitzer_bl_5_5_precision_vet_uk",
+   "target": "hex",
+   "weapon": "bl_5_5_howitzer_precision_shot_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.33,
+    "mid": 0.33,
+    "far": 0.11
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

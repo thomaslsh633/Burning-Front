@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "grenade_anti_tank_coastal_ger": {
+   "name": "weapon.grenade_anti_tank_coastal_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  }
+ },
  "ebps": {
   "coastal_reserve_ger": {
    "name": "entity.coastal_reserve_ger.name",

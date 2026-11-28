@@ -9,6 +9,7 @@ import * as lifecycle from '../lifecycle/index.js';
 import * as capture from '../capture/index.js';
 import * as economy from '../economy/index.js';
 import * as victory from '../victory/index.js';
+import * as skills from '../skills/index.js';
 import { distance } from '../hex/index.js';
 import { unitsOf, enemyOf } from '../state/index.js';
 import { chain, ifUnit, overwatchStep } from './steps.js';
@@ -35,6 +36,7 @@ export const UNIT_TURN_START = Object.freeze([
   { axis: 'morale', run: (s, d, rng, id) => status.decaySuppression(s, id, d) },
   { axis: 'action', run: (s, d, rng, id) => (s.units[id].fsm.morale === 'RETREATING' ? retreatWalk(s, d, rng, id, true) : turn.refreshUnit(s, id, d)) },
   { axis: 'visibility', run: null },
+  { axis: 'cooldowns', run: (s, d, rng, id) => skills.tickCooldowns(s, id) },
 ]);
 
 /** Per-unit hooks at the own turn end: the reverse axis order. The turret swings back last (it reads engaged). */

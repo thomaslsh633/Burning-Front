@@ -14,7 +14,7 @@ const INSIDE = ['Move', 'Turn', 'Emplace', 'Pack', 'Hold', 'Board', 'Garrison', 
 export const LOCATION = defineMachine('location', 'ON_MAP', {
   ON_MAP: { denies: { Exit: 'not_inside' } },
   GARRISONED: { denies: Object.fromEntries([...INSIDE.filter(c => !['Emplace', 'Pack'].includes(c)), 'Unload'].map(c => [c, 'garrisoned'])) },   // fires out, MGs set up, exits
-  LOADED: { denies: Object.fromEntries([...INSIDE, 'Unload', 'Attack', 'AttackFeature', 'Counter'].map(c => [c, 'loaded'])) },   // only exits
+  LOADED: { denies: Object.fromEntries([...INSIDE, 'Unload', 'Attack', 'AttackFeature', 'UseSkill', 'Counter'].map(c => [c, 'loaded'])) },   // only exits
 });
 
 const alive = m => m.hp > 0;

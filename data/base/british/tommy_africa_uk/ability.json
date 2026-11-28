@@ -1,0 +1,69 @@
+{
+ "weapon": {
+  "rifle_grenade_tommy_africa_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/rifle_grenade_tommy_africa_uk",
+   "target": "hex",
+   "weapon": "rifle_grenade_tommy_africa_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "rifle_grenade_tommy_uk"
+    ]
+   }
+  },
+  "flare_tommy_africa_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/flare_tommy_africa_uk",
+   "target": "hex",
+   "weapon": "scoped_lee_enfield_tommy_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.86,
+    "mid": 0.79,
+    "far": 0.75
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 6
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 12,
+   "fog": true
+  },
+  "forward_observer_tommy_africa_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/forward_observer_tommy_africa_uk",
+   "target": "hex",
+   "weapon": "scoped_lee_enfield_tommy_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.86,
+    "mid": 0.79,
+    "far": 0.75
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 5
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 12,
+   "cost": {
+    "munition": 45
+   },
+   "fog": true
+  }
+ }
+}

@@ -23,6 +23,12 @@
    "sound": {
     "fire": "smg"
    }
+  },
+  "grenade_red_devil_folgore_ak": {
+   "name": "weapon.grenade_red_devil_folgore_ak.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

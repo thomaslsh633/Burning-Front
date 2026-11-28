@@ -5,6 +5,12 @@
    "sound": {
     "fire": "lmg"
    }
+  },
+  "grenade_fallschirmjager_ger": {
+   "name": "weapon.grenade_fallschirmjager_ger.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

@@ -1,0 +1,46 @@
+{
+ "weapon": {
+  "grenade_fallschirmjager_ger": {
+   "coh3_ref": "abilities/german/infantry/grenade_fallschirmjager_ger",
+   "target": "hex",
+   "weapon": "grenade_fallschirmjager_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "panzerfaust_fallschirmjager_ger": {
+   "coh3_ref": "abilities/german/infantry/panzerfaust_fallschirmjager_ger",
+   "target": "unit",
+   "weapon": "panzerfaust_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  }
+ }
+}

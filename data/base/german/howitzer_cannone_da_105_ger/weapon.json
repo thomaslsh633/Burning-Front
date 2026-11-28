@@ -136,6 +136,137 @@
     "min_range_hex": 6,
     "range_hex": 16
    }
+  },
+  "105mm_howitzer_cannone_barrage_ger": {
+   "coh3_ref": "weapon/german/explosive_weapon/heavy_artillery/105mm_howitzer_cannone_barrage_ger",
+   "class": "artillery_medium",
+   "fire_rule": "artillery",
+   "damage": 160,
+   "damage_type": "explosive",
+   "penetration": {
+    "near": 1000,
+    "mid": 1000,
+    "far": 1000
+   },
+   "vs_target": {
+    "bunker": {
+     "damage": 0.75
+    },
+    "emplacement": {
+     "damage": 0.75
+    }
+   },
+   "traits": [
+    "ignores_blockers",
+    "emplace_required",
+    "emplace_faces_target",
+    "friendly_fire",
+    "replaceable",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "indirect",
+    "accuracy": {
+     "near": 1,
+     "mid": 1,
+     "far": 0.05
+    },
+    "range_hex": {
+     "min": 3,
+     "max": 18
+    },
+    "shots_per_turn": {
+     "near": 3,
+     "mid": 3,
+     "far": 3
+    },
+    "damage_per_shot": {
+     "near": 160,
+     "mid": 160,
+     "far": 160
+    },
+    "accuracy_scale": {
+     "near": 0.86,
+     "mid": 0.86,
+     "far": 0.86
+    },
+    "arc_deg": 10,
+    "vs_cover": {
+     "light": {
+      "suppression": 0.5
+     },
+     "heavy": {
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "damage": 0.75,
+      "suppression": 0
+     },
+     "negative": {
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "aoe": {
+    "damage": {
+     "near": 1,
+     "mid": 0.5,
+     "far": 0.15
+    },
+    "distance_m": {
+     "near": 1,
+     "mid": 1.5,
+     "far": 6
+    },
+    "suppression": {
+     "near": 0,
+     "mid": 0,
+     "far": 0
+    },
+    "max_members": 3,
+    "friendly_fire": true
+   },
+   "scatter": {
+    "angle_deg": 8,
+    "distance_ratio": 0.125,
+    "distance_max_m": 12
+   },
+   "deflection": {
+    "damage_ratio": 0.15
+   },
+   "reload": {
+    "turns": 1
+   },
+   "emplace": {
+    "required": true,
+    "setup_turns": 1,
+    "teardown_turns": 0,
+    "faces_target": true
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 1
+   },
+   "indirect": {
+    "class": "heavy",
+    "usage_turns": 2,
+    "spread_hex": 1,
+    "min_range_hex": 3,
+    "range_hex": 18
+   }
   }
  }
 }

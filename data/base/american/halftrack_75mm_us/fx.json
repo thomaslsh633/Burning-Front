@@ -5,6 +5,18 @@
    "sound": {
     "fire": "cannon"
    }
+  },
+  "75mm_howitzer_halftrack_us": {
+   "name": "weapon.75mm_howitzer_halftrack_us.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  },
+  "75mm_howitzer_halftrack_suppressing_airburst_us": {
+   "name": "weapon.75mm_howitzer_halftrack_suppressing_airburst_us.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
   }
  },
  "ebps": {

@@ -1,0 +1,25 @@
+{
+ "weapon": {
+  "panzerschreck_single_shot_saboteur_us": {
+   "coh3_ref": "abilities/american/infantry/panzerschreck_single_shot_saboteur_us",
+   "target": "unit",
+   "weapon": "panzerschreck_single_shot_saboteur_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  }
+ }
+}

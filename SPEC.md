@@ -227,6 +227,12 @@ Confirmed 2026-11-25 (rewrite):
   Research itself is not built yet (`data/rules/production.json` `research` lists).
 - Hero units (CoH3 unique units: Major Russo, SSF Commando "Torch", Tiger Ace, boss Tiger, Torch Obice) are in the roster;
   at most one of each per side (`data/rules/roster.json` heroes).
+- Abilities (2026-11-28, `logic/skills`): UseSkill fires the ability's CoH3 weapon `shells` times at a hex (each shell lands
+  there or within the spread and hits whatever stands where it lands; no return fire) or at an enemy unit in sight (it fires
+  back as after an attack). Paid in resources (no ammo), spends the action, then cools down for its CoH3 recharge in turns
+  (barrages: their class cadence). Needs its CoH3 requirements: research (`teams[t].unlocks`), the squad's upgrades,
+  veterancy rank. Hex targets must be seen unless CoH3 lets the ability fire into the fog. Built: grenades, satchels,
+  Panzerfausts, special shots and barrages with published shells (125); buffs, toggles, smoke and off-map strikes are not.
 - Barrage abilities take their attack power from CoH3 ability data: the ability's weapon item → weapon (damage, AoE,
   penetration, scatter) × NUM_SHOTS shells; recharge ÷ 10 s → turns (e.g. 81 mm barrage 6 × 100, 2 turns; 105 mm howitzer
   6 × 160, 6 turns; Hummel 6 × 200, 5 turns). Off-map strikes: CoH3 does not publish their shells; set in doctrine design.

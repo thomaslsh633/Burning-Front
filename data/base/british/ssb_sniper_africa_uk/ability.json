@@ -1,0 +1,25 @@
+{
+ "weapon": {
+  "special_services_target_gunner_infantry_uk": {
+   "coh3_ref": "abilities/british/infantry/special_services_target_gunner_infantry_uk",
+   "target": "unit",
+   "weapon": "boys_at_rifle_scoped_target_gunner_africa_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 1,
+    "max": 7
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 6,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  }
+ }
+}

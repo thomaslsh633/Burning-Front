@@ -1,0 +1,93 @@
+{
+ "infantry_anti_tank_weapon": {
+  "panzerschreck_single_shot_saboteur_us": {
+   "coh3_ref": "weapon/american/ballistic_weapon/infantry_anti_tank_weapon/panzerschreck_single_shot_saboteur_us",
+   "class": "bazooka",
+   "fire_rule": "single_shot",
+   "damage": 160,
+   "damage_type": "ballistic",
+   "penetration": {
+    "near": 300,
+    "mid": 180,
+    "far": 130
+   },
+   "traits": [
+    "friendly_fire",
+    "hits_all_on_miss",
+    "attack_ground",
+    "replacement",
+    "reveals_on_fire"
+   ],
+   "attack": {
+    "fire_mode": "direct",
+    "accuracy": {
+     "near": 11,
+     "mid": 11,
+     "far": 11
+    },
+    "range_hex": {
+     "min": 0,
+     "max": 5
+    },
+    "shots_per_turn": {
+     "near": 1,
+     "mid": 1,
+     "far": 1
+    },
+    "damage_per_shot": {
+     "near": 512,
+     "mid": 512,
+     "far": 512
+    },
+    "arc_deg": 90,
+    "vs_cover": {
+     "light": {
+      "accuracy": 0.5,
+      "suppression": 0.5
+     },
+     "heavy": {
+      "accuracy": 0.5,
+      "damage": 0.5,
+      "suppression": 0.1
+     },
+     "garrison": {
+      "accuracy": 0.4,
+      "damage": 0.25,
+      "suppression": 0
+     },
+     "smoke": {
+      "accuracy": 0.25
+     },
+     "negative": {
+      "accuracy": 1.25,
+      "damage": 1.25,
+      "suppression": 1.5
+     }
+    },
+    "vs_suppressed": {
+     "accuracy": 0.5,
+     "suppression": 0.5
+    },
+    "vs_pinned": {
+     "accuracy": 0.25,
+     "suppression": 0.1
+    }
+   },
+   "ammo": {
+    "per_shot": 1
+   },
+   "scatter": {
+    "angle_deg": 7.5,
+    "distance_ratio": 1,
+    "distance_max_m": 10
+   },
+   "moving": {
+    "can_fire": false,
+    "accuracy": 0.35
+   },
+   "deflection": {
+    "damage_ratio": 0
+   }
+  }
+ }
+}

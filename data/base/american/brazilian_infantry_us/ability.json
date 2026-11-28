@@ -1,0 +1,26 @@
+{
+ "weapon": {
+  "brazilian_rifle_grenadiers_us": {
+   "coh3_ref": "abilities/american/infantry/brazilian_rifle_grenadiers_us",
+   "target": "unit",
+   "weapon": "brazilian_rifle_grenade_hold_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.03,
+    "mid": 0.02,
+    "far": 0.05
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 5
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "requires": {
+    "squad_upgrades": [
+     "brazilian_m1_grenade_launchers_us"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "weapon": {
+  "barrage_priest_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_priest_us",
+   "target": "hex",
+   "weapon": "105mm_howitzer_priest_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.58,
+    "mid": 0.58,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_priest_heat_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_priest_heat_us",
+   "target": "hex",
+   "weapon": "105mm_howitzer_priest_heat_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.58,
+    "mid": 0.58,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 40
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "barrage_priest_suppressing_airburst_us": {
+   "coh3_ref": "abilities/american/vehicles/barrage_priest_suppressing_airburst_us",
+   "target": "hex",
+   "weapon": "105mm_howitzer_priest_suppressing_airburst_us",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.58,
+    "mid": 0.58,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 40
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "brazilian_us",
+     "brazilian_fire_support_us"
+    ]
+   }
+  }
+ }
+}

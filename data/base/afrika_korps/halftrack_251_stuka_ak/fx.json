@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "280mm_stukazufuss_rocket_ak": {
+   "name": "weapon.280mm_stukazufuss_rocket_ak.name",
+   "sound": {
+    "fire": "nebelwerfer"
+   }
+  }
+ },
  "ebps": {
   "halftrack_251_stuka_ak": {
    "name": "entity.halftrack_251_stuka_ak.name",

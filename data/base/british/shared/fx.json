@@ -257,6 +257,114 @@
    "sound": {
     "fire": "bazooka"
    }
+  },
+  "scoped_lee_enfield_tommy_uk": {
+   "name": "weapon.scoped_lee_enfield_tommy_uk.name",
+   "sound": {
+    "fire": "rifle"
+   }
+  },
+  "290mm_avre_uk": {
+   "name": "weapon.290mm_avre_uk.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "bl_5_5_howitzer_uk": {
+   "name": "weapon.bl_5_5_howitzer_uk.name",
+   "sound": {
+    "fire": "at_gun"
+   }
+  },
+  "gammon_bomb_guards_africa_uk": {
+   "name": "weapon.gammon_bomb_guards_africa_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "sticky_bomb_rifleman_us": {
+   "name": "weapon.sticky_bomb_rifleman_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "gammon_bomb_guards_uk": {
+   "name": "weapon.gammon_bomb_guards_uk.name",
+   "sound": {
+    "fire": "grenade"
+   }
+  },
+  "rocket_land_mattress_africa_uk": {
+   "name": "weapon.rocket_land_mattress_africa_uk.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  },
+  "rocket_land_mattress_africa_suppression_barrage_uk": {
+   "name": "weapon.rocket_land_mattress_africa_suppression_barrage_uk.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  },
+  "81mm_mortar_barrage_uk": {
+   "name": "weapon.81mm_mortar_barrage_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "4_2_inch_heavy_mortar_airburst_uk": {
+   "name": "weapon.4_2_inch_heavy_mortar_airburst_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "4_2_inch_heavy_mortar_barrage_uk": {
+   "name": "weapon.4_2_inch_heavy_mortar_barrage_uk.name",
+   "sound": {
+    "fire": "mortar"
+   }
+  },
+  "4_2_inch_heavy_mortar_incendiary_uk": {
+   "name": "weapon.4_2_inch_heavy_mortar_incendiary_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "75mm_pack_howitzer_barrage_us": {
+   "name": "weapon.75mm_pack_howitzer_barrage_us.name",
+   "sound": {
+    "fire": "artillery_small"
+   }
+  },
+  "75mm_pack_howitzer_incendiary_uk": {
+   "name": "weapon.75mm_pack_howitzer_incendiary_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "75mm_pack_howitzer_white_phosphorus_uk": {
+   "name": "weapon.75mm_pack_howitzer_white_phosphorus_uk.name",
+   "sound": {
+    "fire": "flame"
+   }
+  },
+  "25pdr_bishop_uk": {
+   "name": "weapon.25pdr_bishop_uk.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "25pdr_bishop_direct_round_uk": {
+   "name": "weapon.25pdr_bishop_direct_round_uk.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
+  },
+  "tulip_rocket_coaxial_uk": {
+   "name": "weapon.tulip_rocket_coaxial_uk.name",
+   "sound": {
+    "fire": "artillery_medium"
+   }
   }
  },
  "ebps": {

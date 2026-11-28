@@ -1,0 +1,322 @@
+{
+ "weapon": {
+  "barrage_howitzer_bl_5_5_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_howitzer_bl_5_5_uk",
+   "target": "hex",
+   "weapon": "bl_5_5_howitzer_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.78,
+    "mid": 0.78,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "fog": true
+  },
+  "gammon_bomb_guards_africa_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/gammon_bomb_guards_africa_uk",
+   "target": "hex",
+   "weapon": "gammon_bomb_guards_africa_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  },
+  "gammon_bomb_guards_uk": {
+   "coh3_ref": "abilities/british/infantry/gammon_bomb_guards_uk",
+   "target": "hex",
+   "weapon": "gammon_bomb_guards_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  },
+  "at_grenade_sapper_africa_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/at_grenade_sapper_africa_uk",
+   "target": "unit",
+   "weapon": "sticky_bomb_rifleman_us",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 2,
+   "cost": {
+    "munition": 25
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "rifle_grenade_tommy_uk"
+    ]
+   }
+  },
+  "barrage_land_mattress_rocket_africa_uk": {
+   "coh3_ref": "abilities/british_africa/team_weapons/barrage_land_mattress_rocket_africa_uk",
+   "target": "hex",
+   "weapon": "rocket_land_mattress_africa_uk",
+   "shells": 5,
+   "accuracy": {
+    "near": 0.89,
+    "mid": 0.89,
+    "far": 0.89
+   },
+   "range_hex": {
+    "min": 6,
+    "max": 16
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "fog": true
+  },
+  "barrage_land_mattress_suppression_rocket_africa_uk": {
+   "coh3_ref": "abilities/british_africa/team_weapons/barrage_land_mattress_suppression_rocket_africa_uk",
+   "target": "hex",
+   "weapon": "rocket_land_mattress_africa_suppression_barrage_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 6,
+    "max": 16
+   },
+   "spread_hex": 2,
+   "cooldown_turns": 2,
+   "cost": {
+    "munition": 40
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "barrage_81mm_mortar_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_81mm_mortar_uk",
+   "target": "hex",
+   "weapon": "81mm_mortar_barrage_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.53
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_4_2_heavy_mortar_airburst_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_4_2_heavy_mortar_airburst_uk",
+   "target": "hex",
+   "weapon": "4_2_inch_heavy_mortar_airburst_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.08
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "barrage_4_2_heavy_mortar_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_4_2_heavy_mortar_uk",
+   "target": "hex",
+   "weapon": "4_2_inch_heavy_mortar_barrage_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.83,
+    "mid": 0.83,
+    "far": 0.07
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_4_2_heavy_mortar_incendiary_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_4_2_heavy_mortar_incendiary_uk",
+   "target": "hex",
+   "weapon": "4_2_inch_heavy_mortar_incendiary_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 0.83,
+    "mid": 0.83,
+    "far": 0.07
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 12
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "c_artillery_heavy_mortar_incendiary_uk"
+    ]
+   }
+  },
+  "barrage_75mm_pack_howitzer_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_75mm_pack_howitzer_uk",
+   "target": "hex",
+   "weapon": "75mm_pack_howitzer_barrage_us",
+   "shells": 4,
+   "accuracy": {
+    "near": 1,
+    "mid": 0.78,
+    "far": 0.08
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 14
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "barrage_75mm_pack_howitzer_incendiary_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_75mm_pack_howitzer_incendiary_uk",
+   "target": "hex",
+   "weapon": "75mm_pack_howitzer_incendiary_uk",
+   "shells": 4,
+   "accuracy": {
+    "near": 0.83,
+    "mid": 0.42,
+    "far": 0.09
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 14
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "c_artillery_heavy_mortar_incendiary_uk"
+    ]
+   }
+  },
+  "barrage_75mm_pack_howitzer_white_phosphorus_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_75mm_pack_howitzer_white_phosphorus_uk",
+   "target": "hex",
+   "weapon": "75mm_pack_howitzer_white_phosphorus_uk",
+   "shells": 3,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 14
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  },
+  "barrage_bishop_uk": {
+   "coh3_ref": "abilities/british/vehicles/barrage_bishop_uk",
+   "target": "hex",
+   "weapon": "25pdr_bishop_uk",
+   "shells": 2,
+   "accuracy": {
+    "near": 0.47,
+    "mid": 0.15,
+    "far": 0.06
+   },
+   "range_hex": {
+    "min": 4,
+    "max": 16
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "fog": true
+  },
+  "direct_fire_bishop_uk": {
+   "coh3_ref": "abilities/british/vehicles/veterancy_abilities/direct_fire_bishop_uk",
+   "target": "hex",
+   "weapon": "25pdr_bishop_direct_round_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 0.86,
+    "mid": 0.31,
+    "far": 0.8
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 7
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 1,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "rank": 1
+   }
+  }
+ }
+}

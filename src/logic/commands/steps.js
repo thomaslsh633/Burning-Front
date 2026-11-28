@@ -41,11 +41,11 @@ const hpOf = u => (u ? u.members.reduce((a, m) => a + m.hp, 0) : 0);
 
 /**
  * One attack and everything it causes: damage (combat), suppression and XP (status), criticals and deaths (lifecycle),
- * map damage (terrain), the attacker revealed (vision) and engaged (status). The budget is the caller's.
+ * map damage (terrain), the attacker revealed (vision) and engaged (status). The budget is the caller's. use: an ability (logic/skills).
  */
-export function fire(state, d, rng, attackerId, targetId) {
+export function fire(state, d, rng, attackerId, targetId, use = null) {
   const before = Object.fromEntries(Object.values(state.units).map(u => [u.id, hpOf(u)]));
-  const r = combat.resolveAttack(state, d, attackerId, targetId, rng);
+  const r = combat.resolveAttack(state, d, attackerId, targetId, rng, use);
   const hit = Object.keys(before).filter(id => hpOf(r.state.units[id]) < before[id]);
   const enemyLoss = hit.filter(id => state.units[id].team && state.units[id].team !== state.units[attackerId].team)   // no XP for ownerless guns
     .reduce((xp, id) => xp + status.xpFor(state.units[id], before[id] - hpOf(r.state.units[id]), d), 0);
@@ -58,7 +58,7 @@ export function fire(state, d, rng, attackerId, targetId) {
     x => strandedSteps(x, state, d),
     ifUnit(attackerId, x => vision.revealOnFire(x, attackerId, d)),
     x => status.setEngaged(x, attackerId),
-    x => turn.startReload(x, attackerId, d),
+    x => (use ? NONE(x) : turn.startReload(x, attackerId, d)),   // an ability has its own cooldown
   ]);
   return { state: out.state, events: [...r.events, ...out.events] };
 }

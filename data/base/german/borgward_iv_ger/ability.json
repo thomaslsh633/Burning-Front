@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_borgward_iv_ger": {
+   "coh3_ref": "abilities/german/vehicles/barrage_borgward_iv_ger",
+   "target": "hex",
+   "weapon": "88mm_borgward_iv_ger",
+   "shells": 6,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 6
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "fog": true
+  }
+ }
+}

@@ -5,6 +5,12 @@
    "sound": {
     "fire": "rifle"
    }
+  },
+  "grenade_f1_french_us": {
+   "name": "weapon.grenade_f1_french_us.name",
+   "sound": {
+    "fire": "grenade"
+   }
   }
  },
  "ebps": {

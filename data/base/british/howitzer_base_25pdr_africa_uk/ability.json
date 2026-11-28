@@ -1,0 +1,22 @@
+{
+ "weapon": {
+  "barrage_observation_base_howitzer_25pdr_uk": {
+   "coh3_ref": "abilities/british/team_weapons/barrage_observation_base_howitzer_25pdr_uk",
+   "target": "hex",
+   "weapon": "25pdr_base_howitzer_uk",
+   "shells": 8,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 0.04
+   },
+   "range_hex": {
+    "min": 3,
+    "max": 18
+   },
+   "spread_hex": 1,
+   "cooldown_turns": 2,
+   "fog": true
+  }
+ }
+}

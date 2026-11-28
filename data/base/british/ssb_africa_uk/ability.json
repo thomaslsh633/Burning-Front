@@ -1,0 +1,51 @@
+{
+ "weapon": {
+  "lewes_bomb_special_services_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/lewes_bomb_special_services_uk",
+   "target": "hex",
+   "weapon": "satchel_charge_lewes_bomb_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true
+  },
+  "lewes_bomb_special_services_upgraded_uk": {
+   "coh3_ref": "abilities/british_africa/infantry/lewes_bomb_special_services_upgraded_uk",
+   "target": "unit",
+   "weapon": "satchel_charge_lewes_bomb_uk",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 2
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 35
+   },
+   "fog": true,
+   "requires": {
+    "upgrades": [
+     "special_services_rear_havoc_uk"
+    ]
+   }
+  }
+ }
+}

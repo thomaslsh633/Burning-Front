@@ -1,0 +1,117 @@
+{
+ "weapon": {
+  "grenade_m24_stick_kriegsmarine_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_m24_stick_kriegsmarine_ak",
+   "target": "hex",
+   "weapon": "grenade_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "cost": {
+    "munition": 30
+   },
+   "fog": true
+  },
+  "grenade_assault_kriegsmarine_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_assault_kriegsmarine_ak",
+   "target": "hex",
+   "weapon": "grenade_assault_assault_grenadier_ak",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "kriegsmarine_grenade_assault_ak"
+    ]
+   }
+  },
+  "rifle_grenade_kriegsmarine_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/rifle_grenade_kriegsmarine_ak",
+   "target": "hex",
+   "weapon": "rifle_grenade_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 2,
+    "max": 4
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 1,
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "kriegsmarine_grenade_tommy_ak"
+    ]
+   }
+  },
+  "grenade_red_phosphorus_kriegsmarine_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_red_phosphorus_kriegsmarine_ak",
+   "target": "hex",
+   "weapon": "grenade_white_phosphorus_stormtrooper_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "kriegsmarine_grenade_red_phosphorus_ak"
+    ]
+   }
+  },
+  "grenade_incendiary_kriegsmarine_ak": {
+   "coh3_ref": "abilities/afrika_korps/infantry/grenade_incendiary_kriegsmarine_ak",
+   "target": "hex",
+   "weapon": "incendiary_grenade_grenadier_ger",
+   "shells": 1,
+   "accuracy": {
+    "near": 1,
+    "mid": 1,
+    "far": 1
+   },
+   "range_hex": {
+    "min": 0,
+    "max": 3
+   },
+   "spread_hex": 0,
+   "cooldown_turns": 3,
+   "fog": true,
+   "requires": {
+    "squad_upgrades": [
+     "kriegsmarine_grenade_incendiary_ak"
+    ]
+   }
+  }
+ }
+}

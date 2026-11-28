@@ -1,4 +1,12 @@
 {
+ "weapon": {
+  "panzerschreck_single_shot_saboteur_us": {
+   "name": "weapon.panzerschreck_single_shot_saboteur_us.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  }
+ },
  "ebps": {
   "saboteurs_battlegroup_partisan": {
    "name": "entity.saboteurs_battlegroup_partisan.name",
