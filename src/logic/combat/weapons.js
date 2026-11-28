@@ -28,7 +28,18 @@ export function firingWeapons(unit, data) {
     if (unit.members.some(m => m.ebps === tw.weapon_entity && alive(m))) return fromEntity(tw.weapon_entity);
     return unit.members.filter(m => m.ebps === tw.crew_entity && alive(m)).flatMap(m => fromEntity(m.ebps));
   }
-  return unit.members.filter(alive).flatMap(m => fromEntity(m.ebps));
+  // loadout weapons (CoH3 spawn-granted, e.g. a bazooka team's bazookas): the first `num` living models fire them instead of
+  // their entity's main weapon, keeping their secondary
+  const living = unit.members.filter(alive), out = [];
+  let i = 0;
+  for (const lw of sq.loadout_weapons || []) {
+    for (let k = 0; k < lw.num && i < living.length; k++, i++) {
+      const x = usable(lw.weapon);
+      if (x) out.push({ ...x, mount: 'hull' });
+      out.push(...fromEntity(living[i].ebps).filter(w => data.units.ebps[living[i].ebps].weapons?.find(e => e.weapon === w.id)?.slot !== 'main'));
+    }
+  }
+  return [...out, ...living.slice(i).flatMap(m => fromEntity(m.ebps))];
 }
 
 /** Can this weapon fire at that hex now? → reason or null. Range, minimum range, arc, line of sight, move and emplace rules. */

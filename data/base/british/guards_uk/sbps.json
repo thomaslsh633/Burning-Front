@@ -3,7 +3,7 @@
   "guards_uk": {
    "coh3_ref": "sbps/races/british/infantry/guards_uk",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "members": [
     {
      "entity": "guards_uk",
@@ -46,7 +46,7 @@
     "set": "guards_uk"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 24
    },
    "build": {
     "menu": []

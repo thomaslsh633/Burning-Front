@@ -130,3 +130,11 @@ test('setMembers: a crew change writes members only', () => {
   assert.deepEqual(r.state.units.u1.members, [{ ebps: 'tw_at_gun_57mm_us', hp: 10 }]);
   assertOwnsOnly('combat', state, r.state);
 });
+
+test('loadout weapons: a bazooka team\'s first two models fire bazookas, the rest their carbines', () => {
+  const { state, data } = testMatch([blue('bazooka_team_us', H(2, 2))]);
+  const ids = combat.firingWeapons(state.units.u1, data).map(w => w.id).sort();
+  assert.deepEqual(ids, ['bazooka_bazooka_team_us', 'bazooka_bazooka_team_us', 'carbine_bazooka_team_us', 'carbine_bazooka_team_us']);
+  const one = tweak(state, 'u1', { members: state.units.u1.members.map((m, i) => (i < 3 ? { ...m, hp: 0 } : m)) });
+  assert.deepEqual(combat.firingWeapons(one.units.u1, data).map(w => w.id), ['bazooka_bazooka_team_us'], 'the last man picks up the bazooka');
+});

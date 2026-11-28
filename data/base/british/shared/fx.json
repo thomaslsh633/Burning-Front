@@ -18,6 +18,18 @@
     "fire": "rifle"
    }
   },
+  "vickers_k_lmg_uk": {
+   "name": "weapon.vickers_k_lmg_uk.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
+  "bazooka_guards_africa_uk": {
+   "name": "weapon.bazooka_guards_africa_uk.name",
+   "sound": {
+    "fire": "bazooka"
+   }
+  },
   "bren_lmg_gurkhas_uk": {
    "name": "weapon.bren_lmg_gurkhas_uk.name",
    "sound": {
@@ -48,10 +60,22 @@
     "fire": "rifle"
    }
   },
+  "boys_at_rifle_polish_africa_uk": {
+   "name": "weapon.boys_at_rifle_polish_africa_uk.name",
+   "sound": {
+    "fire": "panzerbuchse"
+   }
+  },
   "sapper_piat_uk": {
    "name": "weapon.sapper_piat_uk.name",
    "sound": {
     "fire": "grenade_launcher"
+   }
+  },
+  "vickers_k_lmg_ssb_uk": {
+   "name": "weapon.vickers_k_lmg_ssb_uk.name",
+   "sound": {
+    "fire": "lmg"
    }
   },
   "17pdr_at_gun_uk": {

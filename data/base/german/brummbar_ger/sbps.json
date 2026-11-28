@@ -3,7 +3,7 @@
   "brummbar_ger": {
    "coh3_ref": "sbps/races/german/vehicles/brummbar_ger",
    "kind": "vehicle",
-   "role": "all_round",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "brummbar_ger",
@@ -55,7 +55,7 @@
     "set": "brummbar_ger"
    },
    "supply": {
-    "ammo": 8
+    "ammo": 12
    }
   }
  }

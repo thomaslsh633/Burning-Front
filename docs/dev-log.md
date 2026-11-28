@@ -2,6 +2,17 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (G-5 data fixes, camera, phone check)
+- **Done:** ammo ×1.5; roles from CoH3 squad types (bazooka / AT squads, snipers, transports, HE support vehicles);
+  spawn-granted weapons from coh3stats as squad `loadout_weapons` (bazooka team, Panzerjäger, Guards N. Africa,
+  Stormtroopers …); splash cap −1 = whole squad (was no splash); zero-accuracy direct guns hit by scatter; recorded reasons
+  for 20 squads (`data/balance/greybox.json` exceptions): 3 left flagged (Guards Italy loadout, Indian infantry, Brummbär
+  as heavy artillery). Camera turn (60° steps) and zoom (buttons, wheel, pinch) with the angle fixed. Phone check in
+  Chromium emulation (Pixel 7, iPhone 13, CPU ×4): load 0.4–0.5 s, redraw 15–21 ms on skirmish, 110 ms on Faymonville
+  48×48; touch tap selects. 296 tests.
+- **Next:** the 3 flagged squads; a real-phone check (pinch, Safari); production / conversion buttons in the greybox.
+- **Blocked:** a real phone and Safari are not available here.
+
 ## 2026-11-28 (quarter view)
 - **Done:** greybox camera is a quarter view: map turned 45°, seen from 35° above the ground, raised hexes lifted with front
   faces, upright unit tokens with shadows, back-to-front drawing, taps mapped through the same projection (SPEC §9).

@@ -43,11 +43,17 @@
     "set": "commando_lmg_africa_uk"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": []
-   }
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "vickers_k_lmg_uk",
+     "num": 1
+    }
+   ]
   }
  }
 }

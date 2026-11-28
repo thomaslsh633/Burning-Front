@@ -60,13 +60,19 @@
     "set": "stealth_ssf_commandos_torch"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": [
      "demo_charge_ssf_commando_us"
     ]
-   }
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "m1941_lmg_devils_brigade_us",
+     "num": 2
+    }
+   ]
   }
  }
 }

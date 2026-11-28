@@ -59,8 +59,14 @@
     "set": "stormtrooper_ger"
    },
    "supply": {
-    "ammo": 20
-   }
+    "ammo": 30
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "mg42_stormtrooper_ger",
+     "num": 1
+    }
+   ]
   }
  }
 }

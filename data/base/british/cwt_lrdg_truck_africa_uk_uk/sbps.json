@@ -3,7 +3,7 @@
   "cwt_lrdg_truck_africa_uk_uk": {
    "coh3_ref": "sbps/races/british_africa/vehicles/cwt_lrdg_truck_africa_uk_uk",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "cwt_lrdg_truck_africa_uk",
@@ -47,7 +47,7 @@
     "set": "cwt_lrdg_truck_africa_uk_uk"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

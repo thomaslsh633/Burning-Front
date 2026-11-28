@@ -55,7 +55,7 @@
     "set": "bersaglieri_ak"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": []

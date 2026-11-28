@@ -206,6 +206,19 @@
             "menu"
           ]
         },
+        "loadout_weapons": {
+          "description": "Weapons CoH3 gives `num` models at spawn instead of their default main weapon (bazooka team, Panzerjäger AT rifles …), from coh3stats; the entity record lacks them.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "weapon": { "$ref": "types.schema.json#/$defs/Id" },
+              "num": { "type": "integer", "minimum": 1 }
+            },
+            "additionalProperties": false,
+            "required": ["weapon", "num"]
+          }
+        },
         "team_weapon": {
           "anyOf": [
             {

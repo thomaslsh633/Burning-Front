@@ -3,7 +3,7 @@
   "churchill_avre_uk": {
    "coh3_ref": "sbps/races/british/vehicles/churchill_avre_uk",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "churchill_avre_uk",
@@ -35,7 +35,7 @@
     "set": "churchill_avre_uk"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

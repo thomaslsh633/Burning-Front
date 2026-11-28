@@ -1,7 +1,21 @@
 {
-  "about": "Per-unit ammunition (SPEC §10: unit ammo kept, unit fuel removed). Capacity by unit kind, overridden by role or indirect class; one shot volley / one shell uses ammo.per_shot (default 1). CoH3 has no ammo, so these are Burning Front values (decision G).",
-  "by_kind": { "squad": 20, "team_weapon": 12, "vehicle": 12, "structure": 30 },
-  "by_role": { "anti_tank": 16, "recon": 16 },
-  "by_indirect_class": { "mortar": 12, "light": 10, "spg": 10, "heavy": 8, "rocket": 6 },
+  "about": "Per-unit ammunition (SPEC \u00a710: unit ammo kept, unit fuel removed). Capacity by unit kind, overridden by role or indirect class; one shot volley / one shell uses ammo.per_shot (default 1). CoH3 has no ammo, so these are Burning Front values (decision G; raised \u00d71.5 on 2026-11-28 after the G-4 time-to-kill report).",
+  "by_kind": {
+    "squad": 30,
+    "team_weapon": 18,
+    "vehicle": 18,
+    "structure": 45
+  },
+  "by_role": {
+    "anti_tank": 24,
+    "recon": 24
+  },
+  "by_indirect_class": {
+    "mortar": 18,
+    "light": 15,
+    "spg": 15,
+    "heavy": 12,
+    "rocket": 9
+  },
   "low_ammo_share": 0.25
 }

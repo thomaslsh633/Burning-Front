@@ -3,7 +3,7 @@
   "halftrack_us": {
    "coh3_ref": "sbps/races/american/vehicles/halftrack_us",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "halftrack_us",
@@ -57,7 +57,7 @@
     "set": "halftrack_us"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

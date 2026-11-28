@@ -60,10 +60,12 @@ export function convertWeapon(bag, { id, category, ref, cfg, vocab, profiles, fl
     const l = bag.tracking?.normal?.max_left ?? -180, r = bag.tracking?.normal?.max_right ?? 180;
     const vc = {};
     for (const [k, name] of Object.entries(COVER)) { const m = bag.cover_table?.[k]; if (m) { const mm = modsOf(m); if (Object.keys(mm).length) vc[name] = mm; } }
-    // CoH3 artillery has no accuracy (it hits by scatter): accuracy = chance to land on the target hex at each band's distance
+    // CoH3 artillery, and direct HE guns with no accuracy (StuG III D short 75 mm …), hit by scatter: accuracy = chance to
+    // land on the target hex at each band's distance
     const dist = { near: bag.range?.distance?.near ?? 0, mid: bag.range?.distance?.mid ?? 0, far: (bag.range?.distance?.far ?? -1) < 0 ? maxM : bag.range.distance.far };
-    const acc = indirect && !((bag.accuracy?.near ?? 0) > 0) ? band(Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, hexHitChance(bag.scatter, d, scale.metres_per_hex)]))) : band(bag.accuracy);
-    if (indirect && !((bag.accuracy?.near ?? 0) > 0)) notes.push('accuracy derived from scatter (chance to land on the hex)');
+    const byScatter = !((bag.accuracy?.near ?? 0) > 0) && !((bag.accuracy?.far ?? 0) > 0) && bag.scatter && (indirect || (bag.damage?.max ?? 0) > 0);
+    const acc = byScatter ? band(Object.fromEntries(Object.entries(dist).map(([k, d]) => [k, hexHitChance(bag.scatter, d, scale.metres_per_hex)]))) : band(bag.accuracy);
+    if (byScatter) notes.push('accuracy derived from scatter (chance to land on the hex)');
     rec.attack = { fire_mode: indirect ? 'indirect' : 'direct', accuracy: acc, range_hex: range,
       shots_per_turn: fr.shots_per_turn, damage_per_shot: fr.damage_per_shot,
       ...(fr.multiplier && fr.multiplier !== 1 ? { shot_multiplier: fr.multiplier } : {}),
@@ -181,6 +183,15 @@ const ROLE_BY_CLASS = { rifle: 'anti_infantry', smg: 'anti_infantry', pistol: 'a
   cannon: 'all_round', cannon_large: 'anti_tank', cannon_small: 'anti_light_vehicle', cannon_burst: 'anti_light_vehicle',
   mortar: 'indirect', artillery_small: 'indirect', artillery_medium: 'indirect', artillery_mobile: 'indirect', nebelwerfer: 'indirect' };
 
+/** A role the CoH3 squad types state outright (G-5, 2026-11-28), or null: then the main weapon class decides. */
+export function roleFromTags(tags, kind) {
+  if (tags.includes('infantry_anti_tank')) return 'anti_tank';
+  if (tags.includes('sniper')) return 'recon';
+  if (kind === 'vehicle' && tags.some(t => ['vehicle_artillery', 'vehicle_direct_fire_barrage'].includes(t))) return 'anti_infantry';
+  if (kind === 'vehicle' && tags.some(t => ['vehicle_support', 'reinforce_healing_platform'].includes(t))) return 'logistics';
+  return null;
+}
+
 /** sbps → squad record. ctx: { ref, category, id, catalogUnit, mainWeaponClass, memberCategory, carriedWeapon, ammo, profiles, scale } */
 export function convertSquad(rec, ctx) {
   const notes = [];
@@ -192,8 +203,9 @@ export function convertSquad(rec, ctx) {
   const tags = (EXT(rec, 'squad_type_ext')?.squad_type_list || []).map(t => t.squad_type).filter(Boolean);
   let role = ROLE_BY_CLASS[ctx.mainWeaponClass] ?? 'logistics';
   const engineer = tags.includes('engineer') || (ctx.entityTags || []).includes('engineer');
-  if (engineer) role = 'engineer';
-  notes.push(`role "${role}" guessed from ${engineer ? 'engineer tag' : `main weapon class ${ctx.mainWeaponClass ?? 'none'}`}`);
+  const byTag = engineer ? 'engineer' : roleFromTags(tags, kind);
+  if (byTag) role = byTag;
+  notes.push(`role "${role}" guessed from ${engineer ? 'engineer tag' : byTag ? 'CoH3 squad type' : `main weapon class ${ctx.mainWeaponClass ?? 'none'}`}`);
   const u = ctx.catalogUnit || {};
   const out = { coh3_ref: ctx.ref, kind, role, members,
     price: u.price ? { cost: u.price.cost, from: u.price.from } : { cost: {}, from: 'entities' },

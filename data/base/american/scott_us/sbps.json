@@ -3,7 +3,7 @@
   "scott_us": {
    "coh3_ref": "sbps/races/american/vehicles/scott_us",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "scott_us",
@@ -40,7 +40,7 @@
     "set": "scott_us"
    },
    "supply": {
-    "ammo": 10
+    "ammo": 15
    }
   }
  }

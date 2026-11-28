@@ -47,3 +47,25 @@ test('view: hex centres and the tap mapping agree', () => {
   for (const h of [H(0, 0), H(3, 4), H(9, 7)]) { const p = v.centre(h); assert.deepEqual(v.toHex(p.x, p.y), h); }
   assert.equal(v.toHex(-50, -50), null);
 });
+
+test('camera: the angle stays fixed; yaw turns in 60° steps, zoom within 0.5–3', () => {
+  const { ctl } = setup();
+  assert.deepEqual(ctl.ui().camera, { yaw: 45, zoom: 1 });
+  ctl.onIntent({ type: 'tapButton', id: 'rotateRight' });
+  ctl.onIntent({ type: 'tapButton', id: 'rotateRight' });
+  assert.equal(ctl.ui().camera.yaw, 165);
+  for (let i = 0; i < 6; i++) ctl.onIntent({ type: 'tapButton', id: 'rotateLeft' });
+  assert.equal(ctl.ui().camera.yaw, 165, 'a full turn comes back');
+  ctl.onIntent({ type: 'zoom', factor: 10 });
+  assert.equal(ctl.ui().camera.zoom, 3);
+  ctl.onIntent({ type: 'tapButton', id: 'zoomOut' });
+  assert.equal(ctl.ui().camera.zoom, 2.4);
+});
+
+test('view: taps map back to hexes at any yaw and zoom', () => {
+  for (const [yaw, size] of [[45, 22], [165, 30], [285, 12]]) {
+    const v = createView(size, { yaw });
+    v.fit(12, 9);
+    for (const h of [H(0, 0), H(5, 4), H(11, 8)]) { const p = v.centre(h); assert.deepEqual(v.toHex(p.x, p.y), h, `yaw ${yaw}`); }
+  }
+});

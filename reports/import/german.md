@@ -118,11 +118,12 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | panzerjager_package_ger | upgrade | — |
 | g43_sniper_ger | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | sniper_ger | entity · infantry | — |
-| sniper_ger | squad · infantry | role "recon" guessed from main weapon class sniper |
+| sniper_ger | squad · infantry | role "recon" guessed from CoH3 squad type |
 | sniper_ger | veterancy | — |
 | g43_stormtrooper_ger | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | stormtrooper_ger | entity · infantry | — |
-| stormtrooper_ger | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| mg42_stormtrooper_ger | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
+| stormtrooper_ger | squad · infantry | role "anti_infantry" guessed from main weapon class rifle; loadout weapons from coh3stats: mg42_stormtrooper_ger ×1 |
 | stormtrooper_ger | veterancy | — |
 | stg_44_stormtrooper_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | g43_sturmpioneer_ger | weapon · rifle | dropped module scatter (not allowed for rifle) |
@@ -212,7 +213,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | mg34_armored_car_ger | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | armored_car_ger | entity · vehicles | — |
-| armored_car_ger | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| armored_car_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | armored_car_ger | veterancy | — |
 | radio_armored_car_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 20mm_panzerbuchse_armored_car_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -225,7 +226,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | last_stand_borgward_iv_reload_charge_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 150mm_brummbar_ger | weapon · heavy_artillery | accuracy derived from scatter (chance to land on the hex) |
 | brummbar_ger | entity · vehicles | — |
-| brummbar_ger | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| brummbar_ger | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | brummbar_ger | veterancy | — |
 | camouflage_special_ops_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | side_skirts_mechanized_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -239,7 +240,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | mg42_halftrack_ger | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | halftrack_ger | entity · vehicles | — |
-| halftrack_ger | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_ger | veterancy | — |
 | stummel_halftrack_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_halftrack_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -247,17 +248,17 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | flame_halftrack_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 25mm_tank_mortar_smoke_ger | weapon · smoke | dropped module moving (not allowed for smoke) |
 | halftrack_medical_ger | entity · vehicles | — |
-| halftrack_medical_ger | squad · vehicles | role "logistics" guessed from main weapon class smoke; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_medical_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_medical_ger | veterancy | — |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 75mm_halftrack_stummel_ger | weapon · light_artillery | — |
 | halftrack_stummel_ger | entity · vehicles | — |
-| halftrack_stummel_ger | squad · vehicles | role "indirect" guessed from main weapon class artillery_mobile; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_stummel_ger | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_stummel_ger | veterancy | — |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 150mm_hummel_dummy_ger | weapon | CoH3 placeholder weapon; skipped |
 | hummel_ger | entity · vehicles | — |
-| hummel_ger | squad · vehicles | role "logistics" guessed from main weapon class dummy; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| hummel_ger | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | hummel_ger | veterancy | — |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 75mm_pak_jagdpanzer_iv_skdfz_162_ger | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -271,7 +272,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | hulldown_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | kettenkrad_ger | entity · vehicles | — |
-| kettenkrad_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| kettenkrad_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | kettenkrad_ger | veterancy | — |
 | communication_cables_kettenkrad_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 88mm_king_tiger_ger | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -319,7 +320,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | recovery_vehicle_ger | entity · vehicles | — |
 | recovery_vehicle_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | recovery_vehicle_ger | veterancy | — |
-| royal_engineers_armored_car_ger | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| royal_engineers_armored_car_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | royal_engineers_armored_car_ger | veterancy | — |
 | radio_armored_car_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 20mm_panzerbuchse_armored_car_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -338,7 +339,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | camouflage_special_ops_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | hulldown_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
-| 75mm_stug_iii_short_ak | weapon · tank_gun | — |
+| 75mm_stug_iii_short_ak | weapon · tank_gun | accuracy derived from scatter (chance to land on the hex) |
 | stug_iii_d_ger | entity · vehicles | — |
 | stug_iii_d_ger | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | stug_iii_d_ger | veterancy | veterancy record not found: custom_property_container/veterancy/afrika_korps/vehicles/stug_iii_d_ak/veterancy_1_stug_iii_d_ak; veterancy record not found: custom_property_container/veterancy/afrika_korps/vehicles/stug_iii_d_ak/veterancy_2_stug_iii_d_ak; veterancy record not found: custom_property_container/veterancy/afrika_korps/vehicles/stug_iii_d_ak/veterancy_3_stug_iii_d_ak |
@@ -355,7 +356,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 380mm_dummy_rocket_launcher_sturmtiger_ger | weapon | CoH3 placeholder weapon; skipped |
 | sturmtiger_ger | entity · vehicles | — |
-| sturmtiger_ger | squad · vehicles | role "logistics" guessed from main weapon class dummy; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| sturmtiger_ger | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | sturmtiger_ger | veterancy | — |
 | tiger_boss_ger | entity · vehicles | — |
 | tiger_boss_ger | squad · vehicles | role "anti_tank" guessed from main weapon class cannon_large; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
@@ -365,20 +366,20 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | tiger_ger | veterancy | — |
 | mg42_tiger_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_2_5_cargo_ger | entity · vehicles | — |
-| truck_2_5_cargo_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_cargo_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_cargo_ger | veterancy | — |
 | truck_2_5_fuel_ger | entity · vehicles | — |
-| truck_2_5_fuel_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_fuel_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_ger | entity · vehicles | — |
-| truck_2_5_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_logistics_ger | entity · vehicles | — |
-| truck_2_5_logistics_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_logistics_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_medical_ger | entity · vehicles | — |
-| truck_2_5_medical_ger | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_medical_ger | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_medical_ger | veterancy | — |
 | 105mm_wespe_dummy_ger | weapon | CoH3 placeholder weapon; skipped |
 | wespe_ger | entity · vehicles | — |
-| wespe_ger | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| wespe_ger | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | wespe_ger | veterancy | — |
 | spotting_scopes_ger | upgrade | effect not in CoH3 data (state tree): write by hand |
 | wirbelwind_ger | squad · vehicles | role "anti_light_vehicle" guessed from main weapon class cannon_burst; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |

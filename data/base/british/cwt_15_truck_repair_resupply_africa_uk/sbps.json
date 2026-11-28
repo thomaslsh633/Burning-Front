@@ -3,7 +3,7 @@
   "cwt_15_truck_repair_resupply_africa_uk": {
    "coh3_ref": "sbps/races/british_africa/vehicles/cwt_15_truck_repair_resupply_africa_uk",
    "kind": "vehicle",
-   "role": "anti_infantry",
+   "role": "logistics",
    "members": [
     {
      "entity": "cwt_15_resupply_repair_africa_uk",
@@ -35,7 +35,7 @@
     "set": "cwt_15_truck_repair_resupply_africa_uk"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

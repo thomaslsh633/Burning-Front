@@ -3,7 +3,7 @@
   "halftrack_ger": {
    "coh3_ref": "sbps/races/german/vehicles/halftrack_ger",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "halftrack_ger",
@@ -60,7 +60,7 @@
     "set": "halftrack_ger"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    },
    "build": {
     "menu": [

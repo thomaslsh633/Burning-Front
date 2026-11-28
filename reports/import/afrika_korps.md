@@ -43,7 +43,8 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | flamethrower_guastatori_ak | weapon · flame_throwers | vs_target folliage dropped (not in vocab); vs_target destructible_object dropped (not in vocab); vs_target mine dropped (not in vocab); dropped module scatter (not allowed for flame_throwers) |
 | kar98k_kriegsmarine_ak | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | kriegsmarine_infantry_ak | entity · infantry | — |
-| kriegsmarine_infantry_ak | squad · infantry | role "engineer" guessed from engineer tag |
+| mp44_kriegsmarine_no_ui_ak | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
+| kriegsmarine_infantry_ak | squad · infantry | role "engineer" guessed from engineer tag; loadout weapons from coh3stats: mp44_kriegsmarine_no_ui_ak ×1 |
 | kriegsmarine_infantry_ak | veterancy | — |
 | lmg_kriegsmarine_ak | upgrade | — |
 | lmg_panzergrenadier_ak | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
@@ -58,7 +59,8 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | kar98k_panzerjaeger_ak | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | panzerjaeger_inf_ak | entity · infantry | — |
-| panzerjaeger_inf_ak | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| panzerbuchse39_at_rifle_ak | weapon · infantry_anti_tank_weapon | vs_target destructible_object dropped (not in vocab); vs_target tank_trap dropped (not in vocab) |
+| panzerjaeger_inf_ak | squad · infantry | role "anti_tank" guessed from CoH3 squad type; loadout weapons from coh3stats: panzerbuchse39_at_rifle_ak ×2 |
 | panzerjaeger_inf_ak | veterancy | — |
 | tank_buster_package_panzerjager_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -122,7 +124,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | armored_car_8_rad_command_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | armored_tractor_254_ak | entity · vehicles | — |
-| armored_tractor_254_ak | squad · vehicles | role "logistics" guessed from main weapon class smoke; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| armored_tractor_254_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | armored_tractor_254_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 88mm_elefant_ak | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -143,7 +145,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | mg34_halftrack_250_ak | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | halftrack_250_ak | entity · vehicles | — |
-| halftrack_250_ak | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_250_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_250_ak | veterancy | — |
 | 20mm_halftrack_250_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 81mm_mortar_halftrack_250_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -151,16 +153,16 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 81mm_mortar_halftrack_ak | weapon · light_artillery | vs_target ambient_building dropped (not in vocab); vs_target barbed_wire dropped (not in vocab); vs_target sandbag dropped (not in vocab); accuracy derived from scatter (chance to land on the hex) |
 | halftrack_250_mortar_ak | entity · vehicles | — |
-| halftrack_250_mortar_ak | squad · vehicles | role "indirect" guessed from main weapon class mortar; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_250_mortar_ak | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_250_mortar_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | halftrack_250_vampire_ak | entity · vehicles | — |
-| halftrack_250_vampire_ak | squad · vehicles | role "logistics" guessed from main weapon class smoke; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_250_vampire_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_250_vampire_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 150mm_dummy_stuka_ak | weapon | CoH3 placeholder weapon; skipped |
 | halftrack_251_stuka_ak | entity · vehicles | — |
-| halftrack_251_stuka_ak | squad · vehicles | role "indirect" guessed from main weapon class mortar; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_251_stuka_ak | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_251_stuka_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 20mm_halftrack_flak_ak | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -174,13 +176,13 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | halftrack_recovery_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_2_5_towed_88_ak | entity · vehicles | — |
-| halftrack_towed_88mm_ak | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_towed_88mm_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_towed_88mm_ak | veterancy | — |
 | medical_truck_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | mg34_kradschutzen_motorcycle_ak | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | kradschutzen_motorcycle_ak | entity · vehicles | — |
-| kradschutzen_motorcycle_ak | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| kradschutzen_motorcycle_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | kradschutzen_motorcycle_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 20mm_l6_40_ak | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -281,7 +283,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | mg42_stug_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_field_modifications_side_skirts_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
-| 75mm_stug_iii_short_ak | weapon · tank_gun | — |
+| 75mm_stug_iii_short_ak | weapon · tank_gun | accuracy derived from scatter (chance to land on the hex) |
 | stug_iii_d_ak | entity · vehicles | — |
 | stug_iii_d_ak | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | stug_iii_d_ak | veterancy | — |
@@ -308,12 +310,12 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | elite_forces_tiger_ace_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_2_5_ak | entity · vehicles | — |
-| truck_2_5_ak | squad · vehicles | role "logistics" guessed from main weapon class smoke; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_ak | veterancy | — |
 | medical_truck_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_2_5_medical_ak | entity · vehicles | — |
-| truck_2_5_medical_ak | squad · vehicles | role "logistics" guessed from main weapon class smoke; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_2_5_medical_ak | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_2_5_medical_ak | veterancy | — |
 | elite_forces_long_war_veterans_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | sandbag_wall_ak | entity · buildings | — |

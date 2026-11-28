@@ -1,5 +1,5 @@
 {
-  "about": "Greybox TTK check (dev plan G-4, tools/greybox/report.js). targets: reference squads every armed squad duels; max_turns: duel length. ranges: the best median TTK (or, with measure pin, the best median time until the target is pinned) a squad of this role should reach against targets of this kind, in own turns (design values); squads outside are flagged \u2014 fix the data or record why.",
+  "about": "Greybox TTK check (dev plan G-4, tools/greybox/report.js). targets: reference squads every armed squad duels; max_turns: duel length. ranges: the best median TTK (or, with measure pin, the best median time until the target is pinned) a squad of this role should reach against targets of this kind, in own turns (design values); squads outside are flagged \u2014 fix the data or record why. exceptions: squads outside the ranges for a recorded reason (G-5); the report shows them as accepted.",
   "targets": [
     "riflemen_us",
     "grenadier_ger",
@@ -53,5 +53,27 @@
         10
       ]
     }
-  ]
+  ],
+  "exceptions": {
+    "armored_car_8_rad_command_ak": "command vehicle: its job is the command aura (abilities not built), light MG only",
+    "marmon_herrington_africa_uk": "light armoured car with a light MG; transport / scout role",
+    "greyhound_us": "light armoured car (37 mm): kills light vehicles (Stuart 9); medium tanks need flanking",
+    "sherman_bulldozer_us": "105 mm HE support tank, not an anti-tank gun",
+    "sherman_bulldozer_x2_us": "105 mm HE support tank, not an anti-tank gun",
+    "churchill_avre_uk": "290 mm demolition petard: a one-shot kill on infantry is CoH3's design",
+    "artillery_observers_us": "support squad: its strength is calling artillery (abilities not built)",
+    "captain_us": "officer squad: auras and abilities (not built)",
+    "captain_torch": "officer hero squad: auras and abilities (not built)",
+    "officer_africa_uk": "officer squad: auras and abilities (not built)",
+    "coastal_officer_ger": "artillery officer: abilities (not built)",
+    "pathfinder_us": "recon squad (carbines): role guessed from its main weapon",
+    "scout_us": "recon squad (carbines): role guessed from its main weapon",
+    "saboteurs_partisan": "sabotage / demolition squad (abilities not built)",
+    "saboteurs_battlegroup_partisan": "sabotage / demolition squad (abilities not built)",
+    "ssb_sniper_africa_us": "anti-tank sniper: kills light vehicles, slow against medium tanks by design",
+    "ssb_sniper_africa_uk": "anti-tank sniper: kills light vehicles, slow against medium tanks by design",
+    "sturmtiger_ger": "380 mm rocket mortar fired by an ability only (not built); hull MG meanwhile",
+    "howitzer_cannone_da_105_ger": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built",
+    "howitzer_cannone_da_105_ak": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built"
+  }
 }

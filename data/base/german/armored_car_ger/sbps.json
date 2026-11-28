@@ -3,7 +3,7 @@
   "armored_car_ger": {
    "coh3_ref": "sbps/races/german/vehicles/armored_car_ger",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "armored_car_ger",
@@ -56,7 +56,7 @@
     "set": "armored_car_ger"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

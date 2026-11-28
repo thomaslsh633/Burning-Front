@@ -3,7 +3,7 @@
   "dingo_africa_uk": {
    "coh3_ref": "sbps/races/british_africa/vehicles/dingo_africa_uk",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "dingo_africa_uk",
@@ -39,7 +39,7 @@
     "set": "dingo_africa_uk"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

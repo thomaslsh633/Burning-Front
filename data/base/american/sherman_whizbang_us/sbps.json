@@ -3,7 +3,7 @@
   "sherman_whizbang_us": {
    "coh3_ref": "sbps/races/american/vehicles/sherman_whizbang_us",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "sherman_whizbang_us",
@@ -41,7 +41,7 @@
     "set": "sherman_whizbang_us"
    },
    "supply": {
-    "ammo": 6
+    "ammo": 9
    }
   }
  }

@@ -3,6 +3,10 @@
 Gameplay history before v209 lives in the section headers of the source files (`[vNNN] …`) and in FILES.md.
 New entries go on top, one short block per delivered version.
 
+## rewrite — data fixes, camera turn and zoom (2026-11-28)
+- Ammunition ×1.5; bazooka teams, Panzerjäger and similar squads now carry their AT weapons; HE splash hits whole squads.
+- Greybox: turn the map and zoom (buttons, mouse wheel, pinch); one finger scrolls; checked on emulated phones.
+
 ## rewrite — G-1 all factions, G-4 TTK report (2026-11-28)
 - US Forces, Wehrmacht, Afrikakorps and British Forces imported from CoH3: 287 squads.
 - A time-to-kill report duels every armed squad against reference targets and flags outliers.

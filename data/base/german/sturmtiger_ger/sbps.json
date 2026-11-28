@@ -3,7 +3,7 @@
   "sturmtiger_ger": {
    "coh3_ref": "sbps/races/german/vehicles/sturmtiger_ger",
    "kind": "vehicle",
-   "role": "logistics",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "sturmtiger_ger",
@@ -41,7 +41,7 @@
     "set": "sturmtiger_ger"
    },
    "supply": {
-    "ammo": 6
+    "ammo": 9
    }
   }
  }

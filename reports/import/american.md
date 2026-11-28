@@ -55,7 +55,8 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | thompson_assault_engineers_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | carbine_bazooka_team_us | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | bazooka_team_us | entity · infantry | — |
-| bazooka_team_us | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| bazooka_bazooka_team_us | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
+| bazooka_team_us | squad · infantry | role "anti_tank" guessed from CoH3 squad type; loadout weapons from coh3stats: bazooka_bazooka_team_us ×2 |
 | bazooka_team_us | veterancy | — |
 | panzerschrek_special_operations_bazooka_team_us | upgrade | — |
 | panzerschreck_stormtrooper_ger | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -99,10 +100,9 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | french_old_guard_lmg_m1919a6s_us | upgrade | — |
 | m1919a6_old_guard_us | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | lmg_m24_29_chatellerault_french_infantry_us | upgrade | — |
-| bazooka_bazooka_team_us | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
 | infantry_assault_bazooka_team_us | entity · infantry | — |
 | infantry_assault_bazooka_no_bazooka_team_us | entity · infantry | — |
-| infantry_assault_bazooka_team_us | squad · infantry | role "anti_tank" guessed from main weapon class bazooka; reinforce defaulted (cost ratio 1) |
+| infantry_assault_bazooka_team_us | squad · infantry | role "anti_tank" guessed from CoH3 squad type; reinforce defaulted (cost ratio 1) |
 | infantry_assault_bazooka_team_us | veterancy | — |
 | panzerschrek_special_operations_bazooka_team_us | upgrade | — |
 | thompson_riflemen_leader_us | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
@@ -116,7 +116,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | m1919a6_rifleman_squad_us | upgrade | — |
 | carcano_resistance_fighter_partisan | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | marksman_team_partisan | entity · infantry | — |
-| marksman_team_partisan | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| marksman_team_partisan | squad · infantry | role "recon" guessed from CoH3 squad type |
 | marksman_team_partisan | veterancy | — |
 | panzerbuchse_marksmen_team_partisan | upgrade | — |
 | panzerbuchse39_at_rifle_marksmen_team_partisan | weapon · infantry_anti_tank_weapon | — |
@@ -185,18 +185,18 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | utility_scout_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | springfield_sniper_us | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | sniper_us | entity · infantry | — |
-| sniper_us | squad · infantry | role "recon" guessed from main weapon class sniper |
+| sniper_us | squad · infantry | role "recon" guessed from CoH3 squad type |
 | sniper_us | veterancy | — |
 | boys_at_rifle_scoped_africa_uk | weapon · infantry_anti_tank_weapon | — |
 | ssb_sniper_africa_uk | entity · infantry | — |
-| ssb_sniper_africa_us | squad · infantry | role "recon" guessed from main weapon class sniper_gib |
+| ssb_sniper_africa_us | squad · infantry | role "anti_tank" guessed from CoH3 squad type |
 | ssb_sniper_africa_us | veterancy | — |
 | special_services_sniper_spotter_bolster_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | garand_devils_brigade_us | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | ssf_commandos_us | entity · infantry | — |
-| ssf_commandos_us | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| ssf_commandos_us | squad · infantry | role "anti_infantry" guessed from main weapon class rifle; loadout weapons from coh3stats: m1941_lmg_devils_brigade_us ×2 |
 | ssf_commandos_us | veterancy | — |
-| stealth_ssf_commandos_torch | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| stealth_ssf_commandos_torch | squad · infantry | role "anti_infantry" guessed from main weapon class rifle; loadout weapons from coh3stats: m1941_lmg_devils_brigade_us ×2 |
 | stealth_ssf_commandos_torch | veterancy | — |
 | torch_7a_crosstrained_dummy | upgrade | upgrade not found |
 | torch_7b_fastactiondrills_dummy | upgrade | upgrade not found |
@@ -241,7 +241,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | pack_howitzer_75mm_us | veterancy | — |
 | elite_forces_medical_supplements_squad_upgrade_ak | upgrade | effect not in CoH3 data (state tree): write by hand |
 | ambulance_us | entity · vehicles | — |
-| ambulance_us | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| ambulance_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | ambulance_us | veterancy | — |
 | 75mm_chaffee_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | 30cal_coaxial_chaffee_us | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
@@ -274,7 +274,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | assault_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 50cal_halftrack_us | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | halftrack_assault_us | entity · vehicles | — |
-| halftrack_assault_us | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_assault_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_assault_us | veterancy | — |
 | hmg_quadmount_halftrack_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_halftrack_us | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -284,7 +284,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | 75mm_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | assault_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | halftrack_medical_us | entity · vehicles | — |
-| halftrack_medical_us | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_medical_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_medical_us | veterancy | — |
 | hmg_quadmount_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -299,7 +299,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | 75mm_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | assault_halftrack_exchangeable_parts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | halftrack_us | entity · vehicles | — |
-| halftrack_us | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| halftrack_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | halftrack_us | veterancy | — |
 | hmg_quadmount_halftrack_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_halftrack_us | upgrade | effect not in CoH3 data (state tree): write by hand |
@@ -311,7 +311,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | hellcat_us | veterancy | — |
 | hmg_hellcat_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | m29_weasal_us | entity · vehicles | — |
-| m29_weasal_us | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| m29_weasal_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | m29_weasal_us | veterancy | — |
 | 30cal_weasal_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 90mm_pershing_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -321,11 +321,11 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | pershing_us | squad · vehicles | role "anti_tank" guessed from main weapon class cannon_large; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | pershing_us | veterancy | — |
 | priest_kangaroo_us | entity · vehicles | — |
-| priest_kangaroo_us | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| priest_kangaroo_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | priest_kangaroo_us | veterancy | — |
 | 105mm_howitzer_priest_dummy_us | weapon | CoH3 placeholder weapon; skipped |
 | priest_us | entity · vehicles | — |
-| priest_us | squad · vehicles | role "logistics" guessed from main weapon class dummy; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| priest_us | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | priest_us | veterancy | — |
 | crane_recovery_vehicle_us | weapon | weapon not found |
 | recovery_vehicle_us | entity · vehicles | — |
@@ -333,7 +333,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | recovery_vehicle_us | veterancy | — |
 | 75mm_howitzer_scott_us | weapon · light_artillery | accuracy derived from scatter (chance to land on the hex) |
 | scott_us | entity · vehicles | — |
-| scott_us | squad · vehicles | role "indirect" guessed from main weapon class artillery_mobile; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| scott_us | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | scott_us | veterancy | — |
 | 76mm_sherman_us | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | sherman_76mm_us | entity · vehicles | — |
@@ -372,7 +372,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | 75mm_dummy_whizbang_us | weapon | CoH3 placeholder weapon; skipped |
 | 180mm_dummy_whizbang_us | weapon | CoH3 placeholder weapon; skipped |
 | sherman_whizbang_us | entity · vehicles | — |
-| sherman_whizbang_us | squad · vehicles | role "indirect" guessed from main weapon class artillery_small; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| sherman_whizbang_us | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | sherman_whizbang_us | veterancy | — |
 | 37mm_stuart_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | 30cal_coaxial_stuart_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
@@ -391,20 +391,20 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | utility_kit_stuart_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | commander_stuart_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_4x4_medical_us | entity · vehicles | — |
-| truck_4x4_medical_specialist_us | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_4x4_medical_specialist_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_4x4_medical_specialist_us | veterancy | — |
 | 30cal_truck_4x4_us | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | truck_4x4_us | entity · vehicles | — |
-| truck_4x4_us | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_4x4_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_4x4_us | veterancy | — |
 | truck_4x4_side_skirts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | command_truck_4x4_us | upgrade | effect not in CoH3 data (state tree): write by hand |
-| truck_4x4_x2_us | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_4x4_x2_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_4x4_x2_us | veterancy | — |
 | truck_4x4_side_skirts_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | command_truck_4x4_us | upgrade | effect not in CoH3 data (state tree): write by hand |
 | truck_6x6_us | entity · vehicles | — |
-| truck_6x6_us | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| truck_6x6_us | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | truck_6x6_us | veterancy | — |
 | goon_gun_pit_us | weapon left out | missing module "indirect" (must for mortar) |
 | howitzer_105mm_us | squad left out | tw_howitzer_105mm_us: missing module "crew" (must for team_weapons) |

@@ -3,7 +3,7 @@
   "marksman_team_partisan": {
    "coh3_ref": "sbps/races/american/infantry/marksman_team_partisan",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "recon",
    "members": [
     {
      "entity": "marksman_team_partisan",
@@ -50,7 +50,7 @@
     "set": "marksman_team_partisan"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 24
    }
   }
  }

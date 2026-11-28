@@ -170,11 +170,13 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - No flags or antennas drawn on vehicles (v181, v183).
 - Camera (2026-11-28): quarter view — the map turned 45° and seen from 35° above the ground (ground depth × sin 35°); raised
   hexes drawn lifted by their elevation; units upright. The greybox uses it now (`presentation/greybox` createView yaw /
-  pitch); the real renderer (D3) follows it.
+  pitch); the real renderer (D3) follows it. The angle stays fixed; the map turns in 60° steps and zooms (×0.5–3, buttons,
+  mouse wheel, two-finger pinch); one finger scrolls the board (2026-11-28).
 
 ## 10. Decided, not in the code yet
 Confirmed 2026-11-25 (rewrite):
-- Per-unit ammunition stays: each attack spends ammo; supply trucks / supply sources refill it.
+- Per-unit ammunition stays: each attack spends ammo; supply trucks / supply sources refill it. Capacities
+  (`data/balance/ammo.json`) raised ×1.5 on 2026-11-28 after the G-4 time-to-kill report.
 - Per-unit fuel consumption is removed: vehicles move without spending unit fuel. Fuel remains a faction resource (prices, upkeep, income).
 - Release scope: North Africa and Italy only (factions: Afrikakorps, British Forces, US Forces, Wehrmacht); free web release.
 - Campaign: veterancy does not carry over between missions.
@@ -282,6 +284,9 @@ Confirmed 2026-11-25 (rewrite):
   suppression. AoE weapons splash squads at the falloff for a 2.5 m spread (miss: half). Penetrating hits on vehicles roll
   criticals (chances in data). An attack spends one volley of ammo (indirect: one per shell). Suppression = CoH3 amount × 100
   per shot ÷ the volley multiplier × cover / morale modifiers; vehicles and structures take none.
+  G-5 (2026-11-28): CoH3's splash cap −1 means every member of the squad; weapons CoH3 gives models at spawn (a bazooka team's
+  bazookas, Panzerjäger AT rifles …: coh3stats loadout) are fired by that many models instead of their main weapon; a
+  direct-fire weapon with CoH3 accuracy 0 (StuG III D short 75 mm …) hits by scatter like artillery.
 - Sight (D2, v214 v144 rules, `data/balance/vision.json`): a line is blocked where ground or a `block` object / edge rises above
   the line from the viewer's eye (infantry and crews 1.5, vehicles 2, structures 3) to 1 above the target's ground; `partial`
   objects obscure (hit ×0.85); low objects (height ≤ 2) beside the viewer are ignored; neighbours always see each other.

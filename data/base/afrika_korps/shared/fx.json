@@ -1,9 +1,21 @@
 {
  "weapon": {
+  "mp44_kriegsmarine_no_ui_ak": {
+   "name": "weapon.mp44_kriegsmarine_no_ui_ak.name",
+   "sound": {
+    "fire": "smg"
+   }
+  },
   "lmg_panzergrenadier_ak": {
    "name": "weapon.lmg_panzergrenadier_ak.name",
    "sound": {
     "fire": "lmg"
+   }
+  },
+  "panzerbuchse39_at_rifle_ak": {
+   "name": "weapon.panzerbuchse39_at_rifle_ak.name",
+   "sound": {
+    "fire": "panzerbuchse"
    }
   },
   "mp40_crew_ak": {

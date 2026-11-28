@@ -3,7 +3,7 @@
   "cwt_lrdg_truck_2pdr_africa_uk": {
    "coh3_ref": "sbps/races/british_africa/vehicles/cwt_lrdg_truck_2pdr_africa_uk",
    "kind": "vehicle",
-   "role": "anti_tank",
+   "role": "logistics",
    "members": [
     {
      "entity": "cwt_lrdg_truck_2pdr_africa_uk",
@@ -39,7 +39,7 @@
     "set": "cwt_lrdg_truck_2pdr_africa_uk"
    },
    "supply": {
-    "ammo": 16
+    "ammo": 18
    }
   }
  }

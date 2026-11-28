@@ -3,7 +3,7 @@
   "bishop_africa_uk": {
    "coh3_ref": "sbps/races/british_africa/vehicles/bishop_africa_uk",
    "kind": "vehicle",
-   "role": "all_round",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "bishop_africa_uk",
@@ -36,7 +36,7 @@
     "set": "bishop_africa_uk"
    },
    "supply": {
-    "ammo": 10
+    "ammo": 15
    }
   }
  }

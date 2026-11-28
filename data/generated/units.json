@@ -3312,9 +3312,9 @@
       "attack": {
        "fire_mode": "direct",
        "accuracy": {
-        "near": 0,
-        "mid": 0,
-        "far": 0
+        "near": 1,
+        "mid": 1,
+        "far": 1
        },
        "range_hex": {
         "min": 0,
@@ -3643,6 +3643,87 @@
      },
      "mp44_kriegsmarine_ak": {
       "coh3_ref": "weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp44_kriegsmarine_ak",
+      "class": "smg",
+      "fire_rule": "volley",
+      "damage": 5,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 1,
+       "mid": 1,
+       "far": 1
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.75,
+        "mid": 0.61,
+        "far": 0.4
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 16,
+        "mid": 15,
+        "far": 7
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "shot_multiplier": 1.25,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.75
+      }
+     },
+     "mp44_kriegsmarine_no_ui_ak": {
+      "coh3_ref": "weapon/afrika_korps/small_arms/machine_gun/sub_machine_gun/mp44_kriegsmarine_no_ui_ak",
       "class": "smg",
       "fire_rule": "volley",
       "damage": 5,
@@ -5929,6 +6010,123 @@
        "spread_hex": 0,
        "min_range_hex": 3,
        "range_hex": 12
+      }
+     }
+    },
+    "infantry_anti_tank_weapon": {
+     "panzerbuchse39_at_rifle_ak": {
+      "coh3_ref": "weapon/afrika_korps/ballistic_weapon/infantry_anti_tank_weapon/panzerbuchse39_at_rifle_ak",
+      "class": "panzerbuchse",
+      "fire_rule": "single_shot",
+      "damage": 50,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 80,
+       "mid": 70,
+       "far": 60
+      },
+      "vs_target": {
+       "infantry": {
+        "accuracy": 0.75,
+        "damage": 0.5
+       },
+       "building": {
+        "damage": 0.5
+       }
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.49,
+        "mid": 0.42,
+        "far": 0.36
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 73,
+        "mid": 65,
+        "far": 65
+       },
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.4,
+         "damage": 0.25,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 0.1,
+        "mid": 0.05,
+        "far": 0.03
+       },
+       "distance_m": {
+        "near": 0.1,
+        "mid": 0.15,
+        "far": 0.2
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": -1,
+       "friendly_fire": false
+      },
+      "scatter": {
+       "angle_deg": 4,
+       "distance_ratio": 1,
+       "distance_max_m": 5
+      },
+      "deflection": {
+       "damage_ratio": 0.15
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.35
       }
      }
     },
@@ -9762,7 +9960,7 @@
        "set": "armored_car_8_rad_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -9823,7 +10021,7 @@
        "set": "armored_car_8_rad_command_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -9883,7 +10081,7 @@
        "set": "armored_tractor_254_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -9940,7 +10138,7 @@
        "set": "elefant_tank_destroyer_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "goliath_ak": {
@@ -9973,7 +10171,7 @@
        "goliath_auto_detonate_ak"
       ],
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "halftrack_250_20mm_ak": {
@@ -10032,7 +10230,7 @@
        "set": "halftrack_250_20mm_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10043,7 +10241,7 @@
      "halftrack_250_ak": {
       "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_ak",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "halftrack_250_ak",
@@ -10097,7 +10295,7 @@
        "set": "halftrack_250_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10108,7 +10306,7 @@
      "halftrack_250_mortar_ak": {
       "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_mortar_ak",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "halftrack_250_mortar_ak",
@@ -10155,7 +10353,7 @@
        "set": "halftrack_250_mortar_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10216,7 +10414,7 @@
        "set": "halftrack_250_vampire_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10230,7 +10428,7 @@
      "halftrack_251_stuka_ak": {
       "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_251_stuka_ak",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "halftrack_251_stuka_ak",
@@ -10276,7 +10474,7 @@
        "set": "halftrack_251_stuka_ak"
       },
       "supply": {
-       "ammo": 6
+       "ammo": 9
       },
       "build": {
        "menu": [
@@ -10338,7 +10536,7 @@
        "set": "halftrack_7_flak_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10395,7 +10593,7 @@
        "set": "halftrack_recovery_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10457,7 +10655,7 @@
        "set": "halftrack_towed_88mm_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10468,7 +10666,7 @@
      "kradschutzen_motorcycle_ak": {
       "coh3_ref": "sbps/races/afrika_korps/vehicles/kradschutzen_motorcycle_ak",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "kradschutzen_motorcycle_ak",
@@ -10514,7 +10712,7 @@
        "set": "kradschutzen_motorcycle_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10574,7 +10772,7 @@
        "set": "l6_40_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10627,7 +10825,7 @@
        "set": "l6_40_flame_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "m13_40_ak": {
@@ -10679,7 +10877,7 @@
        "set": "m13_40_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10734,7 +10932,7 @@
        "set": "m13_40_command_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "marder_iii_ak": {
@@ -10789,7 +10987,7 @@
        "set": "marder_iii_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -10840,7 +11038,7 @@
        "set": "p26_40_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_ii_command_ak": {
@@ -10887,7 +11085,7 @@
        "set": "panzer_ii_command_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iii_37mm_ak": {
@@ -10939,7 +11137,7 @@
        "set": "panzer_iii_37mm_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iii_50mm_long_ak": {
@@ -10997,7 +11195,7 @@
        "set": "panzer_iii_50mm_long_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iii_75mm_ak": {
@@ -11053,7 +11251,7 @@
        "set": "panzer_iii_75mm_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iii_flame_ak": {
@@ -11101,7 +11299,7 @@
        "set": "panzer_iii_flame_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iv_ak": {
@@ -11156,7 +11354,7 @@
        "set": "panzer_iv_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iv_command_ak": {
@@ -11211,7 +11409,7 @@
        "set": "panzer_iv_command_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "semovente_75_18_ak": {
@@ -11263,7 +11461,7 @@
        "set": "semovente_75_18_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stug_iii_ak": {
@@ -11319,7 +11517,7 @@
        "set": "stug_iii_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stug_iii_d_ak": {
@@ -11375,7 +11573,7 @@
        "set": "stug_iii_d_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "tiger_ace_ak": {
@@ -11440,7 +11638,7 @@
        "set": "tiger_ace_ak"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "tiger_ace_torch": {
@@ -11523,7 +11721,7 @@
        "set": "tiger_ace_torch"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "tiger_ak": {
@@ -11582,7 +11780,7 @@
        "set": "tiger_ak"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "truck_2_5_ak": {
@@ -11637,7 +11835,7 @@
        "set": "truck_2_5_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -11699,7 +11897,7 @@
        "set": "truck_2_5_medical_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -11769,7 +11967,7 @@
        "set": "assault_panzergrenadier_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -11833,7 +12031,7 @@
        "set": "bersaglieri_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -11893,7 +12091,7 @@
        "set": "folgore_paratroopers_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -11961,7 +12159,7 @@
        "set": "guastatori_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -12033,7 +12231,7 @@
        "set": "kriegsmarine_infantry_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -12044,7 +12242,13 @@
         "observation_post_ak",
         "point_fortification_cache_ak"
        ]
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "mp44_kriegsmarine_no_ui_ak",
+        "num": 1
+       }
+      ]
      },
      "panzergrenadier_ak": {
       "coh3_ref": "sbps/races/afrika_korps/infantry/panzergrenadier_ak",
@@ -12110,7 +12314,7 @@
        "set": "panzergrenadier_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -12126,7 +12330,7 @@
      "panzerjaeger_inf_ak": {
       "coh3_ref": "sbps/races/afrika_korps/infantry/panzerjaeger_inf_ak",
       "kind": "squad",
-      "role": "anti_infantry",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "panzerjaeger_inf_ak",
@@ -12187,8 +12391,14 @@
        "set": "panzerjaeger_inf_ak"
       },
       "supply": {
-       "ammo": 20
-      }
+       "ammo": 24
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "panzerbuchse39_at_rifle_ak",
+        "num": 2
+       }
+      ]
      },
      "panzerpioneer_ak": {
       "coh3_ref": "sbps/races/afrika_korps/infantry/panzerpioneer_ak",
@@ -12262,7 +12472,7 @@
        "set": "panzerpioneer_ak"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -12347,7 +12557,7 @@
        "crew_entity": "crew_pak_38_ak"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_88mm_mobile_ak": {
@@ -12414,7 +12624,7 @@
        "crew_entity": "crew_at_gun_88mm_mobile_ak"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "hmg_mg34_ak": {
@@ -12471,7 +12681,7 @@
        "crew_entity": "crew_hmg_mg34_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "howitzer_cannone_da_105_ak": {
@@ -12530,7 +12740,7 @@
        "crew_entity": "crew_bersaglieri_ak"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "leig_75mm_ak": {
@@ -12594,7 +12804,7 @@
        "crew_entity": "crew_leig_base_ak"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "mortar_team_ak": {
@@ -12648,7 +12858,7 @@
        "crew_entity": "crew_mortar_ak"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      }
     },
@@ -12678,7 +12888,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "hmg_bunker_ak": {
@@ -12710,7 +12920,7 @@
        "italian_infantry_dummy_defense_of_the_motherland_ak"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "point_fortification_20mm_aa_ak": {
@@ -12746,7 +12956,7 @@
        "toggle_aa_mode"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      }
     }
@@ -14161,10 +14371,22 @@
        "fire": "cannon"
       }
      },
+     "mp44_kriegsmarine_no_ui_ak": {
+      "name": "weapon.mp44_kriegsmarine_no_ui_ak.name",
+      "sound": {
+       "fire": "smg"
+      }
+     },
      "lmg_panzergrenadier_ak": {
       "name": "weapon.lmg_panzergrenadier_ak.name",
       "sound": {
        "fire": "lmg"
+      }
+     },
+     "panzerbuchse39_at_rifle_ak": {
+      "name": "weapon.panzerbuchse39_at_rifle_ak.name",
+      "sound": {
+       "fire": "panzerbuchse"
       }
      },
      "mp40_crew_ak": {
@@ -26252,7 +26474,7 @@
        "set": "ambulance_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "chaffee_us": {
@@ -26305,7 +26527,7 @@
        "set": "chaffee_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "char_b1_us": {
@@ -26344,7 +26566,7 @@
        "set": "char_b1_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "greyhound_us": {
@@ -26394,7 +26616,7 @@
        "set": "greyhound_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "halftrack_75mm_us": {
@@ -26452,13 +26674,13 @@
        "set": "halftrack_75mm_us"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "halftrack_assault_us": {
       "coh3_ref": "sbps/races/american/vehicles/halftrack_assault_us",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "halftrack_assault_us",
@@ -26517,7 +26739,7 @@
        "set": "halftrack_assault_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "halftrack_medical_us": {
@@ -26579,7 +26801,7 @@
        "set": "halftrack_medical_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "halftrack_quad_us": {
@@ -26636,13 +26858,13 @@
        "set": "halftrack_quad_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "halftrack_us": {
       "coh3_ref": "sbps/races/american/vehicles/halftrack_us",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "halftrack_us",
@@ -26696,7 +26918,7 @@
        "set": "halftrack_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hellcat_us": {
@@ -26748,7 +26970,7 @@
        "set": "hellcat_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "m29_weasal_us": {
@@ -26803,7 +27025,7 @@
        "set": "m29_weasal_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "pershing_us": {
@@ -26851,13 +27073,13 @@
        "set": "pershing_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "priest_kangaroo_us": {
       "coh3_ref": "sbps/races/american/vehicles/priest_kangaroo_us",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "priest_kangaroo_us",
@@ -26890,13 +27112,13 @@
        "set": "priest_kangaroo_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "priest_us": {
       "coh3_ref": "sbps/races/american/vehicles/priest_us",
       "kind": "vehicle",
-      "role": "logistics",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "priest_us",
@@ -26930,7 +27152,7 @@
        "set": "priest_us"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "recovery_vehicle_us": {
@@ -26974,13 +27196,13 @@
        "set": "recovery_vehicle_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "scott_us": {
       "coh3_ref": "sbps/races/american/vehicles/scott_us",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "scott_us",
@@ -27017,7 +27239,7 @@
        "set": "scott_us"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "sherman_76mm_us": {
@@ -27068,7 +27290,7 @@
        "set": "sherman_76mm_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_76mm_whizbang_jettisoned_us": {
@@ -27129,7 +27351,7 @@
        "set": "sherman_76mm_whizbang_jettisoned_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_bulldozer_us": {
@@ -27178,7 +27400,7 @@
        "set": "sherman_bulldozer_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_bulldozer_x2_us": {
@@ -27226,7 +27448,7 @@
        "set": "sherman_bulldozer_x2_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_easy_8_us": {
@@ -27277,7 +27499,7 @@
        "set": "sherman_easy_8_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_us": {
@@ -27328,7 +27550,7 @@
        "set": "sherman_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_whizbang_jettisoned_us": {
@@ -27379,13 +27601,13 @@
        "set": "sherman_whizbang_jettisoned_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_whizbang_us": {
       "coh3_ref": "sbps/races/american/vehicles/sherman_whizbang_us",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "sherman_whizbang_us",
@@ -27423,7 +27645,7 @@
        "set": "sherman_whizbang_us"
       },
       "supply": {
-       "ammo": 6
+       "ammo": 9
       }
      },
      "stuart_blade_us": {
@@ -27476,7 +27698,7 @@
        "set": "stuart_blade_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stuart_us": {
@@ -27527,7 +27749,7 @@
        "set": "stuart_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_4x4_medical_specialist_us": {
@@ -27563,13 +27785,13 @@
        "set": "truck_4x4_medical_specialist_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_4x4_us": {
       "coh3_ref": "sbps/races/american/vehicles/truck_4x4_us",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "truck_4x4_us",
@@ -27620,13 +27842,13 @@
        "set": "truck_4x4_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_4x4_x2_us": {
       "coh3_ref": "sbps/races/american/vehicles/mass_production/truck_4x4_x2_us",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "truck_4x4_us",
@@ -27676,7 +27898,7 @@
        "set": "truck_4x4_x2_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_6x6_us": {
@@ -27711,7 +27933,7 @@
        "set": "truck_6x6_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      }
     },
@@ -27776,7 +27998,7 @@
        "set": "artillery_observers_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -27849,7 +28071,7 @@
        "set": "assault_engineer_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -27875,7 +28097,7 @@
      "bazooka_team_us": {
       "coh3_ref": "sbps/races/american/infantry/bazooka_team_us",
       "kind": "squad",
-      "role": "anti_infantry",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "bazooka_team_us",
@@ -27926,7 +28148,7 @@
        "set": "bazooka_team_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 24
       },
       "build": {
        "menu": [
@@ -27942,7 +28164,13 @@
         "barbed_wire_fence_french_engineering_upgrade_us",
         "sandbag_wall_french_infantry_us"
        ]
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "bazooka_bazooka_team_us",
+        "num": 2
+       }
+      ]
      },
      "brazilian_infantry_us": {
       "coh3_ref": "sbps/races/american/infantry/brazilian_infantry_us",
@@ -27995,7 +28223,7 @@
        "set": "brazilian_infantry_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28054,7 +28282,7 @@
        "set": "brazilian_lieutenant_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28137,7 +28365,7 @@
        "set": "captain_torch"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "captain_us": {
@@ -28202,7 +28430,7 @@
        "set": "captain_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28282,7 +28510,7 @@
        "set": "engineer_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28363,7 +28591,7 @@
        "set": "french_infantry_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28433,7 +28661,7 @@
        "set": "infantry_assault_bazooka_team_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       },
       "build": {
        "menu": [
@@ -28499,7 +28727,7 @@
        "set": "infantry_assault_riflemen_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28519,7 +28747,7 @@
      "marksman_team_partisan": {
       "coh3_ref": "sbps/races/american/infantry/marksman_team_partisan",
       "kind": "squad",
-      "role": "anti_infantry",
+      "role": "recon",
       "members": [
        {
         "entity": "marksman_team_partisan",
@@ -28566,7 +28794,7 @@
        "set": "marksman_team_partisan"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 24
       }
      },
      "paratrooper_us": {
@@ -28627,7 +28855,7 @@
        "set": "paratrooper_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -28692,7 +28920,7 @@
        "set": "pathfinder_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "ranger_us": {
@@ -28755,7 +28983,7 @@
        "set": "ranger_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "resistance_fighters_battlegroup_partisans": {
@@ -28811,7 +29039,7 @@
        "set": "resistance_fighters_battlegroup_partisans"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28870,7 +29098,7 @@
        "set": "resistance_fighters_partisan"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -28944,7 +29172,7 @@
        "set": "riflemen_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -29006,7 +29234,7 @@
        "cost_ratio": 0.5
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -29064,7 +29292,7 @@
        "set": "saboteurs_partisan"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -29138,7 +29366,7 @@
        "set": "scout_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -29201,13 +29429,13 @@
        "set": "sniper_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "ssb_sniper_africa_us": {
       "coh3_ref": "sbps/races/american/infantry/ssb_sniper_africa_us",
       "kind": "squad",
-      "role": "recon",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "ssb_sniper_africa_uk",
@@ -29257,7 +29485,7 @@
        "set": "ssb_sniper_africa_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "ssf_commandos_us": {
@@ -29307,13 +29535,19 @@
        "set": "ssf_commandos_us"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
         "demo_charge_ssf_commando_us"
        ]
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "m1941_lmg_devils_brigade_us",
+        "num": 2
+       }
+      ]
      },
      "stealth_ssf_commandos_torch": {
       "coh3_ref": "sbps/races/american/infantry/stealth_ssf_commandos_torch",
@@ -29375,13 +29609,19 @@
        "set": "stealth_ssf_commandos_torch"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
         "demo_charge_ssf_commando_us"
        ]
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "m1941_lmg_devils_brigade_us",
+        "num": 2
+       }
+      ]
      }
     },
     "team_weapons": {
@@ -29447,7 +29687,7 @@
        "crew_entity": "crew_at_gun_heavy_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_57mm_paradrop_us": {
@@ -29509,7 +29749,7 @@
        "crew_entity": "crew_at_gun_57mm_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_57mm_us": {
@@ -29571,7 +29811,7 @@
        "crew_entity": "crew_at_gun_57mm_us"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "hmg_30cal_paradrop_us": {
@@ -29631,7 +29871,7 @@
        "crew_entity": "crew_hmg_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_30cal_us": {
@@ -29691,7 +29931,7 @@
        "crew_entity": "crew_hmg_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_50cal_us": {
@@ -29753,7 +29993,7 @@
        "crew_entity": "crew_hmg_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_81mm_us": {
@@ -29814,7 +30054,7 @@
        "crew_entity": "crew_mortar_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "pack_howitzer_75mm_us": {
@@ -29874,7 +30114,7 @@
        "crew_entity": "crew_howitzer_us"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      }
     },
@@ -29904,7 +30144,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "goon_gun_pit_us": {
@@ -29945,7 +30185,7 @@
        "set": "goon_gun_pit_us"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "hmg_50cal_fighting_position_us": {
@@ -29977,7 +30217,7 @@
        "squad_building_retreat_held_squads"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "hmg_fighting_position_us": {
@@ -30009,7 +30249,7 @@
        "squad_building_retreat_held_squads"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "mortar_pit_81mm_us": {
@@ -30051,7 +30291,7 @@
        "set": "mortar_pit_81mm_us"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "partisan_tunnel_constructed_us": {
@@ -30086,7 +30326,7 @@
        "partisan_tunnel_smuggling_route_us"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "partisan_tunnel_main_us": {
@@ -30119,7 +30359,7 @@
        "squad_building_retreat_held_squads"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "partisan_tunnel_us": {
@@ -30154,7 +30394,7 @@
        "partisan_tunnel_smuggling_route_us"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "tourelle_emplacement_us": {
@@ -30200,7 +30440,7 @@
        "set": "tourelle_emplacement_us"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      }
     }
@@ -35411,6 +35651,222 @@
        "damage_ratio": 0
       }
      },
+     "bazooka_guards_africa_uk": {
+      "coh3_ref": "weapon/british_africa/ballistic_weapon/infantry_anti_tank_weapon/bazooka_guards_africa_uk",
+      "class": "bazooka",
+      "fire_rule": "single_shot",
+      "damage": 60,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 200,
+       "mid": 125,
+       "far": 110
+      },
+      "vs_target": {
+       "building": {
+        "accuracy": 10
+       },
+       "bunker": {
+        "accuracy": 10,
+        "penetration": 10
+       },
+       "infantry": {
+        "accuracy": 0.01,
+        "damage": 0.5
+       }
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.07,
+        "mid": 0.05,
+        "far": 0.04
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 80,
+        "mid": 78,
+        "far": 74
+       },
+       "arc_deg": 120,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.4,
+         "damage": 0.25,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "aoe": {
+       "damage": {
+        "near": 0.5,
+        "mid": 0.5,
+        "far": 0.5
+       },
+       "distance_m": {
+        "near": 0.5,
+        "mid": 0.5,
+        "far": 0.5
+       },
+       "suppression": {
+        "near": 0,
+        "mid": 0,
+        "far": 0
+       },
+       "max_members": 1,
+       "friendly_fire": false
+      },
+      "scatter": {
+       "angle_deg": 8.5,
+       "distance_ratio": 0.55,
+       "distance_max_m": 5
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.35
+      },
+      "deflection": {
+       "damage_ratio": 0
+      }
+     },
+     "boys_at_rifle_polish_africa_uk": {
+      "coh3_ref": "weapon/british_africa/ballistic_weapon/infantry_anti_tank_weapon/boys_at_rifle_polish_africa_uk",
+      "class": "panzerbuchse",
+      "fire_rule": "single_shot",
+      "damage": 50,
+      "damage_type": "ballistic",
+      "penetration": {
+       "near": 84,
+       "mid": 72,
+       "far": 60
+      },
+      "vs_target": {
+       "infantry": {
+        "damage": 0.5
+       },
+       "building": {
+        "damage": 0.5
+       }
+      },
+      "traits": [
+       "friendly_fire",
+       "attack_ground",
+       "replaceable",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.8,
+        "mid": 0.75,
+        "far": 0.6
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 1,
+        "mid": 1,
+        "far": 1
+       },
+       "damage_per_shot": {
+        "near": 109,
+        "mid": 109,
+        "far": 109
+       },
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.4,
+         "damage": 0.25,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "scatter": {
+       "angle_deg": 4,
+       "distance_ratio": 1,
+       "distance_max_m": 5
+      },
+      "deflection": {
+       "damage_ratio": 0.15
+      },
+      "moving": {
+       "can_fire": false,
+       "accuracy": 0.35
+      }
+     },
      "sapper_piat_uk": {
       "coh3_ref": "weapon/british/ballistic_weapon/infantry_anti_tank_weapon/sapper_piat_uk",
       "class": "grenade_launcher",
@@ -36056,9 +36512,9 @@
       "attack": {
        "fire_mode": "direct",
        "accuracy": {
-        "near": 0,
-        "mid": 0,
-        "far": 0
+        "near": 1,
+        "mid": 1,
+        "far": 1
        },
        "range_hex": {
         "min": 0,
@@ -38667,6 +39123,85 @@
        "accuracy": 0.5
       }
      },
+     "vickers_k_lmg_uk": {
+      "coh3_ref": "weapon/british/small_arms/machine_gun/light_machine_gun/vickers_k_lmg_uk",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.57,
+        "mid": 0.55,
+        "far": 0.53
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 43,
+        "mid": 41,
+        "far": 34
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     },
      "bren_lmg_gurkhas_uk": {
       "coh3_ref": "weapon/british/small_arms/machine_gun/light_machine_gun/bren_lmg_gurkhas_uk",
       "class": "lmg",
@@ -38704,6 +39239,85 @@
         "far": 4
        },
        "shot_multiplier": 0.88,
+       "arc_deg": 180,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     },
+     "vickers_k_lmg_ssb_uk": {
+      "coh3_ref": "weapon/british/small_arms/machine_gun/light_machine_gun/vickers_k_lmg_ssb_uk",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.55,
+        "mid": 0.5,
+        "far": 0.47
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 41,
+        "mid": 33,
+        "far": 29
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
        "arc_deg": 180,
        "vs_cover": {
         "light": {
@@ -47260,7 +47874,7 @@
        "set": "archer_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "archer_uk": {
@@ -47297,7 +47911,7 @@
        "set": "archer_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "australian_supplytruck_africa_uk": {
@@ -47329,13 +47943,13 @@
        "australian_supplytruck_unloadcargo"
       ],
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "bishop_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/bishop_africa_uk",
       "kind": "vehicle",
-      "role": "all_round",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "bishop_africa_uk",
@@ -47368,13 +47982,13 @@
        "set": "bishop_africa_uk"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "bishop_uk": {
       "coh3_ref": "sbps/races/british/vehicles/bishop_uk",
       "kind": "vehicle",
-      "role": "all_round",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "bishop_uk",
@@ -47406,7 +48020,7 @@
        "set": "bishop_uk"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "centaur_africa_uk": {
@@ -47445,7 +48059,7 @@
        "set": "centaur_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_75mm_africa_uk": {
@@ -47486,7 +48100,7 @@
        "set": "churchill_75mm_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_africa_uk": {
@@ -47531,7 +48145,7 @@
        "set": "churchill_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_arv_africa_uk": {
@@ -47578,13 +48192,13 @@
        "set": "churchill_arv_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_avre_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/churchill_avre_africa_uk",
       "kind": "vehicle",
-      "role": "logistics",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "churchill_avre_africa_uk",
@@ -47620,13 +48234,13 @@
        "set": "churchill_avre_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_avre_uk": {
       "coh3_ref": "sbps/races/british/vehicles/churchill_avre_uk",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "churchill_avre_uk",
@@ -47658,7 +48272,7 @@
        "set": "churchill_avre_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_black_prince_africa_uk": {
@@ -47700,7 +48314,7 @@
        "set": "churchill_black_prince_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "churchill_black_prince_uk": {
@@ -47740,7 +48354,7 @@
        "set": "churchill_black_prince_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "churchill_crocodile_africa_uk": {
@@ -47783,7 +48397,7 @@
        "set": "churchill_crocodile_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_crocodile_uk": {
@@ -47832,7 +48446,7 @@
        "set": "churchill_crocodile_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_na75_75mm_africa_uk": {
@@ -47873,7 +48487,7 @@
        "set": "churchill_na75_75mm_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "churchill_uk": {
@@ -47917,7 +48531,7 @@
        "set": "churchill_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "command_churchill_africa_uk": {
@@ -47956,7 +48570,7 @@
        "set": "command_churchill_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "crusader_57mm_africa_uk": {
@@ -47995,7 +48609,7 @@
        "set": "crusader_57mm_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "crusader_aa_africa_uk": {
@@ -48036,7 +48650,7 @@
        "set": "crusader_aa_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "crusader_africa_uk": {
@@ -48083,7 +48697,7 @@
        "set": "crusader_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_flatbed_africa_uk": {
@@ -48123,7 +48737,7 @@
        "set": "cwt_15_flatbed_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_quad_mount_africa_uk": {
@@ -48163,7 +48777,7 @@
        "set": "cwt_15_quad_mount_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_truck_africa_uk": {
@@ -48214,7 +48828,7 @@
        "set": "cwt_15_truck_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_truck_medical_africa_uk": {
@@ -48259,13 +48873,13 @@
        "set": "cwt_15_truck_medical_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_truck_repair_resupply_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/cwt_15_truck_repair_resupply_africa_uk",
       "kind": "vehicle",
-      "role": "anti_infantry",
+      "role": "logistics",
       "members": [
        {
         "entity": "cwt_15_resupply_repair_africa_uk",
@@ -48297,7 +48911,7 @@
        "set": "cwt_15_truck_repair_resupply_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_15_truck_uk": {
@@ -48347,13 +48961,13 @@
        "set": "cwt_15_truck_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "cwt_lrdg_truck_2pdr_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/cwt_lrdg_truck_2pdr_africa_uk",
       "kind": "vehicle",
-      "role": "anti_tank",
+      "role": "logistics",
       "members": [
        {
         "entity": "cwt_lrdg_truck_2pdr_africa_uk",
@@ -48389,13 +49003,13 @@
        "set": "cwt_lrdg_truck_2pdr_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 18
       }
      },
      "cwt_lrdg_truck_africa_uk_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/cwt_lrdg_truck_africa_uk_uk",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "cwt_lrdg_truck_africa_uk",
@@ -48439,13 +49053,13 @@
        "set": "cwt_lrdg_truck_africa_uk_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "dingo_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/dingo_africa_uk",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "dingo_africa_uk",
@@ -48481,13 +49095,13 @@
        "set": "dingo_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "dingo_uk": {
       "coh3_ref": "sbps/races/british/vehicles/dingo_uk",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "dingo_uk",
@@ -48522,7 +49136,7 @@
        "set": "dingo_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "grant_africa_uk": {
@@ -48561,7 +49175,7 @@
        "set": "grant_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "humber_africa_uk": {
@@ -48611,7 +49225,7 @@
        "set": "humber_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "humber_uk": {
@@ -48650,7 +49264,7 @@
        "set": "humber_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "marmon_herrington_africa_uk": {
@@ -48687,7 +49301,7 @@
        "set": "marmon_herrington_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "matilda_africa_uk": {
@@ -48726,7 +49340,7 @@
        "set": "matilda_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "pheasant_halftrack_africa_uk": {
@@ -48778,13 +49392,13 @@
        "set": "pheasant_halftrack_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "priest_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/vehicles/priest_africa_uk",
       "kind": "vehicle",
-      "role": "all_round",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "priest_africa_uk",
@@ -48815,7 +49429,7 @@
        "set": "priest_africa_uk"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "sherman_africa_uk": {
@@ -48860,7 +49474,7 @@
        "set": "sherman_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_firefly_africa_uk": {
@@ -48909,7 +49523,7 @@
        "set": "sherman_firefly_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sherman_uk": {
@@ -48954,7 +49568,7 @@
        "set": "sherman_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stuart_africa_uk": {
@@ -49007,7 +49621,7 @@
        "set": "stuart_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stuart_uk": {
@@ -49058,7 +49672,7 @@
        "set": "stuart_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "valentine_uk": {
@@ -49097,7 +49711,7 @@
        "set": "valentine_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      }
     },
@@ -49161,7 +49775,7 @@
        "crew_entity": "crew_pheasant_at_gun_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_17pdr_mobile_uk": {
@@ -49220,7 +49834,7 @@
        "crew_entity": "crew_at_gun_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_17pdr_pheasant_uk": {
@@ -49275,7 +49889,7 @@
        "crew_entity": "crew_at_gun_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       },
       "capture": {
        "rate": 1
@@ -49336,7 +49950,7 @@
        "crew_entity": "crew_at_gun_aussie_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_2pdr_uk": {
@@ -49393,7 +50007,7 @@
        "crew_entity": "crew_at_gun_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_6pdr_africa_recrew_uk": {
@@ -49452,7 +50066,7 @@
        "crew_entity": "crew_at_gun_6pdr_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_6pdr_africa_uk": {
@@ -49512,7 +50126,7 @@
        "crew_entity": "crew_at_gun_6pdr_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_6pdr_uk": {
@@ -49571,7 +50185,7 @@
        "crew_entity": "crew_at_gun_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "bofors_towed_africa_uk": {
@@ -49626,7 +50240,7 @@
        "crew_entity": "crew_at_gun_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "bofors_towed_uk": {
@@ -49682,7 +50296,7 @@
        "crew_entity": "crew_at_gun_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_commando_africa_uk": {
@@ -49735,7 +50349,7 @@
        "crew_entity": "crew_hmg_commando_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_vickers_africa_recrew_uk": {
@@ -49789,7 +50403,7 @@
        "crew_entity": "crew_hmg_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_vickers_africa_uk": {
@@ -49844,7 +50458,7 @@
        "crew_entity": "crew_hmg_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_vickers_recrew_uk": {
@@ -49890,7 +50504,7 @@
        "crew_entity": "crew_hmg_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "hmg_vickers_uk": {
@@ -49943,7 +50557,7 @@
        "crew_entity": "crew_hmg_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_81mm_africa_recrew_uk": {
@@ -49999,7 +50613,7 @@
        "crew_entity": "crew_mortar_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_81mm_africa_uk": {
@@ -50056,7 +50670,7 @@
        "crew_entity": "crew_mortar_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_81mm_recrew_uk": {
@@ -50111,7 +50725,7 @@
        "crew_entity": "crew_mortar_indian_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_81mm_uk": {
@@ -50166,7 +50780,7 @@
        "crew_entity": "crew_mortar_indian_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_heavy_4_2_africa_uk": {
@@ -50229,7 +50843,7 @@
        "crew_entity": "crew_mortar_indian_africa_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_heavy_4_2_uk": {
@@ -50289,7 +50903,7 @@
        "crew_entity": "crew_mortar_indian_uk"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "pack_howitzer_75mm_africa_uk": {
@@ -50350,7 +50964,7 @@
        "crew_entity": "crew_hmg_commando_africa_uk"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "pack_howitzer_75mm_uk": {
@@ -50409,7 +51023,7 @@
        "crew_entity": "crew_howitzer_commando_uk"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      }
     },
@@ -50448,7 +51062,7 @@
        "set": "at_gun_17pdr_pheasant_emplacement_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "base_defense_africa_uk": {
@@ -50476,7 +51090,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "base_defense_uk": {
@@ -50504,7 +51118,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "bofors_emplacement_afrika_uk": {
@@ -50542,7 +51156,7 @@
        "set": "bofors_emplacement_afrika_uk"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "bofors_emplacement_uk": {
@@ -50575,7 +51189,7 @@
        "set": "bofors_emplacement_uk"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "hmg_nest_africa_uk": {
@@ -50604,7 +51218,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "howitzer_25pdr_africa_uk": {
@@ -50641,7 +51255,7 @@
        "set": "howitzer_25pdr_africa_uk"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "howitzer_25pdr_uk": {
@@ -50679,7 +51293,7 @@
        "set": "howitzer_25pdr_uk"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "howitzer_base_25pdr_africa_uk": {
@@ -50714,7 +51328,7 @@
        "barrage_howitzer_creeping_uk"
       ],
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "howitzer_bl_5_5_africa_uk": {
@@ -50753,7 +51367,7 @@
        "set": "howitzer_bl_5_5_africa_uk"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "howitzer_bl_5_5_uk": {
@@ -50789,7 +51403,7 @@
        "set": "howitzer_bl_5_5_uk"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      }
     },
@@ -50844,7 +51458,7 @@
        "set": "australian_light_infantry_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -50917,7 +51531,7 @@
        "set": "canadian_heavy_infantry_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -50967,7 +51581,7 @@
        "set": "commando_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -51018,16 +51632,22 @@
        "set": "commando_lmg_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "vickers_k_lmg_uk",
+        "num": 1
+       }
+      ]
      },
      "guards_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/infantry/guards_africa_uk",
       "kind": "squad",
-      "role": "anti_infantry",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "guards_africa_uk",
@@ -51074,16 +51694,22 @@
        "set": "guards_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 24
       },
       "build": {
        "menu": []
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "bazooka_guards_africa_uk",
+        "num": 2
+       }
+      ]
      },
      "guards_uk": {
       "coh3_ref": "sbps/races/british/infantry/guards_uk",
       "kind": "squad",
-      "role": "anti_infantry",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "guards_uk",
@@ -51126,7 +51752,7 @@
        "set": "guards_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 24
       },
       "build": {
        "menu": []
@@ -51183,7 +51809,7 @@
        "set": "gurkhas_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -51235,7 +51861,7 @@
        "set": "indian_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -51282,7 +51908,7 @@
        "set": "officer_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -51328,11 +51954,21 @@
        "set": "polish_lancer_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "boys_at_rifle_polish_africa_uk",
+        "num": 2
+       },
+       {
+        "weapon": "bren_lmg_africa_uk",
+        "num": 1
+       }
+      ]
      },
      "sapper_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/infantry/sapper_africa_uk",
@@ -51398,7 +52034,7 @@
        "set": "sapper_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -51476,7 +52112,7 @@
        "set": "sapper_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -51528,7 +52164,7 @@
        "set": "sas_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -51571,7 +52207,7 @@
        "set": "sniper_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "ssb_africa_uk": {
@@ -51625,16 +52261,22 @@
        "set": "ssb_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
-      }
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "vickers_k_lmg_ssb_uk",
+        "num": 1
+       }
+      ]
      },
      "ssb_sniper_africa_uk": {
       "coh3_ref": "sbps/races/british_africa/infantry/ssb_sniper_africa_uk",
       "kind": "squad",
-      "role": "recon",
+      "role": "anti_tank",
       "members": [
        {
         "entity": "ssb_sniper_africa_uk",
@@ -51684,7 +52326,7 @@
        "set": "ssb_sniper_africa_uk"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "tommy_africa_uk": {
@@ -51748,7 +52390,7 @@
        "set": "tommy_africa_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -51811,7 +52453,7 @@
        "set": "tommy_uk"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -55799,6 +56441,18 @@
        "fire": "rifle"
       }
      },
+     "vickers_k_lmg_uk": {
+      "name": "weapon.vickers_k_lmg_uk.name",
+      "sound": {
+       "fire": "lmg"
+      }
+     },
+     "bazooka_guards_africa_uk": {
+      "name": "weapon.bazooka_guards_africa_uk.name",
+      "sound": {
+       "fire": "bazooka"
+      }
+     },
      "bren_lmg_gurkhas_uk": {
       "name": "weapon.bren_lmg_gurkhas_uk.name",
       "sound": {
@@ -55829,10 +56483,22 @@
        "fire": "rifle"
       }
      },
+     "boys_at_rifle_polish_africa_uk": {
+      "name": "weapon.boys_at_rifle_polish_africa_uk.name",
+      "sound": {
+       "fire": "panzerbuchse"
+      }
+     },
      "sapper_piat_uk": {
       "name": "weapon.sapper_piat_uk.name",
       "sound": {
        "fire": "grenade_launcher"
+      }
+     },
+     "vickers_k_lmg_ssb_uk": {
+      "name": "weapon.vickers_k_lmg_ssb_uk.name",
+      "sound": {
+       "fire": "lmg"
       }
      },
      "17pdr_at_gun_uk": {
@@ -56033,16 +56699,16 @@
        "fire": "sniper_gib"
       }
      },
-     "boys_at_rifle_africa_uk": {
-      "name": "weapon.boys_at_rifle_africa_uk.name",
-      "sound": {
-       "fire": "panzerbuchse"
-      }
-     },
      "bren_lmg_africa_uk": {
       "name": "weapon.bren_lmg_africa_uk.name",
       "sound": {
        "fire": "lmg"
+      }
+     },
+     "boys_at_rifle_africa_uk": {
+      "name": "weapon.boys_at_rifle_africa_uk.name",
+      "sound": {
+       "fire": "panzerbuchse"
       }
      },
      "lee_enfield_tommy_uk": {
@@ -57714,9 +58380,9 @@
       "attack": {
        "fire_mode": "direct",
        "accuracy": {
-        "near": 0,
-        "mid": 0,
-        "far": 0
+        "near": 1,
+        "mid": 1,
+        "far": 1
        },
        "range_hex": {
         "min": 0,
@@ -58914,6 +59580,87 @@
         "far": 3
        },
        "arc_deg": 14,
+       "vs_cover": {
+        "light": {
+         "accuracy": 0.5,
+         "suppression": 0.5
+        },
+        "heavy": {
+         "accuracy": 0.5,
+         "damage": 0.5,
+         "suppression": 0.1
+        },
+        "garrison": {
+         "accuracy": 0.55,
+         "damage": 0.5,
+         "suppression": 0
+        },
+        "smoke": {
+         "accuracy": 0.25,
+         "suppression": 0.05
+        },
+        "negative": {
+         "accuracy": 1.25,
+         "damage": 1.25,
+         "suppression": 1.5
+        }
+       },
+       "vs_suppressed": {
+        "accuracy": 0.5,
+        "suppression": 0.5
+       },
+       "vs_pinned": {
+        "accuracy": 0.25,
+        "suppression": 0.1
+       }
+      },
+      "ammo": {
+       "per_shot": 1
+      },
+      "moving": {
+       "can_fire": true,
+       "accuracy": 0.5
+      }
+     },
+     "mg42_stormtrooper_ger": {
+      "coh3_ref": "weapon/german/small_arms/machine_gun/light_machine_gun/mg42_stormtrooper_ger",
+      "class": "lmg",
+      "fire_rule": "volley",
+      "damage": 4,
+      "damage_type": "True Damage",
+      "penetration": {
+       "near": 3,
+       "mid": 2,
+       "far": 2
+      },
+      "traits": [
+       "replaceable",
+       "fire_on_move",
+       "reveals_on_fire"
+      ],
+      "attack": {
+       "fire_mode": "direct",
+       "accuracy": {
+        "near": 0.53,
+        "mid": 0.52,
+        "far": 0.48
+       },
+       "range_hex": {
+        "min": 0,
+        "max": 6
+       },
+       "shots_per_turn": {
+        "near": 48,
+        "mid": 48,
+        "far": 38
+       },
+       "damage_per_shot": {
+        "near": 4,
+        "mid": 4,
+        "far": 4
+       },
+       "shot_multiplier": 0.88,
+       "arc_deg": 180,
        "vs_cover": {
         "light": {
          "accuracy": 0.5,
@@ -66529,7 +67276,7 @@
        "set": "aa_gun_20mm_emplacement_ger"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "anti_tank_bunker_ger": {
@@ -66566,7 +67313,7 @@
        "force_attack_target"
       ],
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_88mm_emplacement_ger": {
@@ -66605,7 +67352,7 @@
        "set": "at_gun_88mm_emplacement_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_88mm_no_sandbags_ger": {
@@ -66643,7 +67390,7 @@
        "set": "at_gun_88mm_no_sandbags_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "base_defense_ger": {
@@ -66671,7 +67418,7 @@
       ],
       "source": "built",
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "hmg_mg42_bunker_ger": {
@@ -66703,7 +67450,7 @@
        "squad_building_retreat_held_squads"
       ],
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      },
      "howitzer_obice_210_ger": {
@@ -66740,7 +67487,7 @@
        "set": "howitzer_obice_210_ger"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "mortar_bunker_autobuild_ger": {
@@ -66780,7 +67527,7 @@
        "set": "mortar_bunker_autobuild_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "mortar_bunker_ger": {
@@ -66814,7 +67561,7 @@
        "set": "mortar_bunker_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "pantherturm_emplacement_ger": {
@@ -66853,7 +67600,7 @@
        "set": "pantherturm_emplacement_ger"
       },
       "supply": {
-       "ammo": 30
+       "ammo": 45
       }
      }
     },
@@ -66919,7 +67666,7 @@
        "crew_entity": "crew_aa_gun_20mm_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "at_gun_75mm_ger": {
@@ -66983,7 +67730,7 @@
        "crew_entity": "crew_at_gun_75mm_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_88mm_pak43_ger": {
@@ -67040,7 +67787,7 @@
        "crew_entity": "crew_at_gun_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "at_gun_lg40_ger": {
@@ -67102,7 +67849,7 @@
        "crew_entity": "crew_at_gun_fallschirmpioneers_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "hmg_mg42_ger": {
@@ -67160,7 +67907,7 @@
        "crew_entity": "crew_hmg_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "howitzer_cannone_da_105_ger": {
@@ -67215,7 +67962,7 @@
        "crew_entity": "crew_bersaglieri_ger"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "leig_75mm_ger": {
@@ -67273,7 +68020,7 @@
        "crew_entity": "crew_leig_ger"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "mortar_81mm_ger": {
@@ -67332,7 +68079,7 @@
        "crew_entity": "crew_mortar_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      }
     },
@@ -67373,7 +68120,7 @@
        "set": "armored_car_222_specialist_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "armored_car_8_rad_ger": {
@@ -67425,13 +68172,13 @@
        "set": "armored_car_8_rad_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "armored_car_ger": {
       "coh3_ref": "sbps/races/german/vehicles/armored_car_ger",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "armored_car_ger",
@@ -67484,7 +68231,7 @@
        "set": "armored_car_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "borgward_iv_ger": {
@@ -67529,7 +68276,7 @@
        "set": "borgward_iv_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": []
@@ -67538,7 +68285,7 @@
      "brummbar_ger": {
       "coh3_ref": "sbps/races/german/vehicles/brummbar_ger",
       "kind": "vehicle",
-      "role": "all_round",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "brummbar_ger",
@@ -67590,7 +68337,7 @@
        "set": "brummbar_ger"
       },
       "supply": {
-       "ammo": 8
+       "ammo": 12
       }
      },
      "halftrack_flame_ger": {
@@ -67636,7 +68383,7 @@
        "set": "halftrack_flame_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -67647,7 +68394,7 @@
      "halftrack_ger": {
       "coh3_ref": "sbps/races/german/vehicles/halftrack_ger",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "halftrack_ger",
@@ -67704,7 +68451,7 @@
        "set": "halftrack_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -67770,7 +68517,7 @@
        "set": "halftrack_medical_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -67782,7 +68529,7 @@
      "halftrack_stummel_ger": {
       "coh3_ref": "sbps/races/german/vehicles/halftrack_stummel_ger",
       "kind": "vehicle",
-      "role": "indirect",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "halftrack_stummel_ger",
@@ -67830,13 +68577,13 @@
        "set": "halftrack_stummel_ger"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "hummel_ger": {
       "coh3_ref": "sbps/races/german/vehicles/hummel_ger",
       "kind": "vehicle",
-      "role": "logistics",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "hummel_ger",
@@ -67876,7 +68623,7 @@
        "set": "hummel_ger"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "jagdpanzer_iv_sdkfz_162_ger": {
@@ -67940,7 +68687,7 @@
        "set": "jagdpanzer_iv_sdkfz_162_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "kettenkrad_ger": {
@@ -67991,7 +68738,7 @@
        "set": "kettenkrad_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       },
       "build": {
        "menu": [
@@ -68050,7 +68797,7 @@
        "set": "king_tiger_sdkfz_182_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "marder_iii_ger": {
@@ -68110,7 +68857,7 @@
        "set": "marder_iii_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "nashorn_ger": {
@@ -68150,7 +68897,7 @@
        "set": "nashorn_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panther_ger": {
@@ -68199,7 +68946,7 @@
        "set": "panther_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iv_cmd_ger": {
@@ -68248,7 +68995,7 @@
        "set": "panzer_iv_cmd_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "panzer_iv_ger": {
@@ -68312,7 +69059,7 @@
        "set": "panzer_iv_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "recovery_vehicle_ger": {
@@ -68351,13 +69098,13 @@
        "set": "recovery_vehicle_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "royal_engineers_armored_car_ger": {
       "coh3_ref": "sbps/races/german/vehicles/royal_engineers_armored_car_ger",
       "kind": "vehicle",
-      "role": "suppression",
+      "role": "logistics",
       "members": [
        {
         "entity": "armored_car_ger",
@@ -68410,7 +69157,7 @@
        "set": "royal_engineers_armored_car_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "royal_engineers_tiger_ger": {
@@ -68460,7 +69207,7 @@
        "set": "royal_engineers_tiger_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "royal_engineers_wirbelwind_ger": {
@@ -68519,7 +69266,7 @@
        "set": "royal_engineers_wirbelwind_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stug_iii_d_ger": {
@@ -68567,7 +69314,7 @@
        "set": "stug_iii_d_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "stug_iii_ger": {
@@ -68630,13 +69377,13 @@
        "set": "stug_iii_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "sturmtiger_ger": {
       "coh3_ref": "sbps/races/german/vehicles/sturmtiger_ger",
       "kind": "vehicle",
-      "role": "logistics",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "sturmtiger_ger",
@@ -68674,7 +69421,7 @@
        "set": "sturmtiger_ger"
       },
       "supply": {
-       "ammo": 6
+       "ammo": 9
       }
      },
      "tiger_boss_ger": {
@@ -68729,7 +69476,7 @@
        "set": "tiger_boss_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "tiger_ger": {
@@ -68779,7 +69526,7 @@
        "set": "tiger_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "truck_2_5_cargo_ger": {
@@ -68814,7 +69561,7 @@
        "set": "truck_2_5_cargo_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_2_5_fuel_ger": {
@@ -68850,7 +69597,7 @@
        "2_5_fuel_truck_resource_overseer_ger"
       ],
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_2_5_ger": {
@@ -68885,7 +69632,7 @@
        "towing_unload_abandoned"
       ],
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_2_5_logistics_ger": {
@@ -68927,7 +69674,7 @@
        "blocking_force_vehicle_setup_incursion_response_ger"
       ],
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "truck_2_5_medical_ger": {
@@ -68967,13 +69714,13 @@
        "set": "truck_2_5_medical_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      },
      "wespe_ger": {
       "coh3_ref": "sbps/races/german/vehicles/wespe_ger",
       "kind": "vehicle",
-      "role": "all_round",
+      "role": "anti_infantry",
       "members": [
        {
         "entity": "wespe_ger",
@@ -69021,7 +69768,7 @@
        "set": "wespe_ger"
       },
       "supply": {
-       "ammo": 10
+       "ammo": 15
       }
      },
      "wirbelwind_ger": {
@@ -69080,7 +69827,7 @@
        "set": "wirbelwind_ger"
       },
       "supply": {
-       "ammo": 12
+       "ammo": 18
       }
      }
     },
@@ -69143,7 +69890,7 @@
        "set": "assault_grenadier_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69206,7 +69953,7 @@
        "set": "coastal_officer_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "coastal_reserves_ger": {
@@ -69252,7 +69999,7 @@
        "set": "coastal_reserves_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69319,7 +70066,7 @@
        "set": "fallschirmjagers_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "fallschirmpioneers_ger": {
@@ -69378,7 +70125,7 @@
        "set": "fallschirmpioneers_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69455,7 +70202,7 @@
        "set": "grenadier_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69524,7 +70271,7 @@
        "set": "guastatori_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69606,7 +70353,7 @@
        "set": "jaeger_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       }
      },
      "panzergrenadier_ger": {
@@ -69660,7 +70407,7 @@
        "set": "panzergrenadier_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -69710,7 +70457,7 @@
        "set": "panzergrenadier_tankhunter_specialist_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": []
@@ -69780,7 +70527,7 @@
        "set": "pioneer_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -69853,7 +70600,7 @@
        "set": "sniper_ger"
       },
       "supply": {
-       "ammo": 16
+       "ammo": 24
       }
      },
      "stormtrooper_ger": {
@@ -69915,8 +70662,14 @@
        "set": "stormtrooper_ger"
       },
       "supply": {
-       "ammo": 20
-      }
+       "ammo": 30
+      },
+      "loadout_weapons": [
+       {
+        "weapon": "mg42_stormtrooper_ger",
+        "num": 1
+       }
+      ]
      },
      "sturmpioneer_ger": {
       "coh3_ref": "sbps/races/german/infantry/sturmpioneer_ger",
@@ -69975,7 +70728,7 @@
        "set": "sturmpioneer_ger"
       },
       "supply": {
-       "ammo": 20
+       "ammo": 30
       },
       "build": {
        "menu": [
@@ -71685,6 +72438,12 @@
       "name": "weapon.flamethrower_pioneer_us.name",
       "sound": {
        "fire": "flame"
+      }
+     },
+     "mg42_stormtrooper_ger": {
+      "name": "weapon.mg42_stormtrooper_ger.name",
+      "sound": {
+       "fire": "lmg"
       }
      },
      "tank_smoke_ak": {

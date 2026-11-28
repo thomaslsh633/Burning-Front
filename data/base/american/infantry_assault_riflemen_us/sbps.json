@@ -54,7 +54,7 @@
     "set": "infantry_assault_riflemen_us"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": [

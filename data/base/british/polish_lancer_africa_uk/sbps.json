@@ -40,11 +40,21 @@
     "set": "polish_lancer_africa_uk"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": []
-   }
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "boys_at_rifle_polish_africa_uk",
+     "num": 2
+    },
+    {
+     "weapon": "bren_lmg_africa_uk",
+     "num": 1
+    }
+   ]
   }
  }
 }

@@ -6,14 +6,15 @@
 <title>Burning Front greybox</title>
 <style>
   body { background: #16181a; color: #d8d8d8; font: 12px/1.35 ui-monospace, monospace; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  canvas { touch-action: none; max-width: 100%; height: auto; }
+  #board { overflow: auto; max-width: 100vw; max-height: 100vh; flex: 0 1 auto; }
+  canvas { display: block; touch-action: pan-x pan-y; }   /* one finger scrolls (pan), two fingers pinch-zoom (input.js) */
   #side { padding: 8px; flex: 1 1 320px; min-width: 280px; }
   button { font: 14px sans-serif; margin: 2px; padding: 8px 12px; background: #34393e; color: #eee; border: 1px solid #555; border-radius: 2px; }
   pre { white-space: pre-wrap; margin: 8px 0; }
 </style>
 </head>
 <body>
-<canvas id="map"></canvas>
+<div id="board"><canvas id="map"></canvas></div>
 <div id="side">
   <div>
     <button data-button="end">End turn</button>
@@ -21,6 +22,12 @@
     <button data-button="pack">Pack</button>
     <button data-button="hold">Hold</button>
     <button data-button="retreat">Retreat</button>
+  </div>
+  <div>
+    <button data-button="rotateLeft" title="turn the map">⟲</button>
+    <button data-button="rotateRight" title="turn the map">⟳</button>
+    <button data-button="zoomOut">−</button>
+    <button data-button="zoomIn">+</button>
   </div>
   <pre id="debug">loading…</pre>
 </div>

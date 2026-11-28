@@ -3,7 +3,7 @@
   "wespe_ger": {
    "coh3_ref": "sbps/races/german/vehicles/wespe_ger",
    "kind": "vehicle",
-   "role": "all_round",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "wespe_ger",
@@ -51,7 +51,7 @@
     "set": "wespe_ger"
    },
    "supply": {
-    "ammo": 10
+    "ammo": 15
    }
   }
  }

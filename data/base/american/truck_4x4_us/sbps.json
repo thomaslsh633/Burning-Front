@@ -3,7 +3,7 @@
   "truck_4x4_us": {
    "coh3_ref": "sbps/races/american/vehicles/truck_4x4_us",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "truck_4x4_us",
@@ -54,7 +54,7 @@
     "set": "truck_4x4_us"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

@@ -1,15 +1,15 @@
 {
  "weapon": {
-  "boys_at_rifle_africa_uk": {
-   "name": "weapon.boys_at_rifle_africa_uk.name",
-   "sound": {
-    "fire": "panzerbuchse"
-   }
-  },
   "bren_lmg_africa_uk": {
    "name": "weapon.bren_lmg_africa_uk.name",
    "sound": {
     "fire": "lmg"
+   }
+  },
+  "boys_at_rifle_africa_uk": {
+   "name": "weapon.boys_at_rifle_africa_uk.name",
+   "sound": {
+    "fire": "panzerbuchse"
    }
   }
  },

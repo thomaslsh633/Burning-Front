@@ -8,7 +8,7 @@
 - keyboard shortcuts
 
 ## Public API (exported from `index.js`)
-- `attach(canvas, toHex, onIntent)` — done for taps (`tapHex`); long press, drag, pan, pinch, keys follow (D3)
+- `attach(canvas, toHex, onIntent)` — done: tap → `tapHex`, mouse wheel and two-finger pinch → `zoom` (panning is the page's scrolling); long press, drag, keys follow (D3)
 - `intents: tapHex(c, r) · longPressHex · dragFacing · pan · pinch · tapButton(id) · key(name)`
 
 ## May import

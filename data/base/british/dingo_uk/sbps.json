@@ -3,7 +3,7 @@
   "dingo_uk": {
    "coh3_ref": "sbps/races/british/vehicles/dingo_uk",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "dingo_uk",
@@ -38,7 +38,7 @@
     "set": "dingo_uk"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

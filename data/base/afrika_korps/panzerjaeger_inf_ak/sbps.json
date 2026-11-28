@@ -3,7 +3,7 @@
   "panzerjaeger_inf_ak": {
    "coh3_ref": "sbps/races/afrika_korps/infantry/panzerjaeger_inf_ak",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "members": [
     {
      "entity": "panzerjaeger_inf_ak",
@@ -64,8 +64,14 @@
     "set": "panzerjaeger_inf_ak"
    },
    "supply": {
-    "ammo": 20
-   }
+    "ammo": 24
+   },
+   "loadout_weapons": [
+    {
+     "weapon": "panzerbuchse39_at_rifle_ak",
+     "num": 2
+    }
+   ]
   }
  }
 }

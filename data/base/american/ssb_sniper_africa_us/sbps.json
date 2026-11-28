@@ -3,7 +3,7 @@
   "ssb_sniper_africa_us": {
    "coh3_ref": "sbps/races/american/infantry/ssb_sniper_africa_us",
    "kind": "squad",
-   "role": "recon",
+   "role": "anti_tank",
    "members": [
     {
      "entity": "ssb_sniper_africa_uk",
@@ -53,7 +53,7 @@
     "set": "ssb_sniper_africa_us"
    },
    "supply": {
-    "ammo": 16
+    "ammo": 24
    }
   }
  }

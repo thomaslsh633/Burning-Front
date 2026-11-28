@@ -3,7 +3,7 @@
   "priest_kangaroo_us": {
    "coh3_ref": "sbps/races/american/vehicles/priest_kangaroo_us",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "priest_kangaroo_us",
@@ -36,7 +36,7 @@
     "set": "priest_kangaroo_us"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    }
   }
  }

@@ -3,7 +3,7 @@
   "halftrack_250_mortar_ak": {
    "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_mortar_ak",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "halftrack_250_mortar_ak",
@@ -50,7 +50,7 @@
     "set": "halftrack_250_mortar_ak"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    },
    "build": {
     "menu": [

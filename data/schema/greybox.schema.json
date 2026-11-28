@@ -5,6 +5,7 @@
     "about": { "type": "string" },
     "targets": { "type": "array", "items": { "$ref": "types.schema.json#/$defs/Id" }, "minItems": 1 },
     "max_turns": { "type": "integer", "minimum": 1 },
+    "exceptions": { "type": "object", "additionalProperties": { "type": "string" } },
     "ranges": {
       "type": "array",
       "items": {

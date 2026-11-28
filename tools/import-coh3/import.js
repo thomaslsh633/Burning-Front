@@ -100,6 +100,12 @@ export function importFaction(faction, squadIds) {
       memberCategory, carriedWeapon: eid => weaponOfItem(ebps.get(eid)?.ref), ammo, profiles, scale,
       entityTags: members.flatMap(m => (EXT(ebpsByRef.get(m)?.rec, 'type_ext')?.unit_type_list || []).map(t => t.unit_type)),
       indirectClass: mainWeapon ? classOf(mainWeapon, cfg.indirect)?.id : null });
+    // weapons CoH3 hands `num` models at spawn (not on the entity record): coh3stats lists them with the carrier count
+    const onEntities = new Set(members.flatMap(m => weaponIdsOf(ebpsByRef.get(m)?.rec).map(w => w.id)));
+    const loadout = (src.coh3stats[s.race]?.[id]?.weapons || []).filter(w => !onEntities.has(w.id) && w.id !== mainWeapon && !/dummy/.test(w.id) && weapons.get(w.id));
+    for (const w of loadout) addWeapon(w.id);
+    const granted = loadout.filter(w => Object.values(files.weapon).some(c => w.id in c)).map(w => ({ weapon: w.id, num: w.num ?? 1 }));
+    if (granted.length) { record.loadout_weapons = granted; notes.push(`loadout weapons from coh3stats: ${granted.map(w => `${w.weapon} ×${w.num}`).join(', ')}`); }
     put('sbps', category, id, record);
     files.fx.sbps[id] = { name: `unit.${id}.name`, short_name: `unit.${id}.short`, desc: `unit.${id}.desc`, icon: id, menu: { tab: category, order: 0 } };
     report.push({ id, kind: `squad · ${category}`, notes });

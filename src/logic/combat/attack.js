@@ -103,6 +103,9 @@ function damageMember(unit, i, amount, events) {
   return { ...unit, members };
 }
 
+/** Members one shell may hit: CoH3 damage_max_members_per_squad; −1 means no limit. */
+const splashCap = aoe => (aoe.max_members == null ? 1 : aoe.max_members < 0 ? Infinity : aoe.max_members);
+
 /** Splash to up to `count` other living members (random order). */
 function splash(unit, amount, count, skip, rng, events) {
   let u = unit;
@@ -161,10 +164,10 @@ export function resolveAttack(state, data, attackerId, targetId, rng) {
           shotEvents.push(ev('PenetrationFailed', { unit: v.id, member: i, weapon: w.id }));
           if (h.deflect > 0) v = damageMember(v, i, h.deflect, shotEvents);
         }
-        if (multi && sf > 0) v = splash(v, m.damage * sf, (w.weapon.aoe.max_members ?? 1) - 1, i, rng, shotEvents);
+        if (multi && sf > 0) v = splash(v, m.damage * sf, splashCap(w.weapon.aoe) - 1, i, rng, shotEvents);
       } else {
         misses++;
-        if (multi && sf > 0) v = splash(v, m.damage * sf * c.aoe.miss_splash, w.weapon.aoe.max_members ?? 1, -1, rng, shotEvents);
+        if (multi && sf > 0) v = splash(v, m.damage * sf * c.aoe.miss_splash, splashCap(w.weapon.aoe), -1, rng, shotEvents);
       }
       s = putUnit(s, v);
     }

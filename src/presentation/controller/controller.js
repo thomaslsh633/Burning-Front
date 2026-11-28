@@ -10,7 +10,8 @@ const BUTTONS = { emplace: 'Emplace', pack: 'Pack', hold: 'Hold', retreat: 'Retr
 
 /** { store, data, onUiChange(ui) } → { ui(), onIntent(intent) } */
 export function createController({ store, data, onUiChange = () => {} }) {
-  let ui = { selected: null, preview: null, message: null };
+  // camera: the view angle stays fixed (SPEC §9: 35° above the ground); yaw turns in 60° steps, zoom scales the hexes
+  let ui = { selected: null, preview: null, message: null, camera: { yaw: 45, zoom: 1 } };
   const set = next => { ui = { ...ui, ...next }; onUiChange(ui); };
   const send = cmd => {
     const r = store.dispatch(cmd);
@@ -36,15 +37,22 @@ export function createController({ store, data, onUiChange = () => {} }) {
 
   function tapButton(id) {
     const s = store.getState(), side = s.match.side;
+    if (id === 'rotateLeft' || id === 'rotateRight') return set({ camera: { ...ui.camera, yaw: (ui.camera.yaw + (id === 'rotateLeft' ? -60 : 60) + 360) % 360 } });
+    if (id === 'zoomIn' || id === 'zoomOut') return zoom(id === 'zoomIn' ? 1.25 : 0.8);
     if (id === 'end') { set({ selected: null }); return send(s.match.side == null ? { type: 'StartMatch', side: null } : { type: 'EndTurn', side }); }
     if (BUTTONS[id] && ui.selected) return send({ type: BUTTONS[id], side, unit: ui.selected });
     return undefined;
+  }
+
+  function zoom(factor) {
+    set({ camera: { ...ui.camera, zoom: Math.round(Math.min(3, Math.max(0.5, ui.camera.zoom * factor)) * 100) / 100 } });
   }
 
   return {
     ui: () => ui,
     onIntent(intent) {
       if (intent.type === 'tapHex') return tapHex(intent);
+      if (intent.type === 'zoom') return zoom(intent.factor);
       if (intent.type === 'tapButton') return tapButton(intent.id);
       return undefined;
     },

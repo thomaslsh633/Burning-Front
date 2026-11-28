@@ -72,6 +72,12 @@
     "fire": "flame"
    }
   },
+  "mg42_stormtrooper_ger": {
+   "name": "weapon.mg42_stormtrooper_ger.name",
+   "sound": {
+    "fire": "lmg"
+   }
+  },
   "tank_smoke_ak": {
    "name": "weapon.tank_smoke_ak.name",
    "sound": {

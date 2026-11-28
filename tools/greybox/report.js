@@ -94,6 +94,7 @@ export function ttkTable(data, criteria, { seeds = 100, attackers } = {}) {
       const best = Math.min(...vals.map(v => v ?? Infinity));
       if (best < rule.turns[0] || best > rule.turns[1]) row.flags.push(`${rule.role} vs ${rule.target_kind}: best ${what === 'pin' ? 'time to pin' : 'TTK'} ${Number.isFinite(best) ? best : '—'} outside ${rule.turns[0]}–${rule.turns[1]}`);
     }
+    if (row.flags.length && criteria.exceptions?.[id]) { row.accepted = criteria.exceptions[id]; row.flags = []; }
     rows.push(row);
   }
   return { targets, rows };
@@ -106,11 +107,12 @@ export function markdown({ targets, rows }, criteria, seeds) {
     'own turn at mid-band range of its longest weapon, target in the open, no counter fire. Cell: median own turns to kill;',
     '— = killed in half the runs or fewer within the limit (kill rate in brackets); ⚠ammo = ran out of ammunition in some runs;',
     'pin N = median own turns until the target is first pinned (shown when it differs from the kill).',
-    `Criteria: \`data/balance/greybox.json\`. ${rows.filter(r => r.flags.length).length} of ${rows.length} armed squads are flagged.`, '',
+    `Criteria: \`data/balance/greybox.json\`. ${rows.filter(r => r.flags.length).length} of ${rows.length} armed squads are flagged;`,
+    `${rows.filter(r => r.accepted).length} more are outside the ranges with a recorded reason (\`exceptions\`).`, '',
     `| Squad | Faction | Role | Cost | Dist | ${targets.map(t => `\`${t}\``).join(' | ')} | Flags |`,
     `| --- | --- | --- | --- | --- | ${targets.map(() => '---').join(' | ')} | --- |`];
   for (const r of [...rows].sort((a, b) => a.faction.localeCompare(b.faction) || a.role.localeCompare(b.role) || a.id.localeCompare(b.id))) {
-    L.push(`| \`${r.id}\` | ${r.faction} | ${r.role} | ${r.cost} | ${r.ttk[targets[0]]?.distance ?? ''} | ${targets.map(t => cell(r.ttk[t])).join(' | ')} | ${r.flags.join('; ')} |`);
+    L.push(`| \`${r.id}\` | ${r.faction} | ${r.role} | ${r.cost} | ${r.ttk[targets[0]]?.distance ?? ''} | ${targets.map(t => cell(r.ttk[t])).join(' | ')} | ${r.flags.length ? r.flags.join('; ') : r.accepted ? `accepted: ${r.accepted}` : ''} |`);
   }
   return `${L.join('\n')}\n`;
 }

@@ -19,12 +19,20 @@ export async function bootGreybox(doc, root = '.') {
     teams: { blue: { faction: opt('blue') ?? 'american', resources }, red: { faction: opt('red') ?? 'german', resources } } }, data);
   const store = createStore(state, data, { rngFrom: s => createRng({ state: s }), freeze: true });
 
-  const canvas = doc.getElementById('map'), ctx = canvas.getContext('2d'), view = createView(22);
-  Object.assign(canvas, (({ w, h }) => ({ width: w, height: h }))(view.fit(state.map.cols, state.map.rows)));
-  const redraw = () => { view.draw(ctx, store.getState(), controller.ui(), data); doc.getElementById('debug').textContent = debugText(store.getState(), controller.ui(), data); };
+  const canvas = doc.getElementById('map'), ctx = canvas.getContext('2d');
+  let view, camera;
+  const redraw = () => {
+    const cam = controller.ui().camera;
+    if (cam !== camera) {   // a new camera (turn / zoom): a new projection and canvas size
+      camera = cam; view = createView(22 * cam.zoom, { yaw: cam.yaw });
+      Object.assign(canvas, (({ w, h }) => ({ width: w, height: h }))(view.fit(state.map.cols, state.map.rows)));
+    }
+    view.draw(ctx, store.getState(), controller.ui(), data);
+    doc.getElementById('debug').textContent = debugText(store.getState(), controller.ui(), data);
+  };
   const controller = createController({ store, data, onUiChange: redraw });
   store.subscribe(redraw);
-  attach(canvas, view.toHex, controller.onIntent);
+  attach(canvas, (x, y) => view.toHex(x, y), controller.onIntent);
   for (const b of doc.querySelectorAll('[data-button]')) b.addEventListener('click', () => controller.onIntent({ type: 'tapButton', id: b.dataset.button }));
   controller.onIntent({ type: 'tapButton', id: 'end' });   // StartMatch
   redraw();

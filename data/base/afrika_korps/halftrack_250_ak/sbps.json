@@ -3,7 +3,7 @@
   "halftrack_250_ak": {
    "coh3_ref": "sbps/races/afrika_korps/vehicles/halftrack_250_ak",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "members": [
     {
      "entity": "halftrack_250_ak",
@@ -57,7 +57,7 @@
     "set": "halftrack_250_ak"
    },
    "supply": {
-    "ammo": 12
+    "ammo": 18
    },
    "build": {
     "menu": [

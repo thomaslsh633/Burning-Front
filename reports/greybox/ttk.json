@@ -47,24 +47,24 @@
     },
     "stuart_us": {
      "median": 10,
-     "killRate": 0.645,
+     "killRate": 0.935,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 71
+     "outOfAmmo": 13
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.025,
+     "killRate": 0.11,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 195
+     "outOfAmmo": 178
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.04,
+     "killRate": 0.16,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 192
+     "outOfAmmo": 168
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -140,9 +140,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 9 outside 1–4"
-   ]
+   "flags": [],
+   "accepted": "command vehicle: its job is the command aura (abilities not built), light MG only"
   },
   {
    "id": "elefant_tank_destroyer_ak",
@@ -246,11 +245,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.18,
-     "pin": null,
+     "median": 18,
+     "killRate": 0.52,
+     "pin": 18,
      "distance": 4,
-     "outOfAmmo": 164
+     "outOfAmmo": 96
     },
     "sherman_us": {
      "median": null,
@@ -261,10 +260,10 @@
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -280,7 +279,7 @@
    "id": "halftrack_250_ak",
    "faction": "afrika_korps",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 230,
    "ttk": {
     "riflemen_us": {
@@ -340,15 +339,13 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 8 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "halftrack_250_mortar_ak",
    "faction": "afrika_korps",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "cost": 260,
    "ttk": {
     "riflemen_us": {
@@ -381,10 +378,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -419,52 +416,52 @@
    "ttk": {
     "riflemen_us": {
      "median": 8,
-     "killRate": 0.815,
+     "killRate": 0.975,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 37
+     "outOfAmmo": 5
     },
     "grenadier_ger": {
      "median": 8,
-     "killRate": 0.815,
+     "killRate": 0.975,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 37
+     "outOfAmmo": 5
     },
     "tommy_africa_uk": {
      "median": 7,
-     "killRate": 0.945,
+     "killRate": 0.995,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 11
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
      "median": 7,
-     "killRate": 0.945,
+     "killRate": 0.995,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 11
+     "outOfAmmo": 1
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.43,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.7,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 114
+     "outOfAmmo": 60
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.01,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 198
+     "outOfAmmo": 196
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.045,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 191
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -480,15 +477,15 @@
    "id": "kradschutzen_motorcycle_ak",
    "faction": "afrika_korps",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 180,
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.615,
+     "killRate": 1,
      "pin": 12,
      "distance": 3,
-     "outOfAmmo": 77
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 10,
@@ -540,9 +537,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 10 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "l6_40_ak",
@@ -553,52 +548,52 @@
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.625,
+     "killRate": 1,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 75
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 10,
-     "killRate": 0.925,
+     "killRate": 1,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 15
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 10,
-     "killRate": 0.93,
+     "killRate": 1,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 14
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 10,
-     "killRate": 0.875,
+     "killRate": 1,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 25
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 7,
-     "killRate": 0.855,
+     "killRate": 0.965,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 29
+     "outOfAmmo": 7
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.175,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 165
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.085,
+     "killRate": 0.285,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 183
+     "outOfAmmo": 143
     },
     "hmg_mg42_ger": {
      "median": 6,
@@ -684,32 +679,32 @@
    "cost": 340,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.075,
-     "pin": null,
+     "median": 15,
+     "killRate": 1,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 185
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.37,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 126
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.435,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 113
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.345,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 131
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 4,
@@ -719,18 +714,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.305,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.74,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 139
+     "outOfAmmo": 52
     },
     "panzer_iv_ger": {
      "median": 12,
-     "killRate": 0.52,
+     "killRate": 0.855,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 96
+     "outOfAmmo": 29
     },
     "hmg_mg42_ger": {
      "median": 9,
@@ -785,18 +780,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.285,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.725,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 143
+     "outOfAmmo": 55
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.39,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.88,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 122
+     "outOfAmmo": 24
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -817,31 +812,31 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0.01,
+     "killRate": 0.205,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 198
+     "outOfAmmo": 159
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.03,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.715,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 57
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.07,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.64,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 186
+     "outOfAmmo": 72
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0.04,
+     "killRate": 0.495,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 192
+     "outOfAmmo": 101
     },
     "stuart_us": {
      "median": 3,
@@ -865,11 +860,11 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.24,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.985,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 152
+     "outOfAmmo": 3
     }
    },
    "flags": []
@@ -918,10 +913,10 @@
     },
     "sherman_us": {
      "median": 8,
-     "killRate": 0.98,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 4
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 7,
@@ -949,59 +944,59 @@
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.61,
+     "killRate": 0.92,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 78
+     "outOfAmmo": 16
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.62,
+     "killRate": 0.94,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 76
+     "outOfAmmo": 12
     },
     "tommy_africa_uk": {
      "median": 9,
-     "killRate": 0.81,
+     "killRate": 0.98,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 38
+     "outOfAmmo": 4
     },
     "panzergrenadier_ak": {
      "median": 9,
-     "killRate": 0.81,
+     "killRate": 0.98,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 38
+     "outOfAmmo": 4
     },
     "stuart_us": {
      "median": 10,
-     "killRate": 0.705,
+     "killRate": 0.87,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 59
+     "outOfAmmo": 26
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.045,
+     "killRate": 0.125,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 191
+     "outOfAmmo": 175
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.05,
+     "killRate": 0.145,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 190
+     "outOfAmmo": 171
     },
     "hmg_mg42_ger": {
      "median": 6,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 6,
      "distance": 4,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -1050,17 +1045,17 @@
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.02,
+     "killRate": 0.26,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 196
+     "outOfAmmo": 148
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.045,
+     "killRate": 0.385,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 191
+     "outOfAmmo": 123
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -1116,17 +1111,17 @@
     },
     "sherman_us": {
      "median": 8,
-     "killRate": 0.95,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 10
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 7,
-     "killRate": 0.99,
+     "killRate": 1,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -1146,30 +1141,30 @@
    "cost": 400,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -1181,18 +1176,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.35,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.825,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 130
+     "outOfAmmo": 35
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.5,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.92,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 100
+     "outOfAmmo": 16
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -1379,18 +1374,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.21,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.775,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 158
+     "outOfAmmo": 45
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.315,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.885,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 137
+     "outOfAmmo": 23
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -1411,31 +1406,31 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.39,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 122
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.045,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.975,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 191
+     "outOfAmmo": 5
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.06,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.92,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 188
+     "outOfAmmo": 16
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.06,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.92,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 188
+     "outOfAmmo": 16
     },
     "stuart_us": {
      "median": 3,
@@ -1459,11 +1454,11 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.5,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 100
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -1484,24 +1479,24 @@
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.025,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 195
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "stuart_us": {
      "median": 3,
@@ -1526,10 +1521,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.25,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 150
     }
    },
    "flags": []
@@ -1542,65 +1537,63 @@
    "cost": 335,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 9,
+     "killRate": 1,
+     "pin": 9,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 9,
+     "killRate": 1,
+     "pin": 9,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "all_round vs vehicle: best TTK — outside 2–8"
-   ]
+   "flags": []
   },
   {
    "id": "tiger_ace_ak",
@@ -1610,30 +1603,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 8,
+     "median": 3,
      "killRate": 1,
-     "pin": 8,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 7,
+     "median": 2,
      "killRate": 1,
-     "pin": 7,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 7,
+     "median": 3,
      "killRate": 1,
-     "pin": 7,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -1659,9 +1652,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -1676,30 +1669,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 8,
+     "median": 3,
      "killRate": 1,
-     "pin": 8,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 7,
+     "median": 2,
      "killRate": 1,
-     "pin": 7,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 7,
+     "median": 3,
      "killRate": 1,
-     "pin": 7,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -1725,9 +1718,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -1742,30 +1735,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 8,
+     "median": 3,
      "killRate": 1,
-     "pin": 8,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 7,
+     "median": 2,
      "killRate": 1,
-     "pin": 7,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 7,
+     "median": 3,
      "killRate": 1,
-     "pin": 7,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -1791,9 +1784,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -2200,62 +2193,62 @@
    "id": "panzerjaeger_inf_ak",
    "faction": "afrika_korps",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "cost": 240,
    "ttk": {
     "riflemen_us": {
+     "median": 9,
+     "killRate": 1,
+     "pin": 9,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "grenadier_ger": {
      "median": 7,
      "killRate": 1,
      "pin": 7,
      "distance": 3,
      "outOfAmmo": 0
     },
-    "grenadier_ger": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 7,
      "killRate": 1,
-     "pin": 6,
+     "pin": 7,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 6,
+     "median": 7,
      "killRate": 1,
-     "pin": 6,
+     "pin": 7,
      "distance": 3,
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 12,
+     "killRate": 1,
+     "pin": 12,
      "distance": 3,
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 4,
      "killRate": 1,
-     "pin": 3,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -2340,28 +2333,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -2389,7 +2382,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -2406,28 +2399,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 2,
@@ -2455,7 +2448,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -2468,32 +2461,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.105,
+     "median": 14,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 179
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.9,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 11,
-     "killRate": 0.89,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 22
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 12,
-     "killRate": 0.75,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 50
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -2535,64 +2528,63 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0.085,
+     "killRate": 0.155,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0.085,
+     "killRate": 0.155,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.205,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.205,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.19,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.335,
+     "killRate": 0.42,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 133
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "indirect vs squad: best TTK — outside 2–10"
-   ]
+   "flags": [],
+   "accepted": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built"
   },
   {
    "id": "leig_75mm_ak",
@@ -2630,11 +2622,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.67,
+     "pin": 13,
      "distance": 7,
-     "outOfAmmo": 174
+     "outOfAmmo": 66
     },
     "sherman_us": {
      "median": null,
@@ -2697,10 +2689,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -2735,10 +2727,10 @@
    "ttk": {
     "riflemen_us": {
      "median": 11,
-     "killRate": 0.91,
+     "killRate": 1,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 18
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 10,
@@ -2770,17 +2762,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.855,
+     "killRate": 0.995,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 29
+     "outOfAmmo": 1
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.96,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 8
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 6,
@@ -2866,53 +2858,53 @@
    "cost": 310,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.055,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.96,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 189
+     "outOfAmmo": 8
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.25,
-     "pin": null,
+     "median": 14,
+     "killRate": 1,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 150
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.27,
-     "pin": null,
+     "median": 14,
+     "killRate": 1,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 146
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.245,
-     "pin": null,
+     "median": 14,
+     "killRate": 1,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 151
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 9,
-     "killRate": 0.875,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 25
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.025,
+     "killRate": 0.09,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 195
+     "outOfAmmo": 182
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.04,
+     "killRate": 0.17,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 192
+     "outOfAmmo": 166
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -2922,9 +2914,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "all_round vs vehicle: best TTK 9 outside 2–8"
-   ]
+   "flags": [],
+   "accepted": "light armoured car (37 mm): kills light vehicles (Stuart 9); medium tanks need flanking"
   },
   {
    "id": "halftrack_75mm_us",
@@ -2935,31 +2926,31 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.03,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 194
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.07,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 186
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.045,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 191
     },
     "stuart_us": {
      "median": 4,
@@ -2970,10 +2961,10 @@
     },
     "sherman_us": {
      "median": 6,
-     "killRate": 0.99,
+     "killRate": 1,
      "pin": 6,
      "distance": 4,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 5,
@@ -2984,10 +2975,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.02,
+     "killRate": 0.295,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 196
+     "outOfAmmo": 141
     }
    },
    "flags": []
@@ -2996,7 +2987,7 @@
    "id": "halftrack_assault_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 275,
    "ttk": {
     "riflemen_us": {
@@ -3056,9 +3047,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 6 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "halftrack_quad_us",
@@ -3097,10 +3086,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.435,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 113
     },
     "sherman_us": {
      "median": null,
@@ -3130,7 +3119,7 @@
    "id": "halftrack_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 275,
    "ttk": {
     "riflemen_us": {
@@ -3190,9 +3179,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 6 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "hellcat_us",
@@ -3203,31 +3190,31 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.04,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 192
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.145,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 171
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.18,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 164
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.14,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 172
     },
     "stuart_us": {
      "median": 4,
@@ -3251,11 +3238,11 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.07,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.695,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 186
+     "outOfAmmo": 61
     }
    },
    "flags": []
@@ -3330,7 +3317,7 @@
    "id": "priest_kangaroo_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 350,
    "ttk": {
     "riflemen_us": {
@@ -3390,15 +3377,13 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 6 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "priest_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "logistics",
+   "role": "anti_infantry",
    "cost": 510,
    "ttk": {
     "riflemen_us": {
@@ -3464,7 +3449,7 @@
    "id": "scott_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "cost": 335,
    "ttk": {
     "riflemen_us": {
@@ -3496,11 +3481,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.415,
-     "pin": null,
+     "median": 6,
+     "killRate": 0.965,
+     "pin": 6,
      "distance": 2,
-     "outOfAmmo": 117
+     "outOfAmmo": 7
     },
     "sherman_us": {
      "median": null,
@@ -3511,10 +3496,10 @@
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 2,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -3694,11 +3679,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.335,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.87,
+     "pin": 15,
      "distance": 3,
-     "outOfAmmo": 133
+     "outOfAmmo": 26
     },
     "sherman_us": {
      "median": null,
@@ -3722,9 +3707,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "all_round vs vehicle: best TTK — outside 2–8"
-   ]
+   "flags": [],
+   "accepted": "105 mm HE support tank, not an anti-tank gun"
   },
   {
    "id": "sherman_bulldozer_x2_us",
@@ -3762,11 +3746,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.335,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.87,
+     "pin": 15,
      "distance": 3,
-     "outOfAmmo": 133
+     "outOfAmmo": 26
     },
     "sherman_us": {
      "median": null,
@@ -3790,9 +3774,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "all_round vs vehicle: best TTK — outside 2–8"
-   ]
+   "flags": [],
+   "accepted": "105 mm HE support tank, not an anti-tank gun"
   },
   {
    "id": "sherman_easy_8_us",
@@ -3904,17 +3887,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.895,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 21
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.975,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 5
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -3970,17 +3953,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.895,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 21
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.975,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 5
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -3996,15 +3979,15 @@
    "id": "sherman_whizbang_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "cost": 500,
    "ttk": {
     "riflemen_us": {
      "median": 6,
-     "killRate": 0.9,
+     "killRate": 1,
      "pin": 6,
      "distance": 3,
-     "outOfAmmo": 20
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 5,
@@ -4101,18 +4084,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.195,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.56,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 161
+     "outOfAmmo": 88
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.31,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.735,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 138
+     "outOfAmmo": 53
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -4167,18 +4150,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.195,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.56,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 161
+     "outOfAmmo": 88
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.31,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.735,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 138
+     "outOfAmmo": 53
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -4194,15 +4177,15 @@
    "id": "truck_4x4_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 220,
    "ttk": {
     "riflemen_us": {
      "median": 11,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 11,
      "distance": 3,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 9,
@@ -4254,23 +4237,21 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 9 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "truck_4x4_x2_us",
    "faction": "american",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 220,
    "ttk": {
     "riflemen_us": {
      "median": 11,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 11,
      "distance": 3,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 9,
@@ -4322,9 +4303,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 9 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "artillery_observers_us",
@@ -4390,9 +4369,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 8 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "support squad: its strength is calling artillery (abilities not built)"
   },
   {
    "id": "assault_engineer_us",
@@ -4464,69 +4442,67 @@
    "id": "bazooka_team_us",
    "faction": "american",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "cost": 250,
    "ttk": {
     "riflemen_us": {
-     "median": 11,
-     "killRate": 1,
-     "pin": 11,
+     "median": 19,
+     "killRate": 0.76,
+     "pin": 19,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 9,
+     "median": 16,
      "killRate": 1,
-     "pin": 9,
+     "pin": 16,
      "distance": 3,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
+     "median": 16,
+     "killRate": 1,
+     "pin": 16,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "panzergrenadier_ak": {
+     "median": 17,
+     "killRate": 0.995,
+     "pin": 17,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "stuart_us": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "sherman_us": {
+     "median": 8,
+     "killRate": 1,
+     "pin": 8,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "panzer_iv_ger": {
+     "median": 7,
+     "killRate": 1,
+     "pin": 7,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "hmg_mg42_ger": {
      "median": 9,
      "killRate": 1,
      "pin": 9,
      "distance": 3,
      "outOfAmmo": 0
-    },
-    "panzergrenadier_ak": {
-     "median": 10,
-     "killRate": 1,
-     "pin": 10,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "hmg_mg42_ger": {
-     "median": 5,
-     "killRate": 1,
-     "pin": 5,
-     "distance": 3,
-     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 9 outside 2–6"
-   ]
+   "flags": []
   },
   {
    "id": "brazilian_infantry_us",
@@ -4724,9 +4700,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 9 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "officer hero squad: auras and abilities (not built)"
   },
   {
    "id": "captain_us",
@@ -4792,9 +4767,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 9 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "officer squad: auras and abilities (not built)"
   },
   {
    "id": "engineer_us",
@@ -4936,32 +4910,32 @@
    "cost": 140,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.075,
-     "pin": null,
+     "median": 19,
+     "killRate": 0.76,
+     "pin": 19,
      "distance": 3,
-     "outOfAmmo": 185
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 16,
-     "killRate": 0.62,
+     "killRate": 1,
      "pin": 16,
      "distance": 3,
-     "outOfAmmo": 76
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 16,
-     "killRate": 0.635,
+     "killRate": 1,
      "pin": 16,
      "distance": 3,
-     "outOfAmmo": 73
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.435,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.995,
+     "pin": 17,
      "distance": 3,
-     "outOfAmmo": 113
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 4,
@@ -5064,7 +5038,7 @@
    "id": "marksman_team_partisan",
    "faction": "american",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "recon",
    "cost": 310,
    "ttk": {
     "riflemen_us": {
@@ -5124,9 +5098,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 13 outside 2–6"
-   ]
+   "flags": []
   },
   {
    "id": "paratrooper_us",
@@ -5258,9 +5230,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 8 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "recon squad (carbines): role guessed from its main weapon"
   },
   {
    "id": "ranger_us",
@@ -5590,9 +5561,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK — outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "sabotage / demolition squad (abilities not built)"
   },
   {
    "id": "saboteurs_partisan",
@@ -5658,9 +5628,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 15 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "sabotage / demolition squad (abilities not built)"
   },
   {
    "id": "scout_us",
@@ -5726,9 +5695,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 10 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "recon squad (carbines): role guessed from its main weapon"
   },
   {
    "id": "sniper_us",
@@ -5770,21 +5738,21 @@
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -5800,7 +5768,7 @@
    "id": "ssb_sniper_africa_us",
    "faction": "american",
    "kind": "squad",
-   "role": "recon",
+   "role": "anti_tank",
    "cost": 340,
    "ttk": {
     "riflemen_us": {
@@ -5840,17 +5808,17 @@
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.195,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.315,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -5860,7 +5828,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": []
+   "flags": [],
+   "accepted": "anti-tank sniper: kills light vehicles, slow against medium tanks by design"
   },
   {
    "id": "ssf_commandos_us",
@@ -5870,30 +5839,30 @@
    "cost": 360,
    "ttk": {
     "riflemen_us": {
-     "median": 6,
+     "median": 4,
      "killRate": 1,
-     "pin": 6,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -5919,9 +5888,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -5936,30 +5905,30 @@
    "cost": 360,
    "ttk": {
     "riflemen_us": {
-     "median": 6,
+     "median": 4,
      "killRate": 1,
-     "pin": 6,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -5985,9 +5954,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -6006,28 +5975,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -6055,7 +6024,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -6072,28 +6041,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -6121,7 +6090,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -6138,28 +6107,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -6187,7 +6156,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -6200,32 +6169,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0,
+     "median": 17,
+     "killRate": 0.825,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 35
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.235,
+     "median": 14,
+     "killRate": 0.995,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 153
+     "outOfAmmo": 1
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.245,
+     "median": 14,
+     "killRate": 0.995,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 151
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.115,
+     "median": 15,
+     "killRate": 0.98,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 177
+     "outOfAmmo": 4
     },
     "stuart_us": {
      "median": null,
@@ -6266,32 +6235,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0,
+     "median": 17,
+     "killRate": 0.825,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 35
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.235,
+     "median": 14,
+     "killRate": 0.995,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 153
+     "outOfAmmo": 1
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.245,
+     "median": 14,
+     "killRate": 0.995,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 151
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.115,
+     "median": 15,
+     "killRate": 0.98,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 177
+     "outOfAmmo": 4
     },
     "stuart_us": {
      "median": null,
@@ -6333,38 +6302,38 @@
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.56,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 88
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 10,
-     "killRate": 0.96,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 8
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 10,
-     "killRate": 0.955,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 9
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 11,
-     "killRate": 0.85,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 30
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.22,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 156
     },
     "sherman_us": {
      "median": null,
@@ -6427,10 +6396,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -6492,11 +6461,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.67,
+     "pin": 13,
      "distance": 7,
-     "outOfAmmo": 174
+     "outOfAmmo": 66
     },
     "sherman_us": {
      "median": null,
@@ -6545,17 +6514,17 @@
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "stuart_us": {
      "median": 3,
@@ -6580,10 +6549,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.075,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 199
+     "outOfAmmo": 185
     }
    },
    "flags": []
@@ -6611,17 +6580,17 @@
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "stuart_us": {
      "median": 3,
@@ -6646,10 +6615,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.075,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 199
+     "outOfAmmo": 185
     }
    },
    "flags": []
@@ -6691,24 +6660,24 @@
     },
     "stuart_us": {
      "median": 9,
-     "killRate": 0.925,
+     "killRate": 1,
      "pin": 9,
      "distance": 3,
-     "outOfAmmo": 15
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.265,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 147
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.01,
+     "killRate": 0.425,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 198
+     "outOfAmmo": 115
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -6764,17 +6733,17 @@
     },
     "sherman_us": {
      "median": 8,
-     "killRate": 0.955,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 9
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 7,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -6830,17 +6799,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.87,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 26
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -6856,7 +6825,7 @@
    "id": "churchill_avre_africa_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "logistics",
+   "role": "anti_infantry",
    "cost": 870,
    "ttk": {
     "riflemen_us": {
@@ -6922,100 +6891,34 @@
    "id": "churchill_avre_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "cost": 870,
    "ttk": {
     "riflemen_us": {
-     "median": 7,
+     "median": 1,
      "killRate": 1,
-     "pin": 7,
+     "pin": 1,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 6,
+     "median": 1,
      "killRate": 1,
-     "pin": 6,
+     "pin": 1,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 1,
      "killRate": 1,
-     "pin": 6,
+     "pin": 1,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 7,
+     "median": 1,
      "killRate": 1,
-     "pin": 7,
-     "distance": 4,
-     "outOfAmmo": 0
-    },
-    "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 4,
-     "outOfAmmo": 200
-    },
-    "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 4,
-     "outOfAmmo": 200
-    },
-    "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 4,
-     "outOfAmmo": 200
-    },
-    "hmg_mg42_ger": {
-     "median": 4,
-     "killRate": 1,
-     "pin": 4,
-     "distance": 4,
-     "outOfAmmo": 0
-    }
-   },
-   "flags": []
-  },
-  {
-   "id": "churchill_black_prince_africa_uk",
-   "faction": "british",
-   "kind": "vehicle",
-   "role": "anti_tank",
-   "cost": 920,
-   "ttk": {
-    "riflemen_us": {
-     "median": 7,
-     "killRate": 1,
-     "pin": 7,
-     "distance": 4,
-     "outOfAmmo": 0
-    },
-    "grenadier_ger": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 4,
-     "outOfAmmo": 0
-    },
-    "tommy_africa_uk": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 4,
-     "outOfAmmo": 0
-    },
-    "panzergrenadier_ak": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
+     "pin": 1,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -7041,9 +6944,76 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 4,
+     "median": 1,
      "killRate": 1,
-     "pin": 4,
+     "pin": 1,
+     "distance": 4,
+     "outOfAmmo": 0
+    }
+   },
+   "flags": [],
+   "accepted": "290 mm demolition petard: a one-shot kill on infantry is CoH3's design"
+  },
+  {
+   "id": "churchill_black_prince_africa_uk",
+   "faction": "british",
+   "kind": "vehicle",
+   "role": "anti_tank",
+   "cost": 920,
+   "ttk": {
+    "riflemen_us": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "grenadier_ger": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "tommy_africa_uk": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "panzergrenadier_ak": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "stuart_us": {
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "sherman_us": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "panzer_iv_ger": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 4,
+     "outOfAmmo": 0
+    },
+    "hmg_mg42_ger": {
+     "median": 2,
+     "killRate": 1,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -7058,30 +7028,30 @@
    "cost": 870,
    "ttk": {
     "riflemen_us": {
-     "median": 7,
+     "median": 3,
      "killRate": 1,
-     "pin": 7,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -7107,9 +7077,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -7160,17 +7130,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.905,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 19
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -7226,17 +7196,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.905,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 19
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -7292,17 +7262,17 @@
     },
     "sherman_us": {
      "median": 11,
-     "killRate": 0.64,
+     "killRate": 0.99,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 72
+     "outOfAmmo": 2
     },
     "panzer_iv_ger": {
      "median": 10,
-     "killRate": 0.79,
+     "killRate": 0.995,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 42
+     "outOfAmmo": 1
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -7358,17 +7328,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.87,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 26
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -7424,17 +7394,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.87,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 26
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -7455,10 +7425,10 @@
    "ttk": {
     "riflemen_us": {
      "median": 11,
-     "killRate": 0.96,
+     "killRate": 1,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 8
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 9,
@@ -7521,59 +7491,59 @@
    "ttk": {
     "riflemen_us": {
      "median": 11,
-     "killRate": 0.66,
+     "killRate": 0.955,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 68
+     "outOfAmmo": 9
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.66,
+     "killRate": 0.955,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 68
+     "outOfAmmo": 9
     },
     "tommy_africa_uk": {
      "median": 9,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "panzergrenadier_ak": {
      "median": 9,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "stuart_us": {
      "median": 3,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 3,
      "distance": 4,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.345,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.615,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 131
+     "outOfAmmo": 77
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.46,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.735,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 108
+     "outOfAmmo": 53
     },
     "hmg_mg42_ger": {
      "median": 6,
-     "killRate": 0.99,
+     "killRate": 1,
      "pin": 6,
      "distance": 4,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -7622,17 +7592,17 @@
     },
     "sherman_us": {
      "median": 11,
-     "killRate": 0.61,
+     "killRate": 0.875,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 78
+     "outOfAmmo": 25
     },
     "panzer_iv_ger": {
      "median": 10,
-     "killRate": 0.745,
+     "killRate": 0.945,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 51
+     "outOfAmmo": 11
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -7695,10 +7665,10 @@
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.025,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 195
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -7714,7 +7684,7 @@
    "id": "cwt_lrdg_truck_2pdr_africa_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "anti_tank",
+   "role": "logistics",
    "cost": 285,
    "ttk": {
     "riflemen_us": {
@@ -7754,17 +7724,17 @@
     },
     "sherman_us": {
      "median": 11,
-     "killRate": 0.83,
+     "killRate": 0.9,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 34
+     "outOfAmmo": 20
     },
     "panzer_iv_ger": {
      "median": 10,
-     "killRate": 0.925,
+     "killRate": 0.98,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 15
+     "outOfAmmo": 4
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -7780,7 +7750,7 @@
    "id": "cwt_lrdg_truck_africa_uk_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 285,
    "ttk": {
     "riflemen_us": {
@@ -7846,7 +7816,7 @@
    "id": "dingo_africa_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 265,
    "ttk": {
     "riflemen_us": {
@@ -7906,15 +7876,13 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 7 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "dingo_uk",
    "faction": "british",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 250,
    "ttk": {
     "riflemen_us": {
@@ -7974,9 +7942,7 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 7 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "grant_africa_uk",
@@ -8081,24 +8047,24 @@
     },
     "stuart_us": {
      "median": 12,
-     "killRate": 0.515,
+     "killRate": 0.885,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 97
+     "outOfAmmo": 23
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -8147,24 +8113,24 @@
     },
     "stuart_us": {
      "median": 12,
-     "killRate": 0.515,
+     "killRate": 0.885,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 97
+     "outOfAmmo": 23
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -8184,32 +8150,32 @@
    "cost": 310,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 15,
+     "killRate": 1,
+     "pin": 15,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 12,
-     "killRate": 0.52,
+     "killRate": 1,
      "pin": 12,
      "distance": 3,
-     "outOfAmmo": 96
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 12,
-     "killRate": 0.58,
+     "killRate": 1,
      "pin": 12,
      "distance": 3,
-     "outOfAmmo": 84
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.165,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 3,
-     "outOfAmmo": 167
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -8240,9 +8206,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 12 outside 1–4"
-   ]
+   "flags": [],
+   "accepted": "light armoured car with a light MG; transport / scout role"
   },
   {
    "id": "matilda_africa_uk",
@@ -8252,32 +8217,32 @@
    "cost": 450,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.265,
-     "pin": null,
+     "median": 14,
+     "killRate": 1,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 147
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 12,
-     "killRate": 0.75,
+     "killRate": 1,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 50
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 12,
-     "killRate": 0.805,
+     "killRate": 1,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 12,
-     "killRate": 0.535,
+     "killRate": 1,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 93
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -8287,18 +8252,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.46,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.835,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 108
+     "outOfAmmo": 33
     },
     "panzer_iv_ger": {
      "median": 11,
-     "killRate": 0.61,
+     "killRate": 0.905,
      "pin": 11,
      "distance": 4,
-     "outOfAmmo": 78
+     "outOfAmmo": 19
     },
     "hmg_mg42_ger": {
      "median": 6,
@@ -8354,17 +8319,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.895,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 21
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.975,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 5
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -8384,32 +8349,32 @@
    "cost": 560,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.08,
-     "pin": null,
+     "median": 16,
+     "killRate": 0.965,
+     "pin": 16,
      "distance": 4,
-     "outOfAmmo": 184
+     "outOfAmmo": 7
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.335,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 133
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.36,
-     "pin": null,
+     "median": 13,
+     "killRate": 1,
+     "pin": 13,
      "distance": 4,
-     "outOfAmmo": 128
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.32,
-     "pin": null,
+     "median": 14,
+     "killRate": 1,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 136
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -8486,17 +8451,17 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.895,
+     "killRate": 1,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 21
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.975,
+     "killRate": 1,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 5
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 2,
@@ -8551,18 +8516,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.195,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.56,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 161
+     "outOfAmmo": 88
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.31,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.735,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 138
+     "outOfAmmo": 53
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -8617,18 +8582,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.195,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.56,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 161
+     "outOfAmmo": 88
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.31,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.735,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 138
+     "outOfAmmo": 53
     },
     "hmg_mg42_ger": {
      "median": 4,
@@ -8683,18 +8648,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.195,
-     "pin": null,
+     "median": 17,
+     "killRate": 0.625,
+     "pin": 17,
      "distance": 4,
-     "outOfAmmo": 161
+     "outOfAmmo": 75
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.28,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.725,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 144
+     "outOfAmmo": 55
     },
     "hmg_mg42_ger": {
      "median": 6,
@@ -8718,28 +8683,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 2,
@@ -8767,7 +8732,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -8784,28 +8749,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 2,
@@ -8833,7 +8798,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -8850,28 +8815,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 2,
@@ -8899,7 +8864,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -8916,28 +8881,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -8948,24 +8913,24 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.95,
+     "killRate": 0.99,
      "pin": 9,
      "distance": 5,
-     "outOfAmmo": 10
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.99,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 5,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -8982,28 +8947,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -9014,24 +8979,24 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.95,
+     "killRate": 0.99,
      "pin": 9,
      "distance": 5,
-     "outOfAmmo": 10
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.99,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 5,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -9048,28 +9013,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -9097,7 +9062,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -9114,28 +9079,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -9163,7 +9128,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -9180,28 +9145,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -9229,7 +9194,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -9271,10 +9236,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.065,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 187
     },
     "sherman_us": {
      "median": null,
@@ -9337,10 +9302,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.065,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 187
     },
     "sherman_us": {
      "median": null,
@@ -9374,32 +9339,32 @@
    "cost": 220,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.28,
+     "median": 13,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 144
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.94,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 12
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 11,
-     "killRate": 0.98,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 4
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 11,
-     "killRate": 0.82,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 36
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -9440,32 +9405,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.115,
+     "median": 14,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 177
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 12,
-     "killRate": 0.73,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 54
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 12,
-     "killRate": 0.77,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 46
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 12,
-     "killRate": 0.57,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 86
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -9506,32 +9471,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.115,
+     "median": 14,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 177
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 12,
-     "killRate": 0.73,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 54
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 12,
-     "killRate": 0.77,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 46
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 12,
-     "killRate": 0.57,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 86
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -9572,32 +9537,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.28,
+     "median": 13,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 144
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.94,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 12
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 11,
-     "killRate": 0.98,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 4
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 11,
-     "killRate": 0.82,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 36
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -9638,32 +9603,32 @@
    "cost": 240,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.28,
+     "median": 13,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 144
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 11,
-     "killRate": 0.94,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 12
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 11,
-     "killRate": 0.98,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 4
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 11,
-     "killRate": 0.82,
+     "killRate": 1,
      "pin": 2,
      "distance": 4,
-     "outOfAmmo": 36
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -9733,10 +9698,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -9799,10 +9764,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -9865,10 +9830,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -9931,10 +9896,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -9996,11 +9961,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.26,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.935,
+     "pin": 13,
      "distance": 6,
-     "outOfAmmo": 148
+     "outOfAmmo": 13
     },
     "sherman_us": {
      "median": null,
@@ -10062,11 +10027,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.26,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.935,
+     "pin": 13,
      "distance": 6,
-     "outOfAmmo": 148
+     "outOfAmmo": 13
     },
     "sherman_us": {
      "median": null,
@@ -10128,11 +10093,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.67,
+     "pin": 13,
      "distance": 7,
-     "outOfAmmo": 174
+     "outOfAmmo": 66
     },
     "sherman_us": {
      "median": null,
@@ -10194,11 +10159,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.67,
+     "pin": 13,
      "distance": 7,
-     "outOfAmmo": 174
+     "outOfAmmo": 66
     },
     "sherman_us": {
      "median": null,
@@ -10430,30 +10395,30 @@
    "cost": 280,
    "ttk": {
     "riflemen_us": {
-     "median": 6,
+     "median": 4,
      "killRate": 1,
-     "pin": 6,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 6,
+     "median": 3,
      "killRate": 1,
-     "pin": 6,
+     "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 5,
+     "median": 3,
      "killRate": 1,
-     "pin": 5,
+     "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 6,
+     "median": 4,
      "killRate": 1,
-     "pin": 6,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -10479,9 +10444,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -10492,13 +10457,13 @@
    "id": "guards_africa_uk",
    "faction": "british",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "cost": 400,
    "ttk": {
     "riflemen_us": {
-     "median": 3,
+     "median": 4,
      "killRate": 1,
-     "pin": 3,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -10510,37 +10475,37 @@
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 2,
-     "killRate": 1,
-     "pin": 2,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "panzergrenadier_ak": {
      "median": 3,
      "killRate": 1,
      "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },
+    "panzergrenadier_ak": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
     "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 8,
+     "killRate": 1,
+     "pin": 8,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 7,
+     "killRate": 1,
+     "pin": 7,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -10558,7 +10523,7 @@
    "id": "guards_uk",
    "faction": "british",
    "kind": "squad",
-   "role": "anti_infantry",
+   "role": "anti_tank",
    "cost": 400,
    "ttk": {
     "riflemen_us": {
@@ -10618,7 +10583,9 @@
      "outOfAmmo": 0
     }
    },
-   "flags": []
+   "flags": [
+    "anti_tank vs vehicle: best TTK — outside 2–6"
+   ]
   },
   {
    "id": "gurkhas_africa_uk",
@@ -10818,9 +10785,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 7 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "officer squad: auras and abilities (not built)"
   },
   {
    "id": "polish_lancer_africa_uk",
@@ -10830,58 +10796,58 @@
    "cost": 320,
    "ttk": {
     "riflemen_us": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "grenadier_ger": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "tommy_africa_uk": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "panzergrenadier_ak": {
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "stuart_us": {
+     "median": 3,
+     "killRate": 1,
+     "pin": 3,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "sherman_us": {
+     "median": 8,
+     "killRate": 1,
+     "pin": 8,
+     "distance": 3,
+     "outOfAmmo": 0
+    },
+    "panzer_iv_ger": {
      "median": 7,
      "killRate": 1,
      "pin": 7,
      "distance": 3,
      "outOfAmmo": 0
     },
-    "grenadier_ger": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "tommy_africa_uk": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "panzergrenadier_ak": {
-     "median": 6,
-     "killRate": 1,
-     "pin": 6,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
-    "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
-     "distance": 3,
-     "outOfAmmo": 0
-    },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -11126,21 +11092,21 @@
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -11160,30 +11126,30 @@
    "cost": 270,
    "ttk": {
     "riflemen_us": {
-     "median": 6,
+     "median": 5,
      "killRate": 1,
-     "pin": 6,
+     "pin": 5,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 5,
+     "median": 4,
      "killRate": 1,
-     "pin": 5,
+     "pin": 4,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -11209,9 +11175,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 3,
      "outOfAmmo": 0
     }
@@ -11222,7 +11188,7 @@
    "id": "ssb_sniper_africa_uk",
    "faction": "british",
    "kind": "squad",
-   "role": "recon",
+   "role": "anti_tank",
    "cost": 340,
    "ttk": {
     "riflemen_us": {
@@ -11262,17 +11228,17 @@
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.195,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.315,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -11282,7 +11248,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": []
+   "flags": [],
+   "accepted": "anti-tank sniper: kills light vehicles, slow against medium tanks by design"
   },
   {
    "id": "tommy_africa_uk",
@@ -11425,52 +11392,52 @@
    "ttk": {
     "riflemen_us": {
      "median": 9,
-     "killRate": 0.815,
+     "killRate": 0.985,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 37
+     "outOfAmmo": 3
     },
     "grenadier_ger": {
      "median": 9,
-     "killRate": 0.815,
+     "killRate": 0.985,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 37
+     "outOfAmmo": 3
     },
     "tommy_africa_uk": {
      "median": 8,
-     "killRate": 0.91,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 18
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
      "median": 8,
-     "killRate": 0.91,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 18
+     "outOfAmmo": 1
     },
     "stuart_us": {
      "median": 7,
-     "killRate": 0.9,
+     "killRate": 0.995,
      "pin": 7,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 1
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.065,
+     "killRate": 0.195,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 187
+     "outOfAmmo": 161
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.075,
+     "killRate": 0.265,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 185
+     "outOfAmmo": 147
     },
     "hmg_mg42_ger": {
      "median": 5,
@@ -11494,28 +11461,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -11543,7 +11510,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -11560,28 +11527,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -11609,7 +11576,7 @@
      "killRate": 0,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -11626,28 +11593,28 @@
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 4,
@@ -11658,24 +11625,24 @@
     },
     "sherman_us": {
      "median": 9,
-     "killRate": 0.97,
+     "killRate": 0.995,
      "pin": 9,
      "distance": 5,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": 8,
-     "killRate": 0.985,
+     "killRate": 1,
      "pin": 8,
      "distance": 5,
-     "outOfAmmo": 3
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -11689,31 +11656,31 @@
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.565,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 87
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": 10,
-     "killRate": 0.995,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 1
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": 10,
-     "killRate": 0.99,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 2
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": 10,
-     "killRate": 0.975,
+     "killRate": 1,
      "pin": 1,
      "distance": 4,
-     "outOfAmmo": 5
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
@@ -11755,64 +11722,63 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0.085,
+     "killRate": 0.155,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0.085,
+     "killRate": 0.155,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.205,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.205,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0.13,
+     "killRate": 0.19,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.335,
+     "killRate": 0.42,
      "pin": null,
      "distance": 8,
-     "outOfAmmo": 133
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "indirect vs squad: best TTK — outside 2–10"
-   ]
+   "flags": [],
+   "accepted": "field howitzer: one volley every 2 turns over 7 hexes, barrages not built"
   },
   {
    "id": "leig_75mm_ger",
@@ -11850,11 +11816,11 @@
      "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 13,
+     "killRate": 0.67,
+     "pin": 13,
      "distance": 7,
-     "outOfAmmo": 174
+     "outOfAmmo": 66
     },
     "sherman_us": {
      "median": null,
@@ -11917,10 +11883,10 @@
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.115,
      "pin": null,
      "distance": 6,
-     "outOfAmmo": 200
+     "outOfAmmo": 177
     },
     "sherman_us": {
      "median": null,
@@ -11955,59 +11921,59 @@
    "ttk": {
     "riflemen_us": {
      "median": 12,
-     "killRate": 0.565,
+     "killRate": 0.91,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 87
+     "outOfAmmo": 18
     },
     "grenadier_ger": {
      "median": 12,
-     "killRate": 0.565,
+     "killRate": 0.91,
      "pin": 12,
      "distance": 4,
-     "outOfAmmo": 87
+     "outOfAmmo": 18
     },
     "tommy_africa_uk": {
      "median": 10,
-     "killRate": 0.745,
+     "killRate": 0.98,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 51
+     "outOfAmmo": 4
     },
     "panzergrenadier_ak": {
      "median": 10,
-     "killRate": 0.745,
+     "killRate": 0.98,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 51
+     "outOfAmmo": 4
     },
     "stuart_us": {
      "median": 9,
-     "killRate": 0.695,
+     "killRate": 0.865,
      "pin": 9,
      "distance": 4,
-     "outOfAmmo": 61
+     "outOfAmmo": 27
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.025,
+     "killRate": 0.095,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 195
+     "outOfAmmo": 181
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.045,
+     "killRate": 0.14,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 191
+     "outOfAmmo": 172
     },
     "hmg_mg42_ger": {
      "median": 6,
-     "killRate": 0.97,
+     "killRate": 1,
      "pin": 6,
      "distance": 4,
-     "outOfAmmo": 6
+     "outOfAmmo": 0
     }
    },
    "flags": []
@@ -12049,24 +12015,24 @@
     },
     "stuart_us": {
      "median": 10,
-     "killRate": 0.645,
+     "killRate": 0.935,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 71
+     "outOfAmmo": 13
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.025,
+     "killRate": 0.11,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 195
+     "outOfAmmo": 178
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.04,
+     "killRate": 0.16,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 192
+     "outOfAmmo": 168
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -12082,7 +12048,7 @@
    "id": "armored_car_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 255,
    "ttk": {
     "riflemen_us": {
@@ -12148,43 +12114,43 @@
    "id": "brummbar_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "all_round",
+   "role": "anti_infantry",
    "cost": 520,
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.405,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 119
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.405,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 119
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.425,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 115
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.425,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 115
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "sherman_us": {
      "median": null,
@@ -12202,14 +12168,14 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.485,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 197
+     "outOfAmmo": 103
     }
    },
    "flags": [
-    "all_round vs vehicle: best TTK — outside 2–8"
+    "anti_infantry vs squad: best TTK — outside 2–6"
    ]
   },
   {
@@ -12282,7 +12248,7 @@
    "id": "halftrack_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 250,
    "ttk": {
     "riflemen_us": {
@@ -12342,51 +12308,49 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "suppression vs squad: best time to pin 7 outside 1–4"
-   ]
+   "flags": []
   },
   {
    "id": "halftrack_stummel_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "cost": 250,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.015,
-     "pin": null,
+     "median": 8,
+     "killRate": 0.965,
+     "pin": 8,
      "distance": 3,
-     "outOfAmmo": 197
+     "outOfAmmo": 7
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0.05,
-     "pin": null,
+     "median": 7,
+     "killRate": 1,
+     "pin": 7,
      "distance": 3,
-     "outOfAmmo": 190
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0.085,
-     "pin": null,
+     "median": 6,
+     "killRate": 1,
+     "pin": 6,
      "distance": 3,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0.085,
-     "pin": null,
+     "median": 6,
+     "killRate": 1,
+     "pin": 6,
      "distance": 3,
-     "outOfAmmo": 183
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.045,
      "pin": null,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 191
     },
     "sherman_us": {
      "median": null,
@@ -12404,15 +12368,13 @@
     },
     "hmg_mg42_ger": {
      "median": 5,
-     "killRate": 0.735,
+     "killRate": 1,
      "pin": 5,
      "distance": 3,
-     "outOfAmmo": 53
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "indirect vs squad: best TTK — outside 2–10"
-   ]
+   "flags": []
   },
   {
    "id": "jagdpanzer_iv_sdkfz_162_ger",
@@ -12430,24 +12392,24 @@
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.025,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 195
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "stuart_us": {
      "median": 3,
@@ -12472,10 +12434,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.25,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 150
     }
    },
    "flags": []
@@ -12488,30 +12450,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -12537,9 +12499,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 2,
+     "median": 1,
      "killRate": 1,
-     "pin": 2,
+     "pin": 1,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -12555,31 +12517,31 @@
    "ttk": {
     "riflemen_us": {
      "median": null,
-     "killRate": 0.005,
+     "killRate": 0.145,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 199
+     "outOfAmmo": 171
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.44,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 112
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0.04,
+     "killRate": 0.495,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 192
+     "outOfAmmo": 101
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.315,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 137
     },
     "stuart_us": {
      "median": 3,
@@ -12603,11 +12565,11 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.12,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.895,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 176
+     "outOfAmmo": 21
     }
    },
    "flags": []
@@ -12635,17 +12597,17 @@
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.005,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 200
+     "outOfAmmo": 199
     },
     "stuart_us": {
      "median": 3,
@@ -12670,10 +12632,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.02,
+     "killRate": 0.045,
      "pin": null,
      "distance": 5,
-     "outOfAmmo": 196
+     "outOfAmmo": 191
     }
    },
    "flags": []
@@ -12686,32 +12648,32 @@
    "cost": 575,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0.375,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 4,
-     "outOfAmmo": 125
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 11,
-     "killRate": 0.845,
-     "pin": 11,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 4,
-     "outOfAmmo": 31
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 11,
-     "killRate": 0.88,
-     "pin": 11,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 4,
-     "outOfAmmo": 24
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 12,
-     "killRate": 0.715,
-     "pin": 12,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 4,
-     "outOfAmmo": 57
+     "outOfAmmo": 0
     },
     "stuart_us": {
      "median": 3,
@@ -12735,9 +12697,9 @@
      "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": 6,
+     "median": 4,
      "killRate": 1,
-     "pin": 6,
+     "pin": 4,
      "distance": 4,
      "outOfAmmo": 0
     }
@@ -12787,18 +12749,18 @@
      "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0.21,
-     "pin": null,
+     "median": 15,
+     "killRate": 0.775,
+     "pin": 15,
      "distance": 4,
-     "outOfAmmo": 158
+     "outOfAmmo": 45
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0.315,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.885,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 137
+     "outOfAmmo": 23
     },
     "hmg_mg42_ger": {
      "median": 3,
@@ -12880,7 +12842,7 @@
    "id": "royal_engineers_armored_car_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "suppression",
+   "role": "logistics",
    "cost": 255,
    "ttk": {
     "riflemen_us": {
@@ -12950,30 +12912,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -13017,52 +12979,52 @@
    "ttk": {
     "riflemen_us": {
      "median": 10,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "grenadier_ger": {
      "median": 10,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "tommy_africa_uk": {
      "median": 8,
-     "killRate": 0.9,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
      "median": 8,
-     "killRate": 0.9,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 1
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.43,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.7,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 114
+     "outOfAmmo": 60
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.01,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 198
+     "outOfAmmo": 196
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.045,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 191
     },
     "hmg_mg42_ger": {
      "median": 5,
@@ -13082,65 +13044,63 @@
    "cost": 335,
    "ttk": {
     "riflemen_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 5,
+     "killRate": 1,
+     "pin": 5,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "sherman_us": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 9,
+     "killRate": 1,
+     "pin": 9,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 9,
+     "killRate": 1,
+     "pin": 9,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0.13,
-     "pin": null,
+     "median": 4,
+     "killRate": 1,
+     "pin": 4,
      "distance": 3,
-     "outOfAmmo": 174
+     "outOfAmmo": 0
     }
    },
-   "flags": [
-    "all_round vs vehicle: best TTK — outside 2–8"
-   ]
+   "flags": []
   },
   {
    "id": "stug_iii_ger",
@@ -13158,24 +13118,24 @@
     },
     "grenadier_ger": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.01,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 198
     },
     "tommy_africa_uk": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.025,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 195
     },
     "panzergrenadier_ak": {
      "median": null,
-     "killRate": 0,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 196
     },
     "stuart_us": {
      "median": 3,
@@ -13200,10 +13160,10 @@
     },
     "hmg_mg42_ger": {
      "median": null,
-     "killRate": 0.03,
+     "killRate": 0.25,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 194
+     "outOfAmmo": 150
     }
    },
    "flags": []
@@ -13212,7 +13172,7 @@
    "id": "sturmtiger_ger",
    "faction": "german",
    "kind": "vehicle",
-   "role": "logistics",
+   "role": "anti_infantry",
    "cost": 780,
    "ttk": {
     "riflemen_us": {
@@ -13265,14 +13225,15 @@
      "outOfAmmo": 200
     },
     "hmg_mg42_ger": {
-     "median": null,
-     "killRate": 0,
-     "pin": null,
+     "median": 8,
+     "killRate": 1,
+     "pin": 8,
      "distance": 3,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     }
    },
-   "flags": []
+   "flags": [],
+   "accepted": "380 mm rocket mortar fired by an ability only (not built); hull MG meanwhile"
   },
   {
    "id": "tiger_boss_ger",
@@ -13282,30 +13243,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -13348,30 +13309,30 @@
    "cost": 920,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "tommy_africa_uk": {
-     "median": 3,
+     "median": 2,
      "killRate": 1,
-     "pin": 3,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 4,
+     "median": 2,
      "killRate": 1,
-     "pin": 4,
+     "pin": 2,
      "distance": 4,
      "outOfAmmo": 0
     },
@@ -13415,52 +13376,52 @@
    "ttk": {
     "riflemen_us": {
      "median": 10,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "grenadier_ger": {
      "median": 10,
-     "killRate": 0.805,
+     "killRate": 0.985,
      "pin": 10,
      "distance": 4,
-     "outOfAmmo": 39
+     "outOfAmmo": 3
     },
     "tommy_africa_uk": {
      "median": 8,
-     "killRate": 0.9,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 1
     },
     "panzergrenadier_ak": {
      "median": 8,
-     "killRate": 0.9,
+     "killRate": 0.995,
      "pin": 8,
      "distance": 4,
-     "outOfAmmo": 20
+     "outOfAmmo": 1
     },
     "stuart_us": {
-     "median": null,
-     "killRate": 0.43,
-     "pin": null,
+     "median": 14,
+     "killRate": 0.7,
+     "pin": 14,
      "distance": 4,
-     "outOfAmmo": 114
+     "outOfAmmo": 60
     },
     "sherman_us": {
      "median": null,
-     "killRate": 0.01,
+     "killRate": 0.02,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 198
+     "outOfAmmo": 196
     },
     "panzer_iv_ger": {
      "median": null,
-     "killRate": 0.015,
+     "killRate": 0.045,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 197
+     "outOfAmmo": 191
     },
     "hmg_mg42_ger": {
      "median": 5,
@@ -13602,9 +13563,8 @@
      "outOfAmmo": 0
     }
    },
-   "flags": [
-    "anti_infantry vs squad: best TTK 7 outside 2–6"
-   ]
+   "flags": [],
+   "accepted": "artillery officer: abilities (not built)"
   },
   {
    "id": "coastal_reserves_ger",
@@ -14240,21 +14200,21 @@
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "sherman_us": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "panzer_iv_ger": {
      "median": null,
      "killRate": 0,
      "pin": null,
      "distance": 4,
-     "outOfAmmo": 200
+     "outOfAmmo": 0
     },
     "hmg_mg42_ger": {
      "median": 8,
@@ -14274,16 +14234,16 @@
    "cost": 380,
    "ttk": {
     "riflemen_us": {
-     "median": 4,
+     "median": 3,
      "killRate": 1,
-     "pin": 4,
+     "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },
     "grenadier_ger": {
-     "median": 4,
+     "median": 3,
      "killRate": 1,
-     "pin": 4,
+     "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },
@@ -14295,9 +14255,9 @@
      "outOfAmmo": 0
     },
     "panzergrenadier_ak": {
-     "median": 4,
+     "median": 3,
      "killRate": 1,
-     "pin": 4,
+     "pin": 3,
      "distance": 3,
      "outOfAmmo": 0
     },

@@ -53,7 +53,7 @@
     "set": "resistance_fighters_battlegroup_partisans"
    },
    "supply": {
-    "ammo": 20
+    "ammo": 30
    },
    "build": {
     "menu": [

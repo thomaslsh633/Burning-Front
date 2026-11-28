@@ -3,7 +3,7 @@
   "halftrack_stummel_ger": {
    "coh3_ref": "sbps/races/german/vehicles/halftrack_stummel_ger",
    "kind": "vehicle",
-   "role": "indirect",
+   "role": "anti_infantry",
    "members": [
     {
      "entity": "halftrack_stummel_ger",
@@ -51,7 +51,7 @@
     "set": "halftrack_stummel_ger"
    },
    "supply": {
-    "ammo": 10
+    "ammo": 15
    }
   }
  }

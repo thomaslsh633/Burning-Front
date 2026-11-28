@@ -51,11 +51,13 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | commando_africa_uk | veterancy | — |
 | lee_enfield_commando_africa_uk | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | commando_lmg_africa_uk | entity · infantry | — |
-| commando_lmg_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| vickers_k_lmg_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
+| commando_lmg_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class rifle; loadout weapons from coh3stats: vickers_k_lmg_uk ×1 |
 | commando_lmg_africa_uk | veterancy | — |
 | thompson_guards_africa_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | guards_africa_uk | entity · infantry | — |
-| guards_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class smg |
+| bazooka_guards_africa_uk | weapon · infantry_anti_tank_weapon | deflection defaulted to 0 (CoH3: no deflection damage) |
+| guards_africa_uk | squad · infantry | role "anti_tank" guessed from CoH3 squad type; loadout weapons from coh3stats: bazooka_guards_africa_uk ×2 |
 | guards_africa_uk | veterancy | — |
 | lee_enfield_gurkhas_uk | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | gurkhas_africa_uk | entity · infantry | — |
@@ -81,7 +83,9 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | officer_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class pistol |
 | officer_africa_uk | veterancy | — |
 | polish_lancer_africa_uk | entity · infantry | — |
-| polish_lancer_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class rifle |
+| boys_at_rifle_polish_africa_uk | weapon · infantry_anti_tank_weapon | vs_target destructible_object dropped (not in vocab) |
+| bren_lmg_africa_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
+| polish_lancer_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class rifle; loadout weapons from coh3stats: boys_at_rifle_polish_africa_uk ×2, bren_lmg_africa_uk ×1 |
 | polish_lancer_africa_uk | veterancy | — |
 | 9mm_sten_sapper_africa_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | sapper_africa_uk | entity · infantry | — |
@@ -101,16 +105,17 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | sas_africa_uk | veterancy | — |
 | scoped_lee_enfield_sniper_uk | weapon · rifle | dropped module scatter (not allowed for rifle) |
 | sniper_africa_uk | entity · infantry | — |
-| sniper_africa_uk | squad · infantry | role "recon" guessed from main weapon class sniper |
+| sniper_africa_uk | squad · infantry | role "recon" guessed from CoH3 squad type |
 | sniper_africa_uk | veterancy | — |
 | thompson_ssb_africa_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | ssb_africa_uk | entity · infantry | — |
-| ssb_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class smg |
+| vickers_k_lmg_ssb_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
+| ssb_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class smg; loadout weapons from coh3stats: vickers_k_lmg_ssb_uk ×1 |
 | ssb_africa_uk | veterancy | — |
 | special_services_commando_firepower_bolster_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | boys_at_rifle_scoped_africa_uk | weapon · infantry_anti_tank_weapon | — |
 | ssb_sniper_africa_uk | entity · infantry | — |
-| ssb_sniper_africa_uk | squad · infantry | role "recon" guessed from main weapon class sniper_gib |
+| ssb_sniper_africa_uk | squad · infantry | role "anti_tank" guessed from CoH3 squad type |
 | ssb_sniper_africa_uk | veterancy | — |
 | special_services_sniper_spotter_bolster_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | tommy_africa_uk | squad · infantry | role "anti_infantry" guessed from main weapon class pistol |
@@ -118,7 +123,6 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | boys_anti_tank_rifles_tommy_africa_uk | upgrade | — |
 | boys_at_rifle_africa_uk | weapon · infantry_anti_tank_weapon | vs_target destructible_object dropped (not in vocab); vs_target tank_trap dropped (not in vocab) |
 | lmg_bren_tommy_africa_uk | upgrade | — |
-| bren_lmg_africa_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | recon_package_tommy_africa_uk | upgrade | — |
 | 17pdr_at_gun_uk | weapon · anti_tank_gun | dropped module moving (not allowed for anti_tank_gun); deflection defaulted to 0 (CoH3: no deflection damage) |
 | tw_at_gun_17pdr_africa_uk | entity · team_weapons | — |
@@ -193,7 +197,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | australian_supplytruck_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class none |
 | 25pdr_bishop_dummy_uk | weapon | CoH3 placeholder weapon; skipped |
 | bishop_africa_uk | entity · vehicles | — |
-| bishop_africa_uk | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| bishop_africa_uk | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | bishop_africa_uk | veterancy | — |
 | 95mm_he_round_centaur_uk | weapon · tank_gun | — |
 | 30cal_coaxial_sherman_us | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
@@ -220,7 +224,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | 290mm_dummy_avre_uk | weapon | CoH3 placeholder weapon; skipped |
 | 30cal_coaxial_churchill_uk | weapon · light_machine_gun | dropped module scatter (not allowed for light_machine_gun) |
 | churchill_avre_africa_uk | entity · vehicles | — |
-| churchill_avre_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class dummy; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| churchill_avre_africa_uk | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | churchill_avre_africa_uk | veterancy | — |
 | 76mm_churchill_black_prince_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | churchill_black_prince_africa_uk | entity · vehicles | — |
@@ -253,37 +257,37 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | crusader_africa_uk | veterancy | — |
 | weapon_57mm_crusader_africa_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | cwt_15_flatbed_africa_uk | entity · vehicles | — |
-| cwt_15_flatbed_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_15_flatbed_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_flatbed_africa_uk | veterancy | — |
 | 20mm_oerlikon_mount_cwt_uk | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | cwt_15_quad_mount_africa_uk | entity · vehicles | — |
 | cwt_15_quad_mount_africa_uk | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_quad_mount_africa_uk | veterancy | — |
 | cwt_15_africa_uk | entity · vehicles | — |
-| cwt_15_truck_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_15_truck_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_truck_africa_uk | veterancy | — |
 | weapon_flak_mount_cwt_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | cwt_15_medical_africa_uk | entity · vehicles | — |
-| cwt_15_truck_medical_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_15_truck_medical_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_truck_medical_africa_uk | veterancy | — |
 | 30cal_cwt_dummy_uk | weapon | CoH3 placeholder weapon; skipped |
 | cwt_15_resupply_repair_africa_uk | entity · vehicles | — |
-| cwt_15_truck_repair_resupply_africa_uk | squad · vehicles | role "anti_infantry" guessed from main weapon class rifle; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_15_truck_repair_resupply_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_truck_repair_resupply_africa_uk | veterancy | — |
 | 2pdr_cwt_lrdg_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | vickers_twin_cwt_lrdg_uk | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | cwt_lrdg_truck_2pdr_africa_uk | entity · vehicles | — |
-| cwt_lrdg_truck_2pdr_africa_uk | squad · vehicles | role "anti_tank" guessed from main weapon class at_gun; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_lrdg_truck_2pdr_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_lrdg_truck_2pdr_africa_uk | veterancy | — |
 | vickers_rear_cwt_lrdg_uk | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | cwt_lrdg_truck_africa_uk | entity · vehicles | — |
-| cwt_lrdg_truck_africa_uk_uk | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_lrdg_truck_africa_uk_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_lrdg_truck_africa_uk_uk | veterancy | — |
 | cwt_lrdg_2pdr_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 30cal_dingo_uk | weapon · heavy_machine_gun | dropped module scatter (not allowed for heavy_machine_gun) |
 | dingo_africa_uk | entity · vehicles | — |
-| dingo_africa_uk | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| dingo_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | dingo_africa_uk | veterancy | — |
 | 75mm_grant_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | 37mm_grant_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
@@ -307,13 +311,13 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | matilda_africa_uk | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | matilda_africa_uk | veterancy | — |
 | pheasant_halftrack_africa_uk | entity · vehicles | — |
-| pheasant_halftrack_africa_uk | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| pheasant_halftrack_africa_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | pheasant_halftrack_africa_uk | veterancy | — |
 | weapon_flak_mount_cwt_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | 25pdr_priest_dummy_uk | weapon | CoH3 placeholder weapon; skipped |
 | priest_africa_uk | entity · vehicles | — |
-| priest_africa_uk | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| priest_africa_uk | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | priest_africa_uk | veterancy | — |
 | 75mm_sherman_uk | weapon · tank_gun | deflection defaulted to 0 (CoH3: no deflection damage) |
 | sherman_africa_uk | entity · vehicles | — |
@@ -350,7 +354,7 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | howitzer_bl_5_5_uk | veterancy | — |
 | thompson_guards_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | guards_uk | entity · infantry | — |
-| guards_uk | squad · infantry | role "anti_infantry" guessed from main weapon class smg |
+| guards_uk | squad · infantry | role "anti_tank" guessed from CoH3 squad type |
 | guards_uk | veterancy | — |
 | 9mm_sten_sapper_uk | weapon · sub_machine_gun | dropped module scatter (not allowed for sub_machine_gun) |
 | sapper_uk | entity · infantry | — |
@@ -420,11 +424,11 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | archer_uk | veterancy | — |
 | 25pdr_bishop_dummy_uk | weapon | CoH3 placeholder weapon; skipped |
 | bishop_uk | entity · vehicles | — |
-| bishop_uk | squad · vehicles | role "all_round" guessed from main weapon class cannon; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| bishop_uk | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | bishop_uk | veterancy | — |
-| 290mm_avre_uk | weapon · tank_gun | vs_target bridge dropped (not in vocab); vs_target ambient_building dropped (not in vocab) |
+| 290mm_avre_uk | weapon · tank_gun | vs_target bridge dropped (not in vocab); vs_target ambient_building dropped (not in vocab); accuracy derived from scatter (chance to land on the hex) |
 | churchill_avre_uk | entity · vehicles | — |
-| churchill_avre_uk | squad · vehicles | role "indirect" guessed from main weapon class artillery_medium; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| churchill_avre_uk | squad · vehicles | role "anti_infantry" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | churchill_avre_uk | veterancy | — |
 | churchill_black_prince_uk | entity · vehicles | — |
 | churchill_black_prince_uk | squad · vehicles | role "anti_tank" guessed from main weapon class cannon_large; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
@@ -438,12 +442,12 @@ Every value that was guessed, defaulted or dropped. Conversion rules: docs/data-
 | churchill_uk | veterancy | — |
 | weapon_75mm_churchill_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | cwt_15_uk | entity · vehicles | — |
-| cwt_15_truck_uk | squad · vehicles | role "logistics" guessed from main weapon class none; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| cwt_15_truck_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | cwt_15_truck_uk | veterancy | — |
 | weapon_flak_mount_cwt_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | medical_truck_uk | upgrade | effect not in CoH3 data (state tree): write by hand |
 | dingo_uk | entity · vehicles | — |
-| dingo_uk | squad · vehicles | role "suppression" guessed from main weapon class hmg; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
+| dingo_uk | squad · vehicles | role "logistics" guessed from CoH3 squad type; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
 | dingo_uk | veterancy | — |
 | humber_uk | entity · vehicles | — |
 | humber_uk | squad · vehicles | role "anti_light_vehicle" guessed from main weapon class cannon_burst; dropped module capture (not allowed for vehicles); dropped module reinforce (not allowed for vehicles) |
