@@ -8,7 +8,7 @@
 - a build entry so the greybox can be opened on a phone
 
 ## Public API (exported from `index.js`)
-- `createView(size)` → `{ centre, toHex, fit(cols, rows), draw(ctx, state, ui, data) }` — done (G-2)
+- `createView(size, { yaw = 45, pitch = 35 })` → `{ centre, toHex, fit(cols, rows), draw(ctx, state, ui, data) }`: quarter view (SPEC §9) — done (G-2)
 - `debugText(state, ui, data)`: match, resources, the selected unit's six axes, budget, suppression, ammo, reload, weapons
   (range, shots, accuracy, damage, penetration, spread) and the attack / move preview — done (G-3)
 - opened through `greybox.html` (boot: `src/app/greybox.js`; serve: `node tools/greybox/serve.js`)

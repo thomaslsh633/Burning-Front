@@ -2,6 +2,13 @@
 
 Newest first. One entry per finished task: done / next / blocked.
 
+## 2026-11-28 (quarter view)
+- **Done:** greybox camera is a quarter view: map turned 45°, seen from 35° above the ground, raised hexes lifted with front
+  faces, upright unit tokens with shadows, back-to-front drawing, taps mapped through the same projection (SPEC §9).
+  Checked in Chromium. 293 tests.
+- **Next:** G-5 decisions, G-6 phone check.
+- **Blocked:** nothing.
+
 ## 2026-11-28 (G-2, G-3: greybox view)
 - **Done:** `greybox.html` + `src/app/greybox.js` (fetches the game files listed by `services/data gameFiles`, starts a
   1v1 on a map), `presentation/input` (taps), `presentation/controller` (select, two-tap move / attack, end turn, emplace,

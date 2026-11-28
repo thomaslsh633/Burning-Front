@@ -168,6 +168,9 @@ move a line up when it ships. Section 11 lists places where the code differs fro
 - Name "Burning Front" (v210). Battlefields of several eras and places, not only the Ardennes 1944: game-wide UI (lobby, title) names no single setting; place and date belong to each map's briefing (v211).
 - Realistic CoH3 / Burning Bridges look; gunmetal + navy UI; factions by US flag vs red-background iron cross; illustrated 2D icons.
 - No flags or antennas drawn on vehicles (v181, v183).
+- Camera (2026-11-28): quarter view — the map turned 45° and seen from 35° above the ground (ground depth × sin 35°); raised
+  hexes drawn lifted by their elevation; units upright. The greybox uses it now (`presentation/greybox` createView yaw /
+  pitch); the real renderer (D3) follows it.
 
 ## 10. Decided, not in the code yet
 Confirmed 2026-11-25 (rewrite):

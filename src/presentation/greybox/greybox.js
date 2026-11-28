@@ -1,4 +1,4 @@
-// Greybox view (dev plan G-2, G-3): Canvas 2D, no art. Hexes in grey steps by terrain, units as team-coloured discs with a
+// Greybox view (dev plan G-2, G-3): Canvas 2D, no art, quarter view (45° turn, camera 35° above the ground). Hexes in grey steps by terrain, units as team-coloured discs with a
 // kind letter and their HP, points as rings in the owner's colour; the selected unit's reachable hexes and the preview.
 // debugText: the selected unit's state axes, budget, weapons and the attack preview. Reads state; never changes it.
 import { hexAt, mapOf, isCollapsed } from '../../logic/terrain/index.js';
@@ -9,62 +9,93 @@ import { fromKey } from '../../logic/hex/index.js';
 const TEAM = { blue: '#4a8fd8', red: '#d85a4a' }, KIND = { squad: 'S', team_weapon: 'W', vehicle: 'V', structure: 'B' };
 const ROOT3 = Math.sqrt(3);
 
-/** size: hex radius in px → { size, centre(h), toHex(x, y), fit(cols, rows) → { w, h }, draw(ctx, state, ui, data) } */
-export function createView(size = 22) {
-  const W = ROOT3 * size, pad = size;
-  const centre = h => ({ x: pad + W * (h.c + (h.r & 1) / 2) + W / 2, y: pad + 1.5 * size * h.r + size });
-  const hexPath = (ctx, h, s = size) => {
-    const { x, y } = centre(h);
+/**
+ * Quarter view (2026-11-28): the map turned `yaw` degrees and seen from `pitch` degrees above the ground, so ground depth
+ * shrinks to sin(pitch); hexes rise by their elevation. size: hex radius in px.
+ * → { size, centre(h, elev?), toHex(x, y), fit(cols, rows) → { w, h }, draw(ctx, state, ui, data) }
+ */
+export function createView(size = 22, { yaw = 45, pitch = 35, elevPx = size * 0.6 } = {}) {
+  const W = ROOT3 * size, cy = Math.cos((yaw * Math.PI) / 180), sy = Math.sin((yaw * Math.PI) / 180);
+  const squash = Math.sin((pitch * Math.PI) / 180), lift = Math.cos((pitch * Math.PI) / 180) * elevPx;
+  let off = { x: 0, y: 0 }, dims = { cols: 0, rows: 0 }, elevAt = () => 0;
+  const world = h => ({ x: W * (h.c + (h.r & 1) / 2), y: 1.5 * size * h.r });
+  const project = (x, y, elev = 0) => ({ x: x * cy - y * sy + off.x, y: (x * sy + y * cy) * squash - elev * lift + off.y });
+  const centre = (h, elev = 0) => { const w = world(h); return project(w.x, w.y, elev); };
+  const corners = (h, s = size, elev = 0) => {
+    const w = world(h);
+    return [0, 1, 2, 3, 4, 5].map(i => { const a = (Math.PI / 3) * i - Math.PI / 6; return project(w.x + s * Math.cos(a), w.y + s * Math.sin(a), elev); });
+  };
+  const hexPath = (ctx, h, s = size, elev = elevAt(h)) => {
     ctx.beginPath();
-    for (let i = 0; i < 6; i++) { const a = (Math.PI / 3) * i - Math.PI / 6; ctx[i ? 'lineTo' : 'moveTo'](x + s * Math.cos(a), y + s * Math.sin(a)); }
+    corners(h, s, elev).forEach((p, i) => ctx[i ? 'lineTo' : 'moveTo'](p.x, p.y));
     ctx.closePath();
   };
-  let dims = { cols: 0, rows: 0 };
   return {
     size, centre,
-    fit(cols, rows) { dims = { cols, rows }; return { w: Math.ceil(pad * 2 + W * (cols + 0.5)), h: Math.ceil(pad * 2 + 1.5 * size * rows + size / 2) }; },
-    toHex(x, y) {   // nearest centre (maps are small)
+    fit(cols, rows, maxElev = 2) {
+      dims = { cols, rows };
+      off = { x: 0, y: 0 };
+      const pts = [];
+      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) pts.push(...corners({ c, r }), ...corners({ c, r }, size, maxElev));
+      const minX = Math.min(...pts.map(p => p.x)), minY = Math.min(...pts.map(p => p.y)) - size, pad = size;
+      off = { x: pad - minX, y: pad - minY };
+      return { w: Math.ceil(Math.max(...pts.map(p => p.x)) - minX + 2 * pad), h: Math.ceil(Math.max(...pts.map(p => p.y)) - minY + 2 * pad) };
+    },
+    toHex(x, y) {   // nearest projected centre (maps are small); elevation as last drawn
       let best = null;
       for (let r = 0; r < dims.rows; r++) for (let c = 0; c < dims.cols; c++) {
-        const p = centre({ c, r }), d = (p.x - x) ** 2 + (p.y - y) ** 2;
+        const p = centre({ c, r }, elevAt({ c, r })), d = (p.x - x) ** 2 + ((p.y - y) / squash) ** 2;
         if (!best || d < best.d) best = { c, r, d };
       }
       return best && best.d <= size * size ? { c: best.c, r: best.r } : null;
     },
     draw(ctx, state, ui, data) {
+      elevAt = h => hexAt(state, data, h).elev;
       ctx.fillStyle = '#202326'; ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       const sel = state.units[ui.selected], reach = sel ? reachable(state, data, sel.id) : new Map();
-      for (let r = 0; r < state.map.rows; r++) for (let c = 0; c < state.map.cols; c++) {
+      const hexes = [];
+      for (let r = 0; r < state.map.rows; r++) for (let c = 0; c < state.map.cols; c++) hexes.push({ c, r });
+      const depth = h => centre(h).y;
+      for (const { c, r } of hexes.sort((a, b) => depth(a) - depth(b))) {   // back to front
         const t = hexAt(state, data, { c, r });
         const cost = t.feature?.cost?.infantry ?? t.ground.cost.infantry, cover = t.feature?.cover;
         const g = t.oob ? 30 : cost == null ? 55 : t.featureKind === 'structure' ? 75 : cover === 'heavy' ? 105 : cover === 'light' ? 125 : 145;
+        if (t.elev > 0) {   // the raised hex's front faces
+          const top = corners({ c, r }, size, t.elev), base = corners({ c, r }, size, 0);
+          ctx.fillStyle = `rgb(${g - 45},${g - 45},${g - 40})`;
+          for (let i = 0; i < 6; i++) {
+            const j = (i + 1) % 6;
+            ctx.beginPath(); ctx.moveTo(top[i].x, top[i].y); ctx.lineTo(top[j].x, top[j].y); ctx.lineTo(base[j].x, base[j].y); ctx.lineTo(base[i].x, base[i].y); ctx.closePath(); ctx.fill();
+          }
+        }
         hexPath(ctx, { c, r }); ctx.fillStyle = `rgb(${g},${g},${g + 4})`; ctx.fill();
         ctx.strokeStyle = '#2b2e31'; ctx.lineWidth = 1; ctx.stroke();
         if (reach.get(`${c},${r}`)?.stop && (c !== sel.pos.c || r !== sel.pos.r)) { hexPath(ctx, { c, r }, size * 0.8); ctx.strokeStyle = '#7fd07f'; ctx.stroke(); }
       }
-      for (const [id, s] of Object.entries(mapOf(state, data).structures)) {
-        if (!s.team || isCollapsed(state, id)) continue;
-        for (const k of s.hexes) { hexPath(ctx, fromKey(k), size * 0.55); ctx.fillStyle = TEAM[s.team]; ctx.globalAlpha = 0.35; ctx.fill(); ctx.globalAlpha = 1; }
+      for (const [id, st] of Object.entries(mapOf(state, data).structures)) {
+        if (!st.team || isCollapsed(state, id)) continue;
+        for (const k of st.hexes) { hexPath(ctx, fromKey(k), size * 0.55); ctx.fillStyle = TEAM[st.team]; ctx.globalAlpha = 0.35; ctx.fill(); ctx.globalAlpha = 1; }
       }
       const defs = Object.fromEntries(mapOf(state, data).points.map(p => [p.id, p]));
       for (const p of state.points) {
-        const { x, y } = centre(fromKey(defs[p.id].hex));
-        ctx.beginPath(); ctx.arc(x, y, size * 0.75, 0, 2 * Math.PI); ctx.lineWidth = 3;
-        ctx.strokeStyle = p.owner ? TEAM[p.owner] : '#d8d8a0'; ctx.stroke();
+        const h = fromKey(defs[p.id].hex);
+        hexPath(ctx, h, size * 0.75); ctx.lineWidth = 3; ctx.strokeStyle = p.owner ? TEAM[p.owner] : '#d8d8a0'; ctx.stroke();
+        const { x, y } = centre(h, elevAt(h));
         ctx.fillStyle = '#e8e8c0'; ctx.font = `${size * 0.5}px sans-serif`; ctx.textAlign = 'center';
-        ctx.fillText(defs[p.id].kind === 'vp' ? '★' : defs[p.id].kind[0].toUpperCase(), x, y - size * 0.4);
+        ctx.fillText(defs[p.id].kind === 'vp' ? '★' : defs[p.id].kind[0].toUpperCase(), x, y - size * 0.3);
       }
-      for (const u of Object.values(state.units)) {
-        if (u.fsm.location !== 'ON_MAP') continue;
-        const { x, y } = centre(u.pos);
-        ctx.beginPath(); ctx.arc(x, y, size * 0.6, 0, 2 * Math.PI);
+      const units = Object.values(state.units).filter(u => u.fsm.location === 'ON_MAP').sort((a, b) => depth(a.pos) - depth(b.pos));
+      for (const u of units) {
+        const ground = centre(u.pos, elevAt(u.pos)), x = ground.x, y = ground.y - size * 0.45;   // upright token standing on its hex
+        ctx.beginPath(); ctx.ellipse(ground.x, ground.y, size * 0.5, size * 0.5 * squash, 0, 0, 2 * Math.PI); ctx.fillStyle = 'rgba(0,0,0,0.35)'; ctx.fill();
+        ctx.beginPath(); ctx.arc(x, y, size * 0.55, 0, 2 * Math.PI);
         ctx.fillStyle = u.team ? TEAM[u.team] : '#888'; ctx.globalAlpha = u.fsm.action === 'EXHAUSTED' ? 0.55 : 1; ctx.fill(); ctx.globalAlpha = 1;
         if (u.id === ui.selected) { ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.stroke(); }
         if (ui.preview?.cmd?.target === u.id) { ctx.lineWidth = 3; ctx.strokeStyle = '#ffcc33'; ctx.stroke(); }
-        const a = (Math.PI / 3) * u.facing;
-        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + size * 0.7 * Math.cos(a), y + size * 0.7 * Math.sin(a)); ctx.strokeStyle = '#111'; ctx.lineWidth = 2; ctx.stroke();
+        const a = (Math.PI / 3) * u.facing, w = world(u.pos), tip = project(w.x + size * 0.9 * Math.cos(a), w.y + size * 0.9 * Math.sin(a), elevAt(u.pos));
+        ctx.beginPath(); ctx.moveTo(ground.x, ground.y); ctx.lineTo(tip.x, tip.y); ctx.strokeStyle = '#111'; ctx.lineWidth = 2; ctx.stroke();
         ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.font = `bold ${size * 0.55}px sans-serif`; ctx.fillText(KIND[u.kind] ?? '?', x, y + size * 0.2);
-        ctx.font = `${size * 0.42}px sans-serif`; ctx.fillText(String(u.members.reduce((n, m) => n + m.hp, 0)), x, y + size * 0.95);
+        ctx.font = `${size * 0.42}px sans-serif`; ctx.fillText(String(u.members.reduce((n, m) => n + m.hp, 0)), x, y - size * 0.7);
       }
       if (ui.preview?.cmd?.type === 'Move') { hexPath(ctx, ui.preview.cmd.to, size * 0.8); ctx.lineWidth = 3; ctx.strokeStyle = '#b8ffb8'; ctx.stroke(); }
     },
