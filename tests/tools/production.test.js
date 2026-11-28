@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildProduction, isSupportVehicle } from '../../tools/coh3/production.js';
+import { buildProduction, isSupportVehicle, productionReport } from '../../tools/coh3/production.js';
 
 const unit = (id, category, producers, tags, extra = {}) => ({ id, category, producers, tags, source: 'produced', price: { cost: { manpower: 300 } }, ...extra });
 const roster = { american: { units: [
@@ -37,4 +37,13 @@ test('hand overrides: place and research', () => {
 test('squads reached only by conversion are not produced', () => {
   const r = buildProduction(roster, prod, new Set(['para_us']));
   assert.deepEqual(r.bar.squads, ['rifles_us']);
+});
+
+test('the report lists every unit with its building, availability, and conversions', () => {
+  const md = productionReport(roster, { ...prod, buildings: buildProduction(roster, prod) },
+    [{ from: 'rifles_us', to: 'para_us', cost: { manpower: 175 }, research: true }], 'abc', new Set(['rifles_us']));
+  assert.match(md, /\| `barracks` \| `bar` \| — ✓ \| `rifles_us` \| Start \|/);
+  assert.match(md, /\| `tank_depot` \| `depot` \| — \| `heavy_us` \| Research \|/);
+  assert.match(md, /\| `support_center` \(Tier 2\) \| `wsc` \| — \| `truck_4x4_us` \| Start \|/);
+  assert.match(md, /175 MP \| Research \|/);
 });
